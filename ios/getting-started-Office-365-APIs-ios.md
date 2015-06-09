@@ -72,39 +72,10 @@ To configure these dependencies and add them and the existing project to a new w
     pod install
 
 ###Register your application with Azure Active Directory
-1.	Sign into the [Azure Management Portal](https://manage.windowsazure.com/) using your Office 365 Developer Site credentials.
 
-2.	Click **Active Directory** on the left menu, then click on the directory for your Office 365 developer site. 
-    ![Azure Management Portal](images/O365APIs_RegisterApp_1.png)
+If you already signed in and registered your app, you're all set, just follow the steps below.
 
-3.	On the top menu, click **Applications**.
-
-4.	Click **Add** from the bottom menu.  
-	![Azure Management Portal Add Application](images/O365APIs_RegisterApp_2.png)
-
-5.	On the **What do you want to do** page, click **Add an application my organization is developing**.
-
-6.	On the **Tell us about your application** page, specify **SimpleMailApp** for the application name and select **NATIVE CLIENT APPLICATION** for **Type**.
-
-7.	Click the arrow icon on the bottom-right corner of the page.
-
-8.	On the **Application information** page, specify a Redirect URI, for this example, you can specify `http://localhost/simplemailappproject`. Make note of the URI, since you'll need this later when coding the SimpleMailApp project. Click the checkbox in the bottom-right hand corner of the page.
-
-9.	Once the application has been successfully added, you will be taken to the Quick Start page for the application. From here, click **Configure** in the top menu.
-
-10.	In **permissions to other applications**, click **Add application**.
-
-11.	Click **Office 365 Exchange Online**, and then click the check mark icon.
-    ![Azure Management Portal Add Application](images/O365APIs_RegisterApp_5.png)
-
-12.	Under **permissions to other applications**, click the **Delegated Permissions** column for **Office 365 Exchange Online**, and select **Send mail as a user**.  
-    ![Azure Management Portal Add Application](images/O365APIs_RegisterApp_6.png)
-
-    These are the permissions that will be displayed to your app user when Azure prompts them to consent to your app's permission request. In general, request only the services your app actually requires, and specify the least level of permissions in each service that still enable your app to perform its functions.
-
-13.	Copy the value specified for **Client ID**; you will need this later when coding the SimpleMailApp project.
-
-14.	Click **Save** in the bottom menu.
+Otherwise, find [instructions](https://msdn.microsoft.com/en-us/office/office365/howto/add-common-consent-manually) to do so in the Azure portal.
 
 <a name="bk_codeYourApp"></a>
 ## Code your app 
@@ -586,18 +557,3 @@ The final step is to create an HTML file that the sample uses to construct the b
 <a name="bk_test" />
 ##Testing the app
 Build and run the application from Xcode. This launches the iOS Simulator, and you'll see a **Connect to Office 365** link. Click it, and you will be prompted to enter your credentials. Once you have successfully logged in, you will see a textbox with the email address for the account you logged in as and a **Send** link. Click **Send** to send an email message to the address specified in the textbox.
-
-<a name="bk_nextsteps"> </a>
-## Next steps
-
-Now that you've built an app that uses the Mail API, you can explore the other Office 365 REST APIs available for use in your apps.
-
-- [Office 365 API reference](..\api\api-catalog.md)
-
-<a name="bk_addresources"> </a>
-## Additional resources
-
-- [Office 365 iOS SDK](https://github.com/OfficeDev/Office-365-SDK-for-iOS)
-- [Set up your Office 365 development environment](..\howto\setup-development-environment.md)
-- [Office 365 Connect app for iOS](https://github.com/OfficeDev/O365-iOS-Connect)
-- [Office 365 code snippets for iOS](https://github.com/OfficeDev/O365-iOS-Snippets)

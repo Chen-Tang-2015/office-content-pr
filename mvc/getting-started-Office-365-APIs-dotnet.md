@@ -12,8 +12,6 @@ In this topic, we'll walk you through creating a simple MVC (model-view-controll
 3. [Test your app](#bk_test)
 
 
-
-
 <a name="bk_prerequisites" />
 ##Before you start
 
@@ -720,18 +718,4 @@ If this is a new development environment, Visual Studio may prompt you to config
 	The **My Contacts** page will retrieve and display the names of any Exchange contacts from your tenant.
 	
 You now have a web application project that you can customize and integrate Office 365 APIs.
-
-<a name="bk_nextsteps"> </a>
-## Next steps
-
-Now that you've built an app that uses the Mail API, you can explore the other Office 365 REST APIs available for use in your apps.
-
-- [Office 365 API reference](..\api\api-catalog.md)
-
-<a name="bk_addresources"> </a>
-## Additional resources
-
-- [Office 365 single-tenant MVC project](https://github.com/OfficeDev/O365-WebApp-SingleTenant)
-- [Office 365 ASP.NET MVC starter project](https://github.com/OfficeDev/O365-ASPNETMVC-Start)
--  [Office 365 APIs starter projects and code samples](..\howto\Starter-projects-and-code-samples.md) 
  

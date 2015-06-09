@@ -1,26 +1,11 @@
 ##Get started with JavaScript development
 
- 
-Before you can start working on your first JavaScript application with Office 365, there are a few one-time tasks that you need to complete, including <a href="setup-development-environment?javascript">setting up your Office 365 development environment</a> and grabbing the right tools.
-
-After setup, we'll walk you through creating a simple JavaScript app, **SimpleMailApp**, built on the [Angular](https://angularjs.org/) framework that uses the [Active Directory Authentication Library (ADAL) for JavaScript](https://github.com/AzureAD/azure-activedirectory-library-for-js) to authenticate a user and REST calls to retrieve that user's email using [cross-origin resource sharing (CORS)](.\create-web-apps-using-CORS-to-access-files-in-Office-365.md).
+We'll walk you through creating a simple JavaScript app, **SimpleMailApp**, built on the [Angular](https://angularjs.org/) framework that uses the [Active Directory Authentication Library (ADAL) for JavaScript](https://github.com/AzureAD/azure-activedirectory-library-for-js) to authenticate a user and REST calls to retrieve that user's email using [cross-origin resource sharing (CORS)](.\create-web-apps-using-CORS-to-access-files-in-Office-365.md).
 
 ![App Screenshot](images/GetStartedJavaScriptMailApp.png)
 
 <!-- Needs peer review. --> 
 This article focuses on an Angular front-end because ADAL JS was designed with single-page applications and Angular in mind. The library assumes the interaction pattern that SPAs require. While it is possible to use the library without Angular, it requires you to write much more code. Check out [Create JavaScript web apps using CORS to access Office 365 APIs](.\create-web-apps-using-CORS-to-access-files-in-Office-365.md) if you're interested in using the Office 365 APIs without ADAL JS.
-
-## Before you start
-
-Before you can create applications that access the Office 365 APIs, you'll need to set up your developer environment. This consists of three one-time tasks to make sure you've got the tools and environment to be successful:
-
-1. Download tools to create your JavaScript application, including an IDE, Git, and Node.js. 
-2. Get an Office 365 for business subscription, to access the Office 365 APIs.
-3. Associate your Office 365 subscription with Azure AD, so you can create and manage apps.
-
-If you still need to complete any of these steps, take a look at <a href="setup-development-environment?javascript">Set up your Office 365 development environment</a> for detailed instructions on getting set up.
-
-**Note**  Node.js, and specifically its package manager (npm), is needed for this article to install project dependencies. It's not necessary for development with the Office 365 APIs.
 
 ## Create your app and add dependencies 
 
@@ -68,57 +53,10 @@ The easiest way to include the ADAL dependencies is to add ```script``` tags usi
 
 ### Register your app with Azure AD
 
-Before you start writing the code for your Office 365 application, you're required to do a little work to register your application with Azure Active Directory and to set permissions for your application to use Office 365 services. You only need to do this once for each application.
+If you already signed in and registered your app, you're all set, just follow the steps below.
 
-1. Sign into the [Azure Management Portal](https://manage.windowsazure.com/) using your Office 365 Developer Site credentials.
+Otherwise, find [instructions](https://msdn.microsoft.com/en-us/office/office365/howto/add-common-consent-manually) to do so in the Azure portal.
 
-2. Click the **Active Directory** node in the left column and select the directory linked to your Office 365 subscription.
-    
-    ![Azure Management Portal](images/O365APIs_RegisterApp_1.png)
-
-3. Select the **Applications** tab and then **Add** at the bottom of the screen.
-    
-    ![Azure Management Portal Add Application](images/O365APIs_RegisterApp_2.png)
-
-4. On the pop-up, select **Add an application my organization is developing**. Then click the arrow to continue. 
-
-5. Choose a name for your app, such as *SimpleMailApp*, and select **Web application and/or web API** as its Type. Then click the arrow to continue.
-
-6. The value of **Sign-on URL** is the URL where your application will be hosted. Use *http://localhost:8080/* for the sample project.
-
-7. The value of **App ID URI** is a unique identifier for Azure AD to identify your app. You can use http://{your_subdomain}/SimpleMailApp, where {your_subdomain} is the subdomain of .onmicrosoft you specified while signing up for your Office 365 Developer Site. Then click the check mark to provision your application.
-
-8. Once the application has been successfully added, you will be taken to the Quick Start page for the application. From here, select the **Configure** tab.
-
-9. Scroll down to the **permissions to other applications** section and click the **Add application** button.
-
-    ![Add application for web app](images/GettingStartedJavaScriptAddPermissionsMail.png)
-
-10. In this article, we'll demonstrate how to get a user's email so add the **Office 365 Exchange Online** application. Click the plus sign in the application's row and then click the check mark at the top right to add it. Then click the check mark at the bottom right to continue.
-
-    ![Add Exchange permissions](images/O365APIs_RegisterApp_5.png)
-
-11. In the **Office 365 Exchange Online** row, select **Delegated Permissions**, and in the selection list, choose **Read user mail**.
-
-    ![Add application for web app](images/GetStarted_DelegatedPermissions.png)
-
-    These are the permissions that will be displayed to your app user when Azure prompts them to consent to your app's permission request. In general, request only the services your app actually requires, and specify the least level of permissions in each service that still let your app perform its functions.
-
-12. Click **Save** to save the app's configuration.
-
-### Configure your app to allow the OAuth 2.0 implicit grant flow
-
-To get an access token for Office 365 API requests, your application will use the OAuth implicit grant flow. You need to update the application's manifest to allow the OAuth implicit grant flow because it is not allowed by default. 
-
-1. Select the **Configure** tab of your application's entry in the Azure Management Portal. 
-
-2. Using the **Manage Manifest** button in the drawer, download the manifest file for the application and save it to your computer.
-
-3. Open the manifest file with a text editor. Search for the *oauth2AllowImplicitFlow* property. By default it is set to *false*; change it to *true* and save the file.
-
-4. Using the **Manage Manifest** button, upload the updated manifest file.
-
-You've now successfully created your app and registered it with Azure AD. The final step is to add code to make requests to the Outlook Mail REST API. 
 
 ## Code your app
 
@@ -997,29 +935,3 @@ If this is a new development environment, Visual Studio may prompt you to config
 	The **My Contacts** page will retrieve and display the names of any Exchange contacts from your tenant.
 	
 You now have a web application project that you can customize and integrate Office 365 APIs.
-
-<a name="bk_nextsteps"> </a>
-## Next steps
-
-Now that you've built an app that uses the Mail API, you can explore the other Office 365 REST APIs available for use in your apps.
-
-- [Office 365 API reference](..\api\api-catalog.md)
-
-<a name="bk_addresources"> </a>
-## Additional resources
-
-- [Office 365 single-tenant MVC project](https://github.com/OfficeDev/O365-WebApp-SingleTenant)
-- [Office 365 ASP.NET MVC starter project](https://github.com/OfficeDev/O365-ASPNETMVC-Start)
--  [Office 365 APIs starter projects and code samples](..\howto\Starter-projects-and-code-samples.md) 
- 
-
-
-
-
-[!INCLUDE [END ASP.NET MVC section](../includes/controls/aspnetmvcsection.xml)]
-
-
-
-
-[!INCLUDE [Enable filtering functionality ](../includes/controls/enablefiltering.xml)]
-

@@ -1,31 +1,11 @@
-# Get started with Office 365 APIs in apps
-
-The Office 365 APIs are REST services that provide access to Office 365 data, such as: mail, calendars, and contacts from Exchange Online; files and folders from SharePoint Online and OneDrive for Business; users and groups from Azure Active Directory.
-
 ##Get started with Android development
 
-To give you a taste of what you can do with the Office 365 REST APIs, this topic shows you how to create a simple application that gets information from an Exchange Online server.
+Let's create a simple application that gets information from an Exchange Online server.
 
 ![A screenshot of the app running in an emulator window. The available actions are shown on buttons.](images\O365APIs_RunningApp1-50Percent.png)
 
-Before you can start work on your first Office 365 application, there are a few one-time tasks that you need to take care of, plus you'll need to be sure that you have your tools. After that you can get started on your first app.
-
-<a name="bk_setup"></a>
-##Before you start
-
-Before you can create applications that access the Office 365 APIs, you'll need to set up your developer environment. This consists of three one-time tasks to make sure you've got the tools and environment to be successful:
-
-1. Set up the Android app development environment that you'll be using to create your apps.
-1. Get an Office 365 for business subscription, to access the Office 365 APIs.
-1. Associate your Office 365 subscription with Azure AD, so you can create and manage apps.
-
-If you still need to complete any of these steps, take a look at <a href="setup-development-environment?android">Set up your Office 365 development environment</a> for detailed instructions on getting set up.
-
-<a name="bk_createApp"></a>
 ##Create your app and add dependencies
-In this step, you'll create an app and add the Office 365 SDK for Android and Azure Active Directory Authentication Library for Android to the project. Source for both of these libraries is available from GitHub, and you can download the binaries for the Office 365 SDK from [Bintray](https://bintray.com/msopentech/Maven/Office-365-SDK-for-Android/view), if you prefer.
 
-<a name="bk_dependenciesForStudio"></a>
 ###Add dependencies for Android Studio
 
 You can use Android Studio's built-in support for Gradle to manage the dependencies for your application. To add the dependencies to your application:
@@ -47,8 +27,6 @@ dependencies {
     compile group: 'com.microsoft.aad', name: 'adal', version: '+'
     }
 ```
-
-<a name="bk_dependenciesForEclipse"></a>
 ###Add dependencies for Eclipse
 
 If you use Eclipse, you'll need to do a little more work by hand to add the Azure Active Directory Authentication Library for Android and Office 365 SDK libraries to your workspace. To add the dependencies to your workspace: 
@@ -91,55 +69,11 @@ You'll need to add two permissions to your **AndroidManifest.xml** file so that 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 ###Integrate Office 365 services
-Before you start writing the code for your Office 365 application, you have to do a little work to register your application with Azure AD and to set permissions for your application to access Office 365 services. You need to do this only once for each application.
 
 <a name="bk_register"></a>
-####Register your app with Azure AD
-1. Sign into the [Azure Management Portal](https://manage.windowsazure.com/), using your Office 365 Developer Site credentials.
+If you already signed in and registered your app, you're all set, just follow the steps below.
 
-1. Click **Active Directory** on the left menu, then click on the directory for your Office 365 Developer Site.
-
-    ![A screenshot of the Azure Management Portal website. The item 'Active Directory' is selected in the left navigation pane. In the main pane, the Directory tab is selected. The name of the current directory is highlighted.](images\O365APIs_RegisterApp_1.png)
-
-1. On the top menu, select **Applications**.
-
-1. Click **Add** in the bottom menu.
-
-	![A screenshot of the directory information page. In the menu bar at the bottom of the page, the New icon is highlighted.](images\O365APIs_RegisterApp_2.png)
-1. On the **What do you want to do** page, click **Add an application my organization is developing**.
-
-1. On the **Tell us about your application** page, give your application a name and select **NATIVE CLIENT APPLICATION** for **Type**.
-
-1. Click the arrow icon on the bottom-right corner of the page.
-
-1. On the **Application information** page, specify a Redirect URI. For this example, you can specify **http://localhost/simplemailapp** and then click the checkbox in the bottom-right corner of the page.
-
-1. Once the application has been successfully added, the Quick Start page for the application is displayed. 
-
-Your app is now registered with Azure AD, and has been assigned a client ID. You'll need this information later [when you set up your application](#bk_context). However, there are several important aspects of your app left to configure.	
-
-####Add Office 365 services and set permissions
-
-Next, you'll need to specify exactly what permissions your app requires of the Office 365 APIs. To do so, you add access to the Office 365 service containing the API you require to your app, and then specify the permissions you need from the APIs in that service. The example application needs to read the users' Inbox, and set up the required permission as follows.
-
-1. In the Azure Management Portal, on the configuration page for your app, scroll to the bottom of the page and, under **permissions to other applications**, select **Add application**.
- 
-	![A screenshot of the app configuration page for your app, on the Azure Management Portal website. Under the page section titled 'permission to other applications', the 'add application' button is highlighted.](images\O365APIs_RegisterApp_4.png)
-
-1. Select the **Office 365 Exchange Online** service.
-	
-	1. Select the service name, and click the plus symbol to add the service. 
-	1. The service is then listed under the **Selected** column. 
-	1. Click the check mark icon to save your choices.
-	![A screenshot of the 'permissions to other applications' page. The available applications are listed in a table. Next to the name of each is the plus icon. At the far right is a column that lists the applications you have added to your app. A check mark icon at the bottom of the page is highlighted.](images\O365APIs_RegisterApp_5.png)
-
-	You are returned to your app's configuration page.
-
-1. Under **permissions to other applications**, click the **Delegated Permissions** column for **Office 365 Exchange Online**, and specify the **Read users' mail** permission.
-
-	![A screenshot of the app configuration page for your app, on the Azure Management Portal website. Under the page section titled 'permission to other applications', the application you have just added are listed in a table. Next to the name of each application is a column titled 'Delegated permissions'. This column displays a drop-down menu of the permissions you can request for your app from each application you added.](images\GetStarted_DelegatedPermissions.png)
-
-	These are the permissions that will be displayed to your app user when Azure prompts them to consent to your app's permission request. In general, request only the services your app actually requires, and specify the least level of permissions in each service that still enable your app to perform its functions.
+Otherwise, find [instructions](https://msdn.microsoft.com/en-us/office/office365/howto/add-common-consent-manually) to do so in the Azure portal.
 
 <a name="bk_codeYourApp"></a>
 ## Code your app
@@ -623,18 +557,3 @@ Click the **DISCOVER SERVICES** button to get a list of the REST service endpoin
 Click the **Get mail** button to get a list of email messages in the user's Inbox. This example only lists the subject of each email message.
 
 ![A screenshot of a list of email subject lines from the user's Inbox.](images\O365APIs_RunningApp5.png)
-
-<a name="bk_nextstep"> </a>
-
-## Next steps
-
-Now that you've built a simple app that gets email from Office 365, you're ready to take a look at a more complicated application that shows how to use the entire REST API.
-
-* [Office 365 APIs Starter Project for Android](https://github.com/OfficeDev/O365-Android-Start)
-
-<a name="bk_addresources"> </a>
-## Additional resources
-
-
--  [Overview of developing on the Office 365 platform](..\howto\platform-development-overview.md)
--  [Office 365 code samples for Android](http://dev.office.com/code-samples?filters=Android)
