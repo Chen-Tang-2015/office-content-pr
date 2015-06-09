@@ -1,3 +1,3 @@
-# Get Setup
+# Before you begin
 
-1. Use your favorite text editor. You can write JavaScript in many different IDEs and since none provide a significant advantage for developing with the Office 365 APIs, choose your favorite and get started. [Brackets](http://brackets.io/), [Sublime Text](http://www.sublimetext.com/), [WebStorm](https://www.jetbrains.com/webstorm/), and [Visual Studio](http://www.visualstudio.com/downloads) are popular choices.
+1. Get your favorite text editor. You can write JavaScript in many different IDEs and since none provide a significant advantage for developing with the Office 365 APIs, choose your favorite and get started. [Brackets](http://brackets.io/), [Sublime Text](http://www.sublimetext.com/), [WebStorm](https://www.jetbrains.com/webstorm/), and [Visual Studio](http://www.visualstudio.com/downloads) are popular choices.
