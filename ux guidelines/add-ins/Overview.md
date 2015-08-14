@@ -25,7 +25,7 @@ All Add-Ins, irrespective of the underlying framework used to create custom UI, 
 
 
 ##Design language
-We recommend Add-In developers to adopt the Office design language and use our [UI toolkit](UIToolkit.md) when creating custom HTML based experiences. If your company already has a design language or specific design elements that you want to use in an Add-In you are welcome to do so as long as the end result provides a harmonious experience for Office users. 
+We recommend Add-In developers to adopt the Office design language and use our [UI toolkit](UIToolkit.md) when creating custom HTML based experiences. If your company already has a design language you are welcome to use it as long as the end result provides a harmonious experience for Office users. 
 
 
 ####Building Blocks
