@@ -34,3 +34,5 @@ We recommend Add-In developers to adopt the Office design language and use our U
 
 
 ###Recommended Layouts
+
+###Best Practices

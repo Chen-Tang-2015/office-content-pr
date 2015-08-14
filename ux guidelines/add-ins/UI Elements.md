@@ -1,24 +1,24 @@
 #UI Elements
 Add-Ins can create 2 main types of user interface elements: Add-In Commands and Custom HTML-Based interfaces
+![](http://i.imgur.com/KE0HI3e.png)
+ 
 
 ##Add-In Commands
 Commands are defined in the XML Manifest of an Add-In. Once interpreted commands are projected as native UX extensions to the Office user interface. For example, commands provide the ability to add buttons on the Office Ribbon. 
 
-Currently only mail add-ins support creation of custom commands. Learn more. 
-
-[Add Image here]
+Currently only mail add-ins support creation of custom commands.Learn more. [Todo: Laura to synch with Tom and add link to outlook docs]
+![](http://i.imgur.com/zkpHTAu.png)
 
 Taskpane and Content Add-ins have pre-defined entrypoints created under the "Insert" tab of Word Excel and PowerPoint. 
 
-[Add image here]
-
+![](http://i.imgur.com/MgUZev0.png)
 ##Custom HTML-based UI
-Once of the main capabilities that Add-Ins have is that they can project custom HTML-based interfaces inside the Office clients. Depending on the Add-In type the containers available to display UI vary. For example taskpane add-ins can display custom HTML-based UI on the side of the document while content add-ins are  objects that display the custom UI embedded on Office documents themselves. 
+Once of the main capabilities that Add-Ins have is that they can project custom HTML-based interfaces inside the Office clients. Depending on the Add-In type the containers available to display UI vary. For example taskpane add-ins  display custom HTML-based UI on the side of the document while content add-ins display the custom UI embedded on Office documents themselves (actually part of the document). 
 
 Irrespective of the Add-In type there are common building blocks that you can leverage to create custom HTML-based user interfaces. 
 
 ###Office UI-Toolkit
-To make it easy for developers to quickly create HTML-based UI for their Add-Ins we've created a [UI Toolkit](http://msdnlandingpagefortoolkit) with some of the most used components that you will need. Fonts, Styles, Input controls as well as some Office-powered controls are all part of this toolkit. In the sections below, as we describe each UX building block, links to specifics part of the Office UI-toolkit will take you to more details and code samples that teach you how to use the toolkit. 
+To make it easy for developers to quickly create HTML-based UI for their Add-Ins we've created a [UI Toolkit](http://msdnlandingpagefortoolkit) with some of the most used components that you will need. Fonts, Styles, Input controls as well as  Office-powered controls are all part of this toolkit. In the sections below, as we describe each UX building block, links to specifics part of the Office UI-toolkit will take you to more details and code samples that teach you how to use the toolkit. 
 
 It is important to highlight that while using the Office UI Toolkit is strongly encouraged you are welcome to use in addition (or instead) any other framework or design language for your Add-In as long as the end result follows the principles outlined in the "Basics" section of this guide.  
 
@@ -26,7 +26,7 @@ It is important to highlight that while using the Office UI Toolkit is strongly 
 #####Office Color Scheme
 Add-Ins are encouraged to use the following color palette. The Office UI toolkit has several colors that you can use for different design elements in your Add-In. 
 
-[Todo: Map this with fabric classes: https://msdn.microsoft.com/EN-US/library/office/dn684229.aspx ] 
+[Todo: Laura and Jeffrey to map this with fabric classes: https://msdn.microsoft.com/EN-US/library/office/dn684229.aspx ] 
 
 
 ####Creating your own customized color palette
@@ -44,24 +44,29 @@ Irrespective of whether you decide to adopt the Office color scheme or use your 
 
 - Mail and Taskpane Add-Ins
 Use `office.context.officeTheme` to match the theme of the Office applications. 
--Content Add-Ins, use o`ffice.context.document.documentTheme` to match the theme of the Document (PowerPoint only)
+-Content Add-Ins, use `office.context.document.documentTheme` to match the theme of the Document (PowerPoint only)
 
-[Todo: Add pointers to code samples]
+[Todo: Laura to create docs for theming API and linkt to them here, use humberto's seed sample]
+[Todo: Humberto to add screenshot of themed add-in]
 
 ###Typography and Icons
-The Office UI Toolkit allows you to use the same fonts and icons that we use in our own web products. All you have to do is reference the appropriate CSS classes. If you decide to use your own set of fonts and icons, make sure they don't conflict with those of Office, for example, avoid using icons with the same visual appearance as those in Office but you give them a different meaning.   
+The Office UI Toolkit allows you to use the same fonts and icons that we use in our own web products. All you have to do is reference the appropriate CSS classes. 
+
+If you decide to use your own set of fonts and icons, make sure they don't conflict with those of Office, for example, avoid using icons with the same visual appearance as those in Office but you give them a different meaning.   
 
 ###Navigation
-Using Pivots or Navigation bars are the 2 recommended methods to navigate within your Add-In. Pivots are recommended for add-ins that only have a couple of peer sections, Navigation Bars are recommended for add-ins with more complex navigation structures. 
+Using Pivots or Navigation bars are the 2 recommended methods to navigate within your Add-In. Pivots are recommended for Add-ins that only have a couple of peer sections, Navigation Bars are recommended for add-ins with more complex navigation structures. 
 
 The Pivot component and the NavBar component on the Office UI toolkit are concrete implementations of recommended Navigation patterns. 
 
 ###Input
-Input boxes, checkboxes, searchbox, are some of the several components that the Office UI toolkit provides your to gather input from customers. You are welcome to use your own components or 3rd party components. 
+Input Boxes, Checkboxes, Searchbox, are some of the several components that the Office UI toolkit provides your to gather input from customers. You are welcome to use your own components or 3rd party components. 
 ###Layout
 [blurb about layout options including lists, dialogs, callouts]
 ###Animations
 [blurb about animations]
+###Notifications and Confirmations
+###Progress
 
 ###Office-powered Controls
 The Office UI Toolkit includes ready to use controls that connect to Office services. People Controls (People Picker, Persona Control, Persona Card), File Picker are some of the controls that you can leverage in your Add-Ins. 
