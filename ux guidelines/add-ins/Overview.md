@@ -1,4 +1,4 @@
-# Add-in UX Guidelines #
+# Office Add-ins UX Guidelines #
 
 ##Basics
 ###Designing an Office Add-In
