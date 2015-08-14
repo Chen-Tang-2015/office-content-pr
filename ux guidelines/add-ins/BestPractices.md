@@ -1,4 +1,5 @@
-####Branding
+#Best Practices
+###Branding
 We welcome and celebrate Add-Ins that adequately use branding to inspire trust and situate users. We discourage abuse of branding to overwhelm or advertise to users. Depending of the type of Add-in that you are creating we recommend specific places to showcase your brand, see: [Taskpane](recommendedlayouts/TaskpaneAddIn.md),[Content](recommendedlayouts/ContentAddIn.md), [Mail](recommendedlayouts/MailAddIn.md)
 
 ###Voice
