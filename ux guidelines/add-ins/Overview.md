@@ -35,7 +35,7 @@ Add-Ins can create 2 main types of user interface elements: [Add-In Commands](UI
 - Add-In Commands enable you to project native UX hooks into Office applications
 - Custom HTML-Based UI enables you to leverage the power of HTML and project it inside Office clients. 
 
-[This page details each building block and how to use it to create great Office Add-Ins](UIElements)  
+[This page details each building block and how to use it to create great Office Add-Ins](UIElements.md)  
 
 
 ##Recommended Layouts with Samples
