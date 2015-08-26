@@ -1,8 +1,14 @@
-##Layout for task pane add-ins
-[**Todo**: Jeffrey to create/validate what the desired layout should be here]
+#Layout for task pane add-ins
 
-![Layout of a task pane add-in](images/task-pane-add-in.png)
+Create a consistent look and feel for task pane add-ins by using the recommended layout. A task pane add-in includes the following elements: 
 
+- Branding (optional) Include in a bar at the topic, with a maximum height of 80 pixels.
+- Navigation element (optional) Include a navigation bar or pivot in a bar under the brand element, if you're using, with a maximum height of 80 pixels.
+- Content
+
+![Layout of a task pane add-in, showing branding, navigation, and content elements](images/task-pane-add-in.png)
+
+You can also add [custom HTML-based UI](UIElements.md#custom-HTML-based-UI) to your task pane add-in.
 
 ### Full Sample template
 [http://foo](http://foo "Download")
