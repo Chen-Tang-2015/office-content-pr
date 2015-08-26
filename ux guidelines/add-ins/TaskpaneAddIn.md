@@ -1,6 +1,7 @@
 ##Layout for task pane add-ins
 [**Todo**: Jeffrey to create/validate what the desired layout should be here]
-![](http://i.imgur.com/dCrGnXG.png)
+
+![Layout of a task pane add-in](images/task-pane-add-in.png)
 
 
 ### Full Sample template
