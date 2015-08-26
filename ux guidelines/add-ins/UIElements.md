@@ -24,15 +24,13 @@ Regardless of the type of add-in you create, you can use common building blocks 
 
 Office UI Fabric provides the following UI elements:
 
-- Color, including theme, neutral, branding, and accent colors
-- Typography
-- Icons
-- Navigation elements, including pivots, and navigation bars
-- Input components
-- Layouts 
-- Animations
-- Notifications and Confirmations
-- Progress indicators
+- [Typography](https://github.com/OfficeDev/Office-UI-Fabric/blob/master/ghdocs/FEATURES.md#typography)
+- [Color](https://github.com/OfficeDev/Office-UI-Fabric/blob/master/ghdocs/FEATURES.md#color), including theme, neutral, branding, and accent colors
+- [Icons](https://github.com/Lauragra/Office-UI-Fabric/blob/master/ghdocs/FEATURES.md#icons)
+- [Animations](https://github.com/Lauragra/Office-UI-Fabric/blob/master/ghdocs/FEATURES.md#animations)
+- [Input components](https://github.com/Lauragra/Office-UI-Fabric/blob/master/ghdocs/COMPONENTS.md#inputs)
+- [Layouts](https://github.com/Lauragra/Office-UI-Fabric/blob/master/ghdocs/COMPONENTS.md#layout) 
+- [Navigation elements](https://github.com/Lauragra/Office-UI-Fabric/blob/master/ghdocs/COMPONENTS.md#navigation), including pivots, and navigation bars
 
 **Note:** If you decide to use your own set of fonts and icons, make sure they don't conflict with those of Office. For example, don't use icons that are the same as or similar to those in Office, but represent something different in your add-in. 
 

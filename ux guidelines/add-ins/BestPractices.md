@@ -17,12 +17,6 @@ To learn more, see [Office voice](Voice.md).
 ###Loading UX
 For any HTML-based UX in your add-in, we recommend that you include a loading indicator. The indicator should render when it is fully ready to display; that way, you avoid jarring effects such as elements popping up, or forms rendering that aren't fully displayed or usable. The [task pane add-in sample](http://todoaddsample) shows an example of this pattern. 
 
-###First use and getting started
-[todo: Add content here]
-
-###Logon pages
-[todo: Add content here]
-
 ###Performance 
 For add-ins that create custom HTML-based interfaces to gather or display information, optimize how resources are loaded, and provide feedback for long-running operations like loading indicators. How customers perceive the performance and responsiveness of your add-in is as important as how it actually performs. 
 
