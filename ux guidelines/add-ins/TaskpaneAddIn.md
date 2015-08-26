@@ -1,4 +1,4 @@
-##Taskpane Add-Ins
+##Layout for task pane add-ins
 [**Todo**: Jeffrey to create/validate what the desired layout should be here]
 ![](http://i.imgur.com/dCrGnXG.png)
 

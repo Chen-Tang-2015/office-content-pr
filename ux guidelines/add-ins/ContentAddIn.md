@@ -1,4 +1,4 @@
-##Content Add-Ins
+##Layout for content add-ins
 [**Todo**: Jeffrey to create/validate what the desired layout should be here]
 ![](http://i.imgur.com/njVaaMi.png)
 

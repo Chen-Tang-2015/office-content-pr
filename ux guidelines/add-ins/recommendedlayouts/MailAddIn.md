@@ -1,2 +1,0 @@
-##Mail Add-Ins
-[Todo: Laura to Sync with Tom and Wamwitha on whether we show this here of we point to a specific Outlook page. The outlook folks have been consolidating their dev experience under http://dev.outlook.com] 
