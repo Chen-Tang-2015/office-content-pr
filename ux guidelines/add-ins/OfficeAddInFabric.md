@@ -37,4 +37,4 @@ Note: If you don't intend to use all components and want to reduce the size of t
 
 
 ##End to End Sample
-Looking for an end to end sample? We got you covered, here it is
+Looking for an end to end sample? We got you covered, [here it is](https://github.com/OfficeDev/office-content-pr/tree/master/ux%20guidelines/add-ins/Fabric%20Sample)
