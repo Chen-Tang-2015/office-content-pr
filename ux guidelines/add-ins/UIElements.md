@@ -1,4 +1,11 @@
 #Office Add-in UI elements
+
+**Last modified:** August 31, 2015
+
+***Applies to:** Access apps for SharePoint | apps for Office | Excel | Office Add-ins | Outlook | PowerPoint | Project | Word*
+
+Learn more about [supported hosts and other requirements](https://msdn.microsoft.com/EN-US/library/office/dn833104.aspx).
+
 You can use two types of UI elements in your Office Add-ins: 
 
 - Add-in commands 

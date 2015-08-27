@@ -1,5 +1,11 @@
 # UX Guidelines for Office Add-ins#
 
+**Last modified:** August 31, 2015
+
+***Applies to:** Access apps for SharePoint | apps for Office | Excel | Office Add-ins | Outlook | PowerPoint | Project | Word*
+
+Learn more about [supported hosts and other requirements](https://msdn.microsoft.com/EN-US/library/office/dn833104.aspx).
+
 Office Add-ins extend the Office experience by providing contextual functionality that users can access within Office clients. Add-ins empower users to get more done by enabling them to access third-party functionality within Office, without costly context switches. 
 
  Your add-in UX design must integrate seamlessly with Office to provide an efficient, natural interaction for your users. Take advantage of Office UI extensions (commands) to provide access to your add-in and use the [UI elements](UIElements.md) and [best practices](BestPractices.md) that we recommend when you create custom HTML-based UI. 
@@ -37,5 +43,5 @@ We provide recommended layouts for each add-in type, along with **end-to-end** e
 
 - [Layout for task pane add-ins](TaskpaneAddIn.md)
 - [Layout for content add-ins](ContentAddIn.md) 
-- [Layout for mail add-ins](MailAddIn.md)
+- [Layouts for mail add-ins](MailAddIn.md)
 

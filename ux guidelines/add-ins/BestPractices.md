@@ -1,5 +1,11 @@
 #Design best practices for Office Add-ins
 
+**Last modified:** August 31, 2015
+
+***Applies to:** Access apps for SharePoint | apps for Office | Excel | Office Add-ins | Outlook | PowerPoint | Project | Word*
+
+Learn more about [supported hosts and other requirements](https://msdn.microsoft.com/EN-US/library/office/dn833104.aspx).
+
 As you design and develop your add-in, you will want to optimize the user experience. This includes defining how users log on to your service, how to promote your brand, the getting started experience for your add-in, and more. Apply the following best practices to your add-in design.
 
 ###Branding

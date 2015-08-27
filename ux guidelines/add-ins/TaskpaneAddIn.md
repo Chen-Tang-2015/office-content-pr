@@ -1,6 +1,12 @@
 #Layout for task pane add-ins
 
-Create a consistent look and feel for task pane add-ins by using the recommended layout. A task pane add-in includes the following elements: 
+**Last modified:** August 31, 2015
+
+***Applies to:** Access apps for SharePoint | apps for Office | Excel | Office Add-ins | Outlook | PowerPoint | Project | Word*
+
+Learn more about [supported hosts and other requirements](https://msdn.microsoft.com/EN-US/library/office/dn833104.aspx).
+
+Create a consistent look and feel for task pane add-ins by using the recommended design layout. The recommended layout for a task pane add-in includes the following elements: 
 
 - Branding (optional) - Include in a bar at the topic, with a maximum height of 80 pixels.
 - Navigation element (optional) - Include a navigation bar or pivot in a bar under the brand element, if you're using, with a maximum height of 80 pixels.

@@ -1,5 +1,11 @@
 ##Layout for content add-ins
 
+**Last modified:** August 31, 2015
+
+***Applies to:** Access apps for SharePoint | apps for Office | Excel | Office Add-ins | Outlook | PowerPoint | Project | Word*
+
+Learn more about [supported hosts and other requirements](https://msdn.microsoft.com/EN-US/library/office/dn833104.aspx).
+
 Create a consistent look and feel for your content add-ins by using the recommended design layout. The recommended layout for a content add-in includes the following elements: 
 
 - Add-in content

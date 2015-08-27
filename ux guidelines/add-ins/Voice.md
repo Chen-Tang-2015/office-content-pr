@@ -1,5 +1,9 @@
 #Office voice
 
+**Last modified:** August 31, 2015
+
+***Applies to:** Office 365 | Office Add-ins | SharePoint Add-ins*
+
 As you design your Office 365 web apps and Office and SharePoint Add-ins, consider the voice that you use in your UI text and elements. Strive to match the voice and tone of the Office UI, which is conversational, engaging, and accessible to users. 
 
 To align your text with the principles of the Office voice:
