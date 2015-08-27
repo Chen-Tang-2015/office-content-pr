@@ -1,4 +1,5 @@
-#Tutorial: Using Office UI Fabric in Add-Ins
+#Using Office UI Fabric in Add-Ins
+If you are building an Office Add-In we encourage you to use Office UI Fabric to create your user experience. The following steps walk you through the basics.  
 
 ##1.- Setup
 Add the following lines to your HTML on the head section to reference Fabric from the CDN:
@@ -11,7 +12,6 @@ Using icons is super simple. All you have to do is use an "i" element and refere
 
     <i class="ms-Icon ms-Icon--group" style="font-size:xx-large" aria-hidden="true"></i>
 
-[Add font sample here]
 
 ##3.- Using styles for simple components
 Fabric comes with styles for various different UI elements such as buttons, checkboxes, etc. All you have to do is to reference the appropiate classes to add the corresponding style. For example:
@@ -27,7 +27,7 @@ Fabric also comes with some components that support simple behaviors (e.g. what 
 
 Here is a simple example for the SearchBox component
 
-1. Download the SearchBox component from [here](http://link to searchbox code)
+1. Download the SearchBox component from [here](https://github.com/OfficeDev/Office-UI-Fabric/tree/master/dist/components/SearchBox)
 2. Reference it in your code like this:`<script src="SearchBox/Jquery.SearchBox.js"></script>`
 1. Initialize the component by making sure this line executes when your page is loaded. Its often recommended to put this on the Office.Initialize block of your Add-In.     `$(".ms-SearchBox").SearchBox();`
 
@@ -35,7 +35,9 @@ Note: If you don't intend to use all components and want to reduce the size of t
 
 ##5.-Theming
 
-The last step is plugging the theming APIs in your web page. If you are using Fabric throguht all you have to do is reference the theming.js file and it will automatically do the appropiate replacements. IF you are using other frameworks or components that you want to theme you can manually use the theming API to retrieve themed values and apply them [add link to theming api docs]
+The last step is plugging the theming APIs in your web page. All you have to do is reference the OfficeThemeForFabric.js file and add the following line inside the Office.initialize handler. 
+
+    applyOfficeTheme();
 
 ##End to End Sample
 Looking for an end to end sample? We got you covered, here it is: [Link here]
