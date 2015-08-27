@@ -2,9 +2,9 @@
 
 Create a consistent look and feel for task pane add-ins by using the recommended layout. A task pane add-in includes the following elements: 
 
-- Branding (optional) Include in a bar at the topic, with a maximum height of 80 pixels.
-- Navigation element (optional) Include a navigation bar or pivot in a bar under the brand element, if you're using, with a maximum height of 80 pixels.
-- Content
+- Branding (optional) - Include in a bar at the topic, with a maximum height of 80 pixels.
+- Navigation element (optional) - Include a navigation bar or pivot in a bar under the brand element, if you're using, with a maximum height of 80 pixels.
+- Add-in content
 
 ![Layout of a task pane add-in, showing branding, navigation, and content elements](images/task-pane-add-in.png)
 
