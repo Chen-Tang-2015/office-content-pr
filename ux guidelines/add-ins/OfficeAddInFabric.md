@@ -4,8 +4,10 @@ If you are building an Office Add-In we encourage you to use Office UI Fabric to
 ##1.- Setup
 Add the following lines to your HTML on the head section to reference Fabric from the CDN:
 
-     <link rel="stylesheet" href="https://officeuifabrictest.azurewebsites.net/0.1/css/fabric.min.css">
-     <link rel="stylesheet" href="https://officeuifabrictest.azurewebsites.net/0.1/css/fabric.components.min.css">
+UPDATE THESE LINKS!!!!!!!
+
+     <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/css/fabric.min.css">
+     <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/css/fabric.components.min.css">
 
 ##2.- Using Icons and Fonts
 Using icons is super simple. All you have to do is use an "i" element and reference the appropriate classes. You can control the size of the icon by changing the font-size:
@@ -23,21 +25,16 @@ Fabric comes with styles for various different UI elements such as buttons, chec
     </button>
 
 ##4.-Using components with sample behavior
-Fabric also comes with some components that support simple behaviors (e.g. what happens on click). To get you started Fabric also includes some **sample code** in the form of JQuery UI plug-ins that shows you how to wire things up. You are not limited to use those samples though, you should feel free to use whatever other framework you want to wire things up.  If you do opt to use the samples note that the code is not distributed as part of the CDN so you have to download it from the Fabric GitHub site, reference it and then initialize it in your code. 
+Fabric also comes with some components that support behaviors (e.g. what happens on click). To get you started Fabric includes some **sample code** in the form of JQuery UI plug-ins that shows you how to wire things up. You are not limited to use those samples though, you should feel free to use whatever other framework you want to wire things up.  If you do opt to use the samples note that the code is not distributed as part of the CDN so you have to download it from the Fabric GitHub site ([dist](https://github.com/OfficeDev/Office-UI-Fabric/tree/master/dist) folder), reference it and then initialize it in your code. 
 
 Here is a simple example for the SearchBox component
 
 1. Download the SearchBox component from [here](https://github.com/OfficeDev/Office-UI-Fabric/tree/master/dist/components/SearchBox)
 2. Reference it in your code like this:`<script src="SearchBox/Jquery.SearchBox.js"></script>`
-1. Initialize the component by making sure this line executes when your page is loaded. Its often recommended to put this on the Office.Initialize block of your Add-In.     `$(".ms-SearchBox").SearchBox();`
+1. Initialize the component by making sure this line executes when your page is loaded. Its often recommended to put this on the `Office.Initialize` block of your Add-In.     `$(".ms-SearchBox").SearchBox();`
 
-Note: If you don't intend to use all components and want to reduce the size of the resources downloaded you can instead opt to host individual css for each component. You can get the individual CSS from the GitHub repository under each component folder. 
+Note: If you don't intend to use all components and want to reduce the size of the resources downloaded you can instead opt to host individual css for each component. You can get the individual CSS from the [Fabric GitHub repository](https://github.com/OfficeDev/Office-UI-Fabric) under each component folder. 
 
-##5.-Theming
-
-The last step is plugging the theming APIs in your web page. All you have to do is reference the OfficeThemeForFabric.js file and add the following line inside the Office.initialize handler. 
-
-    applyOfficeTheme();
 
 ##End to End Sample
-Looking for an end to end sample? We got you covered, here it is: [Link here]
+Looking for an end to end sample? We got you covered, here it is
