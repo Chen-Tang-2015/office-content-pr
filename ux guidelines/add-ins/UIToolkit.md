@@ -1,11 +1,11 @@
-#Office UI toolkit
+#Design Office 365 web apps and Office and SharePoint Add-ins
 
 **Last modified:** August 31, 2015
 
 ***Applies to:** Office 365 | Office Add-ins | SharePoint Add-ins*
 
 
-Are you ready to build your first Office-powered web app or add-in, and wondering how can you make it look like Office? The Office UI toolkit has key plug-and-play components that will make it easy to create web experiences that connect to and integrate with Office. 
+Are you ready to build your first Office-powered web app or add-in, and wondering how can you make it look like Office? The Office UI toolkit has key plug-and-play components that will make it easy to create web experiences that connect to and integrate with Office, including [Office UI Fabric](https://github.com/OfficeDev/office-UI-Fabric) and [Office JavaScript controls](https://msdn.microsoft.com/en-us/office/office365/howto/javascript-controls). 
 
 **Note:** Although we encourage you to adopt the Office UI toolkit, you are also welcome to use any other framework. In fact, the toolkit is designed to be used with other popular frameworks, like Bootstrap.  
 
@@ -23,7 +23,7 @@ To get started with Office UI Fabric, see the following:
 
 - [Office UI Fabric on GitHub](https://github.com/OfficeDev/office-UI-Fabric)
 - [Tutorial: Using Office UI Fabric in an Office Add-in](tutorials/AddinFabricTutorial.md)
-- Tutorial: Using Office UI Fabric in a web app  [Todo: Point to the tutorial the fabric team is creating]
+- [Tutorial: Using Office UI Fabric in a web app](https://github.com/OfficeDev/Office-UI-Fabric/blob/develop/ghdocs/TUTORIAL.md)
 
 ##Office JavaScript controls
 Whenever your application needs to connect to Office services or provide UI that is almost identical to that of Office, you can use the Office JavaScript controls. These are ***turnkey controls, already set up to work with Office 365***. You just have to reference and configure the control files. 
