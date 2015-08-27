@@ -11,7 +11,7 @@ You can use two types of UI elements in your Office Add-ins:
 - Add-in commands 
 - Custom HTML-based interfaces
 
-![An image showing add-in commands and custom HTML UI elements in an add-in](images/add-in-ui-elements.png)
+![An image showing add-in commands and custom HTML UI elements in an add-in](images/ui-elements.png)
  
 
 ##Add-in commands
