@@ -2,7 +2,7 @@
 
 **Last modified:** August 31, 2015
 
-***Applies to:** Access apps for SharePoint | apps for Office | Excel | Office Add-ins | Outlook | PowerPoint | Project | Word*
+***Applies to**: Access apps for SharePoint | apps for Office | Excel | Office Add-ins | Outlook | PowerPoint | Project | Word*
 
 Learn more about [supported hosts and other requirements](https://msdn.microsoft.com/EN-US/library/office/dn833104.aspx).
 
@@ -11,7 +11,7 @@ You can use two types of UI elements in your Office Add-ins:
 - Add-in commands 
 - Custom HTML-based interfaces
 
-![](http://i.imgur.com/KE0HI3e.png)
+![An image showing add-in commands and custom HTML UI elements in an add-in](images/add-in-ui-elements.png)
  
 
 ##Add-in commands
@@ -19,11 +19,12 @@ Commands are defined in the [add-in XML manifest](https://msdn.microsoft.com/EN-
 
 Currently, add-in commands are only supported for mail add-ins. To learn more, see [Add-in commmands for mail](https://msdn.microsoft.com/EN-US/library/office/mt267546.aspx?f=255&MSPPError=-2147217396).
  
-![](http://i.imgur.com/zkpHTAu.png)
+![An image that shows add-in commands added to the Outlook Ribbon](images/add-in-commands.png)
 
-Excel, PowerPoint, and Word have predefined entry points for task pane and content add-ins on the Insert tab in the Office Ribbon. Custom command functionality for content and task pane add-ins is in the works. 
+Excel, PowerPoint, and Word have predefined entry points for task pane and content add-ins on the Insert tab in the Office Ribbon. Custom command functionality for content and task pane add-ins will be available soon. 
 
-![](http://i.imgur.com/MgUZev0.png)
+![An image that shows the Insert tab on the Word Ribbon](images/Word-insert-tab.png)
+
 ##Custom HTML-based UI
 Add-ins can embed custom HTML-based UI within Office clients. The containers that are available to display the UI vary based on the type of add-in. For example, task pane add-ins display custom HTML-based UI in the right pane of the document; content add-ins display the custom UI directly within Office documents.
 

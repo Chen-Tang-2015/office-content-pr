@@ -1,4 +1,4 @@
-# UX Guidelines for Office Add-ins#
+# Design guidelines for Office Add-ins
 
 **Last modified:** August 31, 2015
 
@@ -38,10 +38,11 @@ You can use two types of UI elements to create your add-ins:
 For details about how to use these building blocks, see [UI elements](UIElements.md).  
 
 
-##Recommended layouts 
+##Recommended layouts and interaction patterns
 We provide recommended layouts for each add-in type, along with **end-to-end** examples to help you put everything together. To learn more about how to lay out your add-in, see the following:
 
 - [Layout for task pane add-ins](TaskpaneAddIn.md)
 - [Layout for content add-ins](ContentAddIn.md) 
 - [Layouts for mail add-ins](MailAddIn.md)
 
+See also [Interaction patterns](https://msdn.microsoft.com/EN-US/library/dn358357.aspx) for examples of common scenarios for add-ins and their corresponding interaction patterns.
