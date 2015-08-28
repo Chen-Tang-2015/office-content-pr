@@ -21,7 +21,14 @@ Use clear and simple language in your add-in. These are key traits of the Office
 To learn more, see [Office voice](Voice.md).
 
 ###Loading UX
-For any HTML-based UX in your add-in, we recommend that you include a loading indicator. The indicator should render when it is fully ready to display; that way, you avoid jarring effects such as elements popping up, or forms rendering that aren't fully displayed or usable. The [task pane add-in sample](http://todoaddsample) shows an example of this pattern. 
+For any HTML-based UX in your add-in, we recommend that you include a loading indicator. The rest of the page should only render when it is fully ready to display; that way, you avoid jarring effects such as elements popping up, or forms rendering that aren't fully displayed or usable. A common technique used here is to hide the contents of the add-in `<body>` until they are ready to be displayed. Its ok and recommended to defer loading and caching other parts of your add-in, not needed for immediate interaction, for when they are needed, particularly if they are big in size. 
+
+###First Time Experience
+It is critical for add-ins to hand hold users to be successful using your add-in. We strongly recommend you to:
+
+
+- Have a clear call to action. It should be apparent to users what to do to use your add-in. If needed, have some  teaching UI to guide users the first time they use your add-in and whenever you make significant updates. 
+- Provide value right away. If you add-in requires a subscription we strongly recommend you to provide a limited amount of functionality even without a subscription. Users should feel enticed to try your add-in, not stumble upon a wall that asks them to sign-up when they don't even know what they are signing up for. At the very least provide some collateral (e.g. video) that lets user know what you add-in can do. 
 
 ###Performance 
 For add-ins that create custom HTML-based interfaces to gather or display information, optimize how resources are loaded, and provide feedback for long-running operations like loading indicators. How customers perceive the performance and responsiveness of your add-in is as important as how it actually performs. 
