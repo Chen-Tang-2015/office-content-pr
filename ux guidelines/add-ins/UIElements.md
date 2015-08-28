@@ -40,6 +40,8 @@ Office UI Fabric provides the following UI elements:
 - [Layouts](https://github.com/Lauragra/Office-UI-Fabric/blob/master/ghdocs/COMPONENTS.md#layout) 
 - [Navigation elements](https://github.com/Lauragra/Office-UI-Fabric/blob/master/ghdocs/COMPONENTS.md#navigation), including pivots, and navigation bars
 
+Here is an [Add-In sample](http://addlinkhere) that illustrates Fabric use
+
 **Note:** If you decide to use your own set of fonts and icons, make sure they don't conflict with those of Office. For example, don't use icons that are the same as or similar to those in Office, but represent something different in your add-in. 
 
 ###Creating a customized color palette
