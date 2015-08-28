@@ -20,8 +20,13 @@ For guidelines about UI text in your add-ins, see [Office Voice](Voice.md).
 
 ###Custom pane
 
+The following image shows the recommended layout for a custom pane in a mail add-in.
+
 ![Layout of a custom pane in a mail add-in](images/mail-add-in-custom-pane.png)
 
+The following image shows the recommended layout for a [contextual mail add-in](https://msdn.microsoft.com/EN-US/library/office/dn893542.aspx).
+
+![Layout of a contextual mail add-in](images/mail-add-in-contextual-card.png)
 
 ###Functions with infobar notifications
 
