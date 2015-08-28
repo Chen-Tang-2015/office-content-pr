@@ -16,7 +16,12 @@ For recommendations for task pane layouts for mail add-ins, see [Layout for task
 
 ###Custom pane
 
-###Function bar/infobar
+![Layout of a custom pane in a mail add-in](images/mail-add-in-custom-pane.png)
 
 
-[Todo: Laura to Sync with Tom and Wamwitha on whether we show this here of we point to a specific Outlook page. The outlook folks have been consolidating their dev experience under http://dev.outlook.com] 
+###Function button with infobar
+
+You can use an infobar to display text when an action happens in the background of the application. The infobar displays a UI text string to let the user know that the action occurred. 
+
+For guidelines about UI text in your add-ins, see [Office Voice](Voice.md).
+
