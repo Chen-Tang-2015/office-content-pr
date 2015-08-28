@@ -17,7 +17,7 @@ You can use two types of UI elements in your Office Add-ins:
 ##Add-in commands
 Commands are defined in the [add-in XML manifest](https://msdn.microsoft.com/EN-US/library/office/mt267547.aspx) and are rendered as native UX extensions to the Office UI. For example, you can use commands to add buttons to the Office Ribbon. 
 
-Currently, add-in commands are only supported for mail add-ins. To learn more, see [Add-in commmands for mail](https://msdn.microsoft.com/EN-US/library/office/mt267546.aspx?f=255&MSPPError=-2147217396).
+Currently, add-in commands are only supported for mail add-ins. To learn more, see [Add-in commmands for mail](https://msdn.microsoft.com/EN-US/library/office/mt267546.aspx?f=255&MSPPError=-2147217396). The image below shows an [emoji sample](https://github.com/LezaMax/emoji) add-in.
  
 ![An image that shows add-in commands added to the Outlook Ribbon](images/add-in-commands.png)
 
@@ -55,7 +55,7 @@ If you decide to use your own color palette, keep the following in mind:
 Whether you decide to adopt the Office color scheme or use your own, we encourage you to use our [Theming APIs](http://todolinktothemingapisdocs). Add-ins that are part of the Office theming experience will feel much more integrated with Office.
 
 
-- For mail and task pane add-ins, use `office.context.officeTheme` to match the theme of the Office applications. 
+- For mail and task pane add-ins, use `office.context.officeTheme` to match the theme of the Office applications.This API is currently only available in Office 2016.  
 - For content add-ins, use `office.context.document.documentTheme` to match the theme of the document (PowerPoint only).
 
 [Todo: Laura to create docs for theming API and link to them here, use humberto's seed sample]
