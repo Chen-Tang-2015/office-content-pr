@@ -21,14 +21,16 @@ Use clear and simple language in your add-in. These are key traits of the Office
 To learn more, see [Office voice](Voice.md).
 
 ###Loading UX
-For any HTML-based UX in your add-in, we recommend that you include a loading indicator. The rest of the page should only render when it is fully ready to display; that way, you avoid jarring effects such as elements popping up, or forms rendering that aren't fully displayed or usable. A common technique used here is to hide the contents of the add-in `<body>` until they are ready to be displayed. Its ok and recommended to defer loading and caching other parts of your add-in, not needed for immediate interaction, for when they are needed, particularly if they are big in size. 
+For any HTML-based UX in your add-in, we recommend that you include a loading indicator. The rest of the page should only render when it is fully ready to display; that way, you avoid jarring effects such as elements popping up, or forms rendering that aren't fully displayed or usable. A common technique used here is to hide the contents of the add-in `<body>` until they are ready to be displayed. We recommend that you defer loading and caching other parts of your add-in that aren't needed for immediate interaction until they are needed - particularly if they are big in size. 
 
-###First Time Experience
-It is critical for add-ins to hand hold users to be successful using your add-in. We strongly recommend you to:
+###First-time experience
+The first-time experience of your add-in for users is critical to its success. To ensure a successful first-time experience, we recommend that you:
 
 
-- Have a clear call to action. It should be apparent to users what to do to use your add-in. If needed, have some  teaching UI to guide users the first time they use your add-in and whenever you make significant updates. 
-- Provide value right away. If you add-in requires a subscription we strongly recommend you to provide a limited amount of functionality even without a subscription. Users should feel enticed to try your add-in, not stumble upon a wall that asks them to sign-up when they don't even know what they are signing up for. At the very least provide some collateral (e.g. video) that lets user know what you add-in can do. 
+- Have a clear call to action. Make clear to users what they need to do to use your add-in. You might provide some teaching UI to guide users on first use and when you make significant updates. 
+- Provide value right away. If you add-in requires a subscription, make some limited functionality available without a subscription. Entice users to try your add-in first - don't ask them to sign up before they know what they are signing up for. At a minimum, provide resources (for example, a video) that lets user know what you add-in can do. 
+
+<!-- Link to new troubleshooting topic here when available?--> 
 
 ###Performance 
 For add-ins that create custom HTML-based interfaces to gather or display information, optimize how resources are loaded, and provide feedback for long-running operations like loading indicators. How customers perceive the performance and responsiveness of your add-in is as important as how it actually performs. 
@@ -36,7 +38,7 @@ For add-ins that create custom HTML-based interfaces to gather or display inform
 To optimize your add-in's performance:
 
 - Follow standard web practices to optimize your web page. In production, use only minified versions of libraries. Only load resources that you need. Ensure that common libraries are  pulled from high-availability and low-latency servers (CDNs).
-- Specifically for add-in resources that you need to load (Office.js)[Todo: Chat with Juan to see if we have any specific perf tips]
+- Specifically for add-in resources that you need to load (Office.js)<!-- [Todo: Chat with Juan to see if we have any specific perf tips]-->
 - If operations take time to execute, provide feedback to users. Note the thresholds listed in the following table.
 
 |**Interaction class**|**Target**|**Upper bound**|**Human perception**|  
