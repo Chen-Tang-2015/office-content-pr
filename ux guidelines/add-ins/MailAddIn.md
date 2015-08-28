@@ -25,9 +25,9 @@ For guidelines about UI text in your add-ins, see [Office Voice](Voice.md).
 
 ###Functions with infobar notifications
 
-In addition to displaying custom HTML UI using one of the layouts above, mail add-ins have the ability to execute functions from commands. Whenever you need to display UI as a result of a function developers have the ability to display info bar notifications. A common use of infobar notifications is to display errors or success messages. 
+In addition to using a task pane or custom pane to display custom HTML UI in your mail add-in, you can execute functions from commands. When you need to display UI text as a result of a function, you can use infobar notifications. For example, you might need to use an infobar notification to display error or success messages. 
 
-Learn more about [add-in commands for mail](https://msdn.microsoft.com/EN-US/library/office/mt267546.aspx) 
+For more information, see [add-in commands for mail](https://msdn.microsoft.com/EN-US/library/office/mt267546.aspx). 
 
 
 
