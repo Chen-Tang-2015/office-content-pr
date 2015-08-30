@@ -33,14 +33,14 @@ Regardless of the type of add-in you create, you can use common building blocks 
 Office UI Fabric provides the following UI elements:
 
 - [Typography](https://github.com/OfficeDev/Office-UI-Fabric/blob/master/ghdocs/FEATURES.md#typography)
-- [Color](https://github.com/OfficeDev/Office-UI-Fabric/blob/master/ghdocs/FEATURES.md#color), including theme, neutral, branding, and accent colors
+- [Color](https://github.com/OfficeDev/Office-UI-Fabric/blob/master/ghdocs/FEATURES.md#color)
 - [Icons](https://github.com/Lauragra/Office-UI-Fabric/blob/master/ghdocs/FEATURES.md#icons)
 - [Animations](https://github.com/Lauragra/Office-UI-Fabric/blob/master/ghdocs/FEATURES.md#animations)
 - [Input components](https://github.com/Lauragra/Office-UI-Fabric/blob/master/ghdocs/COMPONENTS.md#inputs)
 - [Layouts](https://github.com/Lauragra/Office-UI-Fabric/blob/master/ghdocs/COMPONENTS.md#layout) 
-- [Navigation elements](https://github.com/Lauragra/Office-UI-Fabric/blob/master/ghdocs/COMPONENTS.md#navigation), including pivots, and navigation bars
+- [Navigation elements](https://github.com/Lauragra/Office-UI-Fabric/blob/master/ghdocs/COMPONENTS.md#navigation)
 
-Here is an [Add-In sample](http://addlinkhere) that illustrates Fabric use
+For a sample that shows how to use Office UI Fabric in Office Add-ins, see [Office Add-in Fabric UI Sample](https://github.com/OfficeDev/Office-Add-in-Fabric-UI-Sample).
 
 **Note:** If you decide to use your own set of fonts and icons, make sure they don't conflict with those of Office. For example, don't use icons that are the same as or similar to those in Office, but represent something different in your add-in. 
 
@@ -54,7 +54,7 @@ If you decide to use your own color palette, keep the following in mind:
 - Be aware of color blindness — use more than just colors to indicate interactivity.
 
 ###Theming 
-Whether you decide to adopt the Office color scheme or use your own, we encourage you to use our [Theming APIs](http://todolinktothemingapisdocs). Add-ins that are part of the Office theming experience will feel much more integrated with Office.
+Whether you decide to adopt the Office color scheme or use your own, we encourage you to use our Theming APIs<!-- Add link to Theming API topic -->. Add-ins that are part of the Office theming experience will feel much more integrated with Office.
 
 
 - For mail and task pane add-ins, use `office.context.officeTheme` to match the theme of the Office applications.This API is currently only available in Office 2016.  
