@@ -1,4 +1,4 @@
-##Layout for content add-ins
+#Layout for content add-ins
 
 **Last modified:** August 31, 2015
 
