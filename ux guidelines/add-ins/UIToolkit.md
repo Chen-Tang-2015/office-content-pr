@@ -16,7 +16,7 @@ The Office UI Fabric open source project provides components that you can use to
 - Sample HTML and JS templates that show you how to wire the styles and add behaviors.
 - Fonts for typography and iconography. 
 
-     **Note:** The fonts themselves are not open sourced, but you can reference them from our CDN in your Office-powered apps and add-ins. Make sure you read the [license](http://pointtofontslicense) if you have any questions about licensed use of fonts. 
+     **Note:** The fonts themselves are not open sourced, but you can reference them from our CDN in your Office-powered apps and add-ins. Make sure you read the [license](http://aka.ms/fabric-font-license) if you have any questions about licensed use of fonts. 
 
 By design, Office UI Fabric does not include any data sources or data-binding frameworks. This means that you can use Fabric and plug it into any controls and any data sources that you need in your Office-powered web app or add-in. 
 
