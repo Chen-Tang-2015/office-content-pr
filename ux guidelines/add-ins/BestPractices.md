@@ -20,6 +20,19 @@ Use clear and simple language in your add-in. These are key traits of the Office
 
 To learn more, see [Office voice](Voice.md).
 
+###Touch
+Add-ins are capable of running on touch enabled devices like the IPad and you need to ensure that the experience properly adapts to the device you are targeting. If you use [Office UI Fabric](https://msdn.microsoft.com/EN-US/library/office/mt450443.aspx), a lot of the recommendations below are taking care for you because the components in Fabric are responsive already. 
+
+- Detect the type of device you are running under by using the [Context.touchEnabled](https://msdn.microsoft.com/en-us/library/office/Mt203805.aspx) API. 
+- Ensure that all controls are appropriately sized for touch interaction. For example, buttons should have adequate touch targets, input boxes should be large enough for users to enter input. Using controls from [Office UI Fabric](https://msdn.microsoft.com/EN-US/library/office/mt450443.aspx) helps you tackle this very easily. 
+- Do not rely on non-touch gestures like hover or right click.  
+- Ensure you Add-In works in both portrait and landscape mode. Take into account that in touch devices, the soft keyboard may occlude portions of your Add-In. 
+- Be aware of additional restrictions that some specific devices have. For example, on the IPad, Apple policies establish that you cannot perform commerce transactions in your Add-In. 
+
+
+The best way to ensure your add-in works is to actually test them on a real device by [sideloading them](https://msdn.microsoft.com/EN-US/library/office/mt154253.aspx). 
+
+
 ###Loading UX
 For any HTML-based UX in your add-in, we recommend that you include a loading indicator. The rest of the page should only render when it is fully ready to display; that way, you avoid jarring effects such as elements popping up, or forms rendering that aren't fully displayed or usable. A common technique used here is to hide the contents of the add-in `<body>` until they are ready to be displayed. We recommend that you defer loading and caching other parts of your add-in that aren't needed for immediate interaction until they are needed - particularly if they are big in size. 
 
