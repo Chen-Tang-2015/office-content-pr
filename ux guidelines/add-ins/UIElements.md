@@ -35,10 +35,10 @@ Office UI Fabric provides the following UI elements:
 - [Typography](https://github.com/OfficeDev/Office-UI-Fabric/blob/master/ghdocs/FEATURES.md#typography)
 - [Color](https://github.com/OfficeDev/Office-UI-Fabric/blob/master/ghdocs/FEATURES.md#color)
 - [Icons](https://github.com/Lauragra/Office-UI-Fabric/blob/master/ghdocs/FEATURES.md#icons)
-- [Animations](https://github.com/Lauragra/Office-UI-Fabric/blob/master/ghdocs/FEATURES.md#animations)
-- [Input components](https://github.com/Lauragra/Office-UI-Fabric/blob/master/ghdocs/COMPONENTS.md#inputs)
-- [Layouts](https://github.com/Lauragra/Office-UI-Fabric/blob/master/ghdocs/COMPONENTS.md#layout) 
-- [Navigation elements](https://github.com/Lauragra/Office-UI-Fabric/blob/master/ghdocs/COMPONENTS.md#navigation)
+- [Animations](https://github.com/OfficeDev/Office-UI-Fabric/blob/master/ghdocs/FEATURES.md#animations)
+- [Input components](https://github.com/OfficeDev/Office-UI-Fabric/blob/master/ghdocs/COMPONENTS.md#inputs)
+- [Layouts](https://github.com/OfficeDev/Office-UI-Fabric/blob/master/ghdocs/COMPONENTS.md#layout) 
+- [Navigation elements](https://github.com/OfficeDev/Office-UI-Fabric/blob/master/ghdocs/COMPONENTS.md#navigation)
 
 For a sample that shows how to use Office UI Fabric in Office Add-ins, see [Office Add-in Fabric UI Sample](https://github.com/OfficeDev/Office-Add-in-Fabric-UI-Sample).
 

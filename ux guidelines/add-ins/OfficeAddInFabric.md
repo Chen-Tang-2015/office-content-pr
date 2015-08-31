@@ -11,7 +11,6 @@ If you are building an Office Add-in, we encourage you to use [Office UI Fabric]
 ##1. Set up Fabric
 Add the following lines to your HTML on the head section to reference Fabric from the CDN.
 
-UPDATE THESE LINKS!!!!!!!
 
      <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/css/fabric.min.css">
      <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/css/fabric.components.min.css">
@@ -46,4 +45,4 @@ For example, to use the SearchBox component:
 ##Next steps
 If you're looking for end-to-end samples that show you how to use Fabric, we've got you covered. See the following:
 
-- [Fabric sample](https://github.com/OfficeDev/office-content-pr/tree/master/ux%20guidelines/add-ins/Fabric%20Sample)
+- [Fabric sample](https://github.com/OfficeDev/Office-Add-in-Fabric-UI-Sample)
