@@ -9,11 +9,9 @@ Learn more about [supported hosts and other requirements](https://msdn.microsoft
 If you are building an Office Add-in, we encourage you to use [Office UI Fabric](https://github.com/OfficeDev/Office-UI-Fabric) to create your user experience. The following steps walk you through the basics for using Fabric.  
 
 ##1. Set up Fabric
-Add the following lines to your HTML on the head section to reference Fabric from the CDN.
+Add the following line to your HTML on the head section to reference Fabric from the CDN.
 
-
-     <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/css/fabric.min.css">
-     <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/css/fabric.components.min.css">
+     <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/fabric.css">
 
 ##2. Use Fabric icons and fonts
 Using icons is super simple. All you have to do is use an "i" element and reference the appropriate classes. You can control the size of the icon by changing the font size.
