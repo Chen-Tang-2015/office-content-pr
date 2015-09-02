@@ -8,35 +8,36 @@ Learn more about [supported hosts and other requirements](https://msdn.microsoft
 
 As you design and develop your add-in, you will want to optimize the user experience. This includes defining how users log on to your service, how to promote your brand, the getting started experience for your add-in, and more. Apply the following best practices to your add-in design.
 
-###Branding
+##Branding
 Use branding in your add-ins to inspire trust and orient users. Do not use branding to overwhelm or advertise to users. Where you showcase your brand in your add-in varies based on the type of add-in that you are creating. For information about branding for each add-in type, see:
  
 - [Layout for task pane add-ins](TaskpaneAddIn.md)
 - [Layout for content add-ins](ContentAddIn.md) 
 - [Layouts for mail add-ins](MailAddIn.md)
 
-###Voice
+##Voice
 Use clear and simple language in your add-in. These are key traits of the Office voice. Users should easily understand your UI and be inspired to engage with your add-in.  
 
 To learn more, see [Office voice](Voice.md).
 
-###Touch
-Add-ins are capable of running on touch enabled devices like the IPad and you need to ensure that the experience properly adapts to the device you are targeting. If you use [Office UI Fabric](https://msdn.microsoft.com/EN-US/library/office/mt450443.aspx), a lot of the recommendations below are taking care for you because the components in Fabric are responsive already. 
+##Touch
+Add-ins can run on touch-enabled devices like the IPad. You'll want to ensure that your experience adapts to the devices you are targeting. To optimize for touch devices: 
 
-- Detect the type of device you are running under by using the [Context.touchEnabled](https://msdn.microsoft.com/en-us/library/office/Mt203805.aspx) API. 
-- Ensure that all controls are appropriately sized for touch interaction. For example, buttons should have adequate touch targets, input boxes should be large enough for users to enter input. Using controls from [Office UI Fabric](https://msdn.microsoft.com/EN-US/library/office/mt450443.aspx) helps you tackle this very easily. 
-- Do not rely on non-touch gestures like hover or right click.  
-- Ensure you Add-In works in both portrait and landscape mode. Take into account that in touch devices, the soft keyboard may occlude portions of your Add-In. 
-- Be aware of additional restrictions that some specific devices have. For example, on the IPad, Apple policies establish that you cannot perform commerce transactions in your Add-In. 
+- Use the [Context.touchEnabled](https://msdn.microsoft.com/en-us/library/office/Mt203805.aspx) property to detect whether the host application your add-in is running on is touch enabled. 
+- Ensure that all controls are appropriately sized for touch interaction - for example, buttons  have adequate touch targets, and input boxes are large enough for users to enter input. The controls in [Office UI Fabric](https://msdn.microsoft.com/EN-US/library/office/mt450443.aspx) help you do this easily. 
+- Do not rely on non-touch input methods like hover or right click.  
+- Ensure that your add-in works in both portrait and landscape mode. Be aware that on touch devices, part of your add-in might be hidden by the soft keyboard. 
+- Be aware of additional restrictions that some apply to specific devices. For example, per Apple policies, you cannot perform commerce transactions in add-ins that run on the iPad. 
+
+The best way to ensure that your add-in works is to test it on a real device by using [sideloading](https://msdn.microsoft.com/EN-US/library/office/mt154253.aspx). 
+
+**Note:** Because the components in [Office UI Fabric](https://msdn.microsoft.com/EN-US/library/office/mt450443.aspx) are responsive, if you're using Fabric for your design elements, many of these elements are taken care of. 
 
 
-The best way to ensure your add-in works is to actually test them on a real device by [sideloading them](https://msdn.microsoft.com/EN-US/library/office/mt154253.aspx). 
-
-
-###Loading UX
+##Loading UX
 For any HTML-based UX in your add-in, we recommend that you include a loading indicator. The rest of the page should only render when it is fully ready to display; that way, you avoid jarring effects such as elements popping up, or forms rendering that aren't fully displayed or usable. A common technique used here is to hide the contents of the add-in `<body>` until they are ready to be displayed. We recommend that you defer loading and caching other parts of your add-in that aren't needed for immediate interaction until they are needed - particularly if they are big in size. 
 
-###First-time experience
+##First-time experience
 The first-time experience of your add-in for users is critical to its success. To ensure a successful first-time experience, we recommend that you:
 
 
@@ -45,7 +46,7 @@ The first-time experience of your add-in for users is critical to its success. T
 
 <!-- Link to new troubleshooting topic here when available?--> 
 
-###Performance 
+##Performance 
 For add-ins that create custom HTML-based interfaces to gather or display information, optimize how resources are loaded, and provide feedback for long-running operations like loading indicators. How customers perceive the performance and responsiveness of your add-in is as important as how it actually performs. 
 
 To optimize your add-in's performance:

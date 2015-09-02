@@ -36,8 +36,8 @@ Fabric includes some components that support behaviors (such as what happens on 
 For example, to use the SearchBox component:
 
 1. Download the SearchBox component from [GitHub](https://github.com/OfficeDev/Office-UI-Fabric/tree/master/dist/components/SearchBox).
-2. Add the following reference to your code:`<script src="SearchBox/Jquery.SearchBox.js"></script>`
-1. Initialize the component by making sure this line executes when your page is loaded: `$(".ms-SearchBox").SearchBox();`. We recommend that you include this on the `Office.Initialize` block of your add-in.     
+2. Add the following reference to your code: `<script src="SearchBox/Jquery.SearchBox.js"></script>`
+3. Initialize the component by making sure this line executes when your page is loaded: `$(".ms-SearchBox").SearchBox();`. We recommend that you include this on the `Office.Initialize` block of your add-in.     
 
 **Note:** If you don't intend to use all the Fabric components, you can reduce the size of the resources you download by opting instead to host the individual CSS files for each component. You can get the CSS files from the component folders in the [Fabric GitHub repository](https://github.com/OfficeDev/Office-UI-Fabric) . 
 
@@ -45,4 +45,4 @@ For example, to use the SearchBox component:
 ##Next steps
 If you're looking for end-to-end samples that show you how to use Fabric, we've got you covered. See the following:
 
-- [Fabric sample](https://github.com/OfficeDev/Office-Add-in-Fabric-UI-Sample)
+- [Office Add-in Fabric UI sample](https://github.com/OfficeDev/Office-Add-in-Fabric-UI-Sample)
