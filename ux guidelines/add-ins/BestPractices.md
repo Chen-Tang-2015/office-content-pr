@@ -1,6 +1,6 @@
 #Design best practices for Office Add-ins
 
-**Last modified:** September 2, 2015
+**Last modified:** September 3, 2015
 
 ***Applies to:** Access apps for SharePoint | apps for Office | Excel | Office Add-ins | Outlook | PowerPoint | Project | Word*
 
@@ -27,7 +27,7 @@ Add-ins can run on touch-enabled devices like the IPad. You'll want to ensure th
 - Ensure that all controls are appropriately sized for touch interaction - for example, buttons  have adequate touch targets, and input boxes are large enough for users to enter input. The controls in [Office UI Fabric](https://msdn.microsoft.com/EN-US/library/office/mt450443.aspx) help you do this easily. 
 - Do not rely on non-touch input methods like hover or right click.  
 - Ensure that your add-in works in both portrait and landscape mode. Be aware that on touch devices, part of your add-in might be hidden by the soft keyboard. 
-- Be aware of additional restrictions that some apply to specific devices. For example, per Apple policies, you cannot perform commerce transactions in add-ins that run on the iPad. 
+- Be aware of additional restrictions that some apply to specific devices. For example, per Apple policies, you cannot perform commerce transactions in add-ins that run on the iPad. For details, see [Validation policies](https://msdn.microsoft.com/EN-US/library/jj220035.aspx). You can use the [Context.commerceAllowed](https://msdn.microsoft.com/en-us/library/office/Mt203804.aspx) property to determine whether your add-in is running on a platform that restricts commerce transactions.
 
 The best way to ensure that your add-in works is to test it on a real device by using [sideloading](https://msdn.microsoft.com/EN-US/library/office/mt154253.aspx). 
 
