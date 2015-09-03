@@ -57,8 +57,8 @@ If you decide to use your own color palette, keep the following in mind:
 Whether you decide to adopt the Office color scheme or use your own, we encourage you to use our Theming APIs<!-- Add link to Theming API topic -->. Add-ins that are part of the Office theming experience will feel much more integrated with Office.
 
 
-- For mail and task pane add-ins, use `office.context.officeTheme` to match the theme of the Office applications.This API is currently only available in Office 2016.  
-- For PowerPoint content add-ins see [details](https://msdn.microsoft.com/EN-US/library/office/dn864586.aspx)
+- For mail and task pane add-ins, use the [Context.officeTheme](https://msdn.microsoft.com/EN-US/library/office/mt455203.aspx) property to match the theme of the Office applications. This API is currently only available in Office 2016.  
+- For PowerPoint content add-ins, see [Use Office themes in your PowerPoint add-ins](https://msdn.microsoft.com/EN-US/library/office/dn864586.aspx).
 
 <!-- Link to theming API docs and Humberto's seed sample. Add screenshot of themed add-in. -->
 
