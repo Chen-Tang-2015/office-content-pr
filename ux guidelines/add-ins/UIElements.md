@@ -1,6 +1,6 @@
 #Office Add-in UI elements
 
-**Last modified:** September 2, 2015
+**Last modified:** September 3, 2015
 
 ***Applies to**: Access apps for SharePoint | apps for Office | Excel | Office Add-ins | Outlook | PowerPoint | Project | Word*
 
