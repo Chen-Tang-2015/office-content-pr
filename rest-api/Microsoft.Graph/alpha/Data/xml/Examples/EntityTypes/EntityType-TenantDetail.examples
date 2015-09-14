@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentComponentOfCodeExample xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Namespace>Microsoft.Graph</Namespace>
+  <Version>alpha</Version>
+  <MetadataUri>https://graph.microsoft.com/alpha/$metadata</MetadataUri>
+  <Content>
+    <CodeExample>
+      <Title>Get a TenantDetail entity resource</Title>
+      <TargetResourceType>EntityType</TargetResourceType>
+      <TargetResourceFullName>Microsoft.Graph.TenantDetail</TargetResourceFullName>
+      <TargetResourceName>TenantDetail</TargetResourceName>
+      <Operation>GET</Operation>
+      <RequiredPermissions>
+        <RequiredPermission>
+          <Operation>GET</Operation>
+          <Scope>Directory</Scope>
+          <Permission>Read.All</Permission>
+          <ConsentType>Admin</ConsentType>
+          <ApplicableScenarios />
+        </RequiredPermission>
+      </RequiredPermissions>
+      <Summary>To get an existing &lt;code&gt;TenantDetail&lt;/code&gt; entity resource, submit an &lt;code&gt;HTTP GET&lt;/code&gt; request of the following syntax:</Summary>
+      <Request>
+GET /&lt;version&gt;/myOrganization/tenantDetails/&lt;TenantDetail.objectId&gt; HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+</Request>
+      <Response>200 OK
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+	'@odata.type': '#Microsoft.Graph.TenantDetail',
+	'@odata.id': '/&lt;TenantDetail.objectId&gt;',
+	'assignedPlans' : '&lt;Collection(Microsoft.Graph.AssignedPlan)&gt;',
+	 ...,
+	'verifiedDomains' : '&lt;Collection(Microsoft.Graph.VerifiedDomain)&gt;'
+}
+</Response>
+      <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the specified a TenantDetail entity resource representation.</Remarks>
+    </CodeExample>
+    <CodeExample>
+      <Title>Create or add a TenantDetail entity resource</Title>
+      <TargetResourceType>EntityType</TargetResourceType>
+      <TargetResourceFullName>Microsoft.Graph.TenantDetail</TargetResourceFullName>
+      <TargetResourceName>TenantDetail</TargetResourceName>
+      <Operation>POST</Operation>
+      <RequiredPermissions>
+        <RequiredPermission>
+          <Operation>POST</Operation>
+          <Scope>Directory</Scope>
+          <Permission>ReadWrite.All</Permission>
+          <ConsentType>Admin</ConsentType>
+          <ApplicableScenarios />
+        </RequiredPermission>
+        <RequiredPermission>
+          <Operation>POST</Operation>
+          <Scope>Directory</Scope>
+          <Permission>AccessAsUser.All</Permission>
+          <ConsentType>Admin</ConsentType>
+          <ApplicableScenarios>Access as user means ...</ApplicableScenarios>
+        </RequiredPermission>
+      </RequiredPermissions>
+      <Summary>To create new &lt;code&gt;TenantDetail&lt;/code&gt; entity resource, submit an &lt;code&gt;HTTP POST&lt;/code&gt; request against the &lt;code&gt;tenantDetails&lt;/code&gt; collection:</Summary>
+      <Request>
+POST /&lt;version&gt;/myOrganization/tenantDetails/&lt;TenantDetail.objectId&gt; HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+Content-Length : &lt;body_length&gt;
+
+{
+	&lt;TenantDetail.property_1&gt; : &lt;value_1&gt;,
+	...,
+	&lt;TenantDetail.property_n&gt; : &lt;value_n&gt;
+}
+</Request>
+      <Response>201 Created
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+	'@odata.type': '#Microsoft.Graph.TenantDetail',
+	'@odata.id': '/&lt;TenantDetail.objectId&gt;',
+	'assignedPlans' : '&lt;Collection(Microsoft.Graph.AssignedPlan)&gt;',
+	 ...,
+	'verifiedDomains' : '&lt;Collection(Microsoft.Graph.VerifiedDomain)&gt;'
+}
+</Response>
+      <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the newly added a TenantDetail entity resource representation.</Remarks>
+    </CodeExample>
+    <CodeExample>
+      <Title>Update a TenantDetail entity resource</Title>
+      <TargetResourceType>EntityType</TargetResourceType>
+      <TargetResourceFullName>Microsoft.Graph.TenantDetail</TargetResourceFullName>
+      <TargetResourceName>TenantDetail</TargetResourceName>
+      <Operation>PUT</Operation>
+      <RequiredPermissions>
+        <RequiredPermission>
+          <Operation>PUT</Operation>
+          <Scope>Directory</Scope>
+          <Permission>ReadWrite.All</Permission>
+          <ConsentType>Admin</ConsentType>
+          <ApplicableScenarios />
+        </RequiredPermission>
+        <RequiredPermission>
+          <Operation>PUT</Operation>
+          <Scope>Directory</Scope>
+          <Permission>AccessAsUser.All</Permission>
+          <ConsentType>Admin</ConsentType>
+          <ApplicableScenarios>Access as user means ...</ApplicableScenarios>
+        </RequiredPermission>
+      </RequiredPermissions>
+      <Summary>To update an existing &lt;code&gt;TenantDetail&lt;/code&gt; entity resource, submit an &lt;code&gt;HTTP PUT&lt;/code&gt; request, specifying a new instance of the resource in the request body:</Summary>
+      <Request>
+PUT /&lt;version&gt;/myOrganization/tenantDetails/&lt;TenantDetail.objectId&gt; HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : &lt;body_length&gt;
+
+{
+	&lt;TenantDetail.property_1&gt; : &lt;value_1&gt;,
+	...,
+	&lt;TenantDetail.property_n&gt; : &lt;value_n&gt;
+}
+</Request>
+      <Response>204 No content
+
+</Response>
+      <Remarks>A successful response returns the &lt;code&gt;204 - No content&lt;/code&gt; status code without any payload.</Remarks>
+    </CodeExample>
+    <CodeExample>
+      <Title>Update a TenantDetail entity properties</Title>
+      <TargetResourceType>EntityType</TargetResourceType>
+      <TargetResourceFullName>Microsoft.Graph.TenantDetail</TargetResourceFullName>
+      <TargetResourceName>TenantDetail</TargetResourceName>
+      <Operation>PATCH</Operation>
+      <RequiredPermissions>
+        <RequiredPermission>
+          <Operation>PATCH</Operation>
+          <Scope>Directory</Scope>
+          <Permission>ReadWrite.All</Permission>
+          <ConsentType>Admin</ConsentType>
+          <ApplicableScenarios />
+        </RequiredPermission>
+        <RequiredPermission>
+          <Operation>PATCH</Operation>
+          <Scope>Directory</Scope>
+          <Permission>AccessAsUser.All</Permission>
+          <ConsentType>Admin</ConsentType>
+          <ApplicableScenarios>Access as user means ...</ApplicableScenarios>
+        </RequiredPermission>
+      </RequiredPermissions>
+      <Summary>To update selected properties of an existing &lt;code&gt;TenantDetail&lt;/code&gt; entity, submit an &lt;code&gt;HTTP PATCH&lt;/code&gt; request, specifying a new instance of the resource in the request body:</Summary>
+      <Request>
+PATCH /&lt;version&gt;/myOrganization/tenantDetails/&lt;TenantDetail.objectId&gt; HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : &lt;body_length&gt;
+
+{
+	&lt;TenantDetail.property_1&gt; : &lt;value_1&gt;,
+	...,
+	&lt;TenantDetail.property_n&gt; : &lt;value_n&gt;
+}
+</Request>
+      <Response>204 No content
+
+</Response>
+      <Remarks>A successful response returns the &lt;code&gt;204 No content&lt;/code&gt; status code without any payload.</Remarks>
+    </CodeExample>
+    <CodeExample>
+      <Title>Delete a TenantDetail entity resource</Title>
+      <TargetResourceType>EntityType</TargetResourceType>
+      <TargetResourceFullName>Microsoft.Graph.TenantDetail</TargetResourceFullName>
+      <TargetResourceName>TenantDetail</TargetResourceName>
+      <Operation>DELETE</Operation>
+      <RequiredPermissions>
+        <RequiredPermission>
+          <Operation>DELETE</Operation>
+          <Scope>Directory</Scope>
+          <Permission>ReadWrite.All</Permission>
+          <ConsentType>Admin</ConsentType>
+          <ApplicableScenarios />
+        </RequiredPermission>
+        <RequiredPermission>
+          <Operation>DELETE</Operation>
+          <Scope>Directory</Scope>
+          <Permission>AccessAsUser.All</Permission>
+          <ConsentType>Admin</ConsentType>
+          <ApplicableScenarios>Access as user means ...</ApplicableScenarios>
+        </RequiredPermission>
+      </RequiredPermissions>
+      <Summary>To delete an existing &lt;code&gt;TenantDetail&lt;/code&gt; entity resource, submit an &lt;code&gt;HTTP DELETE&lt;/code&gt; request, specifying a new instance of the resource in the request body:</Summary>
+      <Request>
+DELETE /&lt;version&gt;/myOrganization/tenantDetails/&lt;TenantDetail.objectId&gt; HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+</Request>
+      <Response>204 No content
+
+</Response>
+      <Remarks>A successful response returns the &lt;code&gt;204 No content&lt;/code&gt; status code without any payload.</Remarks>
+    </CodeExample>
+  </Content>
+</ContentComponentOfCodeExample>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentComponentOfResourceDescription xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Namespace>Microsoft.Graph</Namespace>
+  <Version>alpha</Version>
+  <MetadataUri>https://graph.microsoft.com/alpha/$metadata</MetadataUri>
+  <Content>
+    <ResourceDescription>
+      <Resource>
+        <FullName>Microsoft.Graph.TenantDetail/companyLastDirSyncTime</FullName>
+        <Type>EntityProperty</Type>
+      </Resource>
+      <Parent>
+        <FullName>Microsoft.Graph.TenantDetail</FullName>
+        <Type>EntityType</Type>
+      </Parent>
+      <Summary />
+      <Remarks>
+        <string> </string>
+        <string> </string>
+      </Remarks>
+      <SeeAlso>
+        <TopicLink>
+          <Text> </Text>
+          <Path> </Path>
+        </TopicLink>
+      </SeeAlso>
+    </ResourceDescription>
+  </Content>
+</ContentComponentOfResourceDescription>
