@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph AlternativeSecurityId extended resource
-Title: Microsoft.Graph alpha  extended, ComplexType resource
-Description: blah, blah...
-ms.ContentId: 2f72531c-7764-1859-723d-c34820671aa7
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #AlternativeSecurityId extended resource
 
  
 
 
 
-<a name="msg-complex-type-AlternativeSecurityId"> </a>
 ##Overview
 
 |  |  | 
@@ -36,7 +28,7 @@ The `AlternativeSecurityId` extended resource exposes the following properties
 
 The `AlternativeSecurityId` extended resource is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/applications/<Application.objectId>/owners/<DirectoryObject.objectId>/alternativeSecurityIds
 	/<version>/myOrganization/contacts/<Contact.objectId>/directReports/<DirectoryObject.objectId>/alternativeSecurityIds
 	/<version>/myOrganization/contacts/<Contact.objectId>/memberOf/<DirectoryObject.objectId>/alternativeSecurityIds
@@ -89,7 +81,8 @@ The `AlternativeSecurityId` extended resource is referenced by the following res
 	/<version>/myOrganization/users/<User.objectId>/memberOf/<DirectoryObject.objectId>/alternativeSecurityIds
 	/<version>/myOrganization/users/<User.objectId>/ownedDevices/<DirectoryObject.objectId>/alternativeSecurityIds
 	/<version>/myOrganization/users/<User.objectId>/ownedObjects/<DirectoryObject.objectId>/alternativeSecurityIds
-	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/alternativeSecurityIds```
+	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/alternativeSecurityIds
+```
 
 
 

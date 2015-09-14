@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph permission entity resource
-Title: Microsoft.Graph alpha  entity, EntityType resource
-Description: blah, blah...
-ms.ContentId: dc4c85d0-7be2-3f5e-7f3b-0f7cb105dc02
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #permission resource
 
  
 
 
 
-<a name="msg-entity-type-permission"> </a>
 ##Overview
 
 |  |  | 
@@ -51,29 +43,32 @@ To get an existing `permission` entity resource, submit an `HTTP GET` request of
 | :-- | :-- | :-- | 
 ####Request
 
-```no-highlight
-	GET  HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.permission',
-		'@odata.id': '/<permission.id>',
-		'id' : '<Edm.String>',
-		 ...,
-		'roles' : '<Collection(Edm.String)>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.permission',
+	'@odata.id': '/<permission.id>',
+	'id' : '<Edm.String>',
+	 ...,
+	'roles' : '<Collection(Edm.String)>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a permission entity resource representation. 
 
@@ -101,27 +96,30 @@ To update an existing `permission` entity resource, submit an `HTTP PUT` request
 | :-- | :-- | :-- | 
 ####Request
 
-```no-highlight
-	PUT  HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<permission.property_1> : <value_1>,
-		...,
-		<permission.property_n> : <value_n>
-	}
-	```
+PUT  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<permission.property_1> : <value_1>,
+	...,
+	<permission.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
@@ -135,27 +133,30 @@ To update selected properties of an existing `permission` entity, submit an `HTT
 | :-- | :-- | :-- | 
 ####Request
 
-```no-highlight
-	PATCH  HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<permission.property_1> : <value_1>,
-		...,
-		<permission.property_n> : <value_n>
-	}
-	```
+PATCH  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<permission.property_1> : <value_1>,
+	...,
+	<permission.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -169,21 +170,24 @@ To delete an existing `permission` entity resource, submit an `HTTP DELETE` requ
 | :-- | :-- | :-- | 
 ####Request
 
-```no-highlight
-	DELETE  HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
+```
 	
-	```
+DELETE  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 

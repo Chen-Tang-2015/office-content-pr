@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph thumbnail extended resource
-Title: Microsoft.Graph alpha  extended, ComplexType resource
-Description: blah, blah...
-ms.ContentId: ba6f6352-437c-bb7e-e0da-3827c33bb850
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #thumbnail extended resource
 
  
 
 
 
-<a name="msg-complex-type-thumbnail"> </a>
 ##Overview
 
 |  |  | 
@@ -36,7 +28,7 @@ The `thumbnail` extended resource exposes the following properties
 
 The `thumbnail` extended resource is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/files/<item.id>/thumbnails/<thumbnailSet.id>/large
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/files/<item.id>/thumbnails/<thumbnailSet.id>/medium
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/files/<item.id>/thumbnails/<thumbnailSet.id>/small
@@ -63,7 +55,8 @@ The `thumbnail` extended resource is referenced by the following resources.
 	/<version>/myOrganization/users/<User.objectId>/files/<item.id>/thumbnails/<thumbnailSet.id>/small
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/files/<item.id>/thumbnails/<thumbnailSet.id>/large
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/files/<item.id>/thumbnails/<thumbnailSet.id>/medium
-	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/files/<item.id>/thumbnails/<thumbnailSet.id>/small```
+	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/files/<item.id>/thumbnails/<thumbnailSet.id>/small
+```
 
 
 

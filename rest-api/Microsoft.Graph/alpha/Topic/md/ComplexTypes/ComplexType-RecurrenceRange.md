@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph RecurrenceRange extended resource
-Title: Microsoft.Graph alpha  extended, ComplexType resource
-Description: blah, blah...
-ms.ContentId: f73aacd1-2e5d-0008-2bee-1604c9cb939c
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #RecurrenceRange extended resource
 
  
 
 
 
-<a name="msg-complex-type-RecurrenceRange"> </a>
 ##Overview
 
 |  |  | 
@@ -37,7 +29,7 @@ The `RecurrenceRange` extended resource exposes the following properties
 
 The `RecurrenceRange` extended resource is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Instances/<Event.Id>/Recurrence/Range
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Recurrence/Range
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/Events/<Event.Id>/Recurrence/Range
@@ -59,7 +51,8 @@ The `RecurrenceRange` extended resource is referenced by the following resources
 	/<version>/myOrganization/users/<User.objectId>/CalendarView/<Event.Id>/Recurrence/Range
 	/<version>/myOrganization/users/<User.objectId>/Events/<Event.Id>/Recurrence/Range
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/CalendarView/<Event.Id>/Recurrence/Range
-	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Events/<Event.Id>/Recurrence/Range```
+	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Events/<Event.Id>/Recurrence/Range
+```
 
 
 

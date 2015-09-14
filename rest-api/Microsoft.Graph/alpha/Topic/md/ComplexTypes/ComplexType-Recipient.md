@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph Recipient extended resource
-Title: Microsoft.Graph alpha  extended, ComplexType resource
-Description: blah, blah...
-ms.ContentId: 599d730e-c8f1-43bd-0b35-1d84904836ef
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #Recipient extended resource
 
  
 
 
 
-<a name="msg-complex-type-Recipient"> </a>
 ##Overview
 
 |  |  | 
@@ -34,7 +26,7 @@ The `Recipient` extended resource exposes the following properties
 
 The `Recipient` extended resource is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Instances/<Event.Id>/Organizer
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Organizer
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/Conversations/<Conversation.Id>/Threads/<ConversationThread.Id>/CcRecipients
@@ -108,7 +100,8 @@ The `Recipient` extended resource is referenced by the following resources.
 	/<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/From
 	/<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/ReplyTo
 	/<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/Sender
-	/<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/ToRecipients```
+	/<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/ToRecipients
+```
 
 
 

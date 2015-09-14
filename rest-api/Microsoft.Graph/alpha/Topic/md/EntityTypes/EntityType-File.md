@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph File entity resource
-Title: Microsoft.Graph alpha  entity, EntityType resource
-Description: blah, blah...
-ms.ContentId: 3921abd8-729b-55da-5abc-e563c68f2a14
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #File resource
 
  
 
 
 
-<a name="msg-entity-type-File"> </a>
 ##Overview
 
 |  |  | 
@@ -28,9 +20,10 @@ ms.date: Sep 14, 2015
 
 The `File` resource can be accessed via the following paths. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<User.objectId>/TrendingAround/<File._undefined>
-	/<version>/myOrganization/users/<User.objectId>/TrendingAround/<File._undefined>```
+	/<version>/myOrganization/users/<User.objectId>/TrendingAround/<File._undefined>
+```
 
 
 
@@ -54,26 +47,29 @@ To get an existing `File` entity resource, submit an `HTTP GET` request of the f
 | `Sites.Read.All` | `User` | Required to access files in a unified group. | 
 ####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/TrendingAround/<File._undefined> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/TrendingAround/<File._undefined> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.File',
-		'@odata.id': '/<File._undefined>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.File',
+	'@odata.id': '/<File._undefined>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a File entity resource representation. 
 
@@ -92,32 +88,35 @@ To create new `File` entity resource, submit an `HTTP POST` request against the 
 | `Sites.FullControl.All` | `Admin` |  | 
 ####Request
 
-```no-highlight
-	POST /<version>/myOrganization/users/<User.objectId>/TrendingAround/<File._undefined> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		<File.property_1> : <value_1>,
-		...,
-		<File.property_n> : <value_n>
-	}
-	```
+POST /<version>/myOrganization/users/<User.objectId>/TrendingAround/<File._undefined> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<File.property_1> : <value_1>,
+	...,
+	<File.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.File',
-		'@odata.id': '/<File._undefined>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.File',
+	'@odata.id': '/<File._undefined>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added a File entity resource representation. 
 
@@ -136,27 +135,30 @@ To update an existing `File` entity resource, submit an `HTTP PUT` request, spec
 | `Sites.FullControl.All` | `Admin` |  | 
 ####Request
 
-```no-highlight
-	PUT /<version>/myOrganization/users/<User.objectId>/TrendingAround/<File._undefined> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<File.property_1> : <value_1>,
-		...,
-		<File.property_n> : <value_n>
-	}
-	```
+PUT /<version>/myOrganization/users/<User.objectId>/TrendingAround/<File._undefined> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<File.property_1> : <value_1>,
+	...,
+	<File.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
@@ -175,27 +177,30 @@ To update selected properties of an existing `File` entity, submit an `HTTP PATC
 | `Sites.FullControl.All` | `Admin` |  | 
 ####Request
 
-```no-highlight
-	PATCH /<version>/myOrganization/users/<User.objectId>/TrendingAround/<File._undefined> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<File.property_1> : <value_1>,
-		...,
-		<File.property_n> : <value_n>
-	}
-	```
+PATCH /<version>/myOrganization/users/<User.objectId>/TrendingAround/<File._undefined> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<File.property_1> : <value_1>,
+	...,
+	<File.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -214,21 +219,24 @@ To delete an existing `File` entity resource, submit an `HTTP DELETE` request, s
 | `Sites.FullControl.All` | `Admin` |  | 
 ####Request
 
-```no-highlight
-	DELETE /<version>/myOrganization/users/<User.objectId>/TrendingAround/<File._undefined> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
+```
 	
-	```
+DELETE /<version>/myOrganization/users/<User.objectId>/TrendingAround/<File._undefined> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 

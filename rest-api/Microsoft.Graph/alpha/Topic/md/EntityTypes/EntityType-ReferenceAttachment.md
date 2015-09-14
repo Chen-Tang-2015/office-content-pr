@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph ReferenceAttachment entity resource
-Title: Microsoft.Graph alpha  entity, EntityType resource
-Description: blah, blah...
-ms.ContentId: 01e3048d-2995-3d89-136f-382071f2a309
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #ReferenceAttachment resource
 
  
 
 
 
-<a name="msg-entity-type-ReferenceAttachment"> </a>
 ##Overview
 
 |  |  | 
@@ -28,7 +20,7 @@ ms.date: Sep 14, 2015
 
 The `ReferenceAttachment` resource can be accessed via the following paths. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<ReferenceAttachment.Id>
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Instances/<Event.Id>/Attachments/<ReferenceAttachment.Id>
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/Conversations/<Conversation.Id>/Threads/<ConversationThread.Id>/Posts/<Post.Id>/Attachments/<ReferenceAttachment.Id>
@@ -60,7 +52,8 @@ The `ReferenceAttachment` resource can be accessed via the following paths.
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Conversations/<Conversation.Id>/Threads/<ConversationThread.Id>/Posts/<Post.Id>/Attachments/<ReferenceAttachment.Id>
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Events/<Event.Id>/Attachments/<ReferenceAttachment.Id>
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Threads/<ConversationThread.Id>/Posts/<Post.Id>/Attachments/<ReferenceAttachment.Id>
-	/<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/Attachments/<ReferenceAttachment.Id>```
+	/<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/Attachments/<ReferenceAttachment.Id>
+```
 
 
 
@@ -94,26 +87,29 @@ To get an existing `ReferenceAttachment` entity resource, submit an `HTTP GET` r
 | :-- | :-- | :-- | 
 ####Request
 
-```no-highlight
-	GET /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<ReferenceAttachment.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<ReferenceAttachment.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.ReferenceAttachment',
-		'@odata.id': '/<ReferenceAttachment.Id>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.ReferenceAttachment',
+	'@odata.id': '/<ReferenceAttachment.Id>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a ReferenceAttachment entity resource representation. 
 
@@ -141,27 +137,30 @@ To update an existing `ReferenceAttachment` entity resource, submit an `HTTP PUT
 | :-- | :-- | :-- | 
 ####Request
 
-```no-highlight
-	PUT /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<ReferenceAttachment.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<ReferenceAttachment.property_1> : <value_1>,
-		...,
-		<ReferenceAttachment.property_n> : <value_n>
-	}
-	```
+PUT /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<ReferenceAttachment.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<ReferenceAttachment.property_1> : <value_1>,
+	...,
+	<ReferenceAttachment.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
@@ -175,27 +174,30 @@ To update selected properties of an existing `ReferenceAttachment` entity, submi
 | :-- | :-- | :-- | 
 ####Request
 
-```no-highlight
-	PATCH /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<ReferenceAttachment.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<ReferenceAttachment.property_1> : <value_1>,
-		...,
-		<ReferenceAttachment.property_n> : <value_n>
-	}
-	```
+PATCH /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<ReferenceAttachment.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<ReferenceAttachment.property_1> : <value_1>,
+	...,
+	<ReferenceAttachment.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -209,21 +211,24 @@ To delete an existing `ReferenceAttachment` entity resource, submit an `HTTP DEL
 | :-- | :-- | :-- | 
 ####Request
 
-```no-highlight
-	DELETE /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<ReferenceAttachment.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
+```
 	
-	```
+DELETE /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<ReferenceAttachment.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 

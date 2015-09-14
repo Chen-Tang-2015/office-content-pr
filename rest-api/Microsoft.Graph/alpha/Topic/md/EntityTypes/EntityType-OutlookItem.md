@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph OutlookItem entity resource
-Title: Microsoft.Graph alpha  entity, EntityType resource
-Description: blah, blah...
-ms.ContentId: b74bde0b-ec38-0b27-f4a8-d1b682a234ed
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #OutlookItem resource
 
  
 
 
 
-<a name="msg-entity-type-OutlookItem"> </a>
 ##Overview
 
 |  |  | 
@@ -54,29 +46,32 @@ To get an existing `OutlookItem` entity resource, submit an `HTTP GET` request o
 | `Mail.Read` | `User` |  | 
 ####Request
 
-```no-highlight
-	GET  HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.OutlookItem',
-		'@odata.id': '/<OutlookItem.Id>',
-		'Categories' : '<Collection(Edm.String)>',
-		 ...,
-		'Id' : '<Edm.String>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.OutlookItem',
+	'@odata.id': '/<OutlookItem.Id>',
+	'Categories' : '<Collection(Edm.String)>',
+	 ...,
+	'Id' : '<Edm.String>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the specified an OutlookItem entity resource representation. 
 
@@ -106,27 +101,30 @@ To update an existing `OutlookItem` entity resource, submit an `HTTP PUT` reques
 | `Mail.ReadWrite` | `User` |  | 
 ####Request
 
-```no-highlight
-	PUT  HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<OutlookItem.property_1> : <value_1>,
-		...,
-		<OutlookItem.property_n> : <value_n>
-	}
-	```
+PUT  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<OutlookItem.property_1> : <value_1>,
+	...,
+	<OutlookItem.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
@@ -141,27 +139,30 @@ To update selected properties of an existing `OutlookItem` entity, submit an `HT
 | `Mail.ReadWrite` | `User` |  | 
 ####Request
 
-```no-highlight
-	PATCH  HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<OutlookItem.property_1> : <value_1>,
-		...,
-		<OutlookItem.property_n> : <value_n>
-	}
-	```
+PATCH  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<OutlookItem.property_1> : <value_1>,
+	...,
+	<OutlookItem.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -176,21 +177,24 @@ To delete an existing `OutlookItem` entity resource, submit an `HTTP DELETE` req
 | `Mail.ReadWrite` | `User` |  | 
 ####Request
 
-```no-highlight
-	DELETE  HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
+```
 	
-	```
+DELETE  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 

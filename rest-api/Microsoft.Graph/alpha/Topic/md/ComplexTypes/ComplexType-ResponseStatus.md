@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph ResponseStatus extended resource
-Title: Microsoft.Graph alpha  extended, ComplexType resource
-Description: blah, blah...
-ms.ContentId: e9d7f6d6-bed9-473c-4d9b-a39b4f80e0d9
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #ResponseStatus extended resource
 
  
 
 
 
-<a name="msg-complex-type-ResponseStatus"> </a>
 ##Overview
 
 |  |  | 
@@ -35,7 +27,7 @@ The `ResponseStatus` extended resource exposes the following properties
 
 The `ResponseStatus` extended resource is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Attendees/Status
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Instances/<Event.Id>/Attendees/Status
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Instances/<Event.Id>/ResponseStatus
@@ -79,7 +71,8 @@ The `ResponseStatus` extended resource is referenced by the following resources.
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/CalendarView/<Event.Id>/Attendees/Status
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/CalendarView/<Event.Id>/ResponseStatus
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Events/<Event.Id>/Attendees/Status
-	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Events/<Event.Id>/ResponseStatus```
+	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Events/<Event.Id>/ResponseStatus
+```
 
 
 

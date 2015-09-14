@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph RecurrencePattern extended resource
-Title: Microsoft.Graph alpha  extended, ComplexType resource
-Description: blah, blah...
-ms.ContentId: 90444260-f2ef-901a-47e2-dfeb535a9d08
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #RecurrencePattern extended resource
 
  
 
 
 
-<a name="msg-complex-type-RecurrencePattern"> </a>
 ##Overview
 
 |  |  | 
@@ -40,7 +32,7 @@ The `RecurrencePattern` extended resource exposes the following properties
 
 The `RecurrencePattern` extended resource is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Instances/<Event.Id>/Recurrence/Pattern
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Recurrence/Pattern
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/Events/<Event.Id>/Recurrence/Pattern
@@ -62,7 +54,8 @@ The `RecurrencePattern` extended resource is referenced by the following resourc
 	/<version>/myOrganization/users/<User.objectId>/CalendarView/<Event.Id>/Recurrence/Pattern
 	/<version>/myOrganization/users/<User.objectId>/Events/<Event.Id>/Recurrence/Pattern
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/CalendarView/<Event.Id>/Recurrence/Pattern
-	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Events/<Event.Id>/Recurrence/Pattern```
+	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Events/<Event.Id>/Recurrence/Pattern
+```
 
 
 

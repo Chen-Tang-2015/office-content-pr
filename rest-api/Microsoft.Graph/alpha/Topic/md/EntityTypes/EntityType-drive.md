@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph drive entity resource
-Title: Microsoft.Graph alpha  entity, EntityType resource
-Description: blah, blah...
-ms.ContentId: f3c8ba8e-c895-6ab7-3a6d-ba2540ed7f3f
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #drive resource
 
  
 
 
 
-<a name="msg-entity-type-drive"> </a>
 ##Overview
 
 |  |  | 
@@ -28,8 +20,9 @@ ms.date: Sep 14, 2015
 
 The `drive` resource can be accessed via the following paths. 
 
-```no-highlight
-	/<version>/myOrganization/drives/<drive.id>```
+```
+	/<version>/myOrganization/drives/<drive.id>
+```
 
 
 
@@ -74,29 +67,32 @@ To get an existing `drive` entity resource, submit an `HTTP GET` request of the 
 | :-- | :-- | :-- | 
 ####Request
 
-```no-highlight
-	GET /<version>/myOrganization/drives/<drive.id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/drives/<drive.id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.drive',
-		'@odata.id': '/<drive.id>',
-		'driveType' : '<Edm.String>',
-		 ...,
-		'quota' : '<Microsoft.Graph.quota>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.drive',
+	'@odata.id': '/<drive.id>',
+	'driveType' : '<Edm.String>',
+	 ...,
+	'quota' : '<Microsoft.Graph.quota>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a drive entity resource representation. 
 
@@ -110,35 +106,38 @@ To create new `drive` entity resource, submit an `HTTP POST` request against the
 | :-- | :-- | :-- | 
 ####Request
 
-```no-highlight
-	POST /<version>/myOrganization/drives/<drive.id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		<drive.property_1> : <value_1>,
-		...,
-		<drive.property_n> : <value_n>
-	}
-	```
+POST /<version>/myOrganization/drives/<drive.id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<drive.property_1> : <value_1>,
+	...,
+	<drive.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.drive',
-		'@odata.id': '/<drive.id>',
-		'driveType' : '<Edm.String>',
-		 ...,
-		'quota' : '<Microsoft.Graph.quota>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.drive',
+	'@odata.id': '/<drive.id>',
+	'driveType' : '<Edm.String>',
+	 ...,
+	'quota' : '<Microsoft.Graph.quota>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added a drive entity resource representation. 
 
@@ -152,27 +151,30 @@ To update an existing `drive` entity resource, submit an `HTTP PUT` request, spe
 | :-- | :-- | :-- | 
 ####Request
 
-```no-highlight
-	PUT /<version>/myOrganization/drives/<drive.id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<drive.property_1> : <value_1>,
-		...,
-		<drive.property_n> : <value_n>
-	}
-	```
+PUT /<version>/myOrganization/drives/<drive.id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<drive.property_1> : <value_1>,
+	...,
+	<drive.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
@@ -186,27 +188,30 @@ To update selected properties of an existing `drive` entity, submit an `HTTP PAT
 | :-- | :-- | :-- | 
 ####Request
 
-```no-highlight
-	PATCH /<version>/myOrganization/drives/<drive.id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<drive.property_1> : <value_1>,
-		...,
-		<drive.property_n> : <value_n>
-	}
-	```
+PATCH /<version>/myOrganization/drives/<drive.id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<drive.property_1> : <value_1>,
+	...,
+	<drive.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -220,21 +225,24 @@ To delete an existing `drive` entity resource, submit an `HTTP DELETE` request, 
 | :-- | :-- | :-- | 
 ####Request
 
-```no-highlight
-	DELETE /<version>/myOrganization/drives/<drive.id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
+```
 	
-	```
+DELETE /<version>/myOrganization/drives/<drive.id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -250,35 +258,38 @@ To get the `drive/files` collection, submit an `HTTP GET` request of the followi
 | :-- | :-- | :-- | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/drives/<drive.id>/files HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/drives/<drive.id>/files HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.item',
-				'@odata.id': '/<item.id>',
-				'createdBy' : '<Microsoft.Graph.identitySet>',
-				 ...,
-				'webUrl' : '<Edm.String>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.item',
+			'@odata.id': '/<item.id>',
+			'createdBy' : '<Microsoft.Graph.identitySet>',
+			 ...,
+			'webUrl' : '<Edm.String>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `item` resource representations. 
 
@@ -294,35 +305,38 @@ To get the `drive/items` collection, submit an `HTTP GET` request of the followi
 | :-- | :-- | :-- | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/drives/<drive.id>/items HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/drives/<drive.id>/items HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.item',
-				'@odata.id': '/<item.id>',
-				'createdBy' : '<Microsoft.Graph.identitySet>',
-				 ...,
-				'webUrl' : '<Edm.String>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.item',
+			'@odata.id': '/<item.id>',
+			'createdBy' : '<Microsoft.Graph.identitySet>',
+			 ...,
+			'webUrl' : '<Edm.String>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `item` resource representations. 
 
@@ -338,29 +352,32 @@ To get a drive/root `drive/root` resource, submit an `HTTP GET` request of the f
 | :-- | :-- | :-- | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/drives/<drive.id>/root HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/drives/<drive.id>/root HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.item',
-		'@odata.id': '/<item.id>',
-		'createdBy' : '<Microsoft.Graph.identitySet>',
-		 ...,
-		'webUrl' : '<Edm.String>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.item',
+	'@odata.id': '/<item.id>',
+	'createdBy' : '<Microsoft.Graph.identitySet>',
+	 ...,
+	'webUrl' : '<Edm.String>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing an `item` resource representation. 
 

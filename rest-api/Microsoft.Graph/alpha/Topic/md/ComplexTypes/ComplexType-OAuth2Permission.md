@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph OAuth2Permission extended resource
-Title: Microsoft.Graph alpha  extended, ComplexType resource
-Description: blah, blah...
-ms.ContentId: cda063d8-fcd9-a098-9c98-a7a5ed759846
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #OAuth2Permission extended resource
 
  
 
 
 
-<a name="msg-complex-type-OAuth2Permission"> </a>
 ##Overview
 
 |  |  | 
@@ -41,7 +33,7 @@ The `OAuth2Permission` extended resource exposes the following properties
 
 The `OAuth2Permission` extended resource is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/applications/<Application.objectId>/oauth2Permissions
 	/<version>/myOrganization/applications/<Application.objectId>/owners/<DirectoryObject.objectId>/oauth2Permissions
 	/<version>/myOrganization/applications/<Application.objectId>/owners/<DirectoryObject.objectId>/oauth2Permissions
@@ -147,7 +139,8 @@ The `OAuth2Permission` extended resource is referenced by the following resource
 	/<version>/myOrganization/users/<User.objectId>/ownedObjects/<DirectoryObject.objectId>/oauth2Permissions
 	/<version>/myOrganization/users/<User.objectId>/ownedObjects/<DirectoryObject.objectId>/oauth2Permissions
 	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/oauth2Permissions
-	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/oauth2Permissions```
+	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/oauth2Permissions
+```
 
 
 

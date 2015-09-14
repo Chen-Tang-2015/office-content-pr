@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph Application entity resource
-Title: Microsoft.Graph alpha  entity, EntityType resource
-Description: blah, blah...
-ms.ContentId: 9b7e7315-0b2f-998f-3905-ebe38e0ccc67
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #Application resource
 
  
 
 
 
-<a name="msg-entity-type-Application"> </a>
 ##Overview
 
 |  |  | 
@@ -28,10 +20,10 @@ ms.date: Sep 14, 2015
 
 The `Application` resource can be accessed via the following paths. 
 
-
+```
 	/<version>/myOrganization/applications/<Application.objectId>
 	/<version>/myOrganization/directoryObjects/<Application.objectId>
-	
+```
 
 
 
@@ -111,29 +103,32 @@ To get an existing `Application` entity resource, submit an `HTTP GET` request o
 | `Directory.Read.All` | `Admin` |  | 
 ####Request
 
-```no-highlight
-	GET /<version>/myOrganization/applications/<Application.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/applications/<Application.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Application',
-		'@odata.id': '/<Application.objectId>',
-		'appId' : '<Edm.String>',
-		 ...,
-		'samlMetadataUrl' : '<Edm.String>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Application',
+	'@odata.id': '/<Application.objectId>',
+	'appId' : '<Edm.String>',
+	 ...,
+	'samlMetadataUrl' : '<Edm.String>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the specified an Application entity resource representation. 
 
@@ -149,35 +144,38 @@ To create new `Application` entity resource, submit an `HTTP POST` request again
 | `Directory.AccessAsUser.All` | `Admin` | Access as user means ... | 
 ####Request
 
-```no-highlight
-	POST /<version>/myOrganization/applications/<Application.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		<Application.property_1> : <value_1>,
-		...,
-		<Application.property_n> : <value_n>
-	}
-	```
+POST /<version>/myOrganization/applications/<Application.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<Application.property_1> : <value_1>,
+	...,
+	<Application.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Application',
-		'@odata.id': '/<Application.objectId>',
-		'appId' : '<Edm.String>',
-		 ...,
-		'samlMetadataUrl' : '<Edm.String>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Application',
+	'@odata.id': '/<Application.objectId>',
+	'appId' : '<Edm.String>',
+	 ...,
+	'samlMetadataUrl' : '<Edm.String>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added an Application entity resource representation. 
 
@@ -193,27 +191,30 @@ To update an existing `Application` entity resource, submit an `HTTP PUT` reques
 | `Directory.AccessAsUser.All` | `Admin` | Access as user means ... | 
 ####Request
 
-```no-highlight
-	PUT /<version>/myOrganization/applications/<Application.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<Application.property_1> : <value_1>,
-		...,
-		<Application.property_n> : <value_n>
-	}
-	```
+PUT /<version>/myOrganization/applications/<Application.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<Application.property_1> : <value_1>,
+	...,
+	<Application.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
@@ -229,27 +230,30 @@ To update selected properties of an existing `Application` entity, submit an `HT
 | `Directory.AccessAsUser.All` | `Admin` | Access as user means ... | 
 ####Request
 
-```no-highlight
-	PATCH /<version>/myOrganization/applications/<Application.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<Application.property_1> : <value_1>,
-		...,
-		<Application.property_n> : <value_n>
-	}
-	```
+PATCH /<version>/myOrganization/applications/<Application.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<Application.property_1> : <value_1>,
+	...,
+	<Application.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -265,21 +269,24 @@ To delete an existing `Application` entity resource, submit an `HTTP DELETE` req
 | `Directory.AccessAsUser.All` | `Admin` | Access as user means ... | 
 ####Request
 
-```no-highlight
-	DELETE /<version>/myOrganization/applications/<Application.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
+```
 	
-	```
+DELETE /<version>/myOrganization/applications/<Application.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -296,29 +303,32 @@ To get an Application/createdOnBehalfOf `Application/createdOnBehalfOf` resource
 | `Directory.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/applications/<Application.objectId>/createdOnBehalfOf HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/applications/<Application.objectId>/createdOnBehalfOf HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.DirectoryObject',
-		'@odata.id': '/<DirectoryObject.objectId>',
-		'deletionTimestamp' : '<Edm.DateTimeOffset>',
-		 ...,
-		'objectType' : '<Edm.String>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.DirectoryObject',
+	'@odata.id': '/<DirectoryObject.objectId>',
+	'deletionTimestamp' : '<Edm.DateTimeOffset>',
+	 ...,
+	'objectType' : '<Edm.String>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a `DirectoryObject` resource representation. 
 
@@ -335,35 +345,38 @@ To get the `Application/extensionProperties` collection, submit an `HTTP GET` re
 | `Directory.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/applications/<Application.objectId>/extensionProperties HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/applications/<Application.objectId>/extensionProperties HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.ExtensionProperty',
-				'@odata.id': '/<ExtensionProperty.objectId>',
-				'appDisplayName' : '<Edm.String>',
-				 ...,
-				'targetObjects' : '<Collection(Edm.String)>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.ExtensionProperty',
+			'@odata.id': '/<ExtensionProperty.objectId>',
+			'appDisplayName' : '<Edm.String>',
+			 ...,
+			'targetObjects' : '<Collection(Edm.String)>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `ExtensionProperty` resource representations. 
 
@@ -380,35 +393,38 @@ To get the `Application/owners` collection, submit an `HTTP GET` request of the 
 | `Directory.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/applications/<Application.objectId>/owners HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/applications/<Application.objectId>/owners HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.DirectoryObject',
-				'@odata.id': '/<DirectoryObject.objectId>',
-				'deletionTimestamp' : '<Edm.DateTimeOffset>',
-				 ...,
-				'objectType' : '<Edm.String>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.DirectoryObject',
+			'@odata.id': '/<DirectoryObject.objectId>',
+			'deletionTimestamp' : '<Edm.DateTimeOffset>',
+			 ...,
+			'objectType' : '<Edm.String>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `DirectoryObject` resource representations. 
 
@@ -426,24 +442,27 @@ To call the `DirectoryObject/checkMemberGroups` action,submit a `POST` request o
 | `Directory.AccessAsUser.All` | `Admin` | Access as user means ... | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/checkMemberGroups HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		groupIds : <Edm.String>
-	}
-	```
+POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/checkMemberGroups HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	groupIds : <Edm.String>
+}
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	'<Edm.String>'```
+
+'<Edm.String>'
+```
 
 A successful call to the DirectoryObject/checkMemberGroups action returns an instance of the DirectoryObject/checkMemberGroups type. 
 
@@ -459,24 +478,27 @@ To call the `DirectoryObject/getMemberGroups` action,submit a `POST` request of 
 | `Directory.AccessAsUser.All` | `Admin` | Access as user means ... | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberGroups HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		securityEnabledOnly : <Edm.Boolean>
-	}
-	```
+POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberGroups HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	securityEnabledOnly : <Edm.Boolean>
+}
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	'<Edm.String>'```
+
+'<Edm.String>'
+```
 
 A successful call to the DirectoryObject/getMemberGroups action returns an instance of the DirectoryObject/getMemberGroups type. 
 
@@ -492,24 +514,27 @@ To call the `DirectoryObject/getMemberObjects` action,submit a `POST` request of
 | `Directory.AccessAsUser.All` | `Admin` | Access as user means ... | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberObjects HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		securityEnabledOnly : <Edm.Boolean>
-	}
-	```
+POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberObjects HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	securityEnabledOnly : <Edm.Boolean>
+}
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	'<Edm.String>'```
+
+'<Edm.String>'
+```
 
 A successful call to the DirectoryObject/getMemberObjects action returns an instance of the DirectoryObject/getMemberObjects type. 
 
@@ -525,33 +550,36 @@ To call the `Application/restore` action,submit a `POST` request of the followin
 | `Directory.AccessAsUser.All` | `Admin` | Access as user means ... | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/applications/<Application.objectId>/restore HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		identifierUris : <Edm.String>
-	}
-	```
+POST /<version>/myOrganization/applications/<Application.objectId>/restore HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	identifierUris : <Edm.String>
+}
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Application',
-		'@odata.id': '/<Application.objectId>',
-		'appId' : '<Edm.String>',
-		 ...,
-		'samlMetadataUrl' : '<Edm.String>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Application',
+	'@odata.id': '/<Application.objectId>',
+	'appId' : '<Edm.String>',
+	 ...,
+	'samlMetadataUrl' : '<Edm.String>'
+}
+
+```
 
 A successful call to the Application/restore action returns an instance of the Application/restore type. 
 

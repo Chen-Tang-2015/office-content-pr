@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph PasswordCredential extended resource
-Title: Microsoft.Graph alpha  extended, ComplexType resource
-Description: blah, blah...
-ms.ContentId: 2157091d-1664-4487-993b-454def62f7dd
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #PasswordCredential extended resource
 
  
 
 
 
-<a name="msg-complex-type-PasswordCredential"> </a>
 ##Overview
 
 |  |  | 
@@ -38,7 +30,7 @@ The `PasswordCredential` extended resource exposes the following properties
 
 The `PasswordCredential` extended resource is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/applications/<Application.objectId>/owners/<DirectoryObject.objectId>/passwordCredentials
 	/<version>/myOrganization/applications/<Application.objectId>/owners/<DirectoryObject.objectId>/passwordCredentials
 	/<version>/myOrganization/applications/<Application.objectId>/passwordCredentials
@@ -144,7 +136,8 @@ The `PasswordCredential` extended resource is referenced by the following resour
 	/<version>/myOrganization/users/<User.objectId>/ownedObjects/<DirectoryObject.objectId>/passwordCredentials
 	/<version>/myOrganization/users/<User.objectId>/ownedObjects/<DirectoryObject.objectId>/passwordCredentials
 	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/passwordCredentials
-	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/passwordCredentials```
+	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/passwordCredentials
+```
 
 
 

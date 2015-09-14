@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph thumbnailSet entity resource
-Title: Microsoft.Graph alpha  entity, EntityType resource
-Description: blah, blah...
-ms.ContentId: 8895df8b-6157-9a6f-8298-72d4af187d6a
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #thumbnailSet resource
 
  
 
 
 
-<a name="msg-entity-type-thumbnailSet"> </a>
 ##Overview
 
 |  |  | 
@@ -28,7 +20,7 @@ ms.date: Sep 14, 2015
 
 The `thumbnailSet` resource can be accessed via the following paths. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/files/<item.id>/thumbnails/<thumbnailSet.id>
 	/<version>/myOrganization/directoryObjects/<User.objectId>/files/<item.id>/thumbnails/<thumbnailSet.id>
 	/<version>/myOrganization/directoryObjects/<User.objectId>/JoinedGroups/<Group.objectId>/files/<item.id>/thumbnails/<thumbnailSet.id>
@@ -37,7 +29,8 @@ The `thumbnailSet` resource can be accessed via the following paths.
 	/<version>/myOrganization/drives/<drive.id>/items/<item.id>/thumbnails/<thumbnailSet.id>
 	/<version>/myOrganization/groups/<Group.objectId>/files/<item.id>/thumbnails/<thumbnailSet.id>
 	/<version>/myOrganization/users/<User.objectId>/files/<item.id>/thumbnails/<thumbnailSet.id>
-	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/files/<item.id>/thumbnails/<thumbnailSet.id>```
+	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/files/<item.id>/thumbnails/<thumbnailSet.id>
+```
 
 
 
@@ -80,29 +73,32 @@ To get an existing `thumbnailSet` entity resource, submit an `HTTP GET` request 
 | :-- | :-- | :-- | 
 ####Request
 
-```no-highlight
-	GET /<version>/myOrganization/drives/<drive.id>/files/<item.id>/thumbnails/<thumbnailSet.id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/drives/<drive.id>/files/<item.id>/thumbnails/<thumbnailSet.id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.thumbnailSet',
-		'@odata.id': '/<thumbnailSet.id>',
-		'id' : '<Edm.String>',
-		 ...,
-		'small' : '<Microsoft.Graph.thumbnail>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.thumbnailSet',
+	'@odata.id': '/<thumbnailSet.id>',
+	'id' : '<Edm.String>',
+	 ...,
+	'small' : '<Microsoft.Graph.thumbnail>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a thumbnailSet entity resource representation. 
 
@@ -116,35 +112,38 @@ To create new `thumbnailSet` entity resource, submit an `HTTP POST` request agai
 | :-- | :-- | :-- | 
 ####Request
 
-```no-highlight
-	POST /<version>/myOrganization/drives/<drive.id>/files/<item.id>/thumbnails/<thumbnailSet.id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		<thumbnailSet.property_1> : <value_1>,
-		...,
-		<thumbnailSet.property_n> : <value_n>
-	}
-	```
+POST /<version>/myOrganization/drives/<drive.id>/files/<item.id>/thumbnails/<thumbnailSet.id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<thumbnailSet.property_1> : <value_1>,
+	...,
+	<thumbnailSet.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.thumbnailSet',
-		'@odata.id': '/<thumbnailSet.id>',
-		'id' : '<Edm.String>',
-		 ...,
-		'small' : '<Microsoft.Graph.thumbnail>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.thumbnailSet',
+	'@odata.id': '/<thumbnailSet.id>',
+	'id' : '<Edm.String>',
+	 ...,
+	'small' : '<Microsoft.Graph.thumbnail>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added a thumbnailSet entity resource representation. 
 
@@ -158,27 +157,30 @@ To update an existing `thumbnailSet` entity resource, submit an `HTTP PUT` reque
 | :-- | :-- | :-- | 
 ####Request
 
-```no-highlight
-	PUT /<version>/myOrganization/drives/<drive.id>/files/<item.id>/thumbnails/<thumbnailSet.id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<thumbnailSet.property_1> : <value_1>,
-		...,
-		<thumbnailSet.property_n> : <value_n>
-	}
-	```
+PUT /<version>/myOrganization/drives/<drive.id>/files/<item.id>/thumbnails/<thumbnailSet.id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<thumbnailSet.property_1> : <value_1>,
+	...,
+	<thumbnailSet.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
@@ -192,27 +194,30 @@ To update selected properties of an existing `thumbnailSet` entity, submit an `H
 | :-- | :-- | :-- | 
 ####Request
 
-```no-highlight
-	PATCH /<version>/myOrganization/drives/<drive.id>/files/<item.id>/thumbnails/<thumbnailSet.id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<thumbnailSet.property_1> : <value_1>,
-		...,
-		<thumbnailSet.property_n> : <value_n>
-	}
-	```
+PATCH /<version>/myOrganization/drives/<drive.id>/files/<item.id>/thumbnails/<thumbnailSet.id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<thumbnailSet.property_1> : <value_1>,
+	...,
+	<thumbnailSet.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -226,21 +231,24 @@ To delete an existing `thumbnailSet` entity resource, submit an `HTTP DELETE` re
 | :-- | :-- | :-- | 
 ####Request
 
-```no-highlight
-	DELETE /<version>/myOrganization/drives/<drive.id>/files/<item.id>/thumbnails/<thumbnailSet.id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
+```
 	
-	```
+DELETE /<version>/myOrganization/drives/<drive.id>/files/<item.id>/thumbnails/<thumbnailSet.id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -256,21 +264,24 @@ To call the `getCustomThumbnail` function, submit a `POST` request of the follow
 | :-- | :-- | :-- | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/drives/<drive.id>/files/<item.id>/thumbnails/<thumbnailSet.id>/getCustomThumbnail HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : 0
+```
 	
-	```
+POST /<version>/myOrganization/drives/<drive.id>/files/<item.id>/thumbnails/<thumbnailSet.id>/getCustomThumbnail HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : 0
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	```
+
+
+```
 
 A successful call to the thumbnailSet/getCustomThumbnail action returns an empty response. 
 

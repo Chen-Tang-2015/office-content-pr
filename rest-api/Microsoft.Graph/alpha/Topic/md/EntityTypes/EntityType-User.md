@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph User entity resource
-Title: Microsoft.Graph alpha  entity, EntityType resource
-Description: blah, blah...
-ms.ContentId: 75e6f358-5e7c-9a64-a5d1-c240ce1f0560
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #User resource
 
  
 
 
 
-<a name="msg-entity-type-User"> </a>
 ##Overview
 
 |  |  | 
@@ -28,11 +20,12 @@ ms.date: Sep 14, 2015
 
 The `User` resource can be accessed via the following paths. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<User.objectId>
 	/<version>/myOrganization/directoryObjects/<User.objectId>/WorkingWith/<User.objectId>
 	/<version>/myOrganization/users/<User.objectId>
-	/<version>/myOrganization/users/<User.objectId>/WorkingWith/<User.objectId>```
+	/<version>/myOrganization/users/<User.objectId>/WorkingWith/<User.objectId>
+```
 
 
 
@@ -164,29 +157,32 @@ To get an existing `User` entity resource, submit an `HTTP GET` request of the f
 | `User.Read.All` | `Admin` |  | 
 ####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.User',
-		'@odata.id': '/<User.objectId>',
-		'AboutMe' : '<Edm.String>',
-		 ...,
-		'userType' : '<Edm.String>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.User',
+	'@odata.id': '/<User.objectId>',
+	'AboutMe' : '<Edm.String>',
+	 ...,
+	'userType' : '<Edm.String>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a User entity resource representation. 
 
@@ -202,35 +198,38 @@ To create new `User` entity resource, submit an `HTTP POST` request against the 
 | `User.ReadWrite.All` | `Admin` |  | 
 ####Request
 
-```no-highlight
-	POST /<version>/myOrganization/users/<User.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		<User.property_1> : <value_1>,
-		...,
-		<User.property_n> : <value_n>
-	}
-	```
+POST /<version>/myOrganization/users/<User.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<User.property_1> : <value_1>,
+	...,
+	<User.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.User',
-		'@odata.id': '/<User.objectId>',
-		'AboutMe' : '<Edm.String>',
-		 ...,
-		'userType' : '<Edm.String>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.User',
+	'@odata.id': '/<User.objectId>',
+	'AboutMe' : '<Edm.String>',
+	 ...,
+	'userType' : '<Edm.String>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added a User entity resource representation. 
 
@@ -246,27 +245,30 @@ To update an existing `User` entity resource, submit an `HTTP PUT` request, spec
 | `User.ReadWrite.All` | `Admin` |  | 
 ####Request
 
-```no-highlight
-	PUT /<version>/myOrganization/users/<User.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<User.property_1> : <value_1>,
-		...,
-		<User.property_n> : <value_n>
-	}
-	```
+PUT /<version>/myOrganization/users/<User.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<User.property_1> : <value_1>,
+	...,
+	<User.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
@@ -282,27 +284,30 @@ To update selected properties of an existing `User` entity, submit an `HTTP PATC
 | `User.ReadWrite.All` | `Admin` |  | 
 ####Request
 
-```no-highlight
-	PATCH /<version>/myOrganization/users/<User.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<User.property_1> : <value_1>,
-		...,
-		<User.property_n> : <value_n>
-	}
-	```
+PATCH /<version>/myOrganization/users/<User.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<User.property_1> : <value_1>,
+	...,
+	<User.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -318,21 +323,24 @@ To delete an existing `User` entity resource, submit an `HTTP DELETE` request, s
 | `User.ReadWrite.All` | `Admin` |  | 
 ####Request
 
-```no-highlight
-	DELETE /<version>/myOrganization/users/<User.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
+```
 	
-	```
+DELETE /<version>/myOrganization/users/<User.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -351,35 +359,38 @@ To get the `User/appRoleAssignments` collection, submit an `HTTP GET` request of
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/appRoleAssignments HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/appRoleAssignments HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.AppRoleAssignment',
-				'@odata.id': '/<AppRoleAssignment.objectId>',
-				'creationTimestamp' : '<Edm.DateTimeOffset>',
-				 ...,
-				'resourceId' : '<Edm.Guid>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.AppRoleAssignment',
+			'@odata.id': '/<AppRoleAssignment.objectId>',
+			'creationTimestamp' : '<Edm.DateTimeOffset>',
+			 ...,
+			'resourceId' : '<Edm.Guid>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `AppRoleAssignment` resource representations. 
 
@@ -399,29 +410,32 @@ To get a User/Calendar `User/Calendar` resource, submit an `HTTP GET` request of
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/Calendar HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/Calendar HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Calendar',
-		'@odata.id': '/<Calendar.Id>',
-		'ChangeKey' : '<Edm.String>',
-		 ...,
-		'Name' : '<Edm.String>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Calendar',
+	'@odata.id': '/<Calendar.Id>',
+	'ChangeKey' : '<Edm.String>',
+	 ...,
+	'Name' : '<Edm.String>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a `Calendar` resource representation. 
 
@@ -440,35 +454,38 @@ To get the `User/CalendarGroups` collection, submit an `HTTP GET` request of the
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/CalendarGroups HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/CalendarGroups HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.CalendarGroup',
-				'@odata.id': '/<CalendarGroup.Id>',
-				'ChangeKey' : '<Edm.String>',
-				 ...,
-				'Name' : '<Edm.String>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.CalendarGroup',
+			'@odata.id': '/<CalendarGroup.Id>',
+			'ChangeKey' : '<Edm.String>',
+			 ...,
+			'Name' : '<Edm.String>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `CalendarGroup` resource representations. 
 
@@ -487,35 +504,38 @@ To get the `User/Calendars` collection, submit an `HTTP GET` request of the foll
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/Calendars HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/Calendars HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.Calendar',
-				'@odata.id': '/<Calendar.Id>',
-				'ChangeKey' : '<Edm.String>',
-				 ...,
-				'Name' : '<Edm.String>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.Calendar',
+			'@odata.id': '/<Calendar.Id>',
+			'ChangeKey' : '<Edm.String>',
+			 ...,
+			'Name' : '<Edm.String>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `Calendar` resource representations. 
 
@@ -534,35 +554,38 @@ To get the `User/CalendarView` collection, submit an `HTTP GET` request of the f
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/CalendarView HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/CalendarView HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.Event',
-				'@odata.id': '/<Event.Id>',
-				'Attendees' : '<Collection(Microsoft.Graph.Attendee)>',
-				 ...,
-				'WebLink' : '<Edm.String>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.Event',
+			'@odata.id': '/<Event.Id>',
+			'Attendees' : '<Collection(Microsoft.Graph.Attendee)>',
+			 ...,
+			'WebLink' : '<Edm.String>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `Event` resource representations. 
 
@@ -581,35 +604,38 @@ To get the `User/createdObjects` collection, submit an `HTTP GET` request of the
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/createdObjects HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/createdObjects HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.DirectoryObject',
-				'@odata.id': '/<DirectoryObject.objectId>',
-				'deletionTimestamp' : '<Edm.DateTimeOffset>',
-				 ...,
-				'objectType' : '<Edm.String>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.DirectoryObject',
+			'@odata.id': '/<DirectoryObject.objectId>',
+			'deletionTimestamp' : '<Edm.DateTimeOffset>',
+			 ...,
+			'objectType' : '<Edm.String>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `DirectoryObject` resource representations. 
 
@@ -628,35 +654,38 @@ To get the `User/directReports` collection, submit an `HTTP GET` request of the 
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/directReports HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/directReports HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.DirectoryObject',
-				'@odata.id': '/<DirectoryObject.objectId>',
-				'deletionTimestamp' : '<Edm.DateTimeOffset>',
-				 ...,
-				'objectType' : '<Edm.String>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.DirectoryObject',
+			'@odata.id': '/<DirectoryObject.objectId>',
+			'deletionTimestamp' : '<Edm.DateTimeOffset>',
+			 ...,
+			'objectType' : '<Edm.String>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `DirectoryObject` resource representations. 
 
@@ -675,29 +704,32 @@ To get a User/drive `User/drive` resource, submit an `HTTP GET` request of the f
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/drive HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/drive HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.drive',
-		'@odata.id': '/<drive.id>',
-		'driveType' : '<Edm.String>',
-		 ...,
-		'quota' : '<Microsoft.Graph.quota>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.drive',
+	'@odata.id': '/<drive.id>',
+	'driveType' : '<Edm.String>',
+	 ...,
+	'quota' : '<Microsoft.Graph.quota>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a `drive` resource representation. 
 
@@ -716,35 +748,38 @@ To get the `User/Events` collection, submit an `HTTP GET` request of the followi
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/Events HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/Events HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.Event',
-				'@odata.id': '/<Event.Id>',
-				'Attendees' : '<Collection(Microsoft.Graph.Attendee)>',
-				 ...,
-				'WebLink' : '<Edm.String>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.Event',
+			'@odata.id': '/<Event.Id>',
+			'Attendees' : '<Collection(Microsoft.Graph.Attendee)>',
+			 ...,
+			'WebLink' : '<Edm.String>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `Event` resource representations. 
 
@@ -763,35 +798,38 @@ To get the `User/files` collection, submit an `HTTP GET` request of the followin
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/files HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/files HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.item',
-				'@odata.id': '/<item.id>',
-				'createdBy' : '<Microsoft.Graph.identitySet>',
-				 ...,
-				'webUrl' : '<Edm.String>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.item',
+			'@odata.id': '/<item.id>',
+			'createdBy' : '<Microsoft.Graph.identitySet>',
+			 ...,
+			'webUrl' : '<Edm.String>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `item` resource representations. 
 
@@ -810,35 +848,38 @@ To get the `User/JoinedGroups` collection, submit an `HTTP GET` request of the f
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/JoinedGroups HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/JoinedGroups HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.Group',
-				'@odata.id': '/<Group.objectId>',
-				'AccessType' : '<Microsoft.Graph.GroupAccessType>',
-				 ...,
-				'UnseenCount' : '<Edm.Int32>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.Group',
+			'@odata.id': '/<Group.objectId>',
+			'AccessType' : '<Microsoft.Graph.GroupAccessType>',
+			 ...,
+			'UnseenCount' : '<Edm.Int32>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `Group` resource representations. 
 
@@ -857,29 +898,32 @@ To get a User/manager `User/manager` resource, submit an `HTTP GET` request of t
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/manager HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/manager HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.DirectoryObject',
-		'@odata.id': '/<DirectoryObject.objectId>',
-		'deletionTimestamp' : '<Edm.DateTimeOffset>',
-		 ...,
-		'objectType' : '<Edm.String>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.DirectoryObject',
+	'@odata.id': '/<DirectoryObject.objectId>',
+	'deletionTimestamp' : '<Edm.DateTimeOffset>',
+	 ...,
+	'objectType' : '<Edm.String>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a `DirectoryObject` resource representation. 
 
@@ -898,35 +942,38 @@ To get the `User/memberOf` collection, submit an `HTTP GET` request of the follo
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/memberOf HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/memberOf HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.DirectoryObject',
-				'@odata.id': '/<DirectoryObject.objectId>',
-				'deletionTimestamp' : '<Edm.DateTimeOffset>',
-				 ...,
-				'objectType' : '<Edm.String>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.DirectoryObject',
+			'@odata.id': '/<DirectoryObject.objectId>',
+			'deletionTimestamp' : '<Edm.DateTimeOffset>',
+			 ...,
+			'objectType' : '<Edm.String>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `DirectoryObject` resource representations. 
 
@@ -945,35 +992,38 @@ To get the `User/Messages` collection, submit an `HTTP GET` request of the follo
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/Messages HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/Messages HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.Message',
-				'@odata.id': '/<Message.Id>',
-				'BccRecipients' : '<Collection(Microsoft.Graph.Recipient)>',
-				 ...,
-				'WebLink' : '<Edm.String>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.Message',
+			'@odata.id': '/<Message.Id>',
+			'BccRecipients' : '<Collection(Microsoft.Graph.Recipient)>',
+			 ...,
+			'WebLink' : '<Edm.String>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `Message` resource representations. 
 
@@ -992,35 +1042,38 @@ To get the `User/oauth2PermissionGrants` collection, submit an `HTTP GET` reques
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/oauth2PermissionGrants HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/oauth2PermissionGrants HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.OAuth2PermissionGrant',
-				'@odata.id': '/<OAuth2PermissionGrant.objectId>',
-				'clientId' : '<Edm.String>',
-				 ...,
-				'startTime' : '<Edm.DateTimeOffset>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.OAuth2PermissionGrant',
+			'@odata.id': '/<OAuth2PermissionGrant.objectId>',
+			'clientId' : '<Edm.String>',
+			 ...,
+			'startTime' : '<Edm.DateTimeOffset>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `OAuth2PermissionGrant` resource representations. 
 
@@ -1039,35 +1092,38 @@ To get the `User/ownedDevices` collection, submit an `HTTP GET` request of the f
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/ownedDevices HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/ownedDevices HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.DirectoryObject',
-				'@odata.id': '/<DirectoryObject.objectId>',
-				'deletionTimestamp' : '<Edm.DateTimeOffset>',
-				 ...,
-				'objectType' : '<Edm.String>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.DirectoryObject',
+			'@odata.id': '/<DirectoryObject.objectId>',
+			'deletionTimestamp' : '<Edm.DateTimeOffset>',
+			 ...,
+			'objectType' : '<Edm.String>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `DirectoryObject` resource representations. 
 
@@ -1086,35 +1142,38 @@ To get the `User/ownedObjects` collection, submit an `HTTP GET` request of the f
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/ownedObjects HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/ownedObjects HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.DirectoryObject',
-				'@odata.id': '/<DirectoryObject.objectId>',
-				'deletionTimestamp' : '<Edm.DateTimeOffset>',
-				 ...,
-				'objectType' : '<Edm.String>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.DirectoryObject',
+			'@odata.id': '/<DirectoryObject.objectId>',
+			'deletionTimestamp' : '<Edm.DateTimeOffset>',
+			 ...,
+			'objectType' : '<Edm.String>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `DirectoryObject` resource representations. 
 
@@ -1133,35 +1192,38 @@ To get the `User/plans` collection, submit an `HTTP GET` request of the followin
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/plans HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/plans HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.Plan',
-				'@odata.id': '/<Plan.id>',
-				'activeTasks' : '<Edm.Int32>',
-				 ...,
-				'version' : '<Edm.String>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.Plan',
+			'@odata.id': '/<Plan.id>',
+			'activeTasks' : '<Edm.Int32>',
+			 ...,
+			'version' : '<Edm.String>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `Plan` resource representations. 
 
@@ -1180,35 +1242,38 @@ To get the `User/registeredDevices` collection, submit an `HTTP GET` request of 
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/registeredDevices HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/registeredDevices HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.DirectoryObject',
-				'@odata.id': '/<DirectoryObject.objectId>',
-				'deletionTimestamp' : '<Edm.DateTimeOffset>',
-				 ...,
-				'objectType' : '<Edm.String>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.DirectoryObject',
+			'@odata.id': '/<DirectoryObject.objectId>',
+			'deletionTimestamp' : '<Edm.DateTimeOffset>',
+			 ...,
+			'objectType' : '<Edm.String>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `DirectoryObject` resource representations. 
 
@@ -1227,35 +1292,38 @@ To get the `User/tasks` collection, submit an `HTTP GET` request of the followin
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/tasks HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/tasks HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.Task',
-				'@odata.id': '/<Task.id>',
-				'assignedBy' : '<Edm.String>',
-				 ...,
-				'version' : '<Edm.String>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.Task',
+			'@odata.id': '/<Task.id>',
+			'assignedBy' : '<Edm.String>',
+			 ...,
+			'version' : '<Edm.String>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `Task` resource representations. 
 
@@ -1274,32 +1342,35 @@ To get the `User/TrendingAround` collection, submit an `HTTP GET` request of the
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/TrendingAround HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/TrendingAround HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.File',
-				'@odata.id': '/<File._undefined>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.File',
+			'@odata.id': '/<File._undefined>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `File` resource representations. 
 
@@ -1318,29 +1389,32 @@ To get a User/UserPhoto `User/UserPhoto` resource, submit an `HTTP GET` request 
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/UserPhoto HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/UserPhoto HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Photo',
-		'@odata.id': '/<Photo.Id>',
-		'Height' : '<Edm.Int32>',
-		 ...,
-		'Width' : '<Edm.Int32>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Photo',
+	'@odata.id': '/<Photo.Id>',
+	'Height' : '<Edm.Int32>',
+	 ...,
+	'Width' : '<Edm.Int32>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a `Photo` resource representation. 
 
@@ -1359,35 +1433,38 @@ To get the `User/UserPhotos` collection, submit an `HTTP GET` request of the fol
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/UserPhotos HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/UserPhotos HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.Photo',
-				'@odata.id': '/<Photo.Id>',
-				'Height' : '<Edm.Int32>',
-				 ...,
-				'Width' : '<Edm.Int32>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.Photo',
+			'@odata.id': '/<Photo.Id>',
+			'Height' : '<Edm.Int32>',
+			 ...,
+			'Width' : '<Edm.Int32>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `Photo` resource representations. 
 
@@ -1406,35 +1483,38 @@ To get the `User/WorkingWith` collection, submit an `HTTP GET` request of the fo
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/WorkingWith HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/WorkingWith HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.User',
-				'@odata.id': '/<User.objectId>',
-				'AboutMe' : '<Edm.String>',
-				 ...,
-				'userType' : '<Edm.String>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.User',
+			'@odata.id': '/<User.objectId>',
+			'AboutMe' : '<Edm.String>',
+			 ...,
+			'userType' : '<Edm.String>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `User` resource representations. 
 
@@ -1452,34 +1532,37 @@ To call the `User/assignLicense` action,submit a `POST` request of the following
 | `User.ReadWrite.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/users/<User.objectId>/assignLicense HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		addLicenses : <Microsoft.Graph.AssignedLicense>,
-		removeLicenses : <Edm.Guid>
-	}
-	```
+POST /<version>/myOrganization/users/<User.objectId>/assignLicense HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	addLicenses : <Microsoft.Graph.AssignedLicense>,
+	removeLicenses : <Edm.Guid>
+}
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.User',
-		'@odata.id': '/<User.objectId>',
-		'AboutMe' : '<Edm.String>',
-		 ...,
-		'userType' : '<Edm.String>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.User',
+	'@odata.id': '/<User.objectId>',
+	'AboutMe' : '<Edm.String>',
+	 ...,
+	'userType' : '<Edm.String>'
+}
+
+```
 
 A successful call to the User/assignLicense action returns an instance of the User/assignLicense type. 
 
@@ -1495,24 +1578,27 @@ To call the `DirectoryObject/checkMemberGroups` action,submit a `POST` request o
 | `Directory.AccessAsUser.All` | `Admin` | Access as user means ... | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/checkMemberGroups HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		groupIds : <Edm.String>
-	}
-	```
+POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/checkMemberGroups HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	groupIds : <Edm.String>
+}
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	'<Edm.String>'```
+
+'<Edm.String>'
+```
 
 A successful call to the DirectoryObject/checkMemberGroups action returns an instance of the DirectoryObject/checkMemberGroups type. 
 
@@ -1528,24 +1614,27 @@ To call the `DirectoryObject/getMemberGroups` action,submit a `POST` request of 
 | `Directory.AccessAsUser.All` | `Admin` | Access as user means ... | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberGroups HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		securityEnabledOnly : <Edm.Boolean>
-	}
-	```
+POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberGroups HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	securityEnabledOnly : <Edm.Boolean>
+}
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	'<Edm.String>'```
+
+'<Edm.String>'
+```
 
 A successful call to the DirectoryObject/getMemberGroups action returns an instance of the DirectoryObject/getMemberGroups type. 
 
@@ -1561,24 +1650,27 @@ To call the `DirectoryObject/getMemberObjects` action,submit a `POST` request of
 | `Directory.AccessAsUser.All` | `Admin` | Access as user means ... | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberObjects HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		securityEnabledOnly : <Edm.Boolean>
-	}
-	```
+POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberObjects HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	securityEnabledOnly : <Edm.Boolean>
+}
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	'<Edm.String>'```
+
+'<Edm.String>'
+```
 
 A successful call to the DirectoryObject/getMemberObjects action returns an instance of the DirectoryObject/getMemberObjects type. 
 
@@ -1594,25 +1686,28 @@ To call the `User/SendMail` action,submit a `POST` request of the following REST
 | `User.ReadWrite.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/users/<User.objectId>/SendMail HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		Message : <Microsoft.Graph.Message>,
-		SaveToSentItems : <Edm.Boolean>
-	}
-	```
+POST /<version>/myOrganization/users/<User.objectId>/SendMail HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	Message : <Microsoft.Graph.Message>,
+	SaveToSentItems : <Edm.Boolean>
+}
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	```
+
+
+```
 
 A successful call to the User/SendMail action returns an empty response. 
 

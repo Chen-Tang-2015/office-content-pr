@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph LicenseUnitsDetail extended resource
-Title: Microsoft.Graph alpha  extended, ComplexType resource
-Description: blah, blah...
-ms.ContentId: 9ef06458-72f8-2fe0-2a86-47c318eae1c4
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #LicenseUnitsDetail extended resource
 
  
 
 
 
-<a name="msg-complex-type-LicenseUnitsDetail"> </a>
 ##Overview
 
 |  |  | 
@@ -36,8 +28,9 @@ The `LicenseUnitsDetail` extended resource exposes the following properties
 
 The `LicenseUnitsDetail` extended resource is referenced by the following resources. 
 
-```no-highlight
-	/<version>/myOrganization/subscribedSkus/<SubscribedSku.objectId>/prepaidUnits```
+```
+	/<version>/myOrganization/subscribedSkus/<SubscribedSku.objectId>/prepaidUnits
+```
 
 
 

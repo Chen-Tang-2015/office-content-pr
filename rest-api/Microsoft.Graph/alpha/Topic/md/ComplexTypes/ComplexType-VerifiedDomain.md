@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph VerifiedDomain extended resource
-Title: Microsoft.Graph alpha  extended, ComplexType resource
-Description: blah, blah...
-ms.ContentId: 908cae5d-0173-7514-4c33-d45a9da02d01
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #VerifiedDomain extended resource
 
  
 
 
 
-<a name="msg-complex-type-VerifiedDomain"> </a>
 ##Overview
 
 |  |  | 
@@ -39,7 +31,7 @@ The `VerifiedDomain` extended resource exposes the following properties
 
 The `VerifiedDomain` extended resource is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/applications/<Application.objectId>/owners/<DirectoryObject.objectId>/verifiedDomains
 	/<version>/myOrganization/contacts/<Contact.objectId>/directReports/<DirectoryObject.objectId>/verifiedDomains
 	/<version>/myOrganization/contacts/<Contact.objectId>/memberOf/<DirectoryObject.objectId>/verifiedDomains
@@ -92,7 +84,8 @@ The `VerifiedDomain` extended resource is referenced by the following resources.
 	/<version>/myOrganization/users/<User.objectId>/memberOf/<DirectoryObject.objectId>/verifiedDomains
 	/<version>/myOrganization/users/<User.objectId>/ownedDevices/<DirectoryObject.objectId>/verifiedDomains
 	/<version>/myOrganization/users/<User.objectId>/ownedObjects/<DirectoryObject.objectId>/verifiedDomains
-	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/verifiedDomains```
+	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/verifiedDomains
+```
 
 
 

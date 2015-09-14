@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph FreeBusyStatus EnumType
-Title: Microsoft.Graph alpha  enumeration, EnumType
-Description: blah, blah...
-ms.ContentId: a33b998f-054e-751f-29f9-83ee7d98a50c
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #FreeBusyStatus enumeration
 
  
 
 
 
-<a name="msg-enum-type-FreeBusyStatus"> </a>
 ##Overview
 
 |  |  | 
@@ -39,7 +31,7 @@ The `FreeBusyStatus` enumeration has the following members.
 
 The `FreeBusyStatus` enumeration is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Instances/<Event.Id>/ShowAs
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/ShowAs
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/Events/<Event.Id>/ShowAs
@@ -61,7 +53,8 @@ The `FreeBusyStatus` enumeration is referenced by the following resources.
 	/<version>/myOrganization/users/<User.objectId>/CalendarView/<Event.Id>/ShowAs
 	/<version>/myOrganization/users/<User.objectId>/Events/<Event.Id>/ShowAs
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/CalendarView/<Event.Id>/ShowAs
-	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Events/<Event.Id>/ShowAs```
+	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Events/<Event.Id>/ShowAs
+```
 
 
 

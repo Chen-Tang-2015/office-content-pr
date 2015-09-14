@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph AssignedPlan extended resource
-Title: Microsoft.Graph alpha  extended, ComplexType resource
-Description: blah, blah...
-ms.ContentId: 1887f556-49ba-b8f4-c0ad-037d240a975c
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #AssignedPlan extended resource
 
  
 
 
 
-<a name="msg-complex-type-AssignedPlan"> </a>
 ##Overview
 
 |  |  | 
@@ -37,7 +29,7 @@ The `AssignedPlan` extended resource exposes the following properties
 
 The `AssignedPlan` extended resource is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/applications/<Application.objectId>/owners/<DirectoryObject.objectId>/assignedPlans
 	/<version>/myOrganization/applications/<Application.objectId>/owners/<DirectoryObject.objectId>/assignedPlans
 	/<version>/myOrganization/contacts/<Contact.objectId>/directReports/<DirectoryObject.objectId>/assignedPlans
@@ -145,7 +137,8 @@ The `AssignedPlan` extended resource is referenced by the following resources.
 	/<version>/myOrganization/users/<User.objectId>/ownedObjects/<DirectoryObject.objectId>/assignedPlans
 	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/assignedPlans
 	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/assignedPlans
-	/<version>/myOrganization/users/<User.objectId>/WorkingWith/<User.objectId>/assignedPlans```
+	/<version>/myOrganization/users/<User.objectId>/WorkingWith/<User.objectId>/assignedPlans
+```
 
 
 

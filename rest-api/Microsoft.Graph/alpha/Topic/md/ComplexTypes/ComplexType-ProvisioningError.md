@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph ProvisioningError extended resource
-Title: Microsoft.Graph alpha  extended, ComplexType resource
-Description: blah, blah...
-ms.ContentId: 5409d2d9-2517-1784-0670-ebebe055e2ae
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #ProvisioningError extended resource
 
  
 
 
 
-<a name="msg-complex-type-ProvisioningError"> </a>
 ##Overview
 
 |  |  | 
@@ -37,7 +29,7 @@ The `ProvisioningError` extended resource exposes the following properties
 
 The `ProvisioningError` extended resource is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/applications/<Application.objectId>/owners/<DirectoryObject.objectId>/provisioningErrors
 	/<version>/myOrganization/applications/<Application.objectId>/owners/<DirectoryObject.objectId>/provisioningErrors
 	/<version>/myOrganization/applications/<Application.objectId>/owners/<DirectoryObject.objectId>/provisioningErrors
@@ -253,7 +245,8 @@ The `ProvisioningError` extended resource is referenced by the following resourc
 	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/provisioningErrors
 	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/provisioningErrors
 	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/provisioningErrors
-	/<version>/myOrganization/users/<User.objectId>/WorkingWith/<User.objectId>/provisioningErrors```
+	/<version>/myOrganization/users/<User.objectId>/WorkingWith/<User.objectId>/provisioningErrors
+```
 
 
 

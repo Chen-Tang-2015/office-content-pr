@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph FileAttachment entity resource
-Title: Microsoft.Graph alpha  entity, EntityType resource
-Description: blah, blah...
-ms.ContentId: f3804e92-b910-84bd-351c-c5b6f7a8ef46
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #FileAttachment resource
 
  
 
 
 
-<a name="msg-entity-type-FileAttachment"> </a>
 ##Overview
 
 |  |  | 
@@ -28,7 +20,7 @@ ms.date: Sep 14, 2015
 
 The `FileAttachment` resource can be accessed via the following paths. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<FileAttachment.Id>
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Instances/<Event.Id>/Attachments/<FileAttachment.Id>
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/Conversations/<Conversation.Id>/Threads/<ConversationThread.Id>/Posts/<Post.Id>/Attachments/<FileAttachment.Id>
@@ -60,7 +52,8 @@ The `FileAttachment` resource can be accessed via the following paths.
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Conversations/<Conversation.Id>/Threads/<ConversationThread.Id>/Posts/<Post.Id>/Attachments/<FileAttachment.Id>
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Events/<Event.Id>/Attachments/<FileAttachment.Id>
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Threads/<ConversationThread.Id>/Posts/<Post.Id>/Attachments/<FileAttachment.Id>
-	/<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/Attachments/<FileAttachment.Id>```
+	/<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/Attachments/<FileAttachment.Id>
+```
 
 
 
@@ -101,29 +94,32 @@ To get an existing `FileAttachment` entity resource, submit an `HTTP GET` reques
 | `File.Read.Selected` | `User` |  | 
 ####Request
 
-```no-highlight
-	GET /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<FileAttachment.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<FileAttachment.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.FileAttachment',
-		'@odata.id': '/<FileAttachment.Id>',
-		'ContentBytes' : '<Edm.Binary>',
-		 ...,
-		'IsContactPhoto' : '<Edm.Boolean>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.FileAttachment',
+	'@odata.id': '/<FileAttachment.Id>',
+	'ContentBytes' : '<Edm.Binary>',
+	 ...,
+	'IsContactPhoto' : '<Edm.Boolean>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a FileAttachment entity resource representation. 
 
@@ -155,27 +151,30 @@ To update an existing `FileAttachment` entity resource, submit an `HTTP PUT` req
 | `File.ReadWrite.Selected` | `User` |  | 
 ####Request
 
-```no-highlight
-	PUT /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<FileAttachment.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<FileAttachment.property_1> : <value_1>,
-		...,
-		<FileAttachment.property_n> : <value_n>
-	}
-	```
+PUT /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<FileAttachment.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<FileAttachment.property_1> : <value_1>,
+	...,
+	<FileAttachment.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
@@ -191,27 +190,30 @@ To update selected properties of an existing `FileAttachment` entity, submit an 
 | `File.ReadWrite.Selected` | `User` |  | 
 ####Request
 
-```no-highlight
-	PATCH /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<FileAttachment.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<FileAttachment.property_1> : <value_1>,
-		...,
-		<FileAttachment.property_n> : <value_n>
-	}
-	```
+PATCH /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<FileAttachment.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<FileAttachment.property_1> : <value_1>,
+	...,
+	<FileAttachment.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -227,21 +229,24 @@ To delete an existing `FileAttachment` entity resource, submit an `HTTP DELETE` 
 | `File.ReadWrite.Selected` | `User` |  | 
 ####Request
 
-```no-highlight
-	DELETE /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<FileAttachment.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
+```
 	
-	```
+DELETE /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<FileAttachment.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 

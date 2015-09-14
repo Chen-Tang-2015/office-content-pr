@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph AppRole extended resource
-Title: Microsoft.Graph alpha  extended, ComplexType resource
-Description: blah, blah...
-ms.ContentId: 2633174e-c8c3-57ba-a251-6b54e89bdb17
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #AppRole extended resource
 
  
 
 
 
-<a name="msg-complex-type-AppRole"> </a>
 ##Overview
 
 |  |  | 
@@ -39,7 +31,7 @@ The `AppRole` extended resource exposes the following properties
 
 The `AppRole` extended resource is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/applications/<Application.objectId>/appRoles
 	/<version>/myOrganization/applications/<Application.objectId>/owners/<DirectoryObject.objectId>/appRoles
 	/<version>/myOrganization/applications/<Application.objectId>/owners/<DirectoryObject.objectId>/appRoles
@@ -145,7 +137,8 @@ The `AppRole` extended resource is referenced by the following resources.
 	/<version>/myOrganization/users/<User.objectId>/ownedObjects/<DirectoryObject.objectId>/appRoles
 	/<version>/myOrganization/users/<User.objectId>/ownedObjects/<DirectoryObject.objectId>/appRoles
 	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/appRoles
-	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/appRoles```
+	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/appRoles
+```
 
 
 

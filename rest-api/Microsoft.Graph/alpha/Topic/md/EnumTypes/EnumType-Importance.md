@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph Importance EnumType
-Title: Microsoft.Graph alpha  enumeration, EnumType
-Description: blah, blah...
-ms.ContentId: 1c89bf92-cd8c-1939-bad0-49394073cbaa
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #Importance enumeration
 
  
 
 
 
-<a name="msg-enum-type-Importance"> </a>
 ##Overview
 
 |  |  | 
@@ -36,7 +28,7 @@ The `Importance` enumeration has the following members.
 
 The `Importance` enumeration is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Importance
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Instances/<Event.Id>/Importance
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/Events/<Event.Id>/Importance
@@ -60,7 +52,8 @@ The `Importance` enumeration is referenced by the following resources.
 	/<version>/myOrganization/users/<User.objectId>/Events/<Event.Id>/Importance
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/CalendarView/<Event.Id>/Importance
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Events/<Event.Id>/Importance
-	/<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/Importance```
+	/<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/Importance
+```
 
 
 

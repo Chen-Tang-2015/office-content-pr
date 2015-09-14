@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph itemReference extended resource
-Title: Microsoft.Graph alpha  extended, ComplexType resource
-Description: blah, blah...
-ms.ContentId: 59550711-b96d-5dc3-06e4-27164603a6f6
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #itemReference extended resource
 
  
 
 
 
-<a name="msg-complex-type-itemReference"> </a>
 ##Overview
 
 |  |  | 
@@ -36,7 +28,7 @@ The `itemReference` extended resource exposes the following properties
 
 The `itemReference` extended resource is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/files/<item.id>/parentReference
 	/<version>/myOrganization/directoryObjects/<User.objectId>/files/<item.id>/parentReference
 	/<version>/myOrganization/directoryObjects/<User.objectId>/JoinedGroups/<Group.objectId>/files/<item.id>/parentReference
@@ -45,7 +37,8 @@ The `itemReference` extended resource is referenced by the following resources.
 	/<version>/myOrganization/drives/<drive.id>/items/<item.id>/parentReference
 	/<version>/myOrganization/groups/<Group.objectId>/files/<item.id>/parentReference
 	/<version>/myOrganization/users/<User.objectId>/files/<item.id>/parentReference
-	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/files/<item.id>/parentReference```
+	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/files/<item.id>/parentReference
+```
 
 
 

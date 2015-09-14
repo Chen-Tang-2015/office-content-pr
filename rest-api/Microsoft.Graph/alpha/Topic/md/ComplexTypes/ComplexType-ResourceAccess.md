@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph ResourceAccess extended resource
-Title: Microsoft.Graph alpha  extended, ComplexType resource
-Description: blah, blah...
-ms.ContentId: 3d247414-f66d-b71f-54df-2b20e2f85e63
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #ResourceAccess extended resource
 
  
 
 
 
-<a name="msg-complex-type-ResourceAccess"> </a>
 ##Overview
 
 |  |  | 

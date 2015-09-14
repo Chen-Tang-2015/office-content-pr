@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph RequiredResourceAccess extended resource
-Title: Microsoft.Graph alpha  extended, ComplexType resource
-Description: blah, blah...
-ms.ContentId: b66c9916-beab-5a39-e5b7-f26ba7d28401
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #RequiredResourceAccess extended resource
 
  
 
 
 
-<a name="msg-complex-type-RequiredResourceAccess"> </a>
 ##Overview
 
 |  |  | 
@@ -35,7 +27,7 @@ The `RequiredResourceAccess` extended resource exposes the following properties
 
 The `RequiredResourceAccess` extended resource is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/applications/<Application.objectId>/owners/<DirectoryObject.objectId>/requiredResourceAccess
 	/<version>/myOrganization/applications/<Application.objectId>/requiredResourceAccess
 	/<version>/myOrganization/contacts/<Contact.objectId>/directReports/<DirectoryObject.objectId>/requiredResourceAccess
@@ -88,7 +80,8 @@ The `RequiredResourceAccess` extended resource is referenced by the following re
 	/<version>/myOrganization/users/<User.objectId>/memberOf/<DirectoryObject.objectId>/requiredResourceAccess
 	/<version>/myOrganization/users/<User.objectId>/ownedDevices/<DirectoryObject.objectId>/requiredResourceAccess
 	/<version>/myOrganization/users/<User.objectId>/ownedObjects/<DirectoryObject.objectId>/requiredResourceAccess
-	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/requiredResourceAccess```
+	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/requiredResourceAccess
+```
 
 
 

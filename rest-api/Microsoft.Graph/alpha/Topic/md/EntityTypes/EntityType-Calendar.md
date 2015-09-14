@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph Calendar entity resource
-Title: Microsoft.Graph alpha  entity, EntityType resource
-Description: blah, blah...
-ms.ContentId: 5eb32a96-204e-5405-eef1-0d06887cf11b
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #Calendar resource
 
  
 
 
 
-<a name="msg-entity-type-Calendar"> </a>
 ##Overview
 
 |  |  | 
@@ -28,11 +20,12 @@ ms.date: Sep 14, 2015
 
 The `Calendar` resource can be accessed via the following paths. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<User.objectId>/CalendarGroups/<CalendarGroup.Id>/Calendars/<Calendar.Id>
 	/<version>/myOrganization/directoryObjects/<User.objectId>/Calendars/<Calendar.Id>
 	/<version>/myOrganization/users/<User.objectId>/CalendarGroups/<CalendarGroup.Id>/Calendars/<Calendar.Id>
-	/<version>/myOrganization/users/<User.objectId>/Calendars/<Calendar.Id>```
+	/<version>/myOrganization/users/<User.objectId>/Calendars/<Calendar.Id>
+```
 
 
 
@@ -77,29 +70,32 @@ To get an existing `Calendar` entity resource, submit an `HTTP GET` request of t
 | `Calendar.Read` | `User` |  | 
 ####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/Calendars/<Calendar.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/Calendars/<Calendar.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Calendar',
-		'@odata.id': '/<Calendar.Id>',
-		'ChangeKey' : '<Edm.String>',
-		 ...,
-		'Name' : '<Edm.String>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Calendar',
+	'@odata.id': '/<Calendar.Id>',
+	'ChangeKey' : '<Edm.String>',
+	 ...,
+	'Name' : '<Edm.String>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a Calendar entity resource representation. 
 
@@ -114,35 +110,38 @@ To create new `Calendar` entity resource, submit an `HTTP POST` request against 
 | `Calendar.ReadWrite` | `User` |  | 
 ####Request
 
-```no-highlight
-	POST /<version>/myOrganization/users/<User.objectId>/Calendars/<Calendar.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		<Calendar.property_1> : <value_1>,
-		...,
-		<Calendar.property_n> : <value_n>
-	}
-	```
+POST /<version>/myOrganization/users/<User.objectId>/Calendars/<Calendar.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<Calendar.property_1> : <value_1>,
+	...,
+	<Calendar.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Calendar',
-		'@odata.id': '/<Calendar.Id>',
-		'ChangeKey' : '<Edm.String>',
-		 ...,
-		'Name' : '<Edm.String>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Calendar',
+	'@odata.id': '/<Calendar.Id>',
+	'ChangeKey' : '<Edm.String>',
+	 ...,
+	'Name' : '<Edm.String>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added a Calendar entity resource representation. 
 
@@ -157,27 +156,30 @@ To update an existing `Calendar` entity resource, submit an `HTTP PUT` request, 
 | `Calendar.ReadWrite` | `User` |  | 
 ####Request
 
-```no-highlight
-	PUT /<version>/myOrganization/users/<User.objectId>/Calendars/<Calendar.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<Calendar.property_1> : <value_1>,
-		...,
-		<Calendar.property_n> : <value_n>
-	}
-	```
+PUT /<version>/myOrganization/users/<User.objectId>/Calendars/<Calendar.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<Calendar.property_1> : <value_1>,
+	...,
+	<Calendar.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
@@ -192,27 +194,30 @@ To update selected properties of an existing `Calendar` entity, submit an `HTTP 
 | `Calendar.ReadWrite` | `User` |  | 
 ####Request
 
-```no-highlight
-	PATCH /<version>/myOrganization/users/<User.objectId>/Calendars/<Calendar.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<Calendar.property_1> : <value_1>,
-		...,
-		<Calendar.property_n> : <value_n>
-	}
-	```
+PATCH /<version>/myOrganization/users/<User.objectId>/Calendars/<Calendar.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<Calendar.property_1> : <value_1>,
+	...,
+	<Calendar.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -227,21 +232,24 @@ To delete an existing `Calendar` entity resource, submit an `HTTP DELETE` reques
 | `Calendar.ReadWrite` | `User` |  | 
 ####Request
 
-```no-highlight
-	DELETE /<version>/myOrganization/users/<User.objectId>/Calendars/<Calendar.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
+```
 	
-	```
+DELETE /<version>/myOrganization/users/<User.objectId>/Calendars/<Calendar.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -258,35 +266,38 @@ To get the `Calendar/CalendarView` collection, submit an `HTTP GET` request of t
 | `Calendar.Read` | `User` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/Calendars/<Calendar.Id>/CalendarView HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/Calendars/<Calendar.Id>/CalendarView HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.Event',
-				'@odata.id': '/<Event.Id>',
-				'Attendees' : '<Collection(Microsoft.Graph.Attendee)>',
-				 ...,
-				'WebLink' : '<Edm.String>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.Event',
+			'@odata.id': '/<Event.Id>',
+			'Attendees' : '<Collection(Microsoft.Graph.Attendee)>',
+			 ...,
+			'WebLink' : '<Edm.String>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `Event` resource representations. 
 
@@ -303,35 +314,38 @@ To get the `Calendar/Events` collection, submit an `HTTP GET` request of the fol
 | `Calendar.Read` | `User` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/Calendars/<Calendar.Id>/Events HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/Calendars/<Calendar.Id>/Events HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.Event',
-				'@odata.id': '/<Event.Id>',
-				'Attendees' : '<Collection(Microsoft.Graph.Attendee)>',
-				 ...,
-				'WebLink' : '<Edm.String>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.Event',
+			'@odata.id': '/<Event.Id>',
+			'Attendees' : '<Collection(Microsoft.Graph.Attendee)>',
+			 ...,
+			'WebLink' : '<Edm.String>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `Event` resource representations. 
 

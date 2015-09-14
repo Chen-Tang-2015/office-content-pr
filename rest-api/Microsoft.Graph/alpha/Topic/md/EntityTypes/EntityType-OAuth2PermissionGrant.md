@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph OAuth2PermissionGrant entity resource
-Title: Microsoft.Graph alpha  entity, EntityType resource
-Description: blah, blah...
-ms.ContentId: 844aa953-ce01-5330-8224-36aa496ab923
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #OAuth2PermissionGrant resource
 
  
 
 
 
-<a name="msg-entity-type-OAuth2PermissionGrant"> </a>
 ##Overview
 
 |  |  | 
@@ -28,12 +20,13 @@ ms.date: Sep 14, 2015
 
 The `OAuth2PermissionGrant` resource can be accessed via the following paths. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<ServicePrincipal.objectId>/oauth2PermissionGrants/<OAuth2PermissionGrant.objectId>
 	/<version>/myOrganization/directoryObjects/<User.objectId>/oauth2PermissionGrants/<OAuth2PermissionGrant.objectId>
 	/<version>/myOrganization/oauth2PermissionGrants/<OAuth2PermissionGrant.objectId>
 	/<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId>/oauth2PermissionGrants/<OAuth2PermissionGrant.objectId>
-	/<version>/myOrganization/users/<User.objectId>/oauth2PermissionGrants/<OAuth2PermissionGrant.objectId>```
+	/<version>/myOrganization/users/<User.objectId>/oauth2PermissionGrants/<OAuth2PermissionGrant.objectId>
+```
 
 
 
@@ -70,29 +63,32 @@ To get an existing `OAuth2PermissionGrant` entity resource, submit an `HTTP GET`
 | `Directory.Read.All` | `Admin` |  | 
 ####Request
 
-```no-highlight
-	GET /<version>/myOrganization/oauth2PermissionGrants/<OAuth2PermissionGrant.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/oauth2PermissionGrants/<OAuth2PermissionGrant.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.OAuth2PermissionGrant',
-		'@odata.id': '/<OAuth2PermissionGrant.objectId>',
-		'clientId' : '<Edm.String>',
-		 ...,
-		'startTime' : '<Edm.DateTimeOffset>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.OAuth2PermissionGrant',
+	'@odata.id': '/<OAuth2PermissionGrant.objectId>',
+	'clientId' : '<Edm.String>',
+	 ...,
+	'startTime' : '<Edm.DateTimeOffset>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the specified an OAuth2PermissionGrant entity resource representation. 
 
@@ -108,35 +104,38 @@ To create new `OAuth2PermissionGrant` entity resource, submit an `HTTP POST` req
 | `Directory.AccessAsUser.All` | `Admin` | Access as user means ... | 
 ####Request
 
-```no-highlight
-	POST /<version>/myOrganization/oauth2PermissionGrants/<OAuth2PermissionGrant.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		<OAuth2PermissionGrant.property_1> : <value_1>,
-		...,
-		<OAuth2PermissionGrant.property_n> : <value_n>
-	}
-	```
+POST /<version>/myOrganization/oauth2PermissionGrants/<OAuth2PermissionGrant.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<OAuth2PermissionGrant.property_1> : <value_1>,
+	...,
+	<OAuth2PermissionGrant.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.OAuth2PermissionGrant',
-		'@odata.id': '/<OAuth2PermissionGrant.objectId>',
-		'clientId' : '<Edm.String>',
-		 ...,
-		'startTime' : '<Edm.DateTimeOffset>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.OAuth2PermissionGrant',
+	'@odata.id': '/<OAuth2PermissionGrant.objectId>',
+	'clientId' : '<Edm.String>',
+	 ...,
+	'startTime' : '<Edm.DateTimeOffset>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added an OAuth2PermissionGrant entity resource representation. 
 
@@ -152,27 +151,30 @@ To update an existing `OAuth2PermissionGrant` entity resource, submit an `HTTP P
 | `Directory.AccessAsUser.All` | `Admin` | Access as user means ... | 
 ####Request
 
-```no-highlight
-	PUT /<version>/myOrganization/oauth2PermissionGrants/<OAuth2PermissionGrant.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<OAuth2PermissionGrant.property_1> : <value_1>,
-		...,
-		<OAuth2PermissionGrant.property_n> : <value_n>
-	}
-	```
+PUT /<version>/myOrganization/oauth2PermissionGrants/<OAuth2PermissionGrant.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<OAuth2PermissionGrant.property_1> : <value_1>,
+	...,
+	<OAuth2PermissionGrant.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
@@ -188,27 +190,30 @@ To update selected properties of an existing `OAuth2PermissionGrant` entity, sub
 | `Directory.AccessAsUser.All` | `Admin` | Access as user means ... | 
 ####Request
 
-```no-highlight
-	PATCH /<version>/myOrganization/oauth2PermissionGrants/<OAuth2PermissionGrant.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<OAuth2PermissionGrant.property_1> : <value_1>,
-		...,
-		<OAuth2PermissionGrant.property_n> : <value_n>
-	}
-	```
+PATCH /<version>/myOrganization/oauth2PermissionGrants/<OAuth2PermissionGrant.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<OAuth2PermissionGrant.property_1> : <value_1>,
+	...,
+	<OAuth2PermissionGrant.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -224,21 +229,24 @@ To delete an existing `OAuth2PermissionGrant` entity resource, submit an `HTTP D
 | `Directory.AccessAsUser.All` | `Admin` | Access as user means ... | 
 ####Request
 
-```no-highlight
-	DELETE /<version>/myOrganization/oauth2PermissionGrants/<OAuth2PermissionGrant.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
+```
 	
-	```
+DELETE /<version>/myOrganization/oauth2PermissionGrants/<OAuth2PermissionGrant.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 

@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph GroupAccessType EnumType
-Title: Microsoft.Graph alpha  enumeration, EnumType
-Description: blah, blah...
-ms.ContentId: 66705110-1a6d-3195-dee6-a5117708cac0
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #GroupAccessType enumeration
 
  
 
 
 
-<a name="msg-enum-type-GroupAccessType"> </a>
 ##Overview
 
 |  |  | 
@@ -37,7 +29,7 @@ The `GroupAccessType` enumeration has the following members.
 
 The `GroupAccessType` enumeration is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/applications/<Application.objectId>/owners/<DirectoryObject.objectId>/AccessType
 	/<version>/myOrganization/contacts/<Contact.objectId>/directReports/<DirectoryObject.objectId>/AccessType
 	/<version>/myOrganization/contacts/<Contact.objectId>/memberOf/<DirectoryObject.objectId>/AccessType
@@ -92,7 +84,8 @@ The `GroupAccessType` enumeration is referenced by the following resources.
 	/<version>/myOrganization/users/<User.objectId>/memberOf/<DirectoryObject.objectId>/AccessType
 	/<version>/myOrganization/users/<User.objectId>/ownedDevices/<DirectoryObject.objectId>/AccessType
 	/<version>/myOrganization/users/<User.objectId>/ownedObjects/<DirectoryObject.objectId>/AccessType
-	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/AccessType```
+	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/AccessType
+```
 
 
 

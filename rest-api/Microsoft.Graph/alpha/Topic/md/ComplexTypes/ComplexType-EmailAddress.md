@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph EmailAddress extended resource
-Title: Microsoft.Graph alpha  extended, ComplexType resource
-Description: blah, blah...
-ms.ContentId: 000abf98-fc07-8c9b-047c-58d59422f31e
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #EmailAddress extended resource
 
  
 
 
 
-<a name="msg-complex-type-EmailAddress"> </a>
 ##Overview
 
 |  |  | 
@@ -35,7 +27,7 @@ The `EmailAddress` extended resource exposes the following properties
 
 The `EmailAddress` extended resource is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Attendees/EmailAddress
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Instances/<Event.Id>/Attendees/EmailAddress
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Instances/<Event.Id>/Organizer/EmailAddress
@@ -131,7 +123,8 @@ The `EmailAddress` extended resource is referenced by the following resources.
 	/<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/From/EmailAddress
 	/<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/ReplyTo/EmailAddress
 	/<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/Sender/EmailAddress
-	/<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/ToRecipients/EmailAddress```
+	/<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/ToRecipients/EmailAddress
+```
 
 
 

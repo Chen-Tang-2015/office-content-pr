@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph identity extended resource
-Title: Microsoft.Graph alpha  extended, ComplexType resource
-Description: blah, blah...
-ms.ContentId: f25e9ea1-7dfe-edd5-22d8-f0fdd092b062
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #identity extended resource
 
  
 
 
 
-<a name="msg-complex-type-identity"> </a>
 ##Overview
 
 |  |  | 
@@ -35,7 +27,7 @@ The `identity` extended resource exposes the following properties
 
 The `identity` extended resource is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/files/<item.id>/createdBy
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/files/<item.id>/createdBy/application
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/files/<item.id>/createdBy/user
@@ -92,7 +84,8 @@ The `identity` extended resource is referenced by the following resources.
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/files/<item.id>/createdBy/user
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/files/<item.id>/lastModifiedBy
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/files/<item.id>/lastModifiedBy/application
-	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/files/<item.id>/lastModifiedBy/user```
+	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/files/<item.id>/lastModifiedBy/user
+```
 
 
 

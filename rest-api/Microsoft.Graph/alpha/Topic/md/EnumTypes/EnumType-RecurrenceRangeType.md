@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph RecurrenceRangeType EnumType
-Title: Microsoft.Graph alpha  enumeration, EnumType
-Description: blah, blah...
-ms.ContentId: 33751c58-fc35-799e-6c60-09043cd04ff6
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #RecurrenceRangeType enumeration
 
  
 
 
 
-<a name="msg-enum-type-RecurrenceRangeType"> </a>
 ##Overview
 
 |  |  | 
@@ -36,7 +28,7 @@ The `RecurrenceRangeType` enumeration has the following members.
 
 The `RecurrenceRangeType` enumeration is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Instances/<Event.Id>/Recurrence/Range/Type
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Recurrence/Range/Type
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/Events/<Event.Id>/Recurrence/Range/Type
@@ -58,7 +50,8 @@ The `RecurrenceRangeType` enumeration is referenced by the following resources.
 	/<version>/myOrganization/users/<User.objectId>/CalendarView/<Event.Id>/Recurrence/Range/Type
 	/<version>/myOrganization/users/<User.objectId>/Events/<Event.Id>/Recurrence/Range/Type
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/CalendarView/<Event.Id>/Recurrence/Range/Type
-	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Events/<Event.Id>/Recurrence/Range/Type```
+	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Events/<Event.Id>/Recurrence/Range/Type
+```
 
 
 

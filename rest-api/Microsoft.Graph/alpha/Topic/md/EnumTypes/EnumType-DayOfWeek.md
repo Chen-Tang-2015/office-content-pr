@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph DayOfWeek EnumType
-Title: Microsoft.Graph alpha  enumeration, EnumType
-Description: blah, blah...
-ms.ContentId: acc9415a-c373-1cb8-fd34-d050fdab7594
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #DayOfWeek enumeration
 
  
 
 
 
-<a name="msg-enum-type-DayOfWeek"> </a>
 ##Overview
 
 |  |  | 
@@ -40,7 +32,7 @@ The `DayOfWeek` enumeration has the following members.
 
 The `DayOfWeek` enumeration is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Instances/<Event.Id>/Recurrence/Pattern/FirstDayOfWeek
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Recurrence/Pattern/FirstDayOfWeek
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/Events/<Event.Id>/Recurrence/Pattern/FirstDayOfWeek
@@ -62,7 +54,8 @@ The `DayOfWeek` enumeration is referenced by the following resources.
 	/<version>/myOrganization/users/<User.objectId>/CalendarView/<Event.Id>/Recurrence/Pattern/FirstDayOfWeek
 	/<version>/myOrganization/users/<User.objectId>/Events/<Event.Id>/Recurrence/Pattern/FirstDayOfWeek
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/CalendarView/<Event.Id>/Recurrence/Pattern/FirstDayOfWeek
-	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Events/<Event.Id>/Recurrence/Pattern/FirstDayOfWeek```
+	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Events/<Event.Id>/Recurrence/Pattern/FirstDayOfWeek
+```
 
 
 

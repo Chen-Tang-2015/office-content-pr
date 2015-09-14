@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph Conversation entity resource
-Title: Microsoft.Graph alpha  entity, EntityType resource
-Description: blah, blah...
-ms.ContentId: 5e6abe99-11ca-6f0b-e9a0-18983f376222
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #Conversation resource
 
  
 
 
 
-<a name="msg-entity-type-Conversation"> </a>
 ##Overview
 
 |  |  | 
@@ -28,11 +20,12 @@ ms.date: Sep 14, 2015
 
 The `Conversation` resource can be accessed via the following paths. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/Conversations/<Conversation.Id>
 	/<version>/myOrganization/directoryObjects/<User.objectId>/JoinedGroups/<Group.objectId>/Conversations/<Conversation.Id>
 	/<version>/myOrganization/groups/<Group.objectId>/Conversations/<Conversation.Id>
-	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Conversations/<Conversation.Id>```
+	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Conversations/<Conversation.Id>
+```
 
 
 
@@ -78,29 +71,32 @@ To get an existing `Conversation` entity resource, submit an `HTTP GET` request 
 | `Mail.Read` | `User` |  | 
 ####Request
 
-```no-highlight
-	GET /<version>/myOrganization/groups/<Group.objectId>/Conversations/<Conversation.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/groups/<Group.objectId>/Conversations/<Conversation.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Conversation',
-		'@odata.id': '/<Conversation.Id>',
-		'HasAttachments' : '<Edm.Boolean>',
-		 ...,
-		'UniqueSenders' : '<Collection(Edm.String)>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Conversation',
+	'@odata.id': '/<Conversation.Id>',
+	'HasAttachments' : '<Edm.Boolean>',
+	 ...,
+	'UniqueSenders' : '<Collection(Edm.String)>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a Conversation entity resource representation. 
 
@@ -115,35 +111,38 @@ To create new `Conversation` entity resource, submit an `HTTP POST` request agai
 | `Mail.ReadWrite` | `User` |  | 
 ####Request
 
-```no-highlight
-	POST /<version>/myOrganization/groups/<Group.objectId>/Conversations/<Conversation.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		<Conversation.property_1> : <value_1>,
-		...,
-		<Conversation.property_n> : <value_n>
-	}
-	```
+POST /<version>/myOrganization/groups/<Group.objectId>/Conversations/<Conversation.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<Conversation.property_1> : <value_1>,
+	...,
+	<Conversation.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Conversation',
-		'@odata.id': '/<Conversation.Id>',
-		'HasAttachments' : '<Edm.Boolean>',
-		 ...,
-		'UniqueSenders' : '<Collection(Edm.String)>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Conversation',
+	'@odata.id': '/<Conversation.Id>',
+	'HasAttachments' : '<Edm.Boolean>',
+	 ...,
+	'UniqueSenders' : '<Collection(Edm.String)>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added a Conversation entity resource representation. 
 
@@ -158,27 +157,30 @@ To update an existing `Conversation` entity resource, submit an `HTTP PUT` reque
 | `Mail.ReadWrite` | `User` |  | 
 ####Request
 
-```no-highlight
-	PUT /<version>/myOrganization/groups/<Group.objectId>/Conversations/<Conversation.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<Conversation.property_1> : <value_1>,
-		...,
-		<Conversation.property_n> : <value_n>
-	}
-	```
+PUT /<version>/myOrganization/groups/<Group.objectId>/Conversations/<Conversation.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<Conversation.property_1> : <value_1>,
+	...,
+	<Conversation.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
@@ -193,27 +195,30 @@ To update selected properties of an existing `Conversation` entity, submit an `H
 | `Mail.ReadWrite` | `User` |  | 
 ####Request
 
-```no-highlight
-	PATCH /<version>/myOrganization/groups/<Group.objectId>/Conversations/<Conversation.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<Conversation.property_1> : <value_1>,
-		...,
-		<Conversation.property_n> : <value_n>
-	}
-	```
+PATCH /<version>/myOrganization/groups/<Group.objectId>/Conversations/<Conversation.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<Conversation.property_1> : <value_1>,
+	...,
+	<Conversation.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -228,21 +233,24 @@ To delete an existing `Conversation` entity resource, submit an `HTTP DELETE` re
 | `Mail.ReadWrite` | `User` |  | 
 ####Request
 
-```no-highlight
-	DELETE /<version>/myOrganization/groups/<Group.objectId>/Conversations/<Conversation.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
+```
 	
-	```
+DELETE /<version>/myOrganization/groups/<Group.objectId>/Conversations/<Conversation.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -259,35 +267,38 @@ To get the `Conversation/Threads` collection, submit an `HTTP GET` request of th
 | `Mail.Read` | `User` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/groups/<Group.objectId>/Conversations/<Conversation.Id>/Threads HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/groups/<Group.objectId>/Conversations/<Conversation.Id>/Threads HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.ConversationThread',
-				'@odata.id': '/<ConversationThread.Id>',
-				'CcRecipients' : '<Collection(Microsoft.Graph.Recipient)>',
-				 ...,
-				'ToRecipients' : '<Collection(Microsoft.Graph.Recipient)>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.ConversationThread',
+			'@odata.id': '/<ConversationThread.Id>',
+			'CcRecipients' : '<Collection(Microsoft.Graph.Recipient)>',
+			 ...,
+			'ToRecipients' : '<Collection(Microsoft.Graph.Recipient)>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `ConversationThread` resource representations. 
 

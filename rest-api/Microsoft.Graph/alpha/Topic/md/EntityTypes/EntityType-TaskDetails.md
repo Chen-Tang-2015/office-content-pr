@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph TaskDetails entity resource
-Title: Microsoft.Graph alpha  entity, EntityType resource
-Description: blah, blah...
-ms.ContentId: fc07f65d-7736-2b56-0a59-111878babfcf
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #TaskDetails resource
 
  
 
 
 
-<a name="msg-entity-type-TaskDetails"> </a>
 ##Overview
 
 |  |  | 
@@ -54,29 +46,32 @@ To get an existing `TaskDetails` entity resource, submit an `HTTP GET` request o
 | `Task.Read.All` | `User` |  | 
 ####Request
 
-```no-highlight
-	GET  HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.TaskDetails',
-		'@odata.id': '/<TaskDetails.id>',
-		'completedBy' : '<Edm.String>',
-		 ...,
-		'version' : '<Edm.String>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.TaskDetails',
+	'@odata.id': '/<TaskDetails.id>',
+	'completedBy' : '<Edm.String>',
+	 ...,
+	'version' : '<Edm.String>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a TaskDetails entity resource representation. 
 
@@ -106,27 +101,30 @@ To update an existing `TaskDetails` entity resource, submit an `HTTP PUT` reques
 | `Task.ReadWrite.All` | `User` |  | 
 ####Request
 
-```no-highlight
-	PUT  HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<TaskDetails.property_1> : <value_1>,
-		...,
-		<TaskDetails.property_n> : <value_n>
-	}
-	```
+PUT  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<TaskDetails.property_1> : <value_1>,
+	...,
+	<TaskDetails.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
@@ -141,27 +139,30 @@ To update selected properties of an existing `TaskDetails` entity, submit an `HT
 | `Task.ReadWrite.All` | `User` |  | 
 ####Request
 
-```no-highlight
-	PATCH  HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<TaskDetails.property_1> : <value_1>,
-		...,
-		<TaskDetails.property_n> : <value_n>
-	}
-	```
+PATCH  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<TaskDetails.property_1> : <value_1>,
+	...,
+	<TaskDetails.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -176,21 +177,24 @@ To delete an existing `TaskDetails` entity resource, submit an `HTTP DELETE` req
 | `Task.ReadWrite.All` | `User` |  | 
 ####Request
 
-```no-highlight
-	DELETE  HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
+```
 	
-	```
+DELETE  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 

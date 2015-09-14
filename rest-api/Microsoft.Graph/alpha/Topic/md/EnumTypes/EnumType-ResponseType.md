@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph ResponseType EnumType
-Title: Microsoft.Graph alpha  enumeration, EnumType
-Description: blah, blah...
-ms.ContentId: 4aafe61a-3964-befd-233e-bf3e8073623a
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #ResponseType enumeration
 
  
 
 
 
-<a name="msg-enum-type-ResponseType"> </a>
 ##Overview
 
 |  |  | 
@@ -39,7 +31,7 @@ The `ResponseType` enumeration has the following members.
 
 The `ResponseType` enumeration is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Attendees/Status/Response
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Instances/<Event.Id>/Attendees/Status/Response
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Instances/<Event.Id>/ResponseStatus/Response
@@ -83,7 +75,8 @@ The `ResponseType` enumeration is referenced by the following resources.
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/CalendarView/<Event.Id>/Attendees/Status/Response
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/CalendarView/<Event.Id>/ResponseStatus/Response
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Events/<Event.Id>/Attendees/Status/Response
-	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Events/<Event.Id>/ResponseStatus/Response```
+	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Events/<Event.Id>/ResponseStatus/Response
+```
 
 
 

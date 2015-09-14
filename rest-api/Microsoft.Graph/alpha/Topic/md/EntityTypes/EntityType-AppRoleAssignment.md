@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph AppRoleAssignment entity resource
-Title: Microsoft.Graph alpha  entity, EntityType resource
-Description: blah, blah...
-ms.ContentId: 3093030e-b476-af41-8581-9801467d5a8b
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #AppRoleAssignment resource
 
  
 
 
 
-<a name="msg-entity-type-AppRoleAssignment"> </a>
 ##Overview
 
 |  |  | 
@@ -28,7 +20,7 @@ ms.date: Sep 14, 2015
 
 The `AppRoleAssignment` resource can be accessed via the following paths. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/appRoleAssignments/<AppRoleAssignment.objectId>
 	/<version>/myOrganization/directoryObjects/<ServicePrincipal.objectId>/appRoleAssignments/<AppRoleAssignment.objectId>
 	/<version>/myOrganization/directoryObjects/<User.objectId>/appRoleAssignments/<AppRoleAssignment.objectId>
@@ -36,7 +28,8 @@ The `AppRoleAssignment` resource can be accessed via the following paths.
 	/<version>/myOrganization/groups/<Group.objectId>/appRoleAssignments/<AppRoleAssignment.objectId>
 	/<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId>/appRoleAssignments/<AppRoleAssignment.objectId>
 	/<version>/myOrganization/users/<User.objectId>/appRoleAssignments/<AppRoleAssignment.objectId>
-	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/appRoleAssignments/<AppRoleAssignment.objectId>```
+	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/appRoleAssignments/<AppRoleAssignment.objectId>
+```
 
 
 
@@ -88,29 +81,32 @@ To get an existing `AppRoleAssignment` entity resource, submit an `HTTP GET` req
 | `Directory.Read.All` | `Admin` |  | 
 ####Request
 
-```no-highlight
-	GET /<version>/myOrganization/groups/<Group.objectId>/appRoleAssignments/<AppRoleAssignment.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/groups/<Group.objectId>/appRoleAssignments/<AppRoleAssignment.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.AppRoleAssignment',
-		'@odata.id': '/<AppRoleAssignment.objectId>',
-		'creationTimestamp' : '<Edm.DateTimeOffset>',
-		 ...,
-		'resourceId' : '<Edm.Guid>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.AppRoleAssignment',
+	'@odata.id': '/<AppRoleAssignment.objectId>',
+	'creationTimestamp' : '<Edm.DateTimeOffset>',
+	 ...,
+	'resourceId' : '<Edm.Guid>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the specified an AppRoleAssignment entity resource representation. 
 
@@ -126,35 +122,38 @@ To create new `AppRoleAssignment` entity resource, submit an `HTTP POST` request
 | `Directory.AccessAsUser.All` | `Admin` | Access as user means ... | 
 ####Request
 
-```no-highlight
-	POST /<version>/myOrganization/groups/<Group.objectId>/appRoleAssignments/<AppRoleAssignment.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		<AppRoleAssignment.property_1> : <value_1>,
-		...,
-		<AppRoleAssignment.property_n> : <value_n>
-	}
-	```
+POST /<version>/myOrganization/groups/<Group.objectId>/appRoleAssignments/<AppRoleAssignment.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<AppRoleAssignment.property_1> : <value_1>,
+	...,
+	<AppRoleAssignment.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.AppRoleAssignment',
-		'@odata.id': '/<AppRoleAssignment.objectId>',
-		'creationTimestamp' : '<Edm.DateTimeOffset>',
-		 ...,
-		'resourceId' : '<Edm.Guid>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.AppRoleAssignment',
+	'@odata.id': '/<AppRoleAssignment.objectId>',
+	'creationTimestamp' : '<Edm.DateTimeOffset>',
+	 ...,
+	'resourceId' : '<Edm.Guid>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added an AppRoleAssignment entity resource representation. 
 
@@ -170,27 +169,30 @@ To update an existing `AppRoleAssignment` entity resource, submit an `HTTP PUT` 
 | `Directory.AccessAsUser.All` | `Admin` | Access as user means ... | 
 ####Request
 
-```no-highlight
-	PUT /<version>/myOrganization/groups/<Group.objectId>/appRoleAssignments/<AppRoleAssignment.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<AppRoleAssignment.property_1> : <value_1>,
-		...,
-		<AppRoleAssignment.property_n> : <value_n>
-	}
-	```
+PUT /<version>/myOrganization/groups/<Group.objectId>/appRoleAssignments/<AppRoleAssignment.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<AppRoleAssignment.property_1> : <value_1>,
+	...,
+	<AppRoleAssignment.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
@@ -206,27 +208,30 @@ To update selected properties of an existing `AppRoleAssignment` entity, submit 
 | `Directory.AccessAsUser.All` | `Admin` | Access as user means ... | 
 ####Request
 
-```no-highlight
-	PATCH /<version>/myOrganization/groups/<Group.objectId>/appRoleAssignments/<AppRoleAssignment.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<AppRoleAssignment.property_1> : <value_1>,
-		...,
-		<AppRoleAssignment.property_n> : <value_n>
-	}
-	```
+PATCH /<version>/myOrganization/groups/<Group.objectId>/appRoleAssignments/<AppRoleAssignment.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<AppRoleAssignment.property_1> : <value_1>,
+	...,
+	<AppRoleAssignment.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -242,21 +247,24 @@ To delete an existing `AppRoleAssignment` entity resource, submit an `HTTP DELET
 | `Directory.AccessAsUser.All` | `Admin` | Access as user means ... | 
 ####Request
 
-```no-highlight
-	DELETE /<version>/myOrganization/groups/<Group.objectId>/appRoleAssignments/<AppRoleAssignment.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
+```
 	
-	```
+DELETE /<version>/myOrganization/groups/<Group.objectId>/appRoleAssignments/<AppRoleAssignment.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -274,24 +282,27 @@ To call the `DirectoryObject/checkMemberGroups` action,submit a `POST` request o
 | `Directory.AccessAsUser.All` | `Admin` | Access as user means ... | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/checkMemberGroups HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		groupIds : <Edm.String>
-	}
-	```
+POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/checkMemberGroups HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	groupIds : <Edm.String>
+}
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	'<Edm.String>'```
+
+'<Edm.String>'
+```
 
 A successful call to the DirectoryObject/checkMemberGroups action returns an instance of the DirectoryObject/checkMemberGroups type. 
 
@@ -307,24 +318,27 @@ To call the `DirectoryObject/getMemberGroups` action,submit a `POST` request of 
 | `Directory.AccessAsUser.All` | `Admin` | Access as user means ... | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberGroups HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		securityEnabledOnly : <Edm.Boolean>
-	}
-	```
+POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberGroups HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	securityEnabledOnly : <Edm.Boolean>
+}
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	'<Edm.String>'```
+
+'<Edm.String>'
+```
 
 A successful call to the DirectoryObject/getMemberGroups action returns an instance of the DirectoryObject/getMemberGroups type. 
 
@@ -340,24 +354,27 @@ To call the `DirectoryObject/getMemberObjects` action,submit a `POST` request of
 | `Directory.AccessAsUser.All` | `Admin` | Access as user means ... | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberObjects HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		securityEnabledOnly : <Edm.Boolean>
-	}
-	```
+POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberObjects HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	securityEnabledOnly : <Edm.Boolean>
+}
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	'<Edm.String>'```
+
+'<Edm.String>'
+```
 
 A successful call to the DirectoryObject/getMemberObjects action returns an instance of the DirectoryObject/getMemberObjects type. 
 

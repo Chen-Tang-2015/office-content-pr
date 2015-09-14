@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph KeyCredential extended resource
-Title: Microsoft.Graph alpha  extended, ComplexType resource
-Description: blah, blah...
-ms.ContentId: 7aefbd93-e24e-fba9-9ff2-09fde88839af
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #KeyCredential extended resource
 
  
 
 
 
-<a name="msg-complex-type-KeyCredential"> </a>
 ##Overview
 
 |  |  | 
@@ -40,7 +32,7 @@ The `KeyCredential` extended resource exposes the following properties
 
 The `KeyCredential` extended resource is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/applications/<Application.objectId>/keyCredentials
 	/<version>/myOrganization/applications/<Application.objectId>/owners/<DirectoryObject.objectId>/keyCredentials
 	/<version>/myOrganization/applications/<Application.objectId>/owners/<DirectoryObject.objectId>/keyCredentials
@@ -146,7 +138,8 @@ The `KeyCredential` extended resource is referenced by the following resources.
 	/<version>/myOrganization/users/<User.objectId>/ownedObjects/<DirectoryObject.objectId>/keyCredentials
 	/<version>/myOrganization/users/<User.objectId>/ownedObjects/<DirectoryObject.objectId>/keyCredentials
 	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/keyCredentials
-	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/keyCredentials```
+	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/keyCredentials
+```
 
 
 

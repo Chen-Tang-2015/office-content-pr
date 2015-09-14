@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph EventMessage entity resource
-Title: Microsoft.Graph alpha  entity, EntityType resource
-Description: blah, blah...
-ms.ContentId: 9aed9a1c-ed26-cd9b-2f63-0007fb82ad75
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #EventMessage resource
 
  
 
 
 
-<a name="msg-entity-type-EventMessage"> </a>
 ##Overview
 
 |  |  | 
@@ -28,9 +20,10 @@ ms.date: Sep 14, 2015
 
 The `EventMessage` resource can be accessed via the following paths. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<User.objectId>/Messages/<EventMessage.Id>
-	/<version>/myOrganization/users/<User.objectId>/Messages/<EventMessage.Id>```
+	/<version>/myOrganization/users/<User.objectId>/Messages/<EventMessage.Id>
+```
 
 
 
@@ -120,27 +113,30 @@ To get an existing `EventMessage` entity resource, submit an `HTTP GET` request 
 | `Calendar.Read` | `User` |  | 
 ####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/Messages/<EventMessage.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/Messages/<EventMessage.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.EventMessage',
-		'@odata.id': '/<EventMessage.Id>',
-		'MeetingMessageType' : '<Microsoft.Graph.MeetingMessageType>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.EventMessage',
+	'@odata.id': '/<EventMessage.Id>',
+	'MeetingMessageType' : '<Microsoft.Graph.MeetingMessageType>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the specified an EventMessage entity resource representation. 
 
@@ -170,27 +166,30 @@ To update an existing `EventMessage` entity resource, submit an `HTTP PUT` reque
 | `Calendar.ReadWrite` | `User` |  | 
 ####Request
 
-```no-highlight
-	PUT /<version>/myOrganization/users/<User.objectId>/Messages/<EventMessage.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<EventMessage.property_1> : <value_1>,
-		...,
-		<EventMessage.property_n> : <value_n>
-	}
-	```
+PUT /<version>/myOrganization/users/<User.objectId>/Messages/<EventMessage.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<EventMessage.property_1> : <value_1>,
+	...,
+	<EventMessage.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
@@ -205,27 +204,30 @@ To update selected properties of an existing `EventMessage` entity, submit an `H
 | `Calendar.ReadWrite` | `User` |  | 
 ####Request
 
-```no-highlight
-	PATCH /<version>/myOrganization/users/<User.objectId>/Messages/<EventMessage.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<EventMessage.property_1> : <value_1>,
-		...,
-		<EventMessage.property_n> : <value_n>
-	}
-	```
+PATCH /<version>/myOrganization/users/<User.objectId>/Messages/<EventMessage.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<EventMessage.property_1> : <value_1>,
+	...,
+	<EventMessage.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -240,21 +242,24 @@ To delete an existing `EventMessage` entity resource, submit an `HTTP DELETE` re
 | `Calendar.ReadWrite` | `User` |  | 
 ####Request
 
-```no-highlight
-	DELETE /<version>/myOrganization/users/<User.objectId>/Messages/<EventMessage.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
+```
 	
-	```
+DELETE /<version>/myOrganization/users/<User.objectId>/Messages/<EventMessage.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -271,35 +276,38 @@ To get the `Message/Attachments` collection, submit an `HTTP GET` request of the
 | `Mail.Read` | `User` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/Attachments HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/Attachments HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.Attachment',
-				'@odata.id': '/<Attachment.Id>',
-				'ContentType' : '<Edm.String>',
-				 ...,
-				'Size' : '<Edm.Int32>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.Attachment',
+			'@odata.id': '/<Attachment.Id>',
+			'ContentType' : '<Edm.String>',
+			 ...,
+			'Size' : '<Edm.Int32>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `Attachment` resource representations. 
 
@@ -317,29 +325,32 @@ To get an EventMessage/Event `EventMessage/Event` resource, submit an `HTTP GET`
 | `Calendar.Read` | `User` |  | 
 #####Request
 
-```no-highlight
-	GET  HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Event',
-		'@odata.id': '/<Event.Id>',
-		'Attendees' : '<Collection(Microsoft.Graph.Attendee)>',
-		 ...,
-		'WebLink' : '<Edm.String>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Event',
+	'@odata.id': '/<Event.Id>',
+	'Attendees' : '<Collection(Microsoft.Graph.Attendee)>',
+	 ...,
+	'WebLink' : '<Edm.String>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing an `Event` resource representation. 
 
@@ -356,33 +367,36 @@ To call the `Message/Copy` action,submit a `POST` request of the following REST 
 | `Mail.ReadWrite` | `User` |  | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/Copy HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		DestinationId : <Edm.String>
-	}
-	```
+POST /<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/Copy HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	DestinationId : <Edm.String>
+}
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Message',
-		'@odata.id': '/<Message.Id>',
-		'BccRecipients' : '<Collection(Microsoft.Graph.Recipient)>',
-		 ...,
-		'WebLink' : '<Edm.String>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Message',
+	'@odata.id': '/<Message.Id>',
+	'BccRecipients' : '<Collection(Microsoft.Graph.Recipient)>',
+	 ...,
+	'WebLink' : '<Edm.String>'
+}
+
+```
 
 A successful call to the Message/Copy action returns an instance of the Message/Copy type. 
 
@@ -397,30 +411,33 @@ To call the `Message/CreateForward` action,submit a `POST` request of the follow
 | `Mail.ReadWrite` | `User` |  | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/CreateForward HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : 0
+```
 	
-	```
+POST /<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/CreateForward HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : 0
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Message',
-		'@odata.id': '/<Message.Id>',
-		'BccRecipients' : '<Collection(Microsoft.Graph.Recipient)>',
-		 ...,
-		'WebLink' : '<Edm.String>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Message',
+	'@odata.id': '/<Message.Id>',
+	'BccRecipients' : '<Collection(Microsoft.Graph.Recipient)>',
+	 ...,
+	'WebLink' : '<Edm.String>'
+}
+
+```
 
 A successful call to the Message/CreateForward action returns an instance of the Message/CreateForward type. 
 
@@ -435,30 +452,33 @@ To call the `Message/CreateReply` action,submit a `POST` request of the followin
 | `Mail.ReadWrite` | `User` |  | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/CreateReply HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : 0
+```
 	
-	```
+POST /<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/CreateReply HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : 0
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Message',
-		'@odata.id': '/<Message.Id>',
-		'BccRecipients' : '<Collection(Microsoft.Graph.Recipient)>',
-		 ...,
-		'WebLink' : '<Edm.String>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Message',
+	'@odata.id': '/<Message.Id>',
+	'BccRecipients' : '<Collection(Microsoft.Graph.Recipient)>',
+	 ...,
+	'WebLink' : '<Edm.String>'
+}
+
+```
 
 A successful call to the Message/CreateReply action returns an instance of the Message/CreateReply type. 
 
@@ -473,30 +493,33 @@ To call the `Message/CreateReplyAll` action,submit a `POST` request of the follo
 | `Mail.ReadWrite` | `User` |  | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/CreateReplyAll HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : 0
+```
 	
-	```
+POST /<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/CreateReplyAll HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : 0
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Message',
-		'@odata.id': '/<Message.Id>',
-		'BccRecipients' : '<Collection(Microsoft.Graph.Recipient)>',
-		 ...,
-		'WebLink' : '<Edm.String>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Message',
+	'@odata.id': '/<Message.Id>',
+	'BccRecipients' : '<Collection(Microsoft.Graph.Recipient)>',
+	 ...,
+	'WebLink' : '<Edm.String>'
+}
+
+```
 
 A successful call to the Message/CreateReplyAll action returns an instance of the Message/CreateReplyAll type. 
 
@@ -511,27 +534,30 @@ To call the `Message/Forward` action,submit a `POST` request of the following RE
 | `Mail.ReadWrite` | `User` |  | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/Forward HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		Comment : <Edm.String>,
-		ToRecipients : <Microsoft.Graph.Recipient>,
-		Comment : <Edm.String>,
-		ToRecipients : <Microsoft.Graph.Recipient>
-	}
-	```
+POST /<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/Forward HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	Comment : <Edm.String>,
+	ToRecipients : <Microsoft.Graph.Recipient>,
+	Comment : <Edm.String>,
+	ToRecipients : <Microsoft.Graph.Recipient>
+}
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	```
+
+
+```
 
 A successful call to the Message/Forward action returns an empty response. 
 
@@ -546,27 +572,30 @@ To call the `Post/Forward` action,submit a `POST` request of the following REST 
 | `Mail.ReadWrite` | `User` |  | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/Forward HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		Comment : <Edm.String>,
-		ToRecipients : <Microsoft.Graph.Recipient>,
-		Comment : <Edm.String>,
-		ToRecipients : <Microsoft.Graph.Recipient>
-	}
-	```
+POST /<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/Forward HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	Comment : <Edm.String>,
+	ToRecipients : <Microsoft.Graph.Recipient>,
+	Comment : <Edm.String>,
+	ToRecipients : <Microsoft.Graph.Recipient>
+}
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	```
+
+
+```
 
 A successful call to the Post/Forward action returns an empty response. 
 
@@ -581,33 +610,36 @@ To call the `Message/Move` action,submit a `POST` request of the following REST 
 | `Mail.ReadWrite` | `User` |  | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/Move HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		DestinationId : <Edm.String>
-	}
-	```
+POST /<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/Move HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	DestinationId : <Edm.String>
+}
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Message',
-		'@odata.id': '/<Message.Id>',
-		'BccRecipients' : '<Collection(Microsoft.Graph.Recipient)>',
-		 ...,
-		'WebLink' : '<Edm.String>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Message',
+	'@odata.id': '/<Message.Id>',
+	'BccRecipients' : '<Collection(Microsoft.Graph.Recipient)>',
+	 ...,
+	'WebLink' : '<Edm.String>'
+}
+
+```
 
 A successful call to the Message/Move action returns an instance of the Message/Move type. 
 
@@ -622,26 +654,29 @@ To call the `Message/Reply` action,submit a `POST` request of the following REST
 | `Mail.ReadWrite` | `User` |  | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Reply HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		Comment : <Edm.String>,
-		Post : <Microsoft.Graph.Post>,
-		Post : <Microsoft.Graph.Post>
-	}
-	```
+POST /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Reply HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	Comment : <Edm.String>,
+	Post : <Microsoft.Graph.Post>,
+	Post : <Microsoft.Graph.Post>
+}
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	```
+
+
+```
 
 A successful call to the Message/Reply action returns an empty response. 
 
@@ -656,26 +691,29 @@ To call the `ConversationThread/Reply` action,submit a `POST` request of the fol
 | `Mail.ReadWrite` | `User` |  | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Reply HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		Comment : <Edm.String>,
-		Post : <Microsoft.Graph.Post>,
-		Post : <Microsoft.Graph.Post>
-	}
-	```
+POST /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Reply HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	Comment : <Edm.String>,
+	Post : <Microsoft.Graph.Post>,
+	Post : <Microsoft.Graph.Post>
+}
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	```
+
+
+```
 
 A successful call to the ConversationThread/Reply action returns an empty response. 
 
@@ -690,26 +728,29 @@ To call the `Post/Reply` action,submit a `POST` request of the following REST ca
 | `Mail.ReadWrite` | `User` |  | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Reply HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		Comment : <Edm.String>,
-		Post : <Microsoft.Graph.Post>,
-		Post : <Microsoft.Graph.Post>
-	}
-	```
+POST /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Reply HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	Comment : <Edm.String>,
+	Post : <Microsoft.Graph.Post>,
+	Post : <Microsoft.Graph.Post>
+}
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	```
+
+
+```
 
 A successful call to the Post/Reply action returns an empty response. 
 
@@ -724,24 +765,27 @@ To call the `Message/ReplyAll` action,submit a `POST` request of the following R
 | `Mail.ReadWrite` | `User` |  | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/ReplyAll HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		Comment : <Edm.String>
-	}
-	```
+POST /<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/ReplyAll HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	Comment : <Edm.String>
+}
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	```
+
+
+```
 
 A successful call to the Message/ReplyAll action returns an empty response. 
 
@@ -756,21 +800,24 @@ To call the `Message/Send` action,submit a `POST` request of the following REST 
 | `Mail.ReadWrite` | `User` |  | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/Send HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : 0
+```
 	
-	```
+POST /<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/Send HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : 0
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	```
+
+
+```
 
 A successful call to the Message/Send action returns an empty response. 
 

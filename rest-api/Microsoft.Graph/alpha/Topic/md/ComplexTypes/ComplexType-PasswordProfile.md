@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph PasswordProfile extended resource
-Title: Microsoft.Graph alpha  extended, ComplexType resource
-Description: blah, blah...
-ms.ContentId: f2ef7699-9b07-b9c9-2b7a-dada631dcf54
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #PasswordProfile extended resource
 
  
 
 
 
-<a name="msg-complex-type-PasswordProfile"> </a>
 ##Overview
 
 |  |  | 
@@ -35,7 +27,7 @@ The `PasswordProfile` extended resource exposes the following properties
 
 The `PasswordProfile` extended resource is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/applications/<Application.objectId>/owners/<DirectoryObject.objectId>/passwordProfile
 	/<version>/myOrganization/contacts/<Contact.objectId>/directReports/<DirectoryObject.objectId>/passwordProfile
 	/<version>/myOrganization/contacts/<Contact.objectId>/memberOf/<DirectoryObject.objectId>/passwordProfile
@@ -90,7 +82,8 @@ The `PasswordProfile` extended resource is referenced by the following resources
 	/<version>/myOrganization/users/<User.objectId>/ownedObjects/<DirectoryObject.objectId>/passwordProfile
 	/<version>/myOrganization/users/<User.objectId>/passwordProfile
 	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/passwordProfile
-	/<version>/myOrganization/users/<User.objectId>/WorkingWith/<User.objectId>/passwordProfile```
+	/<version>/myOrganization/users/<User.objectId>/WorkingWith/<User.objectId>/passwordProfile
+```
 
 
 

@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph ProvisionedPlan extended resource
-Title: Microsoft.Graph alpha  extended, ComplexType resource
-Description: blah, blah...
-ms.ContentId: 79a15197-d3c9-15af-9aa3-148ea142a9b6
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #ProvisionedPlan extended resource
 
  
 
 
 
-<a name="msg-complex-type-ProvisionedPlan"> </a>
 ##Overview
 
 |  |  | 
@@ -36,7 +28,7 @@ The `ProvisionedPlan` extended resource exposes the following properties
 
 The `ProvisionedPlan` extended resource is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/applications/<Application.objectId>/owners/<DirectoryObject.objectId>/provisionedPlans
 	/<version>/myOrganization/applications/<Application.objectId>/owners/<DirectoryObject.objectId>/provisionedPlans
 	/<version>/myOrganization/contacts/<Contact.objectId>/directReports/<DirectoryObject.objectId>/provisionedPlans
@@ -144,7 +136,8 @@ The `ProvisionedPlan` extended resource is referenced by the following resources
 	/<version>/myOrganization/users/<User.objectId>/provisionedPlans
 	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/provisionedPlans
 	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/provisionedPlans
-	/<version>/myOrganization/users/<User.objectId>/WorkingWith/<User.objectId>/provisionedPlans```
+	/<version>/myOrganization/users/<User.objectId>/WorkingWith/<User.objectId>/provisionedPlans
+```
 
 
 

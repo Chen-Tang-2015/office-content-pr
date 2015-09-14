@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph folder extended resource
-Title: Microsoft.Graph alpha  extended, ComplexType resource
-Description: blah, blah...
-ms.ContentId: 9eaef85b-6273-49e6-2533-5255cca551cb
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #folder extended resource
 
  
 
 
 
-<a name="msg-complex-type-folder"> </a>
 ##Overview
 
 |  |  | 
@@ -34,7 +26,7 @@ The `folder` extended resource exposes the following properties
 
 The `folder` extended resource is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/files/<item.id>/folder
 	/<version>/myOrganization/directoryObjects/<User.objectId>/files/<item.id>/folder
 	/<version>/myOrganization/directoryObjects/<User.objectId>/JoinedGroups/<Group.objectId>/files/<item.id>/folder
@@ -43,7 +35,8 @@ The `folder` extended resource is referenced by the following resources.
 	/<version>/myOrganization/drives/<drive.id>/items/<item.id>/folder
 	/<version>/myOrganization/groups/<Group.objectId>/files/<item.id>/folder
 	/<version>/myOrganization/users/<User.objectId>/files/<item.id>/folder
-	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/files/<item.id>/folder```
+	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/files/<item.id>/folder
+```
 
 
 

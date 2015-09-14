@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph Contact entity resource
-Title: Microsoft.Graph alpha  entity, EntityType resource
-Description: blah, blah...
-ms.ContentId: 22e7e116-346d-107b-a3dd-2f2a82ed16d0
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #Contact resource
 
  
 
 
 
-<a name="msg-entity-type-Contact"> </a>
 ##Overview
 
 |  |  | 
@@ -28,9 +20,10 @@ ms.date: Sep 14, 2015
 
 The `Contact` resource can be accessed via the following paths. 
 
-```no-highlight
+```
 	/<version>/myOrganization/contacts/<Contact.objectId>
-	/<version>/myOrganization/directoryObjects/<Contact.objectId>```
+	/<version>/myOrganization/directoryObjects/<Contact.objectId>
+```
 
 
 
@@ -112,29 +105,32 @@ To get an existing `Contact` entity resource, submit an `HTTP GET` request of th
 | `User.Read.All` | `Admin` |  | 
 ####Request
 
-```no-highlight
-	GET /<version>/myOrganization/contacts/<Contact.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/contacts/<Contact.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Contact',
-		'@odata.id': '/<Contact.objectId>',
-		'city' : '<Edm.String>',
-		 ...,
-		'thumbnailPhoto' : '<Edm.Stream>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Contact',
+	'@odata.id': '/<Contact.objectId>',
+	'city' : '<Edm.String>',
+	 ...,
+	'thumbnailPhoto' : '<Edm.Stream>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a Contact entity resource representation. 
 
@@ -150,35 +146,38 @@ To create new `Contact` entity resource, submit an `HTTP POST` request against t
 | `User.ReadWrite.All` | `Admin` |  | 
 ####Request
 
-```no-highlight
-	POST /<version>/myOrganization/contacts/<Contact.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		<Contact.property_1> : <value_1>,
-		...,
-		<Contact.property_n> : <value_n>
-	}
-	```
+POST /<version>/myOrganization/contacts/<Contact.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<Contact.property_1> : <value_1>,
+	...,
+	<Contact.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Contact',
-		'@odata.id': '/<Contact.objectId>',
-		'city' : '<Edm.String>',
-		 ...,
-		'thumbnailPhoto' : '<Edm.Stream>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Contact',
+	'@odata.id': '/<Contact.objectId>',
+	'city' : '<Edm.String>',
+	 ...,
+	'thumbnailPhoto' : '<Edm.Stream>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added a Contact entity resource representation. 
 
@@ -194,27 +193,30 @@ To update an existing `Contact` entity resource, submit an `HTTP PUT` request, s
 | `User.ReadWrite.All` | `Admin` |  | 
 ####Request
 
-```no-highlight
-	PUT /<version>/myOrganization/contacts/<Contact.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<Contact.property_1> : <value_1>,
-		...,
-		<Contact.property_n> : <value_n>
-	}
-	```
+PUT /<version>/myOrganization/contacts/<Contact.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<Contact.property_1> : <value_1>,
+	...,
+	<Contact.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
@@ -230,27 +232,30 @@ To update selected properties of an existing `Contact` entity, submit an `HTTP P
 | `User.ReadWrite.All` | `Admin` |  | 
 ####Request
 
-```no-highlight
-	PATCH /<version>/myOrganization/contacts/<Contact.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<Contact.property_1> : <value_1>,
-		...,
-		<Contact.property_n> : <value_n>
-	}
-	```
+PATCH /<version>/myOrganization/contacts/<Contact.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<Contact.property_1> : <value_1>,
+	...,
+	<Contact.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -266,21 +271,24 @@ To delete an existing `Contact` entity resource, submit an `HTTP DELETE` request
 | `User.ReadWrite.All` | `Admin` |  | 
 ####Request
 
-```no-highlight
-	DELETE /<version>/myOrganization/contacts/<Contact.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
+```
 	
-	```
+DELETE /<version>/myOrganization/contacts/<Contact.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -299,35 +307,38 @@ To get the `Contact/directReports` collection, submit an `HTTP GET` request of t
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/contacts/<Contact.objectId>/directReports HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/contacts/<Contact.objectId>/directReports HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.DirectoryObject',
-				'@odata.id': '/<DirectoryObject.objectId>',
-				'deletionTimestamp' : '<Edm.DateTimeOffset>',
-				 ...,
-				'objectType' : '<Edm.String>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.DirectoryObject',
+			'@odata.id': '/<DirectoryObject.objectId>',
+			'deletionTimestamp' : '<Edm.DateTimeOffset>',
+			 ...,
+			'objectType' : '<Edm.String>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `DirectoryObject` resource representations. 
 
@@ -346,29 +357,32 @@ To get a Contact/manager `Contact/manager` resource, submit an `HTTP GET` reques
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/contacts/<Contact.objectId>/manager HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/contacts/<Contact.objectId>/manager HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.DirectoryObject',
-		'@odata.id': '/<DirectoryObject.objectId>',
-		'deletionTimestamp' : '<Edm.DateTimeOffset>',
-		 ...,
-		'objectType' : '<Edm.String>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.DirectoryObject',
+	'@odata.id': '/<DirectoryObject.objectId>',
+	'deletionTimestamp' : '<Edm.DateTimeOffset>',
+	 ...,
+	'objectType' : '<Edm.String>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a `DirectoryObject` resource representation. 
 
@@ -387,35 +401,38 @@ To get the `Contact/memberOf` collection, submit an `HTTP GET` request of the fo
 | `User.Read.All` | `Admin` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/contacts/<Contact.objectId>/memberOf HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/contacts/<Contact.objectId>/memberOf HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.DirectoryObject',
-				'@odata.id': '/<DirectoryObject.objectId>',
-				'deletionTimestamp' : '<Edm.DateTimeOffset>',
-				 ...,
-				'objectType' : '<Edm.String>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.DirectoryObject',
+			'@odata.id': '/<DirectoryObject.objectId>',
+			'deletionTimestamp' : '<Edm.DateTimeOffset>',
+			 ...,
+			'objectType' : '<Edm.String>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `DirectoryObject` resource representations. 
 
@@ -433,24 +450,27 @@ To call the `DirectoryObject/checkMemberGroups` action,submit a `POST` request o
 | `Directory.AccessAsUser.All` | `Admin` | Access as user means ... | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/checkMemberGroups HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		groupIds : <Edm.String>
-	}
-	```
+POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/checkMemberGroups HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	groupIds : <Edm.String>
+}
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	'<Edm.String>'```
+
+'<Edm.String>'
+```
 
 A successful call to the DirectoryObject/checkMemberGroups action returns an instance of the DirectoryObject/checkMemberGroups type. 
 
@@ -466,24 +486,27 @@ To call the `DirectoryObject/getMemberGroups` action,submit a `POST` request of 
 | `Directory.AccessAsUser.All` | `Admin` | Access as user means ... | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberGroups HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		securityEnabledOnly : <Edm.Boolean>
-	}
-	```
+POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberGroups HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	securityEnabledOnly : <Edm.Boolean>
+}
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	'<Edm.String>'```
+
+'<Edm.String>'
+```
 
 A successful call to the DirectoryObject/getMemberGroups action returns an instance of the DirectoryObject/getMemberGroups type. 
 
@@ -499,24 +522,27 @@ To call the `DirectoryObject/getMemberObjects` action,submit a `POST` request of
 | `Directory.AccessAsUser.All` | `Admin` | Access as user means ... | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberObjects HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		securityEnabledOnly : <Edm.Boolean>
-	}
-	```
+POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberObjects HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	securityEnabledOnly : <Edm.Boolean>
+}
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	'<Edm.String>'```
+
+'<Edm.String>'
+```
 
 A successful call to the DirectoryObject/getMemberObjects action returns an instance of the DirectoryObject/getMemberObjects type. 
 

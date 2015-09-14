@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph ItemBody extended resource
-Title: Microsoft.Graph alpha  extended, ComplexType resource
-Description: blah, blah...
-ms.ContentId: f2ad0a9d-8c83-d3cf-2727-e56b18d83f5b
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #ItemBody extended resource
 
  
 
 
 
-<a name="msg-complex-type-ItemBody"> </a>
 ##Overview
 
 |  |  | 
@@ -35,7 +27,7 @@ The `ItemBody` extended resource exposes the following properties
 
 The `ItemBody` extended resource is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Body
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Instances/<Event.Id>/Body
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/Conversations/<Conversation.Id>/Threads/<ConversationThread.Id>/Posts/<Post.Id>/Body
@@ -69,7 +61,8 @@ The `ItemBody` extended resource is referenced by the following resources.
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Events/<Event.Id>/Body
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Threads/<ConversationThread.Id>/Posts/<Post.Id>/Body
 	/<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/Body
-	/<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/UniqueBody```
+	/<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/UniqueBody
+```
 
 
 

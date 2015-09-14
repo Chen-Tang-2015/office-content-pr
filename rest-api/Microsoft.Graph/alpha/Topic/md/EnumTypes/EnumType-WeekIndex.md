@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph WeekIndex EnumType
-Title: Microsoft.Graph alpha  enumeration, EnumType
-Description: blah, blah...
-ms.ContentId: dfbe7612-e1aa-d4af-6fbc-6c5c3ae3f05e
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #WeekIndex enumeration
 
  
 
 
 
-<a name="msg-enum-type-WeekIndex"> </a>
 ##Overview
 
 |  |  | 
@@ -38,7 +30,7 @@ The `WeekIndex` enumeration has the following members.
 
 The `WeekIndex` enumeration is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Instances/<Event.Id>/Recurrence/Pattern/Index
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/CalendarView/<Event.Id>/Recurrence/Pattern/Index
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/Events/<Event.Id>/Recurrence/Pattern/Index
@@ -60,7 +52,8 @@ The `WeekIndex` enumeration is referenced by the following resources.
 	/<version>/myOrganization/users/<User.objectId>/CalendarView/<Event.Id>/Recurrence/Pattern/Index
 	/<version>/myOrganization/users/<User.objectId>/Events/<Event.Id>/Recurrence/Pattern/Index
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/CalendarView/<Event.Id>/Recurrence/Pattern/Index
-	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Events/<Event.Id>/Recurrence/Pattern/Index```
+	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Events/<Event.Id>/Recurrence/Pattern/Index
+```
 
 
 

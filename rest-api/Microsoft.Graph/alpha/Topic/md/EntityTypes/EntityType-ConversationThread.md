@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph ConversationThread entity resource
-Title: Microsoft.Graph alpha  entity, EntityType resource
-Description: blah, blah...
-ms.ContentId: c561270a-4d38-dff9-cdac-4fb1b5a858b6
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #ConversationThread resource
 
  
 
 
 
-<a name="msg-entity-type-ConversationThread"> </a>
 ##Overview
 
 |  |  | 
@@ -28,7 +20,7 @@ ms.date: Sep 14, 2015
 
 The `ConversationThread` resource can be accessed via the following paths. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/Conversations/<Conversation.Id>/Threads/<ConversationThread.Id>
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/Threads/<ConversationThread.Id>
 	/<version>/myOrganization/directoryObjects/<User.objectId>/JoinedGroups/<Group.objectId>/Conversations/<Conversation.Id>/Threads/<ConversationThread.Id>
@@ -36,7 +28,8 @@ The `ConversationThread` resource can be accessed via the following paths.
 	/<version>/myOrganization/groups/<Group.objectId>/Conversations/<Conversation.Id>/Threads/<ConversationThread.Id>
 	/<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Conversations/<Conversation.Id>/Threads/<ConversationThread.Id>
-	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Threads/<ConversationThread.Id>```
+	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/Threads/<ConversationThread.Id>
+```
 
 
 
@@ -93,29 +86,32 @@ To get an existing `ConversationThread` entity resource, submit an `HTTP GET` re
 | `Mail.Read` | `User` |  | 
 ####Request
 
-```no-highlight
-	GET /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.ConversationThread',
-		'@odata.id': '/<ConversationThread.Id>',
-		'CcRecipients' : '<Collection(Microsoft.Graph.Recipient)>',
-		 ...,
-		'ToRecipients' : '<Collection(Microsoft.Graph.Recipient)>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.ConversationThread',
+	'@odata.id': '/<ConversationThread.Id>',
+	'CcRecipients' : '<Collection(Microsoft.Graph.Recipient)>',
+	 ...,
+	'ToRecipients' : '<Collection(Microsoft.Graph.Recipient)>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a ConversationThread entity resource representation. 
 
@@ -130,35 +126,38 @@ To create new `ConversationThread` entity resource, submit an `HTTP POST` reques
 | `Mail.ReadWrite` | `User` |  | 
 ####Request
 
-```no-highlight
-	POST /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		<ConversationThread.property_1> : <value_1>,
-		...,
-		<ConversationThread.property_n> : <value_n>
-	}
-	```
+POST /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<ConversationThread.property_1> : <value_1>,
+	...,
+	<ConversationThread.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.ConversationThread',
-		'@odata.id': '/<ConversationThread.Id>',
-		'CcRecipients' : '<Collection(Microsoft.Graph.Recipient)>',
-		 ...,
-		'ToRecipients' : '<Collection(Microsoft.Graph.Recipient)>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.ConversationThread',
+	'@odata.id': '/<ConversationThread.Id>',
+	'CcRecipients' : '<Collection(Microsoft.Graph.Recipient)>',
+	 ...,
+	'ToRecipients' : '<Collection(Microsoft.Graph.Recipient)>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added a ConversationThread entity resource representation. 
 
@@ -173,27 +172,30 @@ To update an existing `ConversationThread` entity resource, submit an `HTTP PUT`
 | `Mail.ReadWrite` | `User` |  | 
 ####Request
 
-```no-highlight
-	PUT /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<ConversationThread.property_1> : <value_1>,
-		...,
-		<ConversationThread.property_n> : <value_n>
-	}
-	```
+PUT /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<ConversationThread.property_1> : <value_1>,
+	...,
+	<ConversationThread.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
@@ -208,27 +210,30 @@ To update selected properties of an existing `ConversationThread` entity, submit
 | `Mail.ReadWrite` | `User` |  | 
 ####Request
 
-```no-highlight
-	PATCH /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<ConversationThread.property_1> : <value_1>,
-		...,
-		<ConversationThread.property_n> : <value_n>
-	}
-	```
+PATCH /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<ConversationThread.property_1> : <value_1>,
+	...,
+	<ConversationThread.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -243,21 +248,24 @@ To delete an existing `ConversationThread` entity resource, submit an `HTTP DELE
 | `Mail.ReadWrite` | `User` |  | 
 ####Request
 
-```no-highlight
-	DELETE /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
+```
 	
-	```
+DELETE /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -274,35 +282,38 @@ To get the `ConversationThread/Posts` collection, submit an `HTTP GET` request o
 | `Mail.Read` | `User` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Posts HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Posts HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.Post',
-				'@odata.id': '/<Post.Id>',
-				'Body' : '<Microsoft.Graph.ItemBody>',
-				 ...,
-				'Sender' : '<Microsoft.Graph.Recipient>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.Post',
+			'@odata.id': '/<Post.Id>',
+			'Body' : '<Microsoft.Graph.ItemBody>',
+			 ...,
+			'Sender' : '<Microsoft.Graph.Recipient>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `Post` resource representations. 
 
@@ -319,26 +330,29 @@ To call the `Message/Reply` action,submit a `POST` request of the following REST
 | `Mail.ReadWrite` | `User` |  | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Reply HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		Comment : <Edm.String>,
-		Post : <Microsoft.Graph.Post>,
-		Post : <Microsoft.Graph.Post>
-	}
-	```
+POST /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Reply HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	Comment : <Edm.String>,
+	Post : <Microsoft.Graph.Post>,
+	Post : <Microsoft.Graph.Post>
+}
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	```
+
+
+```
 
 A successful call to the Message/Reply action returns an empty response. 
 
@@ -353,26 +367,29 @@ To call the `ConversationThread/Reply` action,submit a `POST` request of the fol
 | `Mail.ReadWrite` | `User` |  | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Reply HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		Comment : <Edm.String>,
-		Post : <Microsoft.Graph.Post>,
-		Post : <Microsoft.Graph.Post>
-	}
-	```
+POST /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Reply HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	Comment : <Edm.String>,
+	Post : <Microsoft.Graph.Post>,
+	Post : <Microsoft.Graph.Post>
+}
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	```
+
+
+```
 
 A successful call to the ConversationThread/Reply action returns an empty response. 
 
@@ -387,26 +404,29 @@ To call the `Post/Reply` action,submit a `POST` request of the following REST ca
 | `Mail.ReadWrite` | `User` |  | 
 #####Request
 
-```no-highlight
-	POST /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Reply HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		Comment : <Edm.String>,
-		Post : <Microsoft.Graph.Post>,
-		Post : <Microsoft.Graph.Post>
-	}
-	```
+POST /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Reply HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	Comment : <Edm.String>,
+	Post : <Microsoft.Graph.Post>,
+	Post : <Microsoft.Graph.Post>
+}
+
+```
 
 #####Response
 
-```no-highlight
+```
 	201 Created
-	
-	```
+
+
+```
 
 A successful call to the Post/Reply action returns an empty response. 
 

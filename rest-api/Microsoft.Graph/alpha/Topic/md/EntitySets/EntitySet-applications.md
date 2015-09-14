@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph.GraphService/applications EntitySet resource
-Title: Microsoft.Graph entity container, EntityContainer, tenant-level resources
-Description: blah, blah...
-ms.ContentId: 83b9d15a-b0f8-883c-7882-4bcdb5df9931
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #applications resource
 
  
 
 
 
-<a name="msg-entity-set-applications"> </a>
 ##Overview
 
 |  |  | 
@@ -28,8 +20,9 @@ ms.date: Sep 14, 2015
 
 The `applications` entity set resource can be accessed via the following Urls. 
 
-```no-highlight
-	/<version>/myOrganization/applications```
+```
+	/<version>/myOrganization/applications
+```
 
 
 
@@ -48,36 +41,39 @@ To get the members of the `applications` entity set, submit an `HTTP GET` reques
 | `Directory.Read.All` | `Admin` |  | 
 ###Request
 
-```no-highlight
-	GET /<version>/myOrganization/applications HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/applications HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 ###Response
 
-```no-highlight
+```
 	200 OK
-	
+
+{
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#applications',
+	'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/applications',
+	'value': [ 
 	{
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#applications',
-		'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/applications',
-		'value': [ 
-		{
-	
-			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-			'@odata.type': '#Microsoft.Graph.Application',
-			'@odata.id': '/<Application.objectId>',
-			'appId' : '<Edm.String>',
-			 ...,
-			'samlMetadataUrl' : '<Edm.String>'
-	}
-	
-		]
-	}
-	```
+
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.Application',
+		'@odata.id': '/<Application.objectId>',
+		'appId' : '<Edm.String>',
+		 ...,
+		'samlMetadataUrl' : '<Edm.String>'
+}
+
+	]
+}
+
+```
 
 The successful response returns a `200 OK` status code, with a payload containing the collection of the `Microsoft.Graph.Application` resource representations. 
 
@@ -93,42 +89,45 @@ To create a new Microsoft.Graph.Application entity resource, submit an `HTTP POS
 | `Directory.AccessAsUser.All` | `Admin` | Access as user means ... | 
 ###Request
 
-```no-highlight
-	POST /<version>/myOrganization/applications HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		<Application.property_1> : <value_1>,
-		...,
-		<Application.propery_n> : <value_n>
-	}
-	```
+POST /<version>/myOrganization/applications HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<Application.property_1> : <value_1>,
+	...,
+	<Application.propery_n> : <value_n>
+}
+
+```
 
 ###Response
 
-```no-highlight
+```
 	201 Created
-	
+
+{
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#applications',
+	'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/applications',
+	'value': [ 
 	{
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#applications',
-		'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/applications',
-		'value': [ 
-		{
-	
-			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-			'@odata.type': '#Microsoft.Graph.Application',
-			'@odata.id': '/<Application.objectId>',
-			'appId' : '<Edm.String>',
-			 ...,
-			'samlMetadataUrl' : '<Edm.String>'
-	}
-	
-		]
-	}
-	```
+
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.Application',
+		'@odata.id': '/<Application.objectId>',
+		'appId' : '<Edm.String>',
+		 ...,
+		'samlMetadataUrl' : '<Edm.String>'
+}
+
+	]
+}
+
+```
 
 The successful response returns a `201 Created` status code, with a payload containing a Microsoft.Graph.Application `Microsoft.Graph.Application` resource representations. 
 

@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph.GraphService/users EntitySet resource
-Title: Microsoft.Graph entity container, EntityContainer, tenant-level resources
-Description: blah, blah...
-ms.ContentId: e5d42c9a-3a07-e5f7-5378-5cde3217ac8b
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #users resource
 
  
 
 
 
-<a name="msg-entity-set-users"> </a>
 ##Overview
 
 |  |  | 
@@ -28,8 +20,9 @@ ms.date: Sep 14, 2015
 
 The `users` entity set resource can be accessed via the following Urls. 
 
-```no-highlight
-	/<version>/myOrganization/users```
+```
+	/<version>/myOrganization/users
+```
 
 
 
@@ -50,36 +43,39 @@ To get the members of the `users` entity set, submit an `HTTP GET` request .
 | `User.Read.All` | `Admin` |  | 
 ###Request
 
-```no-highlight
-	GET /<version>/myOrganization/users HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/users HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 ###Response
 
-```no-highlight
+```
 	200 OK
-	
+
+{
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#users',
+	'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/users',
+	'value': [ 
 	{
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#users',
-		'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/users',
-		'value': [ 
-		{
-	
-			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-			'@odata.type': '#Microsoft.Graph.User',
-			'@odata.id': '/<User.objectId>',
-			'AboutMe' : '<Edm.String>',
-			 ...,
-			'userType' : '<Edm.String>'
-	}
-	
-		]
-	}
-	```
+
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.User',
+		'@odata.id': '/<User.objectId>',
+		'AboutMe' : '<Edm.String>',
+		 ...,
+		'userType' : '<Edm.String>'
+}
+
+	]
+}
+
+```
 
 The successful response returns a `200 OK` status code, with a payload containing the collection of the `Microsoft.Graph.User` resource representations. 
 
@@ -95,42 +91,45 @@ To create a new Microsoft.Graph.User entity resource, submit an `HTTP POST` requ
 | `User.ReadWrite.All` | `Admin` |  | 
 ###Request
 
-```no-highlight
-	POST /<version>/myOrganization/users HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		<User.property_1> : <value_1>,
-		...,
-		<User.propery_n> : <value_n>
-	}
-	```
+POST /<version>/myOrganization/users HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<User.property_1> : <value_1>,
+	...,
+	<User.propery_n> : <value_n>
+}
+
+```
 
 ###Response
 
-```no-highlight
+```
 	201 Created
-	
+
+{
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#users',
+	'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/users',
+	'value': [ 
 	{
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#users',
-		'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/users',
-		'value': [ 
-		{
-	
-			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-			'@odata.type': '#Microsoft.Graph.User',
-			'@odata.id': '/<User.objectId>',
-			'AboutMe' : '<Edm.String>',
-			 ...,
-			'userType' : '<Edm.String>'
-	}
-	
-		]
-	}
-	```
+
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.User',
+		'@odata.id': '/<User.objectId>',
+		'AboutMe' : '<Edm.String>',
+		 ...,
+		'userType' : '<Edm.String>'
+}
+
+	]
+}
+
+```
 
 The successful response returns a `201 Created` status code, with a payload containing a Microsoft.Graph.User `Microsoft.Graph.User` resource representations. 
 

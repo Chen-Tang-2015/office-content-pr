@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph AssignedLicense extended resource
-Title: Microsoft.Graph alpha  extended, ComplexType resource
-Description: blah, blah...
-ms.ContentId: 91d51a59-11f8-5b0e-5184-c9c8e6e5bdfa
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #AssignedLicense extended resource
 
  
 
 
 
-<a name="msg-complex-type-AssignedLicense"> </a>
 ##Overview
 
 |  |  | 
@@ -35,7 +27,7 @@ The `AssignedLicense` extended resource exposes the following properties
 
 The `AssignedLicense` extended resource is referenced by the following resources. 
 
-```no-highlight
+```
 	/<version>/myOrganization/applications/<Application.objectId>/owners/<DirectoryObject.objectId>/assignedLicenses
 	/<version>/myOrganization/contacts/<Contact.objectId>/directReports/<DirectoryObject.objectId>/assignedLicenses
 	/<version>/myOrganization/contacts/<Contact.objectId>/memberOf/<DirectoryObject.objectId>/assignedLicenses
@@ -90,7 +82,8 @@ The `AssignedLicense` extended resource is referenced by the following resources
 	/<version>/myOrganization/users/<User.objectId>/ownedDevices/<DirectoryObject.objectId>/assignedLicenses
 	/<version>/myOrganization/users/<User.objectId>/ownedObjects/<DirectoryObject.objectId>/assignedLicenses
 	/<version>/myOrganization/users/<User.objectId>/registeredDevices/<DirectoryObject.objectId>/assignedLicenses
-	/<version>/myOrganization/users/<User.objectId>/WorkingWith/<User.objectId>/assignedLicenses```
+	/<version>/myOrganization/users/<User.objectId>/WorkingWith/<User.objectId>/assignedLicenses
+```
 
 
 

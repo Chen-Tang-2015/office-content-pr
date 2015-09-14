@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph Plan entity resource
-Title: Microsoft.Graph alpha  entity, EntityType resource
-Description: blah, blah...
-ms.ContentId: ce313bd1-1ae2-6b8c-a63a-918180ffb838
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #Plan resource
 
  
 
 
 
-<a name="msg-entity-type-Plan"> </a>
 ##Overview
 
 |  |  | 
@@ -28,14 +20,15 @@ ms.date: Sep 14, 2015
 
 The `Plan` resource can be accessed via the following paths. 
 
-```no-highlight
+```
 	/<version>/myOrganization/directoryObjects/<Group.objectId>/plans/<Plan.id>
 	/<version>/myOrganization/directoryObjects/<User.objectId>/JoinedGroups/<Group.objectId>/plans/<Plan.id>
 	/<version>/myOrganization/directoryObjects/<User.objectId>/plans/<Plan.id>
 	/<version>/myOrganization/groups/<Group.objectId>/plans/<Plan.id>
 	/<version>/myOrganization/plans/<Plan.id>
 	/<version>/myOrganization/users/<User.objectId>/JoinedGroups/<Group.objectId>/plans/<Plan.id>
-	/<version>/myOrganization/users/<User.objectId>/plans/<Plan.id>```
+	/<version>/myOrganization/users/<User.objectId>/plans/<Plan.id>
+```
 
 
 
@@ -83,29 +76,32 @@ To get an existing `Plan` entity resource, submit an `HTTP GET` request of the f
 | `Task.Read.All` | `User` |  | 
 ####Request
 
-```no-highlight
-	GET /<version>/myOrganization/plans/<Plan.id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/plans/<Plan.id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Plan',
-		'@odata.id': '/<Plan.id>',
-		'activeTasks' : '<Edm.Int32>',
-		 ...,
-		'version' : '<Edm.String>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Plan',
+	'@odata.id': '/<Plan.id>',
+	'activeTasks' : '<Edm.Int32>',
+	 ...,
+	'version' : '<Edm.String>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a Plan entity resource representation. 
 
@@ -120,35 +116,38 @@ To create new `Plan` entity resource, submit an `HTTP POST` request against the 
 | `Task.ReadWrite.All` | `User` |  | 
 ####Request
 
-```no-highlight
-	POST /<version>/myOrganization/plans/<Plan.id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
+```
 	
-	{
-		<Plan.property_1> : <value_1>,
-		...,
-		<Plan.property_n> : <value_n>
-	}
-	```
+POST /<version>/myOrganization/plans/<Plan.id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<Plan.property_1> : <value_1>,
+	...,
+	<Plan.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Plan',
-		'@odata.id': '/<Plan.id>',
-		'activeTasks' : '<Edm.Int32>',
-		 ...,
-		'version' : '<Edm.String>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Plan',
+	'@odata.id': '/<Plan.id>',
+	'activeTasks' : '<Edm.Int32>',
+	 ...,
+	'version' : '<Edm.String>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added a Plan entity resource representation. 
 
@@ -163,27 +162,30 @@ To update an existing `Plan` entity resource, submit an `HTTP PUT` request, spec
 | `Task.ReadWrite.All` | `User` |  | 
 ####Request
 
-```no-highlight
-	PUT /<version>/myOrganization/plans/<Plan.id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<Plan.property_1> : <value_1>,
-		...,
-		<Plan.property_n> : <value_n>
-	}
-	```
+PUT /<version>/myOrganization/plans/<Plan.id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<Plan.property_1> : <value_1>,
+	...,
+	<Plan.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
@@ -198,27 +200,30 @@ To update selected properties of an existing `Plan` entity, submit an `HTTP PATC
 | `Task.ReadWrite.All` | `User` |  | 
 ####Request
 
-```no-highlight
-	PATCH /<version>/myOrganization/plans/<Plan.id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<Plan.property_1> : <value_1>,
-		...,
-		<Plan.property_n> : <value_n>
-	}
-	```
+PATCH /<version>/myOrganization/plans/<Plan.id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<Plan.property_1> : <value_1>,
+	...,
+	<Plan.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -233,21 +238,24 @@ To delete an existing `Plan` entity resource, submit an `HTTP DELETE` request, s
 | `Task.ReadWrite.All` | `User` |  | 
 ####Request
 
-```no-highlight
-	DELETE /<version>/myOrganization/plans/<Plan.id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
+```
 	
-	```
+DELETE /<version>/myOrganization/plans/<Plan.id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -264,29 +272,32 @@ To get a Plan/details `Plan/details` resource, submit an `HTTP GET` request of t
 | `Task.Read.All` | `User` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/plans/<Plan.id>/details HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/plans/<Plan.id>/details HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.PlanDetails',
-		'@odata.id': '/<PlanDetails.id>',
-		'id' : '<Edm.String>',
-		 ...,
-		'version' : '<Edm.String>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.PlanDetails',
+	'@odata.id': '/<PlanDetails.id>',
+	'id' : '<Edm.String>',
+	 ...,
+	'version' : '<Edm.String>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a `PlanDetails` resource representation. 
 
@@ -303,35 +314,38 @@ To get the `Plan/tasks` collection, submit an `HTTP GET` request of the followin
 | `Task.Read.All` | `User` |  | 
 #####Request
 
-```no-highlight
-	GET /<version>/myOrganization/plans/<Plan.id>/tasks HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET /<version>/myOrganization/plans/<Plan.id>/tasks HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 #####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.Task',
-				'@odata.id': '/<Task.id>',
-				'assignedBy' : '<Edm.String>',
-				 ...,
-				'version' : '<Edm.String>'
-			}
-			,
-			...
-		]
-	}
-	```
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.Task',
+			'@odata.id': '/<Task.id>',
+			'assignedBy' : '<Edm.String>',
+			 ...,
+			'version' : '<Edm.String>'
+		}
+		,
+		...
+	]
+}
+
+```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `Task` resource representations. 
 

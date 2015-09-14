@@ -1,17 +1,9 @@
-ms.TocTitle: Microsoft.Graph PlanDetails entity resource
-Title: Microsoft.Graph alpha  entity, EntityType resource
-Description: blah, blah...
-ms.ContentId: 2f092b15-956d-e34d-7cdd-ad25b1f23a99
-ms.Topic: reference (API)
-ms.date: Sep 14, 2015
-
 #PlanDetails resource
 
  
 
 
 
-<a name="msg-entity-type-PlanDetails"> </a>
 ##Overview
 
 |  |  | 
@@ -52,29 +44,32 @@ To get an existing `PlanDetails` entity resource, submit an `HTTP GET` request o
 | `Task.Read.All` | `User` |  | 
 ####Request
 
-```no-highlight
-	GET  HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
+```
 	
-	```
+GET  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.PlanDetails',
-		'@odata.id': '/<PlanDetails.id>',
-		'id' : '<Edm.String>',
-		 ...,
-		'version' : '<Edm.String>'
-	}
-	```
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.PlanDetails',
+	'@odata.id': '/<PlanDetails.id>',
+	'id' : '<Edm.String>',
+	 ...,
+	'version' : '<Edm.String>'
+}
+
+```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a PlanDetails entity resource representation. 
 
@@ -104,27 +99,30 @@ To update an existing `PlanDetails` entity resource, submit an `HTTP PUT` reques
 | `Task.ReadWrite.All` | `User` |  | 
 ####Request
 
-```no-highlight
-	PUT  HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<PlanDetails.property_1> : <value_1>,
-		...,
-		<PlanDetails.property_n> : <value_n>
-	}
-	```
+PUT  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<PlanDetails.property_1> : <value_1>,
+	...,
+	<PlanDetails.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
@@ -139,27 +137,30 @@ To update selected properties of an existing `PlanDetails` entity, submit an `HT
 | `Task.ReadWrite.All` | `User` |  | 
 ####Request
 
-```no-highlight
-	PATCH  HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
+```
 	
-	{
-		<PlanDetails.property_1> : <value_1>,
-		...,
-		<PlanDetails.property_n> : <value_n>
-	}
-	```
+PATCH  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<PlanDetails.property_1> : <value_1>,
+	...,
+	<PlanDetails.property_n> : <value_n>
+}
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
@@ -174,21 +175,24 @@ To delete an existing `PlanDetails` entity resource, submit an `HTTP DELETE` req
 | `Task.ReadWrite.All` | `User` |  | 
 ####Request
 
-```no-highlight
-	DELETE  HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
+```
 	
-	```
+DELETE  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
+```
 
 ####Response
 
-```no-highlight
+```
 	204 No content
-	
-	```
+
+
+```
 
 A successful response returns the `204 No content` status code without any payload. 
 
