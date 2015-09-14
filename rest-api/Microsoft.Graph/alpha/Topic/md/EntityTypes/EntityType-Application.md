@@ -28,10 +28,10 @@ ms.date: Sep 14, 2015
 
 The `Application` resource can be accessed via the following paths. 
 
-```no-highlight
+
 	/<version>/myOrganization/applications/<Application.objectId>
 	/<version>/myOrganization/directoryObjects/<Application.objectId>
-	```
+	
 
 
 
