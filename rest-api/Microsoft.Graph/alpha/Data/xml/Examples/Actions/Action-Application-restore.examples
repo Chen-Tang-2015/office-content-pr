@@ -50,7 +50,7 @@ Content-Length : &lt;body_length&gt;
 	'samlMetadataUrl' : '&lt;Edm.String&gt;'
 }
 </Response>
-      <Remarks>A successful call to the Application/restore action returns an instance of the Application/restore type.</Remarks>
+      <Remarks>A successful call to the Application/restore action returns an instance of the Microsoft.Graph.Application type.</Remarks>
     </CodeExample>
   </Content>
 </ContentComponentOfCodeExample>

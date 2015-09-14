@@ -5,7 +5,7 @@
   <MetadataUri>https://graph.microsoft.com/alpha/$metadata</MetadataUri>
   <Content>
     <CodeExample>
-      <Title>Get members of the deviceConfiguration entity set</Title>
+      <Title>Get the deviceConfiguration's members</Title>
       <TargetResourceType>EntitySet</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.GraphService/deviceConfiguration</TargetResourceFullName>
       <TargetResourceName>deviceConfiguration</TargetResourceName>
@@ -63,7 +63,7 @@ Accept : application/json;odata=verbose
       <Remarks>The successful response returns a &lt;code&gt;200 OK&lt;/code&gt; status code, with a payload containing the collection of the &lt;code&gt;Microsoft.Graph.DeviceConfiguration&lt;/code&gt; resource representations.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Add a new member to the deviceConfiguration entity set</Title>
+      <Title>Add a new member to the deviceConfiguration</Title>
       <TargetResourceType>EntitySet</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.GraphService/deviceConfiguration</TargetResourceFullName>
       <TargetResourceName>deviceConfiguration</TargetResourceName>

@@ -5,7 +5,7 @@
   <MetadataUri>https://graph.microsoft.com/alpha/$metadata</MetadataUri>
   <Content>
     <CodeExample>
-      <Title>Get a Contact entity resource</Title>
+      <Title>Get a Contact</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Contact</TargetResourceFullName>
       <TargetResourceName>Contact</TargetResourceName>
@@ -56,7 +56,7 @@ Accept : application/json;odata=verbose
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the specified a Contact entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Create or add a Contact entity resource</Title>
+      <Title>Create or add a Contact</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Contact</TargetResourceFullName>
       <TargetResourceName>Contact</TargetResourceName>
@@ -106,7 +106,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the newly added a Contact entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a Contact entity resource</Title>
+      <Title>Update a Contact</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Contact</TargetResourceFullName>
       <TargetResourceName>Contact</TargetResourceName>
@@ -148,7 +148,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 - No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a Contact entity properties</Title>
+      <Title>Update a Contact's properties</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Contact</TargetResourceFullName>
       <TargetResourceName>Contact</TargetResourceName>
@@ -190,7 +190,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Delete a Contact entity resource</Title>
+      <Title>Delete a Contact </Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Contact</TargetResourceFullName>
       <TargetResourceName>Contact</TargetResourceName>

@@ -5,7 +5,7 @@
   <MetadataUri>https://graph.microsoft.com/alpha/$metadata</MetadataUri>
   <Content>
     <CodeExample>
-      <Title>Get members of the drives entity set</Title>
+      <Title>Get the drives's members</Title>
       <TargetResourceType>EntitySet</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.GraphService/drives</TargetResourceFullName>
       <TargetResourceName>drives</TargetResourceName>
@@ -41,7 +41,7 @@ Accept : application/json;odata=verbose
       <Remarks>The successful response returns a &lt;code&gt;200 OK&lt;/code&gt; status code, with a payload containing the collection of the &lt;code&gt;Microsoft.Graph.drive&lt;/code&gt; resource representations.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Add a new member to the drives entity set</Title>
+      <Title>Add a new member to the drives</Title>
       <TargetResourceType>EntitySet</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.GraphService/drives</TargetResourceFullName>
       <TargetResourceName>drives</TargetResourceName>

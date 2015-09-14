@@ -43,7 +43,7 @@ Content-Length : &lt;body_length&gt;
 	'WebLink' : '&lt;Edm.String&gt;'
 }
 </Response>
-      <Remarks>A successful call to the Message/Copy action returns an instance of the Message/Copy type.</Remarks>
+      <Remarks>A successful call to the Message/Copy action returns an instance of the Microsoft.Graph.Message type.</Remarks>
     </CodeExample>
   </Content>
 </ContentComponentOfCodeExample>

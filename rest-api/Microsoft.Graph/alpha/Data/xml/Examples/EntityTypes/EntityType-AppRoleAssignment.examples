@@ -5,7 +5,7 @@
   <MetadataUri>https://graph.microsoft.com/alpha/$metadata</MetadataUri>
   <Content>
     <CodeExample>
-      <Title>Get an AppRoleAssignment entity resource</Title>
+      <Title>Get an AppRoleAssignment</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.AppRoleAssignment</TargetResourceFullName>
       <TargetResourceName>AppRoleAssignment</TargetResourceName>
@@ -42,7 +42,7 @@ Accept : application/json;odata=verbose
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the specified an AppRoleAssignment entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Create or add an AppRoleAssignment entity resource</Title>
+      <Title>Create or add an AppRoleAssignment</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.AppRoleAssignment</TargetResourceFullName>
       <TargetResourceName>AppRoleAssignment</TargetResourceName>
@@ -92,7 +92,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the newly added an AppRoleAssignment entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update an AppRoleAssignment entity resource</Title>
+      <Title>Update an AppRoleAssignment</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.AppRoleAssignment</TargetResourceFullName>
       <TargetResourceName>AppRoleAssignment</TargetResourceName>
@@ -134,7 +134,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 - No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update an AppRoleAssignment entity properties</Title>
+      <Title>Update an AppRoleAssignment's properties</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.AppRoleAssignment</TargetResourceFullName>
       <TargetResourceName>AppRoleAssignment</TargetResourceName>
@@ -176,7 +176,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Delete an AppRoleAssignment entity resource</Title>
+      <Title>Delete an AppRoleAssignment </Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.AppRoleAssignment</TargetResourceFullName>
       <TargetResourceName>AppRoleAssignment</TargetResourceName>

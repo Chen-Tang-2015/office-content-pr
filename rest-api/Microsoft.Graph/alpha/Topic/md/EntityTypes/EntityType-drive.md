@@ -55,9 +55,9 @@ The `drive` resource supports the following navigation properties to access the 
 
 The `drive` entity resource supports the following operations, including actions and functions. 
 
-####Work with the drive entity resource
+####Work with the drive resource
 
-####Get a drive entity resource
+####Get a drive
 
 To get an existing `drive` entity resource, submit an `HTTP GET` request of the following syntax: 
 
@@ -68,35 +68,34 @@ To get an existing `drive` entity resource, submit an `HTTP GET` request of the 
 ####Request
 
 ```
+	GET /<version>/myOrganization/drives/<drive.id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/drives/<drive.id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 ####Response
 
 ```
 	200 OK
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.drive',
-	'@odata.id': '/<drive.id>',
-	'driveType' : '<Edm.String>',
-	 ...,
-	'quota' : '<Microsoft.Graph.quota>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.drive',
+		'@odata.id': '/<drive.id>',
+		'driveType' : '<Edm.String>',
+		 ...,
+		'quota' : '<Microsoft.Graph.quota>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a drive entity resource representation. 
 
-####Create or add a drive entity resource
+####Create or add a drive
 
 To create new `drive` entity resource, submit an `HTTP POST` request against the `drives` collection: 
 
@@ -107,41 +106,40 @@ To create new `drive` entity resource, submit an `HTTP POST` request against the
 ####Request
 
 ```
+	POST /<version>/myOrganization/drives/<drive.id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : <body_length>
 	
-POST /<version>/myOrganization/drives/<drive.id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : <body_length>
-
-{
-	<drive.property_1> : <value_1>,
-	...,
-	<drive.property_n> : <value_n>
-}
-
+	{
+		<drive.property_1> : <value_1>,
+		...,
+		<drive.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	201 Created
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.drive',
-	'@odata.id': '/<drive.id>',
-	'driveType' : '<Edm.String>',
-	 ...,
-	'quota' : '<Microsoft.Graph.quota>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.drive',
+		'@odata.id': '/<drive.id>',
+		'driveType' : '<Edm.String>',
+		 ...,
+		'quota' : '<Microsoft.Graph.quota>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added a drive entity resource representation. 
 
-####Update a drive entity resource
+####Update a drive
 
 To update an existing `drive` entity resource, submit an `HTTP PUT` request, specifying a new instance of the resource in the request body: 
 
@@ -152,33 +150,32 @@ To update an existing `drive` entity resource, submit an `HTTP PUT` request, spe
 ####Request
 
 ```
+	PUT /<version>/myOrganization/drives/<drive.id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
+	Content-Length : <body_length>
 	
-PUT /<version>/myOrganization/drives/<drive.id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-Content-Length : <body_length>
-
-{
-	<drive.property_1> : <value_1>,
-	...,
-	<drive.property_n> : <value_n>
-}
-
+	{
+		<drive.property_1> : <value_1>,
+		...,
+		<drive.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
-####Update a drive entity properties
+####Update a drive's properties
 
 To update selected properties of an existing `drive` entity, submit an `HTTP PATCH` request, specifying a new instance of the resource in the request body: 
 
@@ -189,33 +186,32 @@ To update selected properties of an existing `drive` entity, submit an `HTTP PAT
 ####Request
 
 ```
+	PATCH /<version>/myOrganization/drives/<drive.id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
+	Content-Length : <body_length>
 	
-PATCH /<version>/myOrganization/drives/<drive.id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-Content-Length : <body_length>
-
-{
-	<drive.property_1> : <value_1>,
-	...,
-	<drive.property_n> : <value_n>
-}
-
+	{
+		<drive.property_1> : <value_1>,
+		...,
+		<drive.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
 
-####Delete a drive entity resource
+####Delete a drive 
 
 To delete an existing `drive` entity resource, submit an `HTTP DELETE` request, specifying a new instance of the resource in the request body: 
 
@@ -226,27 +222,26 @@ To delete an existing `drive` entity resource, submit an `HTTP DELETE` request, 
 ####Request
 
 ```
+	DELETE /<version>/myOrganization/drives/<drive.id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
 	
-DELETE /<version>/myOrganization/drives/<drive.id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-
-
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
 
-####Access the drive's files related resource
+####Access the item collection via the drive/files relationship
 
 #####Get the drive/files collection
 
@@ -259,41 +254,40 @@ To get the `drive/files` collection, submit an `HTTP GET` request of the followi
 #####Request
 
 ```
+	GET /<version>/myOrganization/drives/<drive.id>/files HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/drives/<drive.id>/files HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 #####Response
 
 ```
 	200 OK
-
-{
-	'value': [
-		{
-		
-			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-			'@odata.type': '#Microsoft.Graph.item',
-			'@odata.id': '/<item.id>',
-			'createdBy' : '<Microsoft.Graph.identitySet>',
-			 ...,
-			'webUrl' : '<Edm.String>'
-		}
-		,
-		...
-	]
-}
-
+	
+	{
+		'value': [
+			{
+			
+				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+				'@odata.type': '#Microsoft.Graph.item',
+				'@odata.id': '/<item.id>',
+				'createdBy' : '<Microsoft.Graph.identitySet>',
+				 ...,
+				'webUrl' : '<Edm.String>'
+			}
+			,
+			...
+		]
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `item` resource representations. 
 
-####Access the drive's items related resource
+####Access the item collection via the drive/items relationship
 
 #####Get the drive/items collection
 
@@ -306,41 +300,40 @@ To get the `drive/items` collection, submit an `HTTP GET` request of the followi
 #####Request
 
 ```
+	GET /<version>/myOrganization/drives/<drive.id>/items HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/drives/<drive.id>/items HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 #####Response
 
 ```
 	200 OK
-
-{
-	'value': [
-		{
-		
-			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-			'@odata.type': '#Microsoft.Graph.item',
-			'@odata.id': '/<item.id>',
-			'createdBy' : '<Microsoft.Graph.identitySet>',
-			 ...,
-			'webUrl' : '<Edm.String>'
-		}
-		,
-		...
-	]
-}
-
+	
+	{
+		'value': [
+			{
+			
+				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+				'@odata.type': '#Microsoft.Graph.item',
+				'@odata.id': '/<item.id>',
+				'createdBy' : '<Microsoft.Graph.identitySet>',
+				 ...,
+				'webUrl' : '<Edm.String>'
+			}
+			,
+			...
+		]
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `item` resource representations. 
 
-####Access the drive's root related resource
+####Access the item resource via the drive/root relationship
 
 #####Get the drive/root entity
 
@@ -353,30 +346,29 @@ To get a drive/root `drive/root` resource, submit an `HTTP GET` request of the f
 #####Request
 
 ```
+	GET /<version>/myOrganization/drives/<drive.id>/root HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/drives/<drive.id>/root HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 #####Response
 
 ```
 	200 OK
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.item',
-	'@odata.id': '/<item.id>',
-	'createdBy' : '<Microsoft.Graph.identitySet>',
-	 ...,
-	'webUrl' : '<Edm.String>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.item',
+		'@odata.id': '/<item.id>',
+		'createdBy' : '<Microsoft.Graph.identitySet>',
+		 ...,
+		'webUrl' : '<Edm.String>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a body containing an `item` resource representation. 

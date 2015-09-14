@@ -51,9 +51,9 @@ The `DirectoryLinkChange` resource supports the following actions:
 
 The `DirectoryLinkChange` entity resource supports the following operations, including actions and functions. 
 
-####Work with the DirectoryLinkChange entity resource
+####Work with the DirectoryLinkChange resource
 
-####Get a DirectoryLinkChange entity resource
+####Get a DirectoryLinkChange
 
 To get an existing `DirectoryLinkChange` entity resource, submit an `HTTP GET` request of the following syntax: 
 
@@ -65,35 +65,34 @@ To get an existing `DirectoryLinkChange` entity resource, submit an `HTTP GET` r
 ####Request
 
 ```
+	GET  HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET  HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 ####Response
 
 ```
 	200 OK
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.DirectoryLinkChange',
-	'@odata.id': '/<DirectoryLinkChange.objectId>',
-	'associationType' : '<Edm.String>',
-	 ...,
-	'targetObjectUri' : '<Edm.String>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.DirectoryLinkChange',
+		'@odata.id': '/<DirectoryLinkChange.objectId>',
+		'associationType' : '<Edm.String>',
+		 ...,
+		'targetObjectUri' : '<Edm.String>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a DirectoryLinkChange entity resource representation. 
 
-####Create or add a DirectoryLinkChange entity resource
+####Create or add a DirectoryLinkChange
 
  
 
@@ -109,7 +108,7 @@ A successful response returns the `200 OK` status code and a payload containing 
 
  
 
-####Update a DirectoryLinkChange entity resource
+####Update a DirectoryLinkChange
 
 To update an existing `DirectoryLinkChange` entity resource, submit an `HTTP PUT` request, specifying a new instance of the resource in the request body: 
 
@@ -122,33 +121,32 @@ To update an existing `DirectoryLinkChange` entity resource, submit an `HTTP PUT
 ####Request
 
 ```
+	PUT  HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
+	Content-Length : <body_length>
 	
-PUT  HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-Content-Length : <body_length>
-
-{
-	<DirectoryLinkChange.property_1> : <value_1>,
-	...,
-	<DirectoryLinkChange.property_n> : <value_n>
-}
-
+	{
+		<DirectoryLinkChange.property_1> : <value_1>,
+		...,
+		<DirectoryLinkChange.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
-####Update a DirectoryLinkChange entity properties
+####Update a DirectoryLinkChange's properties
 
 To update selected properties of an existing `DirectoryLinkChange` entity, submit an `HTTP PATCH` request, specifying a new instance of the resource in the request body: 
 
@@ -161,33 +159,32 @@ To update selected properties of an existing `DirectoryLinkChange` entity, submi
 ####Request
 
 ```
+	PATCH  HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
+	Content-Length : <body_length>
 	
-PATCH  HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-Content-Length : <body_length>
-
-{
-	<DirectoryLinkChange.property_1> : <value_1>,
-	...,
-	<DirectoryLinkChange.property_n> : <value_n>
-}
-
+	{
+		<DirectoryLinkChange.property_1> : <value_1>,
+		...,
+		<DirectoryLinkChange.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
 
-####Delete a DirectoryLinkChange entity resource
+####Delete a DirectoryLinkChange 
 
 To delete an existing `DirectoryLinkChange` entity resource, submit an `HTTP DELETE` request, specifying a new instance of the resource in the request body: 
 
@@ -200,22 +197,21 @@ To delete an existing `DirectoryLinkChange` entity resource, submit an `HTTP DEL
 ####Request
 
 ```
+	DELETE  HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
 	
-DELETE  HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-
-
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
@@ -235,28 +231,27 @@ To call the `DirectoryObject/checkMemberGroups` action,submit a `POST` request o
 #####Request
 
 ```
+	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/checkMemberGroups HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : <body_length>
 	
-POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/checkMemberGroups HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : <body_length>
-
-{
-	groupIds : <Edm.String>
-}
-
+	{
+		groupIds : <Edm.String>
+	}
+	
 ```
 
 #####Response
 
 ```
 	201 Created
-
-'<Edm.String>'
+	
+	'<Edm.String>'
 ```
 
-A successful call to the DirectoryObject/checkMemberGroups action returns an instance of the DirectoryObject/checkMemberGroups type. 
+A successful call to the DirectoryObject/checkMemberGroups action returns an instance of the Edm.String type. 
 
 #####Call the DirectoryObject/getMemberGroups action
 
@@ -271,28 +266,27 @@ To call the `DirectoryObject/getMemberGroups` action,submit a `POST` request of 
 #####Request
 
 ```
+	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberGroups HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : <body_length>
 	
-POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberGroups HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : <body_length>
-
-{
-	securityEnabledOnly : <Edm.Boolean>
-}
-
+	{
+		securityEnabledOnly : <Edm.Boolean>
+	}
+	
 ```
 
 #####Response
 
 ```
 	201 Created
-
-'<Edm.String>'
+	
+	'<Edm.String>'
 ```
 
-A successful call to the DirectoryObject/getMemberGroups action returns an instance of the DirectoryObject/getMemberGroups type. 
+A successful call to the DirectoryObject/getMemberGroups action returns an instance of the Edm.String type. 
 
 #####Call the DirectoryObject/getMemberObjects action
 
@@ -307,26 +301,25 @@ To call the `DirectoryObject/getMemberObjects` action,submit a `POST` request of
 #####Request
 
 ```
+	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberObjects HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : <body_length>
 	
-POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberObjects HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : <body_length>
-
-{
-	securityEnabledOnly : <Edm.Boolean>
-}
-
+	{
+		securityEnabledOnly : <Edm.Boolean>
+	}
+	
 ```
 
 #####Response
 
 ```
 	201 Created
-
-'<Edm.String>'
+	
+	'<Edm.String>'
 ```
 
-A successful call to the DirectoryObject/getMemberObjects action returns an instance of the DirectoryObject/getMemberObjects type. 
+A successful call to the DirectoryObject/getMemberObjects action returns an instance of the Edm.String type. 
 

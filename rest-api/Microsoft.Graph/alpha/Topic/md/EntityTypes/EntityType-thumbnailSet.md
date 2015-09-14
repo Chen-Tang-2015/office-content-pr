@@ -61,9 +61,9 @@ To invoke a function, submit a `HTTP POST` request against the function's resour
 
 The `thumbnailSet` entity resource supports the following operations, including actions and functions. 
 
-####Work with the thumbnailSet entity resource
+####Work with the thumbnailSet resource
 
-####Get a thumbnailSet entity resource
+####Get a thumbnailSet
 
 To get an existing `thumbnailSet` entity resource, submit an `HTTP GET` request of the following syntax: 
 
@@ -74,35 +74,34 @@ To get an existing `thumbnailSet` entity resource, submit an `HTTP GET` request 
 ####Request
 
 ```
+	GET /<version>/myOrganization/drives/<drive.id>/files/<item.id>/thumbnails/<thumbnailSet.id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/drives/<drive.id>/files/<item.id>/thumbnails/<thumbnailSet.id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 ####Response
 
 ```
 	200 OK
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.thumbnailSet',
-	'@odata.id': '/<thumbnailSet.id>',
-	'id' : '<Edm.String>',
-	 ...,
-	'small' : '<Microsoft.Graph.thumbnail>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.thumbnailSet',
+		'@odata.id': '/<thumbnailSet.id>',
+		'id' : '<Edm.String>',
+		 ...,
+		'small' : '<Microsoft.Graph.thumbnail>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a thumbnailSet entity resource representation. 
 
-####Create or add a thumbnailSet entity resource
+####Create or add a thumbnailSet
 
 To create new `thumbnailSet` entity resource, submit an `HTTP POST` request against the `thumbnails` collection: 
 
@@ -113,41 +112,40 @@ To create new `thumbnailSet` entity resource, submit an `HTTP POST` request agai
 ####Request
 
 ```
+	POST /<version>/myOrganization/drives/<drive.id>/files/<item.id>/thumbnails/<thumbnailSet.id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : <body_length>
 	
-POST /<version>/myOrganization/drives/<drive.id>/files/<item.id>/thumbnails/<thumbnailSet.id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : <body_length>
-
-{
-	<thumbnailSet.property_1> : <value_1>,
-	...,
-	<thumbnailSet.property_n> : <value_n>
-}
-
+	{
+		<thumbnailSet.property_1> : <value_1>,
+		...,
+		<thumbnailSet.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	201 Created
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.thumbnailSet',
-	'@odata.id': '/<thumbnailSet.id>',
-	'id' : '<Edm.String>',
-	 ...,
-	'small' : '<Microsoft.Graph.thumbnail>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.thumbnailSet',
+		'@odata.id': '/<thumbnailSet.id>',
+		'id' : '<Edm.String>',
+		 ...,
+		'small' : '<Microsoft.Graph.thumbnail>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added a thumbnailSet entity resource representation. 
 
-####Update a thumbnailSet entity resource
+####Update a thumbnailSet
 
 To update an existing `thumbnailSet` entity resource, submit an `HTTP PUT` request, specifying a new instance of the resource in the request body: 
 
@@ -158,33 +156,32 @@ To update an existing `thumbnailSet` entity resource, submit an `HTTP PUT` reque
 ####Request
 
 ```
+	PUT /<version>/myOrganization/drives/<drive.id>/files/<item.id>/thumbnails/<thumbnailSet.id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
+	Content-Length : <body_length>
 	
-PUT /<version>/myOrganization/drives/<drive.id>/files/<item.id>/thumbnails/<thumbnailSet.id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-Content-Length : <body_length>
-
-{
-	<thumbnailSet.property_1> : <value_1>,
-	...,
-	<thumbnailSet.property_n> : <value_n>
-}
-
+	{
+		<thumbnailSet.property_1> : <value_1>,
+		...,
+		<thumbnailSet.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
-####Update a thumbnailSet entity properties
+####Update a thumbnailSet's properties
 
 To update selected properties of an existing `thumbnailSet` entity, submit an `HTTP PATCH` request, specifying a new instance of the resource in the request body: 
 
@@ -195,33 +192,32 @@ To update selected properties of an existing `thumbnailSet` entity, submit an `H
 ####Request
 
 ```
+	PATCH /<version>/myOrganization/drives/<drive.id>/files/<item.id>/thumbnails/<thumbnailSet.id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
+	Content-Length : <body_length>
 	
-PATCH /<version>/myOrganization/drives/<drive.id>/files/<item.id>/thumbnails/<thumbnailSet.id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-Content-Length : <body_length>
-
-{
-	<thumbnailSet.property_1> : <value_1>,
-	...,
-	<thumbnailSet.property_n> : <value_n>
-}
-
+	{
+		<thumbnailSet.property_1> : <value_1>,
+		...,
+		<thumbnailSet.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
 
-####Delete a thumbnailSet entity resource
+####Delete a thumbnailSet 
 
 To delete an existing `thumbnailSet` entity resource, submit an `HTTP DELETE` request, specifying a new instance of the resource in the request body: 
 
@@ -232,22 +228,21 @@ To delete an existing `thumbnailSet` entity resource, submit an `HTTP DELETE` re
 ####Request
 
 ```
+	DELETE /<version>/myOrganization/drives/<drive.id>/files/<item.id>/thumbnails/<thumbnailSet.id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
 	
-DELETE /<version>/myOrganization/drives/<drive.id>/files/<item.id>/thumbnails/<thumbnailSet.id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-
-
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
@@ -265,22 +260,21 @@ To call the `getCustomThumbnail` function, submit a `POST` request of the follow
 #####Request
 
 ```
+	POST /<version>/myOrganization/drives/<drive.id>/files/<item.id>/thumbnails/<thumbnailSet.id>/getCustomThumbnail HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : 0
 	
-POST /<version>/myOrganization/drives/<drive.id>/files/<item.id>/thumbnails/<thumbnailSet.id>/getCustomThumbnail HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : 0
-
-
+	
 ```
 
 #####Response
 
 ```
 	201 Created
-
-
+	
+	
 ```
 
 A successful call to the thumbnailSet/getCustomThumbnail action returns an empty response. 

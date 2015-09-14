@@ -5,7 +5,7 @@
   <MetadataUri>https://graph.microsoft.com/alpha/$metadata</MetadataUri>
   <Content>
     <CodeExample>
-      <Title>Get a File entity resource</Title>
+      <Title>Get a File</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.File</TargetResourceFullName>
       <TargetResourceName>File</TargetResourceName>
@@ -60,7 +60,7 @@ Accept : application/json;odata=verbose
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the specified a File entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Create or add a File entity resource</Title>
+      <Title>Create or add a File</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.File</TargetResourceFullName>
       <TargetResourceName>File</TargetResourceName>
@@ -128,7 +128,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the newly added a File entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a File entity resource</Title>
+      <Title>Update a File</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.File</TargetResourceFullName>
       <TargetResourceName>File</TargetResourceName>
@@ -191,7 +191,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 - No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a File entity properties</Title>
+      <Title>Update a File's properties</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.File</TargetResourceFullName>
       <TargetResourceName>File</TargetResourceName>
@@ -254,7 +254,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Delete a File entity resource</Title>
+      <Title>Delete a File </Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.File</TargetResourceFullName>
       <TargetResourceName>File</TargetResourceName>

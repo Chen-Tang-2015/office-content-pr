@@ -5,7 +5,7 @@
   <MetadataUri>https://graph.microsoft.com/alpha/$metadata</MetadataUri>
   <Content>
     <CodeExample>
-      <Title>Get an OAuth2PermissionGrant entity resource</Title>
+      <Title>Get an OAuth2PermissionGrant</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.OAuth2PermissionGrant</TargetResourceFullName>
       <TargetResourceName>OAuth2PermissionGrant</TargetResourceName>
@@ -42,7 +42,7 @@ Accept : application/json;odata=verbose
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the specified an OAuth2PermissionGrant entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Create or add an OAuth2PermissionGrant entity resource</Title>
+      <Title>Create or add an OAuth2PermissionGrant</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.OAuth2PermissionGrant</TargetResourceFullName>
       <TargetResourceName>OAuth2PermissionGrant</TargetResourceName>
@@ -92,7 +92,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the newly added an OAuth2PermissionGrant entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update an OAuth2PermissionGrant entity resource</Title>
+      <Title>Update an OAuth2PermissionGrant</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.OAuth2PermissionGrant</TargetResourceFullName>
       <TargetResourceName>OAuth2PermissionGrant</TargetResourceName>
@@ -134,7 +134,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 - No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update an OAuth2PermissionGrant entity properties</Title>
+      <Title>Update an OAuth2PermissionGrant's properties</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.OAuth2PermissionGrant</TargetResourceFullName>
       <TargetResourceName>OAuth2PermissionGrant</TargetResourceName>
@@ -176,7 +176,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Delete an OAuth2PermissionGrant entity resource</Title>
+      <Title>Delete an OAuth2PermissionGrant </Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.OAuth2PermissionGrant</TargetResourceFullName>
       <TargetResourceName>OAuth2PermissionGrant</TargetResourceName>

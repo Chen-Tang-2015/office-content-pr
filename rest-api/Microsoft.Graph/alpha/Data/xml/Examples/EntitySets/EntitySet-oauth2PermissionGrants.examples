@@ -5,7 +5,7 @@
   <MetadataUri>https://graph.microsoft.com/alpha/$metadata</MetadataUri>
   <Content>
     <CodeExample>
-      <Title>Get members of the oauth2PermissionGrants entity set</Title>
+      <Title>Get the oauth2PermissionGrants's members</Title>
       <TargetResourceType>EntitySet</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.GraphService/oauth2PermissionGrants</TargetResourceFullName>
       <TargetResourceName>oauth2PermissionGrants</TargetResourceName>
@@ -49,7 +49,7 @@ Accept : application/json;odata=verbose
       <Remarks>The successful response returns a &lt;code&gt;200 OK&lt;/code&gt; status code, with a payload containing the collection of the &lt;code&gt;Microsoft.Graph.OAuth2PermissionGrant&lt;/code&gt; resource representations.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Add a new member to the oauth2PermissionGrants entity set</Title>
+      <Title>Add a new member to the oauth2PermissionGrants</Title>
       <TargetResourceType>EntitySet</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.GraphService/oauth2PermissionGrants</TargetResourceFullName>
       <TargetResourceName>oauth2PermissionGrants</TargetResourceName>

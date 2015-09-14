@@ -86,9 +86,9 @@ The `ItemAttachment` resource supports the following navigation properties to ac
 
 The `ItemAttachment` entity resource supports the following operations, including actions and functions. 
 
-####Work with the ItemAttachment entity resource
+####Work with the ItemAttachment resource
 
-####Get an ItemAttachment entity resource
+####Get an ItemAttachment
 
 To get an existing `ItemAttachment` entity resource, submit an `HTTP GET` request of the following syntax: 
 
@@ -102,32 +102,31 @@ To get an existing `ItemAttachment` entity resource, submit an `HTTP GET` reques
 ####Request
 
 ```
+	GET /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<ItemAttachment.Id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<ItemAttachment.Id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 ####Response
 
 ```
 	200 OK
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.ItemAttachment',
-	'@odata.id': '/<ItemAttachment.Id>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.ItemAttachment',
+		'@odata.id': '/<ItemAttachment.Id>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the specified an ItemAttachment entity resource representation. 
 
-####Create or add an ItemAttachment entity resource
+####Create or add an ItemAttachment
 
  
 
@@ -143,7 +142,7 @@ A successful response returns the `200 OK` status code and a payload containing 
 
  
 
-####Update an ItemAttachment entity resource
+####Update an ItemAttachment
 
 To update an existing `ItemAttachment` entity resource, submit an `HTTP PUT` request, specifying a new instance of the resource in the request body: 
 
@@ -156,33 +155,32 @@ To update an existing `ItemAttachment` entity resource, submit an `HTTP PUT` req
 ####Request
 
 ```
+	PUT /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<ItemAttachment.Id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
+	Content-Length : <body_length>
 	
-PUT /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<ItemAttachment.Id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-Content-Length : <body_length>
-
-{
-	<ItemAttachment.property_1> : <value_1>,
-	...,
-	<ItemAttachment.property_n> : <value_n>
-}
-
+	{
+		<ItemAttachment.property_1> : <value_1>,
+		...,
+		<ItemAttachment.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
-####Update an ItemAttachment entity properties
+####Update an ItemAttachment's properties
 
 To update selected properties of an existing `ItemAttachment` entity, submit an `HTTP PATCH` request, specifying a new instance of the resource in the request body: 
 
@@ -195,33 +193,32 @@ To update selected properties of an existing `ItemAttachment` entity, submit an 
 ####Request
 
 ```
+	PATCH /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<ItemAttachment.Id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
+	Content-Length : <body_length>
 	
-PATCH /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<ItemAttachment.Id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-Content-Length : <body_length>
-
-{
-	<ItemAttachment.property_1> : <value_1>,
-	...,
-	<ItemAttachment.property_n> : <value_n>
-}
-
+	{
+		<ItemAttachment.property_1> : <value_1>,
+		...,
+		<ItemAttachment.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
 
-####Delete an ItemAttachment entity resource
+####Delete an ItemAttachment 
 
 To delete an existing `ItemAttachment` entity resource, submit an `HTTP DELETE` request, specifying a new instance of the resource in the request body: 
 
@@ -234,27 +231,26 @@ To delete an existing `ItemAttachment` entity resource, submit an `HTTP DELETE` 
 ####Request
 
 ```
+	DELETE /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<ItemAttachment.Id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
 	
-DELETE /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<ItemAttachment.Id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-
-
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
 
-####Access the ItemAttachment's Item related resource
+####Access the OutlookItem resource via the ItemAttachment/Item relationship
 
 #####Get the ItemAttachment/Item entity
 
@@ -273,30 +269,29 @@ To get an ItemAttachment/Item `ItemAttachment/Item` resource, submit an `HTTP GE
 #####Request
 
 ```
+	GET  HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET  HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 #####Response
 
 ```
 	200 OK
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.OutlookItem',
-	'@odata.id': '/<OutlookItem.Id>',
-	'Categories' : '<Collection(Edm.String)>',
-	 ...,
-	'Id' : '<Edm.String>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.OutlookItem',
+		'@odata.id': '/<OutlookItem.Id>',
+		'Categories' : '<Collection(Edm.String)>',
+		 ...,
+		'Id' : '<Edm.String>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a body containing an `OutlookItem` resource representation. 

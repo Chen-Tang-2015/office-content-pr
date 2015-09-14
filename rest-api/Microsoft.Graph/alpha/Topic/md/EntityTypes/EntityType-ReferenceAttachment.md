@@ -75,9 +75,9 @@ The `ReferenceAttachment` resource supports the following properties
 
 The `ReferenceAttachment` entity resource supports the following operations, including actions and functions. 
 
-####Work with the ReferenceAttachment entity resource
+####Work with the ReferenceAttachment resource
 
-####Get a ReferenceAttachment entity resource
+####Get a ReferenceAttachment
 
 To get an existing `ReferenceAttachment` entity resource, submit an `HTTP GET` request of the following syntax: 
 
@@ -88,32 +88,31 @@ To get an existing `ReferenceAttachment` entity resource, submit an `HTTP GET` r
 ####Request
 
 ```
+	GET /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<ReferenceAttachment.Id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<ReferenceAttachment.Id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 ####Response
 
 ```
 	200 OK
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.ReferenceAttachment',
-	'@odata.id': '/<ReferenceAttachment.Id>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.ReferenceAttachment',
+		'@odata.id': '/<ReferenceAttachment.Id>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a ReferenceAttachment entity resource representation. 
 
-####Create or add a ReferenceAttachment entity resource
+####Create or add a ReferenceAttachment
 
  
 
@@ -127,7 +126,7 @@ A successful response returns the `200 OK` status code and a payload containing 
 
  
 
-####Update a ReferenceAttachment entity resource
+####Update a ReferenceAttachment
 
 To update an existing `ReferenceAttachment` entity resource, submit an `HTTP PUT` request, specifying a new instance of the resource in the request body: 
 
@@ -138,33 +137,32 @@ To update an existing `ReferenceAttachment` entity resource, submit an `HTTP PUT
 ####Request
 
 ```
+	PUT /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<ReferenceAttachment.Id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
+	Content-Length : <body_length>
 	
-PUT /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<ReferenceAttachment.Id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-Content-Length : <body_length>
-
-{
-	<ReferenceAttachment.property_1> : <value_1>,
-	...,
-	<ReferenceAttachment.property_n> : <value_n>
-}
-
+	{
+		<ReferenceAttachment.property_1> : <value_1>,
+		...,
+		<ReferenceAttachment.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
-####Update a ReferenceAttachment entity properties
+####Update a ReferenceAttachment's properties
 
 To update selected properties of an existing `ReferenceAttachment` entity, submit an `HTTP PATCH` request, specifying a new instance of the resource in the request body: 
 
@@ -175,33 +173,32 @@ To update selected properties of an existing `ReferenceAttachment` entity, submi
 ####Request
 
 ```
+	PATCH /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<ReferenceAttachment.Id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
+	Content-Length : <body_length>
 	
-PATCH /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<ReferenceAttachment.Id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-Content-Length : <body_length>
-
-{
-	<ReferenceAttachment.property_1> : <value_1>,
-	...,
-	<ReferenceAttachment.property_n> : <value_n>
-}
-
+	{
+		<ReferenceAttachment.property_1> : <value_1>,
+		...,
+		<ReferenceAttachment.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
 
-####Delete a ReferenceAttachment entity resource
+####Delete a ReferenceAttachment 
 
 To delete an existing `ReferenceAttachment` entity resource, submit an `HTTP DELETE` request, specifying a new instance of the resource in the request body: 
 
@@ -212,22 +209,21 @@ To delete an existing `ReferenceAttachment` entity resource, submit an `HTTP DEL
 ####Request
 
 ```
+	DELETE /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<ReferenceAttachment.Id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
 	
-DELETE /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<ReferenceAttachment.Id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-
-
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 No content` status code without any payload. 

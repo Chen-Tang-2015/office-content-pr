@@ -24,16 +24,16 @@ The `permission` resource supports the following properties
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | 
 | `id` (_Key_ | `Edm.String` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
 | `link` | `Microsoft.Graph.sharingLink` | `alpha` | `true` | `n/a` | `true` | `true` |  |  | 
-| `roles` | `Collection(Collection(Edm.String))` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
+| `roles` | `Collection(Edm.String)` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
 
 
 ###Operations
 
 The `permission` entity resource supports the following operations, including actions and functions. 
 
-####Work with the permission entity resource
+####Work with the permission resource
 
-####Get a permission entity resource
+####Get a permission
 
 To get an existing `permission` entity resource, submit an `HTTP GET` request of the following syntax: 
 
@@ -44,35 +44,34 @@ To get an existing `permission` entity resource, submit an `HTTP GET` request of
 ####Request
 
 ```
+	GET  HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET  HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 ####Response
 
 ```
 	200 OK
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.permission',
-	'@odata.id': '/<permission.id>',
-	'id' : '<Edm.String>',
-	 ...,
-	'roles' : '<Collection(Edm.String)>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.permission',
+		'@odata.id': '/<permission.id>',
+		'id' : '<Edm.String>',
+		 ...,
+		'roles' : '<Collection(Edm.String)>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a permission entity resource representation. 
 
-####Create or add a permission entity resource
+####Create or add a permission
 
  
 
@@ -86,7 +85,7 @@ A successful response returns the `200 OK` status code and a payload containing 
 
  
 
-####Update a permission entity resource
+####Update a permission
 
 To update an existing `permission` entity resource, submit an `HTTP PUT` request, specifying a new instance of the resource in the request body: 
 
@@ -97,33 +96,32 @@ To update an existing `permission` entity resource, submit an `HTTP PUT` request
 ####Request
 
 ```
+	PUT  HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
+	Content-Length : <body_length>
 	
-PUT  HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-Content-Length : <body_length>
-
-{
-	<permission.property_1> : <value_1>,
-	...,
-	<permission.property_n> : <value_n>
-}
-
+	{
+		<permission.property_1> : <value_1>,
+		...,
+		<permission.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
-####Update a permission entity properties
+####Update a permission's properties
 
 To update selected properties of an existing `permission` entity, submit an `HTTP PATCH` request, specifying a new instance of the resource in the request body: 
 
@@ -134,33 +132,32 @@ To update selected properties of an existing `permission` entity, submit an `HTT
 ####Request
 
 ```
+	PATCH  HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
+	Content-Length : <body_length>
 	
-PATCH  HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-Content-Length : <body_length>
-
-{
-	<permission.property_1> : <value_1>,
-	...,
-	<permission.property_n> : <value_n>
-}
-
+	{
+		<permission.property_1> : <value_1>,
+		...,
+		<permission.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
 
-####Delete a permission entity resource
+####Delete a permission 
 
 To delete an existing `permission` entity resource, submit an `HTTP DELETE` request, specifying a new instance of the resource in the request body: 
 
@@ -171,22 +168,21 @@ To delete an existing `permission` entity resource, submit an `HTTP DELETE` requ
 ####Request
 
 ```
+	DELETE  HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
 	
-DELETE  HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-
-
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 No content` status code without any payload. 

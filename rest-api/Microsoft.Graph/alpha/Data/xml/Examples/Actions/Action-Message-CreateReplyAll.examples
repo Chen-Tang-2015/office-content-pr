@@ -40,7 +40,7 @@ Content-Length : 0
 	'WebLink' : '&lt;Edm.String&gt;'
 }
 </Response>
-      <Remarks>A successful call to the Message/CreateReplyAll action returns an instance of the Message/CreateReplyAll type.</Remarks>
+      <Remarks>A successful call to the Message/CreateReplyAll action returns an instance of the Microsoft.Graph.Message type.</Remarks>
     </CodeExample>
   </Content>
 </ContentComponentOfCodeExample>

@@ -5,7 +5,7 @@
   <MetadataUri>https://graph.microsoft.com/alpha/$metadata</MetadataUri>
   <Content>
     <CodeExample>
-      <Title>Get a drive entity resource</Title>
+      <Title>Get a drive</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.drive</TargetResourceFullName>
       <TargetResourceName>drive</TargetResourceName>
@@ -34,7 +34,7 @@ Accept : application/json;odata=verbose
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the specified a drive entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Create or add a drive entity resource</Title>
+      <Title>Create or add a drive</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.drive</TargetResourceFullName>
       <TargetResourceName>drive</TargetResourceName>
@@ -69,7 +69,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the newly added a drive entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a drive entity resource</Title>
+      <Title>Update a drive</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.drive</TargetResourceFullName>
       <TargetResourceName>drive</TargetResourceName>
@@ -96,7 +96,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 - No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a drive entity properties</Title>
+      <Title>Update a drive's properties</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.drive</TargetResourceFullName>
       <TargetResourceName>drive</TargetResourceName>
@@ -123,7 +123,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Delete a drive entity resource</Title>
+      <Title>Delete a drive </Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.drive</TargetResourceFullName>
       <TargetResourceName>drive</TargetResourceName>

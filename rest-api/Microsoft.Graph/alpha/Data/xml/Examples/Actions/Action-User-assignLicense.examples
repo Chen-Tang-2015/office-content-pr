@@ -51,7 +51,7 @@ Content-Length : &lt;body_length&gt;
 	'userType' : '&lt;Edm.String&gt;'
 }
 </Response>
-      <Remarks>A successful call to the User/assignLicense action returns an instance of the User/assignLicense type.</Remarks>
+      <Remarks>A successful call to the User/assignLicense action returns an instance of the Microsoft.Graph.User type.</Remarks>
     </CodeExample>
   </Content>
 </ContentComponentOfCodeExample>

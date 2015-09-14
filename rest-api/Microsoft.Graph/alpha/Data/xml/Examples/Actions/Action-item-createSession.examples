@@ -32,7 +32,7 @@ Content-Length : &lt;body_length&gt;
 		'uploadUrl': '&lt;Edm.String&gt;'
 }
 </Response>
-      <Remarks>A successful call to the item/createSession action returns an instance of the item/createSession type.</Remarks>
+      <Remarks>A successful call to the item/createSession action returns an instance of the Microsoft.Graph.uploadSession type.</Remarks>
     </CodeExample>
   </Content>
 </ContentComponentOfCodeExample>

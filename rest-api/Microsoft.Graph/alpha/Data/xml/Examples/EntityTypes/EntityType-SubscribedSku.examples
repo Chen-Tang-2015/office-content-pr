@@ -5,7 +5,7 @@
   <MetadataUri>https://graph.microsoft.com/alpha/$metadata</MetadataUri>
   <Content>
     <CodeExample>
-      <Title>Get a SubscribedSku entity resource</Title>
+      <Title>Get a SubscribedSku</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.SubscribedSku</TargetResourceFullName>
       <TargetResourceName>SubscribedSku</TargetResourceName>
@@ -42,7 +42,7 @@ Accept : application/json;odata=verbose
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the specified a SubscribedSku entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Create or add a SubscribedSku entity resource</Title>
+      <Title>Create or add a SubscribedSku</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.SubscribedSku</TargetResourceFullName>
       <TargetResourceName>SubscribedSku</TargetResourceName>
@@ -92,7 +92,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the newly added a SubscribedSku entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a SubscribedSku entity resource</Title>
+      <Title>Update a SubscribedSku</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.SubscribedSku</TargetResourceFullName>
       <TargetResourceName>SubscribedSku</TargetResourceName>
@@ -134,7 +134,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 - No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a SubscribedSku entity properties</Title>
+      <Title>Update a SubscribedSku's properties</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.SubscribedSku</TargetResourceFullName>
       <TargetResourceName>SubscribedSku</TargetResourceName>
@@ -176,7 +176,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Delete a SubscribedSku entity resource</Title>
+      <Title>Delete a SubscribedSku </Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.SubscribedSku</TargetResourceFullName>
       <TargetResourceName>SubscribedSku</TargetResourceName>

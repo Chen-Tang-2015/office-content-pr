@@ -5,7 +5,7 @@
   <MetadataUri>https://graph.microsoft.com/alpha/$metadata</MetadataUri>
   <Content>
     <CodeExample>
-      <Title>Get a DeviceConfiguration entity resource</Title>
+      <Title>Get a DeviceConfiguration</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.DeviceConfiguration</TargetResourceFullName>
       <TargetResourceName>DeviceConfiguration</TargetResourceName>
@@ -56,7 +56,7 @@ Accept : application/json;odata=verbose
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the specified a DeviceConfiguration entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Create or add a DeviceConfiguration entity resource</Title>
+      <Title>Create or add a DeviceConfiguration</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.DeviceConfiguration</TargetResourceFullName>
       <TargetResourceName>DeviceConfiguration</TargetResourceName>
@@ -106,7 +106,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the newly added a DeviceConfiguration entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a DeviceConfiguration entity resource</Title>
+      <Title>Update a DeviceConfiguration</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.DeviceConfiguration</TargetResourceFullName>
       <TargetResourceName>DeviceConfiguration</TargetResourceName>
@@ -148,7 +148,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 - No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a DeviceConfiguration entity properties</Title>
+      <Title>Update a DeviceConfiguration's properties</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.DeviceConfiguration</TargetResourceFullName>
       <TargetResourceName>DeviceConfiguration</TargetResourceName>
@@ -190,7 +190,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Delete a DeviceConfiguration entity resource</Title>
+      <Title>Delete a DeviceConfiguration </Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.DeviceConfiguration</TargetResourceFullName>
       <TargetResourceName>DeviceConfiguration</TargetResourceName>

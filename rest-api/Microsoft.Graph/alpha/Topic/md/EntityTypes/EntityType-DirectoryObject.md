@@ -104,9 +104,9 @@ The `DirectoryObject` resource supports the following actions:
 
 The `DirectoryObject` entity resource supports the following operations, including actions and functions. 
 
-####Work with the DirectoryObject entity resource
+####Work with the DirectoryObject resource
 
-####Get a DirectoryObject entity resource
+####Get a DirectoryObject
 
 To get an existing `DirectoryObject` entity resource, submit an `HTTP GET` request of the following syntax: 
 
@@ -118,35 +118,34 @@ To get an existing `DirectoryObject` entity resource, submit an `HTTP GET` reque
 ####Request
 
 ```
+	GET /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 ####Response
 
 ```
 	200 OK
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.DirectoryObject',
-	'@odata.id': '/<DirectoryObject.objectId>',
-	'deletionTimestamp' : '<Edm.DateTimeOffset>',
-	 ...,
-	'objectType' : '<Edm.String>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.DirectoryObject',
+		'@odata.id': '/<DirectoryObject.objectId>',
+		'deletionTimestamp' : '<Edm.DateTimeOffset>',
+		 ...,
+		'objectType' : '<Edm.String>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a DirectoryObject entity resource representation. 
 
-####Create or add a DirectoryObject entity resource
+####Create or add a DirectoryObject
 
 To create new `DirectoryObject` entity resource, submit an `HTTP POST` request against the `directoryObjects` collection: 
 
@@ -159,41 +158,40 @@ To create new `DirectoryObject` entity resource, submit an `HTTP POST` request a
 ####Request
 
 ```
+	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : <body_length>
 	
-POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : <body_length>
-
-{
-	<DirectoryObject.property_1> : <value_1>,
-	...,
-	<DirectoryObject.property_n> : <value_n>
-}
-
+	{
+		<DirectoryObject.property_1> : <value_1>,
+		...,
+		<DirectoryObject.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	201 Created
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.DirectoryObject',
-	'@odata.id': '/<DirectoryObject.objectId>',
-	'deletionTimestamp' : '<Edm.DateTimeOffset>',
-	 ...,
-	'objectType' : '<Edm.String>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.DirectoryObject',
+		'@odata.id': '/<DirectoryObject.objectId>',
+		'deletionTimestamp' : '<Edm.DateTimeOffset>',
+		 ...,
+		'objectType' : '<Edm.String>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added a DirectoryObject entity resource representation. 
 
-####Update a DirectoryObject entity resource
+####Update a DirectoryObject
 
 To update an existing `DirectoryObject` entity resource, submit an `HTTP PUT` request, specifying a new instance of the resource in the request body: 
 
@@ -206,33 +204,32 @@ To update an existing `DirectoryObject` entity resource, submit an `HTTP PUT` re
 ####Request
 
 ```
+	PUT /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
+	Content-Length : <body_length>
 	
-PUT /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-Content-Length : <body_length>
-
-{
-	<DirectoryObject.property_1> : <value_1>,
-	...,
-	<DirectoryObject.property_n> : <value_n>
-}
-
+	{
+		<DirectoryObject.property_1> : <value_1>,
+		...,
+		<DirectoryObject.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
-####Update a DirectoryObject entity properties
+####Update a DirectoryObject's properties
 
 To update selected properties of an existing `DirectoryObject` entity, submit an `HTTP PATCH` request, specifying a new instance of the resource in the request body: 
 
@@ -245,33 +242,32 @@ To update selected properties of an existing `DirectoryObject` entity, submit an
 ####Request
 
 ```
+	PATCH /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
+	Content-Length : <body_length>
 	
-PATCH /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-Content-Length : <body_length>
-
-{
-	<DirectoryObject.property_1> : <value_1>,
-	...,
-	<DirectoryObject.property_n> : <value_n>
-}
-
+	{
+		<DirectoryObject.property_1> : <value_1>,
+		...,
+		<DirectoryObject.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
 
-####Delete a DirectoryObject entity resource
+####Delete a DirectoryObject 
 
 To delete an existing `DirectoryObject` entity resource, submit an `HTTP DELETE` request, specifying a new instance of the resource in the request body: 
 
@@ -284,22 +280,21 @@ To delete an existing `DirectoryObject` entity resource, submit an `HTTP DELETE`
 ####Request
 
 ```
+	DELETE /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
 	
-DELETE /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-
-
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
@@ -319,28 +314,27 @@ To call the `DirectoryObject/checkMemberGroups` action,submit a `POST` request o
 #####Request
 
 ```
+	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/checkMemberGroups HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : <body_length>
 	
-POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/checkMemberGroups HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : <body_length>
-
-{
-	groupIds : <Edm.String>
-}
-
+	{
+		groupIds : <Edm.String>
+	}
+	
 ```
 
 #####Response
 
 ```
 	201 Created
-
-'<Edm.String>'
+	
+	'<Edm.String>'
 ```
 
-A successful call to the DirectoryObject/checkMemberGroups action returns an instance of the DirectoryObject/checkMemberGroups type. 
+A successful call to the DirectoryObject/checkMemberGroups action returns an instance of the Edm.String type. 
 
 #####Call the DirectoryObject/getMemberGroups action
 
@@ -355,28 +349,27 @@ To call the `DirectoryObject/getMemberGroups` action,submit a `POST` request of 
 #####Request
 
 ```
+	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberGroups HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : <body_length>
 	
-POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberGroups HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : <body_length>
-
-{
-	securityEnabledOnly : <Edm.Boolean>
-}
-
+	{
+		securityEnabledOnly : <Edm.Boolean>
+	}
+	
 ```
 
 #####Response
 
 ```
 	201 Created
-
-'<Edm.String>'
+	
+	'<Edm.String>'
 ```
 
-A successful call to the DirectoryObject/getMemberGroups action returns an instance of the DirectoryObject/getMemberGroups type. 
+A successful call to the DirectoryObject/getMemberGroups action returns an instance of the Edm.String type. 
 
 #####Call the DirectoryObject/getMemberObjects action
 
@@ -391,26 +384,25 @@ To call the `DirectoryObject/getMemberObjects` action,submit a `POST` request of
 #####Request
 
 ```
+	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberObjects HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : <body_length>
 	
-POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberObjects HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : <body_length>
-
-{
-	securityEnabledOnly : <Edm.Boolean>
-}
-
+	{
+		securityEnabledOnly : <Edm.Boolean>
+	}
+	
 ```
 
 #####Response
 
 ```
 	201 Created
-
-'<Edm.String>'
+	
+	'<Edm.String>'
 ```
 
-A successful call to the DirectoryObject/getMemberObjects action returns an instance of the DirectoryObject/getMemberObjects type. 
+A successful call to the DirectoryObject/getMemberObjects action returns an instance of the Edm.String type. 
 

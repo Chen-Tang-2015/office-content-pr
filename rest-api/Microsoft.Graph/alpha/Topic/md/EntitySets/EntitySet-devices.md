@@ -30,7 +30,7 @@ The `devices` entity set resource can be accessed via the following Urls.
 
 ##Operations
 
-###Get members of the devices entity set
+###Get the devices's members
 
 To get the members of the `devices` entity set, submit an `HTTP GET` request .  
 
@@ -44,42 +44,41 @@ To get the members of the `devices` entity set, submit an `HTTP GET` request .
 ###Request
 
 ```
+	GET /<version>/myOrganization/devices HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/devices HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 ###Response
 
 ```
 	200 OK
-
-{
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#devices',
-	'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/devices',
-	'value': [ 
+	
 	{
-
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Device',
-		'@odata.id': '/<Device.objectId>',
-		'accountEnabled' : '<Edm.Boolean>',
-		 ...,
-		'lastDirSyncTime' : '<Edm.DateTimeOffset>'
-}
-
-	]
-}
-
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#devices',
+		'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/devices',
+		'value': [ 
+		{
+	
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.Device',
+			'@odata.id': '/<Device.objectId>',
+			'accountEnabled' : '<Edm.Boolean>',
+			 ...,
+			'lastDirSyncTime' : '<Edm.DateTimeOffset>'
+	}
+	
+		]
+	}
+	
 ```
 
 The successful response returns a `200 OK` status code, with a payload containing the collection of the `Microsoft.Graph.Device` resource representations. 
 
-###Add a new member to the devices entity set
+###Add a new member to the devices
 
 To create a new Microsoft.Graph.Device entity resource, submit an `HTTP POST` request against the `devices` entity set, as shown in this example. 
 
@@ -92,43 +91,42 @@ To create a new Microsoft.Graph.Device entity resource, submit an `HTTP POST` re
 ###Request
 
 ```
+	POST /<version>/myOrganization/devices HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : <body_length>
 	
-POST /<version>/myOrganization/devices HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : <body_length>
-
-{
-	<Device.property_1> : <value_1>,
-	...,
-	<Device.propery_n> : <value_n>
-}
-
+	{
+		<Device.property_1> : <value_1>,
+		...,
+		<Device.propery_n> : <value_n>
+	}
+	
 ```
 
 ###Response
 
 ```
 	201 Created
-
-{
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#devices',
-	'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/devices',
-	'value': [ 
+	
 	{
-
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Device',
-		'@odata.id': '/<Device.objectId>',
-		'accountEnabled' : '<Edm.Boolean>',
-		 ...,
-		'lastDirSyncTime' : '<Edm.DateTimeOffset>'
-}
-
-	]
-}
-
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#devices',
+		'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/devices',
+		'value': [ 
+		{
+	
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.Device',
+			'@odata.id': '/<Device.objectId>',
+			'accountEnabled' : '<Edm.Boolean>',
+			 ...,
+			'lastDirSyncTime' : '<Edm.DateTimeOffset>'
+	}
+	
+		]
+	}
+	
 ```
 
 The successful response returns a `201 Created` status code, with a payload containing a Microsoft.Graph.Device `Microsoft.Graph.Device` resource representations. 

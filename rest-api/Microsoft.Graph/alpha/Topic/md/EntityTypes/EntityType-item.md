@@ -103,9 +103,9 @@ To invoke a function, submit a `HTTP POST` request against the function's resour
 
 The `item` entity resource supports the following operations, including actions and functions. 
 
-####Work with the item entity resource
+####Work with the item resource
 
-####Get an item entity resource
+####Get an item
 
 To get an existing `item` entity resource, submit an `HTTP GET` request of the following syntax: 
 
@@ -116,35 +116,34 @@ To get an existing `item` entity resource, submit an `HTTP GET` request of the f
 ####Request
 
 ```
+	GET /<version>/myOrganization/drives/<drive.id>/files/<item.id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/drives/<drive.id>/files/<item.id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 ####Response
 
 ```
 	200 OK
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.item',
-	'@odata.id': '/<item.id>',
-	'createdBy' : '<Microsoft.Graph.identitySet>',
-	 ...,
-	'webUrl' : '<Edm.String>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.item',
+		'@odata.id': '/<item.id>',
+		'createdBy' : '<Microsoft.Graph.identitySet>',
+		 ...,
+		'webUrl' : '<Edm.String>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the specified an item entity resource representation. 
 
-####Create or add an item entity resource
+####Create or add an item
 
 To create new `item` entity resource, submit an `HTTP POST` request against the `files` collection: 
 
@@ -155,41 +154,40 @@ To create new `item` entity resource, submit an `HTTP POST` request against the 
 ####Request
 
 ```
+	POST /<version>/myOrganization/drives/<drive.id>/files/<item.id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : <body_length>
 	
-POST /<version>/myOrganization/drives/<drive.id>/files/<item.id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : <body_length>
-
-{
-	<item.property_1> : <value_1>,
-	...,
-	<item.property_n> : <value_n>
-}
-
+	{
+		<item.property_1> : <value_1>,
+		...,
+		<item.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	201 Created
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.item',
-	'@odata.id': '/<item.id>',
-	'createdBy' : '<Microsoft.Graph.identitySet>',
-	 ...,
-	'webUrl' : '<Edm.String>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.item',
+		'@odata.id': '/<item.id>',
+		'createdBy' : '<Microsoft.Graph.identitySet>',
+		 ...,
+		'webUrl' : '<Edm.String>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added an item entity resource representation. 
 
-####Update an item entity resource
+####Update an item
 
 To update an existing `item` entity resource, submit an `HTTP PUT` request, specifying a new instance of the resource in the request body: 
 
@@ -200,33 +198,32 @@ To update an existing `item` entity resource, submit an `HTTP PUT` request, spec
 ####Request
 
 ```
+	PUT /<version>/myOrganization/drives/<drive.id>/files/<item.id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
+	Content-Length : <body_length>
 	
-PUT /<version>/myOrganization/drives/<drive.id>/files/<item.id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-Content-Length : <body_length>
-
-{
-	<item.property_1> : <value_1>,
-	...,
-	<item.property_n> : <value_n>
-}
-
+	{
+		<item.property_1> : <value_1>,
+		...,
+		<item.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
-####Update an item entity properties
+####Update an item's properties
 
 To update selected properties of an existing `item` entity, submit an `HTTP PATCH` request, specifying a new instance of the resource in the request body: 
 
@@ -237,33 +234,32 @@ To update selected properties of an existing `item` entity, submit an `HTTP PATC
 ####Request
 
 ```
+	PATCH /<version>/myOrganization/drives/<drive.id>/files/<item.id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
+	Content-Length : <body_length>
 	
-PATCH /<version>/myOrganization/drives/<drive.id>/files/<item.id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-Content-Length : <body_length>
-
-{
-	<item.property_1> : <value_1>,
-	...,
-	<item.property_n> : <value_n>
-}
-
+	{
+		<item.property_1> : <value_1>,
+		...,
+		<item.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
 
-####Delete an item entity resource
+####Delete an item 
 
 To delete an existing `item` entity resource, submit an `HTTP DELETE` request, specifying a new instance of the resource in the request body: 
 
@@ -274,27 +270,26 @@ To delete an existing `item` entity resource, submit an `HTTP DELETE` request, s
 ####Request
 
 ```
+	DELETE /<version>/myOrganization/drives/<drive.id>/files/<item.id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
 	
-DELETE /<version>/myOrganization/drives/<drive.id>/files/<item.id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-
-
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
 
-####Access the item's children related resource
+####Access the item collection via the item/children relationship
 
 #####Get the item/children collection
 
@@ -307,41 +302,40 @@ To get the `item/children` collection, submit an `HTTP GET` request of the follo
 #####Request
 
 ```
+	GET /<version>/myOrganization/drives/<drive.id>/files/<item.id>/children HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/drives/<drive.id>/files/<item.id>/children HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 #####Response
 
 ```
 	200 OK
-
-{
-	'value': [
-		{
-		
-			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-			'@odata.type': '#Microsoft.Graph.item',
-			'@odata.id': '/<item.id>',
-			'createdBy' : '<Microsoft.Graph.identitySet>',
-			 ...,
-			'webUrl' : '<Edm.String>'
-		}
-		,
-		...
-	]
-}
-
+	
+	{
+		'value': [
+			{
+			
+				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+				'@odata.type': '#Microsoft.Graph.item',
+				'@odata.id': '/<item.id>',
+				'createdBy' : '<Microsoft.Graph.identitySet>',
+				 ...,
+				'webUrl' : '<Edm.String>'
+			}
+			,
+			...
+		]
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `item` resource representations. 
 
-####Access the item's createdByUser related resource
+####Access the User resource via the item/createdByUser relationship
 
 #####Get the item/createdByUser entity
 
@@ -354,35 +348,34 @@ To get an item/createdByUser `item/createdByUser` resource, submit an `HTTP GET`
 #####Request
 
 ```
+	GET /<version>/myOrganization/drives/<drive.id>/files/<item.id>/createdByUser HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/drives/<drive.id>/files/<item.id>/createdByUser HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 #####Response
 
 ```
 	200 OK
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.User',
-	'@odata.id': '/<User.objectId>',
-	'AboutMe' : '<Edm.String>',
-	 ...,
-	'userType' : '<Edm.String>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.User',
+		'@odata.id': '/<User.objectId>',
+		'AboutMe' : '<Edm.String>',
+		 ...,
+		'userType' : '<Edm.String>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a body containing a `User` resource representation. 
 
-####Access the item's lastModifiedByUser related resource
+####Access the User resource via the item/lastModifiedByUser relationship
 
 #####Get the item/lastModifiedByUser entity
 
@@ -395,35 +388,34 @@ To get an item/lastModifiedByUser `item/lastModifiedByUser` resource, submit an 
 #####Request
 
 ```
+	GET /<version>/myOrganization/drives/<drive.id>/files/<item.id>/lastModifiedByUser HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/drives/<drive.id>/files/<item.id>/lastModifiedByUser HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 #####Response
 
 ```
 	200 OK
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.User',
-	'@odata.id': '/<User.objectId>',
-	'AboutMe' : '<Edm.String>',
-	 ...,
-	'userType' : '<Edm.String>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.User',
+		'@odata.id': '/<User.objectId>',
+		'AboutMe' : '<Edm.String>',
+		 ...,
+		'userType' : '<Edm.String>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a body containing a `User` resource representation. 
 
-####Access the item's thumbnails related resource
+####Access the thumbnailSet collection via the item/thumbnails relationship
 
 #####Get the item/thumbnails collection
 
@@ -436,36 +428,35 @@ To get the `item/thumbnails` collection, submit an `HTTP GET` request of the fol
 #####Request
 
 ```
+	GET /<version>/myOrganization/drives/<drive.id>/files/<item.id>/thumbnails HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/drives/<drive.id>/files/<item.id>/thumbnails HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 #####Response
 
 ```
 	200 OK
-
-{
-	'value': [
-		{
-		
-			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-			'@odata.type': '#Microsoft.Graph.thumbnailSet',
-			'@odata.id': '/<thumbnailSet.id>',
-			'id' : '<Edm.String>',
-			 ...,
-			'small' : '<Microsoft.Graph.thumbnail>'
-		}
-		,
-		...
-	]
-}
-
+	
+	{
+		'value': [
+			{
+			
+				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+				'@odata.type': '#Microsoft.Graph.thumbnailSet',
+				'@odata.id': '/<thumbnailSet.id>',
+				'id' : '<Edm.String>',
+				 ...,
+				'small' : '<Microsoft.Graph.thumbnail>'
+			}
+			,
+			...
+		]
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `thumbnailSet` resource representations. 
@@ -483,38 +474,37 @@ To call the `item/copy` action,submit a `POST` request of the following REST cal
 #####Request
 
 ```
+	POST /<version>/myOrganization/drives/<drive.id>/files/<item.id>/copy HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : <body_length>
 	
-POST /<version>/myOrganization/drives/<drive.id>/files/<item.id>/copy HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : <body_length>
-
-{
-	parentReference : <Microsoft.Graph.itemReference>,
-	name : <Edm.String>
-}
-
+	{
+		parentReference : <Microsoft.Graph.itemReference>,
+		name : <Edm.String>
+	}
+	
 ```
 
 #####Response
 
 ```
 	201 Created
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.item',
-	'@odata.id': '/<item.id>',
-	'createdBy' : '<Microsoft.Graph.identitySet>',
-	 ...,
-	'webUrl' : '<Edm.String>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.item',
+		'@odata.id': '/<item.id>',
+		'createdBy' : '<Microsoft.Graph.identitySet>',
+		 ...,
+		'webUrl' : '<Edm.String>'
+	}
+	
 ```
 
-A successful call to the item/copy action returns an instance of the item/copy type. 
+A successful call to the item/copy action returns an instance of the Microsoft.Graph.item type. 
 
 #####Call the item/createLink action
 
@@ -527,37 +517,36 @@ To call the `item/createLink` action,submit a `POST` request of the following RE
 #####Request
 
 ```
+	POST /<version>/myOrganization/drives/<drive.id>/files/<item.id>/createLink HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : <body_length>
 	
-POST /<version>/myOrganization/drives/<drive.id>/files/<item.id>/createLink HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : <body_length>
-
-{
-	type : <Edm.String>
-}
-
+	{
+		type : <Edm.String>
+	}
+	
 ```
 
 #####Response
 
 ```
 	201 Created
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.permission',
-	'@odata.id': '/<permission.id>',
-	'id' : '<Edm.String>',
-	 ...,
-	'roles' : '<Collection(Edm.String)>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.permission',
+		'@odata.id': '/<permission.id>',
+		'id' : '<Edm.String>',
+		 ...,
+		'roles' : '<Collection(Edm.String)>'
+	}
+	
 ```
 
-A successful call to the item/createLink action returns an instance of the item/createLink type. 
+A successful call to the item/createLink action returns an instance of the Microsoft.Graph.permission type. 
 
 #####Call the item/createSession action
 
@@ -570,34 +559,33 @@ To call the `item/createSession` action,submit a `POST` request of the following
 #####Request
 
 ```
+	POST /<version>/myOrganization/drives/<drive.id>/files/<item.id>/createSession HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : <body_length>
 	
-POST /<version>/myOrganization/drives/<drive.id>/files/<item.id>/createSession HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : <body_length>
-
-{
-	path : <Edm.String>,
-	conflictBehavior : <Edm.String>
-}
-
+	{
+		path : <Edm.String>,
+		conflictBehavior : <Edm.String>
+	}
+	
 ```
 
 #####Response
 
 ```
 	201 Created
-
-{
-	'expirationDateTime': '<Edm.DateTimeOffset>',
-		'nextExpectedRanges': '<Collection(Edm.String)>',
-		'uploadUrl': '<Edm.String>'
-}
-
+	
+	{
+		'expirationDateTime': '<Edm.DateTimeOffset>',
+			'nextExpectedRanges': '<Collection(Edm.String)>',
+			'uploadUrl': '<Edm.String>'
+	}
+	
 ```
 
-A successful call to the item/createSession action returns an instance of the item/createSession type. 
+A successful call to the item/createSession action returns an instance of the Microsoft.Graph.uploadSession type. 
 
 #####Call the item/uploadContent action
 
@@ -610,25 +598,24 @@ To call the `item/uploadContent` action,submit a `POST` request of the following
 #####Request
 
 ```
+	POST /<version>/myOrganization/drives/<drive.id>/files/<item.id>/uploadContent HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : <body_length>
 	
-POST /<version>/myOrganization/drives/<drive.id>/files/<item.id>/uploadContent HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : <body_length>
-
-{
-	contentStream : <Edm.Stream>
-}
-
+	{
+		contentStream : <Edm.Stream>
+	}
+	
 ```
 
 #####Response
 
 ```
 	201 Created
-
-
+	
+	
 ```
 
 A successful call to the item/uploadContent action returns an empty response. 
@@ -646,22 +633,21 @@ To call the `content` function, submit a `POST` request of the following REST ca
 #####Request
 
 ```
+	POST /<version>/myOrganization/drives/<drive.id>/files/<item.id>/content HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : 0
 	
-POST /<version>/myOrganization/drives/<drive.id>/files/<item.id>/content HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : 0
-
-
+	
 ```
 
 #####Response
 
 ```
 	201 Created
-
-
+	
+	
 ```
 
 A successful call to the item/content action returns an empty response. 
@@ -677,22 +663,21 @@ To call the `delta` function, submit a `POST` request of the following REST call
 #####Request
 
 ```
+	POST /<version>/myOrganization/drives/<drive.id>/files/<item.id>/delta HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : 0
 	
-POST /<version>/myOrganization/drives/<drive.id>/files/<item.id>/delta HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : 0
-
-
+	
 ```
 
 #####Response
 
 ```
 	201 Created
-
-
+	
+	
 ```
 
 A successful call to the item/delta action returns an empty response. 
@@ -708,22 +693,21 @@ To call the `search` function, submit a `POST` request of the following REST cal
 #####Request
 
 ```
+	POST /<version>/myOrganization/drives/<drive.id>/files/<item.id>/search HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : 0
 	
-POST /<version>/myOrganization/drives/<drive.id>/files/<item.id>/search HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : 0
-
-
+	
 ```
 
 #####Response
 
 ```
 	201 Created
-
-
+	
+	
 ```
 
 A successful call to the item/search action returns an empty response. 

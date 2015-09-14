@@ -5,7 +5,7 @@
   <MetadataUri>https://graph.microsoft.com/alpha/$metadata</MetadataUri>
   <Content>
     <CodeExample>
-      <Title>Get a Conversation entity resource</Title>
+      <Title>Get a Conversation</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Conversation</TargetResourceFullName>
       <TargetResourceName>Conversation</TargetResourceName>
@@ -42,7 +42,7 @@ Accept : application/json;odata=verbose
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the specified a Conversation entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Create or add a Conversation entity resource</Title>
+      <Title>Create or add a Conversation</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Conversation</TargetResourceFullName>
       <TargetResourceName>Conversation</TargetResourceName>
@@ -85,7 +85,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the newly added a Conversation entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a Conversation entity resource</Title>
+      <Title>Update a Conversation</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Conversation</TargetResourceFullName>
       <TargetResourceName>Conversation</TargetResourceName>
@@ -120,7 +120,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 - No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a Conversation entity properties</Title>
+      <Title>Update a Conversation's properties</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Conversation</TargetResourceFullName>
       <TargetResourceName>Conversation</TargetResourceName>
@@ -155,7 +155,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Delete a Conversation entity resource</Title>
+      <Title>Delete a Conversation </Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Conversation</TargetResourceFullName>
       <TargetResourceName>Conversation</TargetResourceName>

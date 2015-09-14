@@ -5,7 +5,7 @@
   <MetadataUri>https://graph.microsoft.com/alpha/$metadata</MetadataUri>
   <Content>
     <CodeExample>
-      <Title>Get an Application entity resource</Title>
+      <Title>Get an Application</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Application</TargetResourceFullName>
       <TargetResourceName>Application</TargetResourceName>
@@ -42,7 +42,7 @@ Accept : application/json;odata=verbose
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the specified an Application entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Create or add an Application entity resource</Title>
+      <Title>Create or add an Application</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Application</TargetResourceFullName>
       <TargetResourceName>Application</TargetResourceName>
@@ -92,7 +92,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the newly added an Application entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update an Application entity resource</Title>
+      <Title>Update an Application</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Application</TargetResourceFullName>
       <TargetResourceName>Application</TargetResourceName>
@@ -134,7 +134,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 - No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update an Application entity properties</Title>
+      <Title>Update an Application's properties</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Application</TargetResourceFullName>
       <TargetResourceName>Application</TargetResourceName>
@@ -176,7 +176,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Delete an Application entity resource</Title>
+      <Title>Delete an Application </Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Application</TargetResourceFullName>
       <TargetResourceName>Application</TargetResourceName>

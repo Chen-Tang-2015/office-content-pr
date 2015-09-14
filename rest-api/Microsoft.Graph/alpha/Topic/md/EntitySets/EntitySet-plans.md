@@ -30,7 +30,7 @@ The `plans` entity set resource can be accessed via the following Urls.
 
 ##Operations
 
-###Get members of the plans entity set
+###Get the plans's members
 
 To get the members of the `plans` entity set, submit an `HTTP GET` request .  
 
@@ -42,42 +42,41 @@ To get the members of the `plans` entity set, submit an `HTTP GET` request .
 ###Request
 
 ```
+	GET /<version>/myOrganization/plans HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/plans HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 ###Response
 
 ```
 	200 OK
-
-{
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#plans',
-	'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/plans',
-	'value': [ 
+	
 	{
-
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Plan',
-		'@odata.id': '/<Plan.id>',
-		'activeTasks' : '<Edm.Int32>',
-		 ...,
-		'version' : '<Edm.String>'
-}
-
-	]
-}
-
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#plans',
+		'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/plans',
+		'value': [ 
+		{
+	
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.Plan',
+			'@odata.id': '/<Plan.id>',
+			'activeTasks' : '<Edm.Int32>',
+			 ...,
+			'version' : '<Edm.String>'
+	}
+	
+		]
+	}
+	
 ```
 
 The successful response returns a `200 OK` status code, with a payload containing the collection of the `Microsoft.Graph.Plan` resource representations. 
 
-###Add a new member to the plans entity set
+###Add a new member to the plans
 
 To create a new Microsoft.Graph.Plan entity resource, submit an `HTTP POST` request against the `plans` entity set, as shown in this example. 
 
@@ -89,43 +88,42 @@ To create a new Microsoft.Graph.Plan entity resource, submit an `HTTP POST` requ
 ###Request
 
 ```
+	POST /<version>/myOrganization/plans HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : <body_length>
 	
-POST /<version>/myOrganization/plans HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : <body_length>
-
-{
-	<Plan.property_1> : <value_1>,
-	...,
-	<Plan.propery_n> : <value_n>
-}
-
+	{
+		<Plan.property_1> : <value_1>,
+		...,
+		<Plan.propery_n> : <value_n>
+	}
+	
 ```
 
 ###Response
 
 ```
 	201 Created
-
-{
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#plans',
-	'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/plans',
-	'value': [ 
+	
 	{
-
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Plan',
-		'@odata.id': '/<Plan.id>',
-		'activeTasks' : '<Edm.Int32>',
-		 ...,
-		'version' : '<Edm.String>'
-}
-
-	]
-}
-
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#plans',
+		'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/plans',
+		'value': [ 
+		{
+	
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.Plan',
+			'@odata.id': '/<Plan.id>',
+			'activeTasks' : '<Edm.Int32>',
+			 ...,
+			'version' : '<Edm.String>'
+	}
+	
+		]
+	}
+	
 ```
 
 The successful response returns a `201 Created` status code, with a payload containing a Microsoft.Graph.Plan `Microsoft.Graph.Plan` resource representations. 

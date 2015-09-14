@@ -5,7 +5,7 @@
   <MetadataUri>https://graph.microsoft.com/alpha/$metadata</MetadataUri>
   <Content>
     <CodeExample>
-      <Title>Get a User entity resource</Title>
+      <Title>Get a User</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.User</TargetResourceFullName>
       <TargetResourceName>User</TargetResourceName>
@@ -56,7 +56,7 @@ Accept : application/json;odata=verbose
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the specified a User entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Create or add a User entity resource</Title>
+      <Title>Create or add a User</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.User</TargetResourceFullName>
       <TargetResourceName>User</TargetResourceName>
@@ -106,7 +106,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the newly added a User entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a User entity resource</Title>
+      <Title>Update a User</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.User</TargetResourceFullName>
       <TargetResourceName>User</TargetResourceName>
@@ -148,7 +148,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 - No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a User entity properties</Title>
+      <Title>Update a User's properties</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.User</TargetResourceFullName>
       <TargetResourceName>User</TargetResourceName>
@@ -190,7 +190,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Delete a User entity resource</Title>
+      <Title>Delete a User </Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.User</TargetResourceFullName>
       <TargetResourceName>User</TargetResourceName>

@@ -5,7 +5,7 @@
   <MetadataUri>https://graph.microsoft.com/alpha/$metadata</MetadataUri>
   <Content>
     <CodeExample>
-      <Title>Get a Device entity resource</Title>
+      <Title>Get a Device</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Device</TargetResourceFullName>
       <TargetResourceName>Device</TargetResourceName>
@@ -56,7 +56,7 @@ Accept : application/json;odata=verbose
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the specified a Device entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Create or add a Device entity resource</Title>
+      <Title>Create or add a Device</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Device</TargetResourceFullName>
       <TargetResourceName>Device</TargetResourceName>
@@ -106,7 +106,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the newly added a Device entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a Device entity resource</Title>
+      <Title>Update a Device</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Device</TargetResourceFullName>
       <TargetResourceName>Device</TargetResourceName>
@@ -148,7 +148,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 - No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a Device entity properties</Title>
+      <Title>Update a Device's properties</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Device</TargetResourceFullName>
       <TargetResourceName>Device</TargetResourceName>
@@ -190,7 +190,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Delete a Device entity resource</Title>
+      <Title>Delete a Device </Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Device</TargetResourceFullName>
       <TargetResourceName>Device</TargetResourceName>

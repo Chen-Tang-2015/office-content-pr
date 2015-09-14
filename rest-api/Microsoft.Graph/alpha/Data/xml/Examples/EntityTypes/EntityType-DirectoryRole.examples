@@ -5,7 +5,7 @@
   <MetadataUri>https://graph.microsoft.com/alpha/$metadata</MetadataUri>
   <Content>
     <CodeExample>
-      <Title>Get a DirectoryRole entity resource</Title>
+      <Title>Get a DirectoryRole</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.DirectoryRole</TargetResourceFullName>
       <TargetResourceName>DirectoryRole</TargetResourceName>
@@ -42,7 +42,7 @@ Accept : application/json;odata=verbose
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the specified a DirectoryRole entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Create or add a DirectoryRole entity resource</Title>
+      <Title>Create or add a DirectoryRole</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.DirectoryRole</TargetResourceFullName>
       <TargetResourceName>DirectoryRole</TargetResourceName>
@@ -92,7 +92,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the newly added a DirectoryRole entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a DirectoryRole entity resource</Title>
+      <Title>Update a DirectoryRole</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.DirectoryRole</TargetResourceFullName>
       <TargetResourceName>DirectoryRole</TargetResourceName>
@@ -134,7 +134,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 - No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a DirectoryRole entity properties</Title>
+      <Title>Update a DirectoryRole's properties</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.DirectoryRole</TargetResourceFullName>
       <TargetResourceName>DirectoryRole</TargetResourceName>
@@ -176,7 +176,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Delete a DirectoryRole entity resource</Title>
+      <Title>Delete a DirectoryRole </Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.DirectoryRole</TargetResourceFullName>
       <TargetResourceName>DirectoryRole</TargetResourceName>

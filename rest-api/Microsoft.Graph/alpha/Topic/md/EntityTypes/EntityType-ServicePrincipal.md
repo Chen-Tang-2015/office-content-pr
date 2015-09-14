@@ -38,23 +38,23 @@ The `ServicePrincipal` resource supports the following properties
 | `appId` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
 | `appOwnerTenantId` | `Edm.Guid` | `alpha` | `true` | `n/a` | `true` | `true` |  |  | 
 | `appRoleAssignmentRequired` | `Edm.Boolean` | `alpha` | `false` | `n/a` | `true` | `true` |  |  | 
-| `appRoles` | `Collection(Collection(Microsoft.Graph.AppRole))` | `alpha` | `false` | `n/a` | `true` | `true` |  |  | 
+| `appRoles` | `Collection(Microsoft.Graph.AppRole)` | `alpha` | `false` | `n/a` | `true` | `true` |  |  | 
 | `deletionTimestamp` | `Edm.DateTimeOffset` | `alpha` | `true` | `n/a` | `true` | `true` |  |  | 
 | `displayName` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
 | `errorUrl` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
 | `homepage` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
-| `keyCredentials` | `Collection(Collection(Microsoft.Graph.KeyCredential))` | `alpha` | `false` | `n/a` | `true` | `true` |  |  | 
+| `keyCredentials` | `Collection(Microsoft.Graph.KeyCredential)` | `alpha` | `false` | `n/a` | `true` | `true` |  |  | 
 | `logoutUrl` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
-| `oauth2Permissions` | `Collection(Collection(Microsoft.Graph.OAuth2Permission))` | `alpha` | `false` | `n/a` | `true` | `true` |  |  | 
+| `oauth2Permissions` | `Collection(Microsoft.Graph.OAuth2Permission)` | `alpha` | `false` | `n/a` | `true` | `true` |  |  | 
 | `objectId` (_Key_ | `Edm.String` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
 | `objectType` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
-| `passwordCredentials` | `Collection(Collection(Microsoft.Graph.PasswordCredential))` | `alpha` | `false` | `n/a` | `true` | `true` |  |  | 
+| `passwordCredentials` | `Collection(Microsoft.Graph.PasswordCredential)` | `alpha` | `false` | `n/a` | `true` | `true` |  |  | 
 | `preferredTokenSigningKeyThumbprint` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
 | `publisherName` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
-| `replyUrls` | `Collection(Collection(Edm.String))` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
+| `replyUrls` | `Collection(Edm.String)` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
 | `samlMetadataUrl` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
-| `servicePrincipalNames` | `Collection(Collection(Edm.String))` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
-| `tags` | `Collection(Collection(Edm.String))` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
+| `servicePrincipalNames` | `Collection(Edm.String)` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
+| `tags` | `Collection(Edm.String)` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
 
 
 ###Navigation properties
@@ -92,9 +92,9 @@ The `ServicePrincipal` resource supports the following actions:
 
 The `ServicePrincipal` entity resource supports the following operations, including actions and functions. 
 
-####Work with the ServicePrincipal entity resource
+####Work with the ServicePrincipal resource
 
-####Get a ServicePrincipal entity resource
+####Get a ServicePrincipal
 
 To get an existing `ServicePrincipal` entity resource, submit an `HTTP GET` request of the following syntax: 
 
@@ -106,35 +106,34 @@ To get an existing `ServicePrincipal` entity resource, submit an `HTTP GET` requ
 ####Request
 
 ```
+	GET /<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 ####Response
 
 ```
 	200 OK
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.ServicePrincipal',
-	'@odata.id': '/<ServicePrincipal.objectId>',
-	'accountEnabled' : '<Edm.Boolean>',
-	 ...,
-	'tags' : '<Collection(Edm.String)>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.ServicePrincipal',
+		'@odata.id': '/<ServicePrincipal.objectId>',
+		'accountEnabled' : '<Edm.Boolean>',
+		 ...,
+		'tags' : '<Collection(Edm.String)>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a ServicePrincipal entity resource representation. 
 
-####Create or add a ServicePrincipal entity resource
+####Create or add a ServicePrincipal
 
 To create new `ServicePrincipal` entity resource, submit an `HTTP POST` request against the `servicePrincipals` collection: 
 
@@ -147,41 +146,40 @@ To create new `ServicePrincipal` entity resource, submit an `HTTP POST` request 
 ####Request
 
 ```
+	POST /<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : <body_length>
 	
-POST /<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : <body_length>
-
-{
-	<ServicePrincipal.property_1> : <value_1>,
-	...,
-	<ServicePrincipal.property_n> : <value_n>
-}
-
+	{
+		<ServicePrincipal.property_1> : <value_1>,
+		...,
+		<ServicePrincipal.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	201 Created
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.ServicePrincipal',
-	'@odata.id': '/<ServicePrincipal.objectId>',
-	'accountEnabled' : '<Edm.Boolean>',
-	 ...,
-	'tags' : '<Collection(Edm.String)>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.ServicePrincipal',
+		'@odata.id': '/<ServicePrincipal.objectId>',
+		'accountEnabled' : '<Edm.Boolean>',
+		 ...,
+		'tags' : '<Collection(Edm.String)>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added a ServicePrincipal entity resource representation. 
 
-####Update a ServicePrincipal entity resource
+####Update a ServicePrincipal
 
 To update an existing `ServicePrincipal` entity resource, submit an `HTTP PUT` request, specifying a new instance of the resource in the request body: 
 
@@ -194,33 +192,32 @@ To update an existing `ServicePrincipal` entity resource, submit an `HTTP PUT` r
 ####Request
 
 ```
+	PUT /<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
+	Content-Length : <body_length>
 	
-PUT /<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-Content-Length : <body_length>
-
-{
-	<ServicePrincipal.property_1> : <value_1>,
-	...,
-	<ServicePrincipal.property_n> : <value_n>
-}
-
+	{
+		<ServicePrincipal.property_1> : <value_1>,
+		...,
+		<ServicePrincipal.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
-####Update a ServicePrincipal entity properties
+####Update a ServicePrincipal's properties
 
 To update selected properties of an existing `ServicePrincipal` entity, submit an `HTTP PATCH` request, specifying a new instance of the resource in the request body: 
 
@@ -233,33 +230,32 @@ To update selected properties of an existing `ServicePrincipal` entity, submit a
 ####Request
 
 ```
+	PATCH /<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
+	Content-Length : <body_length>
 	
-PATCH /<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-Content-Length : <body_length>
-
-{
-	<ServicePrincipal.property_1> : <value_1>,
-	...,
-	<ServicePrincipal.property_n> : <value_n>
-}
-
+	{
+		<ServicePrincipal.property_1> : <value_1>,
+		...,
+		<ServicePrincipal.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
 
-####Delete a ServicePrincipal entity resource
+####Delete a ServicePrincipal 
 
 To delete an existing `ServicePrincipal` entity resource, submit an `HTTP DELETE` request, specifying a new instance of the resource in the request body: 
 
@@ -272,27 +268,26 @@ To delete an existing `ServicePrincipal` entity resource, submit an `HTTP DELETE
 ####Request
 
 ```
+	DELETE /<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
 	
-DELETE /<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-
-
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
 
-####Access the ServicePrincipal's appRoleAssignedTo related resource
+####Access the AppRoleAssignment resource via the ServicePrincipal/appRoleAssignedTo relationship
 
 #####Get the ServicePrincipal/appRoleAssignedTo entity
 
@@ -306,35 +301,34 @@ To get a ServicePrincipal/appRoleAssignedTo `ServicePrincipal/appRoleAssignedTo`
 #####Request
 
 ```
+	GET /<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId>/appRoleAssignedTo HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId>/appRoleAssignedTo HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 #####Response
 
 ```
 	200 OK
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.AppRoleAssignment',
-	'@odata.id': '/<AppRoleAssignment.objectId>',
-	'creationTimestamp' : '<Edm.DateTimeOffset>',
-	 ...,
-	'resourceId' : '<Edm.Guid>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.AppRoleAssignment',
+		'@odata.id': '/<AppRoleAssignment.objectId>',
+		'creationTimestamp' : '<Edm.DateTimeOffset>',
+		 ...,
+		'resourceId' : '<Edm.Guid>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a body containing an `AppRoleAssignment` resource representation. 
 
-####Access the ServicePrincipal's appRoleAssignments related resource
+####Access the AppRoleAssignment collection via the ServicePrincipal/appRoleAssignments relationship
 
 #####Get the ServicePrincipal/appRoleAssignments collection
 
@@ -348,41 +342,40 @@ To get the `ServicePrincipal/appRoleAssignments` collection, submit an `HTTP GET
 #####Request
 
 ```
+	GET /<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId>/appRoleAssignments HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId>/appRoleAssignments HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 #####Response
 
 ```
 	200 OK
-
-{
-	'value': [
-		{
-		
-			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-			'@odata.type': '#Microsoft.Graph.AppRoleAssignment',
-			'@odata.id': '/<AppRoleAssignment.objectId>',
-			'creationTimestamp' : '<Edm.DateTimeOffset>',
-			 ...,
-			'resourceId' : '<Edm.Guid>'
-		}
-		,
-		...
-	]
-}
-
+	
+	{
+		'value': [
+			{
+			
+				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+				'@odata.type': '#Microsoft.Graph.AppRoleAssignment',
+				'@odata.id': '/<AppRoleAssignment.objectId>',
+				'creationTimestamp' : '<Edm.DateTimeOffset>',
+				 ...,
+				'resourceId' : '<Edm.Guid>'
+			}
+			,
+			...
+		]
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `AppRoleAssignment` resource representations. 
 
-####Access the ServicePrincipal's createdObjects related resource
+####Access the DirectoryObject collection via the ServicePrincipal/createdObjects relationship
 
 #####Get the ServicePrincipal/createdObjects collection
 
@@ -396,41 +389,40 @@ To get the `ServicePrincipal/createdObjects` collection, submit an `HTTP GET` re
 #####Request
 
 ```
+	GET /<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId>/createdObjects HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId>/createdObjects HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 #####Response
 
 ```
 	200 OK
-
-{
-	'value': [
-		{
-		
-			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-			'@odata.type': '#Microsoft.Graph.DirectoryObject',
-			'@odata.id': '/<DirectoryObject.objectId>',
-			'deletionTimestamp' : '<Edm.DateTimeOffset>',
-			 ...,
-			'objectType' : '<Edm.String>'
-		}
-		,
-		...
-	]
-}
-
+	
+	{
+		'value': [
+			{
+			
+				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+				'@odata.type': '#Microsoft.Graph.DirectoryObject',
+				'@odata.id': '/<DirectoryObject.objectId>',
+				'deletionTimestamp' : '<Edm.DateTimeOffset>',
+				 ...,
+				'objectType' : '<Edm.String>'
+			}
+			,
+			...
+		]
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `DirectoryObject` resource representations. 
 
-####Access the ServicePrincipal's createdOnBehalfOf related resource
+####Access the DirectoryObject resource via the ServicePrincipal/createdOnBehalfOf relationship
 
 #####Get the ServicePrincipal/createdOnBehalfOf entity
 
@@ -444,35 +436,34 @@ To get a ServicePrincipal/createdOnBehalfOf `ServicePrincipal/createdOnBehalfOf`
 #####Request
 
 ```
+	GET /<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId>/createdOnBehalfOf HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId>/createdOnBehalfOf HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 #####Response
 
 ```
 	200 OK
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.DirectoryObject',
-	'@odata.id': '/<DirectoryObject.objectId>',
-	'deletionTimestamp' : '<Edm.DateTimeOffset>',
-	 ...,
-	'objectType' : '<Edm.String>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.DirectoryObject',
+		'@odata.id': '/<DirectoryObject.objectId>',
+		'deletionTimestamp' : '<Edm.DateTimeOffset>',
+		 ...,
+		'objectType' : '<Edm.String>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a body containing a `DirectoryObject` resource representation. 
 
-####Access the ServicePrincipal's memberOf related resource
+####Access the DirectoryObject collection via the ServicePrincipal/memberOf relationship
 
 #####Get the ServicePrincipal/memberOf collection
 
@@ -486,41 +477,40 @@ To get the `ServicePrincipal/memberOf` collection, submit an `HTTP GET` request 
 #####Request
 
 ```
+	GET /<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId>/memberOf HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId>/memberOf HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 #####Response
 
 ```
 	200 OK
-
-{
-	'value': [
-		{
-		
-			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-			'@odata.type': '#Microsoft.Graph.DirectoryObject',
-			'@odata.id': '/<DirectoryObject.objectId>',
-			'deletionTimestamp' : '<Edm.DateTimeOffset>',
-			 ...,
-			'objectType' : '<Edm.String>'
-		}
-		,
-		...
-	]
-}
-
+	
+	{
+		'value': [
+			{
+			
+				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+				'@odata.type': '#Microsoft.Graph.DirectoryObject',
+				'@odata.id': '/<DirectoryObject.objectId>',
+				'deletionTimestamp' : '<Edm.DateTimeOffset>',
+				 ...,
+				'objectType' : '<Edm.String>'
+			}
+			,
+			...
+		]
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `DirectoryObject` resource representations. 
 
-####Access the ServicePrincipal's oauth2PermissionGrants related resource
+####Access the OAuth2PermissionGrant collection via the ServicePrincipal/oauth2PermissionGrants relationship
 
 #####Get the ServicePrincipal/oauth2PermissionGrants collection
 
@@ -534,41 +524,40 @@ To get the `ServicePrincipal/oauth2PermissionGrants` collection, submit an `HTTP
 #####Request
 
 ```
+	GET /<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId>/oauth2PermissionGrants HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId>/oauth2PermissionGrants HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 #####Response
 
 ```
 	200 OK
-
-{
-	'value': [
-		{
-		
-			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-			'@odata.type': '#Microsoft.Graph.OAuth2PermissionGrant',
-			'@odata.id': '/<OAuth2PermissionGrant.objectId>',
-			'clientId' : '<Edm.String>',
-			 ...,
-			'startTime' : '<Edm.DateTimeOffset>'
-		}
-		,
-		...
-	]
-}
-
+	
+	{
+		'value': [
+			{
+			
+				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+				'@odata.type': '#Microsoft.Graph.OAuth2PermissionGrant',
+				'@odata.id': '/<OAuth2PermissionGrant.objectId>',
+				'clientId' : '<Edm.String>',
+				 ...,
+				'startTime' : '<Edm.DateTimeOffset>'
+			}
+			,
+			...
+		]
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `OAuth2PermissionGrant` resource representations. 
 
-####Access the ServicePrincipal's ownedObjects related resource
+####Access the DirectoryObject collection via the ServicePrincipal/ownedObjects relationship
 
 #####Get the ServicePrincipal/ownedObjects collection
 
@@ -582,41 +571,40 @@ To get the `ServicePrincipal/ownedObjects` collection, submit an `HTTP GET` requ
 #####Request
 
 ```
+	GET /<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId>/ownedObjects HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId>/ownedObjects HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 #####Response
 
 ```
 	200 OK
-
-{
-	'value': [
-		{
-		
-			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-			'@odata.type': '#Microsoft.Graph.DirectoryObject',
-			'@odata.id': '/<DirectoryObject.objectId>',
-			'deletionTimestamp' : '<Edm.DateTimeOffset>',
-			 ...,
-			'objectType' : '<Edm.String>'
-		}
-		,
-		...
-	]
-}
-
+	
+	{
+		'value': [
+			{
+			
+				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+				'@odata.type': '#Microsoft.Graph.DirectoryObject',
+				'@odata.id': '/<DirectoryObject.objectId>',
+				'deletionTimestamp' : '<Edm.DateTimeOffset>',
+				 ...,
+				'objectType' : '<Edm.String>'
+			}
+			,
+			...
+		]
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `DirectoryObject` resource representations. 
 
-####Access the ServicePrincipal's owners related resource
+####Access the DirectoryObject collection via the ServicePrincipal/owners relationship
 
 #####Get the ServicePrincipal/owners collection
 
@@ -630,36 +618,35 @@ To get the `ServicePrincipal/owners` collection, submit an `HTTP GET` request of
 #####Request
 
 ```
+	GET /<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId>/owners HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/servicePrincipals/<ServicePrincipal.objectId>/owners HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 #####Response
 
 ```
 	200 OK
-
-{
-	'value': [
-		{
-		
-			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-			'@odata.type': '#Microsoft.Graph.DirectoryObject',
-			'@odata.id': '/<DirectoryObject.objectId>',
-			'deletionTimestamp' : '<Edm.DateTimeOffset>',
-			 ...,
-			'objectType' : '<Edm.String>'
-		}
-		,
-		...
-	]
-}
-
+	
+	{
+		'value': [
+			{
+			
+				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+				'@odata.type': '#Microsoft.Graph.DirectoryObject',
+				'@odata.id': '/<DirectoryObject.objectId>',
+				'deletionTimestamp' : '<Edm.DateTimeOffset>',
+				 ...,
+				'objectType' : '<Edm.String>'
+			}
+			,
+			...
+		]
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `DirectoryObject` resource representations. 
@@ -679,28 +666,27 @@ To call the `DirectoryObject/checkMemberGroups` action,submit a `POST` request o
 #####Request
 
 ```
+	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/checkMemberGroups HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : <body_length>
 	
-POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/checkMemberGroups HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : <body_length>
-
-{
-	groupIds : <Edm.String>
-}
-
+	{
+		groupIds : <Edm.String>
+	}
+	
 ```
 
 #####Response
 
 ```
 	201 Created
-
-'<Edm.String>'
+	
+	'<Edm.String>'
 ```
 
-A successful call to the DirectoryObject/checkMemberGroups action returns an instance of the DirectoryObject/checkMemberGroups type. 
+A successful call to the DirectoryObject/checkMemberGroups action returns an instance of the Edm.String type. 
 
 #####Call the DirectoryObject/getMemberGroups action
 
@@ -715,28 +701,27 @@ To call the `DirectoryObject/getMemberGroups` action,submit a `POST` request of 
 #####Request
 
 ```
+	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberGroups HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : <body_length>
 	
-POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberGroups HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : <body_length>
-
-{
-	securityEnabledOnly : <Edm.Boolean>
-}
-
+	{
+		securityEnabledOnly : <Edm.Boolean>
+	}
+	
 ```
 
 #####Response
 
 ```
 	201 Created
-
-'<Edm.String>'
+	
+	'<Edm.String>'
 ```
 
-A successful call to the DirectoryObject/getMemberGroups action returns an instance of the DirectoryObject/getMemberGroups type. 
+A successful call to the DirectoryObject/getMemberGroups action returns an instance of the Edm.String type. 
 
 #####Call the DirectoryObject/getMemberObjects action
 
@@ -751,26 +736,25 @@ To call the `DirectoryObject/getMemberObjects` action,submit a `POST` request of
 #####Request
 
 ```
+	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberObjects HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : <body_length>
 	
-POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberObjects HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : <body_length>
-
-{
-	securityEnabledOnly : <Edm.Boolean>
-}
-
+	{
+		securityEnabledOnly : <Edm.Boolean>
+	}
+	
 ```
 
 #####Response
 
 ```
 	201 Created
-
-'<Edm.String>'
+	
+	'<Edm.String>'
 ```
 
-A successful call to the DirectoryObject/getMemberObjects action returns an instance of the DirectoryObject/getMemberObjects type. 
+A successful call to the DirectoryObject/getMemberObjects action returns an instance of the Edm.String type. 
 

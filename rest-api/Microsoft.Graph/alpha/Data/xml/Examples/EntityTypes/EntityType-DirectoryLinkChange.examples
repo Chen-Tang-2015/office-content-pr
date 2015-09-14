@@ -5,7 +5,7 @@
   <MetadataUri>https://graph.microsoft.com/alpha/$metadata</MetadataUri>
   <Content>
     <CodeExample>
-      <Title>Get a DirectoryLinkChange entity resource</Title>
+      <Title>Get a DirectoryLinkChange</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.DirectoryLinkChange</TargetResourceFullName>
       <TargetResourceName>DirectoryLinkChange</TargetResourceName>
@@ -42,7 +42,7 @@ Accept : application/json;odata=verbose
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the specified a DirectoryLinkChange entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Create or add a DirectoryLinkChange entity resource</Title>
+      <Title>Create or add a DirectoryLinkChange</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.DirectoryLinkChange</TargetResourceFullName>
       <TargetResourceName>DirectoryLinkChange</TargetResourceName>
@@ -65,7 +65,7 @@ Accept : application/json;odata=verbose
       </RequiredPermissions>
     </CodeExample>
     <CodeExample>
-      <Title>Update a DirectoryLinkChange entity resource</Title>
+      <Title>Update a DirectoryLinkChange</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.DirectoryLinkChange</TargetResourceFullName>
       <TargetResourceName>DirectoryLinkChange</TargetResourceName>
@@ -107,7 +107,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 - No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a DirectoryLinkChange entity properties</Title>
+      <Title>Update a DirectoryLinkChange's properties</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.DirectoryLinkChange</TargetResourceFullName>
       <TargetResourceName>DirectoryLinkChange</TargetResourceName>
@@ -149,7 +149,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Delete a DirectoryLinkChange entity resource</Title>
+      <Title>Delete a DirectoryLinkChange </Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.DirectoryLinkChange</TargetResourceFullName>
       <TargetResourceName>DirectoryLinkChange</TargetResourceName>

@@ -50,9 +50,9 @@ The `OAuth2PermissionGrant` resource supports the following properties
 
 The `OAuth2PermissionGrant` entity resource supports the following operations, including actions and functions. 
 
-####Work with the OAuth2PermissionGrant entity resource
+####Work with the OAuth2PermissionGrant resource
 
-####Get an OAuth2PermissionGrant entity resource
+####Get an OAuth2PermissionGrant
 
 To get an existing `OAuth2PermissionGrant` entity resource, submit an `HTTP GET` request of the following syntax: 
 
@@ -64,35 +64,34 @@ To get an existing `OAuth2PermissionGrant` entity resource, submit an `HTTP GET`
 ####Request
 
 ```
+	GET /<version>/myOrganization/oauth2PermissionGrants/<OAuth2PermissionGrant.objectId> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/oauth2PermissionGrants/<OAuth2PermissionGrant.objectId> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 ####Response
 
 ```
 	200 OK
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.OAuth2PermissionGrant',
-	'@odata.id': '/<OAuth2PermissionGrant.objectId>',
-	'clientId' : '<Edm.String>',
-	 ...,
-	'startTime' : '<Edm.DateTimeOffset>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.OAuth2PermissionGrant',
+		'@odata.id': '/<OAuth2PermissionGrant.objectId>',
+		'clientId' : '<Edm.String>',
+		 ...,
+		'startTime' : '<Edm.DateTimeOffset>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the specified an OAuth2PermissionGrant entity resource representation. 
 
-####Create or add an OAuth2PermissionGrant entity resource
+####Create or add an OAuth2PermissionGrant
 
 To create new `OAuth2PermissionGrant` entity resource, submit an `HTTP POST` request against the `oauth2PermissionGrants` collection: 
 
@@ -105,41 +104,40 @@ To create new `OAuth2PermissionGrant` entity resource, submit an `HTTP POST` req
 ####Request
 
 ```
+	POST /<version>/myOrganization/oauth2PermissionGrants/<OAuth2PermissionGrant.objectId> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : <body_length>
 	
-POST /<version>/myOrganization/oauth2PermissionGrants/<OAuth2PermissionGrant.objectId> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : <body_length>
-
-{
-	<OAuth2PermissionGrant.property_1> : <value_1>,
-	...,
-	<OAuth2PermissionGrant.property_n> : <value_n>
-}
-
+	{
+		<OAuth2PermissionGrant.property_1> : <value_1>,
+		...,
+		<OAuth2PermissionGrant.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	201 Created
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.OAuth2PermissionGrant',
-	'@odata.id': '/<OAuth2PermissionGrant.objectId>',
-	'clientId' : '<Edm.String>',
-	 ...,
-	'startTime' : '<Edm.DateTimeOffset>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.OAuth2PermissionGrant',
+		'@odata.id': '/<OAuth2PermissionGrant.objectId>',
+		'clientId' : '<Edm.String>',
+		 ...,
+		'startTime' : '<Edm.DateTimeOffset>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added an OAuth2PermissionGrant entity resource representation. 
 
-####Update an OAuth2PermissionGrant entity resource
+####Update an OAuth2PermissionGrant
 
 To update an existing `OAuth2PermissionGrant` entity resource, submit an `HTTP PUT` request, specifying a new instance of the resource in the request body: 
 
@@ -152,33 +150,32 @@ To update an existing `OAuth2PermissionGrant` entity resource, submit an `HTTP P
 ####Request
 
 ```
+	PUT /<version>/myOrganization/oauth2PermissionGrants/<OAuth2PermissionGrant.objectId> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
+	Content-Length : <body_length>
 	
-PUT /<version>/myOrganization/oauth2PermissionGrants/<OAuth2PermissionGrant.objectId> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-Content-Length : <body_length>
-
-{
-	<OAuth2PermissionGrant.property_1> : <value_1>,
-	...,
-	<OAuth2PermissionGrant.property_n> : <value_n>
-}
-
+	{
+		<OAuth2PermissionGrant.property_1> : <value_1>,
+		...,
+		<OAuth2PermissionGrant.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
-####Update an OAuth2PermissionGrant entity properties
+####Update an OAuth2PermissionGrant's properties
 
 To update selected properties of an existing `OAuth2PermissionGrant` entity, submit an `HTTP PATCH` request, specifying a new instance of the resource in the request body: 
 
@@ -191,33 +188,32 @@ To update selected properties of an existing `OAuth2PermissionGrant` entity, sub
 ####Request
 
 ```
+	PATCH /<version>/myOrganization/oauth2PermissionGrants/<OAuth2PermissionGrant.objectId> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
+	Content-Length : <body_length>
 	
-PATCH /<version>/myOrganization/oauth2PermissionGrants/<OAuth2PermissionGrant.objectId> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-Content-Length : <body_length>
-
-{
-	<OAuth2PermissionGrant.property_1> : <value_1>,
-	...,
-	<OAuth2PermissionGrant.property_n> : <value_n>
-}
-
+	{
+		<OAuth2PermissionGrant.property_1> : <value_1>,
+		...,
+		<OAuth2PermissionGrant.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
 
-####Delete an OAuth2PermissionGrant entity resource
+####Delete an OAuth2PermissionGrant 
 
 To delete an existing `OAuth2PermissionGrant` entity resource, submit an `HTTP DELETE` request, specifying a new instance of the resource in the request body: 
 
@@ -230,22 +226,21 @@ To delete an existing `OAuth2PermissionGrant` entity resource, submit an `HTTP D
 ####Request
 
 ```
+	DELETE /<version>/myOrganization/oauth2PermissionGrants/<OAuth2PermissionGrant.objectId> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
 	
-DELETE /<version>/myOrganization/oauth2PermissionGrants/<OAuth2PermissionGrant.objectId> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-
-
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 No content` status code without any payload. 

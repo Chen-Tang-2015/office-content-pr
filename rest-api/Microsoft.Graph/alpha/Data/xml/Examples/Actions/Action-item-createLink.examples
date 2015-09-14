@@ -35,7 +35,7 @@ Content-Length : &lt;body_length&gt;
 	'roles' : '&lt;Collection(Edm.String)&gt;'
 }
 </Response>
-      <Remarks>A successful call to the item/createLink action returns an instance of the item/createLink type.</Remarks>
+      <Remarks>A successful call to the item/createLink action returns an instance of the Microsoft.Graph.permission type.</Remarks>
     </CodeExample>
   </Content>
 </ContentComponentOfCodeExample>

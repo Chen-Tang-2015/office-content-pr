@@ -41,7 +41,7 @@ Content-Length : &lt;body_length&gt;
       <Response>201 Created
 
 '&lt;Edm.String&gt;'</Response>
-      <Remarks>A successful call to the DirectoryObject/getMemberObjects action returns an instance of the DirectoryObject/getMemberObjects type.</Remarks>
+      <Remarks>A successful call to the DirectoryObject/getMemberObjects action returns an instance of the Edm.String type.</Remarks>
     </CodeExample>
   </Content>
 </ContentComponentOfCodeExample>

@@ -5,7 +5,7 @@
   <MetadataUri>https://graph.microsoft.com/alpha/$metadata</MetadataUri>
   <Content>
     <CodeExample>
-      <Title>Get members of the directoryObjects entity set</Title>
+      <Title>Get the directoryObjects's members</Title>
       <TargetResourceType>EntitySet</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.GraphService/directoryObjects</TargetResourceFullName>
       <TargetResourceName>directoryObjects</TargetResourceName>
@@ -49,7 +49,7 @@ Accept : application/json;odata=verbose
       <Remarks>The successful response returns a &lt;code&gt;200 OK&lt;/code&gt; status code, with a payload containing the collection of the &lt;code&gt;Microsoft.Graph.DirectoryObject&lt;/code&gt; resource representations.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Add a new member to the directoryObjects entity set</Title>
+      <Title>Add a new member to the directoryObjects</Title>
       <TargetResourceType>EntitySet</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.GraphService/directoryObjects</TargetResourceFullName>
       <TargetResourceName>directoryObjects</TargetResourceName>

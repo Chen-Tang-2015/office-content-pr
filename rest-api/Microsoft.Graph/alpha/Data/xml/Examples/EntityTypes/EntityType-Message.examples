@@ -5,7 +5,7 @@
   <MetadataUri>https://graph.microsoft.com/alpha/$metadata</MetadataUri>
   <Content>
     <CodeExample>
-      <Title>Get a Message entity resource</Title>
+      <Title>Get a Message</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Message</TargetResourceFullName>
       <TargetResourceName>Message</TargetResourceName>
@@ -42,7 +42,7 @@ Accept : application/json;odata=verbose
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the specified a Message entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Create or add a Message entity resource</Title>
+      <Title>Create or add a Message</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Message</TargetResourceFullName>
       <TargetResourceName>Message</TargetResourceName>
@@ -85,7 +85,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the newly added a Message entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a Message entity resource</Title>
+      <Title>Update a Message</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Message</TargetResourceFullName>
       <TargetResourceName>Message</TargetResourceName>
@@ -120,7 +120,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 - No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a Message entity properties</Title>
+      <Title>Update a Message's properties</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Message</TargetResourceFullName>
       <TargetResourceName>Message</TargetResourceName>
@@ -155,7 +155,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Delete a Message entity resource</Title>
+      <Title>Delete a Message </Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Message</TargetResourceFullName>
       <TargetResourceName>Message</TargetResourceName>

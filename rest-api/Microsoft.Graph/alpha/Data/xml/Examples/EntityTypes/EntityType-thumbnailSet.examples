@@ -5,7 +5,7 @@
   <MetadataUri>https://graph.microsoft.com/alpha/$metadata</MetadataUri>
   <Content>
     <CodeExample>
-      <Title>Get a thumbnailSet entity resource</Title>
+      <Title>Get a thumbnailSet</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.thumbnailSet</TargetResourceFullName>
       <TargetResourceName>thumbnailSet</TargetResourceName>
@@ -34,7 +34,7 @@ Accept : application/json;odata=verbose
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the specified a thumbnailSet entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Create or add a thumbnailSet entity resource</Title>
+      <Title>Create or add a thumbnailSet</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.thumbnailSet</TargetResourceFullName>
       <TargetResourceName>thumbnailSet</TargetResourceName>
@@ -69,7 +69,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the newly added a thumbnailSet entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a thumbnailSet entity resource</Title>
+      <Title>Update a thumbnailSet</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.thumbnailSet</TargetResourceFullName>
       <TargetResourceName>thumbnailSet</TargetResourceName>
@@ -96,7 +96,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 - No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a thumbnailSet entity properties</Title>
+      <Title>Update a thumbnailSet's properties</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.thumbnailSet</TargetResourceFullName>
       <TargetResourceName>thumbnailSet</TargetResourceName>
@@ -123,7 +123,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Delete a thumbnailSet entity resource</Title>
+      <Title>Delete a thumbnailSet </Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.thumbnailSet</TargetResourceFullName>
       <TargetResourceName>thumbnailSet</TargetResourceName>

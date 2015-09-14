@@ -30,7 +30,7 @@ The `servicePrincipals` entity set resource can be accessed via the following Ur
 
 ##Operations
 
-###Get members of the servicePrincipals entity set
+###Get the servicePrincipals's members
 
 To get the members of the `servicePrincipals` entity set, submit an `HTTP GET` request .  
 
@@ -42,42 +42,41 @@ To get the members of the `servicePrincipals` entity set, submit an `HTTP GET` r
 ###Request
 
 ```
+	GET /<version>/myOrganization/servicePrincipals HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/servicePrincipals HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 ###Response
 
 ```
 	200 OK
-
-{
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#servicePrincipals',
-	'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/servicePrincipals',
-	'value': [ 
+	
 	{
-
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.ServicePrincipal',
-		'@odata.id': '/<ServicePrincipal.objectId>',
-		'accountEnabled' : '<Edm.Boolean>',
-		 ...,
-		'tags' : '<Collection(Edm.String)>'
-}
-
-	]
-}
-
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#servicePrincipals',
+		'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/servicePrincipals',
+		'value': [ 
+		{
+	
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.ServicePrincipal',
+			'@odata.id': '/<ServicePrincipal.objectId>',
+			'accountEnabled' : '<Edm.Boolean>',
+			 ...,
+			'tags' : '<Collection(Edm.String)>'
+	}
+	
+		]
+	}
+	
 ```
 
 The successful response returns a `200 OK` status code, with a payload containing the collection of the `Microsoft.Graph.ServicePrincipal` resource representations. 
 
-###Add a new member to the servicePrincipals entity set
+###Add a new member to the servicePrincipals
 
 To create a new Microsoft.Graph.ServicePrincipal entity resource, submit an `HTTP POST` request against the `servicePrincipals` entity set, as shown in this example. 
 
@@ -90,43 +89,42 @@ To create a new Microsoft.Graph.ServicePrincipal entity resource, submit an `HTT
 ###Request
 
 ```
+	POST /<version>/myOrganization/servicePrincipals HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : <body_length>
 	
-POST /<version>/myOrganization/servicePrincipals HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : <body_length>
-
-{
-	<ServicePrincipal.property_1> : <value_1>,
-	...,
-	<ServicePrincipal.propery_n> : <value_n>
-}
-
+	{
+		<ServicePrincipal.property_1> : <value_1>,
+		...,
+		<ServicePrincipal.propery_n> : <value_n>
+	}
+	
 ```
 
 ###Response
 
 ```
 	201 Created
-
-{
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#servicePrincipals',
-	'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/servicePrincipals',
-	'value': [ 
+	
 	{
-
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.ServicePrincipal',
-		'@odata.id': '/<ServicePrincipal.objectId>',
-		'accountEnabled' : '<Edm.Boolean>',
-		 ...,
-		'tags' : '<Collection(Edm.String)>'
-}
-
-	]
-}
-
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#servicePrincipals',
+		'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/servicePrincipals',
+		'value': [ 
+		{
+	
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.ServicePrincipal',
+			'@odata.id': '/<ServicePrincipal.objectId>',
+			'accountEnabled' : '<Edm.Boolean>',
+			 ...,
+			'tags' : '<Collection(Edm.String)>'
+	}
+	
+		]
+	}
+	
 ```
 
 The successful response returns a `201 Created` status code, with a payload containing a Microsoft.Graph.ServicePrincipal `Microsoft.Graph.ServicePrincipal` resource representations. 

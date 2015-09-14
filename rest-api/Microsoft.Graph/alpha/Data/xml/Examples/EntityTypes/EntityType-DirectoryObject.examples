@@ -5,7 +5,7 @@
   <MetadataUri>https://graph.microsoft.com/alpha/$metadata</MetadataUri>
   <Content>
     <CodeExample>
-      <Title>Get a DirectoryObject entity resource</Title>
+      <Title>Get a DirectoryObject</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.DirectoryObject</TargetResourceFullName>
       <TargetResourceName>DirectoryObject</TargetResourceName>
@@ -42,7 +42,7 @@ Accept : application/json;odata=verbose
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the specified a DirectoryObject entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Create or add a DirectoryObject entity resource</Title>
+      <Title>Create or add a DirectoryObject</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.DirectoryObject</TargetResourceFullName>
       <TargetResourceName>DirectoryObject</TargetResourceName>
@@ -92,7 +92,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the newly added a DirectoryObject entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a DirectoryObject entity resource</Title>
+      <Title>Update a DirectoryObject</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.DirectoryObject</TargetResourceFullName>
       <TargetResourceName>DirectoryObject</TargetResourceName>
@@ -134,7 +134,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 - No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a DirectoryObject entity properties</Title>
+      <Title>Update a DirectoryObject's properties</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.DirectoryObject</TargetResourceFullName>
       <TargetResourceName>DirectoryObject</TargetResourceName>
@@ -176,7 +176,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Delete a DirectoryObject entity resource</Title>
+      <Title>Delete a DirectoryObject </Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.DirectoryObject</TargetResourceFullName>
       <TargetResourceName>DirectoryObject</TargetResourceName>

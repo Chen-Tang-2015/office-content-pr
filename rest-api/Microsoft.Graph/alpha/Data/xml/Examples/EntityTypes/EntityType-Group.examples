@@ -5,7 +5,7 @@
   <MetadataUri>https://graph.microsoft.com/alpha/$metadata</MetadataUri>
   <Content>
     <CodeExample>
-      <Title>Get a Group entity resource</Title>
+      <Title>Get a Group</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Group</TargetResourceFullName>
       <TargetResourceName>Group</TargetResourceName>
@@ -42,7 +42,7 @@ Accept : application/json;odata=verbose
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the specified a Group entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Create or add a Group entity resource</Title>
+      <Title>Create or add a Group</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Group</TargetResourceFullName>
       <TargetResourceName>Group</TargetResourceName>
@@ -85,7 +85,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a payload containing the newly added a Group entity resource representation.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a Group entity resource</Title>
+      <Title>Update a Group</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Group</TargetResourceFullName>
       <TargetResourceName>Group</TargetResourceName>
@@ -120,7 +120,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 - No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Update a Group entity properties</Title>
+      <Title>Update a Group's properties</Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Group</TargetResourceFullName>
       <TargetResourceName>Group</TargetResourceName>
@@ -155,7 +155,7 @@ Content-Length : &lt;body_length&gt;
       <Remarks>A successful response returns the &lt;code&gt;204 No content&lt;/code&gt; status code without any payload.</Remarks>
     </CodeExample>
     <CodeExample>
-      <Title>Delete a Group entity resource</Title>
+      <Title>Delete a Group </Title>
       <TargetResourceType>EntityType</TargetResourceType>
       <TargetResourceFullName>Microsoft.Graph.Group</TargetResourceFullName>
       <TargetResourceName>Group</TargetResourceName>

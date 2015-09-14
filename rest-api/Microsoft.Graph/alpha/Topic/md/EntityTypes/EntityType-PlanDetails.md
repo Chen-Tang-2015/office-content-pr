@@ -31,9 +31,9 @@ The `PlanDetails` resource supports the following properties
 
 The `PlanDetails` entity resource supports the following operations, including actions and functions. 
 
-####Work with the PlanDetails entity resource
+####Work with the PlanDetails resource
 
-####Get a PlanDetails entity resource
+####Get a PlanDetails
 
 To get an existing `PlanDetails` entity resource, submit an `HTTP GET` request of the following syntax: 
 
@@ -45,35 +45,34 @@ To get an existing `PlanDetails` entity resource, submit an `HTTP GET` request o
 ####Request
 
 ```
+	GET  HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET  HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 ####Response
 
 ```
 	200 OK
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.PlanDetails',
-	'@odata.id': '/<PlanDetails.id>',
-	'id' : '<Edm.String>',
-	 ...,
-	'version' : '<Edm.String>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.PlanDetails',
+		'@odata.id': '/<PlanDetails.id>',
+		'id' : '<Edm.String>',
+		 ...,
+		'version' : '<Edm.String>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a PlanDetails entity resource representation. 
 
-####Create or add a PlanDetails entity resource
+####Create or add a PlanDetails
 
  
 
@@ -88,7 +87,7 @@ A successful response returns the `200 OK` status code and a payload containing 
 
  
 
-####Update a PlanDetails entity resource
+####Update a PlanDetails
 
 To update an existing `PlanDetails` entity resource, submit an `HTTP PUT` request, specifying a new instance of the resource in the request body: 
 
@@ -100,33 +99,32 @@ To update an existing `PlanDetails` entity resource, submit an `HTTP PUT` reques
 ####Request
 
 ```
+	PUT  HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
+	Content-Length : <body_length>
 	
-PUT  HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-Content-Length : <body_length>
-
-{
-	<PlanDetails.property_1> : <value_1>,
-	...,
-	<PlanDetails.property_n> : <value_n>
-}
-
+	{
+		<PlanDetails.property_1> : <value_1>,
+		...,
+		<PlanDetails.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
-####Update a PlanDetails entity properties
+####Update a PlanDetails's properties
 
 To update selected properties of an existing `PlanDetails` entity, submit an `HTTP PATCH` request, specifying a new instance of the resource in the request body: 
 
@@ -138,33 +136,32 @@ To update selected properties of an existing `PlanDetails` entity, submit an `HT
 ####Request
 
 ```
+	PATCH  HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
+	Content-Length : <body_length>
 	
-PATCH  HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-Content-Length : <body_length>
-
-{
-	<PlanDetails.property_1> : <value_1>,
-	...,
-	<PlanDetails.property_n> : <value_n>
-}
-
+	{
+		<PlanDetails.property_1> : <value_1>,
+		...,
+		<PlanDetails.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
 
-####Delete a PlanDetails entity resource
+####Delete a PlanDetails 
 
 To delete an existing `PlanDetails` entity resource, submit an `HTTP DELETE` request, specifying a new instance of the resource in the request body: 
 
@@ -176,22 +173,21 @@ To delete an existing `PlanDetails` entity resource, submit an `HTTP DELETE` req
 ####Request
 
 ```
+	DELETE  HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
 	
-DELETE  HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-
-
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 No content` status code without any payload. 

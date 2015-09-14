@@ -75,9 +75,9 @@ The `Attachment` resource supports the following properties
 
 The `Attachment` entity resource supports the following operations, including actions and functions. 
 
-####Work with the Attachment entity resource
+####Work with the Attachment resource
 
-####Get an Attachment entity resource
+####Get an Attachment
 
 To get an existing `Attachment` entity resource, submit an `HTTP GET` request of the following syntax: 
 
@@ -89,35 +89,34 @@ To get an existing `Attachment` entity resource, submit an `HTTP GET` request of
 ####Request
 
 ```
+	GET /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<Attachment.Id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<Attachment.Id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 ####Response
 
 ```
 	200 OK
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.Attachment',
-	'@odata.id': '/<Attachment.Id>',
-	'ContentType' : '<Edm.String>',
-	 ...,
-	'Size' : '<Edm.Int32>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.Attachment',
+		'@odata.id': '/<Attachment.Id>',
+		'ContentType' : '<Edm.String>',
+		 ...,
+		'Size' : '<Edm.Int32>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the specified an Attachment entity resource representation. 
 
-####Create or add an Attachment entity resource
+####Create or add an Attachment
 
 To create new `Attachment` entity resource, submit an `HTTP POST` request against the `Attachments` collection: 
 
@@ -129,41 +128,40 @@ To create new `Attachment` entity resource, submit an `HTTP POST` request agains
 ####Request
 
 ```
+	POST /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<Attachment.Id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : <body_length>
 	
-POST /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<Attachment.Id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : <body_length>
-
-{
-	<Attachment.property_1> : <value_1>,
-	...,
-	<Attachment.property_n> : <value_n>
-}
-
+	{
+		<Attachment.property_1> : <value_1>,
+		...,
+		<Attachment.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	201 Created
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.Attachment',
-	'@odata.id': '/<Attachment.Id>',
-	'ContentType' : '<Edm.String>',
-	 ...,
-	'Size' : '<Edm.Int32>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.Attachment',
+		'@odata.id': '/<Attachment.Id>',
+		'ContentType' : '<Edm.String>',
+		 ...,
+		'Size' : '<Edm.Int32>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added an Attachment entity resource representation. 
 
-####Update an Attachment entity resource
+####Update an Attachment
 
 To update an existing `Attachment` entity resource, submit an `HTTP PUT` request, specifying a new instance of the resource in the request body: 
 
@@ -175,33 +173,32 @@ To update an existing `Attachment` entity resource, submit an `HTTP PUT` request
 ####Request
 
 ```
+	PUT /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<Attachment.Id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
+	Content-Length : <body_length>
 	
-PUT /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<Attachment.Id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-Content-Length : <body_length>
-
-{
-	<Attachment.property_1> : <value_1>,
-	...,
-	<Attachment.property_n> : <value_n>
-}
-
+	{
+		<Attachment.property_1> : <value_1>,
+		...,
+		<Attachment.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
-####Update an Attachment entity properties
+####Update an Attachment's properties
 
 To update selected properties of an existing `Attachment` entity, submit an `HTTP PATCH` request, specifying a new instance of the resource in the request body: 
 
@@ -213,33 +210,32 @@ To update selected properties of an existing `Attachment` entity, submit an `HTT
 ####Request
 
 ```
+	PATCH /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<Attachment.Id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
+	Content-Length : <body_length>
 	
-PATCH /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<Attachment.Id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-Content-Length : <body_length>
-
-{
-	<Attachment.property_1> : <value_1>,
-	...,
-	<Attachment.property_n> : <value_n>
-}
-
+	{
+		<Attachment.property_1> : <value_1>,
+		...,
+		<Attachment.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
 
-####Delete an Attachment entity resource
+####Delete an Attachment 
 
 To delete an existing `Attachment` entity resource, submit an `HTTP DELETE` request, specifying a new instance of the resource in the request body: 
 
@@ -251,22 +247,21 @@ To delete an existing `Attachment` entity resource, submit an `HTTP DELETE` requ
 ####Request
 
 ```
+	DELETE /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<Attachment.Id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
 	
-DELETE /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<Attachment.Id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-
-
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 No content` status code without any payload. 

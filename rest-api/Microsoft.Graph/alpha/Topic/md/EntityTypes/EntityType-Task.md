@@ -79,9 +79,9 @@ The `Task` resource supports the following navigation properties to access the t
 
 The `Task` entity resource supports the following operations, including actions and functions. 
 
-####Work with the Task entity resource
+####Work with the Task resource
 
-####Get a Task entity resource
+####Get a Task
 
 To get an existing `Task` entity resource, submit an `HTTP GET` request of the following syntax: 
 
@@ -93,35 +93,34 @@ To get an existing `Task` entity resource, submit an `HTTP GET` request of the f
 ####Request
 
 ```
+	GET /<version>/myOrganization/tasks/<Task.id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/tasks/<Task.id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 ####Response
 
 ```
 	200 OK
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.Task',
-	'@odata.id': '/<Task.id>',
-	'assignedBy' : '<Edm.String>',
-	 ...,
-	'version' : '<Edm.String>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.Task',
+		'@odata.id': '/<Task.id>',
+		'assignedBy' : '<Edm.String>',
+		 ...,
+		'version' : '<Edm.String>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a Task entity resource representation. 
 
-####Create or add a Task entity resource
+####Create or add a Task
 
 To create new `Task` entity resource, submit an `HTTP POST` request against the `tasks` collection: 
 
@@ -133,41 +132,40 @@ To create new `Task` entity resource, submit an `HTTP POST` request against the 
 ####Request
 
 ```
+	POST /<version>/myOrganization/tasks/<Task.id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	Content-Length : <body_length>
 	
-POST /<version>/myOrganization/tasks/<Task.id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-Content-Length : <body_length>
-
-{
-	<Task.property_1> : <value_1>,
-	...,
-	<Task.property_n> : <value_n>
-}
-
+	{
+		<Task.property_1> : <value_1>,
+		...,
+		<Task.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	201 Created
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.Task',
-	'@odata.id': '/<Task.id>',
-	'assignedBy' : '<Edm.String>',
-	 ...,
-	'version' : '<Edm.String>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.Task',
+		'@odata.id': '/<Task.id>',
+		'assignedBy' : '<Edm.String>',
+		 ...,
+		'version' : '<Edm.String>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added a Task entity resource representation. 
 
-####Update a Task entity resource
+####Update a Task
 
 To update an existing `Task` entity resource, submit an `HTTP PUT` request, specifying a new instance of the resource in the request body: 
 
@@ -179,33 +177,32 @@ To update an existing `Task` entity resource, submit an `HTTP PUT` request, spec
 ####Request
 
 ```
+	PUT /<version>/myOrganization/tasks/<Task.id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
+	Content-Length : <body_length>
 	
-PUT /<version>/myOrganization/tasks/<Task.id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-Content-Length : <body_length>
-
-{
-	<Task.property_1> : <value_1>,
-	...,
-	<Task.property_n> : <value_n>
-}
-
+	{
+		<Task.property_1> : <value_1>,
+		...,
+		<Task.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 - No content` status code without any payload. 
 
-####Update a Task entity properties
+####Update a Task's properties
 
 To update selected properties of an existing `Task` entity, submit an `HTTP PATCH` request, specifying a new instance of the resource in the request body: 
 
@@ -217,33 +214,32 @@ To update selected properties of an existing `Task` entity, submit an `HTTP PATC
 ####Request
 
 ```
+	PATCH /<version>/myOrganization/tasks/<Task.id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
+	Content-Length : <body_length>
 	
-PATCH /<version>/myOrganization/tasks/<Task.id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-Content-Length : <body_length>
-
-{
-	<Task.property_1> : <value_1>,
-	...,
-	<Task.property_n> : <value_n>
-}
-
+	{
+		<Task.property_1> : <value_1>,
+		...,
+		<Task.property_n> : <value_n>
+	}
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
 
-####Delete a Task entity resource
+####Delete a Task 
 
 To delete an existing `Task` entity resource, submit an `HTTP DELETE` request, specifying a new instance of the resource in the request body: 
 
@@ -255,27 +251,26 @@ To delete an existing `Task` entity resource, submit an `HTTP DELETE` request, s
 ####Request
 
 ```
+	DELETE /<version>/myOrganization/tasks/<Task.id> HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
+	If-Match : '*'
 	
-DELETE /<version>/myOrganization/tasks/<Task.id> HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-If-Match : '*'
-
-
+	
 ```
 
 ####Response
 
 ```
 	204 No content
-
-
+	
+	
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
 
-####Access the Task's details related resource
+####Access the TaskDetails resource via the Task/details relationship
 
 #####Get the Task/details entity
 
@@ -289,30 +284,29 @@ To get a Task/details `Task/details` resource, submit an `HTTP GET` request of t
 #####Request
 
 ```
+	GET /<version>/myOrganization/tasks/<Task.id>/details HTTP/1.1
+	Host : graph.microsoft.com
+	Authorization : Bearer <access_token>
+	Accept : application/json;odata=verbose
 	
-GET /<version>/myOrganization/tasks/<Task.id>/details HTTP/1.1
-Host : graph.microsoft.com
-Authorization : Bearer <access_token>
-Accept : application/json;odata=verbose
-
-
+	
 ```
 
 #####Response
 
 ```
 	200 OK
-
-{
-
-	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-	'@odata.type': '#Microsoft.Graph.TaskDetails',
-	'@odata.id': '/<TaskDetails.id>',
-	'completedBy' : '<Edm.String>',
-	 ...,
-	'version' : '<Edm.String>'
-}
-
+	
+	{
+	
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.TaskDetails',
+		'@odata.id': '/<TaskDetails.id>',
+		'completedBy' : '<Edm.String>',
+		 ...,
+		'version' : '<Edm.String>'
+	}
+	
 ```
 
 A successful response returns the `200 OK` status code and a body containing a `TaskDetails` resource representation. 
