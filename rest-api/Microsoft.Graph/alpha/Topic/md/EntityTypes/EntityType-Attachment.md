@@ -65,7 +65,7 @@ The `Attachment` resource supports the following properties
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | 
 | `ContentType` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
 | `DateTimeLastModified` | `Edm.DateTimeOffset` | `alpha` | `true` | `n/a` | `true` | `true` |  |  | 
-| `Id` (_Key_ | `Edm.String` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
+| `Id` (_Key_) | `Edm.String` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
 | `IsInline` | `Edm.Boolean` | `alpha` | `false` | `n/a` | `true` | `true` |  |  | 
 | `Name` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
 | `Size` | `Edm.Int32` | `alpha` | `false` | `n/a` | `true` | `true` |  |  | 
@@ -89,29 +89,30 @@ To get an existing `Attachment` entity resource, submit an `HTTP GET` request of
 ####Request
 
 ```
-	GET /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<Attachment.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
 	
-	
+GET /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<Attachment.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
 ```
 
 ####Response
 
 ```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Attachment',
-		'@odata.id': '/<Attachment.Id>',
-		'ContentType' : '<Edm.String>',
-		 ...,
-		'Size' : '<Edm.Int32>'
-	}
-	
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Attachment',
+	'@odata.id': '/<Attachment.Id>',
+	'ContentType' : '<Edm.String>',
+	 ...,
+	'Size' : '<Edm.Int32>'
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the specified an Attachment entity resource representation. 
@@ -128,35 +129,36 @@ To create new `Attachment` entity resource, submit an `HTTP POST` request agains
 ####Request
 
 ```
-	POST /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<Attachment.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		<Attachment.property_1> : <value_1>,
-		...,
-		<Attachment.property_n> : <value_n>
-	}
-	
+POST /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<Attachment.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<Attachment.property_1> : <value_1>,
+	...,
+	<Attachment.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Attachment',
-		'@odata.id': '/<Attachment.Id>',
-		'ContentType' : '<Edm.String>',
-		 ...,
-		'Size' : '<Edm.Int32>'
-	}
-	
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Attachment',
+	'@odata.id': '/<Attachment.Id>',
+	'ContentType' : '<Edm.String>',
+	 ...,
+	'Size' : '<Edm.Int32>'
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added an Attachment entity resource representation. 
@@ -173,27 +175,28 @@ To update an existing `Attachment` entity resource, submit an `HTTP PUT` request
 ####Request
 
 ```
-	PUT /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<Attachment.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
 	
-	{
-		<Attachment.property_1> : <value_1>,
-		...,
-		<Attachment.property_n> : <value_n>
-	}
-	
+PUT /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<Attachment.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<Attachment.property_1> : <value_1>,
+	...,
+	<Attachment.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 - No content` status code without any payload. 
@@ -210,27 +213,28 @@ To update selected properties of an existing `Attachment` entity, submit an `HTT
 ####Request
 
 ```
-	PATCH /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<Attachment.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
 	
-	{
-		<Attachment.property_1> : <value_1>,
-		...,
-		<Attachment.property_n> : <value_n>
-	}
-	
+PATCH /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<Attachment.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<Attachment.property_1> : <value_1>,
+	...,
+	<Attachment.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
@@ -247,22 +251,28 @@ To delete an existing `Attachment` entity resource, submit an `HTTP DELETE` requ
 ####Request
 
 ```
-	DELETE /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<Attachment.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
 	
-	
+DELETE /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<Attachment.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "EntityType/Attachment",
+"section": "documentation"
+} -->

@@ -42,36 +42,37 @@ To get the members of the `directoryRoles` entity set, submit an `HTTP GET` requ
 ###Request
 
 ```
-	GET /<version>/myOrganization/directoryRoles HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
 	
-	
+GET /<version>/myOrganization/directoryRoles HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
 ```
 
 ###Response
 
 ```
 	200 OK
-	
+
+{
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#directoryRoles',
+	'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/directoryRoles',
+	'value': [ 
 	{
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#directoryRoles',
-		'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/directoryRoles',
-		'value': [ 
-		{
-	
-			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-			'@odata.type': '#Microsoft.Graph.DirectoryRole',
-			'@odata.id': '/<DirectoryRole.objectId>',
-			'description' : '<Edm.String>',
-			 ...,
-			'roleTemplateId' : '<Edm.String>'
-	}
-	
-		]
-	}
-	
+
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.DirectoryRole',
+		'@odata.id': '/<DirectoryRole.objectId>',
+		'description' : '<Edm.String>',
+		 ...,
+		'roleTemplateId' : '<Edm.String>'
+}
+
+	]
+}
+
 ```
 
 The successful response returns a `200 OK` status code, with a payload containing the collection of the `Microsoft.Graph.DirectoryRole` resource representations. 
@@ -89,45 +90,51 @@ To create a new Microsoft.Graph.DirectoryRole entity resource, submit an `HTTP P
 ###Request
 
 ```
-	POST /<version>/myOrganization/directoryRoles HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		<DirectoryRole.property_1> : <value_1>,
-		...,
-		<DirectoryRole.propery_n> : <value_n>
-	}
-	
+POST /<version>/myOrganization/directoryRoles HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<DirectoryRole.property_1> : <value_1>,
+	...,
+	<DirectoryRole.propery_n> : <value_n>
+}
+
 ```
 
 ###Response
 
 ```
 	201 Created
-	
+
+{
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#directoryRoles',
+	'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/directoryRoles',
+	'value': [ 
 	{
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#directoryRoles',
-		'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/directoryRoles',
-		'value': [ 
-		{
-	
-			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-			'@odata.type': '#Microsoft.Graph.DirectoryRole',
-			'@odata.id': '/<DirectoryRole.objectId>',
-			'description' : '<Edm.String>',
-			 ...,
-			'roleTemplateId' : '<Edm.String>'
-	}
-	
-		]
-	}
-	
+
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.DirectoryRole',
+		'@odata.id': '/<DirectoryRole.objectId>',
+		'description' : '<Edm.String>',
+		 ...,
+		'roleTemplateId' : '<Edm.String>'
+}
+
+	]
+}
+
 ```
 
 The successful response returns a `201 Created` status code, with a payload containing a Microsoft.Graph.DirectoryRole `Microsoft.Graph.DirectoryRole` resource representations. 
 
 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "EntitySet/directoryRoles",
+"section": "documentation"
+} -->

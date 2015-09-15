@@ -60,3 +60,8 @@ The `FreeBusyStatus` enumeration is referenced by the following resources.
 
 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "EnumType/FreeBusyStatus",
+"section": "documentation"
+} -->

@@ -42,36 +42,37 @@ To get the members of the `plans` entity set, submit an `HTTP GET` request .
 ###Request
 
 ```
-	GET /<version>/myOrganization/plans HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
 	
-	
+GET /<version>/myOrganization/plans HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
 ```
 
 ###Response
 
 ```
 	200 OK
-	
+
+{
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#plans',
+	'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/plans',
+	'value': [ 
 	{
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#plans',
-		'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/plans',
-		'value': [ 
-		{
-	
-			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-			'@odata.type': '#Microsoft.Graph.Plan',
-			'@odata.id': '/<Plan.id>',
-			'activeTasks' : '<Edm.Int32>',
-			 ...,
-			'version' : '<Edm.String>'
-	}
-	
-		]
-	}
-	
+
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.Plan',
+		'@odata.id': '/<Plan.id>',
+		'activeTasks' : '<Edm.Int32>',
+		 ...,
+		'version' : '<Edm.String>'
+}
+
+	]
+}
+
 ```
 
 The successful response returns a `200 OK` status code, with a payload containing the collection of the `Microsoft.Graph.Plan` resource representations. 
@@ -88,45 +89,51 @@ To create a new Microsoft.Graph.Plan entity resource, submit an `HTTP POST` requ
 ###Request
 
 ```
-	POST /<version>/myOrganization/plans HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		<Plan.property_1> : <value_1>,
-		...,
-		<Plan.propery_n> : <value_n>
-	}
-	
+POST /<version>/myOrganization/plans HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<Plan.property_1> : <value_1>,
+	...,
+	<Plan.propery_n> : <value_n>
+}
+
 ```
 
 ###Response
 
 ```
 	201 Created
-	
+
+{
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#plans',
+	'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/plans',
+	'value': [ 
 	{
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#plans',
-		'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/plans',
-		'value': [ 
-		{
-	
-			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-			'@odata.type': '#Microsoft.Graph.Plan',
-			'@odata.id': '/<Plan.id>',
-			'activeTasks' : '<Edm.Int32>',
-			 ...,
-			'version' : '<Edm.String>'
-	}
-	
-		]
-	}
-	
+
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.Plan',
+		'@odata.id': '/<Plan.id>',
+		'activeTasks' : '<Edm.Int32>',
+		 ...,
+		'version' : '<Edm.String>'
+}
+
+	]
+}
+
 ```
 
 The successful response returns a `201 Created` status code, with a payload containing a Microsoft.Graph.Plan `Microsoft.Graph.Plan` resource representations. 
 
 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "EntitySet/plans",
+"section": "documentation"
+} -->

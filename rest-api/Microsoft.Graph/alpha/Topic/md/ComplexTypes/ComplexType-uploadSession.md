@@ -26,3 +26,8 @@ The `uploadSession` extended resource exposes the following properties
 
 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "ComplexType/uploadSession",
+"section": "documentation"
+} -->

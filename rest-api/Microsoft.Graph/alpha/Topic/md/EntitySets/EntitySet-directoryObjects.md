@@ -42,36 +42,37 @@ To get the members of the `directoryObjects` entity set, submit an `HTTP GET` re
 ###Request
 
 ```
-	GET /<version>/myOrganization/directoryObjects HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
 	
-	
+GET /<version>/myOrganization/directoryObjects HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
 ```
 
 ###Response
 
 ```
 	200 OK
-	
+
+{
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#directoryObjects',
+	'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/directoryObjects',
+	'value': [ 
 	{
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#directoryObjects',
-		'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/directoryObjects',
-		'value': [ 
-		{
-	
-			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-			'@odata.type': '#Microsoft.Graph.DirectoryObject',
-			'@odata.id': '/<DirectoryObject.objectId>',
-			'deletionTimestamp' : '<Edm.DateTimeOffset>',
-			 ...,
-			'objectType' : '<Edm.String>'
-	}
-	
-		]
-	}
-	
+
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.DirectoryObject',
+		'@odata.id': '/<DirectoryObject.objectId>',
+		'deletionTimestamp' : '<Edm.DateTimeOffset>',
+		 ...,
+		'objectType' : '<Edm.String>'
+}
+
+	]
+}
+
 ```
 
 The successful response returns a `200 OK` status code, with a payload containing the collection of the `Microsoft.Graph.DirectoryObject` resource representations. 
@@ -89,45 +90,51 @@ To create a new Microsoft.Graph.DirectoryObject entity resource, submit an `HTTP
 ###Request
 
 ```
-	POST /<version>/myOrganization/directoryObjects HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		<DirectoryObject.property_1> : <value_1>,
-		...,
-		<DirectoryObject.propery_n> : <value_n>
-	}
-	
+POST /<version>/myOrganization/directoryObjects HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<DirectoryObject.property_1> : <value_1>,
+	...,
+	<DirectoryObject.propery_n> : <value_n>
+}
+
 ```
 
 ###Response
 
 ```
 	201 Created
-	
+
+{
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#directoryObjects',
+	'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/directoryObjects',
+	'value': [ 
 	{
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#directoryObjects',
-		'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/directoryObjects',
-		'value': [ 
-		{
-	
-			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-			'@odata.type': '#Microsoft.Graph.DirectoryObject',
-			'@odata.id': '/<DirectoryObject.objectId>',
-			'deletionTimestamp' : '<Edm.DateTimeOffset>',
-			 ...,
-			'objectType' : '<Edm.String>'
-	}
-	
-		]
-	}
-	
+
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.DirectoryObject',
+		'@odata.id': '/<DirectoryObject.objectId>',
+		'deletionTimestamp' : '<Edm.DateTimeOffset>',
+		 ...,
+		'objectType' : '<Edm.String>'
+}
+
+	]
+}
+
 ```
 
 The successful response returns a `201 Created` status code, with a payload containing a Microsoft.Graph.DirectoryObject `Microsoft.Graph.DirectoryObject` resource representations. 
 
 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "EntitySet/directoryObjects",
+"section": "documentation"
+} -->

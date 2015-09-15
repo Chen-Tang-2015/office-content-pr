@@ -144,3 +144,8 @@ The `AssignedPlan` extended resource is referenced by the following resources.
 
 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "ComplexType/AssignedPlan",
+"section": "documentation"
+} -->

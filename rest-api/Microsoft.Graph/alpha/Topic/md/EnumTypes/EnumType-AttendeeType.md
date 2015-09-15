@@ -57,3 +57,8 @@ The `AttendeeType` enumeration is referenced by the following resources.
 
 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "EnumType/AttendeeType",
+"section": "documentation"
+} -->

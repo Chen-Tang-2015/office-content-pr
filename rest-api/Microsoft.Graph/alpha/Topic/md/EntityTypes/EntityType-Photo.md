@@ -38,7 +38,7 @@ The `Photo` resource supports the following properties
 | Name | Type | Versions | Nullable | Unicode | Writeable | Required to create | Default value | Comments | 
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | 
 | `Height` | `Edm.Int32` | `alpha` | `true` | `n/a` | `true` | `true` |  |  | 
-| `Id` (_Key_ | `Edm.String` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
+| `Id` (_Key_) | `Edm.String` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
 | `Width` | `Edm.Int32` | `alpha` | `true` | `n/a` | `true` | `true` |  |  | 
 
 
@@ -62,29 +62,30 @@ To get an existing `Photo` entity resource, submit an `HTTP GET` request of the 
 ####Request
 
 ```
-	GET /<version>/myOrganization/groups/<Group.objectId>/GroupPhotos/<Photo.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
 	
-	
+GET /<version>/myOrganization/groups/<Group.objectId>/GroupPhotos/<Photo.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
 ```
 
 ####Response
 
 ```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Photo',
-		'@odata.id': '/<Photo.Id>',
-		'Height' : '<Edm.Int32>',
-		 ...,
-		'Width' : '<Edm.Int32>'
-	}
-	
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Photo',
+	'@odata.id': '/<Photo.Id>',
+	'Height' : '<Edm.Int32>',
+	 ...,
+	'Width' : '<Edm.Int32>'
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a Photo entity resource representation. 
@@ -100,35 +101,36 @@ To create new `Photo` entity resource, submit an `HTTP POST` request against the
 ####Request
 
 ```
-	POST /<version>/myOrganization/groups/<Group.objectId>/GroupPhotos/<Photo.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		<Photo.property_1> : <value_1>,
-		...,
-		<Photo.property_n> : <value_n>
-	}
-	
+POST /<version>/myOrganization/groups/<Group.objectId>/GroupPhotos/<Photo.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<Photo.property_1> : <value_1>,
+	...,
+	<Photo.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Photo',
-		'@odata.id': '/<Photo.Id>',
-		'Height' : '<Edm.Int32>',
-		 ...,
-		'Width' : '<Edm.Int32>'
-	}
-	
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Photo',
+	'@odata.id': '/<Photo.Id>',
+	'Height' : '<Edm.Int32>',
+	 ...,
+	'Width' : '<Edm.Int32>'
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added a Photo entity resource representation. 
@@ -144,27 +146,28 @@ To update an existing `Photo` entity resource, submit an `HTTP PUT` request, spe
 ####Request
 
 ```
-	PUT /<version>/myOrganization/groups/<Group.objectId>/GroupPhotos/<Photo.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
 	
-	{
-		<Photo.property_1> : <value_1>,
-		...,
-		<Photo.property_n> : <value_n>
-	}
-	
+PUT /<version>/myOrganization/groups/<Group.objectId>/GroupPhotos/<Photo.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<Photo.property_1> : <value_1>,
+	...,
+	<Photo.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 - No content` status code without any payload. 
@@ -180,27 +183,28 @@ To update selected properties of an existing `Photo` entity, submit an `HTTP PAT
 ####Request
 
 ```
-	PATCH /<version>/myOrganization/groups/<Group.objectId>/GroupPhotos/<Photo.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
 	
-	{
-		<Photo.property_1> : <value_1>,
-		...,
-		<Photo.property_n> : <value_n>
-	}
-	
+PATCH /<version>/myOrganization/groups/<Group.objectId>/GroupPhotos/<Photo.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<Photo.property_1> : <value_1>,
+	...,
+	<Photo.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
@@ -216,22 +220,28 @@ To delete an existing `Photo` entity resource, submit an `HTTP DELETE` request, 
 ####Request
 
 ```
-	DELETE /<version>/myOrganization/groups/<Group.objectId>/GroupPhotos/<Photo.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
 	
-	
+DELETE /<version>/myOrganization/groups/<Group.objectId>/GroupPhotos/<Photo.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "EntityType/Photo",
+"section": "documentation"
+} -->

@@ -26,3 +26,8 @@ The `sharingLink` extended resource exposes the following properties
 
 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "ComplexType/sharingLink",
+"section": "documentation"
+} -->

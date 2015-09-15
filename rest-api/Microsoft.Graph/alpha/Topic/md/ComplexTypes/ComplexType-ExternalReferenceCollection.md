@@ -23,3 +23,8 @@ The `ExternalReferenceCollection` extended resource exposes the following proper
 
 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "ComplexType/ExternalReferenceCollection",
+"section": "documentation"
+} -->

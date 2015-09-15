@@ -53,3 +53,8 @@ The `identitySet` extended resource is referenced by the following resources.
 
 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "ComplexType/identitySet",
+"section": "documentation"
+} -->

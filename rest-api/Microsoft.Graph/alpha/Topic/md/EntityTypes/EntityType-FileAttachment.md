@@ -68,7 +68,7 @@ The `FileAttachment` resource supports the following properties
 | `ContentLocation` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
 | `ContentType` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
 | `DateTimeLastModified` | `Edm.DateTimeOffset` | `alpha` | `true` | `n/a` | `true` | `true` |  |  | 
-| `Id` (_Key_ | `Edm.String` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
+| `Id` (_Key_) | `Edm.String` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
 | `IsContactPhoto` | `Edm.Boolean` | `alpha` | `false` | `n/a` | `true` | `true` |  |  | 
 | `IsInline` | `Edm.Boolean` | `alpha` | `false` | `n/a` | `true` | `true` |  |  | 
 | `Name` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
@@ -95,29 +95,30 @@ To get an existing `FileAttachment` entity resource, submit an `HTTP GET` reques
 ####Request
 
 ```
-	GET /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<FileAttachment.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
 	
-	
+GET /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<FileAttachment.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
 ```
 
 ####Response
 
 ```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.FileAttachment',
-		'@odata.id': '/<FileAttachment.Id>',
-		'ContentBytes' : '<Edm.Binary>',
-		 ...,
-		'IsContactPhoto' : '<Edm.Boolean>'
-	}
-	
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.FileAttachment',
+	'@odata.id': '/<FileAttachment.Id>',
+	'ContentBytes' : '<Edm.Binary>',
+	 ...,
+	'IsContactPhoto' : '<Edm.Boolean>'
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a FileAttachment entity resource representation. 
@@ -151,27 +152,28 @@ To update an existing `FileAttachment` entity resource, submit an `HTTP PUT` req
 ####Request
 
 ```
-	PUT /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<FileAttachment.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
 	
-	{
-		<FileAttachment.property_1> : <value_1>,
-		...,
-		<FileAttachment.property_n> : <value_n>
-	}
-	
+PUT /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<FileAttachment.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<FileAttachment.property_1> : <value_1>,
+	...,
+	<FileAttachment.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 - No content` status code without any payload. 
@@ -189,27 +191,28 @@ To update selected properties of an existing `FileAttachment` entity, submit an 
 ####Request
 
 ```
-	PATCH /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<FileAttachment.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
 	
-	{
-		<FileAttachment.property_1> : <value_1>,
-		...,
-		<FileAttachment.property_n> : <value_n>
-	}
-	
+PATCH /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<FileAttachment.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<FileAttachment.property_1> : <value_1>,
+	...,
+	<FileAttachment.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
@@ -227,22 +230,28 @@ To delete an existing `FileAttachment` entity resource, submit an `HTTP DELETE` 
 ####Request
 
 ```
-	DELETE /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<FileAttachment.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
 	
-	
+DELETE /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments/<FileAttachment.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "EntityType/FileAttachment",
+"section": "documentation"
+} -->

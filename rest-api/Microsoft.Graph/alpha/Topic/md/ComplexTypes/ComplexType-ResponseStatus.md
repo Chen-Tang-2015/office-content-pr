@@ -78,3 +78,8 @@ The `ResponseStatus` extended resource is referenced by the following resources.
 
 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "ComplexType/ResponseStatus",
+"section": "documentation"
+} -->

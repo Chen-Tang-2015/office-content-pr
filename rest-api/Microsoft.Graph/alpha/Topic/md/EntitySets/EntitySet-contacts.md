@@ -44,36 +44,37 @@ To get the members of the `contacts` entity set, submit an `HTTP GET` request .
 ###Request
 
 ```
-	GET /<version>/myOrganization/contacts HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
 	
-	
+GET /<version>/myOrganization/contacts HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
 ```
 
 ###Response
 
 ```
 	200 OK
-	
+
+{
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#contacts',
+	'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/contacts',
+	'value': [ 
 	{
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#contacts',
-		'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/contacts',
-		'value': [ 
-		{
-	
-			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-			'@odata.type': '#Microsoft.Graph.Contact',
-			'@odata.id': '/<Contact.objectId>',
-			'city' : '<Edm.String>',
-			 ...,
-			'thumbnailPhoto' : '<Edm.Stream>'
-	}
-	
-		]
-	}
-	
+
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.Contact',
+		'@odata.id': '/<Contact.objectId>',
+		'city' : '<Edm.String>',
+		 ...,
+		'thumbnailPhoto' : '<Edm.Stream>'
+}
+
+	]
+}
+
 ```
 
 The successful response returns a `200 OK` status code, with a payload containing the collection of the `Microsoft.Graph.Contact` resource representations. 
@@ -91,45 +92,51 @@ To create a new Microsoft.Graph.Contact entity resource, submit an `HTTP POST` r
 ###Request
 
 ```
-	POST /<version>/myOrganization/contacts HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		<Contact.property_1> : <value_1>,
-		...,
-		<Contact.propery_n> : <value_n>
-	}
-	
+POST /<version>/myOrganization/contacts HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<Contact.property_1> : <value_1>,
+	...,
+	<Contact.propery_n> : <value_n>
+}
+
 ```
 
 ###Response
 
 ```
 	201 Created
-	
+
+{
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#contacts',
+	'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/contacts',
+	'value': [ 
 	{
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#contacts',
-		'@odata.nextLink': 'https://graph.microsoft.com/<version>/<tenant>/contacts',
-		'value': [ 
-		{
-	
-			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-			'@odata.type': '#Microsoft.Graph.Contact',
-			'@odata.id': '/<Contact.objectId>',
-			'city' : '<Edm.String>',
-			 ...,
-			'thumbnailPhoto' : '<Edm.Stream>'
-	}
-	
-		]
-	}
-	
+
+		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+		'@odata.type': '#Microsoft.Graph.Contact',
+		'@odata.id': '/<Contact.objectId>',
+		'city' : '<Edm.String>',
+		 ...,
+		'thumbnailPhoto' : '<Edm.Stream>'
+}
+
+	]
+}
+
 ```
 
 The successful response returns a `201 Created` status code, with a payload containing a Microsoft.Graph.Contact `Microsoft.Graph.Contact` resource representations. 
 
 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "EntitySet/contacts",
+"section": "documentation"
+} -->

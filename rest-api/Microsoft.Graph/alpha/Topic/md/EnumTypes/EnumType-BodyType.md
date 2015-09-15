@@ -68,3 +68,8 @@ The `BodyType` enumeration is referenced by the following resources.
 
 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "EnumType/BodyType",
+"section": "documentation"
+} -->

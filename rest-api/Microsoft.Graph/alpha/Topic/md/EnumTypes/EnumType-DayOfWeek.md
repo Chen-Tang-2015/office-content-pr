@@ -61,3 +61,8 @@ The `DayOfWeek` enumeration is referenced by the following resources.
 
 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "EnumType/DayOfWeek",
+"section": "documentation"
+} -->

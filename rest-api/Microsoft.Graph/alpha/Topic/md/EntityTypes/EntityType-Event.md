@@ -64,7 +64,7 @@ The `Event` resource supports the following properties
 | `EndTimeZone` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
 | `HasAttachments` | `Edm.Boolean` | `alpha` | `true` | `n/a` | `true` | `true` |  |  | 
 | `iCalUId` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
-| `Id` (_Key_ | `Edm.String` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
+| `Id` (_Key_) | `Edm.String` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
 | `Importance` | `Microsoft.Graph.Importance` | `alpha` | `true` | `n/a` | `true` | `true` |  |  | 
 | `IsAllDay` | `Edm.Boolean` | `alpha` | `true` | `n/a` | `true` | `true` |  |  | 
 | `IsCancelled` | `Edm.Boolean` | `alpha` | `true` | `n/a` | `true` | `true` |  |  | 
@@ -128,29 +128,30 @@ To get an existing `Event` entity resource, submit an `HTTP GET` request of the 
 ####Request
 
 ```
-	GET /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
 	
-	
+GET /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
 ```
 
 ####Response
 
 ```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Event',
-		'@odata.id': '/<Event.Id>',
-		'Attendees' : '<Collection(Microsoft.Graph.Attendee)>',
-		 ...,
-		'WebLink' : '<Edm.String>'
-	}
-	
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Event',
+	'@odata.id': '/<Event.Id>',
+	'Attendees' : '<Collection(Microsoft.Graph.Attendee)>',
+	 ...,
+	'WebLink' : '<Edm.String>'
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the specified an Event entity resource representation. 
@@ -167,35 +168,36 @@ To create new `Event` entity resource, submit an `HTTP POST` request against the
 ####Request
 
 ```
-	POST /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		<Event.property_1> : <value_1>,
-		...,
-		<Event.property_n> : <value_n>
-	}
-	
+POST /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<Event.property_1> : <value_1>,
+	...,
+	<Event.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Event',
-		'@odata.id': '/<Event.Id>',
-		'Attendees' : '<Collection(Microsoft.Graph.Attendee)>',
-		 ...,
-		'WebLink' : '<Edm.String>'
-	}
-	
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Event',
+	'@odata.id': '/<Event.Id>',
+	'Attendees' : '<Collection(Microsoft.Graph.Attendee)>',
+	 ...,
+	'WebLink' : '<Edm.String>'
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added an Event entity resource representation. 
@@ -212,27 +214,28 @@ To update an existing `Event` entity resource, submit an `HTTP PUT` request, spe
 ####Request
 
 ```
-	PUT /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
 	
-	{
-		<Event.property_1> : <value_1>,
-		...,
-		<Event.property_n> : <value_n>
-	}
-	
+PUT /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<Event.property_1> : <value_1>,
+	...,
+	<Event.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 - No content` status code without any payload. 
@@ -249,27 +252,28 @@ To update selected properties of an existing `Event` entity, submit an `HTTP PAT
 ####Request
 
 ```
-	PATCH /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
 	
-	{
-		<Event.property_1> : <value_1>,
-		...,
-		<Event.property_n> : <value_n>
-	}
-	
+PATCH /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<Event.property_1> : <value_1>,
+	...,
+	<Event.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
@@ -286,21 +290,22 @@ To delete an existing `Event` entity resource, submit an `HTTP DELETE` request, 
 ####Request
 
 ```
-	DELETE /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
 	
-	
+DELETE /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
@@ -319,35 +324,36 @@ To get the `Event/Attachments` collection, submit an `HTTP GET` request of the f
 #####Request
 
 ```
-	GET /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
 	
-	
+GET /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Attachments HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
 ```
 
 #####Response
 
 ```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.Attachment',
-				'@odata.id': '/<Attachment.Id>',
-				'ContentType' : '<Edm.String>',
-				 ...,
-				'Size' : '<Edm.Int32>'
-			}
-			,
-			...
-		]
-	}
-	
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.Attachment',
+			'@odata.id': '/<Attachment.Id>',
+			'ContentType' : '<Edm.String>',
+			 ...,
+			'Size' : '<Edm.Int32>'
+		}
+		,
+		...
+	]
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `Attachment` resource representations. 
@@ -367,29 +373,30 @@ To get an Event/Calendar `Event/Calendar` resource, submit an `HTTP GET` request
 #####Request
 
 ```
-	GET /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Calendar HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
 	
-	
+GET /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Calendar HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
 ```
 
 #####Response
 
 ```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Calendar',
-		'@odata.id': '/<Calendar.Id>',
-		'ChangeKey' : '<Edm.String>',
-		 ...,
-		'Name' : '<Edm.String>'
-	}
-	
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Calendar',
+	'@odata.id': '/<Calendar.Id>',
+	'ChangeKey' : '<Edm.String>',
+	 ...,
+	'Name' : '<Edm.String>'
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a body containing a `Calendar` resource representation. 
@@ -408,35 +415,36 @@ To get the `Event/Instances` collection, submit an `HTTP GET` request of the fol
 #####Request
 
 ```
-	GET /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Instances HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
 	
-	
+GET /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Instances HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
 ```
 
 #####Response
 
 ```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.Event',
-				'@odata.id': '/<Event.Id>',
-				'Attendees' : '<Collection(Microsoft.Graph.Attendee)>',
-				 ...,
-				'WebLink' : '<Edm.String>'
-			}
-			,
-			...
-		]
-	}
-	
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.Event',
+			'@odata.id': '/<Event.Id>',
+			'Attendees' : '<Collection(Microsoft.Graph.Attendee)>',
+			 ...,
+			'WebLink' : '<Edm.String>'
+		}
+		,
+		...
+	]
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `Event` resource representations. 
@@ -455,24 +463,25 @@ To call the `Event/Accept` action,submit a `POST` request of the following REST 
 #####Request
 
 ```
-	POST /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Accept HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		Comment : <Edm.String>
-	}
-	
+POST /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Accept HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	Comment : <Edm.String>
+}
+
 ```
 
 #####Response
 
 ```
 	201 Created
-	
-	
+
+
 ```
 
 A successful call to the Event/Accept action returns an empty response. 
@@ -489,24 +498,25 @@ To call the `Event/Decline` action,submit a `POST` request of the following REST
 #####Request
 
 ```
-	POST /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Decline HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		Comment : <Edm.String>
-	}
-	
+POST /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/Decline HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	Comment : <Edm.String>
+}
+
 ```
 
 #####Response
 
 ```
 	201 Created
-	
-	
+
+
 ```
 
 A successful call to the Event/Decline action returns an empty response. 
@@ -523,25 +533,31 @@ To call the `Event/TentativelyAccept` action,submit a `POST` request of the foll
 #####Request
 
 ```
-	POST /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/TentativelyAccept HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		Comment : <Edm.String>
-	}
-	
+POST /<version>/myOrganization/groups/<Group.objectId>/CalendarView/<Event.Id>/TentativelyAccept HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	Comment : <Edm.String>
+}
+
 ```
 
 #####Response
 
 ```
 	201 Created
-	
-	
+
+
 ```
 
 A successful call to the Event/TentativelyAccept action returns an empty response. 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "EntityType/Event",
+"section": "documentation"
+} -->

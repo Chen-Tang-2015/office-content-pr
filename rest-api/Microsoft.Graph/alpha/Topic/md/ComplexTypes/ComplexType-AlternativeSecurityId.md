@@ -88,3 +88,8 @@ The `AlternativeSecurityId` extended resource is referenced by the following res
 
 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "ComplexType/AlternativeSecurityId",
+"section": "documentation"
+} -->

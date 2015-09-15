@@ -24,7 +24,7 @@ The `DirectoryLinkChange` resource supports the following properties
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | 
 | `associationType` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
 | `deletionTimestamp` | `Edm.DateTimeOffset` | `alpha` | `true` | `n/a` | `true` | `true` |  |  | 
-| `objectId` (_Key_ | `Edm.String` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
+| `objectId` (_Key_) | `Edm.String` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
 | `objectType` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
 | `sourceObjectId` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
 | `sourceObjectType` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
@@ -65,29 +65,30 @@ To get an existing `DirectoryLinkChange` entity resource, submit an `HTTP GET` r
 ####Request
 
 ```
-	GET  HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
 	
-	
+GET  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
 ```
 
 ####Response
 
 ```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.DirectoryLinkChange',
-		'@odata.id': '/<DirectoryLinkChange.objectId>',
-		'associationType' : '<Edm.String>',
-		 ...,
-		'targetObjectUri' : '<Edm.String>'
-	}
-	
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.DirectoryLinkChange',
+	'@odata.id': '/<DirectoryLinkChange.objectId>',
+	'associationType' : '<Edm.String>',
+	 ...,
+	'targetObjectUri' : '<Edm.String>'
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a DirectoryLinkChange entity resource representation. 
@@ -121,27 +122,28 @@ To update an existing `DirectoryLinkChange` entity resource, submit an `HTTP PUT
 ####Request
 
 ```
-	PUT  HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
 	
-	{
-		<DirectoryLinkChange.property_1> : <value_1>,
-		...,
-		<DirectoryLinkChange.property_n> : <value_n>
-	}
-	
+PUT  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<DirectoryLinkChange.property_1> : <value_1>,
+	...,
+	<DirectoryLinkChange.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 - No content` status code without any payload. 
@@ -159,27 +161,28 @@ To update selected properties of an existing `DirectoryLinkChange` entity, submi
 ####Request
 
 ```
-	PATCH  HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
 	
-	{
-		<DirectoryLinkChange.property_1> : <value_1>,
-		...,
-		<DirectoryLinkChange.property_n> : <value_n>
-	}
-	
+PATCH  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<DirectoryLinkChange.property_1> : <value_1>,
+	...,
+	<DirectoryLinkChange.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
@@ -197,21 +200,22 @@ To delete an existing `DirectoryLinkChange` entity resource, submit an `HTTP DEL
 ####Request
 
 ```
-	DELETE  HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
 	
-	
+DELETE  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
@@ -231,24 +235,25 @@ To call the `DirectoryObject/checkMemberGroups` action,submit a `POST` request o
 #####Request
 
 ```
-	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/checkMemberGroups HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		groupIds : <Edm.String>
-	}
-	
+POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/checkMemberGroups HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	groupIds : <Edm.String>
+}
+
 ```
 
 #####Response
 
 ```
 	201 Created
-	
-	'<Edm.String>'
+
+'<Edm.String>'
 ```
 
 A successful call to the DirectoryObject/checkMemberGroups action returns an instance of the Edm.String type. 
@@ -266,24 +271,25 @@ To call the `DirectoryObject/getMemberGroups` action,submit a `POST` request of 
 #####Request
 
 ```
-	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberGroups HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		securityEnabledOnly : <Edm.Boolean>
-	}
-	
+POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberGroups HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	securityEnabledOnly : <Edm.Boolean>
+}
+
 ```
 
 #####Response
 
 ```
 	201 Created
-	
-	'<Edm.String>'
+
+'<Edm.String>'
 ```
 
 A successful call to the DirectoryObject/getMemberGroups action returns an instance of the Edm.String type. 
@@ -301,25 +307,31 @@ To call the `DirectoryObject/getMemberObjects` action,submit a `POST` request of
 #####Request
 
 ```
-	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberObjects HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		securityEnabledOnly : <Edm.Boolean>
-	}
-	
+POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberObjects HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	securityEnabledOnly : <Edm.Boolean>
+}
+
 ```
 
 #####Response
 
 ```
 	201 Created
-	
-	'<Edm.String>'
+
+'<Edm.String>'
 ```
 
 A successful call to the DirectoryObject/getMemberObjects action returns an instance of the Edm.String type. 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "EntityType/DirectoryLinkChange",
+"section": "documentation"
+} -->

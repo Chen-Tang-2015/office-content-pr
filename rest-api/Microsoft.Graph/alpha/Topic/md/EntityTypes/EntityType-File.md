@@ -48,26 +48,27 @@ To get an existing `File` entity resource, submit an `HTTP GET` request of the f
 ####Request
 
 ```
-	GET /<version>/myOrganization/users/<User.objectId>/TrendingAround/<File._undefined> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
 	
-	
+GET /<version>/myOrganization/users/<User.objectId>/TrendingAround/<File._undefined> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
 ```
 
 ####Response
 
 ```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.File',
-		'@odata.id': '/<File._undefined>'
-	}
-	
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.File',
+	'@odata.id': '/<File._undefined>'
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a File entity resource representation. 
@@ -88,32 +89,33 @@ To create new `File` entity resource, submit an `HTTP POST` request against the 
 ####Request
 
 ```
-	POST /<version>/myOrganization/users/<User.objectId>/TrendingAround/<File._undefined> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		<File.property_1> : <value_1>,
-		...,
-		<File.property_n> : <value_n>
-	}
-	
+POST /<version>/myOrganization/users/<User.objectId>/TrendingAround/<File._undefined> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<File.property_1> : <value_1>,
+	...,
+	<File.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.File',
-		'@odata.id': '/<File._undefined>'
-	}
-	
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.File',
+	'@odata.id': '/<File._undefined>'
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added a File entity resource representation. 
@@ -134,27 +136,28 @@ To update an existing `File` entity resource, submit an `HTTP PUT` request, spec
 ####Request
 
 ```
-	PUT /<version>/myOrganization/users/<User.objectId>/TrendingAround/<File._undefined> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
 	
-	{
-		<File.property_1> : <value_1>,
-		...,
-		<File.property_n> : <value_n>
-	}
-	
+PUT /<version>/myOrganization/users/<User.objectId>/TrendingAround/<File._undefined> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<File.property_1> : <value_1>,
+	...,
+	<File.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 - No content` status code without any payload. 
@@ -175,27 +178,28 @@ To update selected properties of an existing `File` entity, submit an `HTTP PATC
 ####Request
 
 ```
-	PATCH /<version>/myOrganization/users/<User.objectId>/TrendingAround/<File._undefined> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
 	
-	{
-		<File.property_1> : <value_1>,
-		...,
-		<File.property_n> : <value_n>
-	}
-	
+PATCH /<version>/myOrganization/users/<User.objectId>/TrendingAround/<File._undefined> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<File.property_1> : <value_1>,
+	...,
+	<File.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
@@ -216,22 +220,28 @@ To delete an existing `File` entity resource, submit an `HTTP DELETE` request, s
 ####Request
 
 ```
-	DELETE /<version>/myOrganization/users/<User.objectId>/TrendingAround/<File._undefined> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
 	
-	
+DELETE /<version>/myOrganization/users/<User.objectId>/TrendingAround/<File._undefined> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "EntityType/File",
+"section": "documentation"
+} -->

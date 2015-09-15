@@ -91,3 +91,8 @@ The `GroupAccessType` enumeration is referenced by the following resources.
 
 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "EnumType/GroupAccessType",
+"section": "documentation"
+} -->

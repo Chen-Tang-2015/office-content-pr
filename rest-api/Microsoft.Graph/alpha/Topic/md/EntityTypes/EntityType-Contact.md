@@ -46,7 +46,7 @@ The `Contact` resource supports the following properties
 | `mail` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
 | `mailNickname` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
 | `mobile` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
-| `objectId` (_Key_ | `Edm.String` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
+| `objectId` (_Key_) | `Edm.String` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
 | `objectType` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
 | `physicalDeliveryOfficeName` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
 | `postalCode` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
@@ -106,29 +106,30 @@ To get an existing `Contact` entity resource, submit an `HTTP GET` request of th
 ####Request
 
 ```
-	GET /<version>/myOrganization/contacts/<Contact.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
 	
-	
+GET /<version>/myOrganization/contacts/<Contact.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
 ```
 
 ####Response
 
 ```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Contact',
-		'@odata.id': '/<Contact.objectId>',
-		'city' : '<Edm.String>',
-		 ...,
-		'thumbnailPhoto' : '<Edm.Stream>'
-	}
-	
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Contact',
+	'@odata.id': '/<Contact.objectId>',
+	'city' : '<Edm.String>',
+	 ...,
+	'thumbnailPhoto' : '<Edm.Stream>'
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a Contact entity resource representation. 
@@ -146,35 +147,36 @@ To create new `Contact` entity resource, submit an `HTTP POST` request against t
 ####Request
 
 ```
-	POST /<version>/myOrganization/contacts/<Contact.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		<Contact.property_1> : <value_1>,
-		...,
-		<Contact.property_n> : <value_n>
-	}
-	
+POST /<version>/myOrganization/contacts/<Contact.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<Contact.property_1> : <value_1>,
+	...,
+	<Contact.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Contact',
-		'@odata.id': '/<Contact.objectId>',
-		'city' : '<Edm.String>',
-		 ...,
-		'thumbnailPhoto' : '<Edm.Stream>'
-	}
-	
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Contact',
+	'@odata.id': '/<Contact.objectId>',
+	'city' : '<Edm.String>',
+	 ...,
+	'thumbnailPhoto' : '<Edm.Stream>'
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added a Contact entity resource representation. 
@@ -192,27 +194,28 @@ To update an existing `Contact` entity resource, submit an `HTTP PUT` request, s
 ####Request
 
 ```
-	PUT /<version>/myOrganization/contacts/<Contact.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
 	
-	{
-		<Contact.property_1> : <value_1>,
-		...,
-		<Contact.property_n> : <value_n>
-	}
-	
+PUT /<version>/myOrganization/contacts/<Contact.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<Contact.property_1> : <value_1>,
+	...,
+	<Contact.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 - No content` status code without any payload. 
@@ -230,27 +233,28 @@ To update selected properties of an existing `Contact` entity, submit an `HTTP P
 ####Request
 
 ```
-	PATCH /<version>/myOrganization/contacts/<Contact.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
 	
-	{
-		<Contact.property_1> : <value_1>,
-		...,
-		<Contact.property_n> : <value_n>
-	}
-	
+PATCH /<version>/myOrganization/contacts/<Contact.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<Contact.property_1> : <value_1>,
+	...,
+	<Contact.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
@@ -268,21 +272,22 @@ To delete an existing `Contact` entity resource, submit an `HTTP DELETE` request
 ####Request
 
 ```
-	DELETE /<version>/myOrganization/contacts/<Contact.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
 	
-	
+DELETE /<version>/myOrganization/contacts/<Contact.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
@@ -303,35 +308,36 @@ To get the `Contact/directReports` collection, submit an `HTTP GET` request of t
 #####Request
 
 ```
-	GET /<version>/myOrganization/contacts/<Contact.objectId>/directReports HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
 	
-	
+GET /<version>/myOrganization/contacts/<Contact.objectId>/directReports HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
 ```
 
 #####Response
 
 ```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.DirectoryObject',
-				'@odata.id': '/<DirectoryObject.objectId>',
-				'deletionTimestamp' : '<Edm.DateTimeOffset>',
-				 ...,
-				'objectType' : '<Edm.String>'
-			}
-			,
-			...
-		]
-	}
-	
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.DirectoryObject',
+			'@odata.id': '/<DirectoryObject.objectId>',
+			'deletionTimestamp' : '<Edm.DateTimeOffset>',
+			 ...,
+			'objectType' : '<Edm.String>'
+		}
+		,
+		...
+	]
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `DirectoryObject` resource representations. 
@@ -352,29 +358,30 @@ To get a Contact/manager `Contact/manager` resource, submit an `HTTP GET` reques
 #####Request
 
 ```
-	GET /<version>/myOrganization/contacts/<Contact.objectId>/manager HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
 	
-	
+GET /<version>/myOrganization/contacts/<Contact.objectId>/manager HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
 ```
 
 #####Response
 
 ```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.DirectoryObject',
-		'@odata.id': '/<DirectoryObject.objectId>',
-		'deletionTimestamp' : '<Edm.DateTimeOffset>',
-		 ...,
-		'objectType' : '<Edm.String>'
-	}
-	
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.DirectoryObject',
+	'@odata.id': '/<DirectoryObject.objectId>',
+	'deletionTimestamp' : '<Edm.DateTimeOffset>',
+	 ...,
+	'objectType' : '<Edm.String>'
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a body containing a `DirectoryObject` resource representation. 
@@ -395,35 +402,36 @@ To get the `Contact/memberOf` collection, submit an `HTTP GET` request of the fo
 #####Request
 
 ```
-	GET /<version>/myOrganization/contacts/<Contact.objectId>/memberOf HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
 	
-	
+GET /<version>/myOrganization/contacts/<Contact.objectId>/memberOf HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
 ```
 
 #####Response
 
 ```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.DirectoryObject',
-				'@odata.id': '/<DirectoryObject.objectId>',
-				'deletionTimestamp' : '<Edm.DateTimeOffset>',
-				 ...,
-				'objectType' : '<Edm.String>'
-			}
-			,
-			...
-		]
-	}
-	
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.DirectoryObject',
+			'@odata.id': '/<DirectoryObject.objectId>',
+			'deletionTimestamp' : '<Edm.DateTimeOffset>',
+			 ...,
+			'objectType' : '<Edm.String>'
+		}
+		,
+		...
+	]
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `DirectoryObject` resource representations. 
@@ -443,24 +451,25 @@ To call the `DirectoryObject/checkMemberGroups` action,submit a `POST` request o
 #####Request
 
 ```
-	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/checkMemberGroups HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		groupIds : <Edm.String>
-	}
-	
+POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/checkMemberGroups HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	groupIds : <Edm.String>
+}
+
 ```
 
 #####Response
 
 ```
 	201 Created
-	
-	'<Edm.String>'
+
+'<Edm.String>'
 ```
 
 A successful call to the DirectoryObject/checkMemberGroups action returns an instance of the Edm.String type. 
@@ -478,24 +487,25 @@ To call the `DirectoryObject/getMemberGroups` action,submit a `POST` request of 
 #####Request
 
 ```
-	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberGroups HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		securityEnabledOnly : <Edm.Boolean>
-	}
-	
+POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberGroups HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	securityEnabledOnly : <Edm.Boolean>
+}
+
 ```
 
 #####Response
 
 ```
 	201 Created
-	
-	'<Edm.String>'
+
+'<Edm.String>'
 ```
 
 A successful call to the DirectoryObject/getMemberGroups action returns an instance of the Edm.String type. 
@@ -513,25 +523,31 @@ To call the `DirectoryObject/getMemberObjects` action,submit a `POST` request of
 #####Request
 
 ```
-	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberObjects HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		securityEnabledOnly : <Edm.Boolean>
-	}
-	
+POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberObjects HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	securityEnabledOnly : <Edm.Boolean>
+}
+
 ```
 
 #####Response
 
 ```
 	201 Created
-	
-	'<Edm.String>'
+
+'<Edm.String>'
 ```
 
 A successful call to the DirectoryObject/getMemberObjects action returns an instance of the Edm.String type. 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "EntityType/Contact",
+"section": "documentation"
+} -->

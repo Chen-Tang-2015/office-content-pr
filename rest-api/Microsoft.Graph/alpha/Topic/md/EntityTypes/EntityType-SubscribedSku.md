@@ -34,7 +34,7 @@ The `SubscribedSku` resource supports the following properties
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | 
 | `capabilityStatus` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
 | `consumedUnits` | `Edm.Int32` | `alpha` | `true` | `n/a` | `true` | `true` |  |  | 
-| `objectId` (_Key_ | `Edm.String` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
+| `objectId` (_Key_) | `Edm.String` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
 | `prepaidUnits` | `Microsoft.Graph.LicenseUnitsDetail` | `alpha` | `true` | `n/a` | `true` | `true` |  |  | 
 | `servicePlans` | `Collection(Microsoft.Graph.ServicePlanInfo)` | `alpha` | `false` | `n/a` | `true` | `true` |  |  | 
 | `skuId` | `Edm.Guid` | `alpha` | `true` | `n/a` | `true` | `true` |  |  | 
@@ -59,29 +59,30 @@ To get an existing `SubscribedSku` entity resource, submit an `HTTP GET` request
 ####Request
 
 ```
-	GET /<version>/myOrganization/subscribedSkus/<SubscribedSku.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
 	
-	
+GET /<version>/myOrganization/subscribedSkus/<SubscribedSku.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
 ```
 
 ####Response
 
 ```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.SubscribedSku',
-		'@odata.id': '/<SubscribedSku.objectId>',
-		'capabilityStatus' : '<Edm.String>',
-		 ...,
-		'skuPartNumber' : '<Edm.String>'
-	}
-	
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.SubscribedSku',
+	'@odata.id': '/<SubscribedSku.objectId>',
+	'capabilityStatus' : '<Edm.String>',
+	 ...,
+	'skuPartNumber' : '<Edm.String>'
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a SubscribedSku entity resource representation. 
@@ -99,35 +100,36 @@ To create new `SubscribedSku` entity resource, submit an `HTTP POST` request aga
 ####Request
 
 ```
-	POST /<version>/myOrganization/subscribedSkus/<SubscribedSku.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		<SubscribedSku.property_1> : <value_1>,
-		...,
-		<SubscribedSku.property_n> : <value_n>
-	}
-	
+POST /<version>/myOrganization/subscribedSkus/<SubscribedSku.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<SubscribedSku.property_1> : <value_1>,
+	...,
+	<SubscribedSku.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.SubscribedSku',
-		'@odata.id': '/<SubscribedSku.objectId>',
-		'capabilityStatus' : '<Edm.String>',
-		 ...,
-		'skuPartNumber' : '<Edm.String>'
-	}
-	
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.SubscribedSku',
+	'@odata.id': '/<SubscribedSku.objectId>',
+	'capabilityStatus' : '<Edm.String>',
+	 ...,
+	'skuPartNumber' : '<Edm.String>'
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added a SubscribedSku entity resource representation. 
@@ -145,27 +147,28 @@ To update an existing `SubscribedSku` entity resource, submit an `HTTP PUT` requ
 ####Request
 
 ```
-	PUT /<version>/myOrganization/subscribedSkus/<SubscribedSku.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
 	
-	{
-		<SubscribedSku.property_1> : <value_1>,
-		...,
-		<SubscribedSku.property_n> : <value_n>
-	}
-	
+PUT /<version>/myOrganization/subscribedSkus/<SubscribedSku.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<SubscribedSku.property_1> : <value_1>,
+	...,
+	<SubscribedSku.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 - No content` status code without any payload. 
@@ -183,27 +186,28 @@ To update selected properties of an existing `SubscribedSku` entity, submit an `
 ####Request
 
 ```
-	PATCH /<version>/myOrganization/subscribedSkus/<SubscribedSku.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
 	
-	{
-		<SubscribedSku.property_1> : <value_1>,
-		...,
-		<SubscribedSku.property_n> : <value_n>
-	}
-	
+PATCH /<version>/myOrganization/subscribedSkus/<SubscribedSku.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<SubscribedSku.property_1> : <value_1>,
+	...,
+	<SubscribedSku.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
@@ -221,22 +225,28 @@ To delete an existing `SubscribedSku` entity resource, submit an `HTTP DELETE` r
 ####Request
 
 ```
-	DELETE /<version>/myOrganization/subscribedSkus/<SubscribedSku.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
 	
-	
+DELETE /<version>/myOrganization/subscribedSkus/<SubscribedSku.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "EntityType/SubscribedSku",
+"section": "documentation"
+} -->

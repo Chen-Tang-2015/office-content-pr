@@ -36,7 +36,7 @@ The `DirectoryRoleTemplate` resource supports the following properties
 | `deletionTimestamp` | `Edm.DateTimeOffset` | `alpha` | `true` | `n/a` | `true` | `true` |  |  | 
 | `description` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
 | `displayName` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
-| `objectId` (_Key_ | `Edm.String` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
+| `objectId` (_Key_) | `Edm.String` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
 | `objectType` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
 
 
@@ -71,28 +71,29 @@ To get an existing `DirectoryRoleTemplate` entity resource, submit an `HTTP GET`
 ####Request
 
 ```
-	GET /<version>/myOrganization/directoryRoleTemplates/<DirectoryRoleTemplate.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
 	
-	
+GET /<version>/myOrganization/directoryRoleTemplates/<DirectoryRoleTemplate.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
 ```
 
 ####Response
 
 ```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.DirectoryRoleTemplate',
-		'@odata.id': '/<DirectoryRoleTemplate.objectId>',
-		'description' : '<Edm.String>',
-		'displayName' : '<Edm.String>'
-	}
-	
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.DirectoryRoleTemplate',
+	'@odata.id': '/<DirectoryRoleTemplate.objectId>',
+	'description' : '<Edm.String>',
+	'displayName' : '<Edm.String>'
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a DirectoryRoleTemplate entity resource representation. 
@@ -110,34 +111,35 @@ To create new `DirectoryRoleTemplate` entity resource, submit an `HTTP POST` req
 ####Request
 
 ```
-	POST /<version>/myOrganization/directoryRoleTemplates/<DirectoryRoleTemplate.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		<DirectoryRoleTemplate.property_1> : <value_1>,
-		...,
-		<DirectoryRoleTemplate.property_n> : <value_n>
-	}
-	
+POST /<version>/myOrganization/directoryRoleTemplates/<DirectoryRoleTemplate.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<DirectoryRoleTemplate.property_1> : <value_1>,
+	...,
+	<DirectoryRoleTemplate.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.DirectoryRoleTemplate',
-		'@odata.id': '/<DirectoryRoleTemplate.objectId>',
-		'description' : '<Edm.String>',
-		'displayName' : '<Edm.String>'
-	}
-	
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.DirectoryRoleTemplate',
+	'@odata.id': '/<DirectoryRoleTemplate.objectId>',
+	'description' : '<Edm.String>',
+	'displayName' : '<Edm.String>'
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added a DirectoryRoleTemplate entity resource representation. 
@@ -155,27 +157,28 @@ To update an existing `DirectoryRoleTemplate` entity resource, submit an `HTTP P
 ####Request
 
 ```
-	PUT /<version>/myOrganization/directoryRoleTemplates/<DirectoryRoleTemplate.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
 	
-	{
-		<DirectoryRoleTemplate.property_1> : <value_1>,
-		...,
-		<DirectoryRoleTemplate.property_n> : <value_n>
-	}
-	
+PUT /<version>/myOrganization/directoryRoleTemplates/<DirectoryRoleTemplate.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<DirectoryRoleTemplate.property_1> : <value_1>,
+	...,
+	<DirectoryRoleTemplate.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 - No content` status code without any payload. 
@@ -193,27 +196,28 @@ To update selected properties of an existing `DirectoryRoleTemplate` entity, sub
 ####Request
 
 ```
-	PATCH /<version>/myOrganization/directoryRoleTemplates/<DirectoryRoleTemplate.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
 	
-	{
-		<DirectoryRoleTemplate.property_1> : <value_1>,
-		...,
-		<DirectoryRoleTemplate.property_n> : <value_n>
-	}
-	
+PATCH /<version>/myOrganization/directoryRoleTemplates/<DirectoryRoleTemplate.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<DirectoryRoleTemplate.property_1> : <value_1>,
+	...,
+	<DirectoryRoleTemplate.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
@@ -231,21 +235,22 @@ To delete an existing `DirectoryRoleTemplate` entity resource, submit an `HTTP D
 ####Request
 
 ```
-	DELETE /<version>/myOrganization/directoryRoleTemplates/<DirectoryRoleTemplate.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
 	
-	
+DELETE /<version>/myOrganization/directoryRoleTemplates/<DirectoryRoleTemplate.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
@@ -265,24 +270,25 @@ To call the `DirectoryObject/checkMemberGroups` action,submit a `POST` request o
 #####Request
 
 ```
-	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/checkMemberGroups HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		groupIds : <Edm.String>
-	}
-	
+POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/checkMemberGroups HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	groupIds : <Edm.String>
+}
+
 ```
 
 #####Response
 
 ```
 	201 Created
-	
-	'<Edm.String>'
+
+'<Edm.String>'
 ```
 
 A successful call to the DirectoryObject/checkMemberGroups action returns an instance of the Edm.String type. 
@@ -300,24 +306,25 @@ To call the `DirectoryObject/getMemberGroups` action,submit a `POST` request of 
 #####Request
 
 ```
-	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberGroups HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		securityEnabledOnly : <Edm.Boolean>
-	}
-	
+POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberGroups HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	securityEnabledOnly : <Edm.Boolean>
+}
+
 ```
 
 #####Response
 
 ```
 	201 Created
-	
-	'<Edm.String>'
+
+'<Edm.String>'
 ```
 
 A successful call to the DirectoryObject/getMemberGroups action returns an instance of the Edm.String type. 
@@ -335,25 +342,31 @@ To call the `DirectoryObject/getMemberObjects` action,submit a `POST` request of
 #####Request
 
 ```
-	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberObjects HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		securityEnabledOnly : <Edm.Boolean>
-	}
-	
+POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberObjects HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	securityEnabledOnly : <Edm.Boolean>
+}
+
 ```
 
 #####Response
 
 ```
 	201 Created
-	
-	'<Edm.String>'
+
+'<Edm.String>'
 ```
 
 A successful call to the DirectoryObject/getMemberObjects action returns an instance of the Edm.String type. 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "EntityType/DirectoryRoleTemplate",
+"section": "documentation"
+} -->

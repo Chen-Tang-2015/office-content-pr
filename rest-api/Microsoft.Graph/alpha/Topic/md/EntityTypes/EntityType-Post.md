@@ -49,7 +49,7 @@ The `Post` resource supports the following properties
 | `DateTimeReceived` | `Edm.DateTimeOffset` | `alpha` | `false` | `n/a` | `true` | `true` |  |  | 
 | `From` | `Microsoft.Graph.Recipient` | `alpha` | `false` | `n/a` | `true` | `true` |  |  | 
 | `HasAttachments` | `Edm.Boolean` | `alpha` | `false` | `n/a` | `true` | `true` |  |  | 
-| `Id` (_Key_ | `Edm.String` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
+| `Id` (_Key_) | `Edm.String` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
 | `NewParticipants` | `Collection(Microsoft.Graph.Recipient)` | `alpha` | `false` | `n/a` | `true` | `true` |  |  | 
 | `Sender` | `Microsoft.Graph.Recipient` | `alpha` | `false` | `n/a` | `true` | `true` |  |  | 
 
@@ -99,29 +99,30 @@ To get an existing `Post` entity resource, submit an `HTTP GET` request of the f
 ####Request
 
 ```
-	GET /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Posts/<Post.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
 	
-	
+GET /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Posts/<Post.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
 ```
 
 ####Response
 
 ```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Post',
-		'@odata.id': '/<Post.Id>',
-		'Body' : '<Microsoft.Graph.ItemBody>',
-		 ...,
-		'Sender' : '<Microsoft.Graph.Recipient>'
-	}
-	
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Post',
+	'@odata.id': '/<Post.Id>',
+	'Body' : '<Microsoft.Graph.ItemBody>',
+	 ...,
+	'Sender' : '<Microsoft.Graph.Recipient>'
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a Post entity resource representation. 
@@ -138,35 +139,36 @@ To create new `Post` entity resource, submit an `HTTP POST` request against the 
 ####Request
 
 ```
-	POST /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Posts/<Post.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		<Post.property_1> : <value_1>,
-		...,
-		<Post.property_n> : <value_n>
-	}
-	
+POST /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Posts/<Post.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<Post.property_1> : <value_1>,
+	...,
+	<Post.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Post',
-		'@odata.id': '/<Post.Id>',
-		'Body' : '<Microsoft.Graph.ItemBody>',
-		 ...,
-		'Sender' : '<Microsoft.Graph.Recipient>'
-	}
-	
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Post',
+	'@odata.id': '/<Post.Id>',
+	'Body' : '<Microsoft.Graph.ItemBody>',
+	 ...,
+	'Sender' : '<Microsoft.Graph.Recipient>'
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added a Post entity resource representation. 
@@ -183,27 +185,28 @@ To update an existing `Post` entity resource, submit an `HTTP PUT` request, spec
 ####Request
 
 ```
-	PUT /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Posts/<Post.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
 	
-	{
-		<Post.property_1> : <value_1>,
-		...,
-		<Post.property_n> : <value_n>
-	}
-	
+PUT /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Posts/<Post.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<Post.property_1> : <value_1>,
+	...,
+	<Post.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 - No content` status code without any payload. 
@@ -220,27 +223,28 @@ To update selected properties of an existing `Post` entity, submit an `HTTP PATC
 ####Request
 
 ```
-	PATCH /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Posts/<Post.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
 	
-	{
-		<Post.property_1> : <value_1>,
-		...,
-		<Post.property_n> : <value_n>
-	}
-	
+PATCH /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Posts/<Post.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<Post.property_1> : <value_1>,
+	...,
+	<Post.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
@@ -257,21 +261,22 @@ To delete an existing `Post` entity resource, submit an `HTTP DELETE` request, s
 ####Request
 
 ```
-	DELETE /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Posts/<Post.Id> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
 	
-	
+DELETE /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Posts/<Post.Id> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
@@ -290,35 +295,36 @@ To get the `Post/Attachments` collection, submit an `HTTP GET` request of the fo
 #####Request
 
 ```
-	GET /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Posts/<Post.Id>/Attachments HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
 	
-	
+GET /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Posts/<Post.Id>/Attachments HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
 ```
 
 #####Response
 
 ```
 	200 OK
-	
-	{
-		'value': [
-			{
-			
-				'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-				'@odata.type': '#Microsoft.Graph.Attachment',
-				'@odata.id': '/<Attachment.Id>',
-				'ContentType' : '<Edm.String>',
-				 ...,
-				'Size' : '<Edm.Int32>'
-			}
-			,
-			...
-		]
-	}
-	
+
+{
+	'value': [
+		{
+		
+			'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+			'@odata.type': '#Microsoft.Graph.Attachment',
+			'@odata.id': '/<Attachment.Id>',
+			'ContentType' : '<Edm.String>',
+			 ...,
+			'Size' : '<Edm.Int32>'
+		}
+		,
+		...
+	]
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a body containing a collection of the `Attachment` resource representations. 
@@ -337,29 +343,30 @@ To get a Post/InReplyTo `Post/InReplyTo` resource, submit an `HTTP GET` request 
 #####Request
 
 ```
-	GET /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Posts/<Post.Id>/InReplyTo HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
 	
-	
+GET /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Posts/<Post.Id>/InReplyTo HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
 ```
 
 #####Response
 
 ```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.Post',
-		'@odata.id': '/<Post.Id>',
-		'Body' : '<Microsoft.Graph.ItemBody>',
-		 ...,
-		'Sender' : '<Microsoft.Graph.Recipient>'
-	}
-	
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Post',
+	'@odata.id': '/<Post.Id>',
+	'Body' : '<Microsoft.Graph.ItemBody>',
+	 ...,
+	'Sender' : '<Microsoft.Graph.Recipient>'
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a body containing a `Post` resource representation. 
@@ -378,27 +385,28 @@ To call the `Message/Forward` action,submit a `POST` request of the following RE
 #####Request
 
 ```
-	POST /<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/Forward HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		Comment : <Edm.String>,
-		ToRecipients : <Microsoft.Graph.Recipient>,
-		Comment : <Edm.String>,
-		ToRecipients : <Microsoft.Graph.Recipient>
-	}
-	
+POST /<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/Forward HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	Comment : <Edm.String>,
+	ToRecipients : <Microsoft.Graph.Recipient>,
+	Comment : <Edm.String>,
+	ToRecipients : <Microsoft.Graph.Recipient>
+}
+
 ```
 
 #####Response
 
 ```
 	201 Created
-	
-	
+
+
 ```
 
 A successful call to the Message/Forward action returns an empty response. 
@@ -415,27 +423,28 @@ To call the `Post/Forward` action,submit a `POST` request of the following REST 
 #####Request
 
 ```
-	POST /<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/Forward HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		Comment : <Edm.String>,
-		ToRecipients : <Microsoft.Graph.Recipient>,
-		Comment : <Edm.String>,
-		ToRecipients : <Microsoft.Graph.Recipient>
-	}
-	
+POST /<version>/myOrganization/users/<User.objectId>/Messages/<Message.Id>/Forward HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	Comment : <Edm.String>,
+	ToRecipients : <Microsoft.Graph.Recipient>,
+	Comment : <Edm.String>,
+	ToRecipients : <Microsoft.Graph.Recipient>
+}
+
 ```
 
 #####Response
 
 ```
 	201 Created
-	
-	
+
+
 ```
 
 A successful call to the Post/Forward action returns an empty response. 
@@ -452,26 +461,27 @@ To call the `Message/Reply` action,submit a `POST` request of the following REST
 #####Request
 
 ```
-	POST /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Reply HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		Comment : <Edm.String>,
-		Post : <Microsoft.Graph.Post>,
-		Post : <Microsoft.Graph.Post>
-	}
-	
+POST /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Reply HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	Comment : <Edm.String>,
+	Post : <Microsoft.Graph.Post>,
+	Post : <Microsoft.Graph.Post>
+}
+
 ```
 
 #####Response
 
 ```
 	201 Created
-	
-	
+
+
 ```
 
 A successful call to the Message/Reply action returns an empty response. 
@@ -488,26 +498,27 @@ To call the `ConversationThread/Reply` action,submit a `POST` request of the fol
 #####Request
 
 ```
-	POST /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Reply HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		Comment : <Edm.String>,
-		Post : <Microsoft.Graph.Post>,
-		Post : <Microsoft.Graph.Post>
-	}
-	
+POST /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Reply HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	Comment : <Edm.String>,
+	Post : <Microsoft.Graph.Post>,
+	Post : <Microsoft.Graph.Post>
+}
+
 ```
 
 #####Response
 
 ```
 	201 Created
-	
-	
+
+
 ```
 
 A successful call to the ConversationThread/Reply action returns an empty response. 
@@ -524,27 +535,33 @@ To call the `Post/Reply` action,submit a `POST` request of the following REST ca
 #####Request
 
 ```
-	POST /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Reply HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		Comment : <Edm.String>,
-		Post : <Microsoft.Graph.Post>,
-		Post : <Microsoft.Graph.Post>
-	}
-	
+POST /<version>/myOrganization/groups/<Group.objectId>/Threads/<ConversationThread.Id>/Reply HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	Comment : <Edm.String>,
+	Post : <Microsoft.Graph.Post>,
+	Post : <Microsoft.Graph.Post>
+}
+
 ```
 
 #####Response
 
 ```
 	201 Created
-	
-	
+
+
 ```
 
 A successful call to the Post/Reply action returns an empty response. 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "EntityType/Post",
+"section": "documentation"
+} -->

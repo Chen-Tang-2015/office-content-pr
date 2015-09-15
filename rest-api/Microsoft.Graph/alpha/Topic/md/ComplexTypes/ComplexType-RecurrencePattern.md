@@ -61,3 +61,8 @@ The `RecurrencePattern` extended resource is referenced by the following resourc
 
 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "ComplexType/RecurrencePattern",
+"section": "documentation"
+} -->

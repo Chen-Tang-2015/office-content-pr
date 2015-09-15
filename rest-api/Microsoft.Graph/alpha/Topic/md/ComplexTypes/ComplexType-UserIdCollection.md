@@ -23,3 +23,8 @@ The `UserIdCollection` extended resource exposes the following properties
 
 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "ComplexType/UserIdCollection",
+"section": "documentation"
+} -->

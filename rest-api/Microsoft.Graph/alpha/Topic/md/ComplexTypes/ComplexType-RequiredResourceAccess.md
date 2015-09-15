@@ -87,3 +87,8 @@ The `RequiredResourceAccess` extended resource is referenced by the following re
 
 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "ComplexType/RequiredResourceAccess",
+"section": "documentation"
+} -->

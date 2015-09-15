@@ -36,7 +36,7 @@ The `DeviceConfiguration` resource supports the following properties
 | `cloudPublicIssuerCertificates` | `Collection(Edm.Binary)` | `alpha` | `false` | `n/a` | `true` | `true` |  |  | 
 | `deletionTimestamp` | `Edm.DateTimeOffset` | `alpha` | `true` | `n/a` | `true` | `true` |  |  | 
 | `maximumRegistrationInactivityPeriod` | `Edm.Int32` | `alpha` | `true` | `n/a` | `true` | `true` |  |  | 
-| `objectId` (_Key_ | `Edm.String` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
+| `objectId` (_Key_) | `Edm.String` | `alpha` | `false` | `false` | `true` | `true` |  |  | 
 | `objectType` | `Edm.String` | `alpha` | `true` | `false` | `true` | `true` |  |  | 
 | `publicIssuerCertificates` | `Collection(Edm.Binary)` | `alpha` | `false` | `n/a` | `true` | `true` |  |  | 
 | `registrationQuota` | `Edm.Int32` | `alpha` | `true` | `n/a` | `true` | `true` |  |  | 
@@ -75,29 +75,30 @@ To get an existing `DeviceConfiguration` entity resource, submit an `HTTP GET` r
 ####Request
 
 ```
-	GET /<version>/myOrganization/deviceConfiguration/<DeviceConfiguration.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
 	
-	
+GET /<version>/myOrganization/deviceConfiguration/<DeviceConfiguration.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+
+
 ```
 
 ####Response
 
 ```
 	200 OK
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.DeviceConfiguration',
-		'@odata.id': '/<DeviceConfiguration.objectId>',
-		'cloudPublicIssuerCertificates' : '<Collection(Edm.Binary)>',
-		 ...,
-		'registrationQuota' : '<Edm.Int32>'
-	}
-	
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.DeviceConfiguration',
+	'@odata.id': '/<DeviceConfiguration.objectId>',
+	'cloudPublicIssuerCertificates' : '<Collection(Edm.Binary)>',
+	 ...,
+	'registrationQuota' : '<Edm.Int32>'
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the specified a DeviceConfiguration entity resource representation. 
@@ -115,35 +116,36 @@ To create new `DeviceConfiguration` entity resource, submit an `HTTP POST` reque
 ####Request
 
 ```
-	POST /<version>/myOrganization/deviceConfiguration/<DeviceConfiguration.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		<DeviceConfiguration.property_1> : <value_1>,
-		...,
-		<DeviceConfiguration.property_n> : <value_n>
-	}
-	
+POST /<version>/myOrganization/deviceConfiguration/<DeviceConfiguration.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	<DeviceConfiguration.property_1> : <value_1>,
+	...,
+	<DeviceConfiguration.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	201 Created
-	
-	{
-	
-		'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
-		'@odata.type': '#Microsoft.Graph.DeviceConfiguration',
-		'@odata.id': '/<DeviceConfiguration.objectId>',
-		'cloudPublicIssuerCertificates' : '<Collection(Edm.Binary)>',
-		 ...,
-		'registrationQuota' : '<Edm.Int32>'
-	}
-	
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/<version>/<tenant>/$metadata#',
+	'@odata.type': '#Microsoft.Graph.DeviceConfiguration',
+	'@odata.id': '/<DeviceConfiguration.objectId>',
+	'cloudPublicIssuerCertificates' : '<Collection(Edm.Binary)>',
+	 ...,
+	'registrationQuota' : '<Edm.Int32>'
+}
+
 ```
 
 A successful response returns the `200 OK` status code and a payload containing the newly added a DeviceConfiguration entity resource representation. 
@@ -161,27 +163,28 @@ To update an existing `DeviceConfiguration` entity resource, submit an `HTTP PUT
 ####Request
 
 ```
-	PUT /<version>/myOrganization/deviceConfiguration/<DeviceConfiguration.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
 	
-	{
-		<DeviceConfiguration.property_1> : <value_1>,
-		...,
-		<DeviceConfiguration.property_n> : <value_n>
-	}
-	
+PUT /<version>/myOrganization/deviceConfiguration/<DeviceConfiguration.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<DeviceConfiguration.property_1> : <value_1>,
+	...,
+	<DeviceConfiguration.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 - No content` status code without any payload. 
@@ -199,27 +202,28 @@ To update selected properties of an existing `DeviceConfiguration` entity, submi
 ####Request
 
 ```
-	PATCH /<version>/myOrganization/deviceConfiguration/<DeviceConfiguration.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
-	Content-Length : <body_length>
 	
-	{
-		<DeviceConfiguration.property_1> : <value_1>,
-		...,
-		<DeviceConfiguration.property_n> : <value_n>
-	}
-	
+PATCH /<version>/myOrganization/deviceConfiguration/<DeviceConfiguration.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : <body_length>
+
+{
+	<DeviceConfiguration.property_1> : <value_1>,
+	...,
+	<DeviceConfiguration.property_n> : <value_n>
+}
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
@@ -237,21 +241,22 @@ To delete an existing `DeviceConfiguration` entity resource, submit an `HTTP DEL
 ####Request
 
 ```
-	DELETE /<version>/myOrganization/deviceConfiguration/<DeviceConfiguration.objectId> HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	If-Match : '*'
 	
-	
+DELETE /<version>/myOrganization/deviceConfiguration/<DeviceConfiguration.objectId> HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
 ```
 
 ####Response
 
 ```
 	204 No content
-	
-	
+
+
 ```
 
 A successful response returns the `204 No content` status code without any payload. 
@@ -271,24 +276,25 @@ To call the `DirectoryObject/checkMemberGroups` action,submit a `POST` request o
 #####Request
 
 ```
-	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/checkMemberGroups HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		groupIds : <Edm.String>
-	}
-	
+POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/checkMemberGroups HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	groupIds : <Edm.String>
+}
+
 ```
 
 #####Response
 
 ```
 	201 Created
-	
-	'<Edm.String>'
+
+'<Edm.String>'
 ```
 
 A successful call to the DirectoryObject/checkMemberGroups action returns an instance of the Edm.String type. 
@@ -306,24 +312,25 @@ To call the `DirectoryObject/getMemberGroups` action,submit a `POST` request of 
 #####Request
 
 ```
-	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberGroups HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		securityEnabledOnly : <Edm.Boolean>
-	}
-	
+POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberGroups HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	securityEnabledOnly : <Edm.Boolean>
+}
+
 ```
 
 #####Response
 
 ```
 	201 Created
-	
-	'<Edm.String>'
+
+'<Edm.String>'
 ```
 
 A successful call to the DirectoryObject/getMemberGroups action returns an instance of the Edm.String type. 
@@ -341,25 +348,31 @@ To call the `DirectoryObject/getMemberObjects` action,submit a `POST` request of
 #####Request
 
 ```
-	POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberObjects HTTP/1.1
-	Host : graph.microsoft.com
-	Authorization : Bearer <access_token>
-	Accept : application/json;odata=verbose
-	Content-Length : <body_length>
 	
-	{
-		securityEnabledOnly : <Edm.Boolean>
-	}
-	
+POST /<version>/myOrganization/directoryObjects/<DirectoryObject.objectId>/getMemberObjects HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer <access_token>
+Accept : application/json;odata=verbose
+Content-Length : <body_length>
+
+{
+	securityEnabledOnly : <Edm.Boolean>
+}
+
 ```
 
 #####Response
 
 ```
 	201 Created
-	
-	'<Edm.String>'
+
+'<Edm.String>'
 ```
 
 A successful call to the DirectoryObject/getMemberObjects action returns an instance of the Edm.String type. 
 
+<!-- {
+"type": "#page.annotation",
+"tocPath": "EntityType/DeviceConfiguration",
+"section": "documentation"
+} -->
