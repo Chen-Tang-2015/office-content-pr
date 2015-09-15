@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>OutlookItem resource</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+  
+</head>
+
+<body>
+
+    <div id="holder">
+
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../index.htm">
+                MS Graph
+            </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="../index.htm">Home</a></li>
+                </ul>
+            <ul class="nav navbar-nav navbar-right hidden-sm visible-md visible-lg">
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</nav>
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="outlookitem-resource">OutlookItem resource</h1>
+<h2 id="overview">Overview</h2>
+<table>
+<thead>
+<tr>
+	<th align="left"></th>
+	<th align="left"></th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><em>Resource type</em></td>
+	<td align="left"><code>EntityType</code></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><em>Full name</em></td>
+	<td align="left"><code>Microsoft.Graph.OutlookItem</code></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><em>Base types</em></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><em>Versions</em></td>
+	<td align="left"><code>alpha</code></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><em>Operations</em></td>
+	<td align="left"><code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>PATCH</code>, <code>DELETE</code></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><em>Query options</em></td>
+	<td align="left"><code>$count</code>, <code>$expand</code>, <code>$filter</code>, <code>$orderBy</code>, <code>$ref</code>, <code>$search</code>, <code>$select</code>, <code>$skip</code>, <code>$top</code></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="properties">Properties</h3>
+<p>The <code>OutlookItem</code> resource supports the following properties </p>
+<table>
+<thead>
+<tr>
+	<th align="left">Name</th>
+	<th align="left">Type</th>
+	<th align="left">Versions</th>
+	<th align="left">Nullable</th>
+	<th align="left">Unicode</th>
+	<th align="left">Writeable</th>
+	<th align="left">Required to create</th>
+	<th align="left">Default value</th>
+	<th align="left">Comments</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>Categories</code></td>
+	<td align="left"><code>Collection(Edm.String)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>ChangeKey</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>DateTimeCreated</code></td>
+	<td align="left"><code>Edm.DateTimeOffset</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>n/a</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>DateTimeLastModified</code></td>
+	<td align="left"><code>Edm.DateTimeOffset</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>n/a</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>Id</code> (_Key_)</td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="operations">Operations</h3>
+<p>The <code>OutlookItem</code> entity resource supports the following operations, including actions and functions. </p>
+<h4 id="work-with-the-outlookitem-resource">Work with the OutlookItem resource</h4>
+<h4 id="get-an-outlookitem">Get an OutlookItem</h4>
+<p>To get an existing <code>OutlookItem</code> entity resource, submit an <code>HTTP GET</code> request of the following syntax: </p>
+<h4 id="required-scopes">Required scopes</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>Mail.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="request">Request</h4>
+<pre><code>    
+GET  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+
+</code></pre>
+
+<h4 id="response">Response</h4>
+<pre><code>    200 OK
+
+{
+
+    '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+    '@odata.type': '#Microsoft.Graph.OutlookItem',
+    '@odata.id': '/&lt;OutlookItem.Id&gt;',
+    'Categories' : '&lt;Collection(Edm.String)&gt;',
+     ...,
+    'Id' : '&lt;Edm.String&gt;'
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a payload containing the specified an OutlookItem entity resource representation. </p>
+<h4 id="create-or-add-an-outlookitem">Create or add an OutlookItem</h4>
+<h4 id="required-scopes-1">Required scopes</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>Mail.ReadWrite</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="request-1">Request</h4>
+<h4 id="response-1">Response</h4>
+<h4 id="update-an-outlookitem">Update an OutlookItem</h4>
+<p>To update an existing <code>OutlookItem</code> entity resource, submit an <code>HTTP PUT</code> request, specifying a new instance of the resource in the request body: </p>
+<h4 id="required-scopes-2">Required scopes</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>Mail.ReadWrite</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="request-2">Request</h4>
+<pre><code>    
+PUT  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : &lt;body_length&gt;
+
+{
+    &lt;OutlookItem.property_1&gt; : &lt;value_1&gt;,
+    ...,
+    &lt;OutlookItem.property_n&gt; : &lt;value_n&gt;
+}
+
+</code></pre>
+
+<h4 id="response-2">Response</h4>
+<pre><code>    204 No content
+
+
+</code></pre>
+
+<p>A successful response returns the <code>204 - No content</code> status code without any payload. </p>
+<h4 id="update-an-outlookitems-properties">Update an OutlookItem's properties</h4>
+<p>To update selected properties of an existing <code>OutlookItem</code> entity, submit an <code>HTTP PATCH</code> request, specifying a new instance of the resource in the request body: </p>
+<h4 id="required-scopes-3">Required scopes</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>Mail.ReadWrite</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="request-3">Request</h4>
+<pre><code>    
+PATCH  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : &lt;body_length&gt;
+
+{
+    &lt;OutlookItem.property_1&gt; : &lt;value_1&gt;,
+    ...,
+    &lt;OutlookItem.property_n&gt; : &lt;value_n&gt;
+}
+
+</code></pre>
+
+<h4 id="response-3">Response</h4>
+<pre><code>    204 No content
+
+
+</code></pre>
+
+<p>A successful response returns the <code>204 No content</code> status code without any payload. </p>
+<h4 id="delete-an-outlookitem">Delete an OutlookItem</h4>
+<p>To delete an existing <code>OutlookItem</code> entity resource, submit an <code>HTTP DELETE</code> request, specifying a new instance of the resource in the request body: </p>
+<h4 id="required-scopes-4">Required scopes</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>Mail.ReadWrite</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="request-4">Request</h4>
+<pre><code>    
+DELETE  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
+</code></pre>
+
+<h4 id="response-4">Response</h4>
+<pre><code>    204 No content
+
+
+</code></pre>
+
+<p>A successful response returns the <code>204 No content</code> status code without any payload. </p>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../README.htm">API Reference</a></p>
+            <ul>
+                
+                <li>ComplexType</li>
+                
+                <ul>
+                    <!-- 
+					
+                    <li><a href="../ComplexTypes/ComplexType-AlternativeSecurityId.htm">AlternativeSecurityId</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-AppRole.htm">AppRole</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-AssignedLicense.htm">AssignedLicense</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-AssignedPlan.htm">AssignedPlan</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-Attendee.htm">Attendee</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-deleted.htm">deleted</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-EmailAddress.htm">EmailAddress</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-ExternalReferenceCollection.htm">ExternalReferenceCollection</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-file.htm">file</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-folder.htm">folder</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-GeoCoordinates.htm">GeoCoordinates</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-identity.htm">identity</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-identitySet.htm">identitySet</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-image.htm">image</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-ItemBody.htm">ItemBody</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-itemReference.htm">itemReference</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-KeyCredential.htm">KeyCredential</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-LicenseUnitsDetail.htm">LicenseUnitsDetail</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-Location.htm">Location</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-OAuth2Permission.htm">OAuth2Permission</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-PasswordCredential.htm">PasswordCredential</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-PasswordProfile.htm">PasswordProfile</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-PatternedRecurrence.htm">PatternedRecurrence</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-photo.htm">photo</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-PhysicalAddress.htm">PhysicalAddress</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-ProvisionedPlan.htm">ProvisionedPlan</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-ProvisioningError.htm">ProvisioningError</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-quota.htm">quota</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-Recipient.htm">Recipient</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-RecurrencePattern.htm">RecurrencePattern</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-RecurrenceRange.htm">RecurrenceRange</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-RequiredResourceAccess.htm">RequiredResourceAccess</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-ResourceAccess.htm">ResourceAccess</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-ResponseStatus.htm">ResponseStatus</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-searchResult.htm">searchResult</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-ServicePlanInfo.htm">ServicePlanInfo</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-sharingLink.htm">sharingLink</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-thumbnail.htm">thumbnail</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-uploadSession.htm">uploadSession</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-UserIdCollection.htm">UserIdCollection</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-VerifiedDomain.htm">VerifiedDomain</a></li>
+                    
+					-->
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-AlternativeSecurityId.htm">AlternativeSecurityId</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-AppRole.htm">AppRole</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-AssignedLicense.htm">AssignedLicense</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-AssignedPlan.htm">AssignedPlan</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-Attendee.htm">Attendee</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-deleted.htm">deleted</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-EmailAddress.htm">EmailAddress</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-ExternalReferenceCollection.htm">ExternalReferenceCollection</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-file.htm">file</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-folder.htm">folder</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-GeoCoordinates.htm">GeoCoordinates</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-identity.htm">identity</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-identitySet.htm">identitySet</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-image.htm">image</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-ItemBody.htm">ItemBody</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-itemReference.htm">itemReference</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-KeyCredential.htm">KeyCredential</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-LicenseUnitsDetail.htm">LicenseUnitsDetail</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-Location.htm">Location</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-OAuth2Permission.htm">OAuth2Permission</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-PasswordCredential.htm">PasswordCredential</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-PasswordProfile.htm">PasswordProfile</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-PatternedRecurrence.htm">PatternedRecurrence</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-photo.htm">photo</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-PhysicalAddress.htm">PhysicalAddress</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-ProvisionedPlan.htm">ProvisionedPlan</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-ProvisioningError.htm">ProvisioningError</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-quota.htm">quota</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-Recipient.htm">Recipient</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-RecurrencePattern.htm">RecurrencePattern</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-RecurrenceRange.htm">RecurrenceRange</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-RequiredResourceAccess.htm">RequiredResourceAccess</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-ResourceAccess.htm">ResourceAccess</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-ResponseStatus.htm">ResponseStatus</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-searchResult.htm">searchResult</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-ServicePlanInfo.htm">ServicePlanInfo</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-sharingLink.htm">sharingLink</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-thumbnail.htm">thumbnail</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-uploadSession.htm">uploadSession</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-UserIdCollection.htm">UserIdCollection</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-VerifiedDomain.htm">VerifiedDomain</a></li>
+					
+					
+					
+                </ul>
+                
+                
+                <li>EntitySet</li>
+                
+                <ul>
+                    <!-- 
+					
+                    <li><a href="../EntitySets/EntitySet-applications.htm">applications</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-contacts.htm">contacts</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-deviceConfiguration.htm">deviceConfiguration</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-devices.htm">devices</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-directoryObjects.htm">directoryObjects</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-directoryRoles.htm">directoryRoles</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-directoryRoleTemplates.htm">directoryRoleTemplates</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-drives.htm">drives</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-groups.htm">groups</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-oauth2PermissionGrants.htm">oauth2PermissionGrants</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-plans.htm">plans</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-servicePrincipals.htm">servicePrincipals</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-subscribedSkus.htm">subscribedSkus</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-tasks.htm">tasks</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-tenantDetails.htm">tenantDetails</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-users.htm">users</a></li>
+                    
+					-->
+					
+					
+					<li><a href="../EntitySets/EntitySet-applications.htm">applications</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-contacts.htm">contacts</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-deviceConfiguration.htm">deviceConfiguration</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-devices.htm">devices</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-directoryObjects.htm">directoryObjects</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-directoryRoles.htm">directoryRoles</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-directoryRoleTemplates.htm">directoryRoleTemplates</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-drives.htm">drives</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-groups.htm">groups</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-oauth2PermissionGrants.htm">oauth2PermissionGrants</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-plans.htm">plans</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-servicePrincipals.htm">servicePrincipals</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-subscribedSkus.htm">subscribedSkus</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-tasks.htm">tasks</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-tenantDetails.htm">tenantDetails</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-users.htm">users</a></li>
+					
+					
+					
+                </ul>
+                
+                
+                <li>EntityType</li>
+                
+                <ul>
+                    <!-- 
+					
+                    <li><a href="EntityType-Application.htm">Application</a></li>
+                    
+                    <li><a href="EntityType-AppRoleAssignment.htm">AppRoleAssignment</a></li>
+                    
+                    <li><a href="EntityType-Attachment.htm">Attachment</a></li>
+                    
+                    <li><a href="EntityType-Calendar.htm">Calendar</a></li>
+                    
+                    <li><a href="EntityType-CalendarGroup.htm">CalendarGroup</a></li>
+                    
+                    <li><a href="EntityType-Contact.htm">Contact</a></li>
+                    
+                    <li><a href="EntityType-Conversation.htm">Conversation</a></li>
+                    
+                    <li><a href="EntityType-ConversationThread.htm">ConversationThread</a></li>
+                    
+                    <li><a href="EntityType-Device.htm">Device</a></li>
+                    
+                    <li><a href="EntityType-DeviceConfiguration.htm">DeviceConfiguration</a></li>
+                    
+                    <li><a href="EntityType-DirectoryLinkChange.htm">DirectoryLinkChange</a></li>
+                    
+                    <li><a href="EntityType-DirectoryObject.htm">DirectoryObject</a></li>
+                    
+                    <li><a href="EntityType-DirectoryRole.htm">DirectoryRole</a></li>
+                    
+                    <li><a href="EntityType-DirectoryRoleTemplate.htm">DirectoryRoleTemplate</a></li>
+                    
+                    <li><a href="EntityType-drive.htm">drive</a></li>
+                    
+                    <li><a href="EntityType-Event.htm">Event</a></li>
+                    
+                    <li><a href="EntityType-EventMessage.htm">EventMessage</a></li>
+                    
+                    <li><a href="EntityType-ExtensionProperty.htm">ExtensionProperty</a></li>
+                    
+                    <li><a href="EntityType-File.htm">File</a></li>
+                    
+                    <li><a href="EntityType-FileAttachment.htm">FileAttachment</a></li>
+                    
+                    <li><a href="EntityType-Group.htm">Group</a></li>
+                    
+                    <li><a href="EntityType-item.htm">item</a></li>
+                    
+                    <li><a href="EntityType-ItemAttachment.htm">ItemAttachment</a></li>
+                    
+                    <li><a href="EntityType-Message.htm">Message</a></li>
+                    
+                    <li><a href="EntityType-OAuth2PermissionGrant.htm">OAuth2PermissionGrant</a></li>
+                    
+                    <li><a href="EntityType-OutlookItem.htm">OutlookItem</a></li>
+                    
+                    <li><a href="EntityType-permission.htm">permission</a></li>
+                    
+                    <li><a href="EntityType-Photo.htm">Photo</a></li>
+                    
+                    <li><a href="EntityType-Plan.htm">Plan</a></li>
+                    
+                    <li><a href="EntityType-PlanDetails.htm">PlanDetails</a></li>
+                    
+                    <li><a href="EntityType-Post.htm">Post</a></li>
+                    
+                    <li><a href="EntityType-ReferenceAttachment.htm">ReferenceAttachment</a></li>
+                    
+                    <li><a href="EntityType-ServicePrincipal.htm">ServicePrincipal</a></li>
+                    
+                    <li><a href="EntityType-SubscribedSku.htm">SubscribedSku</a></li>
+                    
+                    <li><a href="EntityType-Task.htm">Task</a></li>
+                    
+                    <li><a href="EntityType-TaskDetails.htm">TaskDetails</a></li>
+                    
+                    <li><a href="EntityType-TenantDetail.htm">TenantDetail</a></li>
+                    
+                    <li><a href="EntityType-thumbnailSet.htm">thumbnailSet</a></li>
+                    
+                    <li><a href="EntityType-User.htm">User</a></li>
+                    
+					-->
+					
+					
+					<li><a href="EntityType-Application.htm">Application</a></li>
+					
+					
+					<li><a href="EntityType-AppRoleAssignment.htm">AppRoleAssignment</a></li>
+					
+					
+					<li><a href="EntityType-Attachment.htm">Attachment</a></li>
+					
+					
+					<li><a href="EntityType-Calendar.htm">Calendar</a></li>
+					
+					
+					<li><a href="EntityType-CalendarGroup.htm">CalendarGroup</a></li>
+					
+					
+					<li><a href="EntityType-Contact.htm">Contact</a></li>
+					
+					
+					<li><a href="EntityType-Conversation.htm">Conversation</a></li>
+					
+					
+					<li><a href="EntityType-ConversationThread.htm">ConversationThread</a></li>
+					
+					
+					<li><a href="EntityType-Device.htm">Device</a></li>
+					
+					
+					<li><a href="EntityType-DeviceConfiguration.htm">DeviceConfiguration</a></li>
+					
+					
+					<li><a href="EntityType-DirectoryLinkChange.htm">DirectoryLinkChange</a></li>
+					
+					
+					<li><a href="EntityType-DirectoryObject.htm">DirectoryObject</a></li>
+					
+					
+					<li><a href="EntityType-DirectoryRole.htm">DirectoryRole</a></li>
+					
+					
+					<li><a href="EntityType-DirectoryRoleTemplate.htm">DirectoryRoleTemplate</a></li>
+					
+					
+					<li><a href="EntityType-drive.htm">drive</a></li>
+					
+					
+					<li><a href="EntityType-Event.htm">Event</a></li>
+					
+					
+					<li><a href="EntityType-EventMessage.htm">EventMessage</a></li>
+					
+					
+					<li><a href="EntityType-ExtensionProperty.htm">ExtensionProperty</a></li>
+					
+					
+					<li><a href="EntityType-File.htm">File</a></li>
+					
+					
+					<li><a href="EntityType-FileAttachment.htm">FileAttachment</a></li>
+					
+					
+					<li><a href="EntityType-Group.htm">Group</a></li>
+					
+					
+					<li><a href="EntityType-item.htm">item</a></li>
+					
+					
+					<li><a href="EntityType-ItemAttachment.htm">ItemAttachment</a></li>
+					
+					
+					<li><a href="EntityType-Message.htm">Message</a></li>
+					
+					
+					<li><a href="EntityType-OAuth2PermissionGrant.htm">OAuth2PermissionGrant</a></li>
+					
+					
+					<li><a href="EntityType-OutlookItem.htm">OutlookItem</a></li>
+					
+					
+					<li><a href="EntityType-permission.htm">permission</a></li>
+					
+					
+					<li><a href="EntityType-Photo.htm">Photo</a></li>
+					
+					
+					<li><a href="EntityType-Plan.htm">Plan</a></li>
+					
+					
+					<li><a href="EntityType-PlanDetails.htm">PlanDetails</a></li>
+					
+					
+					<li><a href="EntityType-Post.htm">Post</a></li>
+					
+					
+					<li><a href="EntityType-ReferenceAttachment.htm">ReferenceAttachment</a></li>
+					
+					
+					<li><a href="EntityType-ServicePrincipal.htm">ServicePrincipal</a></li>
+					
+					
+					<li><a href="EntityType-SubscribedSku.htm">SubscribedSku</a></li>
+					
+					
+					<li><a href="EntityType-Task.htm">Task</a></li>
+					
+					
+					<li><a href="EntityType-TaskDetails.htm">TaskDetails</a></li>
+					
+					
+					<li><a href="EntityType-TenantDetail.htm">TenantDetail</a></li>
+					
+					
+					<li><a href="EntityType-thumbnailSet.htm">thumbnailSet</a></li>
+					
+					
+					<li><a href="EntityType-User.htm">User</a></li>
+					
+					
+					
+                </ul>
+                
+                
+                <li>EnumType</li>
+                
+                <ul>
+                    <!-- 
+					
+                    <li><a href="../EnumTypes/EnumType-AttendeeType.htm">AttendeeType</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-BodyType.htm">BodyType</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-CalendarColor.htm">CalendarColor</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-DayOfWeek.htm">DayOfWeek</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-EventType.htm">EventType</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-FreeBusyStatus.htm">FreeBusyStatus</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-GroupAccessType.htm">GroupAccessType</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-Importance.htm">Importance</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-MeetingMessageType.htm">MeetingMessageType</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-RecurrencePatternType.htm">RecurrencePatternType</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-RecurrenceRangeType.htm">RecurrenceRangeType</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-ResponseType.htm">ResponseType</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-WeekIndex.htm">WeekIndex</a></li>
+                    
+					-->
+					
+					
+					<li><a href="../EnumTypes/EnumType-AttendeeType.htm">AttendeeType</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-BodyType.htm">BodyType</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-CalendarColor.htm">CalendarColor</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-DayOfWeek.htm">DayOfWeek</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-EventType.htm">EventType</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-FreeBusyStatus.htm">FreeBusyStatus</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-GroupAccessType.htm">GroupAccessType</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-Importance.htm">Importance</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-MeetingMessageType.htm">MeetingMessageType</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-RecurrencePatternType.htm">RecurrencePatternType</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-RecurrenceRangeType.htm">RecurrenceRangeType</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-ResponseType.htm">ResponseType</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-WeekIndex.htm">WeekIndex</a></li>
+					
+					
+					
+                </ul>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+

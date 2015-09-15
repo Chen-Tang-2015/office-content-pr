@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>ProvisioningError extended resource</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+  
+</head>
+
+<body>
+
+    <div id="holder">
+
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../index.htm">
+                MS Graph
+            </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="../index.htm">Home</a></li>
+                </ul>
+            <ul class="nav navbar-nav navbar-right hidden-sm visible-md visible-lg">
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</nav>
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="provisioningerror-extended-resource">ProvisioningError extended resource</h1>
+<h2 id="overview">Overview</h2>
+<table>
+<thead>
+<tr>
+	<th align="left"></th>
+	<th align="left"></th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><em>Resource type</em></td>
+	<td align="left"><code>ComplexType</code></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><em>Namespace</em></td>
+	<td align="left"><code>Microsoft.Graph</code></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><em>Versions</em></td>
+	<td align="left"><code>alpha</code></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="properties">Properties</h3>
+<p>The <code>ProvisioningError</code> extended resource exposes the following properties </p>
+<table>
+<thead>
+<tr>
+	<th align="left">Name</th>
+	<th align="left">Type</th>
+	<th align="left">Versions</th>
+	<th align="left">Nullable</th>
+	<th align="left">Unicode</th>
+	<th align="left">Comments</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>errorDetail</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>resolved</code></td>
+	<td align="left"><code>Edm.Boolean</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>n/a</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>service</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>timestamp</code></td>
+	<td align="left"><code>Edm.DateTimeOffset</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>n/a</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="resource-paths">Resource paths</h3>
+<p>The <code>ProvisioningError</code> extended resource is referenced by the following resources. </p>
+<pre><code>    /&lt;version&gt;/myOrganization/applications/&lt;Application.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/applications/&lt;Application.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/applications/&lt;Application.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/applications/&lt;Application.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/contacts/&lt;Contact.objectId&gt;/directReports/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/contacts/&lt;Contact.objectId&gt;/directReports/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/contacts/&lt;Contact.objectId&gt;/directReports/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/contacts/&lt;Contact.objectId&gt;/directReports/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/contacts/&lt;Contact.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/contacts/&lt;Contact.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/contacts/&lt;Contact.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/contacts/&lt;Contact.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/contacts/&lt;Contact.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/devices/&lt;Device.objectId&gt;/registeredOwners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/devices/&lt;Device.objectId&gt;/registeredOwners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/devices/&lt;Device.objectId&gt;/registeredOwners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/devices/&lt;Device.objectId&gt;/registeredOwners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/devices/&lt;Device.objectId&gt;/registeredUsers/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/devices/&lt;Device.objectId&gt;/registeredUsers/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/devices/&lt;Device.objectId&gt;/registeredUsers/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/devices/&lt;Device.objectId&gt;/registeredUsers/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Application.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Application.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Application.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Application.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Contact.objectId&gt;/directReports/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Contact.objectId&gt;/directReports/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Contact.objectId&gt;/directReports/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Contact.objectId&gt;/directReports/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Contact.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Contact.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Contact.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Contact.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Contact.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Device.objectId&gt;/registeredOwners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Device.objectId&gt;/registeredOwners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Device.objectId&gt;/registeredOwners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Device.objectId&gt;/registeredOwners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Device.objectId&gt;/registeredUsers/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Device.objectId&gt;/registeredUsers/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Device.objectId&gt;/registeredUsers/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Device.objectId&gt;/registeredUsers/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;DirectoryRole.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;DirectoryRole.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;DirectoryRole.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;DirectoryRole.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;DirectoryRole.objectId&gt;/members/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;DirectoryRole.objectId&gt;/members/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;DirectoryRole.objectId&gt;/members/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;DirectoryRole.objectId&gt;/members/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;DirectoryRole.objectId&gt;/ownedObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;DirectoryRole.objectId&gt;/ownedObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;DirectoryRole.objectId&gt;/ownedObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;DirectoryRole.objectId&gt;/ownedObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;DirectoryRole.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;DirectoryRole.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;DirectoryRole.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;DirectoryRole.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Group.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Group.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Group.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Group.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Group.objectId&gt;/members/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Group.objectId&gt;/members/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Group.objectId&gt;/members/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Group.objectId&gt;/members/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Group.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Group.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Group.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Group.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;Group.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;ServicePrincipal.objectId&gt;/createdObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;ServicePrincipal.objectId&gt;/createdObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;ServicePrincipal.objectId&gt;/createdObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;ServicePrincipal.objectId&gt;/createdObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;ServicePrincipal.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;ServicePrincipal.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;ServicePrincipal.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;ServicePrincipal.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;ServicePrincipal.objectId&gt;/ownedObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;ServicePrincipal.objectId&gt;/ownedObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;ServicePrincipal.objectId&gt;/ownedObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;ServicePrincipal.objectId&gt;/ownedObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;ServicePrincipal.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;ServicePrincipal.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;ServicePrincipal.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;ServicePrincipal.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;TenantDetail.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/createdObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/createdObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/createdObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/createdObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/directReports/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/directReports/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/directReports/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/directReports/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/members/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/members/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/members/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/members/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/ownedDevices/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/ownedDevices/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/ownedDevices/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/ownedDevices/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/ownedObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/ownedObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/ownedObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/ownedObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/registeredDevices/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/registeredDevices/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/registeredDevices/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/registeredDevices/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/WorkingWith/&lt;User.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryRoles/&lt;DirectoryRole.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryRoles/&lt;DirectoryRole.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryRoles/&lt;DirectoryRole.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryRoles/&lt;DirectoryRole.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryRoles/&lt;DirectoryRole.objectId&gt;/members/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryRoles/&lt;DirectoryRole.objectId&gt;/members/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryRoles/&lt;DirectoryRole.objectId&gt;/members/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryRoles/&lt;DirectoryRole.objectId&gt;/members/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryRoles/&lt;DirectoryRole.objectId&gt;/ownedObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryRoles/&lt;DirectoryRole.objectId&gt;/ownedObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryRoles/&lt;DirectoryRole.objectId&gt;/ownedObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryRoles/&lt;DirectoryRole.objectId&gt;/ownedObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryRoles/&lt;DirectoryRole.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryRoles/&lt;DirectoryRole.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryRoles/&lt;DirectoryRole.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/directoryRoles/&lt;DirectoryRole.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/groups/&lt;Group.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/groups/&lt;Group.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/groups/&lt;Group.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/groups/&lt;Group.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/groups/&lt;Group.objectId&gt;/members/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/groups/&lt;Group.objectId&gt;/members/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/groups/&lt;Group.objectId&gt;/members/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/groups/&lt;Group.objectId&gt;/members/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/groups/&lt;Group.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/groups/&lt;Group.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/groups/&lt;Group.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/groups/&lt;Group.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/groups/&lt;Group.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt;/createdObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt;/createdObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt;/createdObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt;/createdObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt;/ownedObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt;/ownedObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt;/ownedObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt;/ownedObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/tenantDetails/&lt;TenantDetail.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/createdObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/createdObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/createdObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/createdObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/directReports/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/directReports/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/directReports/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/directReports/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/members/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/members/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/members/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/members/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/owners/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/memberOf/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/ownedDevices/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/ownedDevices/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/ownedDevices/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/ownedDevices/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/ownedObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/ownedObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/ownedObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/ownedObjects/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/registeredDevices/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/registeredDevices/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/registeredDevices/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/registeredDevices/&lt;DirectoryObject.objectId&gt;/provisioningErrors
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/WorkingWith/&lt;User.objectId&gt;/provisioningErrors
+</code></pre>
+
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../README.htm">API Reference</a></p>
+            <ul>
+                
+                <li>ComplexType</li>
+                
+                <ul>
+                    <!-- 
+					
+                    <li><a href="ComplexType-AlternativeSecurityId.htm">AlternativeSecurityId</a></li>
+                    
+                    <li><a href="ComplexType-AppRole.htm">AppRole</a></li>
+                    
+                    <li><a href="ComplexType-AssignedLicense.htm">AssignedLicense</a></li>
+                    
+                    <li><a href="ComplexType-AssignedPlan.htm">AssignedPlan</a></li>
+                    
+                    <li><a href="ComplexType-Attendee.htm">Attendee</a></li>
+                    
+                    <li><a href="ComplexType-deleted.htm">deleted</a></li>
+                    
+                    <li><a href="ComplexType-EmailAddress.htm">EmailAddress</a></li>
+                    
+                    <li><a href="ComplexType-ExternalReferenceCollection.htm">ExternalReferenceCollection</a></li>
+                    
+                    <li><a href="ComplexType-file.htm">file</a></li>
+                    
+                    <li><a href="ComplexType-folder.htm">folder</a></li>
+                    
+                    <li><a href="ComplexType-GeoCoordinates.htm">GeoCoordinates</a></li>
+                    
+                    <li><a href="ComplexType-identity.htm">identity</a></li>
+                    
+                    <li><a href="ComplexType-identitySet.htm">identitySet</a></li>
+                    
+                    <li><a href="ComplexType-image.htm">image</a></li>
+                    
+                    <li><a href="ComplexType-ItemBody.htm">ItemBody</a></li>
+                    
+                    <li><a href="ComplexType-itemReference.htm">itemReference</a></li>
+                    
+                    <li><a href="ComplexType-KeyCredential.htm">KeyCredential</a></li>
+                    
+                    <li><a href="ComplexType-LicenseUnitsDetail.htm">LicenseUnitsDetail</a></li>
+                    
+                    <li><a href="ComplexType-Location.htm">Location</a></li>
+                    
+                    <li><a href="ComplexType-OAuth2Permission.htm">OAuth2Permission</a></li>
+                    
+                    <li><a href="ComplexType-PasswordCredential.htm">PasswordCredential</a></li>
+                    
+                    <li><a href="ComplexType-PasswordProfile.htm">PasswordProfile</a></li>
+                    
+                    <li><a href="ComplexType-PatternedRecurrence.htm">PatternedRecurrence</a></li>
+                    
+                    <li><a href="ComplexType-photo.htm">photo</a></li>
+                    
+                    <li><a href="ComplexType-PhysicalAddress.htm">PhysicalAddress</a></li>
+                    
+                    <li><a href="ComplexType-ProvisionedPlan.htm">ProvisionedPlan</a></li>
+                    
+                    <li><a href="ComplexType-ProvisioningError.htm">ProvisioningError</a></li>
+                    
+                    <li><a href="ComplexType-quota.htm">quota</a></li>
+                    
+                    <li><a href="ComplexType-Recipient.htm">Recipient</a></li>
+                    
+                    <li><a href="ComplexType-RecurrencePattern.htm">RecurrencePattern</a></li>
+                    
+                    <li><a href="ComplexType-RecurrenceRange.htm">RecurrenceRange</a></li>
+                    
+                    <li><a href="ComplexType-RequiredResourceAccess.htm">RequiredResourceAccess</a></li>
+                    
+                    <li><a href="ComplexType-ResourceAccess.htm">ResourceAccess</a></li>
+                    
+                    <li><a href="ComplexType-ResponseStatus.htm">ResponseStatus</a></li>
+                    
+                    <li><a href="ComplexType-searchResult.htm">searchResult</a></li>
+                    
+                    <li><a href="ComplexType-ServicePlanInfo.htm">ServicePlanInfo</a></li>
+                    
+                    <li><a href="ComplexType-sharingLink.htm">sharingLink</a></li>
+                    
+                    <li><a href="ComplexType-thumbnail.htm">thumbnail</a></li>
+                    
+                    <li><a href="ComplexType-uploadSession.htm">uploadSession</a></li>
+                    
+                    <li><a href="ComplexType-UserIdCollection.htm">UserIdCollection</a></li>
+                    
+                    <li><a href="ComplexType-VerifiedDomain.htm">VerifiedDomain</a></li>
+                    
+					-->
+					
+					
+					<li><a href="ComplexType-AlternativeSecurityId.htm">AlternativeSecurityId</a></li>
+					
+					
+					<li><a href="ComplexType-AppRole.htm">AppRole</a></li>
+					
+					
+					<li><a href="ComplexType-AssignedLicense.htm">AssignedLicense</a></li>
+					
+					
+					<li><a href="ComplexType-AssignedPlan.htm">AssignedPlan</a></li>
+					
+					
+					<li><a href="ComplexType-Attendee.htm">Attendee</a></li>
+					
+					
+					<li><a href="ComplexType-deleted.htm">deleted</a></li>
+					
+					
+					<li><a href="ComplexType-EmailAddress.htm">EmailAddress</a></li>
+					
+					
+					<li><a href="ComplexType-ExternalReferenceCollection.htm">ExternalReferenceCollection</a></li>
+					
+					
+					<li><a href="ComplexType-file.htm">file</a></li>
+					
+					
+					<li><a href="ComplexType-folder.htm">folder</a></li>
+					
+					
+					<li><a href="ComplexType-GeoCoordinates.htm">GeoCoordinates</a></li>
+					
+					
+					<li><a href="ComplexType-identity.htm">identity</a></li>
+					
+					
+					<li><a href="ComplexType-identitySet.htm">identitySet</a></li>
+					
+					
+					<li><a href="ComplexType-image.htm">image</a></li>
+					
+					
+					<li><a href="ComplexType-ItemBody.htm">ItemBody</a></li>
+					
+					
+					<li><a href="ComplexType-itemReference.htm">itemReference</a></li>
+					
+					
+					<li><a href="ComplexType-KeyCredential.htm">KeyCredential</a></li>
+					
+					
+					<li><a href="ComplexType-LicenseUnitsDetail.htm">LicenseUnitsDetail</a></li>
+					
+					
+					<li><a href="ComplexType-Location.htm">Location</a></li>
+					
+					
+					<li><a href="ComplexType-OAuth2Permission.htm">OAuth2Permission</a></li>
+					
+					
+					<li><a href="ComplexType-PasswordCredential.htm">PasswordCredential</a></li>
+					
+					
+					<li><a href="ComplexType-PasswordProfile.htm">PasswordProfile</a></li>
+					
+					
+					<li><a href="ComplexType-PatternedRecurrence.htm">PatternedRecurrence</a></li>
+					
+					
+					<li><a href="ComplexType-photo.htm">photo</a></li>
+					
+					
+					<li><a href="ComplexType-PhysicalAddress.htm">PhysicalAddress</a></li>
+					
+					
+					<li><a href="ComplexType-ProvisionedPlan.htm">ProvisionedPlan</a></li>
+					
+					
+					<li><a href="ComplexType-ProvisioningError.htm">ProvisioningError</a></li>
+					
+					
+					<li><a href="ComplexType-quota.htm">quota</a></li>
+					
+					
+					<li><a href="ComplexType-Recipient.htm">Recipient</a></li>
+					
+					
+					<li><a href="ComplexType-RecurrencePattern.htm">RecurrencePattern</a></li>
+					
+					
+					<li><a href="ComplexType-RecurrenceRange.htm">RecurrenceRange</a></li>
+					
+					
+					<li><a href="ComplexType-RequiredResourceAccess.htm">RequiredResourceAccess</a></li>
+					
+					
+					<li><a href="ComplexType-ResourceAccess.htm">ResourceAccess</a></li>
+					
+					
+					<li><a href="ComplexType-ResponseStatus.htm">ResponseStatus</a></li>
+					
+					
+					<li><a href="ComplexType-searchResult.htm">searchResult</a></li>
+					
+					
+					<li><a href="ComplexType-ServicePlanInfo.htm">ServicePlanInfo</a></li>
+					
+					
+					<li><a href="ComplexType-sharingLink.htm">sharingLink</a></li>
+					
+					
+					<li><a href="ComplexType-thumbnail.htm">thumbnail</a></li>
+					
+					
+					<li><a href="ComplexType-uploadSession.htm">uploadSession</a></li>
+					
+					
+					<li><a href="ComplexType-UserIdCollection.htm">UserIdCollection</a></li>
+					
+					
+					<li><a href="ComplexType-VerifiedDomain.htm">VerifiedDomain</a></li>
+					
+					
+					
+                </ul>
+                
+                
+                <li>EntitySet</li>
+                
+                <ul>
+                    <!-- 
+					
+                    <li><a href="../EntitySets/EntitySet-applications.htm">applications</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-contacts.htm">contacts</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-deviceConfiguration.htm">deviceConfiguration</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-devices.htm">devices</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-directoryObjects.htm">directoryObjects</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-directoryRoles.htm">directoryRoles</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-directoryRoleTemplates.htm">directoryRoleTemplates</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-drives.htm">drives</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-groups.htm">groups</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-oauth2PermissionGrants.htm">oauth2PermissionGrants</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-plans.htm">plans</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-servicePrincipals.htm">servicePrincipals</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-subscribedSkus.htm">subscribedSkus</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-tasks.htm">tasks</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-tenantDetails.htm">tenantDetails</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-users.htm">users</a></li>
+                    
+					-->
+					
+					
+					<li><a href="../EntitySets/EntitySet-applications.htm">applications</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-contacts.htm">contacts</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-deviceConfiguration.htm">deviceConfiguration</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-devices.htm">devices</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-directoryObjects.htm">directoryObjects</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-directoryRoles.htm">directoryRoles</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-directoryRoleTemplates.htm">directoryRoleTemplates</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-drives.htm">drives</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-groups.htm">groups</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-oauth2PermissionGrants.htm">oauth2PermissionGrants</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-plans.htm">plans</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-servicePrincipals.htm">servicePrincipals</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-subscribedSkus.htm">subscribedSkus</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-tasks.htm">tasks</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-tenantDetails.htm">tenantDetails</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-users.htm">users</a></li>
+					
+					
+					
+                </ul>
+                
+                
+                <li>EntityType</li>
+                
+                <ul>
+                    <!-- 
+					
+                    <li><a href="../EntityTypes/EntityType-Application.htm">Application</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-AppRoleAssignment.htm">AppRoleAssignment</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-Attachment.htm">Attachment</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-Calendar.htm">Calendar</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-CalendarGroup.htm">CalendarGroup</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-Contact.htm">Contact</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-Conversation.htm">Conversation</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-ConversationThread.htm">ConversationThread</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-Device.htm">Device</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-DeviceConfiguration.htm">DeviceConfiguration</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-DirectoryLinkChange.htm">DirectoryLinkChange</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-DirectoryObject.htm">DirectoryObject</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-DirectoryRole.htm">DirectoryRole</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-DirectoryRoleTemplate.htm">DirectoryRoleTemplate</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-drive.htm">drive</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-Event.htm">Event</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-EventMessage.htm">EventMessage</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-ExtensionProperty.htm">ExtensionProperty</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-File.htm">File</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-FileAttachment.htm">FileAttachment</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-Group.htm">Group</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-item.htm">item</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-ItemAttachment.htm">ItemAttachment</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-Message.htm">Message</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-OAuth2PermissionGrant.htm">OAuth2PermissionGrant</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-OutlookItem.htm">OutlookItem</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-permission.htm">permission</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-Photo.htm">Photo</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-Plan.htm">Plan</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-PlanDetails.htm">PlanDetails</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-Post.htm">Post</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-ReferenceAttachment.htm">ReferenceAttachment</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-ServicePrincipal.htm">ServicePrincipal</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-SubscribedSku.htm">SubscribedSku</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-Task.htm">Task</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-TaskDetails.htm">TaskDetails</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-TenantDetail.htm">TenantDetail</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-thumbnailSet.htm">thumbnailSet</a></li>
+                    
+                    <li><a href="../EntityTypes/EntityType-User.htm">User</a></li>
+                    
+					-->
+					
+					
+					<li><a href="../EntityTypes/EntityType-Application.htm">Application</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-AppRoleAssignment.htm">AppRoleAssignment</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-Attachment.htm">Attachment</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-Calendar.htm">Calendar</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-CalendarGroup.htm">CalendarGroup</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-Contact.htm">Contact</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-Conversation.htm">Conversation</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-ConversationThread.htm">ConversationThread</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-Device.htm">Device</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-DeviceConfiguration.htm">DeviceConfiguration</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-DirectoryLinkChange.htm">DirectoryLinkChange</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-DirectoryObject.htm">DirectoryObject</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-DirectoryRole.htm">DirectoryRole</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-DirectoryRoleTemplate.htm">DirectoryRoleTemplate</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-drive.htm">drive</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-Event.htm">Event</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-EventMessage.htm">EventMessage</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-ExtensionProperty.htm">ExtensionProperty</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-File.htm">File</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-FileAttachment.htm">FileAttachment</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-Group.htm">Group</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-item.htm">item</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-ItemAttachment.htm">ItemAttachment</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-Message.htm">Message</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-OAuth2PermissionGrant.htm">OAuth2PermissionGrant</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-OutlookItem.htm">OutlookItem</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-permission.htm">permission</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-Photo.htm">Photo</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-Plan.htm">Plan</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-PlanDetails.htm">PlanDetails</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-Post.htm">Post</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-ReferenceAttachment.htm">ReferenceAttachment</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-ServicePrincipal.htm">ServicePrincipal</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-SubscribedSku.htm">SubscribedSku</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-Task.htm">Task</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-TaskDetails.htm">TaskDetails</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-TenantDetail.htm">TenantDetail</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-thumbnailSet.htm">thumbnailSet</a></li>
+					
+					
+					<li><a href="../EntityTypes/EntityType-User.htm">User</a></li>
+					
+					
+					
+                </ul>
+                
+                
+                <li>EnumType</li>
+                
+                <ul>
+                    <!-- 
+					
+                    <li><a href="../EnumTypes/EnumType-AttendeeType.htm">AttendeeType</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-BodyType.htm">BodyType</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-CalendarColor.htm">CalendarColor</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-DayOfWeek.htm">DayOfWeek</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-EventType.htm">EventType</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-FreeBusyStatus.htm">FreeBusyStatus</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-GroupAccessType.htm">GroupAccessType</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-Importance.htm">Importance</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-MeetingMessageType.htm">MeetingMessageType</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-RecurrencePatternType.htm">RecurrencePatternType</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-RecurrenceRangeType.htm">RecurrenceRangeType</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-ResponseType.htm">ResponseType</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-WeekIndex.htm">WeekIndex</a></li>
+                    
+					-->
+					
+					
+					<li><a href="../EnumTypes/EnumType-AttendeeType.htm">AttendeeType</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-BodyType.htm">BodyType</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-CalendarColor.htm">CalendarColor</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-DayOfWeek.htm">DayOfWeek</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-EventType.htm">EventType</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-FreeBusyStatus.htm">FreeBusyStatus</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-GroupAccessType.htm">GroupAccessType</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-Importance.htm">Importance</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-MeetingMessageType.htm">MeetingMessageType</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-RecurrencePatternType.htm">RecurrencePatternType</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-RecurrenceRangeType.htm">RecurrenceRangeType</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-ResponseType.htm">ResponseType</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-WeekIndex.htm">WeekIndex</a></li>
+					
+					
+					
+                </ul>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+

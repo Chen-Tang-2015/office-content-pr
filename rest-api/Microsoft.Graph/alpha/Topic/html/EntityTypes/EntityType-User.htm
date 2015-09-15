@@ -1,0 +1,3744 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>User resource</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+  
+</head>
+
+<body>
+
+    <div id="holder">
+
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../index.htm">
+                MS Graph
+            </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="../index.htm">Home</a></li>
+                </ul>
+            <ul class="nav navbar-nav navbar-right hidden-sm visible-md visible-lg">
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</nav>
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="user-resource">User resource</h1>
+<h2 id="overview">Overview</h2>
+<table>
+<thead>
+<tr>
+	<th align="left"></th>
+	<th align="left"></th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><em>Resource type</em></td>
+	<td align="left"><code>EntityType</code></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><em>Full name</em></td>
+	<td align="left"><code>Microsoft.Graph.User</code></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><em>Base types</em></td>
+	<td align="left"><code>Microsoft.Graph.DirectoryObject</code></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><em>Versions</em></td>
+	<td align="left"><code>alpha</code></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><em>Operations</em></td>
+	<td align="left"><code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>PATCH</code>, <code>DELETE</code></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><em>Query options</em></td>
+	<td align="left"><code>$count</code>, <code>$expand</code>, <code>$filter</code>, <code>$orderBy</code>, <code>$ref</code>, <code>$search</code>, <code>$select</code>, <code>$skip</code>, <code>$top</code></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="resource-paths">Resource paths</h3>
+<p>The <code>User</code> resource can be accessed via the following paths. </p>
+<pre><code>    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;
+    /&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/WorkingWith/&lt;User.objectId&gt;
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;
+    /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/WorkingWith/&lt;User.objectId&gt;
+</code></pre>
+
+<h3 id="properties">Properties</h3>
+<p>The <code>User</code> resource supports the following properties </p>
+<table>
+<thead>
+<tr>
+	<th align="left">Name</th>
+	<th align="left">Type</th>
+	<th align="left">Versions</th>
+	<th align="left">Nullable</th>
+	<th align="left">Unicode</th>
+	<th align="left">Writeable</th>
+	<th align="left">Required to create</th>
+	<th align="left">Default value</th>
+	<th align="left">Comments</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>AboutMe</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>accountEnabled</code></td>
+	<td align="left"><code>Edm.Boolean</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>n/a</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>Alias</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>assignedLicenses</code></td>
+	<td align="left"><code>Collection(Microsoft.Graph.AssignedLicense)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>n/a</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>assignedPlans</code></td>
+	<td align="left"><code>Collection(Microsoft.Graph.AssignedPlan)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>n/a</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>Birthday</code></td>
+	<td align="left"><code>Edm.DateTimeOffset</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>n/a</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>city</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>country</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>deletionTimestamp</code></td>
+	<td align="left"><code>Edm.DateTimeOffset</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>n/a</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>department</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>dirSyncEnabled</code></td>
+	<td align="left"><code>Edm.Boolean</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>n/a</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>displayName</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>facsimileTelephoneNumber</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>givenName</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>HireDate</code></td>
+	<td align="left"><code>Edm.DateTimeOffset</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>n/a</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>immutableId</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>Interests</code></td>
+	<td align="left"><code>Collection(Edm.String)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>jobTitle</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>lastDirSyncTime</code></td>
+	<td align="left"><code>Edm.DateTimeOffset</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>n/a</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>mail</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>MailboxGuid</code></td>
+	<td align="left"><code>Edm.Guid</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>n/a</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>mailNickname</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>mobile</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>MySite</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>objectId</code> (_Key_)</td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>objectType</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>onPremisesSecurityIdentifier</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>otherMails</code></td>
+	<td align="left"><code>Collection(Edm.String)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>passwordPolicies</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>passwordProfile</code></td>
+	<td align="left"><code>Microsoft.Graph.PasswordProfile</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>n/a</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>PastProjects</code></td>
+	<td align="left"><code>Collection(Edm.String)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>physicalDeliveryOfficeName</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>postalCode</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>preferredLanguage</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>PreferredName</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>PrincipalName</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>provisionedPlans</code></td>
+	<td align="left"><code>Collection(Microsoft.Graph.ProvisionedPlan)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>n/a</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>provisioningErrors</code></td>
+	<td align="left"><code>Collection(Microsoft.Graph.ProvisioningError)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>n/a</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>proxyAddresses</code></td>
+	<td align="left"><code>Collection(Edm.String)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>Responsibilities</code></td>
+	<td align="left"><code>Collection(Edm.String)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>Schools</code></td>
+	<td align="left"><code>Collection(Edm.String)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>sipProxyAddress</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>Skills</code></td>
+	<td align="left"><code>Collection(Edm.String)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>state</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>streetAddress</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>surname</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>Tags</code></td>
+	<td align="left"><code>Collection(Edm.String)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>telephoneNumber</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>thumbnailPhoto</code></td>
+	<td align="left"><code>Edm.Stream</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>n/a</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>usageLocation</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>userPrincipalName</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>userType</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="navigation-properties">Navigation properties</h3>
+<p>The <code>User</code> resource supports the following navigation properties to access the targeted resource. </p>
+<table>
+<thead>
+<tr>
+	<th align="left">Name</th>
+	<th align="left">Target type</th>
+	<th align="left">Versions</th>
+	<th align="left">Nullable</th>
+	<th align="left">Operations</th>
+	<th align="left">Comments</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>appRoleAssignments</code></td>
+	<td align="left"><code>Collection(Microsoft.Graph.AppRoleAssignment)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>GET</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>Calendar</code></td>
+	<td align="left"><code>Microsoft.Graph.Calendar</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>PATCH</code>, <code>DELETE</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>CalendarGroups</code></td>
+	<td align="left"><code>Collection(Microsoft.Graph.CalendarGroup)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>PATCH</code>, <code>DELETE</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>Calendars</code></td>
+	<td align="left"><code>Collection(Microsoft.Graph.Calendar)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>PATCH</code>, <code>DELETE</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>CalendarView</code></td>
+	<td align="left"><code>Collection(Microsoft.Graph.Event)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>PATCH</code>, <code>DELETE</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>createdObjects</code></td>
+	<td align="left"><code>Collection(Microsoft.Graph.DirectoryObject)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>GET</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>directReports</code></td>
+	<td align="left"><code>Collection(Microsoft.Graph.DirectoryObject)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>GET</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>drive</code></td>
+	<td align="left"><code>Microsoft.Graph.drive</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>PATCH</code>, <code>DELETE</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>Events</code></td>
+	<td align="left"><code>Collection(Microsoft.Graph.Event)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>PATCH</code>, <code>DELETE</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>files</code></td>
+	<td align="left"><code>Collection(Microsoft.Graph.item)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>PATCH</code>, <code>DELETE</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>JoinedGroups</code></td>
+	<td align="left"><code>Collection(Microsoft.Graph.Group)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>PATCH</code>, <code>DELETE</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>manager</code></td>
+	<td align="left"><code>Microsoft.Graph.DirectoryObject</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>GET</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>memberOf</code></td>
+	<td align="left"><code>Collection(Microsoft.Graph.DirectoryObject)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>GET</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>Messages</code></td>
+	<td align="left"><code>Collection(Microsoft.Graph.Message)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>PATCH</code>, <code>DELETE</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>oauth2PermissionGrants</code></td>
+	<td align="left"><code>Collection(Microsoft.Graph.OAuth2PermissionGrant)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>GET</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>ownedDevices</code></td>
+	<td align="left"><code>Collection(Microsoft.Graph.DirectoryObject)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>GET</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>ownedObjects</code></td>
+	<td align="left"><code>Collection(Microsoft.Graph.DirectoryObject)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>GET</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>plans</code></td>
+	<td align="left"><code>Collection(Microsoft.Graph.Plan)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>GET</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>registeredDevices</code></td>
+	<td align="left"><code>Collection(Microsoft.Graph.DirectoryObject)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>GET</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>tasks</code></td>
+	<td align="left"><code>Collection(Microsoft.Graph.Task)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>GET</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>TrendingAround</code></td>
+	<td align="left"><code>Collection(Microsoft.Graph.File)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>PATCH</code>, <code>DELETE</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>UserPhoto</code></td>
+	<td align="left"><code>Microsoft.Graph.Photo</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>false</code></td>
+	<td align="left"><code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>PATCH</code>, <code>DELETE</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>UserPhotos</code></td>
+	<td align="left"><code>Collection(Microsoft.Graph.Photo)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>PATCH</code>, <code>DELETE</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>WorkingWith</code></td>
+	<td align="left"><code>Collection(Microsoft.Graph.User)</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left"><code>true</code></td>
+	<td align="left"><code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>PATCH</code>, <code>DELETE</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="actions">Actions</h3>
+<p>The <code>User</code> resource supports the following actions: </p>
+<table>
+<thead>
+<tr>
+	<th align="left">Name</th>
+	<th align="left">Versions</th>
+	<th align="left">Context</th>
+	<th align="left">Input</th>
+	<th align="left">Return type</th>
+	<th align="left">Output path</th>
+	<th align="left">Comments</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>assignLicense</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left">User</td>
+	<td align="left"><code>addLicenses</code> : <code>&lt;Microsoft.Graph.AssignedLicense&gt;</code>,&lt;br/&gt;<code>removeLicenses</code> : <code>&lt;Edm.Guid&gt;</code></td>
+	<td align="left"><code>Microsoft.Graph.User</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>checkMemberGroups</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left">DirectoryObject</td>
+	<td align="left"><code>groupIds</code> : <code>&lt;Edm.String&gt;</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>getMemberGroups</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left">DirectoryObject</td>
+	<td align="left"><code>securityEnabledOnly</code> : <code>&lt;Edm.Boolean&gt;</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>getMemberObjects</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left">DirectoryObject</td>
+	<td align="left"><code>securityEnabledOnly</code> : <code>&lt;Edm.Boolean&gt;</code></td>
+	<td align="left"><code>Edm.String</code></td>
+	<td align="left"></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>SendMail</code></td>
+	<td align="left"><code>alpha</code></td>
+	<td align="left">User</td>
+	<td align="left"><code>Message</code> : <code>&lt;Microsoft.Graph.Message&gt;</code>,&lt;br/&gt;<code>SaveToSentItems</code> : <code>&lt;Edm.Boolean&gt;</code></td>
+	<td align="left"></td>
+	<td align="left">.../&lt;User&gt;</td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<p>To invoke an action, submit a <code>HTTP POST</code> request against the action's resource path. The relative Url path has the format of <strong>&lt;Calling context&gt;/&lt;Action name&gt;</strong>. An action may take zero or more inputs (<strong>Input<strong>), respond with zero or one type of output (</strong>Return type</strong>), and store any result in a specified location (<strong>Output path</strong>). If the response does not return any payload, the <strong>Return type</strong> will be null. If the action results in any side effects, the <strong>Output path</strong> shows where to get the result. </p>
+<h3 id="operations">Operations</h3>
+<p>The <code>User</code> entity resource supports the following operations, including actions and functions. </p>
+<h4 id="work-with-the-user-resource">Work with the User resource</h4>
+<h4 id="get-a-user">Get a User</h4>
+<p>To get an existing <code>User</code> entity resource, submit an <code>HTTP GET</code> request of the following syntax: </p>
+<h4 id="required-scopes">Required scopes</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read his or her own full profile.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadBasic.All</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read some properties of all user's profiles.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.Read.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="request">Request</h4>
+<pre><code>    
+GET /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt; HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+
+</code></pre>
+
+<h4 id="response">Response</h4>
+<pre><code>    200 OK
+
+{
+
+    '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+    '@odata.type': '#Microsoft.Graph.User',
+    '@odata.id': '/&lt;User.objectId&gt;',
+    'AboutMe' : '&lt;Edm.String&gt;',
+     ...,
+    'userType' : '&lt;Edm.String&gt;'
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a payload containing the specified a User entity resource representation. </p>
+<h4 id="create-or-add-a-user">Create or add a User</h4>
+<p>To create new <code>User</code> entity resource, submit an <code>HTTP POST</code> request against the <code>users</code> collection: </p>
+<h4 id="required-scopes-1">Required scopes</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.ReadWrite</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadWrite.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="request-1">Request</h4>
+<pre><code>    
+POST /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt; HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+Content-Length : &lt;body_length&gt;
+
+{
+    &lt;User.property_1&gt; : &lt;value_1&gt;,
+    ...,
+    &lt;User.property_n&gt; : &lt;value_n&gt;
+}
+
+</code></pre>
+
+<h4 id="response-1">Response</h4>
+<pre><code>    201 Created
+
+{
+
+    '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+    '@odata.type': '#Microsoft.Graph.User',
+    '@odata.id': '/&lt;User.objectId&gt;',
+    'AboutMe' : '&lt;Edm.String&gt;',
+     ...,
+    'userType' : '&lt;Edm.String&gt;'
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a payload containing the newly added a User entity resource representation. </p>
+<h4 id="update-a-user">Update a User</h4>
+<p>To update an existing <code>User</code> entity resource, submit an <code>HTTP PUT</code> request, specifying a new instance of the resource in the request body: </p>
+<h4 id="required-scopes-2">Required scopes</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.ReadWrite</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadWrite.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="request-2">Request</h4>
+<pre><code>    
+PUT /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt; HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : &lt;body_length&gt;
+
+{
+    &lt;User.property_1&gt; : &lt;value_1&gt;,
+    ...,
+    &lt;User.property_n&gt; : &lt;value_n&gt;
+}
+
+</code></pre>
+
+<h4 id="response-2">Response</h4>
+<pre><code>    204 No content
+
+
+</code></pre>
+
+<p>A successful response returns the <code>204 - No content</code> status code without any payload. </p>
+<h4 id="update-a-users-properties">Update a User's properties</h4>
+<p>To update selected properties of an existing <code>User</code> entity, submit an <code>HTTP PATCH</code> request, specifying a new instance of the resource in the request body: </p>
+<h4 id="required-scopes-3">Required scopes</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.ReadWrite</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadWrite.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="request-3">Request</h4>
+<pre><code>    
+PATCH /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt; HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : &lt;body_length&gt;
+
+{
+    &lt;User.property_1&gt; : &lt;value_1&gt;,
+    ...,
+    &lt;User.property_n&gt; : &lt;value_n&gt;
+}
+
+</code></pre>
+
+<h4 id="response-3">Response</h4>
+<pre><code>    204 No content
+
+
+</code></pre>
+
+<p>A successful response returns the <code>204 No content</code> status code without any payload. </p>
+<h4 id="delete-a-user">Delete a User</h4>
+<p>To delete an existing <code>User</code> entity resource, submit an <code>HTTP DELETE</code> request, specifying a new instance of the resource in the request body: </p>
+<h4 id="required-scopes-4">Required scopes</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.ReadWrite</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadWrite.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="request-4">Request</h4>
+<pre><code>    
+DELETE /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt; HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+
+</code></pre>
+
+<h4 id="response-4">Response</h4>
+<pre><code>    204 No content
+
+
+</code></pre>
+
+<p>A successful response returns the <code>204 No content</code> status code without any payload. </p>
+<h4 id="access-the-approleassignment-collection-via-the-userapproleassignments-relationship">Access the AppRoleAssignment collection via the User/appRoleAssignments relationship</h4>
+<h5 id="get-the-userapproleassignments-collection">Get the User/appRoleAssignments collection</h5>
+<p>To get the <code>User/appRoleAssignments</code> collection, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
+<h5 id="required-scopes-5">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read his or her own full profile.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadBasic.All</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read some properties of all user's profiles.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.Read.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-5">Request</h5>
+<pre><code>    
+GET /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/appRoleAssignments HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+
+</code></pre>
+
+<h5 id="response-5">Response</h5>
+<pre><code>    200 OK
+
+{
+    'value': [
+        {
+        
+            '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+            '@odata.type': '#Microsoft.Graph.AppRoleAssignment',
+            '@odata.id': '/&lt;AppRoleAssignment.objectId&gt;',
+            'creationTimestamp' : '&lt;Edm.DateTimeOffset&gt;',
+             ...,
+            'resourceId' : '&lt;Edm.Guid&gt;'
+        }
+        ,
+        ...
+    ]
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a body containing a collection of the <code>AppRoleAssignment</code> resource representations. </p>
+<h4 id="access-the-calendar-resource-via-the-usercalendar-relationship">Access the Calendar resource via the User/Calendar relationship</h4>
+<h5 id="get-the-usercalendar-entity">Get the User/Calendar entity</h5>
+<p>To get a User/Calendar <code>User/Calendar</code> resource, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
+<h5 id="required-scopes-6">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>Calendar.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read his or her own full profile.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadBasic.All</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read some properties of all user's profiles.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.Read.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-6">Request</h5>
+<pre><code>    
+GET /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/Calendar HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+
+</code></pre>
+
+<h5 id="response-6">Response</h5>
+<pre><code>    200 OK
+
+{
+
+    '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+    '@odata.type': '#Microsoft.Graph.Calendar',
+    '@odata.id': '/&lt;Calendar.Id&gt;',
+    'ChangeKey' : '&lt;Edm.String&gt;',
+     ...,
+    'Name' : '&lt;Edm.String&gt;'
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a body containing a <code>Calendar</code> resource representation. </p>
+<h4 id="access-the-calendargroup-collection-via-the-usercalendargroups-relationship">Access the CalendarGroup collection via the User/CalendarGroups relationship</h4>
+<h5 id="get-the-usercalendargroups-collection">Get the User/CalendarGroups collection</h5>
+<p>To get the <code>User/CalendarGroups</code> collection, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
+<h5 id="required-scopes-7">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read his or her own full profile.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadBasic.All</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read some properties of all user's profiles.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.Read.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-7">Request</h5>
+<pre><code>    
+GET /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/CalendarGroups HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+
+</code></pre>
+
+<h5 id="response-7">Response</h5>
+<pre><code>    200 OK
+
+{
+    'value': [
+        {
+        
+            '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+            '@odata.type': '#Microsoft.Graph.CalendarGroup',
+            '@odata.id': '/&lt;CalendarGroup.Id&gt;',
+            'ChangeKey' : '&lt;Edm.String&gt;',
+             ...,
+            'Name' : '&lt;Edm.String&gt;'
+        }
+        ,
+        ...
+    ]
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a body containing a collection of the <code>CalendarGroup</code> resource representations. </p>
+<h4 id="access-the-calendar-collection-via-the-usercalendars-relationship">Access the Calendar collection via the User/Calendars relationship</h4>
+<h5 id="get-the-usercalendars-collection">Get the User/Calendars collection</h5>
+<p>To get the <code>User/Calendars</code> collection, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
+<h5 id="required-scopes-8">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read his or her own full profile.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadBasic.All</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read some properties of all user's profiles.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.Read.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-8">Request</h5>
+<pre><code>    
+GET /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/Calendars HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+
+</code></pre>
+
+<h5 id="response-8">Response</h5>
+<pre><code>    200 OK
+
+{
+    'value': [
+        {
+        
+            '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+            '@odata.type': '#Microsoft.Graph.Calendar',
+            '@odata.id': '/&lt;Calendar.Id&gt;',
+            'ChangeKey' : '&lt;Edm.String&gt;',
+             ...,
+            'Name' : '&lt;Edm.String&gt;'
+        }
+        ,
+        ...
+    ]
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a body containing a collection of the <code>Calendar</code> resource representations. </p>
+<h4 id="access-the-event-collection-via-the-usercalendarview-relationship">Access the Event collection via the User/CalendarView relationship</h4>
+<h5 id="get-the-usercalendarview-collection">Get the User/CalendarView collection</h5>
+<p>To get the <code>User/CalendarView</code> collection, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
+<h5 id="required-scopes-9">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read his or her own full profile.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadBasic.All</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read some properties of all user's profiles.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.Read.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-9">Request</h5>
+<pre><code>    
+GET /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/CalendarView HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+
+</code></pre>
+
+<h5 id="response-9">Response</h5>
+<pre><code>    200 OK
+
+{
+    'value': [
+        {
+        
+            '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+            '@odata.type': '#Microsoft.Graph.Event',
+            '@odata.id': '/&lt;Event.Id&gt;',
+            'Attendees' : '&lt;Collection(Microsoft.Graph.Attendee)&gt;',
+             ...,
+            'WebLink' : '&lt;Edm.String&gt;'
+        }
+        ,
+        ...
+    ]
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a body containing a collection of the <code>Event</code> resource representations. </p>
+<h4 id="access-the-directoryobject-collection-via-the-usercreatedobjects-relationship">Access the DirectoryObject collection via the User/createdObjects relationship</h4>
+<h5 id="get-the-usercreatedobjects-collection">Get the User/createdObjects collection</h5>
+<p>To get the <code>User/createdObjects</code> collection, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
+<h5 id="required-scopes-10">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read his or her own full profile.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadBasic.All</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read some properties of all user's profiles.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.Read.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-10">Request</h5>
+<pre><code>    
+GET /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/createdObjects HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+
+</code></pre>
+
+<h5 id="response-10">Response</h5>
+<pre><code>    200 OK
+
+{
+    'value': [
+        {
+        
+            '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+            '@odata.type': '#Microsoft.Graph.DirectoryObject',
+            '@odata.id': '/&lt;DirectoryObject.objectId&gt;',
+            'deletionTimestamp' : '&lt;Edm.DateTimeOffset&gt;',
+             ...,
+            'objectType' : '&lt;Edm.String&gt;'
+        }
+        ,
+        ...
+    ]
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a body containing a collection of the <code>DirectoryObject</code> resource representations. </p>
+<h4 id="access-the-directoryobject-collection-via-the-userdirectreports-relationship">Access the DirectoryObject collection via the User/directReports relationship</h4>
+<h5 id="get-the-userdirectreports-collection">Get the User/directReports collection</h5>
+<p>To get the <code>User/directReports</code> collection, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
+<h5 id="required-scopes-11">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read his or her own full profile.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadBasic.All</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read some properties of all user's profiles.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.Read.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-11">Request</h5>
+<pre><code>    
+GET /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/directReports HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+
+</code></pre>
+
+<h5 id="response-11">Response</h5>
+<pre><code>    200 OK
+
+{
+    'value': [
+        {
+        
+            '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+            '@odata.type': '#Microsoft.Graph.DirectoryObject',
+            '@odata.id': '/&lt;DirectoryObject.objectId&gt;',
+            'deletionTimestamp' : '&lt;Edm.DateTimeOffset&gt;',
+             ...,
+            'objectType' : '&lt;Edm.String&gt;'
+        }
+        ,
+        ...
+    ]
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a body containing a collection of the <code>DirectoryObject</code> resource representations. </p>
+<h4 id="access-the-drive-resource-via-the-userdrive-relationship">Access the drive resource via the User/drive relationship</h4>
+<h5 id="get-the-userdrive-entity">Get the User/drive entity</h5>
+<p>To get a User/drive <code>User/drive</code> resource, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
+<h5 id="required-scopes-12">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read his or her own full profile.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadBasic.All</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read some properties of all user's profiles.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.Read.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-12">Request</h5>
+<pre><code>    
+GET /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/drive HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+
+</code></pre>
+
+<h5 id="response-12">Response</h5>
+<pre><code>    200 OK
+
+{
+
+    '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+    '@odata.type': '#Microsoft.Graph.drive',
+    '@odata.id': '/&lt;drive.id&gt;',
+    'driveType' : '&lt;Edm.String&gt;',
+     ...,
+    'quota' : '&lt;Microsoft.Graph.quota&gt;'
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a body containing a <code>drive</code> resource representation. </p>
+<h4 id="access-the-event-collection-via-the-userevents-relationship">Access the Event collection via the User/Events relationship</h4>
+<h5 id="get-the-userevents-collection">Get the User/Events collection</h5>
+<p>To get the <code>User/Events</code> collection, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
+<h5 id="required-scopes-13">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read his or her own full profile.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadBasic.All</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read some properties of all user's profiles.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.Read.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-13">Request</h5>
+<pre><code>    
+GET /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/Events HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+
+</code></pre>
+
+<h5 id="response-13">Response</h5>
+<pre><code>    200 OK
+
+{
+    'value': [
+        {
+        
+            '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+            '@odata.type': '#Microsoft.Graph.Event',
+            '@odata.id': '/&lt;Event.Id&gt;',
+            'Attendees' : '&lt;Collection(Microsoft.Graph.Attendee)&gt;',
+             ...,
+            'WebLink' : '&lt;Edm.String&gt;'
+        }
+        ,
+        ...
+    ]
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a body containing a collection of the <code>Event</code> resource representations. </p>
+<h4 id="access-the-item-collection-via-the-userfiles-relationship">Access the item collection via the User/files relationship</h4>
+<h5 id="get-the-userfiles-collection">Get the User/files collection</h5>
+<p>To get the <code>User/files</code> collection, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
+<h5 id="required-scopes-14">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read his or her own full profile.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadBasic.All</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read some properties of all user's profiles.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.Read.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-14">Request</h5>
+<pre><code>    
+GET /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/files HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+
+</code></pre>
+
+<h5 id="response-14">Response</h5>
+<pre><code>    200 OK
+
+{
+    'value': [
+        {
+        
+            '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+            '@odata.type': '#Microsoft.Graph.item',
+            '@odata.id': '/&lt;item.id&gt;',
+            'createdBy' : '&lt;Microsoft.Graph.identitySet&gt;',
+             ...,
+            'webUrl' : '&lt;Edm.String&gt;'
+        }
+        ,
+        ...
+    ]
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a body containing a collection of the <code>item</code> resource representations. </p>
+<h4 id="access-the-group-collection-via-the-userjoinedgroups-relationship">Access the Group collection via the User/JoinedGroups relationship</h4>
+<h5 id="get-the-userjoinedgroups-collection">Get the User/JoinedGroups collection</h5>
+<p>To get the <code>User/JoinedGroups</code> collection, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
+<h5 id="required-scopes-15">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read his or her own full profile.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadBasic.All</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read some properties of all user's profiles.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.Read.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-15">Request</h5>
+<pre><code>    
+GET /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/JoinedGroups HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+
+</code></pre>
+
+<h5 id="response-15">Response</h5>
+<pre><code>    200 OK
+
+{
+    'value': [
+        {
+        
+            '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+            '@odata.type': '#Microsoft.Graph.Group',
+            '@odata.id': '/&lt;Group.objectId&gt;',
+            'AccessType' : '&lt;Microsoft.Graph.GroupAccessType&gt;',
+             ...,
+            'UnseenCount' : '&lt;Edm.Int32&gt;'
+        }
+        ,
+        ...
+    ]
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a body containing a collection of the <code>Group</code> resource representations. </p>
+<h4 id="access-the-directoryobject-resource-via-the-usermanager-relationship">Access the DirectoryObject resource via the User/manager relationship</h4>
+<h5 id="get-the-usermanager-entity">Get the User/manager entity</h5>
+<p>To get a User/manager <code>User/manager</code> resource, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
+<h5 id="required-scopes-16">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read his or her own full profile.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadBasic.All</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read some properties of all user's profiles.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.Read.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-16">Request</h5>
+<pre><code>    
+GET /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/manager HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+
+</code></pre>
+
+<h5 id="response-16">Response</h5>
+<pre><code>    200 OK
+
+{
+
+    '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+    '@odata.type': '#Microsoft.Graph.DirectoryObject',
+    '@odata.id': '/&lt;DirectoryObject.objectId&gt;',
+    'deletionTimestamp' : '&lt;Edm.DateTimeOffset&gt;',
+     ...,
+    'objectType' : '&lt;Edm.String&gt;'
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a body containing a <code>DirectoryObject</code> resource representation. </p>
+<h4 id="access-the-directoryobject-collection-via-the-usermemberof-relationship">Access the DirectoryObject collection via the User/memberOf relationship</h4>
+<h5 id="get-the-usermemberof-collection">Get the User/memberOf collection</h5>
+<p>To get the <code>User/memberOf</code> collection, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
+<h5 id="required-scopes-17">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read his or her own full profile.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadBasic.All</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read some properties of all user's profiles.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.Read.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-17">Request</h5>
+<pre><code>    
+GET /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/memberOf HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+
+</code></pre>
+
+<h5 id="response-17">Response</h5>
+<pre><code>    200 OK
+
+{
+    'value': [
+        {
+        
+            '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+            '@odata.type': '#Microsoft.Graph.DirectoryObject',
+            '@odata.id': '/&lt;DirectoryObject.objectId&gt;',
+            'deletionTimestamp' : '&lt;Edm.DateTimeOffset&gt;',
+             ...,
+            'objectType' : '&lt;Edm.String&gt;'
+        }
+        ,
+        ...
+    ]
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a body containing a collection of the <code>DirectoryObject</code> resource representations. </p>
+<h4 id="access-the-message-collection-via-the-usermessages-relationship">Access the Message collection via the User/Messages relationship</h4>
+<h5 id="get-the-usermessages-collection">Get the User/Messages collection</h5>
+<p>To get the <code>User/Messages</code> collection, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
+<h5 id="required-scopes-18">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read his or her own full profile.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadBasic.All</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read some properties of all user's profiles.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.Read.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-18">Request</h5>
+<pre><code>    
+GET /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/Messages HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+
+</code></pre>
+
+<h5 id="response-18">Response</h5>
+<pre><code>    200 OK
+
+{
+    'value': [
+        {
+        
+            '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+            '@odata.type': '#Microsoft.Graph.Message',
+            '@odata.id': '/&lt;Message.Id&gt;',
+            'BccRecipients' : '&lt;Collection(Microsoft.Graph.Recipient)&gt;',
+             ...,
+            'WebLink' : '&lt;Edm.String&gt;'
+        }
+        ,
+        ...
+    ]
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a body containing a collection of the <code>Message</code> resource representations. </p>
+<h4 id="access-the-oauth2permissiongrant-collection-via-the-useroauth2permissiongrants-relationship">Access the OAuth2PermissionGrant collection via the User/oauth2PermissionGrants relationship</h4>
+<h5 id="get-the-useroauth2permissiongrants-collection">Get the User/oauth2PermissionGrants collection</h5>
+<p>To get the <code>User/oauth2PermissionGrants</code> collection, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
+<h5 id="required-scopes-19">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read his or her own full profile.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadBasic.All</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read some properties of all user's profiles.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.Read.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-19">Request</h5>
+<pre><code>    
+GET /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/oauth2PermissionGrants HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+
+</code></pre>
+
+<h5 id="response-19">Response</h5>
+<pre><code>    200 OK
+
+{
+    'value': [
+        {
+        
+            '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+            '@odata.type': '#Microsoft.Graph.OAuth2PermissionGrant',
+            '@odata.id': '/&lt;OAuth2PermissionGrant.objectId&gt;',
+            'clientId' : '&lt;Edm.String&gt;',
+             ...,
+            'startTime' : '&lt;Edm.DateTimeOffset&gt;'
+        }
+        ,
+        ...
+    ]
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a body containing a collection of the <code>OAuth2PermissionGrant</code> resource representations. </p>
+<h4 id="access-the-directoryobject-collection-via-the-userowneddevices-relationship">Access the DirectoryObject collection via the User/ownedDevices relationship</h4>
+<h5 id="get-the-userowneddevices-collection">Get the User/ownedDevices collection</h5>
+<p>To get the <code>User/ownedDevices</code> collection, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
+<h5 id="required-scopes-20">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read his or her own full profile.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadBasic.All</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read some properties of all user's profiles.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.Read.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-20">Request</h5>
+<pre><code>    
+GET /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/ownedDevices HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+
+</code></pre>
+
+<h5 id="response-20">Response</h5>
+<pre><code>    200 OK
+
+{
+    'value': [
+        {
+        
+            '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+            '@odata.type': '#Microsoft.Graph.DirectoryObject',
+            '@odata.id': '/&lt;DirectoryObject.objectId&gt;',
+            'deletionTimestamp' : '&lt;Edm.DateTimeOffset&gt;',
+             ...,
+            'objectType' : '&lt;Edm.String&gt;'
+        }
+        ,
+        ...
+    ]
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a body containing a collection of the <code>DirectoryObject</code> resource representations. </p>
+<h4 id="access-the-directoryobject-collection-via-the-userownedobjects-relationship">Access the DirectoryObject collection via the User/ownedObjects relationship</h4>
+<h5 id="get-the-userownedobjects-collection">Get the User/ownedObjects collection</h5>
+<p>To get the <code>User/ownedObjects</code> collection, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
+<h5 id="required-scopes-21">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read his or her own full profile.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadBasic.All</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read some properties of all user's profiles.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.Read.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-21">Request</h5>
+<pre><code>    
+GET /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/ownedObjects HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+
+</code></pre>
+
+<h5 id="response-21">Response</h5>
+<pre><code>    200 OK
+
+{
+    'value': [
+        {
+        
+            '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+            '@odata.type': '#Microsoft.Graph.DirectoryObject',
+            '@odata.id': '/&lt;DirectoryObject.objectId&gt;',
+            'deletionTimestamp' : '&lt;Edm.DateTimeOffset&gt;',
+             ...,
+            'objectType' : '&lt;Edm.String&gt;'
+        }
+        ,
+        ...
+    ]
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a body containing a collection of the <code>DirectoryObject</code> resource representations. </p>
+<h4 id="access-the-plan-collection-via-the-userplans-relationship">Access the Plan collection via the User/plans relationship</h4>
+<h5 id="get-the-userplans-collection">Get the User/plans collection</h5>
+<p>To get the <code>User/plans</code> collection, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
+<h5 id="required-scopes-22">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read his or her own full profile.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadBasic.All</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read some properties of all user's profiles.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.Read.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-22">Request</h5>
+<pre><code>    
+GET /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/plans HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+
+</code></pre>
+
+<h5 id="response-22">Response</h5>
+<pre><code>    200 OK
+
+{
+    'value': [
+        {
+        
+            '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+            '@odata.type': '#Microsoft.Graph.Plan',
+            '@odata.id': '/&lt;Plan.id&gt;',
+            'activeTasks' : '&lt;Edm.Int32&gt;',
+             ...,
+            'version' : '&lt;Edm.String&gt;'
+        }
+        ,
+        ...
+    ]
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a body containing a collection of the <code>Plan</code> resource representations. </p>
+<h4 id="access-the-directoryobject-collection-via-the-userregistereddevices-relationship">Access the DirectoryObject collection via the User/registeredDevices relationship</h4>
+<h5 id="get-the-userregistereddevices-collection">Get the User/registeredDevices collection</h5>
+<p>To get the <code>User/registeredDevices</code> collection, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
+<h5 id="required-scopes-23">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read his or her own full profile.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadBasic.All</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read some properties of all user's profiles.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.Read.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-23">Request</h5>
+<pre><code>    
+GET /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/registeredDevices HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+
+</code></pre>
+
+<h5 id="response-23">Response</h5>
+<pre><code>    200 OK
+
+{
+    'value': [
+        {
+        
+            '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+            '@odata.type': '#Microsoft.Graph.DirectoryObject',
+            '@odata.id': '/&lt;DirectoryObject.objectId&gt;',
+            'deletionTimestamp' : '&lt;Edm.DateTimeOffset&gt;',
+             ...,
+            'objectType' : '&lt;Edm.String&gt;'
+        }
+        ,
+        ...
+    ]
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a body containing a collection of the <code>DirectoryObject</code> resource representations. </p>
+<h4 id="access-the-task-collection-via-the-usertasks-relationship">Access the Task collection via the User/tasks relationship</h4>
+<h5 id="get-the-usertasks-collection">Get the User/tasks collection</h5>
+<p>To get the <code>User/tasks</code> collection, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
+<h5 id="required-scopes-24">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read his or her own full profile.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadBasic.All</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read some properties of all user's profiles.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.Read.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-24">Request</h5>
+<pre><code>    
+GET /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/tasks HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+
+</code></pre>
+
+<h5 id="response-24">Response</h5>
+<pre><code>    200 OK
+
+{
+    'value': [
+        {
+        
+            '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+            '@odata.type': '#Microsoft.Graph.Task',
+            '@odata.id': '/&lt;Task.id&gt;',
+            'assignedBy' : '&lt;Edm.String&gt;',
+             ...,
+            'version' : '&lt;Edm.String&gt;'
+        }
+        ,
+        ...
+    ]
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a body containing a collection of the <code>Task</code> resource representations. </p>
+<h4 id="access-the-file-collection-via-the-usertrendingaround-relationship">Access the File collection via the User/TrendingAround relationship</h4>
+<h5 id="get-the-usertrendingaround-collection">Get the User/TrendingAround collection</h5>
+<p>To get the <code>User/TrendingAround</code> collection, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
+<h5 id="required-scopes-25">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read his or her own full profile.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadBasic.All</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read some properties of all user's profiles.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.Read.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-25">Request</h5>
+<pre><code>    
+GET /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/TrendingAround HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+
+</code></pre>
+
+<h5 id="response-25">Response</h5>
+<pre><code>    200 OK
+
+{
+    'value': [
+        {
+        
+            '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+            '@odata.type': '#Microsoft.Graph.File',
+            '@odata.id': '/&lt;File._undefined&gt;'
+        }
+        ,
+        ...
+    ]
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a body containing a collection of the <code>File</code> resource representations. </p>
+<h4 id="access-the-photo-resource-via-the-useruserphoto-relationship">Access the Photo resource via the User/UserPhoto relationship</h4>
+<h5 id="get-the-useruserphoto-entity">Get the User/UserPhoto entity</h5>
+<p>To get a User/UserPhoto <code>User/UserPhoto</code> resource, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
+<h5 id="required-scopes-26">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read his or her own full profile.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadBasic.All</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read some properties of all user's profiles.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.Read.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-26">Request</h5>
+<pre><code>    
+GET /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/UserPhoto HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+
+</code></pre>
+
+<h5 id="response-26">Response</h5>
+<pre><code>    200 OK
+
+{
+
+    '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+    '@odata.type': '#Microsoft.Graph.Photo',
+    '@odata.id': '/&lt;Photo.Id&gt;',
+    'Height' : '&lt;Edm.Int32&gt;',
+     ...,
+    'Width' : '&lt;Edm.Int32&gt;'
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a body containing a <code>Photo</code> resource representation. </p>
+<h4 id="access-the-photo-collection-via-the-useruserphotos-relationship">Access the Photo collection via the User/UserPhotos relationship</h4>
+<h5 id="get-the-useruserphotos-collection">Get the User/UserPhotos collection</h5>
+<p>To get the <code>User/UserPhotos</code> collection, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
+<h5 id="required-scopes-27">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read his or her own full profile.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadBasic.All</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read some properties of all user's profiles.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.Read.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-27">Request</h5>
+<pre><code>    
+GET /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/UserPhotos HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+
+</code></pre>
+
+<h5 id="response-27">Response</h5>
+<pre><code>    200 OK
+
+{
+    'value': [
+        {
+        
+            '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+            '@odata.type': '#Microsoft.Graph.Photo',
+            '@odata.id': '/&lt;Photo.Id&gt;',
+            'Height' : '&lt;Edm.Int32&gt;',
+             ...,
+            'Width' : '&lt;Edm.Int32&gt;'
+        }
+        ,
+        ...
+    ]
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a body containing a collection of the <code>Photo</code> resource representations. </p>
+<h4 id="access-the-user-collection-via-the-userworkingwith-relationship">Access the User collection via the User/WorkingWith relationship</h4>
+<h5 id="get-the-userworkingwith-collection">Get the User/WorkingWith collection</h5>
+<p>To get the <code>User/WorkingWith</code> collection, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
+<h5 id="required-scopes-28">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.Read</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read his or her own full profile.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadBasic.All</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left">User can read some properties of all user's profiles.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.Read.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-28">Request</h5>
+<pre><code>    
+GET /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/WorkingWith HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+
+</code></pre>
+
+<h5 id="response-28">Response</h5>
+<pre><code>    200 OK
+
+{
+    'value': [
+        {
+        
+            '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+            '@odata.type': '#Microsoft.Graph.User',
+            '@odata.id': '/&lt;User.objectId&gt;',
+            'AboutMe' : '&lt;Edm.String&gt;',
+             ...,
+            'userType' : '&lt;Edm.String&gt;'
+        }
+        ,
+        ...
+    ]
+}
+
+</code></pre>
+
+<p>A successful response returns the <code>200 OK</code> status code and a body containing a collection of the <code>User</code> resource representations. </p>
+<h4 id="call-the-users-actions">Call the User's actions</h4>
+<h5 id="call-the-userassignlicense-action">Call the User/assignLicense action</h5>
+<p>To call the <code>User/assignLicense</code> action,submit a <code>POST</code> request of the following REST call syntax. </p>
+<h5 id="required-scopes-29">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.ReadWrite</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadWrite.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-29">Request</h5>
+<pre><code>    
+POST /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/assignLicense HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+Content-Length : &lt;body_length&gt;
+
+{
+    addLicenses : &lt;Microsoft.Graph.AssignedLicense&gt;,
+    removeLicenses : &lt;Edm.Guid&gt;
+}
+
+</code></pre>
+
+<h5 id="response-29">Response</h5>
+<pre><code>    201 Created
+
+{
+
+    '@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+    '@odata.type': '#Microsoft.Graph.User',
+    '@odata.id': '/&lt;User.objectId&gt;',
+    'AboutMe' : '&lt;Edm.String&gt;',
+     ...,
+    'userType' : '&lt;Edm.String&gt;'
+}
+
+</code></pre>
+
+<p>A successful call to the User/assignLicense action returns an instance of the Microsoft.Graph.User type. </p>
+<h5 id="call-the-directoryobjectcheckmembergroups-action">Call the DirectoryObject/checkMemberGroups action</h5>
+<p>To call the <code>DirectoryObject/checkMemberGroups</code> action,submit a <code>POST</code> request of the following REST call syntax. </p>
+<h5 id="required-scopes-30">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>Directory.ReadWrite.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>Directory.AccessAsUser.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left">Access as user means ...</td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-30">Request</h5>
+<pre><code>    
+POST /&lt;version&gt;/myOrganization/directoryObjects/&lt;DirectoryObject.objectId&gt;/checkMemberGroups HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+Content-Length : &lt;body_length&gt;
+
+{
+    groupIds : &lt;Edm.String&gt;
+}
+
+</code></pre>
+
+<h5 id="response-30">Response</h5>
+<pre><code>    201 Created
+
+'&lt;Edm.String&gt;'
+</code></pre>
+
+<p>A successful call to the DirectoryObject/checkMemberGroups action returns an instance of the Edm.String type. </p>
+<h5 id="call-the-directoryobjectgetmembergroups-action">Call the DirectoryObject/getMemberGroups action</h5>
+<p>To call the <code>DirectoryObject/getMemberGroups</code> action,submit a <code>POST</code> request of the following REST call syntax. </p>
+<h5 id="required-scopes-31">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>Directory.ReadWrite.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>Directory.AccessAsUser.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left">Access as user means ...</td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-31">Request</h5>
+<pre><code>    
+POST /&lt;version&gt;/myOrganization/directoryObjects/&lt;DirectoryObject.objectId&gt;/getMemberGroups HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+Content-Length : &lt;body_length&gt;
+
+{
+    securityEnabledOnly : &lt;Edm.Boolean&gt;
+}
+
+</code></pre>
+
+<h5 id="response-31">Response</h5>
+<pre><code>    201 Created
+
+'&lt;Edm.String&gt;'
+</code></pre>
+
+<p>A successful call to the DirectoryObject/getMemberGroups action returns an instance of the Edm.String type. </p>
+<h5 id="call-the-directoryobjectgetmemberobjects-action">Call the DirectoryObject/getMemberObjects action</h5>
+<p>To call the <code>DirectoryObject/getMemberObjects</code> action,submit a <code>POST</code> request of the following REST call syntax. </p>
+<h5 id="required-scopes-32">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>Directory.ReadWrite.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>Directory.AccessAsUser.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left">Access as user means ...</td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-32">Request</h5>
+<pre><code>    
+POST /&lt;version&gt;/myOrganization/directoryObjects/&lt;DirectoryObject.objectId&gt;/getMemberObjects HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+Content-Length : &lt;body_length&gt;
+
+{
+    securityEnabledOnly : &lt;Edm.Boolean&gt;
+}
+
+</code></pre>
+
+<h5 id="response-32">Response</h5>
+<pre><code>    201 Created
+
+'&lt;Edm.String&gt;'
+</code></pre>
+
+<p>A successful call to the DirectoryObject/getMemberObjects action returns an instance of the Edm.String type. </p>
+<h5 id="call-the-usersendmail-action">Call the User/SendMail action</h5>
+<p>To call the <code>User/SendMail</code> action,submit a <code>POST</code> request of the following REST call syntax. </p>
+<h5 id="required-scopes-33">Required scopes</h5>
+<table>
+<thead>
+<tr>
+	<th align="left">Scope.Permission</th>
+	<th align="left">Consent type</th>
+	<th align="left">Applicable scenarios</th>
+	<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>User.ReadWrite</code></td>
+	<td align="left"><code>User</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left"><code>User.ReadWrite.All</code></td>
+	<td align="left"><code>Admin</code></td>
+	<td align="left"></td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="request-33">Request</h5>
+<pre><code>    
+POST /&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/SendMail HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+Content-Length : &lt;body_length&gt;
+
+{
+    Message : &lt;Microsoft.Graph.Message&gt;,
+    SaveToSentItems : &lt;Edm.Boolean&gt;
+}
+
+</code></pre>
+
+<h5 id="response-33">Response</h5>
+<pre><code>    201 Created
+
+
+</code></pre>
+
+<p>A successful call to the User/SendMail action returns an empty response. </p>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../README.htm">API Reference</a></p>
+            <ul>
+                
+                <li>ComplexType</li>
+                
+                <ul>
+                    <!-- 
+					
+                    <li><a href="../ComplexTypes/ComplexType-AlternativeSecurityId.htm">AlternativeSecurityId</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-AppRole.htm">AppRole</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-AssignedLicense.htm">AssignedLicense</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-AssignedPlan.htm">AssignedPlan</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-Attendee.htm">Attendee</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-deleted.htm">deleted</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-EmailAddress.htm">EmailAddress</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-ExternalReferenceCollection.htm">ExternalReferenceCollection</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-file.htm">file</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-folder.htm">folder</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-GeoCoordinates.htm">GeoCoordinates</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-identity.htm">identity</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-identitySet.htm">identitySet</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-image.htm">image</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-ItemBody.htm">ItemBody</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-itemReference.htm">itemReference</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-KeyCredential.htm">KeyCredential</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-LicenseUnitsDetail.htm">LicenseUnitsDetail</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-Location.htm">Location</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-OAuth2Permission.htm">OAuth2Permission</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-PasswordCredential.htm">PasswordCredential</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-PasswordProfile.htm">PasswordProfile</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-PatternedRecurrence.htm">PatternedRecurrence</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-photo.htm">photo</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-PhysicalAddress.htm">PhysicalAddress</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-ProvisionedPlan.htm">ProvisionedPlan</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-ProvisioningError.htm">ProvisioningError</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-quota.htm">quota</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-Recipient.htm">Recipient</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-RecurrencePattern.htm">RecurrencePattern</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-RecurrenceRange.htm">RecurrenceRange</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-RequiredResourceAccess.htm">RequiredResourceAccess</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-ResourceAccess.htm">ResourceAccess</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-ResponseStatus.htm">ResponseStatus</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-searchResult.htm">searchResult</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-ServicePlanInfo.htm">ServicePlanInfo</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-sharingLink.htm">sharingLink</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-thumbnail.htm">thumbnail</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-uploadSession.htm">uploadSession</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-UserIdCollection.htm">UserIdCollection</a></li>
+                    
+                    <li><a href="../ComplexTypes/ComplexType-VerifiedDomain.htm">VerifiedDomain</a></li>
+                    
+					-->
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-AlternativeSecurityId.htm">AlternativeSecurityId</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-AppRole.htm">AppRole</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-AssignedLicense.htm">AssignedLicense</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-AssignedPlan.htm">AssignedPlan</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-Attendee.htm">Attendee</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-deleted.htm">deleted</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-EmailAddress.htm">EmailAddress</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-ExternalReferenceCollection.htm">ExternalReferenceCollection</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-file.htm">file</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-folder.htm">folder</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-GeoCoordinates.htm">GeoCoordinates</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-identity.htm">identity</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-identitySet.htm">identitySet</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-image.htm">image</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-ItemBody.htm">ItemBody</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-itemReference.htm">itemReference</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-KeyCredential.htm">KeyCredential</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-LicenseUnitsDetail.htm">LicenseUnitsDetail</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-Location.htm">Location</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-OAuth2Permission.htm">OAuth2Permission</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-PasswordCredential.htm">PasswordCredential</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-PasswordProfile.htm">PasswordProfile</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-PatternedRecurrence.htm">PatternedRecurrence</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-photo.htm">photo</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-PhysicalAddress.htm">PhysicalAddress</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-ProvisionedPlan.htm">ProvisionedPlan</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-ProvisioningError.htm">ProvisioningError</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-quota.htm">quota</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-Recipient.htm">Recipient</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-RecurrencePattern.htm">RecurrencePattern</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-RecurrenceRange.htm">RecurrenceRange</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-RequiredResourceAccess.htm">RequiredResourceAccess</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-ResourceAccess.htm">ResourceAccess</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-ResponseStatus.htm">ResponseStatus</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-searchResult.htm">searchResult</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-ServicePlanInfo.htm">ServicePlanInfo</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-sharingLink.htm">sharingLink</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-thumbnail.htm">thumbnail</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-uploadSession.htm">uploadSession</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-UserIdCollection.htm">UserIdCollection</a></li>
+					
+					
+					<li><a href="../ComplexTypes/ComplexType-VerifiedDomain.htm">VerifiedDomain</a></li>
+					
+					
+					
+                </ul>
+                
+                
+                <li>EntitySet</li>
+                
+                <ul>
+                    <!-- 
+					
+                    <li><a href="../EntitySets/EntitySet-applications.htm">applications</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-contacts.htm">contacts</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-deviceConfiguration.htm">deviceConfiguration</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-devices.htm">devices</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-directoryObjects.htm">directoryObjects</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-directoryRoles.htm">directoryRoles</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-directoryRoleTemplates.htm">directoryRoleTemplates</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-drives.htm">drives</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-groups.htm">groups</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-oauth2PermissionGrants.htm">oauth2PermissionGrants</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-plans.htm">plans</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-servicePrincipals.htm">servicePrincipals</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-subscribedSkus.htm">subscribedSkus</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-tasks.htm">tasks</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-tenantDetails.htm">tenantDetails</a></li>
+                    
+                    <li><a href="../EntitySets/EntitySet-users.htm">users</a></li>
+                    
+					-->
+					
+					
+					<li><a href="../EntitySets/EntitySet-applications.htm">applications</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-contacts.htm">contacts</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-deviceConfiguration.htm">deviceConfiguration</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-devices.htm">devices</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-directoryObjects.htm">directoryObjects</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-directoryRoles.htm">directoryRoles</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-directoryRoleTemplates.htm">directoryRoleTemplates</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-drives.htm">drives</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-groups.htm">groups</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-oauth2PermissionGrants.htm">oauth2PermissionGrants</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-plans.htm">plans</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-servicePrincipals.htm">servicePrincipals</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-subscribedSkus.htm">subscribedSkus</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-tasks.htm">tasks</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-tenantDetails.htm">tenantDetails</a></li>
+					
+					
+					<li><a href="../EntitySets/EntitySet-users.htm">users</a></li>
+					
+					
+					
+                </ul>
+                
+                
+                <li>EntityType</li>
+                
+                <ul>
+                    <!-- 
+					
+                    <li><a href="EntityType-Application.htm">Application</a></li>
+                    
+                    <li><a href="EntityType-AppRoleAssignment.htm">AppRoleAssignment</a></li>
+                    
+                    <li><a href="EntityType-Attachment.htm">Attachment</a></li>
+                    
+                    <li><a href="EntityType-Calendar.htm">Calendar</a></li>
+                    
+                    <li><a href="EntityType-CalendarGroup.htm">CalendarGroup</a></li>
+                    
+                    <li><a href="EntityType-Contact.htm">Contact</a></li>
+                    
+                    <li><a href="EntityType-Conversation.htm">Conversation</a></li>
+                    
+                    <li><a href="EntityType-ConversationThread.htm">ConversationThread</a></li>
+                    
+                    <li><a href="EntityType-Device.htm">Device</a></li>
+                    
+                    <li><a href="EntityType-DeviceConfiguration.htm">DeviceConfiguration</a></li>
+                    
+                    <li><a href="EntityType-DirectoryLinkChange.htm">DirectoryLinkChange</a></li>
+                    
+                    <li><a href="EntityType-DirectoryObject.htm">DirectoryObject</a></li>
+                    
+                    <li><a href="EntityType-DirectoryRole.htm">DirectoryRole</a></li>
+                    
+                    <li><a href="EntityType-DirectoryRoleTemplate.htm">DirectoryRoleTemplate</a></li>
+                    
+                    <li><a href="EntityType-drive.htm">drive</a></li>
+                    
+                    <li><a href="EntityType-Event.htm">Event</a></li>
+                    
+                    <li><a href="EntityType-EventMessage.htm">EventMessage</a></li>
+                    
+                    <li><a href="EntityType-ExtensionProperty.htm">ExtensionProperty</a></li>
+                    
+                    <li><a href="EntityType-File.htm">File</a></li>
+                    
+                    <li><a href="EntityType-FileAttachment.htm">FileAttachment</a></li>
+                    
+                    <li><a href="EntityType-Group.htm">Group</a></li>
+                    
+                    <li><a href="EntityType-item.htm">item</a></li>
+                    
+                    <li><a href="EntityType-ItemAttachment.htm">ItemAttachment</a></li>
+                    
+                    <li><a href="EntityType-Message.htm">Message</a></li>
+                    
+                    <li><a href="EntityType-OAuth2PermissionGrant.htm">OAuth2PermissionGrant</a></li>
+                    
+                    <li><a href="EntityType-OutlookItem.htm">OutlookItem</a></li>
+                    
+                    <li><a href="EntityType-permission.htm">permission</a></li>
+                    
+                    <li><a href="EntityType-Photo.htm">Photo</a></li>
+                    
+                    <li><a href="EntityType-Plan.htm">Plan</a></li>
+                    
+                    <li><a href="EntityType-PlanDetails.htm">PlanDetails</a></li>
+                    
+                    <li><a href="EntityType-Post.htm">Post</a></li>
+                    
+                    <li><a href="EntityType-ReferenceAttachment.htm">ReferenceAttachment</a></li>
+                    
+                    <li><a href="EntityType-ServicePrincipal.htm">ServicePrincipal</a></li>
+                    
+                    <li><a href="EntityType-SubscribedSku.htm">SubscribedSku</a></li>
+                    
+                    <li><a href="EntityType-Task.htm">Task</a></li>
+                    
+                    <li><a href="EntityType-TaskDetails.htm">TaskDetails</a></li>
+                    
+                    <li><a href="EntityType-TenantDetail.htm">TenantDetail</a></li>
+                    
+                    <li><a href="EntityType-thumbnailSet.htm">thumbnailSet</a></li>
+                    
+                    <li><a href="EntityType-User.htm">User</a></li>
+                    
+					-->
+					
+					
+					<li><a href="EntityType-Application.htm">Application</a></li>
+					
+					
+					<li><a href="EntityType-AppRoleAssignment.htm">AppRoleAssignment</a></li>
+					
+					
+					<li><a href="EntityType-Attachment.htm">Attachment</a></li>
+					
+					
+					<li><a href="EntityType-Calendar.htm">Calendar</a></li>
+					
+					
+					<li><a href="EntityType-CalendarGroup.htm">CalendarGroup</a></li>
+					
+					
+					<li><a href="EntityType-Contact.htm">Contact</a></li>
+					
+					
+					<li><a href="EntityType-Conversation.htm">Conversation</a></li>
+					
+					
+					<li><a href="EntityType-ConversationThread.htm">ConversationThread</a></li>
+					
+					
+					<li><a href="EntityType-Device.htm">Device</a></li>
+					
+					
+					<li><a href="EntityType-DeviceConfiguration.htm">DeviceConfiguration</a></li>
+					
+					
+					<li><a href="EntityType-DirectoryLinkChange.htm">DirectoryLinkChange</a></li>
+					
+					
+					<li><a href="EntityType-DirectoryObject.htm">DirectoryObject</a></li>
+					
+					
+					<li><a href="EntityType-DirectoryRole.htm">DirectoryRole</a></li>
+					
+					
+					<li><a href="EntityType-DirectoryRoleTemplate.htm">DirectoryRoleTemplate</a></li>
+					
+					
+					<li><a href="EntityType-drive.htm">drive</a></li>
+					
+					
+					<li><a href="EntityType-Event.htm">Event</a></li>
+					
+					
+					<li><a href="EntityType-EventMessage.htm">EventMessage</a></li>
+					
+					
+					<li><a href="EntityType-ExtensionProperty.htm">ExtensionProperty</a></li>
+					
+					
+					<li><a href="EntityType-File.htm">File</a></li>
+					
+					
+					<li><a href="EntityType-FileAttachment.htm">FileAttachment</a></li>
+					
+					
+					<li><a href="EntityType-Group.htm">Group</a></li>
+					
+					
+					<li><a href="EntityType-item.htm">item</a></li>
+					
+					
+					<li><a href="EntityType-ItemAttachment.htm">ItemAttachment</a></li>
+					
+					
+					<li><a href="EntityType-Message.htm">Message</a></li>
+					
+					
+					<li><a href="EntityType-OAuth2PermissionGrant.htm">OAuth2PermissionGrant</a></li>
+					
+					
+					<li><a href="EntityType-OutlookItem.htm">OutlookItem</a></li>
+					
+					
+					<li><a href="EntityType-permission.htm">permission</a></li>
+					
+					
+					<li><a href="EntityType-Photo.htm">Photo</a></li>
+					
+					
+					<li><a href="EntityType-Plan.htm">Plan</a></li>
+					
+					
+					<li><a href="EntityType-PlanDetails.htm">PlanDetails</a></li>
+					
+					
+					<li><a href="EntityType-Post.htm">Post</a></li>
+					
+					
+					<li><a href="EntityType-ReferenceAttachment.htm">ReferenceAttachment</a></li>
+					
+					
+					<li><a href="EntityType-ServicePrincipal.htm">ServicePrincipal</a></li>
+					
+					
+					<li><a href="EntityType-SubscribedSku.htm">SubscribedSku</a></li>
+					
+					
+					<li><a href="EntityType-Task.htm">Task</a></li>
+					
+					
+					<li><a href="EntityType-TaskDetails.htm">TaskDetails</a></li>
+					
+					
+					<li><a href="EntityType-TenantDetail.htm">TenantDetail</a></li>
+					
+					
+					<li><a href="EntityType-thumbnailSet.htm">thumbnailSet</a></li>
+					
+					
+					<li><a href="EntityType-User.htm">User</a></li>
+					
+					
+					
+                </ul>
+                
+                
+                <li>EnumType</li>
+                
+                <ul>
+                    <!-- 
+					
+                    <li><a href="../EnumTypes/EnumType-AttendeeType.htm">AttendeeType</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-BodyType.htm">BodyType</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-CalendarColor.htm">CalendarColor</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-DayOfWeek.htm">DayOfWeek</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-EventType.htm">EventType</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-FreeBusyStatus.htm">FreeBusyStatus</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-GroupAccessType.htm">GroupAccessType</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-Importance.htm">Importance</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-MeetingMessageType.htm">MeetingMessageType</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-RecurrencePatternType.htm">RecurrencePatternType</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-RecurrenceRangeType.htm">RecurrenceRangeType</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-ResponseType.htm">ResponseType</a></li>
+                    
+                    <li><a href="../EnumTypes/EnumType-WeekIndex.htm">WeekIndex</a></li>
+                    
+					-->
+					
+					
+					<li><a href="../EnumTypes/EnumType-AttendeeType.htm">AttendeeType</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-BodyType.htm">BodyType</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-CalendarColor.htm">CalendarColor</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-DayOfWeek.htm">DayOfWeek</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-EventType.htm">EventType</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-FreeBusyStatus.htm">FreeBusyStatus</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-GroupAccessType.htm">GroupAccessType</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-Importance.htm">Importance</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-MeetingMessageType.htm">MeetingMessageType</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-RecurrencePatternType.htm">RecurrencePatternType</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-RecurrenceRangeType.htm">RecurrenceRangeType</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-ResponseType.htm">ResponseType</a></li>
+					
+					
+					<li><a href="../EnumTypes/EnumType-WeekIndex.htm">WeekIndex</a></li>
+					
+					
+					
+                </ul>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
