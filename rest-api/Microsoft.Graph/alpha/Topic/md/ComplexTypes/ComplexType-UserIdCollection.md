@@ -26,5 +26,9 @@ The `UserIdCollection` extended resource exposes the following properties
 <!-- {
 "type": "#page.annotation",
 "tocPath": "ComplexType/UserIdCollection",
+"tocItems": {
+	"ComplexType/UserIdCollection/Overview": "#overview",
+	"ComplexType/UserIdCollection/Operations": "#operations"
+}
 "section": "documentation"
 } -->

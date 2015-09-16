@@ -288,5 +288,9 @@ A successful call to the thumbnailSet/getCustomThumbnail action returns an empty
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EntityType/thumbnailSet",
+"tocItems": {
+	"EntityType/thumbnailSet/Overview": "#overview",
+	"EntityType/thumbnailSet/Operations": "#operations"
+}
 "section": "documentation"
 } -->

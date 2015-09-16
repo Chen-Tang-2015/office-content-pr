@@ -60,5 +60,9 @@ The `RecurrenceRangeType` enumeration is referenced by the following resources.
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EnumType/RecurrenceRangeType",
+"tocItems": {
+	"EnumType/RecurrenceRangeType/Overview": "#overview",
+	"EnumType/RecurrenceRangeType/Operations": "#operations"
+}
 "section": "documentation"
 } -->

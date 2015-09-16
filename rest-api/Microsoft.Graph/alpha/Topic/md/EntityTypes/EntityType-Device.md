@@ -495,5 +495,9 @@ A successful call to the DirectoryObject/getMemberObjects action returns an inst
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EntityType/Device",
+"tocItems": {
+	"EntityType/Device/Overview": "#overview",
+	"EntityType/Device/Operations": "#operations"
+}
 "section": "documentation"
 } -->

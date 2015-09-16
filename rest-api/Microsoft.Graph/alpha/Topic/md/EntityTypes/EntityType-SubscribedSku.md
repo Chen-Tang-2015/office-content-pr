@@ -248,5 +248,9 @@ A successful response returns the `204 No content` status code without any paylo
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EntityType/SubscribedSku",
+"tocItems": {
+	"EntityType/SubscribedSku/Overview": "#overview",
+	"EntityType/SubscribedSku/Operations": "#operations"
+}
 "section": "documentation"
 } -->

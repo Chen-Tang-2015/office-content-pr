@@ -59,5 +59,9 @@ The `PatternedRecurrence` extended resource is referenced by the following resou
 <!-- {
 "type": "#page.annotation",
 "tocPath": "ComplexType/PatternedRecurrence",
+"tocItems": {
+	"ComplexType/PatternedRecurrence/Overview": "#overview",
+	"ComplexType/PatternedRecurrence/Operations": "#operations"
+}
 "section": "documentation"
 } -->

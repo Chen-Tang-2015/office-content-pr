@@ -333,5 +333,9 @@ A successful call to the DirectoryObject/getMemberObjects action returns an inst
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EntityType/DirectoryLinkChange",
+"tocItems": {
+	"EntityType/DirectoryLinkChange/Overview": "#overview",
+	"EntityType/DirectoryLinkChange/Operations": "#operations"
+}
 "section": "documentation"
 } -->

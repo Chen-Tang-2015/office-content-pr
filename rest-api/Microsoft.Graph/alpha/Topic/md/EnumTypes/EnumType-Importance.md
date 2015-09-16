@@ -62,5 +62,9 @@ The `Importance` enumeration is referenced by the following resources.
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EnumType/Importance",
+"tocItems": {
+	"EnumType/Importance/Overview": "#overview",
+	"EnumType/Importance/Operations": "#operations"
+}
 "section": "documentation"
 } -->

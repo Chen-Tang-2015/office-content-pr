@@ -255,5 +255,9 @@ The `ProvisioningError` extended resource is referenced by the following resourc
 <!-- {
 "type": "#page.annotation",
 "tocPath": "ComplexType/ProvisioningError",
+"tocItems": {
+	"ComplexType/ProvisioningError/Overview": "#overview",
+	"ComplexType/ProvisioningError/Operations": "#operations"
+}
 "section": "documentation"
 } -->

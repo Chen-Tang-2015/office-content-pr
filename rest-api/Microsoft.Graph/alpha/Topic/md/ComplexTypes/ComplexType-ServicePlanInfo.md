@@ -38,5 +38,9 @@ The `ServicePlanInfo` extended resource is referenced by the following resources
 <!-- {
 "type": "#page.annotation",
 "tocPath": "ComplexType/ServicePlanInfo",
+"tocItems": {
+	"ComplexType/ServicePlanInfo/Overview": "#overview",
+	"ComplexType/ServicePlanInfo/Operations": "#operations"
+}
 "section": "documentation"
 } -->

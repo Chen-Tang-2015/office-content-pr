@@ -201,5 +201,9 @@ A successful response returns the `204 No content` status code without any paylo
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EntityType/OutlookItem",
+"tocItems": {
+	"EntityType/OutlookItem/Overview": "#overview",
+	"EntityType/OutlookItem/Operations": "#operations"
+}
 "section": "documentation"
 } -->

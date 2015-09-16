@@ -63,5 +63,9 @@ The `RecurrencePatternType` enumeration is referenced by the following resources
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EnumType/RecurrencePatternType",
+"tocItems": {
+	"EnumType/RecurrencePatternType/Overview": "#overview",
+	"EnumType/RecurrencePatternType/Operations": "#operations"
+}
 "section": "documentation"
 } -->

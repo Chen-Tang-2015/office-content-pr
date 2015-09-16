@@ -133,5 +133,9 @@ The `EmailAddress` extended resource is referenced by the following resources.
 <!-- {
 "type": "#page.annotation",
 "tocPath": "ComplexType/EmailAddress",
+"tocItems": {
+	"ComplexType/EmailAddress/Overview": "#overview",
+	"ComplexType/EmailAddress/Operations": "#operations"
+}
 "section": "documentation"
 } -->

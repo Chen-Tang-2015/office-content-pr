@@ -201,5 +201,9 @@ A successful response returns the `204 No content` status code without any paylo
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EntityType/TaskDetails",
+"tocItems": {
+	"EntityType/TaskDetails/Overview": "#overview",
+	"EntityType/TaskDetails/Operations": "#operations"
+}
 "section": "documentation"
 } -->

@@ -1323,5 +1323,9 @@ A successful call to the Group/UnsubscribeByMail action returns an empty respons
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EntityType/Group",
+"tocItems": {
+	"EntityType/Group/Overview": "#overview",
+	"EntityType/Group/Operations": "#operations"
+}
 "section": "documentation"
 } -->

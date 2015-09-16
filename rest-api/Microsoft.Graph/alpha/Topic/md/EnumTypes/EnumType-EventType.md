@@ -61,5 +61,9 @@ The `EventType` enumeration is referenced by the following resources.
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EnumType/EventType",
+"tocItems": {
+	"EnumType/EventType/Overview": "#overview",
+	"EnumType/EventType/Operations": "#operations"
+}
 "section": "documentation"
 } -->

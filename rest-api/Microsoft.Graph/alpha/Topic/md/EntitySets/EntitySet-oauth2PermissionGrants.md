@@ -136,5 +136,9 @@ The successful response returns a `201 Created` status code, with a payload cont
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EntitySet/oauth2PermissionGrants",
+"tocItems": {
+	"EntitySet/oauth2PermissionGrants/Overview": "#overview",
+	"EntitySet/oauth2PermissionGrants/Operations": "#operations"
+}
 "section": "documentation"
 } -->

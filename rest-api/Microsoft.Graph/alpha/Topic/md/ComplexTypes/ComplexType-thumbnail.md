@@ -65,5 +65,9 @@ The `thumbnail` extended resource is referenced by the following resources.
 <!-- {
 "type": "#page.annotation",
 "tocPath": "ComplexType/thumbnail",
+"tocItems": {
+	"ComplexType/thumbnail/Overview": "#overview",
+	"ComplexType/thumbnail/Operations": "#operations"
+}
 "section": "documentation"
 } -->

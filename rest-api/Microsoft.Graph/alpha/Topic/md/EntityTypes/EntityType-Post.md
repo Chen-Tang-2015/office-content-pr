@@ -563,5 +563,9 @@ A successful call to the Post/Reply action returns an empty response.
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EntityType/Post",
+"tocItems": {
+	"EntityType/Post/Overview": "#overview",
+	"EntityType/Post/Operations": "#operations"
+}
 "section": "documentation"
 } -->

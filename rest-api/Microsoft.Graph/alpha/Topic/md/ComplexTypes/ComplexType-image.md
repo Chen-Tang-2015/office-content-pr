@@ -44,5 +44,9 @@ The `image` extended resource is referenced by the following resources.
 <!-- {
 "type": "#page.annotation",
 "tocPath": "ComplexType/image",
+"tocItems": {
+	"ComplexType/image/Overview": "#overview",
+	"ComplexType/image/Operations": "#operations"
+}
 "section": "documentation"
 } -->

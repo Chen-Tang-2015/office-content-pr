@@ -253,5 +253,9 @@ A successful response returns the `204 No content` status code without any paylo
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EntityType/FileAttachment",
+"tocItems": {
+	"EntityType/FileAttachment/Overview": "#overview",
+	"EntityType/FileAttachment/Operations": "#operations"
+}
 "section": "documentation"
 } -->

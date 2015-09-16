@@ -51,34 +51,25 @@
         </div>
         <div id="tocbar" class="col-md-3 visible-md visible-lg">
             <p><a href="{{#url 'README.htm'}}">API Reference</a></p>
+        <ul>
+            {{#each Headers}}
+            <li>{{#if Url}}<a href="{{Url}}">{{Title}}</a>{{#else}}{{Title}}{{/if}}</li>
+            {{#if NextLevel}}
             <ul>
-                {{#each Headers}}
+                {{#each NextLevel}}
                 <li>{{#if Url}}<a href="{{Url}}">{{Title}}</a>{{#else}}{{Title}}{{/if}}</li>
                 {{#if NextLevel}}
                 <ul>
-                    <!-- 
-					{{#each NextLevel}}
-                    <li><a href="{{Url}}">{{Title}}</a></li>
+                    {{#each NextLevel}}
+                    <li>{{#if Url}}<a href="{{Url}}">{{Title}}</a>{{#else}}{{Title}}{{/if}}</li>
                     {{/each}}
-					-->
-					
-					{{#each NextLevel}}
-					<li>{{#if Url}}<a href="{{Url}}">{{Title}}</a>{{#else}}{{Title}}{{/if}}</li>
-					{{#if NextLevel}}
-					<ul>
-                    
-						{{#each NextLevel}}
-						<li><a href="{{Url}}">{{Title}}</a></li>
-						{{/each}}
-						
-					</ul>
-					{{/if}}
-					{{/each}}
-					
                 </ul>
                 {{/if}}
                 {{/each}}
             </ul>
+            {{/if}}
+            {{/each}}
+        </ul>
         </div>
     </div>
 </div>

@@ -62,5 +62,9 @@ The `PhysicalAddress` extended resource is referenced by the following resources
 <!-- {
 "type": "#page.annotation",
 "tocPath": "ComplexType/PhysicalAddress",
+"tocItems": {
+	"ComplexType/PhysicalAddress/Overview": "#overview",
+	"ComplexType/PhysicalAddress/Operations": "#operations"
+}
 "section": "documentation"
 } -->

@@ -62,5 +62,9 @@ The `WeekIndex` enumeration is referenced by the following resources.
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EnumType/WeekIndex",
+"tocItems": {
+	"EnumType/WeekIndex/Overview": "#overview",
+	"EnumType/WeekIndex/Operations": "#operations"
+}
 "section": "documentation"
 } -->

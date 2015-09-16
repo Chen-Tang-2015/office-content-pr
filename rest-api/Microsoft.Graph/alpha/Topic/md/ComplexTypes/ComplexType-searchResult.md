@@ -44,5 +44,9 @@ The `searchResult` extended resource is referenced by the following resources.
 <!-- {
 "type": "#page.annotation",
 "tocPath": "ComplexType/searchResult",
+"tocItems": {
+	"ComplexType/searchResult/Overview": "#overview",
+	"ComplexType/searchResult/Operations": "#operations"
+}
 "section": "documentation"
 } -->

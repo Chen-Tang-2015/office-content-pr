@@ -559,5 +559,9 @@ A successful call to the Event/TentativelyAccept action returns an empty respons
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EntityType/Event",
+"tocItems": {
+	"EntityType/Event/Overview": "#overview",
+	"EntityType/Event/Operations": "#operations"
+}
 "section": "documentation"
 } -->

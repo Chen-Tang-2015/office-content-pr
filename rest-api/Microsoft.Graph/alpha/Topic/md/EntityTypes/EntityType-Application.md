@@ -586,5 +586,9 @@ A successful call to the Application/restore action returns an instance of the M
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EntityType/Application",
+"tocItems": {
+	"EntityType/Application/Overview": "#overview",
+	"EntityType/Application/Operations": "#operations"
+}
 "section": "documentation"
 } -->

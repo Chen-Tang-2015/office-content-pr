@@ -44,5 +44,9 @@ The `file` extended resource is referenced by the following resources.
 <!-- {
 "type": "#page.annotation",
 "tocPath": "ComplexType/file",
+"tocItems": {
+	"ComplexType/file/Overview": "#overview",
+	"ComplexType/file/Operations": "#operations"
+}
 "section": "documentation"
 } -->

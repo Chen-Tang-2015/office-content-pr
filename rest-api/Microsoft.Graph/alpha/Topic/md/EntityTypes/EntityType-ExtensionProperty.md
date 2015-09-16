@@ -373,5 +373,9 @@ A successful call to the DirectoryObject/getMemberObjects action returns an inst
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EntityType/ExtensionProperty",
+"tocItems": {
+	"EntityType/ExtensionProperty/Overview": "#overview",
+	"EntityType/ExtensionProperty/Operations": "#operations"
+}
 "section": "documentation"
 } -->

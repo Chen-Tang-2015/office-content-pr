@@ -50,5 +50,9 @@ The `CalendarColor` enumeration is referenced by the following resources.
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EnumType/CalendarColor",
+"tocItems": {
+	"EnumType/CalendarColor/Overview": "#overview",
+	"EnumType/CalendarColor/Operations": "#operations"
+}
 "section": "documentation"
 } -->

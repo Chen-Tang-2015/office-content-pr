@@ -731,5 +731,9 @@ A successful call to the item/search action returns an empty response.
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EntityType/item",
+"tocItems": {
+	"EntityType/item/Overview": "#overview",
+	"EntityType/item/Operations": "#operations"
+}
 "section": "documentation"
 } -->

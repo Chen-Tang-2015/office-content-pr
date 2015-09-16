@@ -146,5 +146,9 @@ The `PasswordCredential` extended resource is referenced by the following resour
 <!-- {
 "type": "#page.annotation",
 "tocPath": "ComplexType/PasswordCredential",
+"tocItems": {
+	"ComplexType/PasswordCredential/Overview": "#overview",
+	"ComplexType/PasswordCredential/Operations": "#operations"
+}
 "section": "documentation"
 } -->

@@ -134,5 +134,9 @@ The successful response returns a `201 Created` status code, with a payload cont
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EntitySet/directoryRoleTemplates",
+"tocItems": {
+	"EntitySet/directoryRoleTemplates/Overview": "#overview",
+	"EntitySet/directoryRoleTemplates/Operations": "#operations"
+}
 "section": "documentation"
 } -->

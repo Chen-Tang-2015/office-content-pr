@@ -94,5 +94,9 @@ The `identity` extended resource is referenced by the following resources.
 <!-- {
 "type": "#page.annotation",
 "tocPath": "ComplexType/identity",
+"tocItems": {
+	"ComplexType/identity/Overview": "#overview",
+	"ComplexType/identity/Operations": "#operations"
+}
 "section": "documentation"
 } -->

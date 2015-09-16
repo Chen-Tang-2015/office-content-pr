@@ -46,6 +46,7 @@
         <div class="col-md-9">
             <h1 id="serviceprincipal-resource">ServicePrincipal resource</h1>
 <h2 id="overview">Overview</h2>
+<div class="table-responsive">
 <table>
 <thead>
 <tr>
@@ -87,7 +88,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="resource-paths">Resource paths</h3>
+</div><h3 id="resource-paths">Resource paths</h3>
 <p>The <code>ServicePrincipal</code> resource can be accessed via the following paths. </p>
 <pre><code>    /&lt;version&gt;/myOrganization/directoryObjects/&lt;ServicePrincipal.objectId&gt;
     /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt;
@@ -95,6 +96,7 @@
 
 <h3 id="properties">Properties</h3>
 <p>The <code>ServicePrincipal</code> resource supports the following properties </p>
+<div class="table-responsive">
 <table>
 <thead>
 <tr>
@@ -377,8 +379,9 @@
 </tr>
 </tbody>
 </table>
-<h3 id="navigation-properties">Navigation properties</h3>
+</div><h3 id="navigation-properties">Navigation properties</h3>
 <p>The <code>ServicePrincipal</code> resource supports the following navigation properties to access the targeted resource. </p>
+<div class="table-responsive">
 <table>
 <thead>
 <tr>
@@ -466,8 +469,9 @@
 </tr>
 </tbody>
 </table>
-<h3 id="actions">Actions</h3>
+</div><h3 id="actions">Actions</h3>
 <p>The <code>ServicePrincipal</code> resource supports the following actions: </p>
+<div class="table-responsive">
 <table>
 <thead>
 <tr>
@@ -514,13 +518,14 @@
 </tr>
 </tbody>
 </table>
-<p>To invoke an action, submit a <code>HTTP POST</code> request against the action's resource path. The relative Url path has the format of <strong>&lt;Calling context&gt;/&lt;Action name&gt;</strong>. An action may take zero or more inputs (<strong>Input<strong>), respond with zero or one type of output (</strong>Return type</strong>), and store any result in a specified location (<strong>Output path</strong>). If the response does not return any payload, the <strong>Return type</strong> will be null. If the action results in any side effects, the <strong>Output path</strong> shows where to get the result. </p>
+</div><p>To invoke an action, submit a <code>HTTP POST</code> request against the action's resource path. The relative Url path has the format of <strong>&lt;Calling context&gt;/&lt;Action name&gt;</strong>. An action may take zero or more inputs (<strong>Input<strong>), respond with zero or one type of output (</strong>Return type</strong>), and store any result in a specified location (<strong>Output path</strong>). If the response does not return any payload, the <strong>Return type</strong> will be null. If the action results in any side effects, the <strong>Output path</strong> shows where to get the result. </p>
 <h3 id="operations">Operations</h3>
 <p>The <code>ServicePrincipal</code> entity resource supports the following operations, including actions and functions. </p>
 <h4 id="work-with-the-serviceprincipal-resource">Work with the ServicePrincipal resource</h4>
 <h4 id="get-a-serviceprincipal">Get a ServicePrincipal</h4>
 <p>To get an existing <code>ServicePrincipal</code> entity resource, submit an <code>HTTP GET</code> request of the following syntax: </p>
 <h4 id="required-scopes">Required scopes</h4>
+<div class="table-responsive">
 <table>
 <thead>
 <tr>
@@ -539,7 +544,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="request">Request</h4>
+</div><h4 id="request">Request</h4>
 <pre><code>    
 GET /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt; HTTP/1.1
 Host : graph.microsoft.com
@@ -568,6 +573,7 @@ Accept : application/json;odata=verbose
 <h4 id="create-or-add-a-serviceprincipal">Create or add a ServicePrincipal</h4>
 <p>To create new <code>ServicePrincipal</code> entity resource, submit an <code>HTTP POST</code> request against the <code>servicePrincipals</code> collection: </p>
 <h4 id="required-scopes-1">Required scopes</h4>
+<div class="table-responsive">
 <table>
 <thead>
 <tr>
@@ -592,7 +598,7 @@ Accept : application/json;odata=verbose
 </tr>
 </tbody>
 </table>
-<h4 id="request-1">Request</h4>
+</div><h4 id="request-1">Request</h4>
 <pre><code>    
 POST /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt; HTTP/1.1
 Host : graph.microsoft.com
@@ -627,6 +633,7 @@ Content-Length : &lt;body_length&gt;
 <h4 id="update-a-serviceprincipal">Update a ServicePrincipal</h4>
 <p>To update an existing <code>ServicePrincipal</code> entity resource, submit an <code>HTTP PUT</code> request, specifying a new instance of the resource in the request body: </p>
 <h4 id="required-scopes-2">Required scopes</h4>
+<div class="table-responsive">
 <table>
 <thead>
 <tr>
@@ -651,7 +658,7 @@ Content-Length : &lt;body_length&gt;
 </tr>
 </tbody>
 </table>
-<h4 id="request-2">Request</h4>
+</div><h4 id="request-2">Request</h4>
 <pre><code>    
 PUT /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt; HTTP/1.1
 Host : graph.microsoft.com
@@ -678,6 +685,7 @@ Content-Length : &lt;body_length&gt;
 <h4 id="update-a-serviceprincipals-properties">Update a ServicePrincipal's properties</h4>
 <p>To update selected properties of an existing <code>ServicePrincipal</code> entity, submit an <code>HTTP PATCH</code> request, specifying a new instance of the resource in the request body: </p>
 <h4 id="required-scopes-3">Required scopes</h4>
+<div class="table-responsive">
 <table>
 <thead>
 <tr>
@@ -702,7 +710,7 @@ Content-Length : &lt;body_length&gt;
 </tr>
 </tbody>
 </table>
-<h4 id="request-3">Request</h4>
+</div><h4 id="request-3">Request</h4>
 <pre><code>    
 PATCH /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt; HTTP/1.1
 Host : graph.microsoft.com
@@ -729,6 +737,7 @@ Content-Length : &lt;body_length&gt;
 <h4 id="delete-a-serviceprincipal">Delete a ServicePrincipal</h4>
 <p>To delete an existing <code>ServicePrincipal</code> entity resource, submit an <code>HTTP DELETE</code> request, specifying a new instance of the resource in the request body: </p>
 <h4 id="required-scopes-4">Required scopes</h4>
+<div class="table-responsive">
 <table>
 <thead>
 <tr>
@@ -753,7 +762,7 @@ Content-Length : &lt;body_length&gt;
 </tr>
 </tbody>
 </table>
-<h4 id="request-4">Request</h4>
+</div><h4 id="request-4">Request</h4>
 <pre><code>    
 DELETE /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt; HTTP/1.1
 Host : graph.microsoft.com
@@ -775,6 +784,7 @@ If-Match : '*'
 <h5 id="get-the-serviceprincipalapproleassignedto-entity">Get the ServicePrincipal/appRoleAssignedTo entity</h5>
 <p>To get a ServicePrincipal/appRoleAssignedTo <code>ServicePrincipal/appRoleAssignedTo</code> resource, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
 <h5 id="required-scopes-5">Required scopes</h5>
+<div class="table-responsive">
 <table>
 <thead>
 <tr>
@@ -793,7 +803,7 @@ If-Match : '*'
 </tr>
 </tbody>
 </table>
-<h5 id="request-5">Request</h5>
+</div><h5 id="request-5">Request</h5>
 <pre><code>    
 GET /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt;/appRoleAssignedTo HTTP/1.1
 Host : graph.microsoft.com
@@ -823,6 +833,7 @@ Accept : application/json;odata=verbose
 <h5 id="get-the-serviceprincipalapproleassignments-collection">Get the ServicePrincipal/appRoleAssignments collection</h5>
 <p>To get the <code>ServicePrincipal/appRoleAssignments</code> collection, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
 <h5 id="required-scopes-6">Required scopes</h5>
+<div class="table-responsive">
 <table>
 <thead>
 <tr>
@@ -841,7 +852,7 @@ Accept : application/json;odata=verbose
 </tr>
 </tbody>
 </table>
-<h5 id="request-6">Request</h5>
+</div><h5 id="request-6">Request</h5>
 <pre><code>    
 GET /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt;/appRoleAssignments HTTP/1.1
 Host : graph.microsoft.com
@@ -877,6 +888,7 @@ Accept : application/json;odata=verbose
 <h5 id="get-the-serviceprincipalcreatedobjects-collection">Get the ServicePrincipal/createdObjects collection</h5>
 <p>To get the <code>ServicePrincipal/createdObjects</code> collection, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
 <h5 id="required-scopes-7">Required scopes</h5>
+<div class="table-responsive">
 <table>
 <thead>
 <tr>
@@ -895,7 +907,7 @@ Accept : application/json;odata=verbose
 </tr>
 </tbody>
 </table>
-<h5 id="request-7">Request</h5>
+</div><h5 id="request-7">Request</h5>
 <pre><code>    
 GET /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt;/createdObjects HTTP/1.1
 Host : graph.microsoft.com
@@ -931,6 +943,7 @@ Accept : application/json;odata=verbose
 <h5 id="get-the-serviceprincipalcreatedonbehalfof-entity">Get the ServicePrincipal/createdOnBehalfOf entity</h5>
 <p>To get a ServicePrincipal/createdOnBehalfOf <code>ServicePrincipal/createdOnBehalfOf</code> resource, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
 <h5 id="required-scopes-8">Required scopes</h5>
+<div class="table-responsive">
 <table>
 <thead>
 <tr>
@@ -949,7 +962,7 @@ Accept : application/json;odata=verbose
 </tr>
 </tbody>
 </table>
-<h5 id="request-8">Request</h5>
+</div><h5 id="request-8">Request</h5>
 <pre><code>    
 GET /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt;/createdOnBehalfOf HTTP/1.1
 Host : graph.microsoft.com
@@ -979,6 +992,7 @@ Accept : application/json;odata=verbose
 <h5 id="get-the-serviceprincipalmemberof-collection">Get the ServicePrincipal/memberOf collection</h5>
 <p>To get the <code>ServicePrincipal/memberOf</code> collection, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
 <h5 id="required-scopes-9">Required scopes</h5>
+<div class="table-responsive">
 <table>
 <thead>
 <tr>
@@ -997,7 +1011,7 @@ Accept : application/json;odata=verbose
 </tr>
 </tbody>
 </table>
-<h5 id="request-9">Request</h5>
+</div><h5 id="request-9">Request</h5>
 <pre><code>    
 GET /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt;/memberOf HTTP/1.1
 Host : graph.microsoft.com
@@ -1033,6 +1047,7 @@ Accept : application/json;odata=verbose
 <h5 id="get-the-serviceprincipaloauth2permissiongrants-collection">Get the ServicePrincipal/oauth2PermissionGrants collection</h5>
 <p>To get the <code>ServicePrincipal/oauth2PermissionGrants</code> collection, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
 <h5 id="required-scopes-10">Required scopes</h5>
+<div class="table-responsive">
 <table>
 <thead>
 <tr>
@@ -1051,7 +1066,7 @@ Accept : application/json;odata=verbose
 </tr>
 </tbody>
 </table>
-<h5 id="request-10">Request</h5>
+</div><h5 id="request-10">Request</h5>
 <pre><code>    
 GET /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt;/oauth2PermissionGrants HTTP/1.1
 Host : graph.microsoft.com
@@ -1087,6 +1102,7 @@ Accept : application/json;odata=verbose
 <h5 id="get-the-serviceprincipalownedobjects-collection">Get the ServicePrincipal/ownedObjects collection</h5>
 <p>To get the <code>ServicePrincipal/ownedObjects</code> collection, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
 <h5 id="required-scopes-11">Required scopes</h5>
+<div class="table-responsive">
 <table>
 <thead>
 <tr>
@@ -1105,7 +1121,7 @@ Accept : application/json;odata=verbose
 </tr>
 </tbody>
 </table>
-<h5 id="request-11">Request</h5>
+</div><h5 id="request-11">Request</h5>
 <pre><code>    
 GET /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt;/ownedObjects HTTP/1.1
 Host : graph.microsoft.com
@@ -1141,6 +1157,7 @@ Accept : application/json;odata=verbose
 <h5 id="get-the-serviceprincipalowners-collection">Get the ServicePrincipal/owners collection</h5>
 <p>To get the <code>ServicePrincipal/owners</code> collection, submit an <code>HTTP GET</code> request of the following REST call syntax: </p>
 <h5 id="required-scopes-12">Required scopes</h5>
+<div class="table-responsive">
 <table>
 <thead>
 <tr>
@@ -1159,7 +1176,7 @@ Accept : application/json;odata=verbose
 </tr>
 </tbody>
 </table>
-<h5 id="request-12">Request</h5>
+</div><h5 id="request-12">Request</h5>
 <pre><code>    
 GET /&lt;version&gt;/myOrganization/servicePrincipals/&lt;ServicePrincipal.objectId&gt;/owners HTTP/1.1
 Host : graph.microsoft.com
@@ -1195,6 +1212,7 @@ Accept : application/json;odata=verbose
 <h5 id="call-the-directoryobjectcheckmembergroups-action">Call the DirectoryObject/checkMemberGroups action</h5>
 <p>To call the <code>DirectoryObject/checkMemberGroups</code> action,submit a <code>POST</code> request of the following REST call syntax. </p>
 <h5 id="required-scopes-13">Required scopes</h5>
+<div class="table-responsive">
 <table>
 <thead>
 <tr>
@@ -1219,7 +1237,7 @@ Accept : application/json;odata=verbose
 </tr>
 </tbody>
 </table>
-<h5 id="request-13">Request</h5>
+</div><h5 id="request-13">Request</h5>
 <pre><code>    
 POST /&lt;version&gt;/myOrganization/directoryObjects/&lt;DirectoryObject.objectId&gt;/checkMemberGroups HTTP/1.1
 Host : graph.microsoft.com
@@ -1243,6 +1261,7 @@ Content-Length : &lt;body_length&gt;
 <h5 id="call-the-directoryobjectgetmembergroups-action">Call the DirectoryObject/getMemberGroups action</h5>
 <p>To call the <code>DirectoryObject/getMemberGroups</code> action,submit a <code>POST</code> request of the following REST call syntax. </p>
 <h5 id="required-scopes-14">Required scopes</h5>
+<div class="table-responsive">
 <table>
 <thead>
 <tr>
@@ -1267,7 +1286,7 @@ Content-Length : &lt;body_length&gt;
 </tr>
 </tbody>
 </table>
-<h5 id="request-14">Request</h5>
+</div><h5 id="request-14">Request</h5>
 <pre><code>    
 POST /&lt;version&gt;/myOrganization/directoryObjects/&lt;DirectoryObject.objectId&gt;/getMemberGroups HTTP/1.1
 Host : graph.microsoft.com
@@ -1291,6 +1310,7 @@ Content-Length : &lt;body_length&gt;
 <h5 id="call-the-directoryobjectgetmemberobjects-action">Call the DirectoryObject/getMemberObjects action</h5>
 <p>To call the <code>DirectoryObject/getMemberObjects</code> action,submit a <code>POST</code> request of the following REST call syntax. </p>
 <h5 id="required-scopes-15">Required scopes</h5>
+<div class="table-responsive">
 <table>
 <thead>
 <tr>
@@ -1315,7 +1335,7 @@ Content-Length : &lt;body_length&gt;
 </tr>
 </tbody>
 </table>
-<h5 id="request-15">Request</h5>
+</div><h5 id="request-15">Request</h5>
 <pre><code>    
 POST /&lt;version&gt;/myOrganization/directoryObjects/&lt;DirectoryObject.objectId&gt;/getMemberObjects HTTP/1.1
 Host : graph.microsoft.com
@@ -1340,602 +1360,9 @@ Content-Length : &lt;body_length&gt;
         </div>
         <div id="tocbar" class="col-md-3 visible-md visible-lg">
             <p><a href="../README.htm">API Reference</a></p>
-            <ul>
-                
-                <li>ComplexType</li>
-                
-                <ul>
-                    <!-- 
-					
-                    <li><a href="../ComplexTypes/ComplexType-AlternativeSecurityId.htm">AlternativeSecurityId</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-AppRole.htm">AppRole</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-AssignedLicense.htm">AssignedLicense</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-AssignedPlan.htm">AssignedPlan</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-Attendee.htm">Attendee</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-deleted.htm">deleted</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-EmailAddress.htm">EmailAddress</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-ExternalReferenceCollection.htm">ExternalReferenceCollection</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-file.htm">file</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-folder.htm">folder</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-GeoCoordinates.htm">GeoCoordinates</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-identity.htm">identity</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-identitySet.htm">identitySet</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-image.htm">image</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-ItemBody.htm">ItemBody</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-itemReference.htm">itemReference</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-KeyCredential.htm">KeyCredential</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-LicenseUnitsDetail.htm">LicenseUnitsDetail</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-Location.htm">Location</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-OAuth2Permission.htm">OAuth2Permission</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-PasswordCredential.htm">PasswordCredential</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-PasswordProfile.htm">PasswordProfile</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-PatternedRecurrence.htm">PatternedRecurrence</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-photo.htm">photo</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-PhysicalAddress.htm">PhysicalAddress</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-ProvisionedPlan.htm">ProvisionedPlan</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-ProvisioningError.htm">ProvisioningError</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-quota.htm">quota</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-Recipient.htm">Recipient</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-RecurrencePattern.htm">RecurrencePattern</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-RecurrenceRange.htm">RecurrenceRange</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-RequiredResourceAccess.htm">RequiredResourceAccess</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-ResourceAccess.htm">ResourceAccess</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-ResponseStatus.htm">ResponseStatus</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-searchResult.htm">searchResult</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-ServicePlanInfo.htm">ServicePlanInfo</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-sharingLink.htm">sharingLink</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-thumbnail.htm">thumbnail</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-uploadSession.htm">uploadSession</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-UserIdCollection.htm">UserIdCollection</a></li>
-                    
-                    <li><a href="../ComplexTypes/ComplexType-VerifiedDomain.htm">VerifiedDomain</a></li>
-                    
-					-->
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-AlternativeSecurityId.htm">AlternativeSecurityId</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-AppRole.htm">AppRole</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-AssignedLicense.htm">AssignedLicense</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-AssignedPlan.htm">AssignedPlan</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-Attendee.htm">Attendee</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-deleted.htm">deleted</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-EmailAddress.htm">EmailAddress</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-ExternalReferenceCollection.htm">ExternalReferenceCollection</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-file.htm">file</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-folder.htm">folder</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-GeoCoordinates.htm">GeoCoordinates</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-identity.htm">identity</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-identitySet.htm">identitySet</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-image.htm">image</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-ItemBody.htm">ItemBody</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-itemReference.htm">itemReference</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-KeyCredential.htm">KeyCredential</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-LicenseUnitsDetail.htm">LicenseUnitsDetail</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-Location.htm">Location</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-OAuth2Permission.htm">OAuth2Permission</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-PasswordCredential.htm">PasswordCredential</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-PasswordProfile.htm">PasswordProfile</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-PatternedRecurrence.htm">PatternedRecurrence</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-photo.htm">photo</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-PhysicalAddress.htm">PhysicalAddress</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-ProvisionedPlan.htm">ProvisionedPlan</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-ProvisioningError.htm">ProvisioningError</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-quota.htm">quota</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-Recipient.htm">Recipient</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-RecurrencePattern.htm">RecurrencePattern</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-RecurrenceRange.htm">RecurrenceRange</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-RequiredResourceAccess.htm">RequiredResourceAccess</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-ResourceAccess.htm">ResourceAccess</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-ResponseStatus.htm">ResponseStatus</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-searchResult.htm">searchResult</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-ServicePlanInfo.htm">ServicePlanInfo</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-sharingLink.htm">sharingLink</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-thumbnail.htm">thumbnail</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-uploadSession.htm">uploadSession</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-UserIdCollection.htm">UserIdCollection</a></li>
-					
-					
-					<li><a href="../ComplexTypes/ComplexType-VerifiedDomain.htm">VerifiedDomain</a></li>
-					
-					
-					
-                </ul>
-                
-                
-                <li>EntitySet</li>
-                
-                <ul>
-                    <!-- 
-					
-                    <li><a href="../EntitySets/EntitySet-applications.htm">applications</a></li>
-                    
-                    <li><a href="../EntitySets/EntitySet-contacts.htm">contacts</a></li>
-                    
-                    <li><a href="../EntitySets/EntitySet-deviceConfiguration.htm">deviceConfiguration</a></li>
-                    
-                    <li><a href="../EntitySets/EntitySet-devices.htm">devices</a></li>
-                    
-                    <li><a href="../EntitySets/EntitySet-directoryObjects.htm">directoryObjects</a></li>
-                    
-                    <li><a href="../EntitySets/EntitySet-directoryRoles.htm">directoryRoles</a></li>
-                    
-                    <li><a href="../EntitySets/EntitySet-directoryRoleTemplates.htm">directoryRoleTemplates</a></li>
-                    
-                    <li><a href="../EntitySets/EntitySet-drives.htm">drives</a></li>
-                    
-                    <li><a href="../EntitySets/EntitySet-groups.htm">groups</a></li>
-                    
-                    <li><a href="../EntitySets/EntitySet-oauth2PermissionGrants.htm">oauth2PermissionGrants</a></li>
-                    
-                    <li><a href="../EntitySets/EntitySet-plans.htm">plans</a></li>
-                    
-                    <li><a href="../EntitySets/EntitySet-servicePrincipals.htm">servicePrincipals</a></li>
-                    
-                    <li><a href="../EntitySets/EntitySet-subscribedSkus.htm">subscribedSkus</a></li>
-                    
-                    <li><a href="../EntitySets/EntitySet-tasks.htm">tasks</a></li>
-                    
-                    <li><a href="../EntitySets/EntitySet-tenantDetails.htm">tenantDetails</a></li>
-                    
-                    <li><a href="../EntitySets/EntitySet-users.htm">users</a></li>
-                    
-					-->
-					
-					
-					<li><a href="../EntitySets/EntitySet-applications.htm">applications</a></li>
-					
-					
-					<li><a href="../EntitySets/EntitySet-contacts.htm">contacts</a></li>
-					
-					
-					<li><a href="../EntitySets/EntitySet-deviceConfiguration.htm">deviceConfiguration</a></li>
-					
-					
-					<li><a href="../EntitySets/EntitySet-devices.htm">devices</a></li>
-					
-					
-					<li><a href="../EntitySets/EntitySet-directoryObjects.htm">directoryObjects</a></li>
-					
-					
-					<li><a href="../EntitySets/EntitySet-directoryRoles.htm">directoryRoles</a></li>
-					
-					
-					<li><a href="../EntitySets/EntitySet-directoryRoleTemplates.htm">directoryRoleTemplates</a></li>
-					
-					
-					<li><a href="../EntitySets/EntitySet-drives.htm">drives</a></li>
-					
-					
-					<li><a href="../EntitySets/EntitySet-groups.htm">groups</a></li>
-					
-					
-					<li><a href="../EntitySets/EntitySet-oauth2PermissionGrants.htm">oauth2PermissionGrants</a></li>
-					
-					
-					<li><a href="../EntitySets/EntitySet-plans.htm">plans</a></li>
-					
-					
-					<li><a href="../EntitySets/EntitySet-servicePrincipals.htm">servicePrincipals</a></li>
-					
-					
-					<li><a href="../EntitySets/EntitySet-subscribedSkus.htm">subscribedSkus</a></li>
-					
-					
-					<li><a href="../EntitySets/EntitySet-tasks.htm">tasks</a></li>
-					
-					
-					<li><a href="../EntitySets/EntitySet-tenantDetails.htm">tenantDetails</a></li>
-					
-					
-					<li><a href="../EntitySets/EntitySet-users.htm">users</a></li>
-					
-					
-					
-                </ul>
-                
-                
-                <li>EntityType</li>
-                
-                <ul>
-                    <!-- 
-					
-                    <li><a href="EntityType-Application.htm">Application</a></li>
-                    
-                    <li><a href="EntityType-AppRoleAssignment.htm">AppRoleAssignment</a></li>
-                    
-                    <li><a href="EntityType-Attachment.htm">Attachment</a></li>
-                    
-                    <li><a href="EntityType-Calendar.htm">Calendar</a></li>
-                    
-                    <li><a href="EntityType-CalendarGroup.htm">CalendarGroup</a></li>
-                    
-                    <li><a href="EntityType-Contact.htm">Contact</a></li>
-                    
-                    <li><a href="EntityType-Conversation.htm">Conversation</a></li>
-                    
-                    <li><a href="EntityType-ConversationThread.htm">ConversationThread</a></li>
-                    
-                    <li><a href="EntityType-Device.htm">Device</a></li>
-                    
-                    <li><a href="EntityType-DeviceConfiguration.htm">DeviceConfiguration</a></li>
-                    
-                    <li><a href="EntityType-DirectoryLinkChange.htm">DirectoryLinkChange</a></li>
-                    
-                    <li><a href="EntityType-DirectoryObject.htm">DirectoryObject</a></li>
-                    
-                    <li><a href="EntityType-DirectoryRole.htm">DirectoryRole</a></li>
-                    
-                    <li><a href="EntityType-DirectoryRoleTemplate.htm">DirectoryRoleTemplate</a></li>
-                    
-                    <li><a href="EntityType-drive.htm">drive</a></li>
-                    
-                    <li><a href="EntityType-Event.htm">Event</a></li>
-                    
-                    <li><a href="EntityType-EventMessage.htm">EventMessage</a></li>
-                    
-                    <li><a href="EntityType-ExtensionProperty.htm">ExtensionProperty</a></li>
-                    
-                    <li><a href="EntityType-File.htm">File</a></li>
-                    
-                    <li><a href="EntityType-FileAttachment.htm">FileAttachment</a></li>
-                    
-                    <li><a href="EntityType-Group.htm">Group</a></li>
-                    
-                    <li><a href="EntityType-item.htm">item</a></li>
-                    
-                    <li><a href="EntityType-ItemAttachment.htm">ItemAttachment</a></li>
-                    
-                    <li><a href="EntityType-Message.htm">Message</a></li>
-                    
-                    <li><a href="EntityType-OAuth2PermissionGrant.htm">OAuth2PermissionGrant</a></li>
-                    
-                    <li><a href="EntityType-OutlookItem.htm">OutlookItem</a></li>
-                    
-                    <li><a href="EntityType-permission.htm">permission</a></li>
-                    
-                    <li><a href="EntityType-Photo.htm">Photo</a></li>
-                    
-                    <li><a href="EntityType-Plan.htm">Plan</a></li>
-                    
-                    <li><a href="EntityType-PlanDetails.htm">PlanDetails</a></li>
-                    
-                    <li><a href="EntityType-Post.htm">Post</a></li>
-                    
-                    <li><a href="EntityType-ReferenceAttachment.htm">ReferenceAttachment</a></li>
-                    
-                    <li><a href="EntityType-ServicePrincipal.htm">ServicePrincipal</a></li>
-                    
-                    <li><a href="EntityType-SubscribedSku.htm">SubscribedSku</a></li>
-                    
-                    <li><a href="EntityType-Task.htm">Task</a></li>
-                    
-                    <li><a href="EntityType-TaskDetails.htm">TaskDetails</a></li>
-                    
-                    <li><a href="EntityType-TenantDetail.htm">TenantDetail</a></li>
-                    
-                    <li><a href="EntityType-thumbnailSet.htm">thumbnailSet</a></li>
-                    
-                    <li><a href="EntityType-User.htm">User</a></li>
-                    
-					-->
-					
-					
-					<li><a href="EntityType-Application.htm">Application</a></li>
-					
-					
-					<li><a href="EntityType-AppRoleAssignment.htm">AppRoleAssignment</a></li>
-					
-					
-					<li><a href="EntityType-Attachment.htm">Attachment</a></li>
-					
-					
-					<li><a href="EntityType-Calendar.htm">Calendar</a></li>
-					
-					
-					<li><a href="EntityType-CalendarGroup.htm">CalendarGroup</a></li>
-					
-					
-					<li><a href="EntityType-Contact.htm">Contact</a></li>
-					
-					
-					<li><a href="EntityType-Conversation.htm">Conversation</a></li>
-					
-					
-					<li><a href="EntityType-ConversationThread.htm">ConversationThread</a></li>
-					
-					
-					<li><a href="EntityType-Device.htm">Device</a></li>
-					
-					
-					<li><a href="EntityType-DeviceConfiguration.htm">DeviceConfiguration</a></li>
-					
-					
-					<li><a href="EntityType-DirectoryLinkChange.htm">DirectoryLinkChange</a></li>
-					
-					
-					<li><a href="EntityType-DirectoryObject.htm">DirectoryObject</a></li>
-					
-					
-					<li><a href="EntityType-DirectoryRole.htm">DirectoryRole</a></li>
-					
-					
-					<li><a href="EntityType-DirectoryRoleTemplate.htm">DirectoryRoleTemplate</a></li>
-					
-					
-					<li><a href="EntityType-drive.htm">drive</a></li>
-					
-					
-					<li><a href="EntityType-Event.htm">Event</a></li>
-					
-					
-					<li><a href="EntityType-EventMessage.htm">EventMessage</a></li>
-					
-					
-					<li><a href="EntityType-ExtensionProperty.htm">ExtensionProperty</a></li>
-					
-					
-					<li><a href="EntityType-File.htm">File</a></li>
-					
-					
-					<li><a href="EntityType-FileAttachment.htm">FileAttachment</a></li>
-					
-					
-					<li><a href="EntityType-Group.htm">Group</a></li>
-					
-					
-					<li><a href="EntityType-item.htm">item</a></li>
-					
-					
-					<li><a href="EntityType-ItemAttachment.htm">ItemAttachment</a></li>
-					
-					
-					<li><a href="EntityType-Message.htm">Message</a></li>
-					
-					
-					<li><a href="EntityType-OAuth2PermissionGrant.htm">OAuth2PermissionGrant</a></li>
-					
-					
-					<li><a href="EntityType-OutlookItem.htm">OutlookItem</a></li>
-					
-					
-					<li><a href="EntityType-permission.htm">permission</a></li>
-					
-					
-					<li><a href="EntityType-Photo.htm">Photo</a></li>
-					
-					
-					<li><a href="EntityType-Plan.htm">Plan</a></li>
-					
-					
-					<li><a href="EntityType-PlanDetails.htm">PlanDetails</a></li>
-					
-					
-					<li><a href="EntityType-Post.htm">Post</a></li>
-					
-					
-					<li><a href="EntityType-ReferenceAttachment.htm">ReferenceAttachment</a></li>
-					
-					
-					<li><a href="EntityType-ServicePrincipal.htm">ServicePrincipal</a></li>
-					
-					
-					<li><a href="EntityType-SubscribedSku.htm">SubscribedSku</a></li>
-					
-					
-					<li><a href="EntityType-Task.htm">Task</a></li>
-					
-					
-					<li><a href="EntityType-TaskDetails.htm">TaskDetails</a></li>
-					
-					
-					<li><a href="EntityType-TenantDetail.htm">TenantDetail</a></li>
-					
-					
-					<li><a href="EntityType-thumbnailSet.htm">thumbnailSet</a></li>
-					
-					
-					<li><a href="EntityType-User.htm">User</a></li>
-					
-					
-					
-                </ul>
-                
-                
-                <li>EnumType</li>
-                
-                <ul>
-                    <!-- 
-					
-                    <li><a href="../EnumTypes/EnumType-AttendeeType.htm">AttendeeType</a></li>
-                    
-                    <li><a href="../EnumTypes/EnumType-BodyType.htm">BodyType</a></li>
-                    
-                    <li><a href="../EnumTypes/EnumType-CalendarColor.htm">CalendarColor</a></li>
-                    
-                    <li><a href="../EnumTypes/EnumType-DayOfWeek.htm">DayOfWeek</a></li>
-                    
-                    <li><a href="../EnumTypes/EnumType-EventType.htm">EventType</a></li>
-                    
-                    <li><a href="../EnumTypes/EnumType-FreeBusyStatus.htm">FreeBusyStatus</a></li>
-                    
-                    <li><a href="../EnumTypes/EnumType-GroupAccessType.htm">GroupAccessType</a></li>
-                    
-                    <li><a href="../EnumTypes/EnumType-Importance.htm">Importance</a></li>
-                    
-                    <li><a href="../EnumTypes/EnumType-MeetingMessageType.htm">MeetingMessageType</a></li>
-                    
-                    <li><a href="../EnumTypes/EnumType-RecurrencePatternType.htm">RecurrencePatternType</a></li>
-                    
-                    <li><a href="../EnumTypes/EnumType-RecurrenceRangeType.htm">RecurrenceRangeType</a></li>
-                    
-                    <li><a href="../EnumTypes/EnumType-ResponseType.htm">ResponseType</a></li>
-                    
-                    <li><a href="../EnumTypes/EnumType-WeekIndex.htm">WeekIndex</a></li>
-                    
-					-->
-					
-					
-					<li><a href="../EnumTypes/EnumType-AttendeeType.htm">AttendeeType</a></li>
-					
-					
-					<li><a href="../EnumTypes/EnumType-BodyType.htm">BodyType</a></li>
-					
-					
-					<li><a href="../EnumTypes/EnumType-CalendarColor.htm">CalendarColor</a></li>
-					
-					
-					<li><a href="../EnumTypes/EnumType-DayOfWeek.htm">DayOfWeek</a></li>
-					
-					
-					<li><a href="../EnumTypes/EnumType-EventType.htm">EventType</a></li>
-					
-					
-					<li><a href="../EnumTypes/EnumType-FreeBusyStatus.htm">FreeBusyStatus</a></li>
-					
-					
-					<li><a href="../EnumTypes/EnumType-GroupAccessType.htm">GroupAccessType</a></li>
-					
-					
-					<li><a href="../EnumTypes/EnumType-Importance.htm">Importance</a></li>
-					
-					
-					<li><a href="../EnumTypes/EnumType-MeetingMessageType.htm">MeetingMessageType</a></li>
-					
-					
-					<li><a href="../EnumTypes/EnumType-RecurrencePatternType.htm">RecurrencePatternType</a></li>
-					
-					
-					<li><a href="../EnumTypes/EnumType-RecurrenceRangeType.htm">RecurrenceRangeType</a></li>
-					
-					
-					<li><a href="../EnumTypes/EnumType-ResponseType.htm">ResponseType</a></li>
-					
-					
-					<li><a href="../EnumTypes/EnumType-WeekIndex.htm">WeekIndex</a></li>
-					
-					
-					
-                </ul>
-                
-                
-            </ul>
+        <ul>
+            
+        </ul>
         </div>
     </div>
 </div>

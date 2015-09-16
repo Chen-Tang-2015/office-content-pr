@@ -1714,5 +1714,9 @@ A successful call to the User/SendMail action returns an empty response.
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EntityType/User",
+"tocItems": {
+	"EntityType/User/Overview": "#overview",
+	"EntityType/User/Operations": "#operations"
+}
 "section": "documentation"
 } -->

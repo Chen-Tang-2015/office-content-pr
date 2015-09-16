@@ -45,5 +45,9 @@ The `deleted` extended resource is referenced by the following resources.
 <!-- {
 "type": "#page.annotation",
 "tocPath": "ComplexType/deleted",
+"tocItems": {
+	"ComplexType/deleted/Overview": "#overview",
+	"ComplexType/deleted/Operations": "#operations"
+}
 "section": "documentation"
 } -->

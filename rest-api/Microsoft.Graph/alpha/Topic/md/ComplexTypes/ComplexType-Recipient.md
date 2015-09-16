@@ -110,5 +110,9 @@ The `Recipient` extended resource is referenced by the following resources.
 <!-- {
 "type": "#page.annotation",
 "tocPath": "ComplexType/Recipient",
+"tocItems": {
+	"ComplexType/Recipient/Overview": "#overview",
+	"ComplexType/Recipient/Operations": "#operations"
+}
 "section": "documentation"
 } -->

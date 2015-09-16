@@ -61,5 +61,9 @@ The `RecurrenceRange` extended resource is referenced by the following resources
 <!-- {
 "type": "#page.annotation",
 "tocPath": "ComplexType/RecurrenceRange",
+"tocItems": {
+	"ComplexType/RecurrenceRange/Overview": "#overview",
+	"ComplexType/RecurrenceRange/Operations": "#operations"
+}
 "section": "documentation"
 } -->

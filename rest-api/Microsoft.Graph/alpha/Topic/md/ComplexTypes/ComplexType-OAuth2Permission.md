@@ -149,5 +149,9 @@ The `OAuth2Permission` extended resource is referenced by the following resource
 <!-- {
 "type": "#page.annotation",
 "tocPath": "ComplexType/OAuth2Permission",
+"tocItems": {
+	"ComplexType/OAuth2Permission/Overview": "#overview",
+	"ComplexType/OAuth2Permission/Operations": "#operations"
+}
 "section": "documentation"
 } -->

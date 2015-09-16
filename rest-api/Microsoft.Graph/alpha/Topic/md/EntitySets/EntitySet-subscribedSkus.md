@@ -136,5 +136,9 @@ The successful response returns a `201 Created` status code, with a payload cont
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EntitySet/subscribedSkus",
+"tocItems": {
+	"EntitySet/subscribedSkus/Overview": "#overview",
+	"EntitySet/subscribedSkus/Operations": "#operations"
+}
 "section": "documentation"
 } -->

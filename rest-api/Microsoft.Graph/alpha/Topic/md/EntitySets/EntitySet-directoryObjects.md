@@ -136,5 +136,9 @@ The successful response returns a `201 Created` status code, with a payload cont
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EntitySet/directoryObjects",
+"tocItems": {
+	"EntitySet/directoryObjects/Overview": "#overview",
+	"EntitySet/directoryObjects/Operations": "#operations"
+}
 "section": "documentation"
 } -->

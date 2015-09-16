@@ -28,5 +28,9 @@ The `ResourceAccess` extended resource exposes the following properties
 <!-- {
 "type": "#page.annotation",
 "tocPath": "ComplexType/ResourceAccess",
+"tocItems": {
+	"ComplexType/ResourceAccess/Overview": "#overview",
+	"ComplexType/ResourceAccess/Operations": "#operations"
+}
 "section": "documentation"
 } -->

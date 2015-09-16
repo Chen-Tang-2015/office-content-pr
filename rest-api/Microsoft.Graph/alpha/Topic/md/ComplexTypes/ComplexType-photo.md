@@ -45,5 +45,9 @@ The `photo` extended resource is referenced by the following resources.
 <!-- {
 "type": "#page.annotation",
 "tocPath": "ComplexType/photo",
+"tocItems": {
+	"ComplexType/photo/Overview": "#overview",
+	"ComplexType/photo/Operations": "#operations"
+}
 "section": "documentation"
 } -->

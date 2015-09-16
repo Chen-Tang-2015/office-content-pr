@@ -85,5 +85,9 @@ The `ResponseType` enumeration is referenced by the following resources.
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EnumType/ResponseType",
+"tocItems": {
+	"EnumType/ResponseType/Overview": "#overview",
+	"EnumType/ResponseType/Operations": "#operations"
+}
 "section": "documentation"
 } -->

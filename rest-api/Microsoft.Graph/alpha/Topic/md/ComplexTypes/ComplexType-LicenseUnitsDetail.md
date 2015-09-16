@@ -39,5 +39,9 @@ The `LicenseUnitsDetail` extended resource is referenced by the following resour
 <!-- {
 "type": "#page.annotation",
 "tocPath": "ComplexType/LicenseUnitsDetail",
+"tocItems": {
+	"ComplexType/LicenseUnitsDetail/Overview": "#overview",
+	"ComplexType/LicenseUnitsDetail/Operations": "#operations"
+}
 "section": "documentation"
 } -->

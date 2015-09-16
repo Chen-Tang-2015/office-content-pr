@@ -92,5 +92,9 @@ The `PasswordProfile` extended resource is referenced by the following resources
 <!-- {
 "type": "#page.annotation",
 "tocPath": "ComplexType/PasswordProfile",
+"tocItems": {
+	"ComplexType/PasswordProfile/Overview": "#overview",
+	"ComplexType/PasswordProfile/Operations": "#operations"
+}
 "section": "documentation"
 } -->

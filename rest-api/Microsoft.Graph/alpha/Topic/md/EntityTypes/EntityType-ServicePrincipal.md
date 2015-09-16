@@ -777,5 +777,9 @@ A successful call to the DirectoryObject/getMemberObjects action returns an inst
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EntityType/ServicePrincipal",
+"tocItems": {
+	"EntityType/ServicePrincipal/Overview": "#overview",
+	"EntityType/ServicePrincipal/Operations": "#operations"
+}
 "section": "documentation"
 } -->

@@ -94,5 +94,9 @@ The `VerifiedDomain` extended resource is referenced by the following resources.
 <!-- {
 "type": "#page.annotation",
 "tocPath": "ComplexType/VerifiedDomain",
+"tocItems": {
+	"ComplexType/VerifiedDomain/Overview": "#overview",
+	"ComplexType/VerifiedDomain/Operations": "#operations"
+}
 "section": "documentation"
 } -->

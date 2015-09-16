@@ -824,5 +824,9 @@ A successful call to the Message/Send action returns an empty response.
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EntityType/EventMessage",
+"tocItems": {
+	"EntityType/EventMessage/Overview": "#overview",
+	"EntityType/EventMessage/Operations": "#operations"
+}
 "section": "documentation"
 } -->

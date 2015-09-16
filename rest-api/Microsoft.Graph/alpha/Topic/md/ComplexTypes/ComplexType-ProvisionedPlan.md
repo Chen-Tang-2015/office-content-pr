@@ -146,5 +146,9 @@ The `ProvisionedPlan` extended resource is referenced by the following resources
 <!-- {
 "type": "#page.annotation",
 "tocPath": "ComplexType/ProvisionedPlan",
+"tocItems": {
+	"ComplexType/ProvisionedPlan/Overview": "#overview",
+	"ComplexType/ProvisionedPlan/Operations": "#operations"
+}
 "section": "documentation"
 } -->

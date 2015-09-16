@@ -92,5 +92,9 @@ The `AssignedLicense` extended resource is referenced by the following resources
 <!-- {
 "type": "#page.annotation",
 "tocPath": "ComplexType/AssignedLicense",
+"tocItems": {
+	"ComplexType/AssignedLicense/Overview": "#overview",
+	"ComplexType/AssignedLicense/Operations": "#operations"
+}
 "section": "documentation"
 } -->

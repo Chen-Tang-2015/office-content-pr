@@ -320,5 +320,9 @@ A successful response returns the `200 OK` status code and a body containing a `
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EntityType/Task",
+"tocItems": {
+	"EntityType/Task/Overview": "#overview",
+	"EntityType/Task/Operations": "#operations"
+}
 "section": "documentation"
 } -->

@@ -63,5 +63,9 @@ The `FreeBusyStatus` enumeration is referenced by the following resources.
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EnumType/FreeBusyStatus",
+"tocItems": {
+	"EnumType/FreeBusyStatus/Overview": "#overview",
+	"EnumType/FreeBusyStatus/Operations": "#operations"
+}
 "section": "documentation"
 } -->

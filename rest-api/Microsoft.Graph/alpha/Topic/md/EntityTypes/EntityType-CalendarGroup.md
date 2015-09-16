@@ -301,5 +301,9 @@ A successful response returns the `200 OK` status code and a body containing a c
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EntityType/CalendarGroup",
+"tocItems": {
+	"EntityType/CalendarGroup/Overview": "#overview",
+	"EntityType/CalendarGroup/Operations": "#operations"
+}
 "section": "documentation"
 } -->

@@ -368,5 +368,9 @@ A successful call to the DirectoryObject/getMemberObjects action returns an inst
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EntityType/DirectoryRoleTemplate",
+"tocItems": {
+	"EntityType/DirectoryRoleTemplate/Overview": "#overview",
+	"EntityType/DirectoryRoleTemplate/Operations": "#operations"
+}
 "section": "documentation"
 } -->

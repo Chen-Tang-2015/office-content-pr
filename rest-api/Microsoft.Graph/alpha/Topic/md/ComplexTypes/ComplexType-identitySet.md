@@ -56,5 +56,9 @@ The `identitySet` extended resource is referenced by the following resources.
 <!-- {
 "type": "#page.annotation",
 "tocPath": "ComplexType/identitySet",
+"tocItems": {
+	"ComplexType/identitySet/Overview": "#overview",
+	"ComplexType/identitySet/Operations": "#operations"
+}
 "section": "documentation"
 } -->

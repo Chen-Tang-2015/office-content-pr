@@ -433,5 +433,9 @@ A successful call to the Post/Reply action returns an empty response.
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EntityType/ConversationThread",
+"tocItems": {
+	"EntityType/ConversationThread/Overview": "#overview",
+	"EntityType/ConversationThread/Operations": "#operations"
+}
 "section": "documentation"
 } -->

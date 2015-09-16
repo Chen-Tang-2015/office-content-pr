@@ -387,5 +387,9 @@ A successful call to the DirectoryObject/getMemberObjects action returns an inst
 <!-- {
 "type": "#page.annotation",
 "tocPath": "EntityType/TenantDetail",
+"tocItems": {
+	"EntityType/TenantDetail/Overview": "#overview",
+	"EntityType/TenantDetail/Operations": "#operations"
+}
 "section": "documentation"
 } -->
