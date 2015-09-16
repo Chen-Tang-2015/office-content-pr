@@ -2,9 +2,9 @@
 
 **Last modified:** September 16, 2015
 
-***Applies to:*** Office 365 | Office Add-ins | SharePoint Add-ins***
+***Applies to:*** Office 365 | Office Add-ins | SharePoint Add-ins*
 
-As you design and develop your Office 365 web apps and Office and SharePoint Add-in, you'll want to ensure that all potential users and customers are able to use your app or add-in successfully. Apply the following guidelines to ensure that your solution is accessible to all audiences.
+As you design and develop your Office 365 web apps and Office and SharePoint Add-ins, you'll want to ensure that all potential users and customers are able to use your app or add-in successfully. Apply the following guidelines to ensure that your solution is accessible to all audiences.
 
 **Make your app or add-in easy to use.**
 
@@ -17,7 +17,7 @@ As you design and develop your Office 365 web apps and Office and SharePoint Add
 **Make your app or add-in easy to see.**
 
 - Avoid unexpected color changes.
-- Provide meaningful and timely information to describe UI elements, titles and headings, inputs, and errors. For example, ensure that names of controls adequately describe the intent of the control.
+- Provide meaningful and timely information to describe UI elements, titles and headings, inputs, and errors. Ensure that names of controls adequately describe the intent of the control.
 - Follow [standard guidelines](http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) for color contrast.
 
 **Design for multiple input methods.**
