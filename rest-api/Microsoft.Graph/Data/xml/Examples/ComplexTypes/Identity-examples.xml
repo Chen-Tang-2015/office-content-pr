@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentComponentOfCodeExample xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Namespace>Microsoft.Graph</Namespace>
+  <Version>beta</Version>
+  <Versions>
+    <string>beta</string>
+  </Versions>
+  <MetadataUri>https://graph.microsoft.com/beta/$metadata</MetadataUri>
+  <Content>
+    <CodeExample>
+      <Title>Get the Identity extended resource</Title>
+      <TargetResourceType>ComplexType</TargetResourceType>
+      <TargetResourceFullName>Microsoft.Graph.Identity</TargetResourceFullName>
+      <TargetResourceName>Identity</TargetResourceName>
+      <Operation>GET</Operation>
+      <RequiredPermissions />
+      <Summary>To get the Identity extended resource, submit an `HTTP GET` request of the following REST call syntax.</Summary>
+      <Request>
+GET  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+</Request>
+      <Response>200 OK
+
+
+	...</Response>
+      <Remarks>
+        <string>An extended resource is at an edge of the resource graph. You cannot navigate further from an extended resource.</string>
+      </Remarks>
+      <Versions>
+        <string>beta</string>
+      </Versions>
+    </CodeExample>
+  </Content>
+</ContentComponentOfCodeExample>

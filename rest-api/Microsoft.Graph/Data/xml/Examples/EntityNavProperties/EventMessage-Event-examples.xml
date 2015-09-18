@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentComponentOfCodeExample xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Namespace>Microsoft.Graph</Namespace>
+  <Version>beta</Version>
+  <Versions>
+    <string>beta</string>
+  </Versions>
+  <MetadataUri>https://graph.microsoft.com/beta/$metadata</MetadataUri>
+  <Content>
+    <CodeExample>
+      <Title>Get the EventMessage/Event entity</Title>
+      <TargetResourceType>EntityNavProperty</TargetResourceType>
+      <TargetResourceFullName>Microsoft.Graph.EventMessage/Event</TargetResourceFullName>
+      <TargetResourceName>Event</TargetResourceName>
+      <Operation>GET</Operation>
+      <RequiredPermissions>
+        <RequiredPermission>
+          <Operation>GET</Operation>
+          <Scope>Calendar</Scope>
+          <Permission>Read</Permission>
+          <ConsentType>User</ConsentType>
+          <ApplicableScenarios />
+        </RequiredPermission>
+        <RequiredPermission>
+          <Operation>GET</Operation>
+          <Scope>Calendar</Scope>
+          <Permission>Read</Permission>
+          <ConsentType>User</ConsentType>
+          <ApplicableScenarios />
+        </RequiredPermission>
+      </RequiredPermissions>
+      <Summary>To get an EventMessage/Event &lt;code&gt;EventMessage/Event&lt;/code&gt; resource, submit an &lt;code&gt;HTTP GET&lt;/code&gt; request of the following REST call syntax:</Summary>
+      <Request>
+GET  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+
+</Request>
+      <Response>200 OK
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Event',
+	'@odata.id': '/&lt;Event.Id&gt;',
+	'Attendees' : '&lt;Collection(Microsoft.Graph.Attendee)&gt;',
+	 ...,
+	'WebLink' : '&lt;Edm.String&gt;'
+}
+</Response>
+      <Remarks>
+        <string>A successful response returns the &lt;code&gt;200 OK&lt;/code&gt; status code and a body containing an &lt;code&gt;Event&lt;/code&gt; resource representation.</string>
+      </Remarks>
+      <Versions>
+        <string>beta</string>
+      </Versions>
+    </CodeExample>
+    <CodeExample>
+      <Title>Create an EventMessage/Event entity</Title>
+      <TargetResourceType>EntityNavProperty</TargetResourceType>
+      <TargetResourceFullName>Microsoft.Graph.EventMessage/Event</TargetResourceFullName>
+      <TargetResourceName>Event</TargetResourceName>
+      <Operation>POST</Operation>
+      <RequiredPermissions>
+        <RequiredPermission>
+          <Operation>POST</Operation>
+          <Scope>Calendar</Scope>
+          <Permission>ReadWrite</Permission>
+          <ConsentType>User</ConsentType>
+          <ApplicableScenarios />
+        </RequiredPermission>
+        <RequiredPermission>
+          <Operation>POST</Operation>
+          <Scope>Calendar</Scope>
+          <Permission>ReadWrite</Permission>
+          <ConsentType>User</ConsentType>
+          <ApplicableScenarios />
+        </RequiredPermission>
+      </RequiredPermissions>
+      <Summary>To create an &lt;code&gt;EventMessage/Event&lt;/code&gt; resource, submit an &lt;code&gt;HTTP POST&lt;/code&gt; request of the following REST call syntax:</Summary>
+      <Request>
+POST  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+Content-Length : &lt;body_length&gt;
+
+{
+	&lt;Event.property_1&gt; : &lt;value_1&gt;,
+	...,
+	&lt;Event.property_n&gt; : &lt;value_n&gt;
+}
+</Request>
+      <Response>201 Created
+
+{
+
+	'@odata.context': 'https://graph.microsoft.com/&lt;version&gt;/&lt;tenant&gt;/$metadata#',
+	'@odata.type': '#Microsoft.Graph.Event',
+	'@odata.id': '/&lt;Event.Id&gt;',
+	'Attendees' : '&lt;Collection(Microsoft.Graph.Attendee)&gt;',
+	 ...,
+	'WebLink' : '&lt;Edm.String&gt;'
+}
+</Response>
+      <Remarks>
+        <string>The request body must contain the properties required to create an &lt;code&gt;Event&lt;/code&gt; resource related to the &lt;code&gt;EventMessage&lt;/code&gt; entity. The successful response returns a &lt;code&gt;201 Created&lt;/code&gt; status code, with a payload containing the newly created &lt;code&gt;Event&lt;/code&gt; resource representation.</string>
+      </Remarks>
+      <Versions>
+        <string>beta</string>
+      </Versions>
+    </CodeExample>
+    <CodeExample>
+      <Title>Update an EventMessage/Event entity</Title>
+      <TargetResourceType>EntityNavProperty</TargetResourceType>
+      <TargetResourceFullName>Microsoft.Graph.EventMessage/Event</TargetResourceFullName>
+      <TargetResourceName>Event</TargetResourceName>
+      <Operation>PUT</Operation>
+      <RequiredPermissions>
+        <RequiredPermission>
+          <Operation>PUT</Operation>
+          <Scope>Calendar</Scope>
+          <Permission>ReadWrite</Permission>
+          <ConsentType>User</ConsentType>
+          <ApplicableScenarios />
+        </RequiredPermission>
+        <RequiredPermission>
+          <Operation>PUT</Operation>
+          <Scope>Calendar</Scope>
+          <Permission>ReadWrite</Permission>
+          <ConsentType>User</ConsentType>
+          <ApplicableScenarios />
+        </RequiredPermission>
+      </RequiredPermissions>
+      <Summary>To update an &lt;code&gt;EventMessage/Event&lt;/code&gt; resource, submit an &lt;code&gt;HTTP PUT&lt;/code&gt; request of the following REST call syntax:</Summary>
+      <Request>
+PUT  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : &lt;body_length&gt;
+
+{
+	&lt;Event.property_1&gt; : &lt;value_1&gt;,
+	...,
+	&lt;Event.property_n&gt; : &lt;value_n&gt;
+}
+</Request>
+      <Response>204 No content
+
+</Response>
+      <Remarks>
+        <string>The request body must contain properties without default values. The successful response returns a &lt;code&gt;204 No content&lt;/code&gt; status code, without any payload.</string>
+      </Remarks>
+      <Versions>
+        <string>beta</string>
+      </Versions>
+    </CodeExample>
+    <CodeExample>
+      <Title>Modify an EventMessage/Event entity</Title>
+      <TargetResourceType>EntityNavProperty</TargetResourceType>
+      <TargetResourceFullName>Microsoft.Graph.EventMessage/Event</TargetResourceFullName>
+      <TargetResourceName>Event</TargetResourceName>
+      <Operation>PATCH</Operation>
+      <RequiredPermissions>
+        <RequiredPermission>
+          <Operation>PATCH</Operation>
+          <Scope>Calendar</Scope>
+          <Permission>ReadWrite</Permission>
+          <ConsentType>User</ConsentType>
+          <ApplicableScenarios />
+        </RequiredPermission>
+        <RequiredPermission>
+          <Operation>PATCH</Operation>
+          <Scope>Calendar</Scope>
+          <Permission>ReadWrite</Permission>
+          <ConsentType>User</ConsentType>
+          <ApplicableScenarios />
+        </RequiredPermission>
+      </RequiredPermissions>
+      <Summary>To modify an &lt;code&gt;Event&lt;/code&gt; resource, submit an &lt;code&gt;HTTP PATCH&lt;/code&gt; request of the following REST call syntax:</Summary>
+      <Request>
+PATCH  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+If-Match : '*'
+Content-Length : &lt;body_length&gt;
+
+{
+	&lt;Event.property_1&gt; : &lt;value_1&gt;,
+	...,
+	&lt;Event.property_n&gt; : &lt;value_n&gt;
+}
+</Request>
+      <Response>204 No content
+
+</Response>
+      <Remarks>
+        <string>The request body contains the to-be-modified properties with new values. The successful response returns a &lt;code&gt;204 No content&lt;/code&gt; status code, without any payload.</string>
+      </Remarks>
+      <Versions>
+        <string>beta</string>
+      </Versions>
+    </CodeExample>
+    <CodeExample>
+      <Title>Delete an EventMessage/Event entity</Title>
+      <TargetResourceType>EntityNavProperty</TargetResourceType>
+      <TargetResourceFullName>Microsoft.Graph.EventMessage/Event</TargetResourceFullName>
+      <TargetResourceName>Event</TargetResourceName>
+      <Operation>DELETE</Operation>
+      <RequiredPermissions>
+        <RequiredPermission>
+          <Operation>DELETE</Operation>
+          <Scope>Calendar</Scope>
+          <Permission>ReadWrite</Permission>
+          <ConsentType>User</ConsentType>
+          <ApplicableScenarios />
+        </RequiredPermission>
+        <RequiredPermission>
+          <Operation>DELETE</Operation>
+          <Scope>Calendar</Scope>
+          <Permission>ReadWrite</Permission>
+          <ConsentType>User</ConsentType>
+          <ApplicableScenarios />
+        </RequiredPermission>
+      </RequiredPermissions>
+      <Summary>To delete an &lt;code&gt;Event&lt;/code&gt; resource, submit an &lt;code&gt;HTTP DELETE&lt;/code&gt; request of the following REST call syntax:</Summary>
+      <Request>
+DELETE  HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+If-Match : '*'
+
+</Request>
+      <Response>204 No content
+
+</Response>
+      <Remarks>
+        <string>The request contains no payload. The successful response returns a &lt;code&gt;204 No content&lt;/code&gt; status code, also without any payload.</string>
+      </Remarks>
+      <Versions>
+        <string>beta</string>
+      </Versions>
+    </CodeExample>
+  </Content>
+</ContentComponentOfCodeExample>

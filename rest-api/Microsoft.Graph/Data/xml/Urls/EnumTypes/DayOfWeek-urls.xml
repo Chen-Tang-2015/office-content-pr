@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentComponentOfResourceUrlPaths xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Namespace>Microsoft.Graph</Namespace>
+  <Version>beta</Version>
+  <Versions>
+    <string>beta</string>
+  </Versions>
+  <MetadataUri>https://graph.microsoft.com/beta/$metadata</MetadataUri>
+  <Content>
+    <ResourceUrlPaths>
+      <Resource>
+        <FullName>Microsoft.Graph.DayOfWeek</FullName>
+        <Type>EnumType</Type>
+      </Resource>
+      <UrlPaths>
+        <string>/&lt;version&gt;/myOrganization/groups/&lt;Group.objectId&gt;/CalendarView/&lt;Event.Id&gt;/Recurrence/Pattern/FirstDayOfWeek</string>
+        <string>/&lt;version&gt;/myOrganization/directoryObjects/&lt;Group.objectId&gt;/CalendarView/&lt;Event.Id&gt;/Recurrence/Pattern/FirstDayOfWeek</string>
+        <string>/&lt;version&gt;/myOrganization/groups/&lt;Group.objectId&gt;/CalendarView/&lt;Event.Id&gt;/Instances/&lt;Event.Id&gt;/Recurrence/Pattern/FirstDayOfWeek</string>
+        <string>/&lt;version&gt;/myOrganization/directoryObjects/&lt;Group.objectId&gt;/CalendarView/&lt;Event.Id&gt;/Instances/&lt;Event.Id&gt;/Recurrence/Pattern/FirstDayOfWeek</string>
+        <string>/&lt;version&gt;/myOrganization/groups/&lt;Group.objectId&gt;/Events/&lt;Event.Id&gt;/Recurrence/Pattern/FirstDayOfWeek</string>
+        <string>/&lt;version&gt;/myOrganization/directoryObjects/&lt;Group.objectId&gt;/Events/&lt;Event.Id&gt;/Recurrence/Pattern/FirstDayOfWeek</string>
+        <string>/&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/CalendarGroups/&lt;CalendarGroup.Id&gt;/Calendars/&lt;Calendar.Id&gt;/CalendarView/&lt;Event.Id&gt;/Recurrence/Pattern/FirstDayOfWeek</string>
+        <string>/&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/CalendarGroups/&lt;CalendarGroup.Id&gt;/Calendars/&lt;Calendar.Id&gt;/CalendarView/&lt;Event.Id&gt;/Recurrence/Pattern/FirstDayOfWeek</string>
+        <string>/&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/CalendarGroups/&lt;CalendarGroup.Id&gt;/Calendars/&lt;Calendar.Id&gt;/Events/&lt;Event.Id&gt;/Recurrence/Pattern/FirstDayOfWeek</string>
+        <string>/&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/CalendarGroups/&lt;CalendarGroup.Id&gt;/Calendars/&lt;Calendar.Id&gt;/Events/&lt;Event.Id&gt;/Recurrence/Pattern/FirstDayOfWeek</string>
+        <string>/&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/Calendars/&lt;Calendar.Id&gt;/CalendarView/&lt;Event.Id&gt;/Recurrence/Pattern/FirstDayOfWeek</string>
+        <string>/&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/Calendars/&lt;Calendar.Id&gt;/CalendarView/&lt;Event.Id&gt;/Recurrence/Pattern/FirstDayOfWeek</string>
+        <string>/&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/Calendars/&lt;Calendar.Id&gt;/Events/&lt;Event.Id&gt;/Recurrence/Pattern/FirstDayOfWeek</string>
+        <string>/&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/Calendars/&lt;Calendar.Id&gt;/Events/&lt;Event.Id&gt;/Recurrence/Pattern/FirstDayOfWeek</string>
+        <string>/&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/CalendarView/&lt;Event.Id&gt;/Recurrence/Pattern/FirstDayOfWeek</string>
+        <string>/&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/CalendarView/&lt;Event.Id&gt;/Recurrence/Pattern/FirstDayOfWeek</string>
+        <string>/&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/Events/&lt;Event.Id&gt;/Recurrence/Pattern/FirstDayOfWeek</string>
+        <string>/&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/Events/&lt;Event.Id&gt;/Recurrence/Pattern/FirstDayOfWeek</string>
+        <string>/&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/CalendarView/&lt;Event.Id&gt;/Recurrence/Pattern/FirstDayOfWeek</string>
+        <string>/&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/CalendarView/&lt;Event.Id&gt;/Recurrence/Pattern/FirstDayOfWeek</string>
+        <string>/&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/Events/&lt;Event.Id&gt;/Recurrence/Pattern/FirstDayOfWeek</string>
+        <string>/&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/Events/&lt;Event.Id&gt;/Recurrence/Pattern/FirstDayOfWeek</string>
+      </UrlPaths>
+      <Summary />
+      <Remarks>
+        <string />
+      </Remarks>
+    </ResourceUrlPaths>
+  </Content>
+</ContentComponentOfResourceUrlPaths>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentComponentOfResourceOperations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Namespace>Microsoft.Graph</Namespace>
+  <Version>alpha</Version>
+  <Versions>
+    <string>alpha</string>
+  </Versions>
+  <MetadataUri>https://graph.microsoft.com/alpha/$metadata</MetadataUri>
+  <Content>
+    <ResourceOperations>
+      <Resource>
+        <FullName>Microsoft.Graph.Contact/manager</FullName>
+        <Type>EntityNavProperty</Type>
+      </Resource>
+      <Parent>
+        <FullName>Microsoft.Graph.Contact</FullName>
+        <Type>EntityType</Type>
+      </Parent>
+      <Versions>
+        <string>beta</string>
+      </Versions>
+      <Methods>
+        <HttpMethod>GET</HttpMethod>
+      </Methods>
+      <Remarks>
+        <string />
+      </Remarks>
+      <RequiredToCreate>false</RequiredToCreate>
+    </ResourceOperations>
+    <ResourceOperations>
+      <Resource>
+        <FullName>Microsoft.Graph.Contact/manager</FullName>
+        <Type>EntityNavProperty</Type>
+      </Resource>
+      <Parent>
+        <FullName>Microsoft.Graph.Contact</FullName>
+        <Type>EntityType</Type>
+      </Parent>
+      <Versions>
+        <string>alpha</string>
+      </Versions>
+      <Methods>
+        <HttpMethod>GET</HttpMethod>
+      </Methods>
+      <Remarks>
+        <string />
+      </Remarks>
+      <RequiredToCreate>false</RequiredToCreate>
+    </ResourceOperations>
+  </Content>
+</ContentComponentOfResourceOperations>

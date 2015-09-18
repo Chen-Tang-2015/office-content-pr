@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentComponentOfCodeExample xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Namespace>Microsoft.Graph</Namespace>
+  <Version>beta</Version>
+  <Versions>
+    <string>beta</string>
+  </Versions>
+  <MetadataUri>https://graph.microsoft.com/beta/$metadata</MetadataUri>
+  <Content>
+    <CodeExample>
+      <Title>Call the Group/RemoveFavorite action</Title>
+      <TargetResourceType>Action</TargetResourceType>
+      <TargetResourceFullName>Microsoft.Graph.Group/RemoveFavorite</TargetResourceFullName>
+      <TargetResourceName>RemoveFavorite</TargetResourceName>
+      <Operation>POST</Operation>
+      <RequiredPermissions>
+        <RequiredPermission>
+          <Operation>POST</Operation>
+          <Scope>Group</Scope>
+          <Permission>ReadWrite.All</Permission>
+          <ConsentType>User</ConsentType>
+          <ApplicableScenarios />
+        </RequiredPermission>
+      </RequiredPermissions>
+      <Summary>To call the &lt;code&gt;Group/RemoveFavorite&lt;/code&gt; action,submit a &lt;code&gt;POST&lt;/code&gt; request of the following REST call syntax.</Summary>
+      <Request>
+POST /&lt;version&gt;/myOrganization/groups/&lt;Group.objectId&gt;/RemoveFavorite HTTP/1.1
+Host : graph.microsoft.com
+Authorization : Bearer &lt;access_token&gt;
+Accept : application/json;odata=verbose
+Content-Length : 0
+
+</Request>
+      <Response>201 Created
+
+</Response>
+      <Remarks>
+        <string>A successful call to the Group/RemoveFavorite action returns an empty response.</string>
+      </Remarks>
+      <Versions>
+        <string>beta</string>
+      </Versions>
+    </CodeExample>
+  </Content>
+</ContentComponentOfCodeExample>

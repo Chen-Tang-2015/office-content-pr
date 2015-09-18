@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentComponentOfResourceUrlPaths xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Namespace>Microsoft.Graph</Namespace>
+  <Version>beta</Version>
+  <Versions>
+    <string>beta</string>
+  </Versions>
+  <MetadataUri>https://graph.microsoft.com/beta/$metadata</MetadataUri>
+  <Content>
+    <ResourceUrlPaths>
+      <Resource>
+        <FullName>Microsoft.Graph.ServicePlanInfo</FullName>
+        <Type>ComplexType</Type>
+      </Resource>
+      <UrlPaths>
+        <string>/&lt;version&gt;/myOrganization/subscribedSkus/&lt;SubscribedSku.objectId&gt;/servicePlans</string>
+      </UrlPaths>
+      <Summary />
+      <Remarks>
+        <string />
+      </Remarks>
+    </ResourceUrlPaths>
+  </Content>
+</ContentComponentOfResourceUrlPaths>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentComponentOfResourceOperations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Namespace>Microsoft.Graph</Namespace>
+  <Version>beta</Version>
+  <Versions>
+    <string>beta</string>
+  </Versions>
+  <MetadataUri>https://graph.microsoft.com/beta/$metadata</MetadataUri>
+  <Content>
+    <ResourceOperations>
+      <Resource>
+        <FullName>Microsoft.Graph.Folder</FullName>
+        <Type>EntityType</Type>
+      </Resource>
+      <Versions>
+        <string>beta</string>
+      </Versions>
+      <Methods>
+        <HttpMethod>GET</HttpMethod>
+        <HttpMethod>POST</HttpMethod>
+        <HttpMethod>PUT</HttpMethod>
+        <HttpMethod>PATCH</HttpMethod>
+        <HttpMethod>DELETE</HttpMethod>
+      </Methods>
+      <Remarks>
+        <string />
+      </Remarks>
+      <RequiredToCreate>false</RequiredToCreate>
+    </ResourceOperations>
+  </Content>
+</ContentComponentOfResourceOperations>

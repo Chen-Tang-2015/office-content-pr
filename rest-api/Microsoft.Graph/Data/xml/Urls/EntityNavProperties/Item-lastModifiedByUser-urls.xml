@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentComponentOfResourceUrlPaths xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Namespace>Microsoft.Graph</Namespace>
+  <Version>beta</Version>
+  <Versions>
+    <string>beta</string>
+  </Versions>
+  <MetadataUri>https://graph.microsoft.com/beta/$metadata</MetadataUri>
+  <Content>
+    <ResourceUrlPaths>
+      <Resource>
+        <FullName>Microsoft.Graph.Item/lastModifiedByUser</FullName>
+        <Type>EntityNavProperty</Type>
+      </Resource>
+      <Parent>
+        <FullName>Microsoft.Graph.Item</FullName>
+        <Type>EntityType</Type>
+      </Parent>
+      <UrlPaths>
+        <string>/&lt;version&gt;/myOrganization/drives/&lt;Drive.id&gt;/files/&lt;Item.id&gt;/lastModifiedByUser</string>
+        <string>/&lt;version&gt;/myOrganization/drives/&lt;Drive.id&gt;/files/&lt;Item.id&gt;/children/&lt;Item.id&gt;/lastModifiedByUser</string>
+        <string>/&lt;version&gt;/myOrganization/groups/&lt;Group.objectId&gt;/files/&lt;Item.id&gt;/lastModifiedByUser</string>
+        <string>/&lt;version&gt;/myOrganization/directoryObjects/&lt;Group.objectId&gt;/files/&lt;Item.id&gt;/lastModifiedByUser</string>
+        <string>/&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/files/&lt;Item.id&gt;/lastModifiedByUser</string>
+        <string>/&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/files/&lt;Item.id&gt;/lastModifiedByUser</string>
+        <string>/&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/files/&lt;Item.id&gt;/lastModifiedByUser</string>
+        <string>/&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/files/&lt;Item.id&gt;/lastModifiedByUser</string>
+        <string>/&lt;version&gt;/myOrganization/drives/&lt;Drive.id&gt;/files/&lt;File.id&gt;/lastModifiedByUser</string>
+        <string>/&lt;version&gt;/myOrganization/drives/&lt;Drive.id&gt;/files/&lt;Item.id&gt;/children/&lt;File.id&gt;/lastModifiedByUser</string>
+        <string>/&lt;version&gt;/myOrganization/groups/&lt;Group.objectId&gt;/files/&lt;File.id&gt;/lastModifiedByUser</string>
+        <string>/&lt;version&gt;/myOrganization/directoryObjects/&lt;Group.objectId&gt;/files/&lt;File.id&gt;/lastModifiedByUser</string>
+        <string>/&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/files/&lt;File.id&gt;/lastModifiedByUser</string>
+        <string>/&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/files/&lt;File.id&gt;/lastModifiedByUser</string>
+        <string>/&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/files/&lt;File.id&gt;/lastModifiedByUser</string>
+        <string>/&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/JoinedGroups/&lt;Group.objectId&gt;/files/&lt;File.id&gt;/lastModifiedByUser</string>
+        <string>/&lt;version&gt;/myOrganization/users/&lt;User.objectId&gt;/TrendingAround/&lt;File.id&gt;/lastModifiedByUser</string>
+        <string>/&lt;version&gt;/myOrganization/directoryObjects/&lt;User.objectId&gt;/TrendingAround/&lt;File.id&gt;/lastModifiedByUser</string>
+      </UrlPaths>
+      <Summary />
+      <Remarks>
+        <string />
+      </Remarks>
+    </ResourceUrlPaths>
+  </Content>
+</ContentComponentOfResourceUrlPaths>
