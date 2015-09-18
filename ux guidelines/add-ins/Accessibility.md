@@ -6,6 +6,12 @@
 
 As you design and develop your Office 365 web apps and Office and SharePoint Add-ins, you'll want to ensure that all potential users and customers are able to use your app or add-in successfully. Apply the following guidelines to ensure that your solution is accessible to all audiences.
 
+**Design for multiple input methods.**
+
+- Ensure that users can perform operations by using only the keyboard. Users should be able to move to all actionable elements on the page by using a combination of the Tab and Arrow keys.
+- On a mobile device, when users operate a control by touch, the device should provide useful audio feedback.
+- Provide helpful labels for all interactive controls. 
+
 **Make your app or add-in easy to use.**
 
 - Don't rely on a single attribute, such color, size, shape, location, orientation, or sound, to convey meaning in your UI.
@@ -19,12 +25,6 @@ As you design and develop your Office 365 web apps and Office and SharePoint Add
 - Avoid unexpected color changes.
 - Provide meaningful and timely information to describe UI elements, titles and headings, inputs, and errors. Ensure that names of controls adequately describe the intent of the control.
 - Follow [standard guidelines](http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) for color contrast.
-
-**Design for multiple input methods.**
-
-- Ensure that users can perform operations by using only the keyboard. Users should be able to move to all actionable elements on the page by using a combination of the Tab and Arrow keys.
-- On a mobile device, when users operate a control by touch, the device should provide useful audio feedback.
-- Provide helpful labels for all interactive controls. 
 
 **Account for assistive technologies.**
 
