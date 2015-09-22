@@ -136,11 +136,11 @@ angular
 This app will have a very simple UI consisting of just two buttons. One button will be used to connect to Office 365 and one button will be used to send an email via the Microsoft Graph API. Add the following markup to *main.html*.
 
 ```html
-<button ng-click="main.connect()">
+<button id="connect" ng-click="">
 	Connect to Office 365
 </button>
 
-<button ng-click="">
+<button id="sendMail" ng-click="">
 	Send mail with Microsoft Graph API
 </button>
 ```
@@ -178,7 +178,9 @@ adalAuthenticationServiceProvider.init(
 
 ### Wire up the **connect** button
 
-Now that ADAL JS is configured, we have to wire up the **connect** button in our view to the ADAL JS ```login``` function that will redirect the user to the Office 365 sign in page. First, create a ```connect``` function that calls the ADAL JS ```login``` function in *mainController.js* and attach it to the controller's view model. Add the following code to the empty function we created in the *Contents of mainController.js* section.
+Now that ADAL JS is configured, we have to wire up the **connect** button in our view to the ADAL JS ```login``` function that will redirect the user to the Office 365 sign in page. 
+
+First, create a ```connect``` function that calls the ADAL JS ```login``` function in *mainController.js* and attach it to the controller's view model. Add the following code to the empty function we created in the *Contents of mainController.js* section.
 
 ```javascript
 var vm = this;
@@ -188,19 +190,74 @@ vm.connect = function() {
 };
 ```
 
-Hook up the ```connect``` function you just created to the **connect** button in *main.html*.
+Next, hook up the ```connect``` function you just created to the **connect** button in *main.html*.
 
 ```html
-<button ng-click="main.connect();">
+<button id="connect" ng-click="main.connect();">
 	Connect to Office 365
 </button>
 ```
 
-That's all you need to do to connect to Office 365 and get an access token to use with the Microsoft Graph API. When a user clicks the **connect button**, they'll be redirected to the Office 365 sign in page and returned to your app with an access token once they sign in and grant your app access to the requested resources. 
+That's all you need to do to connect to Office 365 and get an access token to use with the Microsoft Graph API. When a user clicks the **connect** button, they'll be redirected to the Office 365 sign in page and returned to your app with an access token once they sign in and grant your app access to the requested resources.
+
+## Make your first Microsoft Graph API call 
+
+A Microsoft Graph API call is a typical HTTP request, specifying an HTTP method, an endpoint, and an an optional payload, with a [bearer token](http://self-issued.info/docs/draft-ietf-oauth-v2-bearer.html) in the header. As previously mentioned, ADAL JS handles token management for us so we don't need to explicitly add the token to the request ourselves.
+
+First, add a ```request``` object and the execution code inside a ```sendMail``` function attached to the view model in *mainController.js*.
+
+```javascript
+vm.sendMail = function () {      
+  // The HTTP request payload, i.e. the Message object.
+  var email = {
+    Message: {
+      Subject: 'This is where your email subject goes.',
+      Body: {
+        ContentType: 'HTML',
+        Content: 'This is where your email body goes.'
+      },
+      ToRecipients: [
+        {
+          EmailAddress: {
+            Address: adalAuthenticationService.userInfo.profile.upn
+          }
+        }
+      ]
+    },
+    SaveToSentItems: true
+  };
+
+  // The HTTP request, including the HTTP method, API endpoint, and payload.
+  var request = {
+    method: 'POST',
+    url: 'https://graph.microsoft.com/beta/me/sendMail',
+    data: email
+  };
+
+  $http(request)
+    .then(function (response) {
+      console.log('HTTP request to Microsoft Graph API returned successfully.', response);
+    }, function (error) {
+      console.log('HTTP request to Microsoft Graph API failed.', error);
+    });
+};
+```
+
+Next, hook up the ```sendMail``` function you just created to the **sendMail** button in *main.html*.
+
+```html
+<button id="sendMail" ng-click="main.sendMail()">
+	Send mail with Microsoft Graph API
+</button>
+```
+
+That's all you need to do to make a call to the Microsoft Graph API. When the user clicks the **sendMail** button, they'll send an email defined in the code to their own mailbox.
+
+The Microsoft Graph API is a very powerful, unifiying API that can be used to interact with all kinds of Microsoft data. Check out the [API reference]() to explore what else you can accomplish with the Microsoft Graph API.
 
 ## Additional resources
 
+-  [Angular Connect sample](https://github.com/OfficeDev/O365-Angular-Unified-API-Connect)
 -  [Office Dev Center](http://dev.office.com) 
--  [Office 365 APIs starter projects and code samples](..\howto\Starter-projects-and-code-samples.md) 
--  [Office Developer on GitHub](https://github.com/OfficeDev)
+-  [Microsoft Graph API reference]()
 
