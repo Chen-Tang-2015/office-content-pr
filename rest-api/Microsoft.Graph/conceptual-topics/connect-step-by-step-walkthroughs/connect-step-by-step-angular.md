@@ -21,6 +21,10 @@ This topic assumes you have the following.
 * An Office 365 account. You can sign up for [an Office 365 Developer subscription](https://portal.office.com/Signup/Signup.aspx?OfferId=6881A1CB-F4EB-4db3-9F18-388898DAF510&DL=DEVELOPERPACK&ali=1#0) that includes the resources that you need to start building Office 365 apps.
 * A Microsoft Azure tenant to register your application in. Azure Active Directory (AD) provides identity services that applications use for authentication and authorization. If you don't have an Azure subscription, you can sign up for a trial [here](https://account.windowsazure.com/SignUp).
 
+## Register your application with Azure Active Directory
+
+Outsource this main dish. As a side dish, explain how to get the client ID of the registered application from the Azure Management Portal to be used later in the meal.   
+
 ## Create an Angular app
 
 Create a simple Angular app with the following directory structure.
@@ -99,7 +103,7 @@ angular.module('app', [
 
 #### Route configuration
 
-Now we'll add our configuration code to the empty ```config``` function we just created. First, we'll register our one and only route, and point all other routes to that route. The route definition is just be the root route, ```'/'```. If you used the directory structure defined in the first part of this section, the ```templateUrl``` is ```'views/main.html'```. We will also use the ```controllerAs``` syntax, defined as ```main```, to keep our global scope clean.
+Now we'll add our configuration code to the empty ```config``` function we just created. First, we'll register our one and only route, and point all other routes to that route. The route definition is just the root route, ```'/'```. If you used the directory structure defined in the first part of this section, the ```templateUrl``` is ```'views/main.html'```. We will also use the ```controllerAs``` syntax, defined as ```main```, to keep our global scope clean.
 
 ```javascript
 $routeProvider
@@ -113,11 +117,39 @@ $routeProvider
   });
 ```
 
-#### ADAL JS configuration
+We'll configure ADAL JS in the next section when we walk through how to connect to the Microsoft Graph API by authenticating through Azure Active Directory.
 
-Finally, we'll configure [Active Directory Authentication Library for JavaScript (ADAL JS)](https://github.com/AzureAD/azure-activedirectory-library-for-js) to have users authenticate with Azure AD and to allow our Angular app to make cross-origin resource sharing (CORS) requests to the Microsoft Graph API.
+### Contents of *mainController.js*
 
-To configure the ADAL JS service, just pass an object containing the name of your Azure AD tenant, the client ID of your registered Azure application, and an ```endpoints``` object defining which resources your application wants access to, along with ```$httpProvider```. For more in-depth configuration options, check out [ADAL JS on GitHub](https://github.com/AzureAD/azure-activedirectory-library-for-js).
+The ```mainController.js``` files contains the code for authentication and the code for making a call to the Microsoft Graph API. Create a controller, named ```MainController```, for your ```app``` module and inject ```$http``` and ```adalAuthenticationService``` as dependencies. You will add code to the empty controller function that is created here later in the topic.
+
+```javascript
+angular
+  .module('app')
+  .controller('MainController', function($http, adalAuthenticationService) {
+    // Add the rest of the code in this section here.
+  });
+```
+
+### Contents of *main.html*
+
+Provide the basic markup needed, which is a **connect** button and a **send mail** button.
+
+## Connect to the Microsoft Graph API
+
+Before making a call to the Microsoft Graph API, the user of your application needs to be granted access via the [OAuth 2.0 standard of authentication](https://msdn.microsoft.com/en-us/library/azure/dn645545.aspx) using the [implicit grant type](http://oauthlib.readthedocs.org/en/latest/oauth2/grants/implicit.html), which is defined as follows. 
+
+1. Your app redirects the user to an Office 365 sign in page. 
+2. The user signs in and grants your app access to the requested resources.
+3. The user is redirected back to your app with an access token that can be used to authenticate Microsoft Graph API requests in the URL.
+
+Since we are using ADAL JS, all of the token handling is taken care of for us. All we need to do is configure ADAL JS and then wire the appropriate function to the **connect** button in our view.
+
+### ADAL JS configuration
+
+First, we'll configure [Active Directory Authentication Library for JavaScript (ADAL JS)](https://github.com/AzureAD/azure-activedirectory-library-for-js) to have users authenticate with Azure AD and to allow our Angular app to make cross-origin resource sharing (CORS) requests to the Microsoft Graph API.
+
+To configure the ADAL JS service, just pass an object containing the name of your Azure AD tenant, the client ID of your registered Azure application, and an ```endpoints``` object defining which resources your application needs CORS access to, along with ```$httpProvider```. For more in-depth configuration options, check out [ADAL JS on GitHub](https://github.com/AzureAD/azure-activedirectory-library-for-js).
 
 ```javascript
 adalAuthenticationServiceProvider.init(
@@ -131,172 +163,6 @@ adalAuthenticationServiceProvider.init(
   $httpProvider
 );
 ```
-
-### Contents of *mainController.js*
-
-The ```mainController.js``` files contains the code for authentication and the code for making a call to the Microsoft Graph API. 
-
-
-
-
-
-### Contents of *main.html*
-
-This is a view. Byaay!
-
-### Register your application with Azure Active Directory
-
-Before you start writing the code for your Microsoft Graph application, you're required to do a little work to register your application with Azure Active Directory and to set permissions for your application to use Microsoft Graph services. You only need to do this once for each application.
-
-Check out <a href="get-started-with-office-365-unified-api#msg_configure_web_app">Configure an Office 365 unified API web app in Azure for detailed instructions</a>, with a few caveats.
-
-* Specify *http://127.0.0.1:8080/* as the **Sign-on URL** in step 6.
-* Only select **Read signed-in user's mail** in the **Delegated Permissions** list in step 9. 
-
-### Configure your app to allow the OAuth 2.0 implicit grant flow
-
-To get an access token for Microsoft Graph API requests, your application will use the OAuth implicit grant flow. You need to update the application's manifest to allow the OAuth implicit grant flow because it is not allowed by default. 
-
-1. Select the **Configure** tab of your application's entry in the Azure Management Portal. 
-
-2. Using the **Manage Manifest** button in the drawer, download the manifest file for the application and save it to your computer.
-
-3. Open the manifest file with a text editor. Search for the *oauth2AllowImplicitFlow* property. By default it is set to *false*; change it to *true* and save the file.
-
-4. Using the **Manage Manifest** button, upload the updated manifest file.
-
-You've now successfully created your app and registered it with Azure AD. The final step is to add code to make requests to the Microsoft Graph API. 
-
-## Code your app
-
-Before we continue, check that you're still in the *Starter* directory of the project and you've included **adal.js** and **adal-angular.js** in **index.html**. After that, continue on to authenticating with Azure AD.   
-
-### Authenticate with Azure AD and get an access token
-
-[ADAL for JS](https://github.com/AzureAD/azure-activedirectory-library-for-js) provides the functionality to manage authentication in your application. You can use it for caching and retrieving access and refresh tokens. We need to edit only the **app.js** file in *public/scripts* to get authentication working.
-
-To start, add *AdalAngular* as a required module for your *app* module on line 8.
-
-```javascript
-angular
-  .module('app', [
-    'ngRoute', 
-    'AdalAngular'
-  ])
-```
-
-Next, we'll configure the service that the *AdalAngular* provides us with by passing it in as an argument in your module's config function on line 13. We'll also add Angular's *$http* module at this time because we need it to configure the service.
-
-```javascript
-function config($routeProvider, $httpProvider, adalAuthenticationServiceProvider) {
-```
-
-The next step is to initialize *adalAuthenticationServiceProvider* in the *config* function so that the ADAL API is exposed and configured for your application. There are three arguments needed to initialize the provider: *tenant*, *clientId*, and *cacheLocation*. The *tenant* value is the subdomain of **.onmicrosoft** you specified while signing up for your Office 365 Developer Site. The *clientId* is the client ID of your application that can be found in the Azure Management Portal under the **Configure** tab of your application's page. Finally, include *cacheLocation* with the value of *localStorage* if your app will run in Internet Explorer. 
-
-```javascript
-// Initialize the ADAL provider with your tenant name and clientID (found in the Azure Management Portal).
-adalAuthenticationServiceProvider.init(
-  {
-    tenant: '{your_subdomain}.onmicrosoft.com',
-    clientId: 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX',
-    cacheLocation: 'localStorage'
-  },
-  $httpProvider
-  );
-```
-
-At this point, you've configured the *AdalAngular* module and can use it to authenticate users in your application. An efficient way to do this in Angular applications is to set up which routes require the user to be authenticated. In our example, we want only authenticated users to be able to see our app, so protect the root route in the *$routeProvider* configuration by adding the *requireADLogin* member to the object you pass to the *.when* method.
-
-```javascript
-$routeProvider
-  .when('/', {
-    templateUrl: 'views/home.html',
-    controller: 'HomeController',
-    controllerAs: 'home',
-    requireADLogin: true     // Designates that the user must be authenticated to view this page.
-  })
-  .otherwise({
-    redirectTo: '/'
-  });
-```
-
-### Retrieve a user's email from Office 365
-
-Now that you have authenticated your user, you can make HTTP requests to the Microsoft Graph API.
-
-To make the HTTP request to the Microsoft Graph API to retrieve the user's email, you need to declare the URL of the API at init time so ADAL JS knows to trust it, using cross-origin resource sharing (CORS). You can do this by passing an *endpoints* object to our *adalAuthenticationServiceProvider.init* code in **app.js**. The endpoint you need to add is *https://graph.microsoft.com*.
-
-```javascript 
-var endpoints = {
-  'https://graph.microsoft.com': 'https://graph.microsoft.com'
-};
-	
-// Initialize the ADAL provider with your tenant name and clientID (found in the Azure Management Portal).
-adalAuthenticationServiceProvider.init(
-  {
-    tenant: '{your_subdomain}.onmicrosoft.com',
-    clientId: 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX',
-    cacheLocation: 'localStorage',
-    endpoints: endpoints
-  },
-  $httpProvider
-  );
-```
-
-Now that ADAL JS is set up to make HTTP requests to the Microsoft Graph API using CORS, the only thing left to do is make the HTTP request to retrieve the user's email. We'll do this in **homeController.js**, which is located in the *public/controllers* folder. 
-
-Add the following code to your empty controller. It sets up the HTTP request and executes it. When the response is received, it attaches the data from the response to the view model to make it accessible from the view (**public/views/home.html**). 
-
-```javascript
-$http.get('https://graph.microsoft.com/beta/me/messages')
-  .then(function(response) {
-    $log.debug('HTTP request to Microsoft Graph API returned successfully.');
-    vm.emails = response.data.value;
-  }, function(error) {
-    $log.error('HTTP request to Microsoft Graph API failed.');
-  });
-```
-
-Finally, let's add some HTML to show the data you just received. Add the following code to **home.html** located in the *public/views* folder. 
-
-```html
-<div class="container-fluid">
-  <row>
-    <div style="margin-top: 20px;">
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th class="col-sm-1">From</th>
-            <th class="col-sm-1">Subject</th>
-            <th class="col-sm-3">Body Preview</th>
-            <th class="col-sm-1">Web Link</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr ng-repeat="email in home.emails">
-            <td>{{email.Sender.EmailAddress.Name}}</td>
-            <td>{{email.Subject}}</td>
-            <td>{{email.BodyPreview}}</td>
-            <td><a href={{email.WebLink}}>View on OWA</a></td>
-          </tr>
-
-          <tr ng-if="home.emails.length == 0">
-            <td colspan="4" align="center">Your inbox is empty.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </row>
-</div>
-```
-
-## Test your app
-
-Let's test your application to make sure it's successfully authenticating the user with Azure AD and fetching the user's email. From a command prompt within your the *Starter* directory, enter the command `node server.js`. This will start a development server listening on port 8080. Navigate to *http://127.0.0.1:8080/* in a web browser. If you've followed the steps correctly, your application should direct you to an Azure Active Directory sign-in page. Sign in using your Office 365 credentials (**user@{your_subdomain}.onmicrosoft.com**) and verify that you return to the application where you'll find your email.
-
-Congratulations! You just built an Angular app using the Microsoft Graph API. 
-
-![App Screenshot](images/Graph-Angular-GettingStarted-Screenshot.png)
 
 ## Additional resources
 
