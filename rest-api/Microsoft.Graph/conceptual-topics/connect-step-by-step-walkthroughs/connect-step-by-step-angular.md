@@ -2,38 +2,86 @@
   TODO: Determine which metadata is necessary for Markdown to HTML conversion
   tool to work properly.
 --->
-ms.TocTitle: Build an Angular app using the Microsoft Graph API 
-Title: Build an Angular app using the Microsoft Graph API 
-Description: Create an example Angular app using Microsoft Graph API to connect to your customers’ document, email, contacts, or calendar data.
+ms.TocTitle: Connect to the Microsoft Graph API with an Angular app 
+Title: Connect to the Microsoft Graph API with an Angular app 
+Description: Connect to the Microsoft Graph API with an Angular app to connect to your customers’ document, email, contacts, or calendar data.
 ms.ContentId: 2ebab86b-e218-4830-9255-c5d7b20647c5
 ms.topic: article (how-tos)
 ms.date: September 21, 2015
 
-# Build an Angular app using the Microsoft Graph API 
+# Connect to the Microsoft Graph API with an Angular app 
+
+The purpose of this topic is to walk through the process of connecting to and calling the Microsoft Graph API. This topic won't create an app from scratch, but will guide you through the authentication process and making a call to the Microsoft Graph API. The source code in this [repository](https://github.com/OfficeDev/O365-angular-Unified-API-Connect) is the result of applying the concepts in this topic to a simple Angular app.
  
-Before you can start working on your first Angular application with the Microsoft Graph API, there are a few one-time tasks that you need to complete, including <a href="setup-development-environment?javascript">setting up your Office 365 development environment</a> and grabbing the right tools.
+## Prerequisites  
 
-After setup, we'll walk you through creating a simple [Angular](https://angularjs.org/) app, **SimpleMailApp** that uses the [Active Directory Authentication Library (ADAL) for JavaScript](https://github.com/AzureAD/azure-activedirectory-library-for-js) to authenticate a user and REST calls to retrieve that user's email using [cross-origin resource sharing (CORS)](.\create-web-apps-using-CORS-to-access-files-in-Office-365.md).
+This topic assumes you have the following.
 
-![App Screenshot](images/Graph-Angular-GettingStarted-Screenshot.png)
+* An understanding of JavaScript and the [AngularJS framework](https://angularjs.org/).
+* An Office 365 account. You can sign up for [an Office 365 Developer subscription](https://portal.office.com/Signup/Signup.aspx?OfferId=6881A1CB-F4EB-4db3-9F18-388898DAF510&DL=DEVELOPERPACK&ali=1#0) that includes the resources that you need to start building Office 365 apps.
+* A Microsoft Azure tenant to register your application in. Azure Active Directory (AD) provides identity services that applications use for authentication and authorization. If you don't have an Azure subscription, you can sign up for a trial [here](https://account.windowsazure.com/SignUp).
 
-This article focuses on an Angular front-end because ADAL JS was designed with single-page applications (SPAs) and Angular in mind. The library assumes the interaction pattern that SPAs require. While it is possible to use the library without Angular, it requires you to write much more code. Check out [Create JavaScript web apps using CORS to access Office 365 APIs](.\create-web-apps-using-CORS-to-access-files-in-Office-365.md) if you're interested in using the Office 365 APIs without ADAL JS.
+## Create an Angular app
 
-## Before you start 
+Create a simple Angular app with the following directory structure.
 
-Before you can create applications that access the Office 365 APIs, you'll need to set up your developer environment. This consists of three one-time tasks to make sure you've got the tools and environment to be successful:
+    \--- public
+    |    +--- index.html                  // Contains dependencies.
+    |    \--- scripts
+    |    |    +--- app.js                 // Contains Angular app configuration code.          
+    |    \--- controllers
+    |    |    +--- mainController.js      // Contains navigation and API call code.
+    |    \--- views
+    |    |    +--- main.html              // Contains the app's view markup.
 
-1. Download tools to create your Angular application, including an IDE, Git, and Node.js. 
-2. Get an Office 365 for business subscription, to access the Office 365 APIs.
-3. Associate your Office 365 subscription with Azure AD, so you can create and manage apps.
+### Contents of *index.html*
 
-If you still need to complete any of these steps, take a look at <a href="setup-development-environment?javascript">Set up your Office 365 development environment</a> for detailed instructions on getting set up.
+Create a basic HTML page with the following elements.
 
-**Note**  Node.js, and specifically its package manager (npm), is needed for this article to install project dependencies. It's not necessary for development with the Office 365 APIs.
+* The ```ng-app``` directive attached to the root HTML element. You can give your app whatever name you want, but the rest of this topic will assume it is simply ```app```.
+* ```script``` elements in the ```head``` element embedding [*angular.js*](https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js), [*angular-route.js*](https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js), [*adal.js*](https://secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/adal.js), [*adal-angular.js*](https://secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/adal-angular.js), and your app's own JavaScript files.
+  * *angular.js* - The AngularJS framework.
+  * *angular-route.js* - The ```ngRoute``` module, used for deep-linking URLs to controllers and views.
+  * *adal.js* - [Active Directory Authentication Library for JavaScript (ADAL JS)](https://github.com/AzureAD/azure-activedirectory-library-for-js), which helps you to use Azure AD for handling authentication in your single-page applications.
+  * *adal-angular.js* - Additional code that works with *adal.js* to work better with the AngularJS framework.
+* A ```body``` element containing the ```ng-view``` directive where the view for the current route will be rendered. 
 
-## Create your app and add dependencies 
+Here is an example of what your resulting HTML page should look like with the bare essentials you need to connect and make a call to the Microsoft Graph API.
 
-In this step, you'll set up an Angular app by leveraging an empty project we developed, add the Azure Active Directory Authentication Library (ADAL) for JavaScript to it, and set up your application to communicate with Azure by registering it in your Azure Management Portal.
+```html
+
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+  <meta charset="utf-8">
+
+  <!-- Dependencies --->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-route.js"></script>
+  <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/adal.min.js"></script>
+  <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/adal-angular.min.js"></script>
+  
+  <!-- App code --> 
+  <script src="scripts/app.js"></script>
+  <script src="controllers/mainController.js"></script>
+
+</head>
+
+<body ng-view>
+</body>
+
+</html>
+
+```
+
+### Contents of *mainController.js*
+
+This is a controller. Byaay!
+
+### Contents of *app.js*
+
+The *app.js* file contains your Angular app configuration code, including route configuration and ADAL JS configuration.
 
 ### Set up the SimpleMailApp project
 
