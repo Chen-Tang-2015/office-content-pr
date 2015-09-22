@@ -56,7 +56,7 @@ Here is an example of what your resulting HTML page should look like with the ba
 <head>
   <meta charset="utf-8">
 
-  <!-- Dependencies --->
+  <!-- Dependencies -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-route.js"></script>
   <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/adal.min.js"></script>
@@ -75,55 +75,76 @@ Here is an example of what your resulting HTML page should look like with the ba
 
 ```
 
-### Contents of *mainController.js*
-
-This is a controller. Byaay!
-
 ### Contents of *app.js*
 
-The *app.js* file contains your Angular app configuration code, including route configuration and ADAL JS configuration.
+The *app.js* file contains your Angular app configuration code. Create your app's main module, called ```app```, using the ```angular.module``` function and require the ```ngRoute``` and ```AdalAngular``` modules by including them in the ```requires``` array because the app depends on them for routing and Azure AD authentication. 
 
-### Set up the SimpleMailApp project
-
-To get you up and running as quickly as possible, you'll leverage an empty project we created, which can be found on [GitHub](https://github.com/OfficeDev/Graph-Angular-GettingStarted). 
-
-1. Using Git, clone the empty project from the command line.
- 
-    ```git clone https://github.com/OfficeDev/Graph-Angular-GettingStarted.git```
-
-    **Note**  If you are unfamiliar with Git, you can download the code directly from [GitHub](https://github.com/OfficeDev/Graph-Angular-GettingStarted). 
-
-2. Then switch to your new project folder and install your project dependencies using npm, the package manager for Node.js. 
-
-    ```cd Graph-Angular-GettingStarted/Starter```    
-    ```npm install```     
-
-**Note**  There's also a *Completed* folder in the repository. The project in that folder is ready to run once you configure it with your Azure tenant information and install the dependencies. 
-
-### Add ADAL JS to the SimpleMailApp project
-
-ADAL JS is a JavaScript library which provides you with complete support for both signing on Azure AD users in single-page applications (SPAs) like this one, and consuming directly from JavaScript Web APIs secured by Azure AD.
-
-ADAL.js has two layers, in two files:
-
-* **adal.js** Use for all JavaScript applications. It contains low-level functions, such as domain-specific logic, building and parsing OAuth2 messages, and caching tokens. For more information, see [Introducing ADAL JS v1](http://www.cloudidentity.com/blog/2015/02/19/introducing-adal-js-v1/).
-* **adal-angular.js** Include along with adal.js for Angular applications. It contains specific functions compatible with the Angular framework.
-
-Include both of these files in your project to get access to a programming model for Azure AD authentication and calling APIs secured by Azure AD like the Outlook Mail REST API we will call later on in this article. 
-
-You can get the bits from our CDN.
-
-* [adal.min.js](https://secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/adal.min.js) ([non-minified version](https://secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/adal.js))
-* [adal-angular.min.js](https://secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/adal-angular.min.js) ([non-minified version](https://secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/adal-angular.js))
-
-The easiest way to include the ADAL dependencies is to add ```script``` tags using the CDN links as the ```src``` attribute at the end of the ```<head>``` tag in the **index.html** file located in *Starter/public*. 
-
-```html
-<script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/adal.min.js"></script>
-<script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/adal-angular.min.js"></script>
+```javascript
+angular.module('app', [
+  'ngRoute',
+  'AdalAngular'
+])
 ```
 
-### Register your app with Azure AD
+Next, chain the ```config``` function to the ```angular.module``` function, passing the route, HTTP, and ADAL providers to it.
+
+```javascript
+angular.module('app', [
+  'ngRoute',
+  'AdalAngular'
+])
+.config(function($routeProvider, adalAuthenticationServiceProvider, $httpProvider) {
+});
+```
+
+#### Route configuration
+
+Now we'll add our configuration code to the empty ```config``` function we just created. First, we'll register our one and only route, and point all other routes to that route. The route definition is just be the root route, ```'/'```. If you used the directory structure defined in the first part of this section, the ```templateUrl``` is ```'views/main.html'```. We will also use the ```controllerAs``` syntax, defined as ```main```, to keep our global scope clean.
+
+```javascript
+$routeProvider
+  .when('/', {
+    templateUrl: 'views/main.html',
+    controller: 'MainController',
+    controllerAs: 'main'
+  })
+  .otherwise({
+    redirectTo: '/'
+  });
+```
+
+#### ADAL JS configuration
+
+Finally, we'll configure [Active Directory Authentication Library for JavaScript (ADAL JS)](https://github.com/AzureAD/azure-activedirectory-library-for-js) to have users authenticate with Azure AD and to allow our Angular app to make cross-origin resource sharing (CORS) requests to the Microsoft Graph API.
+
+To configure the ADAL JS service, just pass an object containing the name of your Azure AD tenant, the client ID of your registered Azure application, and an ```endpoints``` object defining which resources your application wants access to, along with ```$httpProvider```. For more in-depth configuration options, check out [ADAL JS on GitHub](https://github.com/AzureAD/azure-activedirectory-library-for-js).
+
+```javascript
+adalAuthenticationServiceProvider.init(
+  {
+    tenant: {your_tenant}.onmicrosoft.com,
+    clientId: {your_app_client_id},
+    endpoints: {
+      'https://graph.microsoft.com': 'https://graph.microsoft.com'
+    }
+  },
+  $httpProvider
+);
+```
+
+### Contents of *mainController.js*
+
+The ```mainController.js``` files contains the code for authentication and the code for making a call to the Microsoft Graph API. 
+
+
+
+
+
+### Contents of *main.html*
+
+This is a view. Byaay!
+
+### Register your application with Azure Active Directory
 
 Before you start writing the code for your Microsoft Graph application, you're required to do a little work to register your application with Azure Active Directory and to set permissions for your application to use Microsoft Graph services. You only need to do this once for each application.
 
