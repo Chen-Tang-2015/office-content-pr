@@ -127,7 +127,7 @@ The ```mainController.js``` files contains the code for authentication and the c
 angular
   .module('app')
   .controller('MainController', function($http, adalAuthenticationService) {
-    // Add the rest of the code in this section here.
+    // Add code here later on.
   });
 ```
 
@@ -157,7 +157,7 @@ Before making a call to the Microsoft Graph API, the user of your application ne
 
 Since we are using ADAL JS, all of the token handling is taken care of for us. All we need to do is configure ADAL JS and then wire the appropriate function to the **connect** button in our view.
 
-### ADAL JS configuration
+### Configure ADAL JS
 
 First, we'll configure [Active Directory Authentication Library for JavaScript (ADAL JS)](https://github.com/AzureAD/azure-activedirectory-library-for-js) to have users authenticate with Azure AD and to allow our Angular app to make cross-origin resource sharing (CORS) requests to the Microsoft Graph API.
 
@@ -176,7 +176,27 @@ adalAuthenticationServiceProvider.init(
 );
 ```
 
+### Wire up the **connect** button
 
+Now that ADAL JS is configured, we have to wire up the **connect** button in our view to the ADAL JS ```login``` function that will redirect the user to the Office 365 sign in page. First, create a ```connect``` function that calls the ADAL JS ```login``` function in *mainController.js* and attach it to the controller's view model. Add the following code to the empty function we created in the *Contents of mainController.js* section.
+
+```javascript
+var vm = this;
+			
+vm.connect = function() {
+  adalAuthenticationService.login();
+};
+```
+
+Hook up the ```connect``` function you just created to the **connect** button in *main.html*.
+
+```html
+<button ng-click="main.connect();">
+	Connect to Office 365
+</button>
+```
+
+That's all you need to do to connect to Office 365 and get an access token to use with the Microsoft Graph API. When a user clicks the **connect button**, they'll be redirected to the Office 365 sign in page and returned to your app with an access token once they sign in and grant your app access to the requested resources. 
 
 ## Additional resources
 
