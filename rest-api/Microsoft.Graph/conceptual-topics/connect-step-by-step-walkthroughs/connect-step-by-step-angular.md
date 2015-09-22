@@ -133,7 +133,19 @@ angular
 
 ### Contents of *main.html*
 
-Provide the basic markup needed, which is a **connect** button and a **send mail** button.
+This app will have a very simple UI consisting of just two buttons. One button will be used to connect to Office 365 and one button will be used to send an email via the Microsoft Graph API. Add the following markup to *main.html*.
+
+```html
+<button ng-click="main.connect()">
+	Connect to Office 365
+</button>
+
+<button ng-click="">
+	Send mail with Microsoft Graph API
+</button>
+```
+
+**Note** The ```ng-click``` directives are intentionally left blank. We will fill in those values later in the topic.
 
 ## Connect to the Microsoft Graph API
 
@@ -163,6 +175,8 @@ adalAuthenticationServiceProvider.init(
   $httpProvider
 );
 ```
+
+
 
 ## Additional resources
 
