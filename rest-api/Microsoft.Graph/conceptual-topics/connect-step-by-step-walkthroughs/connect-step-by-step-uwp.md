@@ -37,7 +37,7 @@ The sample uses the native Windows 10 WebAccountManager API to authenticate user
 
 The AuthenticationHelper.cs file contains all of the authentication code, along with additional logic that stores user information and forces authentication only when the user has disconnected from the app. The ``GetTokenHelperAsync`` method runs when the user authenticates and every time the app makes a call to the unified API.
 
-After the user authenticates, the app stores the user ID value in **ApplicationData.Current.RoamingSettings*. The app tries to authenticate silently whenever it finds this value:
+After the user authenticates, the app stores the user ID value in ``ApplicationData.Current.RoamingSettings``. The app tries to authenticate silently whenever it finds this value:
 
             // Check if there's a record of the last account used with the app
             var userID = _settings.Values["userID"];
