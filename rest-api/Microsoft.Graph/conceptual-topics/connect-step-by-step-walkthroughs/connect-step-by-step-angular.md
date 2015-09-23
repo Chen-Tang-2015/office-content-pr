@@ -76,7 +76,7 @@ adalAuthenticationServiceProvider.init(
 <a name="accessToken"></a>
 ## Use ADAL JS to get an access token
 
-Your app needs to redirect the browser to an Office 365 sign in page so the user can sign in and grant your application access to their data. The Connect sample utilizes ADAL JS to handle this task. 
+Your app needs to redirect the browser to a sign in page so the user can sign in and grant your application access to their data. The Connect sample utilizes ADAL JS to handle this task. 
 
 In one of your application's controllers, first add a reference to the ADAL service by injecting ```adalAuthenticationService``` into your controller and then define a function that uses the service's ```login``` function that your UI can call. The Connect sample does this in the *controllers/mainController.js* file. 
 
@@ -89,7 +89,7 @@ function connect() {
 };
 ```
 
-When this function is called, your application will redirect the user to an Office 365 sign in page. After they sign in and authorize your app, they'll be returned to your app with the access token in the query string that ADAL JS will retrieve and store. 
+When this function is called, your application will redirect the user to a sign in page. After they sign in and authorize your app, they'll be returned to your app with the access token in the query string that ADAL JS will retrieve and store. 
 
 <a name="request"></a>
 ## Use the access token in a request to the Microsoft Graph API
