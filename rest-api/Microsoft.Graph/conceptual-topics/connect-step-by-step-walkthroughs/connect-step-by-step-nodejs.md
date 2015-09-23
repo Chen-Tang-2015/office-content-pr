@@ -10,6 +10,8 @@ This topic assumes a familiarity with the following:
 * Node.js / npm
 * OAuth 2.0
 
+## Overview
+
 ## Register your application with Azure Active Directory
 
 ## Redirect the browser to the Azure sign-in page
