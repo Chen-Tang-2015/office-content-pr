@@ -46,3 +46,7 @@ We provide recommended layouts for each add-in type, along with **end-to-end** e
 - [Layouts for mail add-ins](MailAddIn.md)
 
 See also [Interaction patterns](https://msdn.microsoft.com/EN-US/library/dn358357.aspx) for examples of common scenarios for add-ins and their corresponding interaction patterns.
+
+##Additional resources
+
+- [Office UI toolkit for web apps and add-ins](UIToolkit.md)

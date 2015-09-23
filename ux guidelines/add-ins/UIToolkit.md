@@ -38,3 +38,6 @@ We recommend that you match the voice and tone of the Office UI in the UI text o
 
 ##Accessible apps and add-ins
 To ensure that all potential users can successfully use your apps and add-ins, make them accessible to all audiences. This includes making them easy to use, designing for all input methods, and accounting for the use of assistive technologies in your app or add-in design. For details, see [Create accessible apps and add-ins](Accessibility.md).
+
+##Additional resources
+- [Design guidelines for Office Add-ins](Overview.md)

@@ -39,7 +39,7 @@ For example, to use the SearchBox component:
 2. Add the following reference to your code: `<script src="SearchBox/Jquery.SearchBox.js"></script>`
 3. Initialize the component by making sure this line executes when your page is loaded: `$(".ms-SearchBox").SearchBox();`. We recommend that you include this in the `Office.Initialize` block of your add-in.     
 
-**Note:** If you don't intend to use all the Fabric components, you can reduce the size of the resources you download by opting instead to host the individual CSS files for each component. You can get the CSS files from the component folders in the [Fabric GitHub repository](https://github.com/OfficeDev/Office-UI-Fabric) . 
+**Note:** If you don't intend to use all the Fabric components, you can reduce the size of the resources you download by opting instead to host the individual CSS files for each component. You can get the CSS files from the component folders in the [Fabric GitHub repository](https://github.com/OfficeDev/Office-UI-Fabric). 
 
 
 ##Next steps
