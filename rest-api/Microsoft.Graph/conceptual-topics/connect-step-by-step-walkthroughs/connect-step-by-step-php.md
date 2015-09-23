@@ -13,12 +13,13 @@ This topic assumes the following:
 
 To call the Microsoft Graph API, your PHP app must complete the following tasks.
 
-1. Register the application in Azure Active Directory.
-2. Redirect the browser to the Azure sign-in page.
-3. Receive an authorization code in your reply URL page.
-4. Request an access token from the token endpoint.
-5. Use the access token in a request to the Microsoft Graph API. 
+1. [Register the application in Azure Active Directory](#register)
+2. [Redirect the browser to the Azure sign-in page](#redirect)
+3. [Receive an authorization code in your reply URL page](#authcode)
+4. [Request an access token from the token endpoint](#accesstoken)
+5. [Use the access token in a request to the Microsoft Graph API](#request) 
 
+<a name="register"/>
 ## Register the application in Azure Active Directory
 
 Before you can start working with Office 365, you need to register your application on Azure Active Directory and set permissions to use Microsoft Graph services.
@@ -36,6 +37,7 @@ Take note of the following values in the **Configure** page of your Azure applic
 
 You need these values to configure the OAuth flow in your app.
 
+<a name="redirect"/>
 ## Redirect the browser to the Azure sign-in page
 
 Your app needs to redirect the browser to the Azure sign-in page to get an authorization code and continue the OAuth flow.
@@ -56,6 +58,7 @@ exit();
 > **Note:** <br />
 > You must send the **Location** header before writing any output to the page.
 
+<a name="authcode"/>
 ## Receive an authorization code in your reply URL page
 
 After the user signs-in to Azure, the flow returns the browser to your reply URL appending an authorization code to the query string. The Connect sample uses the [`Callback.php`](https://github.com/OfficeDev/O365-PHP-Unified-API-Connect/blob/master/app/Callback.php) page for this purpose.
@@ -68,6 +71,7 @@ if (isset($_GET['code'])) {
 }
 ```
 
+<a name="accesstoken"/>
 ## Request an access token from the token endpoint
 
 Once you have the authorization code, you can use it along the client ID, key, and reply URL values that you got from Azure Active Directory to request an access token. 
@@ -117,6 +121,7 @@ foreach ($jsonResponse as $key=>$value) {
 
 Your PHP app can now use the session variable `access_token` to issue authenticated requests to the Microsoft Graph API.
 
+<a name="request"/>
 ## Use the access token in a request to the Microsoft Graph API
 
 With an access token, your app can make authenticated requests to the Microsoft Graph API. Your app must append the access code to the **Authorization** header of each request.
@@ -143,7 +148,7 @@ RequestManager::sendPostRequest(
 > **Note:** <br />
 > The request must also send a **Content-Type** header with a value accepted by the Graph API, for example, `application/json;odata.metadata=minimal;odata.streaming=true`.
 
-The Microsoft Graph API is a very powerful, unifiying API that can be used to interact with all kinds of Microsoft data. Check out the [API reference](https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference) to explore what else you can accomplish with the Microsoft Graph API.
+The Microsoft Graph is a very powerful, unifiying API that can be used to interact with all kinds of Microsoft data. Check out the [API reference](https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference) to explore what else you can accomplish with the Microsoft Graph API.
 
 ## Additional resources
 
