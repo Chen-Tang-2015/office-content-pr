@@ -20,7 +20,7 @@ To call the Microsoft Graph API, your web app must complete the following tasks.
 4. [Make a request to the Microsoft Graph API](#request)
 
 <a name="register"/>
-## Register your application with Azure Active Directory
+## Register your application in Azure Active Directory
 
 Before you can start working with Office 365, you need to register your application on Azure Active Directory and set permissions to use Microsoft Graph services.
 
