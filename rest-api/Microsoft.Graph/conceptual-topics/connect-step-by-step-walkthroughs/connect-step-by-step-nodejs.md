@@ -38,7 +38,7 @@ Take note of the following values in the **Configure** page of your Azure applic
 You need these values as parameters in the OAuth flow in your app.
 
 <a name="redirect"/>
-## Redirect the browser to the Azure sign-in page to authenticate and request an access token
+## Redirect the browser to the Azure sign-in page
 
 Your app needs to redirect the browser to the Azure sign-in page to get an authorization code and continue the OAuth 2.0 flow.
 
@@ -48,20 +48,15 @@ In the Connect sample, the authentication url from [`authHelper.js#getAuthUrl`](
 ```javascript
 /**
  * Generate a fully formed uri to use for authentication based on the supplied resource argument
- * @param {string} res the desired resource endpoint uri
- * @return {string} a fully formed uri with which authentication can be completed
+ * @return {string} a fully formed uri with which authentcation can be completed
  */
-function getAuthUrl(res) {
+function getAuthUrl() {
     return credentials.authority + "/oauth2/authorize" +
         "?client_id=" + credentials.client_id +
-        "&resources=" + res +
         "&response_type=code" +
         "&redirect_uri=" + credentials.redirect_uri;
 };
 ```
-
-> **Note:** <br />
-> The request must also specify a resource that we are trying to consume (as supplied by the @param `res`). In the case of Microsoft Graph, the resource value is `https://graph.microsoft.com`.
 
 **login.hbs#login**
 ```javascript
