@@ -13,7 +13,7 @@ Windows 10 provides each application with a unique URI and ensures that messages
             return string.Format("ms-appx-web://microsoft.aad.brokerplugin/{0}", WebAuthenticationBroker.GetCurrentApplicationCallbackUri().Host).ToUpper();
         }
 
-That method is triggered in the sample by the **copy redirect URI** button, but you can also follow the pattern in the [https://github.com/Azure-Samples/AzureAD-NativeClient-UWP-WAM](https://github.com/Azure-Samples/AzureAD-NativeClient-UWP-WAM) sample, where the string is defined in the MainPage class declaration and you can fetch it by using the Visual Studio debugger. 
+That method is triggered in the sample by the **copy redirect URI** button, but you can also follow the pattern in the [AzureAD-NativeClient-UWP-WAM](https://github.com/Azure-Samples/AzureAD-NativeClient-UWP-WAM) sample, where the string is defined in the MainPage class declaration and you can fetch it by using the Visual Studio debugger. 
 
 Follow the steps in the [Register and configure the app](https://github.com/OfficeDev/O365-UWP-Unified-API-Connect#register) of the sample's Readme in order to register your app after you've gotten the redirect URI value.
 
@@ -33,7 +33,7 @@ All of the sample's UI strings are stored in the Resources.resw file inside the 
 
 ## Connect to the Microsoft Graph API
 
-The sample uses the native Windows 10 WebAccountManager API to authenticate users. It follows the general pattern described in the [Develop Windows Universal Apps with Azure AD and the Windows 10 Identity API](http://blogs.technet.com/b/ad/archive/2015/08/03/develop-windows-universal-apps-with-azure-ad-and-the-windows-10-identity-api.aspx) blog post and demonstrated in the [https://github.com/Azure-Samples/AzureAD-NativeClient-UWP-WAM](https://github.com/Azure-Samples/AzureAD-NativeClient-UWP-WAM) sample.
+The sample uses the native Windows 10 WebAccountManager API to authenticate users. It follows the general pattern described in the [Develop Windows Universal Apps with Azure AD and the Windows 10 Identity API](http://blogs.technet.com/b/ad/archive/2015/08/03/develop-windows-universal-apps-with-azure-ad-and-the-windows-10-identity-api.aspx) blog post and demonstrated in the [AzureAD-NativeClient-UWP-WAM](https://github.com/Azure-Samples/AzureAD-NativeClient-UWP-WAM) sample.
 
 The AuthenticationHelper.cs file contains all of the authentication code, along with additional logic that stores user information and forces authentication only when the user has disconnected from the app. The ``GetTokenHelperAsync`` method runs when the user authenticates and every time the app makes a call to the unified API.
 
