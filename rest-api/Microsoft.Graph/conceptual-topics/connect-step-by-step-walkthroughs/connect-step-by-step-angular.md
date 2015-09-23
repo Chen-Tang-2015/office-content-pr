@@ -1,14 +1,3 @@
-<!---
-  TODO: Determine which metadata is necessary for Markdown to HTML conversion
-  tool to work properly.
---->
-ms.TocTitle: Call the Microsoft Graph API in an Angular app 
-Title: Call the Microsoft Graph API in an Angular app 
-Description: Call the Microsoft Graph API in an Angular app to connect to your customers’ document, email, contacts, or calendar data.
-ms.ContentId: 2ebab86b-e218-4830-9255-c5d7b20647c5
-ms.topic: article (how-tos)
-ms.date: September 21, 2015
-
 # Call the Microsoft Graph API in an Angular app 
 
 In this article we look at the minimum tasks required to connect your application to Office 365 and call the Microsoft Graph API. We use code from the [Office 365 Angular Connect sample using Microsoft Graph](https://github.com/OfficeDev/O365-Angular-Unified-API-Connect) to explain the main concepts that you have to implement in your app.
