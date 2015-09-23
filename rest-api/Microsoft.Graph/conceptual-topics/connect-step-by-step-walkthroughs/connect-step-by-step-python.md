@@ -19,7 +19,7 @@ To call the Microsoft Graph API, your Python app must complete the following tas
 4. [Request an access token from the token endpoint](#accesstoken)
 5. [Use the access token in a request to the Microsoft Graph API](#request) 
 
-<a name="register"/>
+<a name="register"></a>
 ## Register the application in Azure Active Directory
 
 Before you can start working with Office 365, you need to register your application in Azure Active Directory and set permissions to use Microsoft Graph services.
@@ -35,26 +35,28 @@ Take note of the following values in the **Configure** page of your Azure applic
 * A reply URL (http://127.0.0.1:8000/connect/get_token/)
 * An application key (unique to your application)
 
-<a name="redirect"/>
+<a name="redirect"></a>
 ## Redirect the browser to the Azure sign-in page
 
-Your app needs to redirect the browser to the Azure sign-in page to get an authorization code and continue the OAuth flow.
+Your app needs to redirect the browser to the Azure sign-in page to being the OAuth flow and get an authorization code. 
 
-In the Connect sample, the code that redirects the browser is in the [`AuthenticationManager.connect`](https://github.com/OfficeDev/O365-Python-Unified-API-Connect/blob/master/app/AuthenticationManager.Python#L49) function.
+In the Connect sample, the following code (located in *connect/auth_helper.py*) builds the URL that the app needs to redirect the user to and is piped to the view where it can be used for redirection. 
 
-```Python
-// Redirect the browser to the authorization endpoint. Auth endpoint is
-// https://login.microsoftonline.com/common/oauth2/authorize
-$redirect = Constants::AUTHORITY_URL . Constants::AUTHORIZE_ENDPOINT . 
-            '?response_type=code' . 
-            '&client_id=' . urlencode(Constants::CLIENT_ID) . 
-            '&redirect_uri=' . urlencode(Constants::REDIRECT_URI);
-header("Location: {$redirect}");
-exit();
+```python
+# This function creates the signin URL that the app will
+# direct the user to in order to sign in to Office 365 and
+# give the app consent.
+def get_signin_url(redirect_uri):
+  # Build the query parameters for the signin URL.
+  params = { 'client_id': client_id,
+             'redirect_uri': redirect_uri,
+             'response_type': 'code'
+           }
+
+  authorize_url = '{0}{1}'.format(authority, '/common/oauth2/authorize?{0}')
+  signin_url = authorize_url.format(urlencode(params))
+  return signin_url
 ```
-
-> **Note:** <br />
-> You must send the **Location** header before writing any output to the page.
 
 <a name="authcode"/>
 ## Receive an authorization code in your reply URL page
