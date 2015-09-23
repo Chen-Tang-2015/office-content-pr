@@ -41,6 +41,33 @@ You need these values as parameters in the OAuth flow in your app.
 <a name="redirect"/>
 ## Redirect the browser to the Azure sign-in page
 
+Your app needs to redirect the browser to the Azure sign-in page to get an authorization code and continue the OAuth 2.0 flow.
+
+In the Connect sample, the authentication url from [`authHelper.js#getAuthUrl`](https://github.com/OfficeDev/O365-Nodejs-Unified-API-Connect/blob/master/authHelper.js#L17) is redirected by the [`login.hbs#login`](https://github.com/OfficeDev/O365-Nodejs-Unified-API-Connect/blob/master/views/login.hbs#L2) function.
+
+**authHelper.js#getAuthUrl**
+```javascript
+/**
+ * Generate a fully formed uri to use for authentication based on the supplied resource argument
+ * @param {string} res the desired resource endpoint uri
+ * @return {string} a fully formed uri with which authentcation can be completed
+ */
+function getAuthUrl(res) {
+    return credentials.authority + "/oauth2/authorize" +
+        "?client_id=" + credentials.client_id +
+        "&resources=" + res +
+        "&response_type=code" +
+        "&redirect_uri=" + credentials.redirect_uri;
+};
+```
+
+**login.hbs#login**
+```javascript
+function login() {
+	window.location = '{{auth_url}}'.replace(/&amp;/g, '&');
+}
+```
+
 <a name="authcode"/>
 ## Receive an authorization code in your reply URL page
 
