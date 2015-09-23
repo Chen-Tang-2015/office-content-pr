@@ -22,11 +22,11 @@ Regardless of the underlying framework you use to create your custom UI, apply t
 
 - **Keep users in control**. Allow users to control their experience, understand any important decisions, and easily reverse actions the add-in performs. 
 
-- **Design for all platforms and input methods**. Add-ins are designed to work on all the platforms that Office supports, and your add-in UX should be optimized to work across platforms and form factors. Support mouse/keyboard and touch input devices, and ensure that your custom HTML UI is responsive to adapt to different form factors. 
+- **Design for all platforms and input methods**. Add-ins are designed to work on all the platforms that Office supports, and your add-in UX should be optimized to work across platforms and form factors. Support mouse/keyboard and touch input devices, and ensure that your custom HTML UI is responsive to adapt to different form factors. For more information, see [Touch](BestPractices.md#Touch). 
 
 
 ##Design language
-We recommend that you adopt the Office design language and use our [UI toolkit](UIToolkit.md) to create custom HTML-based experiences in your add-ins. If your company already has a design language, you are welcome to use it, as long as the end result is a harmonious experience for Office users. 
+We recommend that you adopt the Office design language and use our [UI toolkit](UIToolkit.md) to create custom HTML-based experiences in your add-ins. If your organization already has a design language, you're welcome to use it, as long as the end result is a harmonious experience for Office users. 
 
 
 ##Add-in building blocks

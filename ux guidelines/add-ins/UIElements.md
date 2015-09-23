@@ -19,11 +19,11 @@ Commands are defined in the [add-in XML manifest](https://msdn.microsoft.com/EN-
 
 Currently, add-in commands are only supported for mail add-ins. To learn more, see [Add-in commmands for mail](https://msdn.microsoft.com/EN-US/library/office/mt267546.aspx?f=255&MSPPError=-2147217396). The image below shows an [emoji sample](https://github.com/LezaMax/emoji) add-in.
  
-![An image that shows add-in commands added to the Outlook Ribbon](images/add-in-commands.png)
+![An image that shows add-in commands added to the Outlook ribbon](images/add-in-commands.png)
 
-Excel, PowerPoint, and Word have predefined entry points for task pane and content add-ins on the Insert tab in the Office Ribbon. Custom command functionality for content and task pane add-ins will be available soon. 
+Excel, PowerPoint, and Word have predefined entry points for task pane and content add-ins on the Insert tab in the Office ribbon. Custom command functionality for content and task pane add-ins will be available soon. 
 
-![An image that shows the Insert tab on the Word Ribbon](images/Word-insert-tab.png)
+![An image that shows the Insert Tab on the Word ribbon](images/Word-insert-tab.png)
 
 ##Custom HTML-based UI
 Add-ins can embed custom HTML-based UI within Office clients. The containers that are available to display the UI vary based on the type of add-in. For example, task pane add-ins display custom HTML-based UI in the right pane of the document; content add-ins display the custom UI directly within Office documents.
@@ -51,10 +51,10 @@ If you decide to use your own color palette, keep the following in mind:
 - Use color meaningfully and consistently in your add-in. For example, choose one color as an accent to give your add-in a consistent visual theme.
 - Avoid using the same color for both interactive and non-interactive elements. If you use color to indicate items users can interact with, such as navigation, links, and buttons, don't use the same color for static items.
 - If you use color for text or white text on a colored background, be sure that your colors have enough contrast to meet accessibility guidelines (4.5:1 contrast ratio).
-- Be aware of color blindness — use more than just colors to indicate interactivity.
+- Be aware of color blindness —- use more than just colors to indicate interactivity.
 
 ###Theming 
-Whether you decide to adopt the Office color scheme or use your own, we encourage you to use our Theming APIs<!-- Add link to Theming API topic -->. Add-ins that are part of the Office theming experience will feel much more integrated with Office.
+Whether you decide to adopt the Office color scheme or to use your own, we encourage you to use our Theming APIs. Add-ins that are part of the Office theming experience will feel much more integrated with Office.
 
 
 - For mail and task pane add-ins, use the [Context.officeTheme](https://msdn.microsoft.com/EN-US/library/office/mt455203.aspx) property to match the theme of the Office applications. This API is currently only available in Office 2016.  

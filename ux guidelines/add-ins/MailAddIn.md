@@ -10,7 +10,7 @@ You can use any of the following layouts for mail add-ins:
 
 - Task pane
 - Custom pane (horizontal or contextual)
-- Functions with infobar notifications
+- Functions with InfoBar notifications
 
 For guidelines about UI text in your add-ins, see [Office Voice](Voice.md).
 
@@ -28,9 +28,9 @@ The following image shows the recommended layout for a [contextual mail add-in](
 
 ![Layout of a contextual mail add-in](images/mail-add-in-contextual-card.png)
 
-##Functions with infobar notifications
+##Functions with InfoBar notifications
 
-In addition to using a task pane or custom pane to display custom HTML UI in your mail add-in, you can execute functions from commands. When you need to display UI text as a result of a function, you can use infobar notifications. For example, you might need to use an infobar notification to display error or success messages. 
+In addition to using a task pane or custom pane to display custom HTML UI in your mail add-in, you can execute functions from commands. When you need to display UI text as a result of a function, you can use InfoBar notifications. For example, you might need to use an InfoBar notification to display error or success messages. 
 
 For more information, see [add-in commands for mail](https://msdn.microsoft.com/EN-US/library/office/mt267546.aspx). 
 

@@ -12,7 +12,7 @@ To align your text with the principles of the Office voice:
 - **Use simple, direct language.** Use short words and sentences, and active voice in your text. 
 - **Be consistent.** Use the same words for the same concepts throughout.
 - **Engage the user.** Address the user as "you". Avoid using third person. Use imperatives for user tasks.
-- **Be helpful and empathetic.** Make your text positive, polite, supportive, and encouraging. Emphasize what users can accomplish ― not what they can't.
+- **Be helpful and empathetic.** Make your text positive, polite, supportive, and encouraging. Emphasize what users can accomplish ―- not what they can't.
 - **Know your customers.** Be mindful of cultural considerations and globalization when you use idioms or colloquialisms.
 
-If you plan to make your app or add-in [available in the Office Store](https://msdn.microsoft.com/EN-US/library/dn708487.aspx), make sure that your language and content complies with the [Validaiton policies for apps and add-ins](https://msdn.microsoft.com/EN-US/library/office/jj220035.aspx).
+If you plan to make your app or add-in [available in the Office Store](https://msdn.microsoft.com/EN-US/library/dn708487.aspx), make sure that your language and content complies with the [Validation policies for apps and add-ins](https://msdn.microsoft.com/EN-US/library/office/jj220035.aspx).

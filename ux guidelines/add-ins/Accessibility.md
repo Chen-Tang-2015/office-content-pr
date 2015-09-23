@@ -8,13 +8,13 @@ As you design and develop your Office 365 web apps and Office and SharePoint Add
 
 ##Design for multiple input methods
 
-- Ensure that users can perform operations by using only the keyboard. Users should be able to move to all actionable elements on the page by using a combination of the Tab and Arrow keys.
+- Ensure that users can perform operations by using only the keyboard. Users should be able to move to all actionable elements on the page by using a combination of the Tab and arrow keys.
 - On a mobile device, when users operate a control by touch, the device should provide useful audio feedback.
 - Provide helpful labels for all interactive controls. 
 
 ##Make your app or add-in easy to use
 
-- Don't rely on a single attribute, such color, size, shape, location, orientation, or sound, to convey meaning in your UI.
+- Don't rely on a single attribute, such as color, size, shape, location, orientation, or sound, to convey meaning in your UI.
 - Avoid unexpected changes of context, such as moving the focus to a different UI element without user action.
 - Provide a way to verify, confirm, or reverse all binding actions.
 - Provide a way to pause or stop media, such as audio and video.
@@ -30,7 +30,7 @@ As you design and develop your Office 365 web apps and Office and SharePoint Add
 
 - Avoid using features that interfere with assistive technologies, including visual, audio, or other interactions.
 - Do not provide text in an image format. Screen readers cannot read text within images.
-- Provide a way for users to adjust or mute all sources of audio.
+- Provide a way for users to adjust or mute all audio sources.
 - Provide a way for users to turn on captions or audio description with audio sources.
 - Provide alternatives to sound as a means to alert users, such as visual cues or vibrations.
 
