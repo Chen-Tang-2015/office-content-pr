@@ -4,6 +4,12 @@ In this article we look at the minimum tasks required to connect your applicatio
 
 ## Prerequisites
 
+This topic assumes a familiarity with the following:
+
+* JavaScript
+* Node.js / npm
+* OAuth 2.0
+
 ## Register your application with Azure Active Directory
 
 ## Redirect the browser to the Azure sign-in page
