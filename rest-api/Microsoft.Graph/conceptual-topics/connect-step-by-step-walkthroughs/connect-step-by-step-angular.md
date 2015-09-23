@@ -11,8 +11,8 @@ ms.date: September 21, 2015
 
 # Call the Microsoft Graph API with an Angular app 
 
-The purpose of this topic is to walk through the process of connecting to and calling the Microsoft Graph API. This topic won't create an app from scratch, but will guide you through the authentication process and making a call to the Microsoft Graph API. The source code in this [repository](https://github.com/OfficeDev/O365-angular-Unified-API-Connect) is the result of applying the concepts in this topic to a simple Angular app.
- 
+In this article we look at the minimum tasks required to connect your application to Office 365 and call the Microsoft Graph API. We use code from the [Office 365 Angular Connect sample using Microsoft Graph](https://github.com/OfficeDev/O365-Angular-Unified-API-Connect) to explain the main concepts that you have to implement in your app.
+
 ## Prerequisites  
 
 This topic assumes you have the following.
