@@ -101,37 +101,29 @@ def get_token_from_code(auth_code, redirect_uri):
 
 > **Note** The response provides more information than just the access token. For example, your app can get a refresh token to request new access tokens without having the user explicitly sign-in to Azure again.
 
-<a name="request"/>
+<a name="request"></a>
 ## Use the access token in a request to the Microsoft Graph API
 
 With an access token, your app can make authenticated requests to the Microsoft Graph API. Your app must append the access code to the **Authorization** header of each request.
 
-The Connect sample sends an email using the sendMail endpoint in the Graph API. The code is in the [`MailManager.sendWelcomeMail`](https://github.com/OfficeDev/O365-Python-Unified-API-Connect/blob/master/app/MailManager.Python#L46) function. This is the code that shows how to append the access code to the Authorization header.
+The Connect sample sends an email using the ```me/sendMail``` endpoint in the Microsoft Graph API. The code is in the ```call_sendMail_endpoint``` function in the *connect/graph_service.py* file. This is the code that shows how to append the access code to the Authorization header.
 
-```Python
-// Send the email request to the sendmail endpoint, 
-// which is in the following URI:
-// https://graph.microsoft.com/beta/me/sendMail
-// Note that the access token is attached in the Authorization header
-RequestManager::sendPostRequest(
-    Constants::RESOURCE_ID . Constants::SENDMAIL_ENDPOINT,
-    array(
-        'Authorization: Bearer ' . $_SESSION['access_token'],
-        'Content-Type: application/json;' . 
-                      'odata.metadata=minimal;' .
-                      'odata.streaming=true'
-    ),
-    $email
-);
+```python
+# Set request headers.
+headers = { 
+  'User-Agent' : 'python_tutorial/1.0',
+  'Authorization' : 'Bearer {0}'.format(access_token),
+  'Accept' : 'application/json',
+  'Content-Type' : 'application/json'
+}
 ```
 
-> **Note:** <br />
-> The request must also send a **Content-Type** header with a value accepted by the Graph API, for example, `application/json;odata.metadata=minimal;odata.streaming=true`.
+> **Note** The request must also send a **Content-Type** header with a value accepted by the Graph API, for example, `application/json`.
 
-The Microsoft Graph is a very powerful, unifiying API that can be used to interact with all kinds of Microsoft data. Check out the [API reference](https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference) to explore what else you can accomplish with the Microsoft Graph API.
+The Microsoft Graph is a very powerful, unifiying API that can be used to interact with all kinds of Microsoft data. Check out the [API reference]() to explore what else you can accomplish with the Microsoft Graph API.
 
 ## Additional resources
 
 -  [Office 365 Python Connect sample using Microsoft Graph](https://github.com/OfficeDev/O365-Python-Unified-API-Connect)
 -  [Office Dev Center](http://dev.office.com) 
--  [Microsoft Graph API reference](https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference)
+-  [Microsoft Graph API reference]()
