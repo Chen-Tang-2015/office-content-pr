@@ -64,7 +64,7 @@ function getAuthUrl(res) {
 **login.hbs#login**
 ```javascript
 function login() {
-	window.location = '{{auth_url}}'.replace(/&amp;/g, '&');
+	window.location = '{{auth_url}}'.replace(/&amp;/g, '&'); // transform HTML special char from .hbs template rendering
 }
 ```
 
