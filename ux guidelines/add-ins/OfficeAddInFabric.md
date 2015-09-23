@@ -1,6 +1,6 @@
 #Use Office UI Fabric in Office Add-ins
 
-**Last modified:** August 31, 2015
+**Last modified:** September 23, 2015
 
 ***Applies to:** Access apps for SharePoint | apps for Office | Excel | Office Add-ins | Outlook | PowerPoint | Project | Word*
 
