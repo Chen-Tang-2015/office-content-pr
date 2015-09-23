@@ -16,8 +16,8 @@ To call the Microsoft Graph API, your web app must complete the following tasks.
 
 1. [Register the application in Azure Active Directory](#register)
 2. [Redirect the browser to the Azure sign-in page to authenticate and request an access token](#redirect)
-3. [Receive an authorization code in your reply URL page](#authcode)
-4. [Use the access token in a request to the Microsoft Graph API](#request)
+3. [Receive an authorization code in your reply URL page, use it to request an access token from adal-node](#authcode)
+4. [Make a request to the Microsoft Graph API](#request)
 
 <a name="register"/>
 ## Register your application with Azure Active Directory
@@ -68,38 +68,86 @@ function login() {
 <a name="authcode"/>
 ## Receive an authorization code in your reply URL page
 
-After the user signs-in to Azure, the flow returns the browser to the reply URL in your app. Azure appends an authorization code to the query string. The Connect sample uses [`authHelper.js#getTokenFromCode`](https://github.com/OfficeDev/O365-Nodejs-Unified-API-Connect/blob/master/authHelper.js#L31) to delegate to [`adal-node`](https://www.npmjs.com/package/adal-node) for this purpose.
+After the user signs-in to Azure, the flow returns the browser to the reply URL in your app. Azure appends an authorization code to the query string.
 
-The authorization code is provided in the `code` query string variable. The Connect sample saves the code to a cookie to use it later.
+The authorization code is provided in the `code` query string variable.
 
 > **Note:**<br />
-> If your application is not using HTTPS or another secure protocol, storing Azure's authorization token in a cookie passed over the wire can expose your application to [session hijacking](https://en.wikipedia.org/wiki/Session_hijacking) vulnerabilites. For production environments, take caution to protect the secrecy of these tokens.
+> If your application does not HTTPS or another secure protocol, storing tokens in a cookie passed over the wire can expose your application to [session hijacking](https://en.wikipedia.org/wiki/Session_hijacking) vulnerabilites. For production environments, take caution to protect the secrecy of these tokens.
 
 ```javascript
-router.get('/login', function (req, res, next) {
-  if (req.query.code !== undefined) {
-    authHelper.getTokenFromCode('https://graph.microsoft.com/', req.query.code, function (token) {
-      if (token !== null) {
-        //cache the refresh token in a cookie and go back to index
-        res.cookie(authHelper.TOKEN_CACHE_KEY, token.refreshToken);
-        res.cookie(authHelper.TENANT_CACHE_KEY, token.tenantId);
-        res.redirect('/');
-      }
-      else {
-        console.log("AuthHelper failed to acquire token");
-        res.status(500);
-        res.send();
-      }
-    });
-  }
-  else {
-    res.render('login', { auth_url: authHelper.getAuthUrl('https://graph.microsoft.com/') });
-  }
+router.get('/<application reply url>', function (req, res, next) {
+  var authCode = req.query.code;
+  // your router's implementation
 });
 ```
 
 <a name="request"/>
-## Use the access token in a request to the Microsoft Graph API
+## Make a request to the Microsoft Graph API using adal-node
+
+Now that we've authenticated with Azure Active Directory, our next step is to acquire an access token via adal-node. Once we've done that, we're ready to make REST requests to the Microsoft Graph API. 
+
+To identify our requests to the Graph API, our requests must be signed with an Authorization header containing the access token for any web service resource we request. A properly formed authorization header will includes the access token from adal-node and will take the following form.
+
+`Authorization: Bearer ba4f57d4-78f5-4049-b5e8-b01e99347ddf`
+
+To request an access token, adal-node provides two callback functions.
+
+* `AuthenticationContext#acquireTokenWithAuthorizationCode(authCode, redirect_uri, resource, client_id, client_secret, callback)` - provides an access token for a specified resource based on the authorization code returned during login
+* `AuthenticationContext#acquireTokenWithRefreshToken(token, client_id, client_secret, resource, callback)` - provides an access token for a specified resourced based on a refresh token
+
+In the Connect sample, requests are routed through [`authHelper.js`](https://github.com/OfficeDev/O365-Nodejs-Unified-API-Connect/blob/master/authHelper.js) so that the `client_id` and `client_secret` can be added.
+
+```javascript
+// The application registration (must match Azure AD config)
+var credentials = {
+    authority: "https://login.microsoftonline.com/common",
+    client_id: "<your client id here>",
+    client_secret: "<your client secret>",
+    redirect_uri: "http://localhost:8080/login"
+};
+
+/**
+ * Gets a token for a given resource.
+ * @param {string} code An authorization code returned from a client.
+ * @param {string} res A URI that identifies the resource for which the token is valid.
+ * @param {AcquireTokenCallback} callback The callback function.
+ */
+function getTokenFromCode(res, code, callback) {
+    var authContext = new AuthenticationContext(credentials.authority);
+    authContext.acquireTokenWithAuthorizationCode(code, credentials.redirect_uri, res, credentials.client_id, credentials.client_secret, function (err, response) {
+        if (err) {
+            callback(null);
+        }
+        else {
+            callback(response);
+        }
+    });
+};
+```
+
+By combining the above code with our authentication logic from the previous section, we can now use our access token to sign requests.
+
+```javascript
+/* GET home page. */
+router.get('/<application reply url>', function (req, res, next) {
+    var authCode = req.query.code;
+    authHelper.getTokenFromCode('https://graph.microsoft.com/', req.query.code, function (token) {
+        if (token !== null) {
+            // Use this token to sign requests
+            var headers = {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + token
+                };
+            // request implementation...
+        } else {
+            // error handling
+        }
+    });
+});
+```
+
+The Microsoft Graph is a very powerful, unifiying API that can be used to interact with all kinds of Microsoft data. Check out the [API reference](https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference) to explore what else you can accomplish with the Microsoft Graph API.
 
 ## Additional resources
 
