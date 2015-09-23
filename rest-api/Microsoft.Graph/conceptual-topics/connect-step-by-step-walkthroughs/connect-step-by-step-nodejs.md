@@ -4,7 +4,7 @@ In this article we look at the minimum tasks required to connect your applicatio
 
 ## Prerequisites
 
-This topic assumes a familiarity with the following:
+This topic assumes a familiarity with the following.
 
 * JavaScript
 * Node.js / npm
