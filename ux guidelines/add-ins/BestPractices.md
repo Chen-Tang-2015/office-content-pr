@@ -66,3 +66,5 @@ To optimize your add-in's performance:
 |Extended|>500 ms|>10 seconds|Long enough to do something else while waiting. Might need feedback.|
 |Long running|>5 ms|>1 minute|Users will certainly do something else.|
 
+For more information, see [Resource limits and performance optimization](https://msdn.microsoft.com/EN-US/library/office/fp161035.aspx).
+
