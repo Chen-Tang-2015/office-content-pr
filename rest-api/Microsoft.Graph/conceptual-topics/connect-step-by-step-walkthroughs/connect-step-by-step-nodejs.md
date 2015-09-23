@@ -15,7 +15,7 @@ This topic assumes a familiarity with the following.
 To call the Microsoft Graph API, your web app must complete the following tasks.
 
 1. [Register the application in Azure Active Directory](#register)
-2. [Redirect the browser to the Azure sign-in page to authenticate and request an access token](#redirect)
+2. [Redirect the browser to the Azure sign-in page](#redirect)
 3. [Receive an authorization code in your reply URL page, use it to request an access token from adal-node](#authcode)
 4. [Make a request to the Microsoft Graph API](#request)
 
