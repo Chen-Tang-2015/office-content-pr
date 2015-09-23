@@ -1,13 +1,13 @@
 # Call the Microsoft Graph API in a PHP app 
 
-In this article we look at the minimum tasks required to connect your application to Office 365 and call the Microsoft Graph API. We use code from the [Office 365 PHP Connect sample using Microsoft Graph](https://github.com/OfficeDev/O365-PHP-Unified-API-Connect) to explain the main concepts that you have to implement in your app.
+In this article we look at the minimum tasks required to get an access token from Azure Active Directory and call the Microsoft Graph API. We use code from the [Office 365 PHP Connect sample using Microsoft Graph](https://github.com/OfficeDev/O365-PHP-Unified-API-Connect) to explain the main concepts that you have to implement in your app.
 
 ##  Prerequisites
 
 This topic assumes the following:
 
-* You are comfortable reading PHP code.
-* You are familiar with OAuth concepts.
+* You are comfortable with PHP.
+* You are familiar with OAuth.
 
 ## Overview
 
@@ -26,7 +26,7 @@ Before you can start working with Office 365, you need to register your applicat
 
 See  [Configure an Office 365 unified API web app in Azure](https://msdn.microsoft.com/office/office365/HowTo/get-started-with-office-365-unified-api#msg_configure_web_app) for instructions, keep in mind the following details.
 
-* Specify a page in your PHP app as the **Sign-on URL** in step 6. In the case of the Connect sample, this is [`Callback.php`](https://github.com/OfficeDev/O365-PHP-Unified-API-Connect/blob/master/app/Callback.php).
+* Specify a page in your PHP app as the **Sign-on URL** in step 6. In the case of the Connect sample, this page is [`Callback.php`](https://github.com/OfficeDev/O365-PHP-Unified-API-Connect/blob/master/app/Callback.php).
 * Configure the **Delegated permissions** that your app requires. The Connect sample requires **Send mail as signed-in user** permission.
 
 Take note of the following values in the **Configure** page of your Azure application.
@@ -35,7 +35,7 @@ Take note of the following values in the **Configure** page of your Azure applic
 * A valid key
 * A reply URL
 
-You need these values to configure the OAuth flow in your app.
+You need these values as parameters in the OAuth flow in your app.
 
 <a name="redirect"/>
 ## Redirect the browser to the Azure sign-in page
@@ -61,7 +61,7 @@ exit();
 <a name="authcode"/>
 ## Receive an authorization code in your reply URL page
 
-After the user signs-in to Azure, the flow returns the browser to your reply URL appending an authorization code to the query string. The Connect sample uses the [`Callback.php`](https://github.com/OfficeDev/O365-PHP-Unified-API-Connect/blob/master/app/Callback.php) page for this purpose.
+After the user signs-in to Azure, the flow returns the browser to the reply URL in your app. Azure appends an authorization code to the query string. The Connect sample uses the [`Callback.php`](https://github.com/OfficeDev/O365-PHP-Unified-API-Connect/blob/master/app/Callback.php) page for this purpose.
 
 The authorization code is provided in the `code` query string variable. The Connect sample saves the code to a session variable to use it later.
 
@@ -124,9 +124,9 @@ Your PHP app can now use the session variable `access_token` to issue authentica
 <a name="request"/>
 ## Use the access token in a request to the Microsoft Graph API
 
-With an access token, your app can make authenticated requests to the Microsoft Graph API. Your app must append the access code to the **Authorization** header of each request.
+With an access token, your app can make authenticated requests to the Microsoft Graph API. Your app must provide the access code in the **Authorization** header of each request.
 
-The Connect sample sends an email using the sendMail endpoint in the Graph API. The code is in the [`MailManager.sendWelcomeMail`](https://github.com/OfficeDev/O365-PHP-Unified-API-Connect/blob/master/app/MailManager.php#L46) function. This is the code that shows how to append the access code to the Authorization header.
+The Connect sample sends an email using the **sendMail** endpoint in the Graph API. The code is in the [`MailManager.sendWelcomeMail`](https://github.com/OfficeDev/O365-PHP-Unified-API-Connect/blob/master/app/MailManager.php#L46) function. This is the code that shows how to send the access code in the Authorization header.
 
 ```php
 // Send the email request to the sendmail endpoint, 
