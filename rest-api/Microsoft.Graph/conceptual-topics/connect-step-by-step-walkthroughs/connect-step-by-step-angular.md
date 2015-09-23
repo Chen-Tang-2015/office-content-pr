@@ -15,15 +15,34 @@ In this article we look at the minimum tasks required to connect your applicatio
 
 ## Prerequisites  
 
-This topic assumes you have the following.
+This topic assumes the following.
 
-* An understanding of JavaScript and the [AngularJS framework](https://angularjs.org/).
-* An Office 365 account. You can sign up for [an Office 365 Developer subscription](https://portal.office.com/Signup/Signup.aspx?OfferId=6881A1CB-F4EB-4db3-9F18-388898DAF510&DL=DEVELOPERPACK&ali=1#0) that includes the resources that you need to start building Office 365 apps.
-* A Microsoft Azure tenant to register your application in. Azure Active Directory (AD) provides identity services that applications use for authentication and authorization. If you don't have an Azure subscription, you can sign up for a trial [here](https://account.windowsazure.com/SignUp).
+* You are comfortable reading JavaScript and [AngularJS](https://angularjs.org/) code.
+* You are familiar with OAuth concepts.
 
-## Register your application with Azure Active Directory
+## Overview
 
-Outsource this main dish. As a side dish, explain how to get the client ID of the registered application from the Azure Management Portal to be used later in the meal.   
+To call the Microsoft Graph API, you have to complete the following tasks.
+
+1. [Register the application in Azure Active Directory](#register)
+2. [Configure Azure Active Directory Library for JavaScript (ADAL JS)](#adal)
+3. [Use ADAL JS to get an access token](#accessToken)
+4. [Use the access token in a request to the Microsoft Graph API](#request) 
+
+<a name="register"></a>
+## Register the application in Azure Active Directory
+
+Before you can start working with Office 365, you need to register your application in Azure Active Directory and set permissions to use Microsoft Graph services.
+
+See [Register your brower-based web app with the Azure Management Portal](https://msdn.microsoft.com/office/office365/HowTo/add-common-consent-manually#bk_RegisterWebApp) for instructions, and keep in mind the following details.
+
+* Make sure to specify http://127.0.0.1:8080/ as the **Sign-on URL**.
+* After you register the application, [configure the **Delegated permissions**](https://github.com/OfficeDev/O365-Angular-Unified-API-Connect/wiki/Grant-permissions-to-the-Connect-application-in-Azure) that your Angular app requires. The Connect sample requires the **Send mail as signed-in user** permission.
+
+Take note of the following values in the **Configure** page of your Azure application because you need these values to configure [ADAL JS](https://github.com/AzureAD/azure-activedirectory-library-for-js) in your Angular app.
+
+* Client ID (unique to your application)
+* A reply URL (http://127.0.0.1:8080/)
 
 ## Create an Angular app
 
