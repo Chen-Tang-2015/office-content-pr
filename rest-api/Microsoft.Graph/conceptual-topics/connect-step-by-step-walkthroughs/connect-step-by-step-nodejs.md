@@ -15,10 +15,9 @@ This topic assumes a familiarity with the following.
 To call the Microsoft Graph API, your web app must complete the following tasks.
 
 1. [Register the application in Azure Active Directory](#register)
-2. [Redirect the browser to the Azure sign-in page](#redirect)
+2. [Redirect the browser to the Azure sign-in page to authenticate and request an access token](#redirect)
 3. [Receive an authorization code in your reply URL page](#authcode)
-4. [Request an access token from the token endpoint](#accesstoken)
-5. [Use the access token in a request to the Microsoft Graph API](#request)
+4. [Use the access token in a request to the Microsoft Graph API](#request)
 
 <a name="register"/>
 ## Register your application with Azure Active Directory
@@ -39,7 +38,7 @@ Take note of the following values in the **Configure** page of your Azure applic
 You need these values as parameters in the OAuth flow in your app.
 
 <a name="redirect"/>
-## Redirect the browser to the Azure sign-in page
+## Redirect the browser to the Azure sign-in page to authenticate and request an access token
 
 Your app needs to redirect the browser to the Azure sign-in page to get an authorization code and continue the OAuth 2.0 flow.
 
@@ -50,7 +49,7 @@ In the Connect sample, the authentication url from [`authHelper.js#getAuthUrl`](
 /**
  * Generate a fully formed uri to use for authentication based on the supplied resource argument
  * @param {string} res the desired resource endpoint uri
- * @return {string} a fully formed uri with which authentcation can be completed
+ * @return {string} a fully formed uri with which authentication can be completed
  */
 function getAuthUrl(res) {
     return credentials.authority + "/oauth2/authorize" +
@@ -60,6 +59,9 @@ function getAuthUrl(res) {
         "&redirect_uri=" + credentials.redirect_uri;
 };
 ```
+
+> **Note:** <br />
+> The request must also specify a resource that we are trying to consume (as supplied by the @param `res`). In the case of Microsoft Graph, the resource value is `https://graph.microsoft.com`.
 
 **login.hbs#login**
 ```javascript
@@ -100,9 +102,6 @@ router.get('/login', function (req, res, next) {
   }
 });
 ```
-
-<a name="accesstoken"/>
-## Request an access token from the token endpoint
 
 <a name="request"/>
 ## Use the access token in a request to the Microsoft Graph API
