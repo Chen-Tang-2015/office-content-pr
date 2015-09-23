@@ -22,20 +22,18 @@ To call the Microsoft Graph API, your Python app must complete the following tas
 <a name="register"/>
 ## Register the application in Azure Active Directory
 
-Before you can start working with Office 365, you need to register your application on Azure Active Directory and set permissions to use Microsoft Graph services.
+Before you can start working with Office 365, you need to register your application in Azure Active Directory and set permissions to use Microsoft Graph services.
 
-See  [Configure an Office 365 unified API web app in Azure](https://msdn.microsoft.com/office/office365/HowTo/get-started-with-office-365-unified-api#msg_configure_web_app) for instructions, keep in mind the following details.
+See [Register your brower-based web app with the Azure Management Portal](https://msdn.microsoft.com/office/office365/HowTo/add-common-consent-manually#bk_RegisterServerApp) for instructions, and keep in mind the following details.
 
-* Specify a page in your Python app as the **Sign-on URL** in step 6. In the case of the Connect sample, this is [`Callback.Python`](https://github.com/OfficeDev/O365-Python-Unified-API-Connect/blob/master/app/Callback.Python).
-* Configure the **Delegated permissions** that your app requires. The Connect sample requires **Send mail as signed-in user** permission.
+* Make sure to specify http://127.0.0.1:8000/connect/get_token/ as the **Sign-on URL**.
+* After you register the application, [configure the **Delegated permissions**](https://github.com/OfficeDev/O365-Python-Unified-API-Connect/wiki/Grant-permissions-to-the-Connect-application-in-Azure) that your Python app requires. The Connect sample requires the **Send mail as signed-in user** permission.
 
-Take note of the following values in the **Configure** page of your Azure application.
+Take note of the following values in the **Configure** page of your Azure application because you need these values to configure the OAuth flow in your Python app.
 
-* Client ID
-* A valid key
-* A reply URL
-
-You need these values to configure the OAuth flow in your app.
+* Client ID (unique to your application)
+* A reply URL (http://127.0.0.1:8000/connect/get_token/)
+* An application key (unique to your application)
 
 <a name="redirect"/>
 ## Redirect the browser to the Azure sign-in page
