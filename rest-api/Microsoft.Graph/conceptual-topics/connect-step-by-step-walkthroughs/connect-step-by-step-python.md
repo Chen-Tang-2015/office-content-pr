@@ -15,8 +15,8 @@ To call the Microsoft Graph API, your Python app must complete the following tas
 
 1. [Register the application in Azure Active Directory](#register)
 2. [Redirect the browser to the Azure sign-in page](#redirect)
-3. [Receive an authorization code in your reply URL page](#authcode)
-4. [Request an access token from the token endpoint](#accesstoken)
+3. [Receive an authorization code in your reply URL page](#authCode)
+4. [Request an access token from the token endpoint](#accessToken)
 5. [Use the access token in a request to the Microsoft Graph API](#request) 
 
 <a name="register"></a>
@@ -58,20 +58,18 @@ def get_signin_url(redirect_uri):
   return signin_url
 ```
 
-<a name="authcode"/>
+<a name="authCode"></a>
 ## Receive an authorization code in your reply URL page
 
-After the user signs-in to Azure, the flow returns the browser to your reply URL appending an authorization code to the query string. The Connect sample uses the [`Callback.Python`](https://github.com/OfficeDev/O365-Python-Unified-API-Connect/blob/master/app/Callback.Python) page for this purpose.
+After the user signs in to Azure, the browser is redirected to your reply URL, the ```get_token``` function in *connect/views.py*, with an authorization code appended to the query string as the ```code``` variable. 
 
-The authorization code is provided in the `code` query string variable. The Connect sample saves the code to a session variable to use it later.
+The Connect sample gets the code from the query string so it can then exchange it for an access token.
 
-```Python
-if (isset($_GET['code'])) {
-    $_SESSION['code'] =  $_GET['code'];
-}
+```python
+auth_code = request.GET['code']
 ```
 
-<a name="accesstoken"/>
+<a name="accessToken"/>
 ## Request an access token from the token endpoint
 
 Once you have the authorization code, you can use it along the client ID, key, and reply URL values that you got from Azure Active Directory to request an access token. 
