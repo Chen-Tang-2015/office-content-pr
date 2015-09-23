@@ -71,6 +71,36 @@ function login() {
 <a name="authcode"/>
 ## Receive an authorization code in your reply URL page
 
+After the user signs-in to Azure, the flow returns the browser to the reply URL in your app. Azure appends an authorization code to the query string. The Connect sample uses [`authHelper.js#getTokenFromCode`](https://github.com/OfficeDev/O365-Nodejs-Unified-API-Connect/blob/master/authHelper.js#L31) to delegate to [`adal-node`](https://www.npmjs.com/package/adal-node) for this purpose.
+
+The authorization code is provided in the `code` query string variable. The Connect sample saves the code to a cookie to use it later.
+
+> **Note:**<br />
+> If your application is not using HTTPS or another secure protocol, storing Azure's authorization token in a cookie passed over the wire can expose your application to [session hijacking](https://en.wikipedia.org/wiki/Session_hijacking) vulnerabilites. For production environments, take caution to protect the secrecy of these tokens.
+
+```javascript
+router.get('/login', function (req, res, next) {
+  if (req.query.code !== undefined) {
+    authHelper.getTokenFromCode('https://graph.microsoft.com/', req.query.code, function (token) {
+      if (token !== null) {
+        //cache the refresh token in a cookie and go back to index
+        res.cookie(authHelper.TOKEN_CACHE_KEY, token.refreshToken);
+        res.cookie(authHelper.TENANT_CACHE_KEY, token.tenantId);
+        res.redirect('/');
+      }
+      else {
+        console.log("AuthHelper failed to acquire token");
+        res.status(500);
+        res.send();
+      }
+    });
+  }
+  else {
+    res.render('login', { auth_url: authHelper.getAuthUrl('https://graph.microsoft.com/') });
+  }
+});
+```
+
 <a name="accesstoken"/>
 ## Request an access token from the token endpoint
 
