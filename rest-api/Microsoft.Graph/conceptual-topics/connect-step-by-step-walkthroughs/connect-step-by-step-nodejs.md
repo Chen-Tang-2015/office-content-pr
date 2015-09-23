@@ -21,3 +21,7 @@ This topic assumes a familiarity with the following:
 ## Use the access token in a request to the Microsoft Graph API
 
 ## Additional resources
+
+- [Office 365 Node.js Connect sample using Microsoft Graph](https://github.com/OfficeDev/O365-Nodejs-Unified-API-Connect)
+- [Office Dev Center](http://dev.office.com)
+- [Microsoft Graph API reference](https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference)
