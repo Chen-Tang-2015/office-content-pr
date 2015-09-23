@@ -69,55 +69,37 @@ The Connect sample gets the code from the query string so it can then exchange i
 auth_code = request.GET['code']
 ```
 
-<a name="accessToken"/>
+<a name="accessToken"></a>
 ## Request an access token from the token endpoint
 
 Once you have the authorization code, you can use it along the client ID, key, and reply URL values that you got from Azure Active Directory to request an access token. 
 
-> **Note:** <br />
-> The request must also specify a resource that we are trying to consume. In the case of Microsoft Graph, the resource value is `https://graph.microsoft.com`.
+> **Note** The request must also specify a resource that you are trying to consume. In the case of Microsoft Graph, the resource value is `https://graph.microsoft.com`.
 
-The Connect sample requests a token using the code in the [`AuthenticationManager.acquireToken`](https://github.com/OfficeDev/O365-Python-Unified-API-Connect/blob/master/app/AuthenticationManager.Python#L70) function. Here is the most relevant code.
+The Connect sample requests a token in the ```get_token_from_code``` function in the *connect/auth_helper.py* file.
 
-```Python
-$tokenEndpoint = Constants::AUTHORITY_URL . Constants::TOKEN_ENDPOINT;
-
-// Send a POST request to the token endpoint to retrieve tokens.
-// Token endpoint is:
-// https://login.microsoftonline.com/common/oauth2/token
-$response = RequestManager::sendPostRequest(
-    $tokenEndpoint, 
-    array(),
-    array(
-        'client_id' => Constants::CLIENT_ID,
-        'client_secret' => Constants::CLIENT_SECRET,
-        'code' => $_SESSION['code'],
-        'grant_type' => 'authorization_code',
-        'redirect_uri' => Constants::REDIRECT_URI,
-        'resource' => Constants::RESOURCE_ID
-    )
-
-// Store the raw response in JSON format.
-$jsonResponse = json_decode($response, true);
-
-// The access token response has the following parameters:
-// access_token - The requested access token.
-// expires_in - How long the access token is valid.
-// expires_on - The time when the access token expires.
-// id_token - An unsigned JSON Web Token (JWT).
-// refresh_token - An OAuth 2.0 refresh token.
-// resource - The App ID URI of the web API (secured resource).
-// scope - Impersonation permissions granted to the client application.
-// token_type - Indicates the token type value.
-foreach ($jsonResponse as $key=>$value) {
-    $_SESSION[$key] = $value;
-}
+```python
+# This function passes the authorization code to the token
+# issuing endpoint, gets the token, and then returns it.
+def get_token_from_code(auth_code, redirect_uri):
+  # Build the post form for the token request
+  post_data = { 'grant_type': 'authorization_code',
+                'code': auth_code,
+                'redirect_uri': redirect_uri,
+                'client_id': client_id,
+                'client_secret': client_secret,
+                'resource': 'https://graph.microsoft.com'
+              }
+              
+  r = requests.post(token_url, data = post_data)
+  
+  try:
+    return r.json()
+  except:
+    return 'Error retrieving token: {0} - {1}'.format(r.status_code, r.text)
 ```
 
-> **Note:** <br />
-> The response provides more information than just the access token, for example, your app can get a refresh token to request new access tokens without having the user to explicitly sign-in to Azure.
-
-Your Python app can now use the session variable `access_token` to issue authenticated requests to the Microsoft Graph API.
+> **Note** The response provides more information than just the access token. For example, your app can get a refresh token to request new access tokens without having the user explicitly sign-in to Azure again.
 
 <a name="request"/>
 ## Use the access token in a request to the Microsoft Graph API
