@@ -119,7 +119,7 @@ The MailHelper.cs file contains the code that constructs and sends an email. It 
 
 The ``ComposeAndSendMailAsync`` method takes three string values -- ``subject``, ``bodyContent``, and ``recipients`` -- that are passed to it by the MainPage.xaml.cs file. The ``subject`` and ``bodyContent`` strings are stored, along with all other UI strings, in the Resources.resw file. The ``recipients`` string comes from the address box in the app's interface. 
 
-Since the user can potentially pass more than one address, the first task is to split it into a list of JSON-formatted recipients that can then be passed in the POST body of the request:
+Since the user can potentially pass more than one address, the first task is to split the ``recipients`` string into a set of EmailAddress objects that can then be passed in the POST body of the request:
 
             // Prepare the recipient list
             string[] splitter = { ";" };
