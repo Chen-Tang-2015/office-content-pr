@@ -15,9 +15,10 @@ This topic assumes a familiarity with the following.
 To call the Microsoft Graph API, your web app must complete the following tasks.
 
 1. [Register the application in Azure Active Directory](#register)
-2. [Redirect the browser to the Azure sign-in page](#redirect)
-3. [Receive an authorization code in your reply URL page](#authcode)
-4. [Make a request to the Microsoft Graph API](#request)
+2. [Install the Azure Active Directory Client Library for Node](#adal)
+3. [Redirect the browser to the Azure sign-in page](#redirect)
+4. [Receive an authorization code in your reply URL page](#authcode)
+5. [Make a request to the Microsoft Graph API](#request)
 
 <a name="register"/>
 ## Register your application in Azure Active Directory
@@ -36,6 +37,14 @@ Take note of the following values in the **Configure** page of your Azure applic
 * A reply URL
 
 You need these values as parameters in the OAuth flow in your app.
+
+<a name="adal">
+## Install the Azure Active Directory Client Library for Node
+
+The ADAL for node.js library makes it easy for node.js applications to authenticate to AAD in order to access AAD protected web resources.
+To add adal-node to your existing `package.json` enter the following into your preferred terminal.
+
+`npm install adal-node --save`
 
 <a name="redirect"/>
 ## Redirect the browser to the Azure sign-in page
