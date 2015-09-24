@@ -96,4 +96,4 @@ The Microsoft Graph is a very powerful, unifiying API that can be used to intera
 
 -  [Office 365 Angular Connect sample using Microsoft Graph](https://github.com/OfficeDev/O365-Angular-Unified-API-Connect)
 -  [Office Dev Center](http://dev.office.com) 
--  [Microsoft Graph API reference](https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference)
+-  [Microsoft Graph API reference]()
