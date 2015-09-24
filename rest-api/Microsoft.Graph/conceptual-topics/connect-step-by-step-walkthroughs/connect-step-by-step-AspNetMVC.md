@@ -30,7 +30,7 @@ See [Register your brower-based web app with the Azure Management Portal](https:
 * Make sure to specify http://localhost:55065/ as the **Sign-on URL**.
 * After you register the application, [configure the **Delegated permissions**](https://github.com/OfficeDev/O365-AspNetMVC-Unified-API-Connect/wiki/Grant-permissions-to-the-Connect-application-in-Azure) that your Angular app requires. The Connect sample requires the **Send mail as signed-in user** permission.
 
-Take note of the following values in the **Configure** page of your Azure application because you need these values to configure in your Angular app.
+Take note of the following values in the **Configure** page of your Azure application because you need these values to configure in your app.
 
 * Client ID (unique to your application)
 * Key (also known as client secret)
@@ -253,7 +253,8 @@ The ``CreateEmailObject`` method creates the email object in the required reques
 
 ```
 
-Another task is to construct a valid JSON message string and send it to the ``me/SendMail`` endpoint using an HTTP POST request. Since the email body to be sent at the server side is an HTML document, the request sets the ``ContentType`` value of the server side email message to HTML, and encodes this as JSON for the client side HTTP POST request. The UnifiedApiMessageModels.cs file contains the data or schema contracts between this app and the Office 365 unified API server. 
+Another task is to construct a valid JSON message string and send it to the ``me/SendMail`` endpoint using an HTTP POST request. HTTP POST request. Since the email body is to be sent as an HTML document, the request sets the ``ContentType`` value of the email message to HTML, and encodes the content as JSON for the HTTP POST request. The UnifiedApiMessageModels.cs file contains the data or schema contracts between this app and the Office 365 unified API server. 
+ 
 
 
 ```  
