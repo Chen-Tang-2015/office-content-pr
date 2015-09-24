@@ -29,7 +29,6 @@ Before you can start working with Office 365, you need to register your applicat
 
 See [Register your web server app with the Azure Management Portal](https://msdn.microsoft.com/office/office365/HowTo/add-common-consent-manually#bk_RegisterServerApp) for instructions, keep in mind the following details.
 
-*I'd recommend putting the actual URL that the Node app uses, http://localhost:8080/login, in case they are following along and to be clear that you can only supply full URLs here.*
 * Specify a page in your Node.js app as the **Sign-on URL** in step 6. In the case of the Connect sample, the URL is http://localhost:8080/login, which maps to the [/login](https://github.com/OfficeDev/O365-Nodejs-Unified-API-Connect/blob/master/routes/index.js#L33) route.
 
 *Consider linking to your Wiki page on how to configure delegated permissions here for clarity.*
