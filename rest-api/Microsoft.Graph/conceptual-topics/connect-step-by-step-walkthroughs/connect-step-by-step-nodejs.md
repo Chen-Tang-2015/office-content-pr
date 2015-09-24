@@ -98,10 +98,8 @@ See the [relevant code](https://github.com/OfficeDev/O365-Nodejs-Unified-API-Con
 
 Now that we've authenticated with Azure Active Directory, our next step is to acquire an access token via adal-node. After we've done that, we'll be ready to make REST requests to the Microsoft Graph API.
 
-*Extra 's'.*
 To identify our requests to the Graph API, our requests must be signed with an `Authorization` header containing the access token for any web service resource we request. A properly formed authorization header will include the access token from adal-node and will take the following form.
 
-*Might be confusing to someone who doesn't know what the token looks like. Maybe something like this?*
 `Authorization: Bearer <access token>`
 
 To request an access token, adal-node provides two callback functions.
