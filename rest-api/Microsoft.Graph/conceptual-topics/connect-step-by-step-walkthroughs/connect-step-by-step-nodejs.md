@@ -2,7 +2,7 @@
 
 In this article we look at the minimum tasks required to connect your application to Office 365 and call the Microsoft Graph API. We use code from the [Office 365 Node.js Connect sample using Microsoft Graph](https://github.com/OfficeDev/O365-Nodejs-Unified-API-Connect) to explain the main concepts that you have to implement in your app.
 
-![Office 365 Angular Connect sample screenshot](./images/web-screenshot.png)
+![Office 365 Node.js Connect sample screenshot](./images/web-screenshot.png)
 
 ## Prerequisites
 
