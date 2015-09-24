@@ -2,6 +2,12 @@
 
 In this article we look at the minimum tasks required to connect your application to Office 365 and call the Microsoft Graph API. This topic won't create an app from scratch. We use code from [Office 365 ASP.NET MVC Connect sample using Microsoft Graph API](https://github.com/OfficeDev/O365-AspNetMVC-Unified-API-Connect) to explain the main concepts that you have to implement in your app.
 
+The following is the screenshot of the home page.
+![Office 365 ASP.NET MVC sample screenshot](./images/O365AspNetMVCHomePageScreenshot.png)
+
+The following is the screenshot of the send mail page.
+![Office 365 ASP.NET MVC sample screenshot](./images/O365AspNetMVCSendMailPageScreenshot.png)
+
 ## Prerequisites  
 
 This topic assumes you have the following.
@@ -50,7 +56,7 @@ The authentication flow can be broken down to two basic steps:
 
 The connect sample uses the Azure app registration values and a user's ID to authenticate. The ADAL authentication flow needs the client ID, key and reply URL (also known as redirect URL) you get in the Azure registration process. 
 
-To request for an authorization code, first redirects the app to the Azure AD authorization request URL as shown below:
+To request for an authorization code, first redirects the app to the Azure AD authorization request URL as shown below (see HomeController.cs file).
 
 
 ```
@@ -87,7 +93,7 @@ When this **Login** method is called, the app will redirect the user to a sign i
 ```
 The URL will also contain the authorization code mentioned in step 1 and 2 above.  This will get the authentication code from the request parameters. Using the authentication code, the app will make a call to Azure AD to get the access token. Once we get the access token, we store it in the session so that we can use it for multiple requests.
 
-The Authorize action mentioned in the redirect URL action looks like this:
+The Authorize action mentioned in the redirect URL action looks like this.
 
 ```
         public async Task<ActionResult> Authorize()
@@ -155,7 +161,7 @@ For example the UnifiedApiHelper.cs file contains the code that:
 
 
 
-2)  Construct and send the message that the logged in user wants to send via email. The ``SendMessageAsync`` method constructs and sends a POST request to the **https://graph.microsoft.com/beta/me/SendMail** resource URL, using the access token value as one of the arguments. 
+2)  Construct and send the message that the logged in user wants to send via email. The ``SendMessageAsync`` method constructs and sends a POST request to the **https://graph.microsoft.com/beta/me/sendmail** resource URL, using the access token value as one of the arguments. 
 
 
 ```
@@ -192,7 +198,7 @@ For example the UnifiedApiHelper.cs file contains the code that:
 ```
   
 
-The  ``SendMessageSubmit `` method sends the message when the users clicks the **Send Mail** button.
+The  ``MessageController.cs `` file contains code that manages email messages. For example, the **Send Mail** button.The  ``SendMessageSubmit `` method sends the message when the users clicks the **Send Mail** button.
 
 
 ```
@@ -253,7 +259,7 @@ The ``CreateEmailObject`` method creates the email object in the required reques
 
 ```
 
-Another task is to construct a valid JSON message string and send it to the ``me/SendMail`` endpoint using an HTTP POST request. HTTP POST request. Since the email body is to be sent as an HTML document, the request sets the ``ContentType`` value of the email message to HTML, and encodes the content as JSON for the HTTP POST request. The UnifiedApiMessageModels.cs file contains the data or schema contracts between this app and the Office 365 unified API server. 
+Another task is to construct a valid JSON message string and send it to the ``me/sendmail`` endpoint using an HTTP POST request. HTTP POST request. Since the email body is to be sent as an HTML document, the request sets the ``ContentType`` value of the email message to HTML, and encodes the content as JSON for the HTTP POST request. The UnifiedApiMessageModels.cs file contains the data or schema contracts between this app and the Office 365 unified API server. 
  
 
 
