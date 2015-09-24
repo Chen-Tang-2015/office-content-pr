@@ -135,6 +135,8 @@ The [O365-iOS-Unified-API-Connect](https://github.com/OfficeDev/O365-iOS-Unified
 
 As you can see, the response is handled with the NSURLConnection delegates, namely the NSURLConnectionDelegate and NSURLConnectionDataDelegate.
 
+## Next Steps
+
 If access token is expired, or about to expire, you can use ADAuthenticationContext’s **acquireTokenSilentWithResource:clientId:redirectUri:completionBlock:** to acquire a new access token. It's usage is covered in the [O365-iOS-Unified-API-Connect](https://github.com/OfficeDev/O365-iOS-Unified-API-Connect) sample. Also, you can find the code to clear your token cache and stored cookies.  
 
 The Microsoft Graph API is a very powerful, unifiying API that can be used to interact with all kinds of Microsoft data. Check out the [API reference](https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference) to explore what else you can accomplish with the Microsoft Graph API.
