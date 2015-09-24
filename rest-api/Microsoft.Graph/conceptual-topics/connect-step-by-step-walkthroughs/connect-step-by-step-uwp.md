@@ -58,10 +58,10 @@ The AuthenticationHelper.cs file contains all of the authentication code, along 
 The ``GetTokenHelperAsync`` method defined in this file runs when the user authenticates and subsequently every time the app makes a call to the unified API. Its first task is to find an Azure AD account provider:
 
 ```c#
-           aadAccountProvider = await WebAuthenticationCoreManager.FindAccountProviderAsync(provider, authority);
+           aadAccountProvider = await WebAuthenticationCoreManager.FindAccountProviderAsync("https://login.microsoft.com", authority);
 ```
 
-The value of ``provider`` is **https://login.windows.net**. This is the URI that the app will use to authenticate the user. The value of ``authority`` is a concatenated string built from two values stored in the App.xaml file: the value of the **ida:AADInstance** key plus the value of the **ida:Domain** key. This creates a tenant-specific authority. You can also use the string "organizations" if you want your app to run on any Azure AD tenant.
+The value of ``authority`` is a concatenated string built from two values stored in the App.xaml file: the value of the **ida:AADInstance** key plus the value of the **ida:Domain** key. This creates a tenant-specific authority. You can also use the string "organizations" if you want your app to run on any Azure AD tenant.
 
 After the user authenticates, the app stores the user ID value in ``ApplicationData.Current.RoamingSettings``. The ``GetTokenHelperAsync`` method first checks to see if this value exists, and if so, it tries to authenticate silently:
 
@@ -74,7 +74,6 @@ After the user authenticates, the app stores the user ID value in ``ApplicationD
 
                 WebTokenRequest webTokenRequest = new WebTokenRequest(aadAccountProvider, string.Empty, clientId);
                 webTokenRequest.Properties.Add("resource", ResourceUrl);
-                webTokenRequest.Properties.Add("authority", provider);
 
                 // Get an account object for the user
                 userAccount = await WebAuthenticationCoreManager.FindAccountAsync(aadAccountProvider, (string)userID);
@@ -110,7 +109,7 @@ If the app finds no value for ``userID`` in the roaming settings, it constructs 
 
                 WebTokenRequest webTokenRequest = new WebTokenRequest(aadAccountProvider, string.Empty, clientId, WebTokenRequestPromptType.ForceAuthentication);
                 webTokenRequest.Properties.Add("resource", ResourceUrl);
-                webTokenRequest.Properties.Add("authority", provider);
+
                 WebTokenRequestResult webTokenRequestResult = await WebAuthenticationCoreManager.RequestTokenAsync(webTokenRequest);
                 if (webTokenRequestResult.ResponseStatus == WebTokenRequestStatus.Success)
                 {
