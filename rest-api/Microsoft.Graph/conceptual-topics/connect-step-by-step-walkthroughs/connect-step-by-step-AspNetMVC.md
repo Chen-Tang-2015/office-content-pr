@@ -187,8 +187,7 @@ For example the UnifiedApiHelper.cs file contains the code that:
         }  
         
 ```
-        
-        
+  
 
 The  ``SendMessageSubmit `` method sends the message when the users clicks the **Send Mail** button.
 
@@ -294,6 +293,7 @@ Another task is to construct a valid JSON message string and send it to the ``me
     }
     
 }
+
 ```
 
 The Microsoft Graph is a very powerful, unifying API that can be used to interact with all kinds of Microsoft data. Check out the [API reference]() to explore what else you can accomplish with the Microsoft Graph API.
