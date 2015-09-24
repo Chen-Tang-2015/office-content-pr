@@ -3,6 +3,7 @@
 In this article we look at the minimum tasks required to connect your application to Office 365 and call the Microsoft Graph API. We use code from the [Office 365 Android Connect sample using Microsoft Graph](https://github.com/OfficeDev/O365-Android-Unified-API-Connect-Preview) to explain the main concepts that you have to implement in your app.
 
 The following is the screenshot of the send mail page.
+
 ![Office 365 Android Unified API Connect sample screenshot](./images/AndroidConnect.png)
 ##  Prerequisites
 
