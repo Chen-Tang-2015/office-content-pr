@@ -119,6 +119,7 @@ The Authorize action mentioned in the redirect URL action looks like this:
 After the user signs-in to Azure, the Connect sample shows the user an activity for sending a mail message.  With an access token, your app can make authenticated requests to the Microsoft Graph API. 
 
 For example the UnifiedApiHelper.cs file contains the code that:
+
 1.  Get information about the current login user.  The ``GetUserInfoAsync`` method takes a single argument (access token value) to make a call to **https://graph.microsoft.com/beta/me** to get information about the current login user.
 
  ```
