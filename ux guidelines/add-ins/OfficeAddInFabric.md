@@ -1,6 +1,6 @@
 #Use Office UI Fabric in Office Add-ins
 
-**Last modified:** August 31, 2015
+**Last modified:** September 23, 2015
 
 ***Applies to:** Access apps for SharePoint | apps for Office | Excel | Office Add-ins | Outlook | PowerPoint | Project | Word*
 
@@ -9,20 +9,20 @@ Learn more about [supported hosts and other requirements](https://msdn.microsoft
 If you are building an Office Add-in, we encourage you to use [Office UI Fabric](https://github.com/OfficeDev/Office-UI-Fabric) to create your user experience. The following steps walk you through the basics for using Fabric.  
 
 ##1. Set up Fabric
-Add the following lines to your HTML on the head section to reference Fabric from the CDN.
+Add the following lines to your HTML in the head section to reference Fabric from the CDN.
 
      <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/fabric.min.css">
 	 <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css">
 
 
 ##2. Use Fabric icons and fonts
-Using icons is super simple. All you have to do is use an "i" element and reference the appropriate classes. You can control the size of the icon by changing the font size.
+Using icons is simple. All you have to do is use an "i" element and reference the appropriate classes. You can control the size of the icon by changing the font size.
 
     <i class="ms-Icon ms-Icon--group" style="font-size:xx-large" aria-hidden="true"></i>
 
 
 ##3. Use styles for simple components
-Fabric comes with styles for various UI elements, such as buttons and checkboxes. All you have to do is reference the appropriate classes to add the corresponding style, as shown in the following example.
+Fabric comes with styles for various UI elements, such as buttons and check boxes. All you have to do is reference the appropriate classes to add the corresponding style, as shown in the following example.
 
     <button class="ms-Button" id="get-data-from-selection">
     <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
@@ -37,9 +37,9 @@ For example, to use the SearchBox component:
 
 1. Download the SearchBox component from [GitHub](https://github.com/OfficeDev/Office-UI-Fabric/tree/master/dist/components/SearchBox).
 2. Add the following reference to your code: `<script src="SearchBox/Jquery.SearchBox.js"></script>`
-3. Initialize the component by making sure this line executes when your page is loaded: `$(".ms-SearchBox").SearchBox();`. We recommend that you include this on the `Office.Initialize` block of your add-in.     
+3. Initialize the component by making sure this line executes when your page is loaded: `$(".ms-SearchBox").SearchBox();`. We recommend that you include this in the `Office.Initialize` block of your add-in.     
 
-**Note:** If you don't intend to use all the Fabric components, you can reduce the size of the resources you download by opting instead to host the individual CSS files for each component. You can get the CSS files from the component folders in the [Fabric GitHub repository](https://github.com/OfficeDev/Office-UI-Fabric) . 
+**Note:** If you don't intend to use all the Fabric components, you can reduce the size of the resources you download by opting instead to host the individual CSS files for each component. You can get the CSS files from the component folders in the [Fabric GitHub repository](https://github.com/OfficeDev/Office-UI-Fabric). 
 
 
 ##Next steps
