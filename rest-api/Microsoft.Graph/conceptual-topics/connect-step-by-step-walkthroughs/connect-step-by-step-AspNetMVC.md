@@ -66,7 +66,7 @@ The connect sample uses the Azure app registration values and a user's ID to aut
 To request for an authorization code, first redirects the app to the Azure AD authorization request URL as shown below (see HomeController.cs file).
 
 
-```
+```c#
         public ActionResult Login()
         {
             if (string.IsNullOrEmpty(Settings.ClientId) || string.IsNullOrEmpty(Settings.ClientSecret))
@@ -93,7 +93,7 @@ To request for an authorization code, first redirects the app to the Azure AD au
 ```
 When this **Login** method is called, the app will redirect the user to a sign in page. This will take the app to the login page. Once the user credentials are successfully authenticated, Azure redirects the app to  the redirect URL mentioned in the code as denoted by *loginRedirectUri*. This redirect URL is a URL to another action in the ASP.NET MVC app as shown.
 
-```
+```c#
 
  Uri loginRedirectUri => new Uri(Url.Action(nameof(Authorize), "Home", null, Request.Url.Scheme)); 
 
@@ -102,7 +102,7 @@ The URL will also contain the authorization code mentioned in step 1 and 2 above
 
 The Authorize action mentioned in the redirect URL action looks like this.
 
-```
+```c#
         public async Task<ActionResult> Authorize()
         {
             var authContext = new AuthenticationContext(Settings.AzureADAuthority);
@@ -137,7 +137,7 @@ For example the UnifiedApiHelper.cs file contains the code that:
 
 1)  Get information about the current login user.  The ``GetUserInfoAsync`` method takes a single argument (access token value) to make a call to **https://graph.microsoft.com/beta/me** to get information about the current login user.
 
- ```
+ ```c#
  
         public static async Task<UserInfo> GetUserInfoAsync(string accessToken)
         {
@@ -173,7 +173,7 @@ For example the UnifiedApiHelper.cs file contains the code that:
 2)  Construct and send the message that the logged in user wants to send via email. The ``SendMessageAsync`` method constructs and sends a POST request to the **https://graph.microsoft.com/beta/me/sendmail** resource URL, using the access token value as one of the arguments. 
 
 
-```
+```c#
 
         public static async Task<SendMessageResponse> SendMessageAsync(string accessToken, SendMessageRequest sendMessageRequest)
         {
@@ -210,7 +210,7 @@ For example the UnifiedApiHelper.cs file contains the code that:
 The  ``MessageController.cs `` file contains code that manages email messages. For example, the **Send Mail** button.The  ``SendMessageSubmit `` method sends the message when the users clicks the **Send Mail** button.
 
 
-```
+```c#
 
         public async Task<ActionResult> SendMessageSubmit(UserInfo userInfo)
         {
@@ -237,7 +237,7 @@ The  ``MessageController.cs `` file contains code that manages email messages. F
 The ``CreateEmailObject`` method creates the email object in the required request format/data contract that the POST body requires:
 
 
-  ```
+  ```c#
   
         private SendMessageRequest CreateEmailObject(UserInfo to, string subject, string body)
         {
@@ -272,7 +272,7 @@ Another task is to construct a valid JSON message string and send it to the ``me
  
 
 
-```  
+```c#  
 
 
     public class SendMessageResponse
@@ -324,7 +324,7 @@ When the user clicks **Disconnect** in the send mail page, the user will be logo
 The **Logout** method (see HomeController.cs file) shows how this is done.
 
 
-```
+```c#
         public ActionResult Logout()
         {
             Session.Clear();
