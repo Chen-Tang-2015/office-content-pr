@@ -54,7 +54,7 @@ Then initialize it with the location of the authority ("https://login.microsofto
 	self.context = [ADAuthenticationContext authenticationContextWithAuthority:self.authority]; 
 
 
-In the [O365-iOS-Unified-API-Connect](https://github.com/OfficeDev/O365-iOS-Unified-API-Connect) sample we created a singleton authentication class (**AuthenticationManager**) for demonstration purposes that is initialized with the authority and required parameters. Again, this is class serves merely an example on how to approach the authentication workflow. A code segment of interest: 
+In the [O365-iOS-Unified-API-Connect](https://github.com/OfficeDev/O365-iOS-Unified-API-Connect) sample we created a singleton authentication class (**AuthenticationManager**) for demonstration purposes that is initialized with the authority and required parameters. Again, this class is merely an example on how to approach the authentication workflow. A code segment of interest: 
 
 
 
