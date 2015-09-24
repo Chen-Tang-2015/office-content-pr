@@ -2,7 +2,7 @@
 
 This article explains how a simple Android app connects a user to Office 365 and sends an email by making a REST call to the Microsoft Graph API. The [Office 365 Android Connect sample using Microsoft Graph](https://github.com/OfficeDev/O365-Android-Unified-API-Connect-Preview) sample implements the concepts outlined in this article.
 
-The following is the screenshot of the send mail page.
+The following image shows the sample app send mail activity that appears after a user has connected to Office 365.
 
 ![Office 365 Android Unified API Connect sample screenshot](./images/AndroidConnect.png)
 ##  Prerequisites
