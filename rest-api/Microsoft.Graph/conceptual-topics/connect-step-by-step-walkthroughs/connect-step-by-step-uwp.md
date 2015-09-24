@@ -138,7 +138,7 @@ Since the user can potentially pass more than one address, the first task is to 
                 n++;
             }
 
-The second task is to construct a valid JSON Message object and send it to the **me/SendMail** endpoint through an HTTP POST request. Since the ``bodyContent`` string is an HTML document, the request sets the **ContentType** value to HTML:
+The second task is to construct a valid JSON Message object and send it to the **me/SendMail** endpoint through an HTTP POST request. Since the ``bodyContent`` string is an HTML document, the request sets the **ContentType** value to HTML. Also note the call to ``AuthenticationHelper.GetTokenHelperAsync()`` to ensure that we have a fresh access token to pass in the request.
 
                 HttpClient client = new HttpClient();
                 var token = await AuthenticationHelper.GetTokenHelperAsync();
