@@ -120,7 +120,7 @@ After the user signs-in to Azure, the Connect sample shows the user an activity 
 
 For example the UnifiedApiHelper.cs file contains the code that:
 
-1.  Get information about the current login user.  The ``GetUserInfoAsync`` method takes a single argument (access token value) to make a call to **https://graph.microsoft.com/beta/me** to get information about the current login user.
+1)  Get information about the current login user.  The ``GetUserInfoAsync`` method takes a single argument (access token value) to make a call to **https://graph.microsoft.com/beta/me** to get information about the current login user.
 
  ```
  
@@ -153,7 +153,10 @@ For example the UnifiedApiHelper.cs file contains the code that:
 
 ```
 
-2.  Construct and send the message that the logged in user wants to send via email. The ``SendMessageAsync`` method constructs and sends a POST request to the **https://graph.microsoft.com/beta/me/SendMail** resource URL, using the access token value as one of the arguments. 
+
+
+2)  Construct and send the message that the logged in user wants to send via email. The ``SendMessageAsync`` method constructs and sends a POST request to the **https://graph.microsoft.com/beta/me/SendMail** resource URL, using the access token value as one of the arguments. 
+
 
 ```
 
