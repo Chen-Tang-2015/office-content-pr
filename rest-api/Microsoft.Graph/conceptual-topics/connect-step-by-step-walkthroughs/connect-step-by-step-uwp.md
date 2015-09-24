@@ -206,6 +206,6 @@ Once you've made a successful REST request, you've performed the three steps req
 
 * [Office 365 unified API overview (preview)](https://msdn.microsoft.com/en-us/office/office365/howto/office-365-unified-api-overview)
 * [Develop Windows Universal Apps with Azure AD and the Windows 10 Identity API](http://blogs.technet.com/b/ad/archive/2015/08/03/develop-windows-universal-apps-with-azure-ad-and-the-windows-10-identity-api.aspx)
-* [https://github.com/Azure-Samples/AzureAD-NativeClient-UWP-WAM](https://github.com/Azure-Samples/AzureAD-NativeClient-UWP-WAM)
+* [AzureAD-NativeClient-UWP-WAM](https://github.com/Azure-Samples/AzureAD-NativeClient-UWP-WAM)
 * [Office Dev Center](http://dev.office.com)
 * [Microsoft Graph API reference](https://github.com/OfficeDev/office-content-pr/blob/master/rest-api/Microsoft.Graph/conceptual-topics/connect-step-by-step-walkthroughs)
