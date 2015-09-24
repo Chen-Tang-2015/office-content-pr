@@ -4,14 +4,6 @@ In this article we look at the minimum tasks required to connect your applicatio
 
 ![Office 365 Node.js Connect sample screenshot](./images/web-screenshot.png)
 
-## Prerequisites
-
-This topic assumes a familiarity with the following.
-
-* JavaScript
-* Node.js / npm
-* OAuth 2.0
-
 ## Overview
 
 To call the Microsoft Graph API, your web app must complete the following tasks.
