@@ -64,7 +64,7 @@ The ``GetTokenHelperAsync`` method defined in this file runs when the user authe
 
            aadAccountProvider = await WebAuthenticationCoreManager.FindAccountProviderAsync(provider, authority);
 
-The value of ``provider`` is **https://login.windows.net**. This is the URI that the app will use to authenticate the user. The value of ``authority`` is a concatenated string built from two values stored in the App.xaml file: the value of the **ida:AADInstance** key plus the value of the **ida:Domain** key. 
+The value of ``provider`` is **https://login.windows.net**. This is the URI that the app will use to authenticate the user. The value of ``authority`` is a concatenated string built from two values stored in the App.xaml file: the value of the **ida:AADInstance** key plus the value of the **ida:Domain** key. This creates a tenant-specific authority. You can also use the string "organizations" if you want your app to run on any Azure AD tenant.
 
 After the user authenticates, the app stores the user ID value in ``ApplicationData.Current.RoamingSettings``. The ``GetTokenHelperAsync`` method first checks to see if this value exists, and if so, it tries to authenticate silently:
 
