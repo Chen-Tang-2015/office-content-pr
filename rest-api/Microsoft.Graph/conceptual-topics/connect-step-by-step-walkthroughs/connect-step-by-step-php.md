@@ -2,7 +2,7 @@
 
 In this article we look at the minimum tasks required to get an access token from Azure Active Directory (AD) and call the Microsoft Graph API. We use code from the [Office 365 PHP Connect sample using Microsoft Graph](https://github.com/OfficeDev/O365-PHP-Unified-API-Connect) to explain the main concepts that you have to implement in your app.
 
-![Office 365 Python Connect sample screenshot](./images/web-screenshot.png)
+![Office 365 PHP Connect sample screenshot](./images/web-screenshot.png)
 
 ##  Prerequisites
 
@@ -29,7 +29,7 @@ Before you can start working with Office 365, you need to register your applicat
 See [Register your web server app with the Azure Management Portal](https://msdn.microsoft.com/office/office365/HowTo/add-common-consent-manually#bk_RegisterServerApp) for instructions, keep in mind the following details.
 
 * Specify a page in your PHP app as the **Sign-on URL** in step 6. In the case of the Connect sample, this page is [`Callback.php`](https://github.com/OfficeDev/O365-PHP-Unified-API-Connect/blob/master/app/Callback.php).
-* Configure the **Delegated permissions** that your app requires. The Connect sample requires **Send mail as signed-in user** permission.
+* [Configure the **Delegated permissions**](https://github.com/OfficeDev/O365-PHP-Unified-API-Connect/wiki/Grant-permissions-to-the-Connect-application-in-Azure) that your app requires. The Connect sample requires **Send mail as signed-in user** permission.
 
 Take note of the following values in the **Configure** page of your Azure application.
 
