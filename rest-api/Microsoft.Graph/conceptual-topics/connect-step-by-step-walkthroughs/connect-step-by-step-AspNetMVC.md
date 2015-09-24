@@ -2,11 +2,6 @@
 
 In this article we look at the minimum tasks required to connect your application to Office 365 and call the Microsoft Graph API. This topic won't create an app from scratch. We use code from [Office 365 ASP.NET MVC Connect sample using Microsoft Graph API](https://github.com/OfficeDev/O365-AspNetMVC-Unified-API-Connect) to explain the main concepts that you have to implement in your app.
 
-The following is the screenshot of the home page.
-
-![Office 365 ASP.NET MVC sample screenshot](./images/O365AspNetMVCHomePageScreenshot.png)
-
-
 The following is the screenshot of the send mail page.
 
 ![Office 365 ASP.NET MVC sample screenshot](./images/O365AspNetMVCSendMailPageScreenshot.png)
@@ -19,6 +14,7 @@ This topic assumes you have the following.
 * Familiarity with OAuth concepts.
 * An Office 365 account. 
 * A Microsoft Azure tenant for app registration.
+  
   > Note:  The [readme](https://github.com/OfficeDev/O365-AspNetMVC-Unified-API-Connect) for this sample contains more detail about how to obtain an Office 365 account and so on in the prerequisites section.
 
 ## Overview
@@ -46,12 +42,17 @@ Take note of the following values in the **Configure** page of your Azure applic
 * Client ID (unique to your application)
 * Key (also known as client secret)
 * A reply URL (also known as redirect URL). For this sample it's http://localhost:55065/. 
+  
   > Note:  The reply URL value is auto-populated with the sign-on URL value that you specify when you register the application.
 
 <a name="#auth"></a>
 ## Authentication in the Connect sample
 
 The Azure AD Authentication Library (ADAL) for .NET enables client application developers to authenticate users, and then obtain access tokens to make API calls.  You can include this library in your ASP.NET MVC project via **Manage NuGet packages** in Visual Studio.  
+
+The following is the screenshot of the home page.
+
+![Office 365 ASP.NET MVC sample screenshot](./images/O365AspNetMVCHomePageScreenshot.png)
 
 The authentication flow can be broken down to two basic steps:
 1. Request an authorization code
