@@ -92,8 +92,11 @@ To identify our requests to the Graph API, our requests must be signed with an `
 
 To request an access token, adal-node provides two callback functions.
 
-* `AuthenticationContext#acquireTokenWithAuthorizationCode(authCode, redirect_uri, resource, client_id, client_secret, callback)` - provides an access token for a specified resource based on the authorization code returned during login
-* `AuthenticationContext#acquireTokenWithRefreshToken(token, client_id, client_secret, resource, callback)` - provides an access token for a specified resourced based on a refresh token
+|                         Function                        |                                Params                                | Description                                                                                             |
+|:-------------------------------------------------------:|:--------------------------------------------------------------------:|---------------------------------------------------------------------------------------------------------|
+| AuthenticationContext#acquireTokenWithAuthorizationCode | authCode, redirect_uri, resource, client_id, client_secret, callback | provides an access token for a specified resource based on the authorization code returned during login |
+| AuthenticationContext#acquireTokenWithRefreshToken      | token, client_id, client_secret, resource, callback                  |                                                                                                         |
+|                                                         |                                                                      |                                                                                                         |
 
 In the Connect sample, requests are routed through [`authHelper.js`](https://github.com/OfficeDev/O365-Nodejs-Unified-API-Connect/blob/master/authHelper.js) so that the `client_id` and `client_secret` can be added.
 
