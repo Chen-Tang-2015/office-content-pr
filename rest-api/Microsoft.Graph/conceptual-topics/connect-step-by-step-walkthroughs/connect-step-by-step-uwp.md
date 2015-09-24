@@ -80,9 +80,9 @@ After the user authenticates, the app stores the user ID value in ``ApplicationD
 
             }
 
-The app passes the unified API endpoint --  **https://graph.microsoft.com/** -- as the resource value. Since the app knows the userID and the user hasn't disconnected, the WebAccountManager API can find the user account and pass it to the token request. The ``WebAuthenticationCoreManager.RequestTokenAsync`` method returns an access token with the appropriate permissions assigned to it.
+The app passes the unified API endpoint --  **https://graph.microsoft.com/** -- as the resource value. Since the app knows the user ID and the user hasn't disconnected, the WebAccountManager API can find the user account and pass it to the token request. The ``WebAuthenticationCoreManager.RequestTokenAsync`` method returns an access token with the appropriate permissions assigned to it.
 
-If the app finds no value for userID in the roaming settings, it constructs a ``WebTokenRequest`` that forces the user to authenticate through the UI:
+If the app finds no value for ``userID`` in the roaming settings, it constructs a ``WebTokenRequest`` that forces the user to authenticate through the UI:
 
             else
             {
