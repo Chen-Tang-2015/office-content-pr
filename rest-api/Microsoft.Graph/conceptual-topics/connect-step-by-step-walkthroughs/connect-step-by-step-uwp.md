@@ -1,6 +1,6 @@
 # Call the Microsoft unified API (preview) in a universal Windows 10 app
 
-This article describes the process of creating a simple universal Windows 10 app that connects a user to Office 365 and sends an email by making a REST call to the [unified API (preview)](https://msdn.microsoft.com/en-us/office/office365/howto/office-365-unified-api-overview). Take a look at the source code in the [O365-UWP-Unified-API-Connect](https://github.com/OfficeDev/O365-UWP-Unified-API-Connect) repo to see the concepts outlined in this article in the context of a working sample.
+This article describes the process of creating a simple universal Windows 10 app that connects a user to Office 365 and sends an email by making a REST call to the [unified API (preview)](https://msdn.microsoft.com/en-us/office/office365/howto/office-365-unified-api-overview). The [O365-UWP-Unified-API-Connect](https://github.com/OfficeDev/O365-UWP-Unified-API-Connect) sample implements the concepts outlined in this article.
 
 ## Sample user interface
 
