@@ -29,12 +29,14 @@ Before you can create applications that access the unified API (preview), you'll
  
 Windows 10 provides each application with a unique URI and ensures that messages sent to that URI are only sent to that application. You need to create your app and find this system-generated URI before you register your app. In the sample you'll find this method in the AuthenticationHelper.cs file:
 
+```c#
         public static string GetAppRedirectURI()
         {
             // Windows 10 universal apps require redirect URI in the format below. Add a breakpoint to this line and run the app before you register it, so that
             // you can supply the correct redirect URI value.
             return string.Format("ms-appx-web://microsoft.aad.brokerplugin/{0}", WebAuthenticationBroker.GetCurrentApplicationCallbackUri().Host).ToUpper();
         }
+```
 
 That method is triggered in the sample by the **copy redirect URI** button, but you can also follow the pattern in the [AzureAD-NativeClient-UWP-WAM](https://github.com/Azure-Samples/AzureAD-NativeClient-UWP-WAM) sample, where the string is defined in the MainPage class declaration and you can fetch it by using the Visual Studio debugger. 
 
