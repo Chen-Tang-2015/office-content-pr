@@ -1,6 +1,6 @@
-# Call the Microsoft unified API (preview) in a universal Windows 10 app
+# Call the Microsoft Graph API in a universal Windows 10 app
 
-This article describes the process of creating a simple universal Windows 10 app that connects a user to Office 365 and sends an email by making a REST call to the [unified API (preview)](https://msdn.microsoft.com/en-us/office/office365/howto/office-365-unified-api-overview). The [O365-UWP-Unified-API-Connect](https://github.com/OfficeDev/O365-UWP-Unified-API-Connect) sample implements the concepts outlined in this article.
+This article describes the process of creating a simple universal Windows 10 app that connects a user to Office 365 and sends an email by making a REST call to the [Microsoft Graph API](https://msdn.microsoft.com/en-us/office/office365/howto/office-365-unified-api-overview). The [O365-UWP-Unified-API-Connect](https://github.com/OfficeDev/O365-UWP-Unified-API-Connect) sample implements the concepts outlined in this article.
 
 ## Sample user interface
 
@@ -98,7 +98,7 @@ After the user authenticates, the app stores the user ID value in ``ApplicationD
             }
 ```
 
-The app uses the unified API endpoint --  **https://graph.microsoft.com/** -- as the resource value. When it constructs the ``WebTokenRequest`` it uses the client ID value that you added to the App.xaml file. Since the app knows the user ID and the user hasn't disconnected, the WebAccountManager API can find the user account and pass it to the token request. The ``WebAuthenticationCoreManager.RequestTokenAsync`` method returns an access token with the appropriate permissions assigned to it.
+The app uses the Microsoft Graph API endpoint --  **https://graph.microsoft.com/** -- as the resource value. When it constructs the ``WebTokenRequest`` it uses the client ID value that you added to the App.xaml file. Since the app knows the user ID and the user hasn't disconnected, the WebAccountManager API can find the user account and pass it to the token request. The ``WebAuthenticationCoreManager.RequestTokenAsync`` method returns an access token with the appropriate permissions assigned to it.
 
 If the app finds no value for ``userID`` in the roaming settings, it constructs a ``WebTokenRequest`` that forces the user to authenticate through the UI:
 
@@ -144,7 +144,7 @@ If either attempt to retrieve a token is successful, the ``GetTokenHelperAsync``
             }
 ```
 
-## Send an email with the unified API
+## Send an email with the Microsoft Graph API
 
 The MailHelper.cs file contains the code that constructs and sends an email. It consists of a single method -- ``ComposeAndSendMailAsync`` -- that constructs and sends a POST request to the **https://graph.microsoft.com/beta/me/SendMail** endpoint. 
 
@@ -199,7 +199,7 @@ The second task is to construct a valid JSON Message object and send it to the *
                 }
 ```
 
-Once you've made a successful REST request, you've performed the three steps required for interacting with the unified API: app registration, user authentication, and making a REST request.
+Once you've made a successful REST request, you've performed the three steps required for interacting with the Microsoft Graph API: app registration, user authentication, and making a REST request.
 
 
 ## Additional resources
