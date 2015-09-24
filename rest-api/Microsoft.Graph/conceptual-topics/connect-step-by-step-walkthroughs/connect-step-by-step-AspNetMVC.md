@@ -54,7 +54,7 @@ To request for an authorization code, first redirects the app to the Azure AD au
 
 
 ```
-public ActionResult Login()
+        public ActionResult Login()
         {
             if (string.IsNullOrEmpty(Settings.ClientId) || string.IsNullOrEmpty(Settings.ClientSecret))
             {
@@ -119,7 +119,7 @@ The Authorize action mentioned in the redirect URL action looks like this:
 After the user signs-in to Azure, the Connect sample shows the user an activity for sending a mail message.  With an access token, your app can make authenticated requests to the Microsoft Graph API. 
 
 For example the UnifiedApiHelper.cs file contains the code that:
-1.  get information about the current login user.  The ``GetUserInfoAsync`` method takes a single argument (access token value) to make a call to **https://graph.microsoft.com/beta/me** to get information about the current login user.
+1.  Get information about the current login user.  The ``GetUserInfoAsync`` method takes a single argument (access token value) to make a call to **https://graph.microsoft.com/beta/me** to get information about the current login user.
 
  ```
  
@@ -152,7 +152,7 @@ For example the UnifiedApiHelper.cs file contains the code that:
 
 ```
 
-2.  constructs and sends the message that the logged in user wants to send via email. The ``SendMessageAsync`` method constructs and sends a POST request to the **https://graph.microsoft.com/beta/me/SendMail** resource URL, using the access token value as one of the arguments. 
+2.  Construct and send the message that the logged in user wants to send via email. The ``SendMessageAsync`` method constructs and sends a POST request to the **https://graph.microsoft.com/beta/me/SendMail** resource URL, using the access token value as one of the arguments. 
 
 ```
 
@@ -185,9 +185,12 @@ For example the UnifiedApiHelper.cs file contains the code that:
             return sendMessageResponse;
         }  
         
-        ```
+```
+        
+        
 
 The  ``SendMessageSubmit `` method sends the message when the users clicks the **Send Mail** button.
+
 
 ```
 
@@ -212,7 +215,9 @@ The  ``SendMessageSubmit `` method sends the message when the users clicks the *
 
 ```
 
+
 The ``CreateEmailObject`` method creates the email object in the required request format/data contract that the POST body requires:
+
 
   ```
   
