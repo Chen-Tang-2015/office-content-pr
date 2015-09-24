@@ -4,13 +4,6 @@ In this article we look at the minimum tasks required to get an access token fro
 
 ![Office 365 PHP Connect sample screenshot](./images/web-screenshot.png)
 
-##  Prerequisites
-
-This topic assumes the following.
-
-* You are comfortable with PHP.
-* You are familiar with OAuth.
-
 ## Overview
 
 To call the Microsoft Graph API, your PHP app must complete the following tasks.
