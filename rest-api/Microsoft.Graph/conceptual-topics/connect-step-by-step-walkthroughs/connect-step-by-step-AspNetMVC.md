@@ -2,7 +2,7 @@
 
 In this article we look at the minimum tasks required to connect your application to Office 365 and call the Microsoft Graph API. This topic won't create an app from scratch. We use code from [Office 365 ASP.NET MVC Connect sample using Microsoft Graph API](https://github.com/OfficeDev/O365-AspNetMVC-Unified-API-Connect) to explain the main concepts that you have to implement in your app.
 
-The following is the screenshot of the send mail page.
+The following is a screenshot of the send mail page.
 
 ![Office 365 ASP.NET MVC sample screenshot](./images/O365AspNetMVCSendMailPageScreenshot.png)
 
@@ -50,7 +50,7 @@ Take note of the following values in the **Configure** page of your Azure applic
 
 The Azure AD Authentication Library (ADAL) for .NET enables client application developers to authenticate users, and then obtain access tokens to make API calls.  You can include this library in your ASP.NET MVC project via **Manage NuGet packages** in Visual Studio.  
 
-The following is the screenshot of the home page.
+The following is a screenshot of the home page.
 
 ![Office 365 ASP.NET MVC sample screenshot](./images/O365AspNetMVCHomePageScreenshot.png)
 
