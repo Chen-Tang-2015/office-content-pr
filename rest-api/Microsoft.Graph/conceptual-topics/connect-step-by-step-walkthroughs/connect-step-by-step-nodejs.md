@@ -46,6 +46,9 @@ To add adal-node to your existing `package.json` enter the following into your p
 
 `npm install adal-node --save`
 
+For more information about the adal-node client library, see its package info on [npm](https://www.npmjs.com/package/adal-node).
+For issues, source code, and the latest in upcoming features and fixes, see adal-node's project on [Github](https://github.com/AzureAD/azure-activedirectory-library-for-nodejs).
+
 <a name="redirect"/>
 ## Redirect the browser to the Azure sign-in page
 
