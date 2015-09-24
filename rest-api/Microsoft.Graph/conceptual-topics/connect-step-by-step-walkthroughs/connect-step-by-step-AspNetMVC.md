@@ -63,7 +63,7 @@ The authentication flow can be broken down to two basic steps:
 
 The connect sample uses the Azure app registration values and a user's ID to authenticate. The ADAL authentication flow needs the client ID, key and reply URL (also known as redirect URL) you get in the Azure registration process. 
 
-To request for an authorization code, first redirects the app to the Azure AD authorization request URL as shown below (see HomeController.cs file).
+To request for an authorization code, first redirect the app to the Azure AD authorization request URL as shown below (see HomeController.cs file).
 
 
 ```c#
@@ -131,7 +131,7 @@ The Authorize action mentioned in the redirect URL action looks like this.
 <a name="request"></a>
 ## Use the access token in a request to the Microsoft Graph API
 
-After the user signs-in to Azure, the Connect sample shows the user an activity for sending a mail message.  With an access token, your app can make authenticated requests to the Microsoft Graph API. 
+After the user signs-in, the Connect sample shows the user an activity for sending a mail message.  With an access token, your app can make authenticated requests to the Microsoft Graph API. 
 
 For example the UnifiedApiHelper.cs file contains the code that:
 
