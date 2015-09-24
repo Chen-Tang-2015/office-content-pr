@@ -72,15 +72,14 @@ After the user signs-in to Azure, the flow returns the browser to the reply URL 
 
 The authorization code is provided in the `code` query string variable.
 
-> **Note:**<br />
-> If your application does not HTTPS or another secure protocol, storing tokens in a cookie passed over the wire can expose your application to [session hijacking](https://en.wikipedia.org/wiki/Session_hijacking) vulnerabilites. For production environments, take caution to protect the secrecy of these tokens.
-
 ```javascript
 router.get('/<application reply url>', function (req, res, next) {
   var authCode = req.query.code;
   // your router's implementation
 });
 ```
+
+See the [relevant code](https://github.com/OfficeDev/O365-Nodejs-Unified-API-Connect/blob/master/routes/index.js#L34) in the Connect sample
 
 <a name="request"/>
 ## Make a request to the Microsoft Graph API using adal-node
