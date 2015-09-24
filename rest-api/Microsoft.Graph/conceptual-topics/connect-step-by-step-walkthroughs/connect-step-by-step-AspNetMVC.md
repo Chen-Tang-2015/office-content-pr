@@ -53,7 +53,8 @@ The connect sample uses the Azure app registration values and a user's ID to aut
 To request for an authorization code, first redirects the app to the Azure AD authorization request URL as shown below:
 
 
-```public ActionResult Login()
+```
+public ActionResult Login()
         {
             if (string.IsNullOrEmpty(Settings.ClientId) || string.IsNullOrEmpty(Settings.ClientSecret))
             {
@@ -80,13 +81,16 @@ To request for an authorization code, first redirects the app to the Azure AD au
 When this **Login** method is called, the app will redirect the user to a sign in page. This will take the app to the login page. Once the user credentials are successfully authenticated, Azure redirects the app to  the redirect URL mentioned in the code as denoted by *loginRedirectUri*. This redirect URL is a URL to another action in the ASP.NET MVC app as shown.
 
 ```
+
  Uri loginRedirectUri => new Uri(Url.Action(nameof(Authorize), "Home", null, Request.Url.Scheme)); 
+
 ```
 The URL will also contain the authorization code mentioned in step 1 and 2 above.  This will get the authentication code from the request parameters. Using the authentication code, the app will make a call to Azure AD to get the access token. Once we get the access token, we store it in the session so that we can use it for multiple requests.
 
 The Authorize action mentioned in the redirect URL action looks like this:
 
-```public async Task<ActionResult> Authorize()
+```
+        public async Task<ActionResult> Authorize()
         {
             var authContext = new AuthenticationContext(Settings.AzureADAuthority);
 
@@ -109,13 +113,6 @@ The Authorize action mentioned in the redirect URL action looks like this:
         }
     
 ```
- 
-
-
-
-
-
-
 <a name="request"></a>
 ## Use the access token in a request to the Microsoft Graph API
 
@@ -124,7 +121,9 @@ After the user signs-in to Azure, the Connect sample shows the user an activity 
 For example the UnifiedApiHelper.cs file contains the code that:
 1.  get information about the current login user.  The ``GetUserInfoAsync`` method takes a single argument (access token value) to make a call to **https://graph.microsoft.com/beta/me** to get information about the current login user.
 
-    public static async Task<UserInfo> GetUserInfoAsync(string accessToken)
+ ```
+ 
+        public static async Task<UserInfo> GetUserInfoAsync(string accessToken)
         {
             UserInfo myInfo = new UserInfo();
 
@@ -151,9 +150,13 @@ For example the UnifiedApiHelper.cs file contains the code that:
             return myInfo;
         }
 
+```
+
 2.  constructs and sends the message that the logged in user wants to send via email. The ``SendMessageAsync`` method constructs and sends a POST request to the **https://graph.microsoft.com/beta/me/SendMail** resource URL, using the access token value as one of the arguments. 
 
-public static async Task<SendMessageResponse> SendMessageAsync(string accessToken, SendMessageRequest sendMessageRequest)
+```
+
+        public static async Task<SendMessageResponse> SendMessageAsync(string accessToken, SendMessageRequest sendMessageRequest)
         {
             var sendMessageResponse = new SendMessageResponse { Status = SendMessageStatusEnum.NotSent };
 
@@ -180,11 +183,15 @@ public static async Task<SendMessageResponse> SendMessageAsync(string accessToke
             }
 
             return sendMessageResponse;
-        }            
+        }  
+        
+        ```
 
 The  ``SendMessageSubmit `` method sends the message when the users clicks the **Send Mail** button.
 
-public async Task<ActionResult> SendMessageSubmit(UserInfo userInfo)
+```
+
+        public async Task<ActionResult> SendMessageSubmit(UserInfo userInfo)
         {
             // After Index method renders the View, user clicks Send Mail, which comes in here.
             EnsureUser(ref userInfo);
@@ -203,10 +210,13 @@ public async Task<ActionResult> SendMessageSubmit(UserInfo userInfo)
             }));
         }
 
+```
 
 The ``CreateEmailObject`` method creates the email object in the required request format/data contract that the POST body requires:
 
-            private SendMessageRequest CreateEmailObject(UserInfo to, string subject, string body)
+  ```
+  
+        private SendMessageRequest CreateEmailObject(UserInfo to, string subject, string body)
         {
             return new SendMessageRequest
             {
@@ -233,10 +243,15 @@ The ``CreateEmailObject`` method creates the email object in the required reques
                 SaveToSentItems = true
             };
 
+```
+
 Another task is to construct a valid JSON message string and send it to the ``me/SendMail`` endpoint using an HTTP POST request. Since the email body to be sent at the server side is an HTML document, the request sets the ``ContentType`` value of the server side email message to HTML, and encodes this as JSON for the client side HTTP POST request. The UnifiedApiMessageModels.cs file contains the data or schema contracts between this app and the Office 365 unified API server. 
 
 
-public class SendMessageResponse
+```  
+
+
+    public class SendMessageResponse
     {
         public SendMessageStatusEnum Status { get; set; }
         public string StatusMessage { get; set; }
@@ -273,7 +288,7 @@ public class SendMessageResponse
     }
     
 }
-
+```
 
 The Microsoft Graph is a very powerful, unifying API that can be used to interact with all kinds of Microsoft data. Check out the [API reference]() to explore what else you can accomplish with the Microsoft Graph API.
 
