@@ -2,16 +2,14 @@
 
 In this article we look at the minimum tasks required to get an access token from Azure Active Directory (AD) and call the Microsoft Graph API. We use code from the [Office 365 PHP Connect sample using Microsoft Graph](https://github.com/OfficeDev/O365-PHP-Unified-API-Connect) to explain the main concepts that you have to implement in your app.
 
+![Office 365 Python Connect sample screenshot](./images/web-screenshot.png)
+
 ##  Prerequisites
 
 This topic assumes the following.
 
 * You are comfortable with PHP.
 * You are familiar with OAuth.
-* An Office 365 account. You can sign up for [an Office 365 Developer subscription](https://portal.office.com/Signup/Signup.aspx?OfferId=6881A1CB-F4EB-4db3-9F18-388898DAF510&DL=DEVELOPERPACK&ali=1#0) that includes the resources that you need to start building Office 365 apps.
-* A Microsoft Azure tenant to register your application in. Azure (AD) provides identity services that applications use for authentication and authorization. If you don't have an Azure subscription, you can sign up for a trial [here](https://account.windowsazure.com/SignUp).
-
-
 
 ## Overview
 
