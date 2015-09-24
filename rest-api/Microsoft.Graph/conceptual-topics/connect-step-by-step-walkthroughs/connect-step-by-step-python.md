@@ -40,7 +40,7 @@ Take note of the following values in the **Configure** page of your Azure applic
 
 Your app needs to redirect the browser to the Azure sign-in page to being the OAuth flow and get an authorization code. 
 
-In the Connect sample, the following code (located in *connect/auth_helper.py*) builds the URL that the app needs to redirect the user to and is piped to the view where it can be used for redirection. 
+In the Connect sample, the following code (located in [*connect/auth_helper.py*](https://github.com/OfficeDev/O365-Python-Unified-API-Connect/blob/master/connect/auth_helper.py)) builds the URL that the app needs to redirect the user to and is piped to the view where it can be used for redirection. 
 
 ```python
 # This function creates the signin URL that the app will
@@ -61,7 +61,7 @@ def get_signin_url(redirect_uri):
 <a name="authCode"></a>
 ## Receive an authorization code in your reply URL page
 
-After the user signs in to Azure, the browser is redirected to your reply URL, the ```get_token``` function in *connect/views.py*, with an authorization code appended to the query string as the ```code``` variable. 
+After the user signs in to Azure, the browser is redirected to your reply URL, the ```get_token``` function in [*connect/views.py*](https://github.com/OfficeDev/O365-Python-Unified-API-Connect/blob/master/connect/views.py), with an authorization code appended to the query string as the ```code``` variable. 
 
 The Connect sample gets the code from the query string so it can then exchange it for an access token.
 
@@ -76,7 +76,7 @@ Once you have the authorization code, you can use it along the client ID, key, a
 
 > **Note** The request must also specify a resource that you are trying to consume. In the case of Microsoft Graph, the resource value is `https://graph.microsoft.com`.
 
-The Connect sample requests a token in the ```get_token_from_code``` function in the *connect/auth_helper.py* file.
+The Connect sample requests a token in the ```get_token_from_code``` function in the [*connect/auth_helper.py*](https://github.com/OfficeDev/O365-Python-Unified-API-Connect/blob/master/connect/auth_helper.py) file.
 
 ```python
 # This function passes the authorization code to the token
@@ -106,7 +106,7 @@ def get_token_from_code(auth_code, redirect_uri):
 
 With an access token, your app can make authenticated requests to the Microsoft Graph API. Your app must append the access code to the **Authorization** header of each request.
 
-The Connect sample sends an email using the ```me/sendMail``` endpoint in the Microsoft Graph API. The code is in the ```call_sendMail_endpoint``` function in the *connect/graph_service.py* file. This is the code that shows how to append the access code to the Authorization header.
+The Connect sample sends an email using the ```me/sendMail``` endpoint in the Microsoft Graph API. The code is in the ```call_sendMail_endpoint``` function in the [*connect/graph_service.py*](https://github.com/OfficeDev/O365-Python-Unified-API-Connect/blob/master/connect/graph_service.py) file. This is the code that shows how to append the access code to the Authorization header.
 
 ```python
 # Set request headers.

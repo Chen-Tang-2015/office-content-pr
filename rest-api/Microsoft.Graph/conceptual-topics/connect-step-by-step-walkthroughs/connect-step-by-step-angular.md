@@ -44,7 +44,7 @@ Simply include the library and its Angular-specific module using the Microsoft C
 <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/adal-angular.min.js"></script>
 ```
 
-Next, you have to configure the ADAL JS service wherever you configure your Angular app's dependencies. The Connect sample does its configuration in *public/app.js*. 
+Next, you have to configure the ADAL JS service wherever you configure your Angular app's dependencies. The Connect sample does its configuration in [*public/app.js*](https://github.com/OfficeDev/O365-Angular-Unified-API-Connect/blob/master/public/scripts/app.js). 
 
 To configure ADAL JS, first include a reference to the ADAL module by adding ```AdalAngular``` to your module's require array and pass ```adalAuthenticationServiceProvider``` into your ```config``` function. Configure the library with the ```init``` function, passing it your application's client ID and an ```endpoints``` object that declares which APIs your Angular app needs to make CORS requests to.
 
@@ -67,7 +67,7 @@ adalAuthenticationServiceProvider.init(
 
 Your app needs to redirect the browser to a sign in page so the user can sign in and grant your application access to their data. The Connect sample utilizes ADAL JS to handle this task. 
 
-In one of your application's controllers, first add a reference to the ADAL service by injecting ```adalAuthenticationService``` into your controller and then define a function that uses the service's ```login``` function that your UI can call. The Connect sample does this in the *controllers/mainController.js* file. 
+In one of your application's controllers, first add a reference to the ADAL service by injecting ```adalAuthenticationService``` into your controller and then define a function that uses the service's ```login``` function that your UI can call. The Connect sample does this in the [*controllers/mainController.js*](https://github.com/OfficeDev/O365-Angular-Unified-API-Connect/blob/master/public/controllers/mainController.js) file. 
 
 ```javascript
 /**
@@ -85,7 +85,7 @@ When this function is called, your application will redirect the user to a sign 
 
 With an access token, your app can make authenticated requests to the Microsoft Graph API. ADAL JS automatically intercepts all HTTP requests and adds your access token to them so you don't have to manually set that header when using the library. 
 
-The Connect sample sends an email using the ```me/sendMail``` endpoint in the Microsoft Graph API in the *controllers/mainController.js* file. 
+The Connect sample sends an email using the ```me/sendMail``` endpoint in the Microsoft Graph API in the [*controllers/mainController.js*](https://github.com/OfficeDev/O365-Angular-Unified-API-Connect/blob/master/public/controllers/mainController.js) file. 
 
 The Microsoft Graph is a very powerful, unifiying API that can be used to interact with all kinds of Microsoft data. Check out the [API reference]() to explore what else you can accomplish with the Microsoft Graph API.
 
