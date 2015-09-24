@@ -2,6 +2,29 @@
 
 This article describes the process of creating a simple universal Windows 10 app that connects a user to Office 365 and sends an email by making a REST call to the [unified API (preview)](https://msdn.microsoft.com/en-us/office/office365/howto/office-365-unified-api-overview). Take a look at the source code in the [O365-UWP-Unified-API-Connect](https://github.com/OfficeDev/O365-UWP-Unified-API-Connect) repo to see the concepts outlined in this article in the context of a working sample.
 
+## Sample user interface
+
+The sample contains a very simple user interface, consisting of a top command bar, a **connect button**, a **send mail** button, and a text box that is automatically populated with the signed-in user's e-mail address but that can be edited. The command bar also contains a button that enables developers to find the app's redirect URI.
+
+The **send mail** button is disabled when the user has not connected:
+
+![](images/SignedOut.png)
+
+The top command bar contains a disconnect button when the user has connected:
+
+![](images/SignedIn.png)
+
+All of the sample's UI strings are stored in the Resources.resw file inside the Assets folder.
+
+## Prerequisites 
+
+Before you can create applications that access the unified API (preview), you'll need the following tools and resources:
+
+* Visual Studio 2015.
+* Windows 10 (development mode enabled).
+* A Microsoft Azure tenant for app registration.
+* An Office 365 account. 
+
 ## Register the app
  
 Windows 10 provides each application with a unique URI and ensures that messages sent to that URI are only sent to that application. You need to create your app and find this system-generated URI before you register your app. In the sample you'll find this method in the AuthenticationHelper.cs file:
@@ -16,20 +39,6 @@ Windows 10 provides each application with a unique URI and ensures that messages
 That method is triggered in the sample by the **copy redirect URI** button, but you can also follow the pattern in the [AzureAD-NativeClient-UWP-WAM](https://github.com/Azure-Samples/AzureAD-NativeClient-UWP-WAM) sample, where the string is defined in the MainPage class declaration and you can fetch it by using the Visual Studio debugger. 
 
 Follow the steps in the [Register and configure the app](https://github.com/OfficeDev/O365-UWP-Unified-API-Connect#register) of the sample's Readme in order to register your app after you've gotten the redirect URI value.
-
-## Sample user interface
-
-The sample contains a very simple user interface, consisting of a top command bar, a **connect button**, a **send mail** button, and a text box that is automatically populated with the signed-in user's e-mail address but that can be edited. The command bar also contains a button that enables developers to find the app's redirect URI.
-
-The **send mail** button is disabled when the user has not connected:
-
-![](images/SignedOut.png)
-
-The top command bar contains a disconnect button when the user has connected:
-
-![](images/SignedIn.png)
-
-All of the sample's UI strings are stored in the Resources.resw file inside the Assets folder.
 
 ## Connect to the Microsoft Graph API
 
