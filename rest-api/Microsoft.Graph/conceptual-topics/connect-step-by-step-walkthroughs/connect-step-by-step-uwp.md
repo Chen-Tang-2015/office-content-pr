@@ -173,6 +173,9 @@ The second task is to construct a valid JSON Message object and send it to the *
                     throw new Exception("We could not send the message: " + response.StatusCode.ToString());
                 }
 
+Once you've made a successful REST request, you've performed the three steps required for interacting with the unified API: app registration, user authentication, and making a REST request.
+
+
 ## Additional resources
 
 * [Office 365 unified API overview (preview)](https://msdn.microsoft.com/en-us/office/office365/howto/office-365-unified-api-overview)
