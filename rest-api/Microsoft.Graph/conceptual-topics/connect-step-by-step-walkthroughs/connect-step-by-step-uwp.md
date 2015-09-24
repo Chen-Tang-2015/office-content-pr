@@ -40,13 +40,33 @@ That method is triggered in the sample by the **copy redirect URI** button, but 
 
 Follow the steps in the [Register and configure the app](https://github.com/OfficeDev/O365-UWP-Unified-API-Connect#register) of the sample's Readme in order to register your app after you've gotten the redirect URI value.
 
+You'll need the client ID value from the **Configure** page of your Azure application when you configure your app for authentication.
+
 ## Connect to the Microsoft Graph API
 
 The sample uses the native Windows 10 WebAccountManager API to authenticate users. It follows a pattern similar to the one described in the [Develop Windows Universal Apps with Azure AD and the Windows 10 Identity API](http://blogs.technet.com/b/ad/archive/2015/08/03/develop-windows-universal-apps-with-azure-ad-and-the-windows-10-identity-api.aspx) blog post and demonstrated in the [AzureAD-NativeClient-UWP-WAM](https://github.com/Azure-Samples/AzureAD-NativeClient-UWP-WAM) sample.
 
-The AuthenticationHelper.cs file contains all of the authentication code, along with additional logic that stores user information and forces authentication only when the user has disconnected from the app. The ``GetTokenHelperAsync`` method runs when the user authenticates and every time the app makes a call to the unified API.
+The App.xaml file contains the key/value pairs that your app will need in order to authenticate the user and authorize the app to send an email:
 
-After the user authenticates, the app stores the user ID value in ``ApplicationData.Current.RoamingSettings``. The app tries to authenticate silently whenever it finds this value:
+    <Application.Resources>
+        <!-- Add your client id here. -->
+        <x:String x:Key="ida:ClientID"><your client id></x:String>
+        <x:String x:Key="ida:AADInstance">https://login.microsoftonline.com/</x:String>
+        <!-- Add your developer tenant domain here. -->
+        <x:String x:Key="ida:Domain">yourtenant.onmicrosoft.com</x:String>
+    </Application.Resources>
+
+Add the client ID value that you got when you registered your app as the value for the **ida:ClientID** key. Change the value of the **ida:Domain** key so that it matches your Office 365 tenant.
+
+The AuthenticationHelper.cs file contains all of the authentication code, along with additional logic that stores user information and forces authentication only when the user has disconnected from the app.
+
+The ``GetTokenHelperAsync`` method defined in this file runs when the user authenticates and subsequently every time the app makes a call to the unified API. Its first task is to find an Azure AD account provider:
+
+           aadAccountProvider = await WebAuthenticationCoreManager.FindAccountProviderAsync(provider, authority);
+
+The value of ``provider`` is **https://login.windows.net**. This is the URI that the app will use to authenticate the user. The value of ``authority`` is a concatenated string built from two values stored in the App.xaml file: the value of the **ida:AADInstance** key plus the value of the **ida:Domain** key. 
+
+After the user authenticates, the app stores the user ID value in ``ApplicationData.Current.RoamingSettings``. The ``GetTokenHelperAsync`` method first checks to see if this value exists, and if so, it tries to authenticate silently:
 
             // Check if there's a record of the last account used with the app
             var userID = _settings.Values["userID"];
@@ -80,7 +100,7 @@ After the user authenticates, the app stores the user ID value in ``ApplicationD
 
             }
 
-The app passes the unified API endpoint --  **https://graph.microsoft.com/** -- as the resource value. Since the app knows the user ID and the user hasn't disconnected, the WebAccountManager API can find the user account and pass it to the token request. The ``WebAuthenticationCoreManager.RequestTokenAsync`` method returns an access token with the appropriate permissions assigned to it.
+The app uses the unified API endpoint --  **https://graph.microsoft.com/** -- as the resource value. When it constructs the ``WebTokenRequest`` it uses the client ID value that you added to the App.xaml file. Since the app knows the user ID and the user hasn't disconnected, the WebAccountManager API can find the user account and pass it to the token request. The ``WebAuthenticationCoreManager.RequestTokenAsync`` method returns an access token with the appropriate permissions assigned to it.
 
 If the app finds no value for ``userID`` in the roaming settings, it constructs a ``WebTokenRequest`` that forces the user to authenticate through the UI:
 
@@ -147,7 +167,7 @@ Since the user can potentially pass more than one address, the first task is to 
                 n++;
             }
 
-The second task is to construct a valid JSON Message object and send it to the **me/SendMail** endpoint through an HTTP POST request. Since the ``bodyContent`` string is an HTML document, the request sets the **ContentType** value to HTML. Also note the call to ``AuthenticationHelper.GetTokenHelperAsync()`` to ensure that we have a fresh access token to pass in the request.
+The second task is to construct a valid JSON Message object and send it to the **me/SendMail** endpoint through an HTTP POST request. Since the ``bodyContent`` string is an HTML document, the request sets the **ContentType** value to HTML. Also note the call to ``AuthenticationHelper.GetTokenHelperAsync`` to ensure that we have a fresh access token to pass in the request.
 
                 HttpClient client = new HttpClient();
                 var token = await AuthenticationHelper.GetTokenHelperAsync();
