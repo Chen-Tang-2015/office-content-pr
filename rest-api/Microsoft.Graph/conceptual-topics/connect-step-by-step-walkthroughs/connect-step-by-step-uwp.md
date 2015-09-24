@@ -55,7 +55,7 @@ Add the client ID value that you got when you registered your app as the value f
 
 The AuthenticationHelper.cs file contains all of the authentication code, along with additional logic that stores user information and forces authentication only when the user has disconnected from the app.
 
-The ``GetTokenHelperAsync`` method defined in this file runs when the user authenticates and subsequently every time the app makes a call to the unified API. Its first task is to find an Azure AD account provider:
+The ``GetTokenHelperAsync`` method defined in this file runs when the user authenticates and subsequently every time the app makes a call to the Microsoft Graph API. Its first task is to find an Azure AD account provider:
 
 ```c#
            aadAccountProvider = await WebAuthenticationCoreManager.FindAccountProviderAsync("https://login.microsoft.com", authority);
