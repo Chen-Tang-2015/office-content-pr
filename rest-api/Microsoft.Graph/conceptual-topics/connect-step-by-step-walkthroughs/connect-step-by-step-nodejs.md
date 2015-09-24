@@ -43,7 +43,6 @@ You need these values as parameters in the OAuth flow in your app.
 <a name="adal">
 ## Install the Azure Active Directory Client Library for Node
 
-*'node.js' should be capitalized. I know you took this from the ADAL's project website, but they have it wrong: https://github.com/nodejs/node-v0.x-archive/wiki/FAQ#what-is-the-official-spellingcapitalizationpronunciation*
 The ADAL for Node.js library makes it easy for Node.js applications to authenticate to AAD in order to access AAD protected web resources.
 To add adal-node to your existing `package.json` enter the following into your preferred terminal.
 
