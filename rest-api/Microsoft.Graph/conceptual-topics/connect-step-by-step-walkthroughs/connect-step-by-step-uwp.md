@@ -16,15 +16,6 @@ The top command bar contains a disconnect button when the user has connected:
 
 All of the sample's UI strings are stored in the Resources.resw file inside the Assets folder.
 
-## Prerequisites 
-
-Before you can create applications that access the unified API (preview), you'll need the following tools and resources:
-
-* Visual Studio 2015.
-* Windows 10 (development mode enabled).
-* A Microsoft Azure tenant for app registration.
-* An Office 365 account. 
-
 ## Register the app
  
 Windows 10 provides each application with a unique URI and ensures that messages sent to that URI are only sent to that application. You need to create your app and find this system-generated URI before you register your app. In the sample you'll find this method in the AuthenticationHelper.cs file:
