@@ -34,7 +34,7 @@ You need these values to configure the OAuth flow in your app.
 
 ## Request and acquire an access token from Azure AD
 
-To request and acquire an access token for calling the Microsoft Graph API, you can use **acquireAuthTokenWithResource:clientId:redirectUri:completionBlock: **  provided by the [Microsoft Azure Active Directory Authentication Library (ADAL) for iOS and OSX](https://github.com/AzureAD/azure-activedirectory-library-for-objc). This SDK gives your application the full functionality of Microsoft Azure AD, including industry standard protocol support for OAuth2, Web API integration with user level consent, and two factor authentication support.
+To request and acquire an access token for calling the Microsoft Graph API, you can use **acquireAuthTokenWithResource:clientId:redirectUri:completionBlock:**  provided by the [Microsoft Azure Active Directory Authentication Library (ADAL) for iOS and OSX](https://github.com/AzureAD/azure-activedirectory-library-for-objc). This SDK gives your application the full functionality of Microsoft Azure AD, including industry standard protocol support for OAuth2, Web API integration with user level consent, and two factor authentication support.
 
 This method takes the following parameters:
 
