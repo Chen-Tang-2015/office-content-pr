@@ -54,7 +54,6 @@ For issues, source code, and the latest in upcoming features and fixes, see adal
 <a name="redirect"/>
 ## Redirect the browser to the sign-in page
 
-*Ricardo and I agreed that the sign in page isn't really Azure, nor is it really Office 365. In the Python, Angular, and PHP topics, we chose to omit "Azure" and just call it "sign in page". Few instances in topic, just called out here.*
 Your app needs to redirect the browser to the sign-in page to get an authorization code and continue the OAuth 2.0 flow.
 
 *Capitalize "url".*
@@ -84,10 +83,7 @@ function login() {
 <a name="authcode"/>
 ## Receive an authorization code in your reply URL page
 
-*Remove hypen in "signs-in", and remove "Azure".*
-After the user signs in, the flow returns the browser to the reply URL in your app. Azure appends an authorization code to the query string.
-
-The authorization code is provided in the `code` query string variable.
+After the user signs in, the flow returns the browser to the reply URL in your app. The authorization code is provided in the `code` query string variable.
 
 ```javascript
 router.get('/<application reply url>', function (req, res, next) {
