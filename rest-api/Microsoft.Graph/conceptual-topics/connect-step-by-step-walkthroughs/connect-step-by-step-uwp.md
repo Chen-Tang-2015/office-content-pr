@@ -66,12 +66,15 @@ The AuthenticationHelper.cs file contains all of the authentication code, along 
 
 The ``GetTokenHelperAsync`` method defined in this file runs when the user authenticates and subsequently every time the app makes a call to the unified API. Its first task is to find an Azure AD account provider:
 
+```c#
            aadAccountProvider = await WebAuthenticationCoreManager.FindAccountProviderAsync(provider, authority);
+```
 
 The value of ``provider`` is **https://login.windows.net**. This is the URI that the app will use to authenticate the user. The value of ``authority`` is a concatenated string built from two values stored in the App.xaml file: the value of the **ida:AADInstance** key plus the value of the **ida:Domain** key. This creates a tenant-specific authority. You can also use the string "organizations" if you want your app to run on any Azure AD tenant.
 
 After the user authenticates, the app stores the user ID value in ``ApplicationData.Current.RoamingSettings``. The ``GetTokenHelperAsync`` method first checks to see if this value exists, and if so, it tries to authenticate silently:
 
+```c#
             // Check if there's a record of the last account used with the app
             var userID = _settings.Values["userID"];
 
@@ -103,11 +106,13 @@ After the user authenticates, the app stores the user ID value in ``ApplicationD
                 }
 
             }
+```
 
 The app uses the unified API endpoint --  **https://graph.microsoft.com/** -- as the resource value. When it constructs the ``WebTokenRequest`` it uses the client ID value that you added to the App.xaml file. Since the app knows the user ID and the user hasn't disconnected, the WebAccountManager API can find the user account and pass it to the token request. The ``WebAuthenticationCoreManager.RequestTokenAsync`` method returns an access token with the appropriate permissions assigned to it.
 
 If the app finds no value for ``userID`` in the roaming settings, it constructs a ``WebTokenRequest`` that forces the user to authenticate through the UI:
 
+```c#
             else
             {
                 // There is no recorded user. Start a sign in flow without imposing a specific account.
@@ -124,9 +129,11 @@ If the app finds no value for ``userID`` in the roaming settings, it constructs 
 
                 }
             }
+```
 
 If either attempt to retrieve a token is successful, the ``GetTokenHelperAsync`` method finishes by storing important user information in the roaming settings and then returning the token value. Otherwise, it makes sure that the roaming settings are null and returns a null value.
 
+```c#
             // We succeeded in getting a valid user.
             if (userAccount != null)
             {
@@ -145,6 +152,7 @@ If either attempt to retrieve a token is successful, the ``GetTokenHelperAsync``
                 SignOut();
                 return null;
             }
+```
 
 ## Send an email with the unified API
 
@@ -154,6 +162,7 @@ The ``ComposeAndSendMailAsync`` method takes three string values -- ``subject``,
 
 Since the user can potentially pass more than one address, the first task is to split the ``recipients`` string into a set of EmailAddress objects that can then be passed in the POST body of the request:
 
+```c#
             // Prepare the recipient list
             string[] splitter = { ";" };
             var splitRecipientsString = recipients.Split(splitter, StringSplitOptions.RemoveEmptyEntries);
@@ -170,9 +179,11 @@ Since the user can potentially pass more than one address, the first task is to 
                 }
                 n++;
             }
+```
 
 The second task is to construct a valid JSON Message object and send it to the **me/SendMail** endpoint through an HTTP POST request. Since the ``bodyContent`` string is an HTML document, the request sets the **ContentType** value to HTML. Also note the call to ``AuthenticationHelper.GetTokenHelperAsync`` to ensure that we have a fresh access token to pass in the request.
 
+```c#
                 HttpClient client = new HttpClient();
                 var token = await AuthenticationHelper.GetTokenHelperAsync();
                 client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
@@ -196,6 +207,7 @@ The second task is to construct a valid JSON Message object and send it to the *
 
                     throw new Exception("We could not send the message: " + response.StatusCode.ToString());
                 }
+```
 
 Once you've made a successful REST request, you've performed the three steps required for interacting with the unified API: app registration, user authentication, and making a REST request.
 
