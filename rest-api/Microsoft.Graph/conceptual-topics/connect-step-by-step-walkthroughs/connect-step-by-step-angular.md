@@ -51,7 +51,8 @@ Next, you have to configure the ADAL JS service wherever you configure your Angu
 To configure ADAL JS, first include a reference to the ADAL module by adding ```AdalAngular``` to your module's require array and pass ```adalAuthenticationServiceProvider``` into your ```config``` function. Configure the library with the ```init``` function, passing it your application's client ID and an ```endpoints``` object that declares which APIs your Angular app needs to make CORS requests to.
 
 ```javascript
-// Initialize the ADAL provider with your clientID (found in the Azure Management Portal) and the API URL (to enable CORS requests).
+// Initialize the ADAL provider with your clientID (found in the Azure Management Portal) and 
+// the API URL (to enable CORS requests).
 adalAuthenticationServiceProvider.init(
   {
     clientId: clientId,
