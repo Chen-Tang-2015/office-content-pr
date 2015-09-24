@@ -6,17 +6,6 @@ The following is a screenshot of the send mail page.
 
 ![Office 365 ASP.NET MVC sample screenshot](./images/O365AspNetMVCSendMailPageScreenshot.png)
 
-## Prerequisites  
-
-This topic assumes you have the following.
-
-* An understanding of ASP.NET MVC and C#.
-* Familiarity with OAuth concepts.
-* An Office 365 account. 
-* A Microsoft Azure tenant for app registration.
-  
-  > Note:  The [readme](https://github.com/OfficeDev/O365-AspNetMVC-Unified-API-Connect) for this sample contains more detail about how to obtain an Office 365 account and so on in the prerequisites section.
-
 ## Overview
 
 To call the Microsoft Graph API, you have to complete the following tasks.
