@@ -16,6 +16,7 @@ This topic assumes you have the following.
 * Familiarity with OAuth concepts.
 * An Office 365 account. 
 * A Microsoft Azure tenant for app registration.
+  > Note:  The [readme](https://github.com/OfficeDev/O365-AspNetMVC-Unified-API-Connect) for this sample contains more detail about how to obtain an Office 365 account and so on in the prerequisites section.
 
 ## Overview
 
@@ -25,6 +26,7 @@ To call the Microsoft Graph API, you have to complete the following tasks.
 2. [Authenticate a user and get an access token by calling methods on the Azure AD Authentication Library for .NET. (ADAL)](#auth)
 3. [Use ADAL to get an access token](#accessToken)
 4. [Use the access token in a request to the Microsoft Graph API](#request) 
+5. [Disconnect session](#logout) 
 
 <a name="register"></a>
 ## Register the application in Azure Active Directory
@@ -119,6 +121,8 @@ The Authorize action mentioned in the redirect URL action looks like this.
         }
     
 ```
+>  Note:  For more information about authorization flow, see [Authorization Code Grant Flow] (https://msdn.microsoft.com/en-US/library/azure/dn645542.aspx)
+
 <a name="request"></a>
 ## Use the access token in a request to the Microsoft Graph API
 
@@ -305,7 +309,24 @@ Another task is to construct a valid JSON message string and send it to the ``me
 }
 
 ```
+<a name="logout"></a>
+## Discoonect the session
 
+When the user clicks **Disconnect** in the send mail page, the user will be logout of the session. The code does this by 
+* Clearing the local session
+* Redirect the browser to the logout endpoint (so Azure can clear its own cookies)
+
+The **Logout** method (see HomeController.cs file) shows how this is done.
+
+
+```
+        public ActionResult Logout()
+        {
+            Session.Clear();
+            return Redirect(Settings.LogoutAuthority + logoutRedirectUri.ToString());
+        }
+
+```
 The Microsoft Graph is a very powerful, unifying API that can be used to interact with all kinds of Microsoft data. Check out the [API reference]() to explore what else you can accomplish with the Microsoft Graph API.
 
 ## Additional resources
