@@ -3,9 +3,12 @@
 In this article we look at the minimum tasks required to connect your application to Office 365 and call the Microsoft Graph API. This topic won't create an app from scratch. We use code from [Office 365 ASP.NET MVC Connect sample using Microsoft Graph API](https://github.com/OfficeDev/O365-AspNetMVC-Unified-API-Connect) to explain the main concepts that you have to implement in your app.
 
 The following is the screenshot of the home page.
+
 ![Office 365 ASP.NET MVC sample screenshot](./images/O365AspNetMVCHomePageScreenshot.png)
 
+
 The following is the screenshot of the send mail page.
+
 ![Office 365 ASP.NET MVC sample screenshot](./images/O365AspNetMVCSendMailPageScreenshot.png)
 
 ## Prerequisites  
@@ -310,7 +313,7 @@ Another task is to construct a valid JSON message string and send it to the ``me
 
 ```
 <a name="logout"></a>
-## Discoonect the session
+## Disconnect the session
 
 When the user clicks **Disconnect** in the send mail page, the user will be logout of the session. The code does this by 
 * Clearing the local session
