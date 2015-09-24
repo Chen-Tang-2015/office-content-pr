@@ -100,7 +100,7 @@ Now that we've authenticated with Azure Active Directory, our next step is to ac
 
 To identify our requests to the Graph API, our requests must be signed with an `Authorization` header containing the access token for any web service resource we request. A properly formed authorization header will includes the access token from adal-node and will take the following form.
 
-`Authorization: Bearer ba4f57d4-78f5-4049-b5e8-b01e99347ddf`
+`Authorization: Bearer ba4f57d4...b01e99347ddf`
 
 To request an access token, adal-node provides two callback functions.
 
