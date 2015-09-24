@@ -1,6 +1,6 @@
 # Call the Microsoft unified API (preview) in a universal Windows 10 app
 
-This article describes the process of creating a simple universal Windows 10 app that connects a user to Office 365 and sends an email by making a REST call to the [unified API (preview)](https://msdn.microsoft.com/en-us/office/office365/howto/office-365-unified-api-overview). Take a look at the source code in the [O365-UWP-Unified-API-Connect](https://github.com/OfficeDev/O365-UWP-Unified-API-Connect) repo to see the concepts outlined in this article in the context of a working sample.
+This article describes the process of creating a simple universal Windows 10 app that connects a user to Office 365 and sends an email by making a REST call to the [unified API (preview)](https://msdn.microsoft.com/en-us/office/office365/howto/office-365-unified-api-overview). The [O365-UWP-Unified-API-Connect](https://github.com/OfficeDev/O365-UWP-Unified-API-Connect) sample implements the concepts outlined in this article.
 
 ## Sample user interface
 
@@ -42,7 +42,7 @@ Follow the steps in the [Register and configure the app](https://github.com/Offi
 
 ## Connect to the Microsoft Graph API
 
-The sample uses the native Windows 10 WebAccountManager API to authenticate users. It follows the general pattern described in the [Develop Windows Universal Apps with Azure AD and the Windows 10 Identity API](http://blogs.technet.com/b/ad/archive/2015/08/03/develop-windows-universal-apps-with-azure-ad-and-the-windows-10-identity-api.aspx) blog post and demonstrated in the [AzureAD-NativeClient-UWP-WAM](https://github.com/Azure-Samples/AzureAD-NativeClient-UWP-WAM) sample.
+The sample uses the native Windows 10 WebAccountManager API to authenticate users. It follows a pattern similar to the one described in the [Develop Windows Universal Apps with Azure AD and the Windows 10 Identity API](http://blogs.technet.com/b/ad/archive/2015/08/03/develop-windows-universal-apps-with-azure-ad-and-the-windows-10-identity-api.aspx) blog post and demonstrated in the [AzureAD-NativeClient-UWP-WAM](https://github.com/Azure-Samples/AzureAD-NativeClient-UWP-WAM) sample.
 
 The AuthenticationHelper.cs file contains all of the authentication code, along with additional logic that stores user information and forces authentication only when the user has disconnected from the app. The ``GetTokenHelperAsync`` method runs when the user authenticates and every time the app makes a call to the unified API.
 
@@ -80,9 +80,9 @@ After the user authenticates, the app stores the user ID value in ``ApplicationD
 
             }
 
-The app passes the unified API endpoint --  **https://graph.microsoft.com/** -- as the resource value. Since the app knows the userID and the user hasn't disconnected, the WebAccountManager API can find the user account and pass it to the token request. The ``WebAuthenticationCoreManager.RequestTokenAsync`` method returns an access token with the appropriate permissions assigned to it.
+The app passes the unified API endpoint --  **https://graph.microsoft.com/** -- as the resource value. Since the app knows the user ID and the user hasn't disconnected, the WebAccountManager API can find the user account and pass it to the token request. The ``WebAuthenticationCoreManager.RequestTokenAsync`` method returns an access token with the appropriate permissions assigned to it.
 
-If the app finds no value for userID in the roaming settings, it constructs a ``WebTokenRequest`` that forces the user to authenticate through the UI:
+If the app finds no value for ``userID`` in the roaming settings, it constructs a ``WebTokenRequest`` that forces the user to authenticate through the UI:
 
             else
             {

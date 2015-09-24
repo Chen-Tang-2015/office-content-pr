@@ -2,7 +2,9 @@
 
 In this article we look at the minimum tasks required to connect your application to Office 365 and calling the Microsoft Graph API. We use code from the [O365-iOS-Unified-API-Connect](https://github.com/OfficeDev/O365-iOS-Unified-API-Connect) to explain the main concepts that you have to implement in your app. This samples covers the core fundamentals for authenticating with Microsoft Azure Active Directory (AAD), and making a simple service call against the Office 365 mail service using the Microsoft Graph API (sending a mail). It's recommended that you clone or download the project from this repository to accompany this article. 
 
+The following is the screenshot of the send mail page.
 
+![Office 365 iOS Unified API Connect sample screenshot](./images/iOSConnect.png)
 
 This article references the [Microsoft Azure Active Directory Authentication Library (ADAL) for iOS and OSX](https://github.com/AzureAD/azure-activedirectory-library-for-objc), and the [O365-iOS-Unified-API-Connect](https://github.com/OfficeDev/O365-iOS-Unified-API-Connect) sample authenticates using this library. See this repository for more information on usage and implementation in your iOS project.
 
@@ -52,7 +54,7 @@ Then initialize it with the location of the authority ("https://login.microsofto
 	self.context = [ADAuthenticationContext authenticationContextWithAuthority:self.authority]; 
 
 
-In the [O365-iOS-Unified-API-Connect](https://github.com/OfficeDev/O365-iOS-Unified-API-Connect) sample we created a singleton authentication class (**AuthenticationManager**) for demonstration purposes that is initialized with the authority and required parameters. Again, this is class serves merely an example on how to approach the authentication workflow. A code segment of interest: 
+In the [O365-iOS-Unified-API-Connect](https://github.com/OfficeDev/O365-iOS-Unified-API-Connect) sample we created a singleton authentication class (**AuthenticationManager**) for demonstration purposes that is initialized with the authority and required parameters. Again, this class is merely an example on how to approach the authentication workflow. A code segment of interest: 
 
 
 
@@ -132,6 +134,8 @@ The [O365-iOS-Unified-API-Connect](https://github.com/OfficeDev/O365-iOS-Unified
 }
 
 As you can see, the response is handled with the NSURLConnection delegates, namely the NSURLConnectionDelegate and NSURLConnectionDataDelegate.
+
+## Next Steps
 
 If access token is expired, or about to expire, you can use ADAuthenticationContext’s **acquireTokenSilentWithResource:clientId:redirectUri:completionBlock:** to acquire a new access token. It's usage is covered in the [O365-iOS-Unified-API-Connect](https://github.com/OfficeDev/O365-iOS-Unified-API-Connect) sample. Also, you can find the code to clear your token cache and stored cookies.  
 
