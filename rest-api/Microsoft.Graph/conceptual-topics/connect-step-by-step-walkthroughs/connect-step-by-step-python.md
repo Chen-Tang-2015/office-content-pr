@@ -16,9 +16,9 @@ This topic assumes the following:
 To call the Microsoft Graph API, your Python app must complete the following tasks.
 
 1. [Register the application in Azure Active Directory](#register)
-2. [Redirect the browser to the Azure sign-in page](#redirect)
+2. [Redirect the browser to the sign in page](#redirect)
 3. [Receive an authorization code in your reply URL page](#authCode)
-4. [Request an access token from the token endpoint](#accessToken)
+4. [Request an access token from the token issuing endpoint](#accessToken)
 5. [Use the access token in a request to the Microsoft Graph API](#request) 
 
 <a name="register"></a>
@@ -26,7 +26,7 @@ To call the Microsoft Graph API, your Python app must complete the following tas
 
 Before you can start working with Office 365, you need to register your application in Azure Active Directory and set permissions to use Microsoft Graph services.
 
-See [Register your brower-based web app with the Azure Management Portal](https://msdn.microsoft.com/office/office365/HowTo/add-common-consent-manually#bk_RegisterServerApp) for instructions, and keep in mind the following details.
+See [Register your web server app with the Azure Management Portal](https://msdn.microsoft.com/office/office365/HowTo/add-common-consent-manually#bk_RegisterServerApp) for instructions, and keep in mind the following details.
 
 * Make sure to specify http://127.0.0.1:8000/connect/get_token/ as the **Sign-on URL**.
 * After you register the application, [configure the **Delegated permissions**](https://github.com/OfficeDev/O365-Python-Unified-API-Connect/wiki/Grant-permissions-to-the-Connect-application-in-Azure) that your Python app requires. The Connect sample requires the **Send mail as signed-in user** permission.
@@ -38,9 +38,9 @@ Take note of the following values in the **Configure** page of your Azure applic
 * An application key (unique to your application)
 
 <a name="redirect"></a>
-## Redirect the browser to the Azure sign-in page
+## Redirect the browser to the sign in page
 
-Your app needs to redirect the browser to the Azure sign-in page to being the OAuth flow and get an authorization code. 
+Your app needs to redirect the browser to the sign in page to begin the OAuth flow and get an authorization code. 
 
 In the Connect sample, the following code (located in [*connect/auth_helper.py*](https://github.com/OfficeDev/O365-Python-Unified-API-Connect/blob/master/connect/auth_helper.py)) builds the URL that the app needs to redirect the user to and is piped to the view where it can be used for redirection. 
 
@@ -63,7 +63,7 @@ def get_signin_url(redirect_uri):
 <a name="authCode"></a>
 ## Receive an authorization code in your reply URL page
 
-After the user signs in to Azure, the browser is redirected to your reply URL, the ```get_token``` function in [*connect/views.py*](https://github.com/OfficeDev/O365-Python-Unified-API-Connect/blob/master/connect/views.py), with an authorization code appended to the query string as the ```code``` variable. 
+After the user signs in, the browser is redirected to your reply URL, the ```get_token``` function in [*connect/views.py*](https://github.com/OfficeDev/O365-Python-Unified-API-Connect/blob/master/connect/views.py), with an authorization code appended to the query string as the ```code``` variable. 
 
 The Connect sample gets the code from the query string so it can then exchange it for an access token.
 
@@ -72,7 +72,7 @@ auth_code = request.GET['code']
 ```
 
 <a name="accessToken"></a>
-## Request an access token from the token endpoint
+## Request an access token from the token issuing endpoint
 
 Once you have the authorization code, you can use it along the client ID, key, and reply URL values that you got from Azure Active Directory to request an access token. 
 
@@ -101,7 +101,7 @@ def get_token_from_code(auth_code, redirect_uri):
     return 'Error retrieving token: {0} - {1}'.format(r.status_code, r.text)
 ```
 
-> **Note** The response provides more information than just the access token. For example, your app can get a refresh token to request new access tokens without having the user explicitly sign-in to Azure again.
+> **Note** The response provides more information than just the access token. For example, your app can get a refresh token to request new access tokens without having the user explicitly sign in again.
 
 <a name="request"></a>
 ## Use the access token in a request to the Microsoft Graph API
