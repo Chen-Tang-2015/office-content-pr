@@ -2,6 +2,8 @@
 
 In this article we look at the minimum tasks required to get an access token from Azure Active Directory (AD) and call the Microsoft Graph API. We use code from the [Office 365 PHP Connect sample using Microsoft Graph](https://github.com/OfficeDev/O365-PHP-Unified-API-Connect) to explain the main concepts that you have to implement in your app.
 
+![Office 365 Python Connect sample screenshot](./images/web-screenshot.png)
+
 ##  Prerequisites
 
 This topic assumes the following.
