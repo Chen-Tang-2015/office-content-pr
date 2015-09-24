@@ -55,6 +55,7 @@ The following is a screenshot of the home page.
 ![Office 365 ASP.NET MVC sample screenshot](./images/O365AspNetMVCHomePageScreenshot.png)
 
 The authentication flow can be broken down to two basic steps:
+
 1. Request an authorization code
 2. Use authorization code to request an access token. 
 
