@@ -5,13 +5,6 @@ This article explains how a simple Android app connects a user to Office 365 and
 The following image shows the sample app send mail activity that appears after a user has connected to Office 365.
 
 ![Office 365 Android Unified API Connect sample screenshot](./images/AndroidConnect.png)
-##  Prerequisites
-
-This topic assumes the following.
-
-* You are familiar with the Retrofit REST library from Square
-* You have an Office 365 account.
-* You have a Microsoft Azure tenant for app registration.
 
 ## Overview
 
