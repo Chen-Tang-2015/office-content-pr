@@ -20,7 +20,8 @@ To call the Microsoft Graph API, your web app must complete the following tasks.
 2. [Install the Azure Active Directory Client Library for Node](#adal)
 3. [Redirect the browser to the sign-in page](#redirect)
 4. [Receive an authorization code in your reply URL page](#authcode)
-5. [Make a request to the Microsoft Graph API](#request)
+5. [Use `adal-node` to request an access token](#accesstoken)
+6. [Make a request to the Microsoft Graph API](#request)
 
 <a name="register"/>
 ## Register your application in Azure Active Directory
@@ -93,14 +94,10 @@ router.get('/<application reply url>', function (req, res, next) {
 
 See the [relevant code](https://github.com/OfficeDev/O365-Nodejs-Unified-API-Connect/blob/master/routes/index.js#L34) in the Connect sample
 
-<a name="request"/>
-## Make a request to the Microsoft Graph API using adal-node
+<a name="accesstoken"/>
+## Use `adal-node` to request an access token
 
 Now that we've authenticated with Azure Active Directory, our next step is to acquire an access token via adal-node. After we've done that, we'll be ready to make REST requests to the Microsoft Graph API.
-
-To identify our requests to the Graph API, our requests must be signed with an `Authorization` header containing the access token for any web service resource we request. A properly formed authorization header will include the access token from adal-node and will take the following form.
-
-`Authorization: Bearer <access token>`
 
 To request an access token, adal-node provides two callback functions.
 
@@ -138,6 +135,13 @@ function getTokenFromCode(res, code, callback) {
     });
 };
 ```
+
+<a name="request"/>
+## Make a request to the Microsoft Graph API
+
+To identify our requests to the Graph API, our requests must be signed with an `Authorization` header containing the access token for any web service resource we request. A properly formed authorization header will include the access token from adal-node and will take the following form.
+
+`Authorization: Bearer <access token>`
 
 By combining the above code with our authentication logic from the previous section, we can now use our access token to sign requests.
 
