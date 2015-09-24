@@ -50,6 +50,7 @@ The sample uses the native Windows 10 WebAccountManager API to authenticate user
 
 The App.xaml file contains the key/value pairs that your app will need in order to authenticate the user and authorize the app to send an email:
 
+```xml
     <Application.Resources>
         <!-- Add your client id here. -->
         <x:String x:Key="ida:ClientID"><your client id></x:String>
@@ -57,6 +58,7 @@ The App.xaml file contains the key/value pairs that your app will need in order 
         <!-- Add your developer tenant domain here. -->
         <x:String x:Key="ida:Domain">yourtenant.onmicrosoft.com</x:String>
     </Application.Resources>
+```
 
 Add the client ID value that you got when you registered your app as the value for the **ida:ClientID** key. Change the value of the **ida:Domain** key so that it matches your Office 365 tenant.
 
