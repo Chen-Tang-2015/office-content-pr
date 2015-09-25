@@ -87,7 +87,7 @@ When this **Login** method is called, the app will redirect the user to a sign i
  Uri loginRedirectUri => new Uri(Url.Action(nameof(Authorize), "Home", null, Request.Url.Scheme)); 
 
 ```
-The URL will also contain the authorization code mentioned in step 1 and 2 above.  This will get the authentication code from the request parameters. Using the authentication code, the app will make a call to Azure AD to get the access token. Once we get the access token, we store it in the session so that we can use it for multiple requests.
+The URL will also contain the authorization code mentioned in step 1 and 2 above.  This will get the authorization code from the request parameters. Using the authorizationn code, the app will make a call to Azure AD to get the access token. Once we get the access token, we store it in the session so that we can use it for multiple requests.
 
 The Authorize action mentioned in the redirect URL action looks like this.
 
