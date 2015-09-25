@@ -86,10 +86,6 @@ In the [O365-iOS-Unified-API-Connect](https://github.com/OfficeDev/O365-iOS-Unif
                            }];
 
 
-
-
-
-
 The first time this app is run, the Authentication Manager will send a request to the authority which 
 will redirect you to a login page. You'll provide your credentials and the response will 
 contain the authentication result. If it's successful, it will also contain your refresh and access tokens. The second time this application is run, and assuming 
