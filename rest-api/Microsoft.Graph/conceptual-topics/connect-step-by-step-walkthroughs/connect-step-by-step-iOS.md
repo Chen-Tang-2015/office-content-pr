@@ -129,7 +129,6 @@ The [O365-iOS-Unified-API-Connect](https://github.com/OfficeDev/O365-iOS-Unified
     }
     
     [conn start];
-}
 
 As you can see, the response is handled with the NSURLConnection delegates, namely the NSURLConnectionDelegate and NSURLConnectionDataDelegate.
 
