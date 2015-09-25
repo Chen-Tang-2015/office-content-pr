@@ -257,7 +257,7 @@ The ``CreateEmailObject`` method creates the email object in the required reques
 
 ```
 
-Another task is to construct a valid JSON message string and send it to the ``me/sendmail`` endpoint using an HTTP POST request. HTTP POST request. Since the email body is to be sent as an HTML document, the request sets the ``ContentType`` value of the email message to HTML, and encodes the content as JSON for the HTTP POST request. The UnifiedApiMessageModels.cs file contains the data or schema contracts between this app and the Office 365 unified API server. 
+Another task is to construct a valid JSON message string and send it to the ``me/sendmail`` endpoint using an HTTP POST request. Since the email body is to be sent as an HTML document, the request sets the ``ContentType`` value of the email message to HTML, and encodes the content as JSON for the HTTP POST request. The UnifiedApiMessageModels.cs file contains the data or schema contracts between this app and the Office 365 unified API server. 
  
 
 
@@ -324,7 +324,7 @@ The **Logout** method (see HomeController.cs file) shows how this is done.
 
 ##Next steps
 The Microsoft Graph is a very powerful, unifying API that can be used to interact with all kinds of Microsoft data. Check out the [Graph API reference](https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference) to explore what else you can accomplish with the Microsoft Graph API. 
-We invite you to explore our other ASP.NET samples on [GitHub](https://github.com/OfficeDev?utf8=%E2%9C%93&query=-asp)
+We invite you to explore our other ASP.NET samples on [GitHub](https://github.com/OfficeDev?utf8=%E2%9C%93&query=-asp).
 
 ## Additional resources
 
