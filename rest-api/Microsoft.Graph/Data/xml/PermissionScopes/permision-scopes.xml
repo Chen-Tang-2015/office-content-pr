@@ -44,7 +44,7 @@
         <string>GalleryApplicationConfiguration</string>
         <string>GalleryApplicationTemplate</string>
       </ApplicableResources>
-      <Remarks />
+      <Remarks></Remarks>
     </PermissionScope>
     <PermissionScope>
       <Scope>Calendar</Scope>
