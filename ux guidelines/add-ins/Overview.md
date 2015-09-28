@@ -8,7 +8,7 @@ Learn more about [supported hosts and other requirements](https://msdn.microsoft
 
 Office Add-ins extend the Office experience by providing contextual functionality that users can access within Office clients. Add-ins empower users to get more done by enabling them to access third-party functionality within Office, without costly context switches. 
 
- Your add-in UX design must integrate seamlessly with Office to provide an efficient, natural interaction for your users. Take advantage of Office UI extensions (commands) to provide access to your add-in and use the [UI elements](UIElements.md) and [best practices](BestPractices.md) that we recommend when you create custom HTML-based UI. 
+ Your add-in UX design must integrate seamlessly with Office to provide an efficient, natural interaction for your users. Take advantage of add-in commands (Office UI extensions) to provide access to your add-in and use the [UI elements](UIElements.md) and [best practices](BestPractices.md) that we recommend when you create custom HTML-based UI. 
  
  
 ##Core Office Add-in design principles
