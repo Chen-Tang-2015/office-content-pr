@@ -1,6 +1,6 @@
 #Office UI toolkit for add-ins and web apps
 
-**Last modified:** September 23, 2015
+**Last modified:** September 28, 2015
 
 ***Applies to:** Office 365 | Office Add-ins | SharePoint Add-ins*
 
