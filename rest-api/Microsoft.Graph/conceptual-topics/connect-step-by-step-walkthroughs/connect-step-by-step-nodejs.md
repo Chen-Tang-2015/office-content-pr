@@ -4,23 +4,16 @@ In this article we look at the minimum tasks required to connect your applicatio
 
 ![Office 365 Node.js Connect sample screenshot](./images/web-screenshot.png)
 
-## Prerequisites
-
-This topic assumes a familiarity with the following.
-
-* JavaScript
-* Node.js / npm
-* OAuth 2.0
-
 ## Overview
 
 To call the Microsoft Graph API, your web app must complete the following tasks.
 
 1. [Register the application in Azure Active Directory](#register)
 2. [Install the Azure Active Directory Client Library for Node](#adal)
-3. [Redirect the browser to the Azure sign-in page](#redirect)
+3. [Redirect the browser to the sign-in page](#redirect)
 4. [Receive an authorization code in your reply URL page](#authcode)
-5. [Make a request to the Microsoft Graph API](#request)
+5. [Use `adal-node` to request an access token](#accesstoken)
+6. [Make a request to the Microsoft Graph API](#request)
 
 <a name="register"/>
 ## Register your application in Azure Active Directory
@@ -29,8 +22,8 @@ Before you can start working with Office 365, you need to register your applicat
 
 See [Register your web server app with the Azure Management Portal](https://msdn.microsoft.com/office/office365/HowTo/add-common-consent-manually#bk_RegisterServerApp) for instructions, keep in mind the following details.
 
-* Specify a page in your Node.js app as the **Sign-on URL** in step 6. In the case of the Connect sample, this page is specified by the [`/login`](https://github.com/OfficeDev/O365-Nodejs-Unified-API-Connect/blob/master/routes/index.js#L33) route.
-* Configure the **Delegated permissions** that your app requires. The Connect sample requires **Send mail as signed-in user** permission.
+* Specify a page in your Node.js app as the **Sign-on URL** in step 6. In the case of the Connect sample, the URL is http://localhost:8080/login, which maps to the [/login](https://github.com/OfficeDev/O365-Nodejs-Unified-API-Connect/blob/master/routes/index.js#L33) route.
+* [Configure the **Delegated permissions**](https://github.com/OfficeDev/O365-Nodejs-Unified-API-Connect/wiki/Grant-permissions-to-the-Connect-application-in-Azure) that your app requires. The Connect sample requires **Send mail as signed-in user** permission.
 
 Take note of the following values in the **Configure** page of your Azure application.
 
@@ -43,7 +36,7 @@ You need these values as parameters in the OAuth flow in your app.
 <a name="adal">
 ## Install the Azure Active Directory Client Library for Node
 
-The ADAL for node.js library makes it easy for node.js applications to authenticate to AAD in order to access AAD protected web resources.
+The ADAL for Node.js library makes it easy for Node.js applications to authenticate to AAD in order to access AAD protected web resources.
 To add adal-node to your existing `package.json` enter the following into your preferred terminal.
 
 `npm install adal-node --save`
@@ -52,11 +45,11 @@ For more information about the adal-node client library, see its package info on
 For issues, source code, and the latest in upcoming features and fixes, see adal-node's project on [Github](https://github.com/AzureAD/azure-activedirectory-library-for-nodejs).
 
 <a name="redirect"/>
-## Redirect the browser to the Azure sign-in page
+## Redirect the browser to the sign-in page
 
-Your app needs to redirect the browser to the Azure sign-in page to get an authorization code and continue the OAuth 2.0 flow.
+Your app needs to redirect the browser to the sign-in page to get an authorization code and continue the OAuth 2.0 flow.
 
-In the Connect sample, the authentication url from [`authHelper.js#getAuthUrl`](https://github.com/OfficeDev/O365-Nodejs-Unified-API-Connect/blob/master/authHelper.js#L17) is redirected by the [`login.hbs#login`](https://github.com/OfficeDev/O365-Nodejs-Unified-API-Connect/blob/master/views/login.hbs#L2) function through a client-side `onclick` event.
+In the Connect sample, the authentication URL from [`authHelper.js#getAuthUrl`](https://github.com/OfficeDev/O365-Nodejs-Unified-API-Connect/blob/master/authHelper.js#L17) is redirected by the [`login.hbs#login`](https://github.com/OfficeDev/O365-Nodejs-Unified-API-Connect/blob/master/views/login.hbs#L2) function through a client-side `onclick` event.
 
 **authHelper.js#getAuthUrl**
 ```javascript
@@ -82,9 +75,7 @@ function login() {
 <a name="authcode"/>
 ## Receive an authorization code in your reply URL page
 
-After the user signs-in to Azure, the flow returns the browser to the reply URL in your app. Azure appends an authorization code to the query string.
-
-The authorization code is provided in the `code` query string variable.
+After the user signs in, the flow returns the browser to the reply URL in your app. The authorization code is provided in the `code` query string variable.
 
 ```javascript
 router.get('/<application reply url>', function (req, res, next) {
@@ -95,14 +86,10 @@ router.get('/<application reply url>', function (req, res, next) {
 
 See the [relevant code](https://github.com/OfficeDev/O365-Nodejs-Unified-API-Connect/blob/master/routes/index.js#L34) in the Connect sample
 
-<a name="request"/>
-## Make a request to the Microsoft Graph API using adal-node
+<a name="accesstoken"/>
+## Use `adal-node` to request an access token
 
 Now that we've authenticated with Azure Active Directory, our next step is to acquire an access token via adal-node. After we've done that, we'll be ready to make REST requests to the Microsoft Graph API.
-
-To identify our requests to the Graph API, our requests must be signed with an `Authorization` header containing the access token for any web service resource we request. A properly formed authorization header will includes the access token from adal-node and will take the following form.
-
-`Authorization: Bearer ba4f57d4...b01e99347ddf`
 
 To request an access token, adal-node provides two callback functions.
 
@@ -141,7 +128,14 @@ function getTokenFromCode(res, code, callback) {
 };
 ```
 
-By combining the above code with our authentication logic from the previous section, we can now use our access token to sign requests.
+<a name="request"/>
+## Make a request to the Microsoft Graph API
+
+To identify our requests to the Graph API, our requests must be signed with an `Authorization` header containing the access token for any web service resource we request. A properly formed authorization header will include the access token from adal-node and will take the following form.
+
+`Authorization: Bearer <access token>`
+
+Using `adal-node`, combined with our [authentication logic from the previous section](#authcode), we can now use our access token to sign requests.
 
 ```javascript
 /* GET home page. */
