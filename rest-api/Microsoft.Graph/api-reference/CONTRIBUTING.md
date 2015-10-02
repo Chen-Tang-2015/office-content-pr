@@ -4,7 +4,7 @@ Getting API reference contribution from both engineering teams and content devel
 
 ## Get the source files
 
-1. Go to the [project's GitHub repository](https://github.com/sumurthy/rest_spec). 
+1. Go to the [content's GitHub repository](https://github.com/OfficeDev/office-content-pr). 
 2. **Choose the branch** of the workload you're adding content to (i.e. outlook-content, onedrive-content, azure-content, etc.). *Please do not make pull requests against the ```master``` branch.*
 3. **Fork** the repository to your own GitHub account.
 
@@ -36,3 +36,15 @@ Adding code examples is done through editing helper Markdown files. Just like th
 ***TBD: Need to get format from Sudhi, as well as get file name format and directory structure.***
 
 If added correctly, the tool will append the new, great example you added directly into the appropriate reference page.
+
+## Submit a pull request
+
+After making some contributions to the API reference, please submit a pull request so we can feed it back into the pipeline!
+
+1. Push your changes to **your** fork of the repository. 
+2. Open a pull request against **OfficeDev** organization's repository.
+3. Wait on us! We'll be watching pull requests frequently and will get back to you as soon as possible. Thank you so much for your contribution!
+
+## Questions, concerns, puppy pictures
+
+Please send all the above to <a href="mailto:joem@microsoft.com?subject=Microsoft Graph API reference documentation">Joe Martella</a> and he'll get back to you in a timely manner.
