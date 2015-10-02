@@ -47,4 +47,4 @@ After making some contributions to the API reference, please submit a pull reque
 
 ## Questions, concerns, puppy pictures
 
-Please send all the above to <a href="mailto:joem@microsoft.com?subject=Microsoft Graph API reference documentation">Joe Martella</a> and he'll get back to you in a timely manner.
+Please send all the above to Joe Martella (**joem**) and he'll get back to you in a timely manner.
