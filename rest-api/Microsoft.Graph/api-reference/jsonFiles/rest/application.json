@@ -1,0 +1,439 @@
+{
+  "name": "Application",
+  "description": "",
+  "collectionOf": null,
+  "isComplexType": false,
+  "isEntitySet": false,
+  "allowPatch": true,
+  "allowUpsert": true,
+  "allowPatchCreate": true,
+  "allowDelete": true,
+  "restPath": [
+
+  ],
+  "info": null,
+  "properties": [
+    {
+      "name": "objectType",
+      "isKey": false,
+      "dataType": "String",
+      "description": "",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "isNullable": true,
+      "isUnicode": false
+    },
+    {
+      "name": "objectId",
+      "isKey": true,
+      "dataType": "String",
+      "description": "",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "isNullable": false,
+      "isUnicode": false
+    },
+    {
+      "name": "deletionTimestamp",
+      "isKey": false,
+      "dataType": "DateTimeOffset",
+      "description": "",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "isNullable": true,
+      "isUnicode": null
+    },
+    {
+      "name": "appId",
+      "isKey": false,
+      "dataType": "String",
+      "description": "",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "isNullable": true,
+      "isUnicode": false
+    },
+    {
+      "name": "appRoles",
+      "isKey": false,
+      "dataType": "AppRole",
+      "description": "",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": false,
+      "isNullable": false,
+      "isUnicode": null
+    },
+    {
+      "name": "availableToOtherTenants",
+      "isKey": false,
+      "dataType": "Boolean",
+      "description": "",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "isNullable": true,
+      "isUnicode": null
+    },
+    {
+      "name": "displayName",
+      "isKey": false,
+      "dataType": "String",
+      "description": "",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "isNullable": true,
+      "isUnicode": false
+    },
+    {
+      "name": "errorUrl",
+      "isKey": false,
+      "dataType": "String",
+      "description": "",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "isNullable": true,
+      "isUnicode": false
+    },
+    {
+      "name": "groupMembershipClaims",
+      "isKey": false,
+      "dataType": "String",
+      "description": "",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "isNullable": true,
+      "isUnicode": false
+    },
+    {
+      "name": "homepage",
+      "isKey": false,
+      "dataType": "String",
+      "description": "",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "isNullable": true,
+      "isUnicode": false
+    },
+    {
+      "name": "identifierUris",
+      "isKey": false,
+      "dataType": "String",
+      "description": "",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": false,
+      "isNullable": false,
+      "isUnicode": false
+    },
+    {
+      "name": "keyCredentials",
+      "isKey": false,
+      "dataType": "KeyCredential",
+      "description": "",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": false,
+      "isNullable": false,
+      "isUnicode": null
+    },
+    {
+      "name": "knownClientApplications",
+      "isKey": false,
+      "dataType": "Guid",
+      "description": "",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": false,
+      "isNullable": false,
+      "isUnicode": null
+    },
+    {
+      "name": "mainLogo",
+      "isKey": false,
+      "dataType": "Stream",
+      "description": "",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "isNullable": false,
+      "isUnicode": null
+    },
+    {
+      "name": "logoutUrl",
+      "isKey": false,
+      "dataType": "String",
+      "description": "",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "isNullable": true,
+      "isUnicode": false
+    },
+    {
+      "name": "oauth2AllowImplicitFlow",
+      "isKey": false,
+      "dataType": "Boolean",
+      "description": "",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "isNullable": false,
+      "isUnicode": null
+    },
+    {
+      "name": "oauth2AllowUrlPathMatching",
+      "isKey": false,
+      "dataType": "Boolean",
+      "description": "",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "isNullable": false,
+      "isUnicode": null
+    },
+    {
+      "name": "oauth2Permissions",
+      "isKey": false,
+      "dataType": "OAuth2Permission",
+      "description": "",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": false,
+      "isNullable": false,
+      "isUnicode": null
+    },
+    {
+      "name": "oauth2RequirePostResponse",
+      "isKey": false,
+      "dataType": "Boolean",
+      "description": "",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "isNullable": false,
+      "isUnicode": null
+    },
+    {
+      "name": "passwordCredentials",
+      "isKey": false,
+      "dataType": "PasswordCredential",
+      "description": "",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": false,
+      "isNullable": false,
+      "isUnicode": null
+    },
+    {
+      "name": "publicClient",
+      "isKey": false,
+      "dataType": "Boolean",
+      "description": "",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "isNullable": true,
+      "isUnicode": null
+    },
+    {
+      "name": "replyUrls",
+      "isKey": false,
+      "dataType": "String",
+      "description": "",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": false,
+      "isNullable": false,
+      "isUnicode": false
+    },
+    {
+      "name": "requiredResourceAccess",
+      "isKey": false,
+      "dataType": "RequiredResourceAccess",
+      "description": "",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": false,
+      "isNullable": false,
+      "isUnicode": null
+    },
+    {
+      "name": "samlMetadataUrl",
+      "isKey": false,
+      "dataType": "String",
+      "description": "",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "isNullable": true,
+      "isUnicode": false
+    },
+    {
+      "name": "extensionProperties",
+      "isKey": false,
+      "dataType": "ExtensionProperty",
+      "description": "",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": true,
+      "isNullable": true,
+      "isUnicode": null
+    },
+    {
+      "name": "createdOnBehalfOf",
+      "isKey": false,
+      "dataType": "DirectoryObject",
+      "description": "",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": true,
+      "isNullable": false,
+      "isUnicode": null
+    },
+    {
+      "name": "owners",
+      "isKey": false,
+      "dataType": "DirectoryObject",
+      "description": "",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": true,
+      "isNullable": true,
+      "isUnicode": null
+    },
+    {
+      "name": "Extensions",
+      "isKey": false,
+      "dataType": "Extension",
+      "description": "",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": true,
+      "isNullable": true,
+      "isUnicode": null
+    }
+  ],
+  "methods": [
+    {
+      "name": "restore",
+      "returnType": "Application",
+      "isReturnNullable": null,
+      "isReturnTypeCollection": false,
+      "description": "",
+      "syntax": null,
+      "httpSuccessResponseCode": null,
+      "isFunction": false,
+      "parameters": [
+        {
+          "name": "identifierUris",
+          "dataType": "String",
+          "description": "",
+          "isRequired": true,
+          "enumNameJs": null,
+          "isNullable": false,
+          "isUnicode": false
+        }
+      ]
+    },
+    {
+      "name": "checkMemberGroups",
+      "returnType": "String",
+      "isReturnNullable": null,
+      "isReturnTypeCollection": true,
+      "description": "",
+      "syntax": null,
+      "httpSuccessResponseCode": null,
+      "isFunction": false,
+      "parameters": [
+        {
+          "name": "groupIds",
+          "dataType": "String",
+          "description": "",
+          "isRequired": true,
+          "enumNameJs": null,
+          "isNullable": false,
+          "isUnicode": false
+        }
+      ]
+    },
+    {
+      "name": "getMemberGroups",
+      "returnType": "String",
+      "isReturnNullable": null,
+      "isReturnTypeCollection": true,
+      "description": "",
+      "syntax": null,
+      "httpSuccessResponseCode": null,
+      "isFunction": false,
+      "parameters": [
+        {
+          "name": "securityEnabledOnly",
+          "dataType": "Boolean",
+          "description": "",
+          "isRequired": true,
+          "enumNameJs": null,
+          "isNullable": null,
+          "isUnicode": null
+        }
+      ]
+    },
+    {
+      "name": "getMemberObjects",
+      "returnType": "String",
+      "isReturnNullable": null,
+      "isReturnTypeCollection": true,
+      "description": "",
+      "syntax": null,
+      "httpSuccessResponseCode": null,
+      "isFunction": false,
+      "parameters": [
+        {
+          "name": "securityEnabledOnly",
+          "dataType": "Boolean",
+          "description": "",
+          "isRequired": true,
+          "enumNameJs": null,
+          "isNullable": null,
+          "isUnicode": null
+        }
+      ]
+    }
+  ]
+}

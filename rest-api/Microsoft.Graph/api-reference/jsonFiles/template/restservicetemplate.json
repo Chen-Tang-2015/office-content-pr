@@ -1,0 +1,8 @@
+{
+  "name": null,
+  "description": null,
+  "allowPatch": true,  
+  "allowUpsert": true,    
+  "allowPatchCreate": true,
+  "allowDelete": true,  
+}

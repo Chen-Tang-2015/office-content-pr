@@ -1,0 +1,15 @@
+{
+  "name": null,
+  "description": "",
+  "collectionOf": null,
+  "isComplexType": false,
+  "isEntitySet" : false,
+  "allowPatch": true,  
+  "allowUpsert": true,    
+  "allowPatchCreate": true,
+  "allowDelete": true,  
+  "restPath": [],	
+  "info": null,
+  "properties": [],
+  "methods": []
+}
