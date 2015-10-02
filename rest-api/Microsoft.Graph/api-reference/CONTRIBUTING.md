@@ -7,6 +7,9 @@ Getting API reference contribution from both engineering teams and content devel
 1. Go to the [content's GitHub repository](https://github.com/OfficeDev/office-content-pr). 
 2. **Choose the branch** of the workload you're adding content to (i.e. outlook-content, onedrive-content, azure-content, etc.). *Please do not make pull requests against the ```master``` branch.*
 3. **Fork** the repository to your own GitHub account.
+4. The files are in *office-content-pr\rest-api\Microsoft.Graph\api-reference*.
+
+**Note** If you don't have access to the repository, but wish to make contributions, please contact Joe Martella (joem).
 
 ## Add rich content
 
