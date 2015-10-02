@@ -21,10 +21,10 @@ Let's walk through adding content to the ```Item``` resource as an example. Assu
 1. First, open ```item.json``` in *jsonFiles/rest*. The JSON files map directly to the entity names in the API.
 2. Next, add a description to ```Item``` by filling in its ```description``` property.
 
-	![Description for entity](contributing-images/description-entity.png)
+	![Description for entity](https://github.com/OfficeDev/office-content-pr/blob/master/rest-api/Microsoft.Graph/api-reference/contributing-images/description-entity.PNG)
 	 
 3. Next, let's add content to the properties of ```Item``` by editing its ```property``` property (not a typo), which is an array of objects representing each property of the entity. 
 
-	![Description for properties](contributing-images/properties-entity.png)
+	![Description for properties](https://github.com/OfficeDev/office-content-pr/blob/master/rest-api/Microsoft.Graph/api-reference/contributing-images/properties-entity.png)
 	
 That's all there is to it. Just adding those strings turned an empty, sad looking piece of API reference into a helpful page that developers can use to make awesome stuff with our API.
