@@ -18,7 +18,7 @@ Adding descriptions, REST paths, and updating properties revolves around adding 
 
 Let's walk through adding content to the ```Item``` resource as an example. Assume I have already forked the ```outlook-content``` branch to my own GitHub account and am working in files there.
 
-1. First, open ```item.json``` in *jsonFiles/rest*. The JSON files map directly to the entity names in the API.
+1. First, open *item.json* in *jsonFiles/rest*. The JSON files map directly to the entity names in the API.
 2. Next, add a description to ```Item``` by filling in its ```description``` property.
 
 	![Description for entity](https://github.com/OfficeDev/office-content-pr/blob/master/rest-api/Microsoft.Graph/api-reference/contributing-images/description-entity.PNG)
@@ -28,3 +28,11 @@ Let's walk through adding content to the ```Item``` resource as an example. Assu
 	![Description for properties](https://github.com/OfficeDev/office-content-pr/blob/master/rest-api/Microsoft.Graph/api-reference/contributing-images/properties-entity.PNG)
 	
 That's all there is to it. Just adding those strings turned an empty, sad looking piece of API reference into a helpful page that developers can use to make awesome stuff with our API.
+
+### Add code examples
+
+Adding code examples is done through editing helper Markdown files. Just like the JSON files, there are Markdown files associated with each entity type. In order to add an example, just add a new snippet with the format below to that entity's file. For the ```Item``` resource, the file would be called *item-examples.md* located in *markdowns/rest*. 
+
+***TBD: Need to get format from Sudhi, as well as get file name format and directory structure.***
+
+If added correctly, the tool will append the new, great example you added directly into the appropriate reference page.
