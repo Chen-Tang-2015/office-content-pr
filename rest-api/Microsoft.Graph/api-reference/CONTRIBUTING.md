@@ -25,6 +25,6 @@ Let's walk through adding content to the ```Item``` resource as an example. Assu
 	 
 3. Next, let's add content to the properties of ```Item``` by editing its ```property``` property (not a typo), which is an array of objects representing each property of the entity. 
 
-	![Description for properties](https://github.com/OfficeDev/office-content-pr/blob/master/rest-api/Microsoft.Graph/api-reference/contributing-images/properties-entity.png)
+	![Description for properties](https://github.com/OfficeDev/office-content-pr/blob/master/rest-api/Microsoft.Graph/api-reference/contributing-images/properties-entity.PNG)
 	
 That's all there is to it. Just adding those strings turned an empty, sad looking piece of API reference into a helpful page that developers can use to make awesome stuff with our API.
