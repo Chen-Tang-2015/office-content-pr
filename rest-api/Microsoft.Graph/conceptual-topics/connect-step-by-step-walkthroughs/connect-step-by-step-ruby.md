@@ -1,0 +1,138 @@
+# Call the unified API (preview) in a Ruby app 
+
+In this article we look at the minimum tasks required to get an access token from Azure Active Directory (AD) and call the unified API. We use code from the [Office 365 Ruby Connect sample using unified API](https://github.com/OfficeDev/O365-Ruby-Unified-API-Connect) to explain the main concepts that you have to implement in your app.
+
+![Office 365 Ruby Connect sample screenshot](./images/web-screenshot.png)
+
+## Overview
+
+To call the unified API (preview), your Ruby app must complete the following tasks.
+
+1. [Register the application in Azure Active Directory](#register)
+2. [Redirect the browser to the sign-in page](#redirect)
+3. [Receive an authorization code in your reply URL page](#authcode)
+4. [Request an access token from the token endpoint](#accesstoken)
+5. [Use the access token in a request to the unified API](#request) 
+
+<a name="register"/>
+## Register the application in Azure Active Directory
+
+Before you can start working with Office 365, you need to register your application on Azure AD and set permissions to use unified API services.
+
+See [Register your web server app with the Azure Management Portal](https://msdn.microsoft.com/office/office365/HowTo/add-common-consent-manually#bk_RegisterServerApp) for instructions, keep in mind the following details.
+
+* Specify a route in your Ruby app as the **Sign-on URL** in step 6. In the case of the Connect sample, this is [`/auth/azureactivedirectory/callback`](https://github.com/OfficeDev/O365-Ruby-Unified-API-Connect/blob/master/app/controllers/pages_controller.rb#L38).
+* [Configure the **Delegated permissions**](https://github.com/OfficeDev/O365-Ruby-Unified-API-Connect/wiki/Grant-permissions-to-the-Connect-application-in-Azure) that your app requires. The Connect sample requires **Send mail as signed-in user** permission.
+
+Take note of the following values in the **Configure** page of your Azure application.
+
+* Client ID
+* A valid key
+* A reply URL
+
+You need these values as parameters in the OAuth flow in your app.
+
+<a name="redirect"/>
+## Redirect the browser to the sign-in page
+
+Your app needs to redirect the browser to the sign-in page to get an authorization code and continue the OAuth flow.
+
+In the Connect sample, redirection is handled by the OmniAuth library. Our app just delegates execution to the [`/auth/azureactivedirectory`](https://github.com/OfficeDev/O365-Ruby-Unified-API-Connect/blob/master/app/controllers/pages_controller.rb#L30) route managed by OmniAuth.
+
+<a name="authcode"/>
+## Receive an authorization code in your reply URL page
+
+After the user signs-in, the flow returns the browser to the reply URL in your app. Azure appends an authorization code to the query string. The Connect sample uses the [`Callback.php`](https://github.com/OfficeDev/O365-PHP-Unified-API-Connect/blob/master/app/Callback.php) page for this purpose.
+
+The authorization code is provided in the `code` query string variable. The Connect sample saves the code to a session variable to use it later.
+
+```php
+if (isset($_GET['code'])) {
+    $_SESSION['code'] =  $_GET['code'];
+}
+```
+
+<a name="accesstoken"/>
+## Request an access token from the token endpoint
+
+Once you have the authorization code, you can use it along the client ID, key, and reply URL values that you got from Azure AD to request an access token. 
+
+> **Note:** <br />
+> The request must also specify a resource that we are trying to consume. In the case of unified API, the resource value is `https://graph.microsoft.com`.
+
+The Connect sample requests a token using the code in the [`AuthenticationManager.acquireToken`](https://github.com/OfficeDev/O365-PHP-Unified-API-Connect/blob/master/app/AuthenticationManager.php#L70) function. Here is the most relevant code.
+
+```php
+$tokenEndpoint = Constants::AUTHORITY_URL . Constants::TOKEN_ENDPOINT;
+
+// Send a POST request to the token endpoint to retrieve tokens.
+// Token endpoint is:
+// https://login.microsoftonline.com/common/oauth2/token
+$response = RequestManager::sendPostRequest(
+    $tokenEndpoint, 
+    array(),
+    array(
+        'client_id' => Constants::CLIENT_ID,
+        'client_secret' => Constants::CLIENT_SECRET,
+        'code' => $_SESSION['code'],
+        'grant_type' => 'authorization_code',
+        'redirect_uri' => Constants::REDIRECT_URI,
+        'resource' => Constants::RESOURCE_ID
+    )
+
+// Store the raw response in JSON format.
+$jsonResponse = json_decode($response, true);
+
+// The access token response has the following parameters:
+// access_token - The requested access token.
+// expires_in - How long the access token is valid.
+// expires_on - The time when the access token expires.
+// id_token - An unsigned JSON Web Token (JWT).
+// refresh_token - An OAuth 2.0 refresh token.
+// resource - The App ID URI of the web API (secured resource).
+// scope - Impersonation permissions granted to the client application.
+// token_type - Indicates the token type value.
+foreach ($jsonResponse as $key=>$value) {
+    $_SESSION[$key] = $value;
+}
+```
+
+> **Note:** <br />
+> The response provides more information than just the access token, for example, your app can get a refresh token to request new access tokens without having the user to explicitly sign-in.
+
+Your PHP app can now use the session variable `access_token` to issue authenticated requests to the unified API.
+
+<a name="request"/>
+## Use the access token in a request to the unified API (preview)
+
+With an access token, your app can make authenticated requests to the unified API. Your app must provide the access code in the **Authorization** header of each request.
+
+The Connect sample sends an email using the **sendMail** endpoint in the unified API. The code is in the [`MailManager.sendWelcomeMail`](https://github.com/OfficeDev/O365-PHP-Unified-API-Connect/blob/master/app/MailManager.php#L46) function. This is the code that shows how to send the access code in the Authorization header.
+
+```php
+// Send the email request to the sendmail endpoint, 
+// which is in the following URI:
+// https://graph.microsoft.com/beta/me/sendMail
+// Note that the access token is attached in the Authorization header
+RequestManager::sendPostRequest(
+    Constants::RESOURCE_ID . Constants::SENDMAIL_ENDPOINT,
+    array(
+        'Authorization: Bearer ' . $_SESSION['access_token'],
+        'Content-Type: application/json;' . 
+                      'odata.metadata=minimal;' .
+                      'odata.streaming=true'
+    ),
+    $email
+);
+```
+
+> **Note:** <br />
+> The request must also send a **Content-Type** header with a value accepted by the unified API, for example, `application/json;odata.metadata=minimal;odata.streaming=true`.
+
+The unified API (preview) is a very powerful, unifiying API that can be used to interact with all kinds of Microsoft data. Check out the [API reference](https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference) to explore what else you can accomplish with the unified API.
+
+## Additional resources
+
+-  [Office 365 PHP Connect sample using unified API](https://github.com/OfficeDev/O365-PHP-Unified-API-Connect)
+-  [Office Dev Center](http://dev.office.com) 
+-  [Unified API (preview) reference](https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference)
