@@ -1,0 +1,521 @@
+{
+  "MeetingMessageType": {
+    "isExclusive": true,
+    "options": {
+      "None": {
+        "value": "0",
+        "description": ""
+      },
+      "MeetingRequest": {
+        "value": "1",
+        "description": ""
+      },
+      "MeetingCancelled": {
+        "value": "2",
+        "description": ""
+      },
+      "MeetingAccepted": {
+        "value": "3",
+        "description": ""
+      },
+      "MeetingTenativelyAccepted": {
+        "value": "4",
+        "description": ""
+      },
+      "MeetingDeclined": {
+        "value": "5",
+        "description": ""
+      }
+    }
+  },
+  "BodyType": {
+    "isExclusive": true,
+    "options": {
+      "Text": {
+        "value": "0",
+        "description": ""
+      },
+      "HTML": {
+        "value": "1",
+        "description": ""
+      }
+    }
+  },
+  "Importance": {
+    "isExclusive": true,
+    "options": {
+      "Low": {
+        "value": "0",
+        "description": ""
+      },
+      "Normal": {
+        "value": "1",
+        "description": ""
+      },
+      "High": {
+        "value": "2",
+        "description": ""
+      }
+    }
+  },
+  "CalendarColor": {
+    "isExclusive": true,
+    "options": {
+      "LightBlue": {
+        "value": "0",
+        "description": ""
+      },
+      "LightGreen": {
+        "value": "1",
+        "description": ""
+      },
+      "LightOrange": {
+        "value": "2",
+        "description": ""
+      },
+      "LightGray": {
+        "value": "3",
+        "description": ""
+      },
+      "LightYellow": {
+        "value": "4",
+        "description": ""
+      },
+      "LightTeal": {
+        "value": "5",
+        "description": ""
+      },
+      "LightPink": {
+        "value": "6",
+        "description": ""
+      },
+      "LightBrown": {
+        "value": "7",
+        "description": ""
+      },
+      "LightRed": {
+        "value": "8",
+        "description": ""
+      },
+      "MaxColor": {
+        "value": "9",
+        "description": ""
+      },
+      "Auto": {
+        "value": "-1",
+        "description": ""
+      }
+    }
+  },
+  "FreeBusyStatus": {
+    "isExclusive": true,
+    "options": {
+      "Free": {
+        "value": "0",
+        "description": ""
+      },
+      "Tentative": {
+        "value": "1",
+        "description": ""
+      },
+      "Busy": {
+        "value": "2",
+        "description": ""
+      },
+      "Oof": {
+        "value": "3",
+        "description": ""
+      },
+      "WorkingElsewhere": {
+        "value": "4",
+        "description": ""
+      },
+      "Unknown": {
+        "value": "-1",
+        "description": ""
+      }
+    }
+  },
+  "EventType": {
+    "isExclusive": true,
+    "options": {
+      "SingleInstance": {
+        "value": "0",
+        "description": ""
+      },
+      "Occurrence": {
+        "value": "1",
+        "description": ""
+      },
+      "Exception": {
+        "value": "2",
+        "description": ""
+      },
+      "SeriesMaster": {
+        "value": "3",
+        "description": ""
+      }
+    }
+  },
+  "ResponseType": {
+    "isExclusive": true,
+    "options": {
+      "None": {
+        "value": "0",
+        "description": ""
+      },
+      "Organizer": {
+        "value": "1",
+        "description": ""
+      },
+      "TentativelyAccepted": {
+        "value": "2",
+        "description": ""
+      },
+      "Accepted": {
+        "value": "3",
+        "description": ""
+      },
+      "Declined": {
+        "value": "4",
+        "description": ""
+      },
+      "NotResponded": {
+        "value": "5",
+        "description": ""
+      }
+    }
+  },
+  "AttendeeType": {
+    "isExclusive": true,
+    "options": {
+      "Required": {
+        "value": "0",
+        "description": ""
+      },
+      "Optional": {
+        "value": "1",
+        "description": ""
+      },
+      "Resource": {
+        "value": "2",
+        "description": ""
+      }
+    }
+  },
+  "RecurrencePatternType": {
+    "isExclusive": true,
+    "options": {
+      "Daily": {
+        "value": "0",
+        "description": ""
+      },
+      "Weekly": {
+        "value": "1",
+        "description": ""
+      },
+      "AbsoluteMonthly": {
+        "value": "2",
+        "description": ""
+      },
+      "RelativeMonthly": {
+        "value": "3",
+        "description": ""
+      },
+      "AbsoluteYearly": {
+        "value": "4",
+        "description": ""
+      },
+      "RelativeYearly": {
+        "value": "5",
+        "description": ""
+      }
+    }
+  },
+  "DayOfWeek": {
+    "isExclusive": true,
+    "options": {
+      "Sunday": {
+        "value": "0",
+        "description": ""
+      },
+      "Monday": {
+        "value": "1",
+        "description": ""
+      },
+      "Tuesday": {
+        "value": "2",
+        "description": ""
+      },
+      "Wednesday": {
+        "value": "3",
+        "description": ""
+      },
+      "Thursday": {
+        "value": "4",
+        "description": ""
+      },
+      "Friday": {
+        "value": "5",
+        "description": ""
+      },
+      "Saturday": {
+        "value": "6",
+        "description": ""
+      }
+    }
+  },
+  "WeekIndex": {
+    "isExclusive": true,
+    "options": {
+      "First": {
+        "value": "0",
+        "description": ""
+      },
+      "Second": {
+        "value": "1",
+        "description": ""
+      },
+      "Third": {
+        "value": "2",
+        "description": ""
+      },
+      "Fourth": {
+        "value": "3",
+        "description": ""
+      },
+      "Last": {
+        "value": "4",
+        "description": ""
+      }
+    }
+  },
+  "RecurrenceRangeType": {
+    "isExclusive": true,
+    "options": {
+      "EndDate": {
+        "value": "0",
+        "description": ""
+      },
+      "NoEnd": {
+        "value": "1",
+        "description": ""
+      },
+      "Numbered": {
+        "value": "2",
+        "description": ""
+      }
+    }
+  },
+  "GroupAccessType": {
+    "isExclusive": true,
+    "options": {
+      "None": {
+        "value": "0",
+        "description": ""
+      },
+      "Private": {
+        "value": "1",
+        "description": ""
+      },
+      "Secret": {
+        "value": "2",
+        "description": ""
+      },
+      "Public": {
+        "value": "3",
+        "description": ""
+      }
+    }
+  },
+  "DisplaySettings": {
+    "isExclusive": false,
+    "options": {
+      "None": {
+        "value": "0",
+        "description": ""
+      },
+      "Today": {
+        "value": "1",
+        "description": ""
+      },
+      "TimeScale": {
+        "value": "2",
+        "description": ""
+      },
+      "TaskDate": {
+        "value": "4",
+        "description": ""
+      },
+      "All": {
+        "value": "7",
+        "description": ""
+      }
+    }
+  },
+  "DrawingStyle": {
+    "isExclusive": true,
+    "options": {
+      "Bar": {
+        "value": "0",
+        "description": ""
+      },
+      "Callout": {
+        "value": "1",
+        "description": ""
+      }
+    }
+  },
+  "AnchorPosition": {
+    "isExclusive": true,
+    "options": {
+      "Top": {
+        "value": "0",
+        "description": ""
+      },
+      "Bottom": {
+        "value": "1",
+        "description": ""
+      }
+    }
+  },
+  "TaskBoardType": {
+    "isExclusive": true,
+    "options": {
+      "Status": {
+        "value": "0",
+        "description": ""
+      },
+      "AssignedTo": {
+        "value": "1",
+        "description": ""
+      },
+      "Bucket": {
+        "value": "2",
+        "description": ""
+      }
+    }
+  },
+  "PreviewType": {
+    "isExclusive": true,
+    "options": {
+      "Automatic": {
+        "value": "0",
+        "description": ""
+      },
+      "NoPreview": {
+        "value": "1",
+        "description": ""
+      },
+      "CheckList": {
+        "value": "2",
+        "description": ""
+      },
+      "Notes": {
+        "value": "3",
+        "description": ""
+      },
+      "Reference": {
+        "value": "4",
+        "description": ""
+      }
+    }
+  },
+  "PatchInsertPosition": {
+    "isExclusive": true,
+    "options": {
+      "After": {
+        "value": "0",
+        "description": ""
+      },
+      "Before": {
+        "value": "1",
+        "description": ""
+      }
+    }
+  },
+  "PatchActionType": {
+    "isExclusive": true,
+    "options": {
+      "Replace": {
+        "value": "0",
+        "description": ""
+      },
+      "Append": {
+        "value": "1",
+        "description": ""
+      },
+      "Delete": {
+        "value": "2",
+        "description": ""
+      },
+      "Insert": {
+        "value": "3",
+        "description": ""
+      },
+      "Prepend": {
+        "value": "4",
+        "description": ""
+      }
+    }
+  },
+  "UserRole": {
+    "isExclusive": true,
+    "options": {
+      "Owner": {
+        "value": "0",
+        "description": ""
+      },
+      "Contributor": {
+        "value": "1",
+        "description": ""
+      },
+      "Reader": {
+        "value": "2",
+        "description": ""
+      },
+      "None": {
+        "value": "-1",
+        "description": ""
+      }
+    }
+  },
+  "RoleSummaryStatus": {
+    "isExclusive": true,
+    "options": {
+      "Ok": {
+        "value": "0",
+        "description": ""
+      },
+      "Bad": {
+        "value": "1",
+        "description": ""
+      }
+    }
+  },
+  "SetupStatus": {
+    "isExclusive": true,
+    "options": {
+      "Unknown": {
+        "value": "0",
+        "description": ""
+      },
+      "NotRegisteredYet": {
+        "value": "1",
+        "description": ""
+      },
+      "RegisteredSetupNotStarted": {
+        "value": "2",
+        "description": ""
+      },
+      "RegisteredSetupInProgress": {
+        "value": "3",
+        "description": ""
+      },
+      "RegistrationAndSetupCompleted": {
+        "value": "4",
+        "description": ""
+      }
+    }
+  }
+}
