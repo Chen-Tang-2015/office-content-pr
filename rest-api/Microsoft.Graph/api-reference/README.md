@@ -24,10 +24,10 @@ Let's walk through adding content to the ```Item``` resource as an example. Assu
 1. First, open *item.json* in *jsonFiles/rest*. The JSON files map directly to the entity names in the API.
 2. Next, add a description to ```Item``` by filling in its ```description``` property.
 
-		**Note** Keep descriptions consistent across our documentation by following these guidelines.
-		
-		* Keep them short, but meaninful.
-		* Double check for spelling and grammar mistakes.
+	**Note** Keep descriptions consistent across our documentation by following these guidelines.
+	
+	* Keep them short, but meaninful.
+	* Double check for spelling and grammar mistakes.
 
 	![Description for entity](https://github.com/OfficeDev/office-content-pr/blob/master/rest-api/Microsoft.Graph/api-reference/contributing-images/description-entity.PNG)
 	 
