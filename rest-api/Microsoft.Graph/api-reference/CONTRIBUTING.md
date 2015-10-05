@@ -13,13 +13,13 @@ Getting API reference contribution from both engineering teams and content devel
 
 ## Add rich content
 
-This is your time to shine. Add rich descriptions to the generated documentation to help our customers make sense of this gigantic, unified endpoint. 
+Add rich descriptions to the generated documentation to help our customers make sense of this gigantic, unified endpoint. 
 
 ### Add descriptions, REST paths, and update properties
 
 Adding descriptions, REST paths, and updating properties revolves around adding simple strings of text and changing Boolean values. Change these values in the JSON files corresponding to the resource you'd like to edit. 
 
-Let's walk through adding content to the ```Item``` resource as an example. Assume I have already forked the ```outlook-content``` branch to my own GitHub account and am working in files there.
+Let's walk through adding content to the ```Item``` resource as an example. Assume I have already forked the ```onedrive-content``` branch to my own GitHub account and am working in files there.
 
 1. First, open *item.json* in *jsonFiles/rest*. The JSON files map directly to the entity names in the API.
 2. Next, add a description to ```Item``` by filling in its ```description``` property.
@@ -48,6 +48,6 @@ After making some contributions to the API reference, please submit a pull reque
 2. Open a pull request against **OfficeDev** organization's repository.
 3. Wait on us! We'll be watching pull requests frequently and will get back to you as soon as possible. Thank you so much for your contribution!
 
-## Questions, concerns, puppy pictures
+## Questions or concerns
 
-Please send all the above to Joe Martella (**joem**) and he'll get back to you in a timely manner.
+Please send the above to Joe Martella (**joem**) and he'll get back to you in a timely manner.
