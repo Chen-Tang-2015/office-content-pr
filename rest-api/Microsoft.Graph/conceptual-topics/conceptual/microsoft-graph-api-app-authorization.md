@@ -3,6 +3,7 @@
 ## Overview
 
 To call the Microsoft Graph API, you have to complete the following tasks.
+
 1. Register the application in Azure Active Directory
 2. Authenticate a user and get an access token by calling methods on the Azure AD Authentication Library (ADAL)
 3. Use ADAL to get an access token
