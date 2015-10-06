@@ -94,11 +94,6 @@ Upload and download of files (files in unified groups, drives, or mail file atta
 
 During the preview timeframe, you should register new apps to call the Office 365 unified API. Single- and multi-tenant apps are supported for web applications. Native client apps can only be used within the tenant that the application is registered in. 
 
-## Outlook APIs known issues
-
-### Cannot set reminders for events
-
-Currently you can't set a reminder from the client library or directly via REST when you're creating or updating events. The event reminder field is not updated, but no error is returned.
 
 ## Additional resources
 
