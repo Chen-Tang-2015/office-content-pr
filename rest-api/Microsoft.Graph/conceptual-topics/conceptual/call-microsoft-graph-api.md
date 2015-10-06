@@ -10,10 +10,10 @@ In this section:
 
 <a name="msg_call_api_service"> </a>
 ###Call Microsoft Graph API service
-To access and manipulate a graph resource, you call the Office 365 unified API service, specifying the resource URLs in one of 
+To access and manipulate a graph resource, you call the Microsoft Graph API service, specifying the resource URLs in one of 
 the HTTPS POST, GET, PATCH or PUT, and DELETE operations permitted on the resource.  
-A resource URL is determined by the Office 365 unified API entity data model. The prescription is outlined in the entity metadata schema ($metadata). 
-For more information, see the _Office 365 unified API in depth_ section of this document.
+A resource URL is determined by the Microsoft Graph API entity data model. The prescription is outlined in the entity metadata schema ($metadata). 
+For more information, see the _Understand Microsoft Graph API metadata_ topic.
 
 For every request against the API, a valid access token must supplied in the `Authorization` header. For a reference implementation of these operations, 
 see this Express-based web app sample in Node.js.
