@@ -31,7 +31,7 @@ The following tables list the Microsoft Graph API permission scopes and explains
 
 |   **Scope**                  |  **Permission**                          |  **Description** |
 |:-----------------------------|:-----------------------------------------|:-----------------|
-| _User.Read.All_                |     `Read all user's full profiles`           | Allows the app to read a full set of profile properties of other users in your organization on behalf of the signed-in user. <!-- This includes display name, first and last name, photo, and out of office message.  A non administrator user can consent to this permission if the app is registered in his or her tenant. -->|
+| _User.Read.All_                |     `Read all user's full profiles`           | Allows the app to read a full set of profile properties of other users in your organization on behalf of the signed-in user.|
 | _User.ReadWrite.All_           |     `Read and write all user's full profiles` | Allows the app to read and write the full set of profile properties, group membership, reports and managers of other users in your organization, on behalf of the signed-in user.  |
 | _Directory.Read.All_           |     `Read directory data`                     | Allows the app to read data in your organization's directory, such as users, groups and apps.   |
 | _Directory.ReadWrite.All_      |     `Read and write directory data`           | Allows the app to read and write data in your organization's directory, such as users, and groups, but prohibits user or group deletion.   |
@@ -42,7 +42,7 @@ The following tables list the Microsoft Graph API permission scopes and explains
 
 |   **Scope**    |  **Permission**   |  **Description** |
 |:---------------|:------------------|:-----------------|
-| _User.Read_       |    `Enable sign-in and read user profile` | Allows users to sign-in to the app, and allows the app to read the profile<!--, group membership, reports and manager of signed-in users-->. It also allow the app to read basic company information of signed-in users. To read the user's manager, directr report, enable `User.ReadBasic.All`. To read a group membership, enable `Group.Read.All`.|
+| _User.Read_       |    `Enable sign-in and read user profile` | Allows users to sign-in to the app, and allows the app to read the profile. It also allow the app to read basic company information of signed-in users. To read the user's manager, directr report, enable `User.ReadBasic.All`. To read a group membership, enable `Group.Read.All`.|
 | _User.ReadWrite_ |    `Read and write access to user profile` | Allows the app to read the profile, group membership, reports and manager of signed-in users. It also allow the app to update profile information on behalf of signed-in users. |
 | _User.ReadBasic.All_ |    `Read all user's basic profiles` | Allows the app to read a basic set of profile properties of other users, including the user's manager and direct reports, in your company or school on behalf of the signed-in user. This includes display name, first and last name, photo, and out of office message. | 
 | _Group.Read.All_ |    `Read all groups` (preview) | Allows the app to read all group properties and memberships on behalf of the signed-in user, and read group calendar and conversations on public groups and groups the signed in user is a member of.
