@@ -9,7 +9,7 @@ In this section:
 
 
 <a name="msg_call_api_service"> </a>
-###Call Office 365 unified API service
+###Call Microsoft Graph API service
 To access and manipulate a graph resource, you call the Office 365 unified API service, specifying the resource URLs in one of 
 the HTTPS POST, GET, PATCH or PUT, and DELETE operations permitted on the resource.  
 A resource URL is determined by the Office 365 unified API entity data model. The prescription is outlined in the entity metadata schema ($metadata). 
