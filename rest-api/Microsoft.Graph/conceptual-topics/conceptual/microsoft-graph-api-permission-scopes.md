@@ -9,7 +9,7 @@ In this section:
 
 
  <a name="msg_perm_concepts"> </a>
-## Permission scope concepts
+ ##Permission scope concepts
 
 ###App-only vs. delegated scopes
 Permission scopes can be either app-only or delegated. App-only scopes (also known as app roles) grant the app the full set of privileges offered by the scope. App-only scopes are typically used by apps that run as a service without a signed-in user being present. Delegated permission scopes are for apps that a user signs in to. These scopes delegate the privileges of the signed-in user to the app, allowing the app to act as the signed in user. The actual privileges granted to the app will be the least privileged combination (the intersection) of the privileges granted by the scope and those possessed by the signed-in user. For example, if the permission scope grants delegated privileges to write all directory objects, but the signed-in user has privileges only to update their own user profile, the app will only be able to write the signed-in user's profile but no other objects.
