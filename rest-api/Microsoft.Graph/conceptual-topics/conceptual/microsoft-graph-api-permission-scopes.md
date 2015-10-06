@@ -81,7 +81,7 @@ The following are some app scenarios using the `User` and `Group` resources and 
 ###Access scenarios using the Group resource and the required scopes
     
 | **App tasks involving Group**	 |  **Required scopes** |  **Permissions** |
-|:-------------------------------|:---------------------|
+|:-------------------------------|:---------------------|:---------------|
 | App wants to read basic group info (only display name and picture), for example to show in a group picking experience	 | _Group.Read.All_  | `Read all groups` (preview) |
 | App wants to read all content in all unified groups, including files, conversations<!--, and tasks-->.  It also needs to show group memberships, be able to update group memberships, (if owner).  | 	_Sites.Read.All_, _Group.Read.All_ | `Read items in all site collections`, `Read all groups` (preview) |
 | App wants to read and write all content in all unified groups, including files, conversations<!--, and tasks-->.  It also needs to show group memberships, be able to update group memberships, (if owner).  | 	_Group.ReadWrite.All_, _Sites.ReadWrite.All_ |  `Read and write all groups` (preview), `Edit or delete items in all site collections` |
