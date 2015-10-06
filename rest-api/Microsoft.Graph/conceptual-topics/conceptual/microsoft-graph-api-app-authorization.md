@@ -24,9 +24,7 @@ In this article:
 - [Get app authorized](#msg_get_app_authorized)
 - [Acquire access token](#msg_get_app_authenticated)
 - [Renew access token](#msg_renew_access_token)
-- [Call Office 365 unified API service](#msg_call_api_service)
 
- 
  <a name="msg_get_app_authorized"> </a>
  
 ###Get the app authorized
