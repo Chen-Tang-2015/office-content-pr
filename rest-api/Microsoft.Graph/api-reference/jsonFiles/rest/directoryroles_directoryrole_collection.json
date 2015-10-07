@@ -1,0 +1,27 @@
+{
+  "name": "directoryRoles",
+  "description": "",
+  "collectionOf": "DirectoryRole",
+  "isComplexType": false,
+  "isEntitySet": true,
+  "allowPatch": false,
+  "allowUpsert": false,
+  "allowPatchCreate": false,
+  "allowDelete": false,
+  "info": null,
+  "propertyNotes": "",
+  "relationshipNotes": "",
+  "methodNotes": "",
+  "createDescription": "",
+  "updateDescription": "",
+  "deleteDescription": "",
+  "restPath": [
+
+  ],
+  "properties": [
+
+  ],
+  "methods": [
+
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "name": "permission",
+  "description": "",
+  "collectionOf": null,
+  "isComplexType": false,
+  "isEntitySet": false,
+  "allowPatch": true,
+  "allowUpsert": true,
+  "allowPatchCreate": true,
+  "allowDelete": true,
+  "info": null,
+  "propertyNotes": "",
+  "relationshipNotes": "",
+  "methodNotes": "",
+  "createDescription": "",
+  "updateDescription": "",
+  "deleteDescription": "",
+  "restPath": [
+
+  ],
+  "properties": [
+    {
+      "name": "id",
+      "description": "",
+      "isKey": true,
+      "dataType": "String",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": false,
+      "isUnicode": false
+    },
+    {
+      "name": "roles",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": false
+    },
+    {
+      "name": "link",
+      "description": "",
+      "isKey": false,
+      "dataType": "sharingLink",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    }
+  ],
+  "methods": [
+
+  ]
+}

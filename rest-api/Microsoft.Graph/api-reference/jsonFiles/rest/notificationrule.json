@@ -1,0 +1,149 @@
+{
+  "name": "NotificationRule",
+  "description": "",
+  "collectionOf": null,
+  "isComplexType": false,
+  "isEntitySet": false,
+  "allowPatch": true,
+  "allowUpsert": true,
+  "allowPatchCreate": true,
+  "allowDelete": true,
+  "info": null,
+  "propertyNotes": "",
+  "relationshipNotes": "",
+  "methodNotes": "",
+  "createDescription": "",
+  "updateDescription": "",
+  "deleteDescription": "",
+  "restPath": [
+
+  ],
+  "properties": [
+    {
+      "name": "Id",
+      "description": "",
+      "isKey": true,
+      "dataType": "String",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": false,
+      "isUnicode": false
+    },
+    {
+      "name": "UserName",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": false
+    },
+    {
+      "name": "UserId",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": false
+    },
+    {
+      "name": "RoleName",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": false
+    },
+    {
+      "name": "RoleId",
+      "description": "",
+      "isKey": false,
+      "dataType": "Guid",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": false,
+      "isUnicode": null
+    },
+    {
+      "name": "NotificationId",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": false
+    },
+    {
+      "name": "NotificationName",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": false
+    },
+    {
+      "name": "Event",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": false
+    }
+  ],
+  "methods": [
+    {
+      "name": "EventTypes",
+      "displayName": "",
+      "description": "",
+      "prerequisites": "",
+      "returnType": "String",
+      "isReturnNullable": null,
+      "isReturnTypeCollection": true,
+      "httpSuccessCode": "200",
+      "isFunction": true,
+      "scopes": [
+
+      ],
+      "errorCodes": [
+
+      ],
+      "parameters": [
+
+      ]
+    }
+  ]
+}

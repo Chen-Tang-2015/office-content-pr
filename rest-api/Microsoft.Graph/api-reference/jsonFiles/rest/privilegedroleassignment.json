@@ -1,0 +1,198 @@
+{
+  "name": "PrivilegedRoleAssignment",
+  "description": "",
+  "collectionOf": null,
+  "isComplexType": false,
+  "isEntitySet": false,
+  "allowPatch": true,
+  "allowUpsert": true,
+  "allowPatchCreate": true,
+  "allowDelete": true,
+  "info": null,
+  "propertyNotes": "",
+  "relationshipNotes": "",
+  "methodNotes": "",
+  "createDescription": "",
+  "updateDescription": "",
+  "deleteDescription": "",
+  "restPath": [
+
+  ],
+  "properties": [
+    {
+      "name": "UserId",
+      "description": "",
+      "isKey": true,
+      "dataType": "Guid",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": false,
+      "isUnicode": null
+    },
+    {
+      "name": "RoleId",
+      "description": "",
+      "isKey": true,
+      "dataType": "Guid",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": false,
+      "isUnicode": null
+    },
+    {
+      "name": "IsElevated",
+      "description": "",
+      "isKey": false,
+      "dataType": "Boolean",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "ExpirationTime",
+      "description": "",
+      "isKey": false,
+      "dataType": "DateTimeOffset",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "ResultMessage",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": false
+    },
+    {
+      "name": "RoleInfo",
+      "description": "",
+      "isKey": false,
+      "dataType": "PrivilegedRole",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": true,
+      "allowPostToCollection": true,
+      "isNullable": false,
+      "isUnicode": null
+    }
+  ],
+  "methods": [
+    {
+      "name": "Activate",
+      "displayName": "",
+      "description": "",
+      "prerequisites": "",
+      "returnType": "PrivilegedRoleAssignment",
+      "isReturnNullable": null,
+      "isReturnTypeCollection": false,
+      "httpSuccessCode": "200",
+      "isFunction": false,
+      "scopes": [
+
+      ],
+      "errorCodes": [
+
+      ],
+      "parameters": [
+        {
+          "name": "Reason",
+          "description": "",
+          "dataType": "String",
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": false
+        },
+        {
+          "name": "Duration",
+          "description": "",
+          "dataType": "String",
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": false
+        },
+        {
+          "name": "TicketNumber",
+          "description": "",
+          "dataType": "String",
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": false
+        },
+        {
+          "name": "TicketSystem",
+          "description": "",
+          "dataType": "String",
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": false
+        }
+      ]
+    },
+    {
+      "name": "Deactivate",
+      "displayName": "",
+      "description": "",
+      "prerequisites": "",
+      "returnType": "PrivilegedRoleAssignment",
+      "isReturnNullable": null,
+      "isReturnTypeCollection": false,
+      "httpSuccessCode": "200",
+      "isFunction": false,
+      "scopes": [
+
+      ],
+      "errorCodes": [
+
+      ],
+      "parameters": [
+
+      ]
+    },
+    {
+      "name": "My",
+      "displayName": "",
+      "description": "",
+      "prerequisites": "",
+      "returnType": "PrivilegedRoleAssignment",
+      "isReturnNullable": null,
+      "isReturnTypeCollection": false,
+      "httpSuccessCode": "200",
+      "isFunction": true,
+      "scopes": [
+
+      ],
+      "errorCodes": [
+
+      ],
+      "parameters": [
+
+      ]
+    }
+  ]
+}

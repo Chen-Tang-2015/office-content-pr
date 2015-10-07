@@ -1,0 +1,196 @@
+{
+  "name": "ConversationThread",
+  "description": "",
+  "collectionOf": null,
+  "isComplexType": false,
+  "isEntitySet": false,
+  "allowPatch": true,
+  "allowUpsert": true,
+  "allowPatchCreate": true,
+  "allowDelete": true,
+  "info": null,
+  "propertyNotes": "",
+  "relationshipNotes": "",
+  "methodNotes": "",
+  "createDescription": "",
+  "updateDescription": "",
+  "deleteDescription": "",
+  "restPath": [
+
+  ],
+  "properties": [
+    {
+      "name": "ToRecipients",
+      "description": "",
+      "isKey": false,
+      "dataType": "Recipient",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": false,
+      "isUnicode": null
+    },
+    {
+      "name": "Topic",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": false,
+      "isUnicode": false
+    },
+    {
+      "name": "HasAttachments",
+      "description": "",
+      "isKey": false,
+      "dataType": "Boolean",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": false,
+      "isUnicode": null
+    },
+    {
+      "name": "DateTimeLastDelivered",
+      "description": "",
+      "isKey": false,
+      "dataType": "DateTimeOffset",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": false,
+      "isUnicode": null
+    },
+    {
+      "name": "UniqueSenders",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": false,
+      "isUnicode": false
+    },
+    {
+      "name": "CcRecipients",
+      "description": "",
+      "isKey": false,
+      "dataType": "Recipient",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": false,
+      "isUnicode": null
+    },
+    {
+      "name": "Preview",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": false,
+      "isUnicode": false
+    },
+    {
+      "name": "IsLocked",
+      "description": "",
+      "isKey": false,
+      "dataType": "Boolean",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": false,
+      "isUnicode": null
+    },
+    {
+      "name": "Id",
+      "description": "",
+      "isKey": true,
+      "dataType": "String",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": false,
+      "isUnicode": false
+    },
+    {
+      "name": "Extensions",
+      "description": "",
+      "isKey": false,
+      "dataType": "Extension",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": true,
+      "allowPostToCollection": true,
+      "isNullable": true,
+      "isUnicode": null
+    },
+    {
+      "name": "Posts",
+      "description": "",
+      "isKey": false,
+      "dataType": "Post",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": true,
+      "allowPostToCollection": true,
+      "isNullable": true,
+      "isUnicode": null
+    }
+  ],
+  "methods": [
+    {
+      "name": "Reply",
+      "displayName": "",
+      "description": "",
+      "prerequisites": "",
+      "returnType": null,
+      "isReturnNullable": null,
+      "isReturnTypeCollection": false,
+      "httpSuccessCode": "200",
+      "isFunction": false,
+      "scopes": [
+
+      ],
+      "errorCodes": [
+
+      ],
+      "parameters": [
+        {
+          "name": "Post",
+          "description": "",
+          "dataType": "Post",
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": false,
+          "isUnicode": null
+        }
+      ]
+    }
+  ]
+}

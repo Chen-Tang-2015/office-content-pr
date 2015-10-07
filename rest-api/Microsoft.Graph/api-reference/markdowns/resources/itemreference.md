@@ -1,21 +1,30 @@
-# itemReference
+# itemReference resource type
 
+The itemReference type groups data needed to reference a OneDrive item across the service into a single structure.   
 
+#### JSON representation
 
-## Properties
+Here is a JSON representation of the resource
+
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.itemReference"
+}-->
+
+```json
+{
+  "driveId": "String",
+  "id": "String",
+  "path": "String"
+}
+
+```
+#### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|driveId|String||
-|id|String||
-|path|String||
-
-## Relationships
-None
-
-
-## Tasks
-
-| Task		   | Return Type	|Description|
-|:---------------|:--------|:----------|
-|[Get metadata](../api/itemreference_get.md) | itemReference |Read properties and relationships of itemReference object.|
-|[Update](../api/itemreference_update.md) | itemReference	|Update itemReference object. |
+|driveId|String|Unique identifier for the Drive that contains the item.|
+|id|String|Unique identifier for the item.|
+|path|String|Path that used to navigate to the item.|

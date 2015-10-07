@@ -1,0 +1,67 @@
+{
+  "name": "Application",
+  "description": "",
+  "collectionOf": null,
+  "isComplexType": false,
+  "isEntitySet": false,
+  "allowPatch": true,
+  "allowUpsert": true,
+  "allowPatchCreate": true,
+  "allowDelete": true,
+  "info": null,
+  "propertyNotes": "",
+  "relationshipNotes": "",
+  "methodNotes": "",
+  "createDescription": "",
+  "updateDescription": "",
+  "deleteDescription": "",
+  "restPath": [
+
+  ],
+  "properties": [
+    {
+      "name": "appId",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": false
+    }
+  ],
+  "methods": [
+    {
+      "name": "restore",
+      "displayName": "",
+      "description": "",
+      "prerequisites": "",
+      "returnType": "Application",
+      "isReturnNullable": null,
+      "isReturnTypeCollection": false,
+      "httpSuccessCode": "200",
+      "isFunction": false,
+      "scopes": [
+
+      ],
+      "errorCodes": [
+
+      ],
+      "parameters": [
+        {
+          "name": "identifierUris",
+          "description": "",
+          "dataType": "String",
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": false,
+          "isUnicode": false
+        }
+      ]
+    }     
+  ]
+    
+}

@@ -1,0 +1,35 @@
+{
+  "name": "folder",
+  "description": "A folder in a user's mailbox, such as Inbox, Drafts, and Sent Items. Folders can contain messages and other folders.",
+  "collectionOf": null,
+  "isComplexType": true,
+  "isEntitySet": false,
+  "allowPatch": false,
+  "allowUpsert": false,
+  "allowPatchCreate": false,
+  "allowDelete": false,
+  "info": null,
+  "propertyNotes": "",
+  "relationshipNotes": "",
+  "methodNotes": "",
+  "createDescription": "",
+  "updateDescription": "",
+  "deleteDescription": "",
+  "restPath": [],
+  "properties": [
+    {
+      "name": "childCount",
+      "description": "",
+      "isKey": false,
+      "dataType": "Int32",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": false,
+      "isUnicode": null
+    }
+  ],
+  "methods": []
+}

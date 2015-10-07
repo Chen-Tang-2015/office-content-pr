@@ -1,0 +1,262 @@
+{
+  "name": "Page",
+  "description": "",
+  "collectionOf": null,
+  "isComplexType": false,
+  "isEntitySet": false,
+  "allowPatch": true,
+  "allowUpsert": true,
+  "allowPatchCreate": true,
+  "allowDelete": true,
+  "info": null,
+  "propertyNotes": "",
+  "relationshipNotes": "",
+  "methodNotes": "",
+  "createDescription": "",
+  "updateDescription": "",
+  "deleteDescription": "",
+  "restPath": [
+
+  ],
+  "properties": [
+    {
+      "name": "title",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": false
+    },
+    {
+      "name": "createdByAppId",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": false
+    },
+    {
+      "name": "links",
+      "description": "",
+      "isKey": false,
+      "dataType": "PageLinks",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "contentUrl",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": false
+    },
+    {
+      "name": "content",
+      "description": "",
+      "isKey": false,
+      "dataType": "Stream",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "lastModifiedTime",
+      "description": "",
+      "isKey": false,
+      "dataType": "DateTimeOffset",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "id",
+      "description": "",
+      "isKey": true,
+      "dataType": "String",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": false,
+      "isUnicode": false
+    },
+    {
+      "name": "self",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": false
+    },
+    {
+      "name": "createdTime",
+      "description": "",
+      "isKey": false,
+      "dataType": "DateTimeOffset",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "parentSection",
+      "description": "",
+      "isKey": false,
+      "dataType": "Section",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": true,
+      "allowPostToCollection": true,
+      "isNullable": false,
+      "isUnicode": null
+    },
+    {
+      "name": "parentNotebook",
+      "description": "",
+      "isKey": false,
+      "dataType": "Notebook",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": true,
+      "allowPostToCollection": true,
+      "isNullable": false,
+      "isUnicode": null
+    }
+  ],
+  "methods": [
+    {
+      "name": "PatchContent",
+      "displayName": "",
+      "description": "",
+      "prerequisites": "",
+      "returnType": null,
+      "isReturnNullable": null,
+      "isReturnTypeCollection": false,
+      "httpSuccessCode": "200",
+      "isFunction": false,
+      "scopes": [
+
+      ],
+      "errorCodes": [
+
+      ],
+      "parameters": [
+        {
+          "name": "commands",
+          "description": "",
+          "dataType": "PatchContentCommand",
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": null
+        }
+      ]
+    },
+    {
+      "name": "CopyToSection",
+      "displayName": "",
+      "description": "",
+      "prerequisites": "",
+      "returnType": "CopyPageModel",
+      "isReturnNullable": null,
+      "isReturnTypeCollection": false,
+      "httpSuccessCode": "200",
+      "isFunction": false,
+      "scopes": [
+
+      ],
+      "errorCodes": [
+
+      ],
+      "parameters": [
+        {
+          "name": "id",
+          "description": "",
+          "dataType": "String",
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": false
+        },
+        {
+          "name": "siteCollectionId",
+          "description": "",
+          "dataType": "String",
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": false
+        },
+        {
+          "name": "siteId",
+          "description": "",
+          "dataType": "String",
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": false
+        }
+      ]
+    },
+    {
+      "name": "Thumbnail",
+      "displayName": "",
+      "description": "",
+      "prerequisites": "",
+      "returnType": "Stream",
+      "isReturnNullable": null,
+      "isReturnTypeCollection": false,
+      "httpSuccessCode": "200",
+      "isFunction": true,
+      "scopes": [
+
+      ],
+      "errorCodes": [
+
+      ],
+      "parameters": [
+
+      ]
+    }
+  ]
+}

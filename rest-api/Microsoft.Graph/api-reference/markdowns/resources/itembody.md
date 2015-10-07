@@ -1,20 +1,28 @@
-# ItemBody
+# ItemBody resource type
 
+The body content of a message or event.
 
+#### JSON representation
 
-## Properties
+Here is a JSON representation of the resource
+
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.ItemBody"
+}-->
+
+```json
+{
+  "Content": "String",
+  "ContentType": "String"
+}
+
+```
+#### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|Content|String||
-|ContentType|[Enumeration](enumeration.md)| Possible values are: `Text`, `HTML`.|
-
-## Relationships
-None
-
-
-## Tasks
-
-| Task		   | Return Type	|Description|
-|:---------------|:--------|:----------|
-|[Get metadata](../api/itembody_get.md) | ItemBody |Read properties and relationships of itemBody object.|
-|[Update](../api/itembody_update.md) | ItemBody	|Update itemBody object. |
+|Content|String|The text or HTML content.|
+|ContentType|String|The content type: Text = 0, HTML = 1. Possible values are: `Text`, `HTML`.|

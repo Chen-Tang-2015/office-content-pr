@@ -1,6 +1,6 @@
 {
   "name": "itemReference",
-  "description": "",
+  "description": "The itemReference type groups data needed to reference a OneDrive item across the service into a single structure.   ",
   "collectionOf": null,
   "isComplexType": true,
   "isEntitySet": false,
@@ -8,49 +8,54 @@
   "allowUpsert": false,
   "allowPatchCreate": false,
   "allowDelete": false,
-  "restPath": [
-
-  ],
   "info": null,
+  "propertyNotes": "",
+  "relationshipNotes": "",
+  "methodNotes": "",
+  "createDescription": "",
+  "updateDescription": "",
+  "deleteDescription": "",
+  "restPath": [],
   "properties": [
     {
       "name": "driveId",
+      "description": "Unique identifier for the Drive that contains the item.",
       "isKey": false,
       "dataType": "String",
-      "description": "",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
-      "isNullable": true,
+      "allowPostToCollection": true,
+      "isNullable": null,
       "isUnicode": false
     },
     {
       "name": "id",
+      "description": "Unique identifier for the item.",
       "isKey": false,
       "dataType": "String",
-      "description": "",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
-      "isNullable": true,
+      "allowPostToCollection": true,
+      "isNullable": null,
       "isUnicode": false
     },
     {
       "name": "path",
+      "description": "Path that used to navigate to the item.",
       "isKey": false,
       "dataType": "String",
-      "description": "",
       "isReadOnly": false,
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
-      "isNullable": true,
+      "allowPostToCollection": true,
+      "isNullable": null,
       "isUnicode": false
     }
   ],
-  "methods": [
-
-  ]
+  "methods": []
 }

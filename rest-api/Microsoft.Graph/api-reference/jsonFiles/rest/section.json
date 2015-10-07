@@ -1,0 +1,311 @@
+{
+  "name": "Section",
+  "description": "",
+  "collectionOf": null,
+  "isComplexType": false,
+  "isEntitySet": false,
+  "allowPatch": true,
+  "allowUpsert": true,
+  "allowPatchCreate": true,
+  "allowDelete": true,
+  "info": null,
+  "propertyNotes": "",
+  "relationshipNotes": "",
+  "methodNotes": "",
+  "createDescription": "",
+  "updateDescription": "",
+  "deleteDescription": "",
+  "restPath": [
+
+  ],
+  "properties": [
+    {
+      "name": "isDefault",
+      "description": "",
+      "isKey": false,
+      "dataType": "Boolean",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "pagesUrl",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": false
+    },
+    {
+      "name": "name",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": false
+    },
+    {
+      "name": "createdBy",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": false
+    },
+    {
+      "name": "lastModifiedBy",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": false
+    },
+    {
+      "name": "lastModifiedTime",
+      "description": "",
+      "isKey": false,
+      "dataType": "DateTimeOffset",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "id",
+      "description": "",
+      "isKey": true,
+      "dataType": "String",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": false,
+      "isUnicode": false
+    },
+    {
+      "name": "self",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": false
+    },
+    {
+      "name": "createdTime",
+      "description": "",
+      "isKey": false,
+      "dataType": "DateTimeOffset",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "parentNotebook",
+      "description": "",
+      "isKey": false,
+      "dataType": "Notebook",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": true,
+      "allowPostToCollection": true,
+      "isNullable": false,
+      "isUnicode": null
+    },
+    {
+      "name": "parentSectionGroup",
+      "description": "",
+      "isKey": false,
+      "dataType": "SectionGroup",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": true,
+      "allowPostToCollection": true,
+      "isNullable": false,
+      "isUnicode": null
+    },
+    {
+      "name": "pages",
+      "description": "",
+      "isKey": false,
+      "dataType": "Page",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": true,
+      "allowPostToCollection": true,
+      "isNullable": true,
+      "isUnicode": null
+    }
+  ],
+  "methods": [
+    {
+      "name": "CopyToNotebook",
+      "displayName": "",
+      "description": "",
+      "prerequisites": "",
+      "returnType": "CopySectionModel",
+      "isReturnNullable": null,
+      "isReturnTypeCollection": false,
+      "httpSuccessCode": "200",
+      "isFunction": false,
+      "scopes": [
+
+      ],
+      "errorCodes": [
+
+      ],
+      "parameters": [
+        {
+          "name": "id",
+          "description": "",
+          "dataType": "String",
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": false
+        },
+        {
+          "name": "siteCollectionId",
+          "description": "",
+          "dataType": "String",
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": false
+        },
+        {
+          "name": "siteId",
+          "description": "",
+          "dataType": "String",
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": false
+        },
+        {
+          "name": "renameAs",
+          "description": "",
+          "dataType": "String",
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": false
+        }
+      ]
+    },
+    {
+      "name": "CopyToSectionGroup",
+      "displayName": "",
+      "description": "",
+      "prerequisites": "",
+      "returnType": "CopySectionModel",
+      "isReturnNullable": null,
+      "isReturnTypeCollection": false,
+      "httpSuccessCode": "200",
+      "isFunction": false,
+      "scopes": [
+
+      ],
+      "errorCodes": [
+
+      ],
+      "parameters": [
+        {
+          "name": "id",
+          "description": "",
+          "dataType": "String",
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": false
+        },
+        {
+          "name": "siteCollectionId",
+          "description": "",
+          "dataType": "String",
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": false
+        },
+        {
+          "name": "siteId",
+          "description": "",
+          "dataType": "String",
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": false
+        },
+        {
+          "name": "renameAs",
+          "description": "",
+          "dataType": "String",
+          "isRequired": true,
+          "enumName": null,
+          "isNullable": null,
+          "isUnicode": false
+        }
+      ]
+    },
+    {
+      "name": "Thumbnail",
+      "displayName": "",
+      "description": "",
+      "prerequisites": "",
+      "returnType": "Stream",
+      "isReturnNullable": null,
+      "isReturnTypeCollection": false,
+      "httpSuccessCode": "200",
+      "isFunction": true,
+      "scopes": [
+
+      ],
+      "errorCodes": [
+
+      ],
+      "parameters": [
+
+      ]
+    }
+  ]
+}

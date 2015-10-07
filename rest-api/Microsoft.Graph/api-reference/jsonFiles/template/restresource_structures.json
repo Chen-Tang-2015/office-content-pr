@@ -1,36 +1,106 @@
 {
+  "serviceSettings" : {
+	  "name": "",
+	  "namespace": "microsoft.graph",
+	  "description": "",
+	  "allowPatch": true,  
+	  "allowUpsert": true,    
+	  "allowPatchCreate": false,
+	  "errorCodes" : []
+	},
+
+  "object" : {
+	  "name": null,
+	  "description": "",
+	  "collectionOf": null,
+	  "isComplexType": false,
+	  "isEntitySet" : false,
+	  "allowPatch": true,  
+	  "allowUpsert": true,    
+	  "allowPatchCreate": true,
+	  "allowDelete": true,  
+	  "info": null,
+	  "propertyNotes" : "",
+	  "relationshipNotes" : "",  
+	  "methodNotes": "",
+	  "createDescription": "",
+	  "updateDescription": "",
+	  "deleteDescription": "",
+	  "restPath": [],		
+	  "properties": [],
+	  "methods": []
+	},	
+
   "property": {
 	  "name": null,
+	  "description": "",
 	  "isKey": false,
 	  "dataType": null,
-	  "description": "",
 	  "isReadOnly": false,
 	  "enumName": null,
 	  "isCollection": false,
 	  "isRelationship": false,
-	  "isNullable" : true,
+	  "allowPostToCollection": true,	  
+	  "isNullable" : null,
 	  "isUnicode" : null
 	},
+
   "method":
 	{
 	  "name": null,
+	  "displayName": "",
+	  "description": "",
+	  "prerequisites": "",	  	  
 	  "returnType": null,
 	  "isReturnNullable" : null,
 	  "isReturnTypeCollection": false,
-	  "description": "",
-	  "syntax": null,  
-	  "httpSuccessResponseCode": null,
+	  "httpSuccessCode": null,
 	  "isFunction" : null,
-	  "parameters" : null
+	  "scopes" : [],
+	  "errorCodes" : [],
+	  "parameters" : []
 	},
+
   "parameter":	
   	{
 	  "name": null,
-	  "dataType": null,
 	  "description": "",
+	  "dataType": null,
 	  "isRequired": true,
-	  "enumNameJs": null,
+	  "enumName": null,
 	  "isNullable" : null,
 	  "isUnicode" : null
+	},
+
+  "mdresource" : 
+  	{ "blockType": "resource", 
+      "optionalProperties": [] 
+    },
+
+  "mdrequest" : 
+	{ "blockType": "request", 
+	  "name": "" 
+	},
+
+  "mdresponse" : 
+	{ "blockType": "response", 
+   	  "@odata.type": "", 
+	  "truncated": true 
+	},
+	
+  "mdignore" :
+   { 
+   	"blockType": "ignored" 
+	},
+
+  "mdpageannotate" :
+	{
+	  "type": "#page.annotation",
+	  "description": "",
+	  "keywords": "",
+	  "section": "documentation",
+	  "tocPath": ""
 	}
+
+
 }
