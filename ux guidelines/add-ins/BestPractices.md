@@ -1,4 +1,4 @@
-#Design best practices for Office Add-ins
+#Best practices for developing Office Add-ins
 
 **Last modified:** September 23, 2015
 
