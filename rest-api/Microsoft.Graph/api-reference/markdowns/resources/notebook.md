@@ -50,7 +50,7 @@ Here is a JSON representation of the resource
 |:---------------|:--------|:----------|
 |createdBy|String|The user who created the notebook.|
 |createdTime|DateTimeOffset|The date and time when the notebook was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|id|String|Org.OData.Core.V1.Description Read-only.|
+|id|String|The unique identifier of the notebook. Read-only.|
 |isDefault|Boolean|Indicates whether this is the user's default notebook.|
 |isShared|Boolean|Indicates whether the notebook is shared. If true, the contents of the notebook can be seen by people other than the owner.|
 |lastModifiedBy|String|The user who last modified the notebook.|
@@ -65,8 +65,8 @@ Here is a JSON representation of the resource
 #### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|sectionGroups|[SectionGroup](sectiongroup.md) collection| Read-only. Nullable.|
-|sections|[Section](section.md) collection| Read-only. Nullable.|
+|sectionGroups|[SectionGroup](sectiongroup.md) collection|The section groups in the notebook. Can be navigated to using the sectionGroupsUrl property or expanded in a GET request. Read-only. Nullable.|
+|sections|[Section](section.md) collection|The sections in the notebook. Can be navigated to using the sectionsUrl property or expanded in a GET request. Read-only. Nullable.|
 
 #### Tasks
 

@@ -50,7 +50,7 @@ Here is a JSON representation of the resource
 |:---------------|:--------|:----------|
 |createdBy|String|The user who created the section group.|
 |createdTime|DateTimeOffset|The date and time when the section group was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|id|String|Org.OData.Core.V1.Description Read-only.|
+|id|String|The unique identifier of the section group. Read-only.|
 |lastModifiedBy|String|The user who last modified the section group.|
 |lastModifiedTime|DateTimeOffset|The date and time when the section group was last modified.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |name|String|The name of the section group.|
@@ -61,10 +61,10 @@ Here is a JSON representation of the resource
 #### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|parentNotebook|[Notebook](notebook.md)| Read-only.|
-|parentSectionGroup|[SectionGroup](sectiongroup.md)| Read-only.|
+|parentNotebook|[Notebook](notebook.md)|The notebook that contains the section group, expanded by default with the id, name, and self properties selected. Read-only.|
+|parentSectionGroup|[SectionGroup](sectiongroup.md)|The section group that contains the section group, expanded by default with the id, name, and self properties selected. Read-only.|
 |sectionGroups|[SectionGroup](sectiongroup.md) collection| Read-only. Nullable.|
-|sections|[Section](section.md) collection| Read-only. Nullable.|
+|sections|[Section](section.md) collection|The sections in the section group. Can be navigated to using the sectionsUrl property or expanded in a GET request. Read-only. Nullable.|
 
 #### Tasks
 

@@ -97,7 +97,7 @@
     },
     {
       "name": "id",
-      "description": "Org.OData.Core.V1.Description ",
+      "description": "The unique identifier of the section. ",
       "isKey": true,
       "dataType": "String",
       "isReadOnly": true,
@@ -136,7 +136,7 @@
     },
     {
       "name": "parentNotebook",
-      "description": "",
+      "description": "The notebook that contains the section, expanded by default with the id, name, and self properties selected. ",
       "isKey": false,
       "dataType": "Notebook",
       "isReadOnly": true,
@@ -149,7 +149,7 @@
     },
     {
       "name": "parentSectionGroup",
-      "description": "",
+      "description": "The section group that contains the section, expanded by default with the id, name, and self properties selected. ",
       "isKey": false,
       "dataType": "SectionGroup",
       "isReadOnly": true,
@@ -162,7 +162,7 @@
     },
     {
       "name": "pages",
-      "description": "",
+      "description": "A section in a OneNote notebook ",
       "isKey": false,
       "dataType": "Page",
       "isReadOnly": true,

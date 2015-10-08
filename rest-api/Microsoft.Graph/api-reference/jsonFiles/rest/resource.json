@@ -19,7 +19,7 @@
   "properties": [
     {
       "name": "id",
-      "description": "Org.OData.Core.V1.Description ",
+      "description": "The unique id of this resource. ",
       "isKey": true,
       "dataType": "String",
       "isReadOnly": true,

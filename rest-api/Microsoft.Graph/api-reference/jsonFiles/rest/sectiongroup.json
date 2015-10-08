@@ -97,7 +97,7 @@
     },
     {
       "name": "id",
-      "description": "Org.OData.Core.V1.Description",
+      "description": "The unique identifier of the section group.",
       "isKey": true,
       "dataType": "String",
       "isReadOnly": true,
@@ -136,7 +136,7 @@
     },
     {
       "name": "parentNotebook",
-      "description": "",
+      "description": "The notebook that contains the section group, expanded by default with the id, name, and self properties selected.",
       "isKey": false,
       "dataType": "Notebook",
       "isReadOnly": true,
@@ -149,7 +149,7 @@
     },
     {
       "name": "parentSectionGroup",
-      "description": "",
+      "description": "The section group that contains the section group, expanded by default with the id, name, and self properties selected.",
       "isKey": false,
       "dataType": "SectionGroup",
       "isReadOnly": true,
@@ -162,7 +162,7 @@
     },
     {
       "name": "sections",
-      "description": "",
+      "description": "The sections in the section group. Can be navigated to using the sectionsUrl property or expanded in a GET request.",
       "isKey": false,
       "dataType": "Section",
       "isReadOnly": true,

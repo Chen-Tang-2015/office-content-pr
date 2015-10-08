@@ -97,7 +97,7 @@
     },
     {
       "name": "id",
-      "description": "Org.OData.Core.V1.Description ",
+      "description": "The unique identifier of the page ",
       "isKey": true,
       "dataType": "String",
       "isReadOnly": true,
@@ -149,7 +149,7 @@
     },
     {
       "name": "parentNotebook",
-      "description": "",
+      "description": "A page in a OneNote section ",
       "isKey": false,
       "dataType": "Notebook",
       "isReadOnly": true,

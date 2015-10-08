@@ -44,7 +44,7 @@ Here is a JSON representation of the resource
 |:---------------|:--------|:----------|
 |createdBy|String|The user who created the section. |
 |createdTime|DateTimeOffset|The date and time when the section was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|id|String|Org.OData.Core.V1.Description  Read-only.|
+|id|String|The unique identifier of the section.  Read-only.|
 |isDefault|Boolean|Indicates whether this is the user's default section.|
 |lastModifiedBy|String|The user who last modified the section. |
 |lastModifiedTime|DateTimeOffset|The date and time when the section was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
@@ -55,9 +55,9 @@ Here is a JSON representation of the resource
 #### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|pages|[Page](page.md) collection| Read-only. Nullable.|
-|parentNotebook|[Notebook](notebook.md)| Read-only.|
-|parentSectionGroup|[SectionGroup](sectiongroup.md)| Read-only.|
+|pages|[Page](page.md) collection|A section in a OneNote notebook  Read-only. Nullable.|
+|parentNotebook|[Notebook](notebook.md)|The notebook that contains the section, expanded by default with the id, name, and self properties selected.  Read-only.|
+|parentSectionGroup|[SectionGroup](sectiongroup.md)|The section group that contains the section, expanded by default with the id, name, and self properties selected.  Read-only.|
 
 #### Tasks
 
