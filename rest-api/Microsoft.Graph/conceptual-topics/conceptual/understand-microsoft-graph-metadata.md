@@ -1,4 +1,3 @@
-
 # Understanding Microsoft Graph API metadata
 
 _**Applies to:** Office 365_
@@ -37,12 +36,12 @@ Programmatically, you can perform this task in a RESTful call with the following
 
 
 ```no-highlight
-GET /beta/contoso.onmicrosoft.com/users/john.doe@contoso.onmicrosoft.com HTTP/1.1
+GET /v1.0/contoso.onmicrosoft.com/users/john.doe@contoso.onmicrosoft.com HTTP/1.1
 Host: graph.microsoft.com 
 Authorization: bearer <access_token> 
 ```
 
-The path segments, after the version part (`/beta`), of the request URL represent the logical sequence mentioned above. It can be interpreted as 
+The path segments, after the version part (`/v1.0`), of the request URL represent the logical sequence mentioned above. It can be interpreted as 
 traversing the Microsoft Graph API from a tenant node to the `users` node and then to a user node identified by what is known as the `userPrincipalName`
 property value of the `User` entity.
 
@@ -52,7 +51,7 @@ A example of this response body is shown as follows:
 ```no-highlight
 200 OK
 {
-    "@odata.context": "https://graph.microsoft.com/beta/contoso.onmicrosoft.com/$metadata#users/$entity",
+    "@odata.context": "https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/$metadata#users/$entity",
     "@odata.type": "#Microsoft.Graph.User",
     ......
     "objectType": "User",
@@ -95,7 +94,7 @@ An edge can also appear in a path segment of a URL. To get the user's manager, y
 and resubmit the request:
 
 ```no-highlight
-GET /beta/contoso.onmicrosoft.com/users/john.doe@contoso.onmicrosoft.com/manager
+GET /v1.0/contoso.onmicrosoft.com/users/john.doe@contoso.onmicrosoft.com/manager
 Host: graph.microsoft.com
 Authorization: bearer <access_token>
 ```
@@ -103,13 +102,13 @@ Authorization: bearer <access_token>
 Similarly, to get the user's files, you can replace the `/manager` segment by a `/files` segment. 
 
 ```no-highlight
-GET /beta/contoso.onmicrosoft.com/users/john.doe@contoso.onmicrosoft.com/files
+GET /v1.0/contoso.onmicrosoft.com/users/john.doe@contoso.onmicrosoft.com/files
 ```
 
 To get the manager's files, you may be attempted to append the /files segment to the /manager segment:
 
 ```no-highlight
-GET /beta/contoso.onmicrosoft.com/users/john.doe@contoso.onmicrosoft.com/manager/files
+GET /v1.0/contoso.onmicrosoft.com/users/john.doe@contoso.onmicrosoft.com/manager/files
 ```
 
 Unfortunately, you will get a `400 Bad Request` response containing the following error message: 
@@ -124,7 +123,7 @@ Typecasting is not yet supported for the API. However, there is a workaround. Na
 the following call:
 
 ```no-highlight
-GET /beta/contoso.onmicrosoft.com/users/manager_Id/files
+GET /v1.0/contoso.onmicrosoft.com/users/manager_Id/files
 ```
 
 Here, the `manager_Id` stands for the `objectId` or `userPrincipalName` property value of the `User` entity for the manager  
@@ -134,7 +133,7 @@ You can follow the similar scheme to query a simple or complex property, not jus
 For example, the following request retrieves the user's job title in the organization,
 
 ```no-highlight
-GET /beta/contoso.onmicrosoft.com/users/john.doe@contoso.onmicrosoft.com/jobTitle
+GET /v1.0/contoso.onmicrosoft.com/users/john.doe@contoso.onmicrosoft.com/jobTitle
 ```    
 
 However, it is not possible to continue traversal further from such an entity property. Hence, simple or complex entity properties
@@ -145,7 +144,7 @@ This is often referred to as projection and is expressed as a query option using
 For example, the following REST API call projects a User entity resource to a subset of its properties:
 
 ```no-highlight
-GET /beta/contoso.onmicrosoft.com/users/manager.objectId?$select=AboutMe,Skills
+GET /v1.0/contoso.onmicrosoft.com/users/manager.objectId?$select=AboutMe,Skills
 ```    
 
 Other query options include filtering to return a subset of a resource collection satisfying specified conditions. 
@@ -156,7 +155,7 @@ by `<file_id>` below) that the user's manager has shared out, you can enable thi
 action and supplying the destination folder's `objectId` value (`<folder_id>`) and the new file's name (`"test.txt"`).
 
 ```no-highlight
-POST https://graph.microsoft.com/beta/myOrganization/users/<manager_id>/files/<file_id>/Copy
+POST https://graph.microsoft.com/v1.0/myOrganization/users/<manager_id>/files/<file_id>/Copy
 
 {
     "destFolderId" : "<folder_id>",
@@ -168,7 +167,7 @@ As another example, you can compose and send a mail to designated recipients by 
 
 
 ```no-highlight
-POST https://graph.microsoft.com/beta/me/sendMail
+POST https://graph.microsoft.com/v1.0/me/sendMail
 
 {
     "Message" : {
@@ -236,7 +235,7 @@ https://graph.microsoft.com/<version>/$metadata
 ```
     
  
-Here, `<version>` is the placeholder for the version number. For the beta release, `<version> = beta`. 
+Here, `<version>` is the placeholder for the version number. For the v1.0 release, `<version> = v1.0`. For the beta release, `<version> = beta`. 
  
 As you can see from the entity schema, there are four types of XML elements defining the four types of addressable data 
 in the API. These are:
@@ -309,7 +308,7 @@ For example, in your organization (contoso.onmicrosoft.com) the `users` collecti
 
 ```
 {
-    "@odata.context": "https://graph.microsoft.com/beta/contoso.onmicrosoft.com/$metadata#users/$entity",
+    "@odata.context": "https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/$metadata#users/$entity",
     "@odata.type": "#Microsoft.Graph.User",
     ......
     "objectType": "User",
@@ -497,7 +496,7 @@ An example of this response body is shown as follows:
 
 ```no-highlight
 {
-    "@odata.context": "https://graph.microsoft.com/beta/contoso.onmicrosoft.com/$metadata#users('john.doe%40contoso.onmicrosoft.com')/files('01EKT655BZNCMKTXXVPREY7G2HYHLWC7R3')/lastModifiedBy",
+    "@odata.context": "https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/$metadata#users('john.doe%40contoso.onmicrosoft.com')/files('01EKT655BZNCMKTXXVPREY7G2HYHLWC7R3')/lastModifiedBy",
     "@odata.type": "#Microsoft.Graph.IdentitySet",
     "application": null,
     "user": {
@@ -517,7 +516,7 @@ The following shows an example of the successful response:
 
 ```no-highlight
 {
-    "@odata.context": "https://graph.microsoft.com/beta/contoso.onmicrosoft.com/$metadata#users('john.doe%40contoso.onmicrosoft.com')/files('01B3ONMLAXHZMIAHF4HNB26PNNEIDCAJZE')/lastModifiedBy/user/displayName",
+    "@odata.context": "https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/$metadata#users('john.doe%40contoso.onmicrosoft.com')/files('01B3ONMLAXHZMIAHF4HNB26PNNEIDCAJZE')/lastModifiedBy/user/displayName",
     "value": "John Doe"
 }
 ```
@@ -549,7 +548,7 @@ in the following example.
 
 ```no-highlight
 {
-    "@odata.context": "https://graph.microsoft.com/beta/contoso.onmicrosoft.com/$metadata#users('john.doe%40contoso.onmicrosoft.com')/files/$entity",
+    "@odata.context": "https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/$metadata#users('john.doe%40contoso.onmicrosoft.com')/files/$entity",
     "@odata.type": "#Microsoft.Graph.Folder",
     "@odata.id": "users/john.doe%40contoso.onmicrosoft.com/files/01EKT655BZNCMKTXXVPREY7G2HYHLWC7R3",
     "id": "01EKT655BZNCMKTXXVPREY7G2HYHLWC7R3",
