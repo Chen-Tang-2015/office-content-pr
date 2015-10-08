@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>User resource type</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+  
+</head>
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="user-resource-type">User resource type</h1>
+<p>A user in the system. The <strong>Me</strong> endpoint is provided as a shortcut for specifying the current user by SMTP address ( <code>users/sadie@contoso.com</code>).</p>
+<h4 id="json-representation">JSON representation</h4>
+<p>Here is a JSON representation of the resource</p>
+<pre><code class="json">{
+  &quot;AboutMe&quot;: &quot;String&quot;,
+  &quot;Alias&quot;: &quot;String&quot;,
+  &quot;Birthday&quot;: &quot;String (timestamp)&quot;,
+  &quot;Calendar&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.Calendar&quot;
+  },
+  &quot;CalendarGroups&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.CalendarGroup&quot;
+    }
+  ],
+  &quot;CalendarView&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.Event&quot;
+    }
+  ],
+  &quot;Calendars&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.Calendar&quot;
+    }
+  ],
+  &quot;ContactFolders&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.ContactFolder&quot;
+    }
+  ],
+  &quot;Contacts&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.Contact&quot;
+    }
+  ],
+  &quot;Events&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.Event&quot;
+    }
+  ],
+  &quot;Extensions&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.Extension&quot;
+    }
+  ],
+  &quot;Folders&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.MailFolder&quot;
+    }
+  ],
+  &quot;HireDate&quot;: &quot;String (timestamp)&quot;,
+  &quot;Interests&quot;: [
+    &quot;String&quot;
+  ],
+  &quot;JoinedGroups&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.Group&quot;
+    }
+  ],
+  &quot;MailboxGuid&quot;: &quot;String&quot;,
+  &quot;Messages&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.Message&quot;
+    }
+  ],
+  &quot;MySite&quot;: &quot;String&quot;,
+  &quot;PastProjects&quot;: [
+    &quot;String&quot;
+  ],
+  &quot;PreferredName&quot;: &quot;String&quot;,
+  &quot;PrincipalName&quot;: &quot;String&quot;,
+  &quot;Responsibilities&quot;: [
+    &quot;String&quot;
+  ],
+  &quot;RootFolder&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.MailFolder&quot;
+  },
+  &quot;Schools&quot;: [
+    &quot;String&quot;
+  ],
+  &quot;Skills&quot;: [
+    &quot;String&quot;
+  ],
+  &quot;Tags&quot;: [
+    &quot;String&quot;
+  ],
+  &quot;TrendingAround&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.File&quot;
+    }
+  ],
+  &quot;UserPhoto&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.Photo&quot;
+  },
+  &quot;UserPhotos&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.Photo&quot;
+    }
+  ],
+  &quot;WorkingWith&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.User&quot;
+    }
+  ],
+  &quot;accountEnabled&quot;: true,
+  &quot;appRoleAssignments&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.AppRoleAssignment&quot;
+    }
+  ],
+  &quot;assignedLicenses&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.AssignedLicense&quot;
+    }
+  ],
+  &quot;assignedPlans&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.AssignedPlan&quot;
+    }
+  ],
+  &quot;city&quot;: &quot;String&quot;,
+  &quot;country&quot;: &quot;String&quot;,
+  &quot;createdObjects&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.DirectoryObject&quot;
+    }
+  ],
+  &quot;deletionTimestamp&quot;: &quot;String (timestamp)&quot;,
+  &quot;department&quot;: &quot;String&quot;,
+  &quot;details&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.UserDetails&quot;
+  },
+  &quot;dirSyncEnabled&quot;: true,
+  &quot;directReports&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.DirectoryObject&quot;
+    }
+  ],
+  &quot;displayName&quot;: &quot;String&quot;,
+  &quot;drive&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.drive&quot;
+  },
+  &quot;facsimileTelephoneNumber&quot;: &quot;String&quot;,
+  &quot;givenName&quot;: &quot;String&quot;,
+  &quot;immutableId&quot;: &quot;String&quot;,
+  &quot;jobTitle&quot;: &quot;String&quot;,
+  &quot;lastDirSyncTime&quot;: &quot;String (timestamp)&quot;,
+  &quot;mail&quot;: &quot;String&quot;,
+  &quot;mailNickname&quot;: &quot;String&quot;,
+  &quot;manager&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.DirectoryObject&quot;
+  },
+  &quot;memberOf&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.DirectoryObject&quot;
+    }
+  ],
+  &quot;mobile&quot;: &quot;String&quot;,
+  &quot;notes&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.Notes&quot;
+  },
+  &quot;oauth2PermissionGrants&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.OAuth2PermissionGrant&quot;
+    }
+  ],
+  &quot;objectId&quot;: &quot;String (identifier)&quot;,
+  &quot;objectType&quot;: &quot;String&quot;,
+  &quot;onPremisesSecurityIdentifier&quot;: &quot;String&quot;,
+  &quot;otherMails&quot;: [
+    &quot;String&quot;
+  ],
+  &quot;ownedDevices&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.DirectoryObject&quot;
+    }
+  ],
+  &quot;ownedObjects&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.DirectoryObject&quot;
+    }
+  ],
+  &quot;passwordPolicies&quot;: &quot;String&quot;,
+  &quot;passwordProfile&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.PasswordProfile&quot;
+  },
+  &quot;physicalDeliveryOfficeName&quot;: &quot;String&quot;,
+  &quot;plans&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.Plan&quot;
+    }
+  ],
+  &quot;postalCode&quot;: &quot;String&quot;,
+  &quot;preferredLanguage&quot;: &quot;String&quot;,
+  &quot;provisionedPlans&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.ProvisionedPlan&quot;
+    }
+  ],
+  &quot;provisioningErrors&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.ProvisioningError&quot;
+    }
+  ],
+  &quot;proxyAddresses&quot;: [
+    &quot;String&quot;
+  ],
+  &quot;registeredDevices&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.DirectoryObject&quot;
+    }
+  ],
+  &quot;sipProxyAddress&quot;: &quot;String&quot;,
+  &quot;state&quot;: &quot;String&quot;,
+  &quot;streetAddress&quot;: &quot;String&quot;,
+  &quot;surname&quot;: &quot;String&quot;,
+  &quot;tasks&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.Task&quot;
+    }
+  ],
+  &quot;telephoneNumber&quot;: &quot;String&quot;,
+  &quot;thumbnailPhoto&quot;: &quot;String&quot;,
+  &quot;usageLocation&quot;: &quot;String&quot;,
+  &quot;userPrincipalName&quot;: &quot;String&quot;,
+  &quot;userType&quot;: &quot;String&quot;
+}
+
+</code></pre>
+
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">AboutMe</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">Alias</td>
+	<td align="left">String</td>
+	<td align="left">The user's alias. Typically the SMTP address of the user.</td>
+</tr>
+<tr>
+	<td align="left">Birthday</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">HireDate</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">Interests</td>
+	<td align="left">String collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">MailboxGuid</td>
+	<td align="left">Guid</td>
+	<td align="left">The GUID assigned to the user's mailbox.</td>
+</tr>
+<tr>
+	<td align="left">MySite</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">PastProjects</td>
+	<td align="left">String collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">PreferredName</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">PrincipalName</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">Responsibilities</td>
+	<td align="left">String collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">Schools</td>
+	<td align="left">String collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">Skills</td>
+	<td align="left">String collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">Tags</td>
+	<td align="left">String collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">accountEnabled</td>
+	<td align="left">Boolean</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">assignedLicenses</td>
+	<td align="left"><a href="assignedlicense.htm">AssignedLicense</a> collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">assignedPlans</td>
+	<td align="left"><a href="assignedplan.htm">AssignedPlan</a> collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">city</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">country</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">deletionTimestamp</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">department</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">dirSyncEnabled</td>
+	<td align="left">Boolean</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">displayName</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">facsimileTelephoneNumber</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">givenName</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">immutableId</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">jobTitle</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">lastDirSyncTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">mail</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">mailNickname</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">mobile</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">objectId</td>
+	<td align="left">String</td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">objectType</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">onPremisesSecurityIdentifier</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">otherMails</td>
+	<td align="left">String collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">passwordPolicies</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">passwordProfile</td>
+	<td align="left"><a href="passwordprofile.htm">PasswordProfile</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">physicalDeliveryOfficeName</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">postalCode</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">preferredLanguage</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">provisionedPlans</td>
+	<td align="left"><a href="provisionedplan.htm">ProvisionedPlan</a> collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">provisioningErrors</td>
+	<td align="left"><a href="provisioningerror.htm">ProvisioningError</a> collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">proxyAddresses</td>
+	<td align="left">String collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">sipProxyAddress</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">state</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">streetAddress</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">surname</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">telephoneNumber</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">thumbnailPhoto</td>
+	<td align="left">Stream</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">usageLocation</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">userPrincipalName</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">userType</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h4 id="relationships">Relationships</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Relationship</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">Calendar</td>
+	<td align="left"><a href="calendar.htm">Calendar</a></td>
+	<td align="left">The user's primary calendar. Navigation property. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">CalendarGroups</td>
+	<td align="left"><a href="calendargroup.htm">CalendarGroup</a> collection</td>
+	<td align="left">The user's calendar groups. Navigation property. Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">CalendarView</td>
+	<td align="left"><a href="event.htm">Event</a> collection</td>
+	<td align="left">The calendar view for the calendar. Navigation property. Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">Calendars</td>
+	<td align="left"><a href="calendar.htm">Calendar</a> collection</td>
+	<td align="left">The user's calendars. Navigation property. Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">ContactFolders</td>
+	<td align="left"><a href="contactfolder.htm">ContactFolder</a> collection</td>
+	<td align="left">The user's contacts folders. Navigation property. Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">Contacts</td>
+	<td align="left"><a href="contact.htm">Contact</a> collection</td>
+	<td align="left">The user's contacts. Navigation property. Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">Events</td>
+	<td align="left"><a href="event.htm">Event</a> collection</td>
+	<td align="left">The user's events. Default is to show Events under the Default Calendar. Navigation property. Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">Extensions</td>
+	<td align="left"><a href="extension.htm">Extension</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">Folders</td>
+	<td align="left"><a href="mailfolder.htm">MailFolder</a> collection</td>
+	<td align="left">The folders in a mailbox or folder. Navigation property. Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">JoinedGroups</td>
+	<td align="left"><a href="group.htm">Group</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">Messages</td>
+	<td align="left"><a href="message.htm">Message</a> collection</td>
+	<td align="left">The messages in a mailbox or folder. Navigation property. Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">RootFolder</td>
+	<td align="left"><a href="mailfolder.htm">MailFolder</a></td>
+	<td align="left">The root folder of the user's mailbox. Navigation property. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">TrendingAround</td>
+	<td align="left"><a href="file.htm">File</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">UserPhoto</td>
+	<td align="left"><a href="photo.htm">Photo</a></td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">UserPhotos</td>
+	<td align="left"><a href="photo.htm">Photo</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">WorkingWith</td>
+	<td align="left"><a href="user.htm">User</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">appRoleAssignments</td>
+	<td align="left"><a href="approleassignment.htm">AppRoleAssignment</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">createdObjects</td>
+	<td align="left"><a href="directoryobject.htm">DirectoryObject</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">details</td>
+	<td align="left"><a href="userdetails.htm">UserDetails</a></td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">directReports</td>
+	<td align="left"><a href="directoryobject.htm">DirectoryObject</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">drive</td>
+	<td align="left"><a href="drive.htm">drive</a></td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">manager</td>
+	<td align="left"><a href="directoryobject.htm">DirectoryObject</a></td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">memberOf</td>
+	<td align="left"><a href="directoryobject.htm">DirectoryObject</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">notes</td>
+	<td align="left"><a href="notes.htm">Notes</a></td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">oauth2PermissionGrants</td>
+	<td align="left"><a href="oauth2permissiongrant.htm">OAuth2PermissionGrant</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">ownedDevices</td>
+	<td align="left"><a href="directoryobject.htm">DirectoryObject</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">ownedObjects</td>
+	<td align="left"><a href="directoryobject.htm">DirectoryObject</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">plans</td>
+	<td align="left"><a href="plan.htm">Plan</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">registeredDevices</td>
+	<td align="left"><a href="directoryobject.htm">DirectoryObject</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">tasks</td>
+	<td align="left"><a href="task.htm">Task</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tasks">Tasks</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Task</th>
+	<th align="left">Return Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><a href="../api/user_get.htm">Get User</a></td>
+	<td align="left"><a href="user.htm">User</a></td>
+	<td align="left">Read properties and relationships of user object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_post_calendargroups.htm">Create CalendarGroup</a></td>
+	<td align="left"><a href="calendargroup.htm">CalendarGroup</a></td>
+	<td align="left">Create a new CalendarGroup by posting to the CalendarGroups collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_post_calendarview.htm">Create CalendarView</a></td>
+	<td align="left"><a href="event.htm">Event</a></td>
+	<td align="left">Create a new CalendarView by posting to the CalendarView collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_post_calendars.htm">Create Calendar</a></td>
+	<td align="left"><a href="calendar.htm">Calendar</a></td>
+	<td align="left">Create a new Calendar by posting to the Calendars collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_post_contactfolders.htm">Create ContactFolder</a></td>
+	<td align="left"><a href="contactfolder.htm">ContactFolder</a></td>
+	<td align="left">Create a new ContactFolder by posting to the ContactFolders collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_post_contacts.htm">Create Contact</a></td>
+	<td align="left"><a href="contact.htm">Contact</a></td>
+	<td align="left">Create a new Contact by posting to the Contacts collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_post_events.htm">Create Event</a></td>
+	<td align="left"><a href="event.htm">Event</a></td>
+	<td align="left">Create a new Event by posting to the Events collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_post_extensions.htm">Create Extension</a></td>
+	<td align="left"><a href="extension.htm">Extension</a></td>
+	<td align="left">Create a new Extension by posting to the Extensions collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_post_folders.htm">Create MailFolder</a></td>
+	<td align="left"><a href="mailfolder.htm">MailFolder</a></td>
+	<td align="left">Create a new MailFolder by posting to the Folders collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_post_joinedgroups.htm">Create Group</a></td>
+	<td align="left"><a href="group.htm">Group</a></td>
+	<td align="left">Create a new Group by posting to the JoinedGroups collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_post_messages.htm">Create Message</a></td>
+	<td align="left"><a href="message.htm">Message</a></td>
+	<td align="left">Create a new Message by posting to the Messages collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_post_trendingaround.htm">Create File</a></td>
+	<td align="left"><a href="file.htm">File</a></td>
+	<td align="left">Create a new File by posting to the TrendingAround collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_post_userphotos.htm">Create UserPhoto</a></td>
+	<td align="left"><a href="photo.htm">Photo</a></td>
+	<td align="left">Create a new UserPhoto by posting to the UserPhotos collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_post_workingwith.htm">Create User</a></td>
+	<td align="left"><a href="user.htm">User</a></td>
+	<td align="left">Create a new User by posting to the WorkingWith collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_post_approleassignments.htm">Create AppRoleAssignment</a></td>
+	<td align="left"><a href="approleassignment.htm">AppRoleAssignment</a></td>
+	<td align="left">Create a new AppRoleAssignment by posting to the appRoleAssignments collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_post_createdobjects.htm">Create createdObject</a></td>
+	<td align="left"><a href="directoryobject.htm">DirectoryObject</a></td>
+	<td align="left">Create a new createdObject by posting to the createdObjects collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_post_directreports.htm">Create directReport</a></td>
+	<td align="left"><a href="directoryobject.htm">DirectoryObject</a></td>
+	<td align="left">Create a new directReport by posting to the directReports collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_post_memberof.htm">Create memberOf</a></td>
+	<td align="left"><a href="directoryobject.htm">DirectoryObject</a></td>
+	<td align="left">Create a new memberOf by posting to the memberOf collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_post_oauth2permissiongrants.htm">Create OAuth2PermissionGrant</a></td>
+	<td align="left"><a href="oauth2permissiongrant.htm">OAuth2PermissionGrant</a></td>
+	<td align="left">Create a new OAuth2PermissionGrant by posting to the oauth2PermissionGrants collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_post_owneddevices.htm">Create ownedDevice</a></td>
+	<td align="left"><a href="directoryobject.htm">DirectoryObject</a></td>
+	<td align="left">Create a new ownedDevice by posting to the ownedDevices collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_post_ownedobjects.htm">Create ownedObject</a></td>
+	<td align="left"><a href="directoryobject.htm">DirectoryObject</a></td>
+	<td align="left">Create a new ownedObject by posting to the ownedObjects collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_post_plans.htm">Create Plan</a></td>
+	<td align="left"><a href="plan.htm">Plan</a></td>
+	<td align="left">Create a new Plan by posting to the plans collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_post_registereddevices.htm">Create registeredDevice</a></td>
+	<td align="left"><a href="directoryobject.htm">DirectoryObject</a></td>
+	<td align="left">Create a new registeredDevice by posting to the registeredDevices collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_post_tasks.htm">Create Task</a></td>
+	<td align="left"><a href="task.htm">Task</a></td>
+	<td align="left">Create a new Task by posting to the tasks collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_update.htm">Update</a></td>
+	<td align="left"><a href="user.htm">User</a></td>
+	<td align="left">Update User object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_delete.htm">Delete</a></td>
+	<td align="left">Void</td>
+	<td align="left">Delete User object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_sendmail.htm">Sendmail</a></td>
+	<td align="left"><a href="none.htm">None</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_assignlicense.htm">Assignlicense</a></td>
+	<td align="left"><a href="user.htm">User</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_checkmembergroups.htm">Checkmembergroups</a></td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_getmembergroups.htm">Get MemberGroups</a></td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/user_getmemberobjects.htm">Get MemberObjects</a></td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Message resource type</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+  
+</head>
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="message-resource-type">Message resource type</h1>
+<p>A message in a mailbox folder.</p>
+<h4 id="json-representation">JSON representation</h4>
+<p>Here is a JSON representation of the resource</p>
+<pre><code class="json">{
+  &quot;Attachments&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.Attachment&quot;
+    }
+  ],
+  &quot;BccRecipients&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.Recipient&quot;
+    }
+  ],
+  &quot;Body&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.ItemBody&quot;
+  },
+  &quot;BodyPreview&quot;: &quot;String&quot;,
+  &quot;Categories&quot;: [
+    &quot;String&quot;
+  ],
+  &quot;CcRecipients&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.Recipient&quot;
+    }
+  ],
+  &quot;ChangeKey&quot;: &quot;String&quot;,
+  &quot;ConversationId&quot;: &quot;String&quot;,
+  &quot;DateTimeCreated&quot;: &quot;String (timestamp)&quot;,
+  &quot;DateTimeLastModified&quot;: &quot;String (timestamp)&quot;,
+  &quot;DateTimeReceived&quot;: &quot;String (timestamp)&quot;,
+  &quot;DateTimeSent&quot;: &quot;String (timestamp)&quot;,
+  &quot;Extensions&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.Extension&quot;
+    }
+  ],
+  &quot;From&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.Recipient&quot;
+  },
+  &quot;HasAttachments&quot;: true,
+  &quot;Id&quot;: &quot;String (identifier)&quot;,
+  &quot;Importance&quot;: &quot;String&quot;,
+  &quot;IsDeliveryReceiptRequested&quot;: true,
+  &quot;IsDraft&quot;: true,
+  &quot;IsRead&quot;: true,
+  &quot;IsReadReceiptRequested&quot;: true,
+  &quot;ParentFolderId&quot;: &quot;String&quot;,
+  &quot;ReplyTo&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.Recipient&quot;
+    }
+  ],
+  &quot;Sender&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.Recipient&quot;
+  },
+  &quot;Subject&quot;: &quot;String&quot;,
+  &quot;ToRecipients&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.Recipient&quot;
+    }
+  ],
+  &quot;UniqueBody&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.ItemBody&quot;
+  },
+  &quot;WebLink&quot;: &quot;String&quot;
+}
+
+</code></pre>
+
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">BccRecipients</td>
+	<td align="left"><a href="recipient.htm">Recipient</a> collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">Body</td>
+	<td align="left"><a href="itembody.htm">ItemBody</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">BodyPreview</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">Categories</td>
+	<td align="left">String collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">CcRecipients</td>
+	<td align="left"><a href="recipient.htm">Recipient</a> collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">ChangeKey</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">ConversationId</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">DateTimeCreated</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">DateTimeLastModified</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">DateTimeReceived</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">DateTimeSent</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">From</td>
+	<td align="left"><a href="recipient.htm">Recipient</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">HasAttachments</td>
+	<td align="left">Boolean</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">Id</td>
+	<td align="left">String</td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">Importance</td>
+	<td align="left">String</td>
+	<td align="left">Possible values are: <code>Low</code>, <code>Normal</code>, <code>High</code>.</td>
+</tr>
+<tr>
+	<td align="left">IsDeliveryReceiptRequested</td>
+	<td align="left">Boolean</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">IsDraft</td>
+	<td align="left">Boolean</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">IsRead</td>
+	<td align="left">Boolean</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">IsReadReceiptRequested</td>
+	<td align="left">Boolean</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">ParentFolderId</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">ReplyTo</td>
+	<td align="left"><a href="recipient.htm">Recipient</a> collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">Sender</td>
+	<td align="left"><a href="recipient.htm">Recipient</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">Subject</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">ToRecipients</td>
+	<td align="left"><a href="recipient.htm">Recipient</a> collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">UniqueBody</td>
+	<td align="left"><a href="itembody.htm">ItemBody</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">WebLink</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h4 id="relationships">Relationships</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Relationship</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">Attachments</td>
+	<td align="left"><a href="attachment.htm">Attachment</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">Extensions</td>
+	<td align="left"><a href="extension.htm">Extension</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tasks">Tasks</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Task</th>
+	<th align="left">Return Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><a href="../api/message_get.htm">Get Message</a></td>
+	<td align="left"><a href="message.htm">Message</a></td>
+	<td align="left">Read properties and relationships of message object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/message_post_attachments.htm">Create Attachment</a></td>
+	<td align="left"><a href="attachment.htm">Attachment</a></td>
+	<td align="left">Create a new Attachment by posting to the Attachments collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/message_post_extensions.htm">Create Extension</a></td>
+	<td align="left"><a href="extension.htm">Extension</a></td>
+	<td align="left">Create a new Extension by posting to the Extensions collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/message_update.htm">Update</a></td>
+	<td align="left"><a href="message.htm">Message</a></td>
+	<td align="left">Update Message object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/message_delete.htm">Delete</a></td>
+	<td align="left">Void</td>
+	<td align="left">Delete Message object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/message_copy.htm">Copy</a></td>
+	<td align="left"><a href="message.htm">Message</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/message_createforward.htm">Createforward</a></td>
+	<td align="left"><a href="message.htm">Message</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/message_createreply.htm">Createreply</a></td>
+	<td align="left"><a href="message.htm">Message</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/message_createreplyall.htm">Createreplyall</a></td>
+	<td align="left"><a href="message.htm">Message</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/message_forward.htm">Forward</a></td>
+	<td align="left"><a href="none.htm">None</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/message_move.htm">Move</a></td>
+	<td align="left"><a href="message.htm">Message</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/message_reply.htm">Reply</a></td>
+	<td align="left"><a href="none.htm">None</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/message_replyall.htm">Replyall</a></td>
+	<td align="left"><a href="none.htm">None</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/message_send.htm">Send</a></td>
+	<td align="left"><a href="none.htm">None</a></td>
+	<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+

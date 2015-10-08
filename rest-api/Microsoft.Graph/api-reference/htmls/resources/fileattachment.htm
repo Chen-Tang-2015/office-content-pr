@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>FileAttachment resource type</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+  
+</head>
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="fileattachment-resource-type">FileAttachment resource type</h1>
+<p>A file (such as a text file or Word document) attached to a message or event. The  <strong>ContentBytes</strong> property contains the base64-encoded contents of the file.</p>
+<h4 id="json-representation">JSON representation</h4>
+<p>Here is a JSON representation of the resource</p>
+<pre><code class="json">{
+  &quot;ContentBytes&quot;: &quot;String&quot;,
+  &quot;ContentId&quot;: &quot;String&quot;,
+  &quot;ContentLocation&quot;: &quot;String&quot;,
+  &quot;ContentType&quot;: &quot;String&quot;,
+  &quot;DateTimeLastModified&quot;: &quot;String (timestamp)&quot;,
+  &quot;Extensions&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.Extension&quot;
+    }
+  ],
+  &quot;Id&quot;: &quot;String (identifier)&quot;,
+  &quot;IsContactPhoto&quot;: true,
+  &quot;IsInline&quot;: true,
+  &quot;Name&quot;: &quot;String&quot;,
+  &quot;Size&quot;: 1024
+}
+
+</code></pre>
+
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">ContentBytes</td>
+	<td align="left">Binary</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">ContentId</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">ContentLocation</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">ContentType</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">DateTimeLastModified</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">Id</td>
+	<td align="left">String</td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">IsContactPhoto</td>
+	<td align="left">Boolean</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">IsInline</td>
+	<td align="left">Boolean</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">Name</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">Size</td>
+	<td align="left">Int32</td>
+	<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h4 id="relationships">Relationships</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Relationship</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">Extensions</td>
+	<td align="left"><a href="extension.htm">Extension</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tasks">Tasks</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Task</th>
+	<th align="left">Return Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><a href="../api/fileattachment_get.htm">Get FileAttachment</a></td>
+	<td align="left"><a href="fileattachment.htm">FileAttachment</a></td>
+	<td align="left">Read properties and relationships of fileAttachment object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/fileattachment_post_extensions.htm">Create Extension</a></td>
+	<td align="left"><a href="extension.htm">Extension</a></td>
+	<td align="left">Create a new Extension by posting to the Extensions collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/fileattachment_update.htm">Update</a></td>
+	<td align="left"><a href="fileattachment.htm">FileAttachment</a></td>
+	<td align="left">Update FileAttachment object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/fileattachment_delete.htm">Delete</a></td>
+	<td align="left">Void</td>
+	<td align="left">Delete FileAttachment object.</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+

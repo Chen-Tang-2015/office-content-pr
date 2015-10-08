@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Plan resource type</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+  
+</head>
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="plan-resource-type">Plan resource type</h1>
+<h4 id="json-representation">JSON representation</h4>
+<p>Here is a JSON representation of the resource</p>
+<pre><code class="json">{
+  &quot;activeTasks&quot;: 1024,
+  &quot;assignedToTaskBoard&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.PlanTaskBoard&quot;
+  },
+  &quot;bucketTaskBoard&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.PlanTaskBoard&quot;
+  },
+  &quot;buckets&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.Bucket&quot;
+    }
+  ],
+  &quot;createdBy&quot;: &quot;String&quot;,
+  &quot;details&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.PlanDetails&quot;
+  },
+  &quot;id&quot;: &quot;String (identifier)&quot;,
+  &quot;owner&quot;: &quot;String&quot;,
+  &quot;statusTaskBoard&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.PlanTaskBoard&quot;
+  },
+  &quot;tasks&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.Task&quot;
+    }
+  ],
+  &quot;timeline&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.PlanTimeline&quot;
+  },
+  &quot;title&quot;: &quot;String&quot;,
+  &quot;totalTasks&quot;: 1024,
+  &quot;version&quot;: &quot;String&quot;
+}
+
+</code></pre>
+
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">activeTasks</td>
+	<td align="left">Int32</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">createdBy</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">id</td>
+	<td align="left">String</td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">owner</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">title</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">totalTasks</td>
+	<td align="left">Int32</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">version</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h4 id="relationships">Relationships</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Relationship</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">assignedToTaskBoard</td>
+	<td align="left"><a href="plantaskboard.htm">PlanTaskBoard</a></td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">bucketTaskBoard</td>
+	<td align="left"><a href="plantaskboard.htm">PlanTaskBoard</a></td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">buckets</td>
+	<td align="left"><a href="bucket.htm">Bucket</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">details</td>
+	<td align="left"><a href="plandetails.htm">PlanDetails</a></td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">statusTaskBoard</td>
+	<td align="left"><a href="plantaskboard.htm">PlanTaskBoard</a></td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">tasks</td>
+	<td align="left"><a href="task.htm">Task</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">timeline</td>
+	<td align="left"><a href="plantimeline.htm">PlanTimeline</a></td>
+	<td align="left">Read-only.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tasks">Tasks</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Task</th>
+	<th align="left">Return Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><a href="../api/plan_get.htm">Get Plan</a></td>
+	<td align="left"><a href="plan.htm">Plan</a></td>
+	<td align="left">Read properties and relationships of plan object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/plan_post_buckets.htm">Create Bucket</a></td>
+	<td align="left"><a href="bucket.htm">Bucket</a></td>
+	<td align="left">Create a new Bucket by posting to the buckets collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/plan_post_tasks.htm">Create Task</a></td>
+	<td align="left"><a href="task.htm">Task</a></td>
+	<td align="left">Create a new Task by posting to the tasks collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/plan_update.htm">Update</a></td>
+	<td align="left"><a href="plan.htm">Plan</a></td>
+	<td align="left">Update Plan object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/plan_delete.htm">Delete</a></td>
+	<td align="left">Void</td>
+	<td align="left">Delete Plan object.</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+
