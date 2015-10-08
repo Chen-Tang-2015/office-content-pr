@@ -56,42 +56,42 @@
 <tr>
 	<td align="left">AccessType</td>
 	<td align="left">String</td>
-	<td align="left">Possible values are: <code>isExclusive</code> true,<code>options</code> {&quot;None&quot;=&gt;{&quot;value&quot;=&gt;&quot;0&quot;, &quot;description&quot;=&gt;&quot;&quot;}, &quot;Private&quot;=&gt;{&quot;value&quot;=&gt;&quot;1&quot;, &quot;description&quot;=&gt;&quot;&quot;}, &quot;Secret&quot;=&gt;{&quot;value&quot;=&gt;&quot;2&quot;, &quot;description&quot;=&gt;&quot;&quot;}, &quot;Public&quot;=&gt;{&quot;value&quot;=&gt;&quot;3&quot;, &quot;description&quot;=&gt;&quot;&quot;}}</td>
+	<td align="left">Indicates the access type of the group (eg. Private, Secret, Public). Possible values are: <code>isExclusive</code> true,<code>options</code> {&quot;None&quot;=&gt;{&quot;value&quot;=&gt;&quot;0&quot;, &quot;description&quot;=&gt;&quot;&quot;}, &quot;Private&quot;=&gt;{&quot;value&quot;=&gt;&quot;1&quot;, &quot;description&quot;=&gt;&quot;&quot;}, &quot;Secret&quot;=&gt;{&quot;value&quot;=&gt;&quot;2&quot;, &quot;description&quot;=&gt;&quot;&quot;}, &quot;Public&quot;=&gt;{&quot;value&quot;=&gt;&quot;3&quot;, &quot;description&quot;=&gt;&quot;&quot;}}</td>
 </tr>
 <tr>
 	<td align="left">AllowExternalSenders</td>
 	<td align="left">Boolean</td>
-	<td align="left"></td>
+	<td align="left">Default is false. Indicates if external members can send email to group.</td>
 </tr>
 <tr>
 	<td align="left">AutoSubscribeNewMembers</td>
 	<td align="left">Boolean</td>
-	<td align="left"></td>
+	<td align="left">Default is false. Indicates if new members added to the group will be auto-subscribed.</td>
 </tr>
 <tr>
 	<td align="left">EmailAddress</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The primary SMTP address of the group.</td>
 </tr>
 <tr>
 	<td align="left">IsFavorite</td>
 	<td align="left">Boolean</td>
-	<td align="left"></td>
+	<td align="left">Indicates whether the logged in user has this group pinned.</td>
 </tr>
 <tr>
 	<td align="left">IsSubscribedByMail</td>
 	<td align="left">Boolean</td>
-	<td align="left"></td>
+	<td align="left">Default value is true. Whether group allows members to subscribe for email conversations.</td>
 </tr>
 <tr>
 	<td align="left">UnseenCount</td>
 	<td align="left">Int32</td>
-	<td align="left"></td>
+	<td align="left">Count of posts that a specific user has not seen since his last visit.</td>
 </tr>
 <tr>
 	<td align="left">creationOptions</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">Specifies optional behavior for the creation of groups.</td>
 </tr>
 <tr>
 	<td align="left">deletionTimestamp</td>
@@ -101,47 +101,47 @@
 <tr>
 	<td align="left">description</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">Description of the group.</td>
 </tr>
 <tr>
 	<td align="left">dirSyncEnabled</td>
 	<td align="left">Boolean</td>
-	<td align="left"></td>
+	<td align="left">Indicates if the group was synced from an on-premises directory.</td>
 </tr>
 <tr>
 	<td align="left">displayName</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">Name of the group.</td>
 </tr>
 <tr>
 	<td align="left">groupTypes</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">Specifies the following on group creation: distribution group, security group, email-enabled security group, or a unified group (aka Office 365 Group).</td>
 </tr>
 <tr>
 	<td align="left">isPublic</td>
 	<td align="left">Boolean</td>
-	<td align="left"></td>
+	<td align="left">Indicates whether the group is open to the public for joining. You can set this only on group creation. True by default. Set this to false to create a private group where only the group name is visible to everyone, and only group members can search and access group data. Non-group members  can still send and receive emails from private groups.</td>
 </tr>
 <tr>
 	<td align="left">lastDirSyncTime</td>
 	<td align="left">DateTimeOffset</td>
-	<td align="left"></td>
+	<td align="left">Indicates the last time at which the group was synced with the on-premises directory.</td>
 </tr>
 <tr>
 	<td align="left">mail</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The SMTP address for the group specified in the form of &quot;serviceadmins@contoso.onmicrosoft.com&quot;.</td>
 </tr>
 <tr>
 	<td align="left">mailEnabled</td>
 	<td align="left">Boolean</td>
-	<td align="left"></td>
+	<td align="left">Specifies whether the group is mail-enabled. If the securityEnabled property is also true, the group is a mail-enabled security group; otherwise, the group is a distribution group.</td>
 </tr>
 <tr>
 	<td align="left">mailNickname</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The mail alias for the group. You must specify this property when creating a group.</td>
 </tr>
 <tr>
 	<td align="left">objectType</td>
@@ -151,22 +151,22 @@
 <tr>
 	<td align="left">onPremisesSecurityIdentifier</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The on-premises security identifier (SID) for the group that was synchronized from on-premises to the cloud.</td>
 </tr>
 <tr>
 	<td align="left">provisioningErrors</td>
 	<td align="left">ProvisioningError</td>
-	<td align="left"></td>
+	<td align="left">A collection of error details (of type ProvisioningError) that are preventing this group from being provisioned successfully.</td>
 </tr>
 <tr>
 	<td align="left">proxyAddresses</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">Specifies SMTP addresses for the group, in the form of &quot;SMTP:serviceadmins@contoso.onmicrosoft.com&quot;, as an example.</td>
 </tr>
 <tr>
 	<td align="left">securityEnabled</td>
 	<td align="left">Boolean</td>
-	<td align="left"></td>
+	<td align="left">Specifies whether the group is a security group. If the <code>mailEnabled</code> property is also true, the group is a mail-enabled security group; otherwise it is a security group. You can enable the security of an Office 365 Group after the group is created, but once you do that, you won't be able to change it back.</td>
 </tr>
 </tbody>
 </table>

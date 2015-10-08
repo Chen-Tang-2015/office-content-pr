@@ -20,6 +20,7 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="conversation-resource-type">Conversation resource type</h1>
+<p>A conversation is a collection of <a href="#ConversationThreadResource">threads</a>. All threads and posts in a conversation share the same subject.</p>
 <h4 id="json-representation">JSON representation</h4>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
@@ -63,12 +64,12 @@
 <tr>
 	<td align="left">HasAttachments</td>
 	<td align="left">Boolean</td>
-	<td align="left"></td>
+	<td align="left">Indicates whether the Conversation has at least one attachment.</td>
 </tr>
 <tr>
 	<td align="left">Id</td>
 	<td align="left">String</td>
-	<td align="left">Read-only.</td>
+	<td align="left">The group's unique identifier. Read-only.</td>
 </tr>
 <tr>
 	<td align="left">Preview</td>
@@ -78,12 +79,12 @@
 <tr>
 	<td align="left">Topic</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.</td>
 </tr>
 <tr>
 	<td align="left">UniqueSenders</td>
 	<td align="left">String collection</td>
-	<td align="left"></td>
+	<td align="left">All the users that sent a message to this Conversation.</td>
 </tr>
 </tbody>
 </table>
@@ -105,7 +106,7 @@
 <tr>
 	<td align="left">Threads</td>
 	<td align="left"><a href="conversationthread.htm">ConversationThread</a> collection</td>
-	<td align="left">Read-only. Nullable.</td>
+	<td align="left">A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.</td>
 </tr>
 </tbody>
 </table>

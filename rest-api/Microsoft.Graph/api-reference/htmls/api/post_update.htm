@@ -71,12 +71,12 @@
 <tr>
 	<td align="left">ConversationId</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The conversation that contains this post. This is a navigation property.</td>
 </tr>
 <tr>
 	<td align="left">ConversationThreadId</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The thread that contains this post. This is a navigation property.</td>
 </tr>
 <tr>
 	<td align="left">DateTimeCreated</td>
@@ -91,27 +91,27 @@
 <tr>
 	<td align="left">DateTimeReceived</td>
 	<td align="left">DateTimeOffset</td>
-	<td align="left"></td>
+	<td align="left">Specifies when the post was delivered. This is a default property.</td>
 </tr>
 <tr>
 	<td align="left">From</td>
 	<td align="left">Recipient</td>
-	<td align="left"></td>
+	<td align="left">Used in delegate access scenarios. Indicates who posted the message on behalf of another user. This is a default property.</td>
 </tr>
 <tr>
 	<td align="left">HasAttachments</td>
 	<td align="left">Boolean</td>
-	<td align="left"></td>
+	<td align="left">Indicates whether the post has at least one attachment. This is a default property.</td>
 </tr>
 <tr>
 	<td align="left">NewParticipants</td>
 	<td align="left">Recipient</td>
-	<td align="left"></td>
+	<td align="left">Conversation participants that were added to the thread as part of this post.</td>
 </tr>
 <tr>
 	<td align="left">Sender</td>
 	<td align="left">Recipient</td>
-	<td align="left"></td>
+	<td align="left">Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.</td>
 </tr>
 </tbody>
 </table>

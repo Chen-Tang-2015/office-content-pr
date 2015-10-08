@@ -20,6 +20,7 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="conversationthread-resource-type">ConversationThread resource type</h1>
+<p>A thread is a collection of <a href="#PostResource">posts</a>. The last post's recipients collection is the aggregated recipients of the entire thread. A thread can have a growing collection of recipients. A new thread is created when a recipient is removed from the thread.</p>
 <h4 id="json-representation">JSON representation</h4>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
@@ -69,7 +70,7 @@
 <tr>
 	<td align="left">CcRecipients</td>
 	<td align="left"><a href="recipient.htm">Recipient</a> collection</td>
-	<td align="left"></td>
+	<td align="left">Aggregation of Cc recipients from all messages on the thread</td>
 </tr>
 <tr>
 	<td align="left">DateTimeLastDelivered</td>
@@ -84,7 +85,7 @@
 <tr>
 	<td align="left">Id</td>
 	<td align="left">String</td>
-	<td align="left">Read-only.</td>
+	<td align="left">The unique identifier for the conversation thread. Read-only.</td>
 </tr>
 <tr>
 	<td align="left">IsLocked</td>
@@ -94,12 +95,12 @@
 <tr>
 	<td align="left">Preview</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">A preview of the last post in the thread.</td>
 </tr>
 <tr>
 	<td align="left">ToRecipients</td>
 	<td align="left"><a href="recipient.htm">Recipient</a> collection</td>
-	<td align="left"></td>
+	<td align="left">Aggregation of To recipients from all messages on the thread</td>
 </tr>
 <tr>
 	<td align="left">Topic</td>
@@ -131,7 +132,7 @@
 <tr>
 	<td align="left">Posts</td>
 	<td align="left"><a href="post.htm">Post</a> collection</td>
-	<td align="left">Read-only. Nullable.</td>
+	<td align="left">Collection with all the identifiers of the posts that compose the thread. A navigation property. Read-only. Nullable.</td>
 </tr>
 </tbody>
 </table>
