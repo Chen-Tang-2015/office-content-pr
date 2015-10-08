@@ -1,22 +1,20 @@
 
-
 # Understanding Microsoft Graph API metadata
 
 _**Applies to:** Office 365_
 
-Underneath the Office 365 unified API are an array of data stores targeted for individual services in Office 365. The power of this unified API lies 
-in its ability to bring the otherwise siloed data together in such a way that they are integrated into a single connected graph.  To understand the  
-unified API in its entirety, it is important to have a grasp of its entity schema. 
+Underneath the Microsoft Graph API are an array of data stores targeted for individual services in Office 365. The power of this Microsoft Graph API lies 
+in its ability to bring the otherwise siloed data together in such a way that they are integrated into a single connected graph.  To understand the API in its entirety, it is important to have a grasp of its entity schema. 
 
-For an app developer, understanding of the entity schema will help you master the programming patterns using Office 365 unified API in a RESTful way. 
+For an app developer, understanding the entity schema helps you master the Microsoft Graph API programming patterns. 
 Because the entity schema is also used to generate the client libraries of platform-specific SDKs, the knowledge should be valuable to 
-guide you to use the client libraries, as well. In this section, we will explain the unified API's entity data model through a series of scenarios
+guide you to use the client libraries, as well. In this section, we will explain the API entity data model through a series of scenarios
 and examples to demonstrate how you might get the most out of the metadata schema.
 
 **In this article**
 
-- [Introduction to calling the Office 365 unified API](#msg_introduction_to_unified_api)
-- [Unified resource entity schema](#msg_unified_resource_entity_schema)
+- [Introduction to calling the Microsoft Graph API](#msg_introduction)
+- [Resource entity schema](#msg_resource_entity_schema)
 - [Start traversal from tenant-level resources](#msg_start_traversal_from_tenant_level_resources)
 - [Navigate from entity set/collection to member](#msg_navigate_from_set_to_member)
 - [Traverse to related entities via navigation properties](#msg_traverse_to_related_resource)
@@ -25,10 +23,10 @@ and examples to demonstrate how you might get the most out of the metadata schem
 - [Invoke OData actions and functions](#msg_odata_actions_and_functions)
 
 
-<a name="msg_introduction_to_unified_api" > </a>
-##Introduction to calling the unified API
+<a name="msg_introduction" > </a>
+##Introduction to calling the Microsoft Graph API
 Suppose that your organization (Contoso) have an Office 365 tenant (contoso.onmicrosoft.com) with an Azure subscription. 
-To find out the skills and expertise of a user (john.doe@contoso.onmicrosoft.com) of the organization, you can use the Office 365 unified API 
+To find out the skills and expertise of a user (john.doe@contoso.onmicrosoft.com) of the organization, you can use the Microsoft Graph API 
 to query the user and examine his skill sets. Logically, the operation may be broken down into the following sequence of steps:
 
 1.	Go to the tenant of the organization.
@@ -45,7 +43,7 @@ Authorization: bearer <access_token>
 ```
 
 The path segments, after the version part (`/beta`), of the request URL represent the logical sequence mentioned above. It can be interpreted as 
-traversing the unified graph from a tenant node to the `users` node and then to a user node identified by what is known as the `userPrincipalName`
+traversing the Microsoft Graph API from a tenant node to the `users` node and then to a user node identified by what is known as the `userPrincipalName`
 property value of the `User` entity.
 
 When successful, you get the result in a 200 OK response. The body of the response contains the data of the specified user. 
@@ -68,7 +66,7 @@ A example of this response body is shown as follows:
 ```
 
 The returned user data is known as a `User` entity. The data is formatted as a JSON string. This is a unique instance of 
-the `Microsoft.Graph.User` type that is defined in the Office 365 unified API entity schema. A portion of the `User` entity type definition 
+the `Microsoft.Graph.User` type that is defined in the API entity schema. A portion of the `User` entity type definition 
 is shown as follows:
 
 ```
@@ -122,7 +120,7 @@ Unfortunately, you will get a `400 Bad Request` response containing the followin
 
 This is because manager is typed as `Microsoft.Graph.DirectoryObject`. 
 While declared as a navigation property on the `User` entity type, `files` is not a navigation property of the `DirectoryObject` entity type.
-Typecasting is not yet supported for the unified API beta. However, there is a workaround. Namely, you can get the manager's files by making
+Typecasting is not yet supported for the API. However, there is a workaround. Namely, you can get the manager's files by making
 the following call:
 
 ```no-highlight
@@ -140,7 +138,7 @@ GET /beta/contoso.onmicrosoft.com/users/john.doe@contoso.onmicrosoft.com/jobTitl
 ```    
 
 However, it is not possible to continue traversal further from such an entity property. Hence, simple or complex entity properties
-are edge nodes in the unified graph.
+are edge nodes.
 
 In addition you can also ask for a subset of resource properties instead of the entire resource property set. 
 This is often referred to as projection and is expressed as a query option using the $select query parameter in a request URL. 
@@ -190,13 +188,14 @@ POST https://graph.microsoft.com/beta/me/sendMail
 ```
 
  
-To summarize, in the Office 365 unified API, data consists of entities, entity properties and relationships between one entity and 
-other entities. A relatioinship 
-is represented by a navigation property of the source entity. Together they form a graph of unified resources. In this graph, entities
+To summarize, in the Microsoft Graph API, data consists of entities, entity properties and relationships between one entity and 
+other entities. 
+
+A relatioinship is represented by a navigation property of the source entity. Together they form a graph of unified resources. In this graph, entities
 correspond to nodes, relationships are edges between entity nodes, and properties are edges of the graph. We can access an entity, an 
 entity collection, an entity relationship, or an entity property by following a path way that mimics graph traversal from node to node. 
 In a REST API call, the path becomes part of the URL to access the data.  From the demonstrations of the above examples, we list the four 
-basic types navigations, along with their URLs, to access data in the unified API graph as follows:
+basic types navigations, along with their URLs, to access data in the API graph as follows:
 
 - Start traversal by get a tenant-level entity collection:
 ```no-highlight
@@ -222,15 +221,15 @@ https://graph.microsoft.com/<version>/<tenant>/<folder_id>/<member-id>/<property
     
 
 You can extend these basic navigation schemes in various combinations and on various levels to access all the data 
-in the unified API graph. 
-To find out what kinds of data are exposed by the unified API, you can check the Office 365 
-unified resource entity schema, which we shall discuss more next. 
+in the API graph. 
+
+To find out what kinds of data are exposed by the API, you can check the Microsoft Graph API resource entity schema, which we shall discuss more next. 
 
 
-<a name="msg_unified_resource_entity_schema" > </a>
-##Office 365 unified API resource entity schema
-The unified resource entity schema is declared as an XML schema and comforms to the OData 4.0 standard. 
- You can download the entity schema using the unified API as well. To do this, go to, in your favorite browser:
+<a name="msg_resource_entity_schema" > </a>
+##Microsoft Graph API resource entity schema
+The Microsoft Graph API resource entity schema is declared as an XML schema and comforms to the OData 4.0 standard. 
+ You can download the entity schema using the API as well. To do this, go to, in your favorite browser:
 
 ```no-highlight
 https://graph.microsoft.com/<version>/$metadata
@@ -240,7 +239,7 @@ https://graph.microsoft.com/<version>/$metadata
 Here, `<version>` is the placeholder for the version number. For the beta release, `<version> = beta`. 
  
 As you can see from the entity schema, there are four types of XML elements defining the four types of addressable data 
-in the unified API. These are:
+in the API. These are:
 
 - `<EntitySet>` : As the child elements of `<EntityContainer>`, they define the tenant-level resource collections.
 - `<EntityType>` It defines a specific type of addressable resource: 
@@ -257,7 +256,7 @@ query operations, respectively, supported by the API.
 <a name="msg_start_traversal_from_tenant_level_resources" > </a>
 ##Start traversal from tenant-level resources
 In the entity schema ($metadata), the `<EntityContainer Name='GraphService'>` element defines the resource collections 
-from which you can start traversing to any other node on the unified graph. These are the so-called 
+from which you can start traversing to any other node on the graph. These are the so-called 
 tenant-level resources for a given organization. As an example, let's look at a version of this element as shown as follows. 
 Bear in mind that the schema file is evolving and your version may be different, depending on whether new features are added. 
 
@@ -326,13 +325,13 @@ For example, in your organization (contoso.onmicrosoft.com) the `users` collecti
 To access this user resource, you can use the following URL:
 
 ```no-highlight
-https://graph.microsoft.com/beta/contoso.onmicrosoft.com/users/1133b95e-b74e-4628-ade8-a54544fee2ac
+https://graph.microsoft.com/<version>/contoso.onmicrosoft.com/users/1133b95e-b74e-4628-ade8-a54544fee2ac
 ``` 
 
 Alternatively, you can use the following URL to achieve the same effect:
 
 ```no-highlight
-https://graph.microsoft.com/beta/contoso.onmicrosoft.com/users('1133b95e-b74e-4628-ade8-a54544fee2ac')
+https://graph.microsoft.com/<version>/contoso.onmicrosoft.com/users('1133b95e-b74e-4628-ade8-a54544fee2ac')
 ```
 
 In general, to navigate to a specific instance in a collection of resources (`<entities>`), you use a URL of the following formats:
@@ -393,7 +392,7 @@ to deploy it for different tenants with little or no modification.
 
 <a name="msg_traverse_to_related_resources" > </a>
 ##Traverse to related resources via navigation properties
-In the unified API graph, a navigation property identifies a relationship between the parent entity and the targeted entity or entities.   
+In the API graph, a navigation property identifies a relationship between the parent entity and the targeted entity or entities.   
 For example, the `manager` navigation property on a `User` entity reflects an organizational relationship between a user and his or her manager. 
 The target of this relationship is another `User` entity representing the user's manager. Similarly, the `User.files` navigation property 
 implies the user-owning-files relationship. The target resource is a collection of files the owning user has shared out. 
@@ -524,7 +523,7 @@ The following shows an example of the successful response:
 ```
 
 At this stage, the navigation must stop because the `displayName` property is of a primitive type (`Edm.String`) 
-and correspond to an edge on the unified API graph.
+and correspond to an edge on the API graph.
 
 
 <a name="msg_odata_query_options" > </a>
@@ -570,7 +569,7 @@ The successful response will return a list of the `(id, name, webUrl)` tuples, a
 
 ```no-highlight
     {
-      "@odata.context": "https://graph.microsoft.com/beta/contoso.onmicrosoft.com/$metadata#users('john.deo%40contoso.onmicrosoft.com')/files",
+      "@odata.context": "https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/$metadata#users('john.deo%40contoso.onmicrosoft.com')/files",
       "value": [
         {
           "@odata.id": "users/john.deo%40contoso.onmicrosoft.com/files/01HKHO3O7MHG7K6NY4AFG3QYNC3WGNA2KM",
@@ -600,7 +599,7 @@ The successful response will return a list of the `(id, name, webUrl)` tuples, a
     }
 ```
 
-In addition to the `$select` query option, the unified API also supports other OData query parameters, 
+In addition to the `$select` query option, the API also supports other OData query parameters, 
 including are `$orderBy`, `$filter`, `$search`, `$skip`, `$top`, `$format`. A commonly used query option is `$filter`. 
 It lets you narrow down a query result based on a predicate expression.  To return the files other than the one named "mySecret", 
 call the following GET request on the files collection resource with an `$filter` expression of "`name+ne+'mySecret'`":
@@ -621,8 +620,9 @@ GET https://graph.microsoft.com/<version>/me/files?$filter=name+ne+'mySecret'&$s
 ```
 
 The OData standard defines many query options. For information on how to use the OData query parameters, 
-see [Open Data Protocol by Example](https://msdn.microsoft.com/en-us/library/ff478141.aspx). However, the unified API does not support 
+see [Open Data Protocol by Example](https://msdn.microsoft.com/en-us/library/ff478141.aspx). However, the Microsoft Graph API does not support 
 all of them. In addition, a supported query option may not apply for a specific entity property. 
+
 To determine if a query option is supported for a given entity or not, you can check the entity schema for the `<Annotations>` tags.
 A `<Annotations>` tag is used to specify query options supported for a specific entity type (`Target`). The following provides an example  
 of the `<annotations>` for the `Microsoft.Graph.Device` entity type:
@@ -668,7 +668,7 @@ In an REST API, operations used to manipulate data are also addressable resource
 represented by a data resource, the operation to send the mail message is represented by an operational resource. To 
 invoke the operation, a REST API app typically submit a POST request on the mail-sending resource .
 
-In OData, operational resources are actions and functions. In the Office 365 unified API, a mail message corresponds to a 
+In OData, operational resources are actions and functions. In the Microsoft Graph API, a mail message corresponds to a 
 `Microsoft.Graph.Message` entity and the operation to send a mail is represented by the `Microsoft.Graph.SendMail` action. 
 An action or function is operable only in the context of its bound entity. Logically speaking, we expect a user to send a mail 
 message and, thus, expect the `SendMail` action be invoked in the context of a `User` entity. When look at definition of the 
@@ -703,7 +703,7 @@ The `IsBound` attribute is implicitly set to `false`. It means that they are to 
 the `getObjectsByObjectIds` action is, then, of the form: `/<version>/<tenant>/getObjectsByObjectIds`. 
 In this sense, the seemingly unbound action is bound to a global context within a tenant.
 
-To invoke an action, in its proper context, using the unified REST API, you submit a POST request following the path to the 
+To invoke an action, in its proper context, using the API, you submit a POST request following the path to the 
 action. For example, to send a pending message (as identified by its Id, `<message.id>` ), you can call the following REST API:
 
 ```no-highlight
