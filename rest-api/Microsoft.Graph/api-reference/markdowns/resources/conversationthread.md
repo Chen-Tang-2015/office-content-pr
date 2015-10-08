@@ -1,6 +1,6 @@
 # ConversationThread resource type
 
-
+A thread is a collection of [posts](#PostResource). The last post's recipients collection is the aggregated recipients of the entire thread. A thread can have a growing collection of recipients. A new thread is created when a recipient is removed from the thread.
 
 #### JSON representation
 
@@ -52,13 +52,13 @@ Here is a JSON representation of the resource
 #### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|CcRecipients|[Recipient](recipient.md) collection||
+|CcRecipients|[Recipient](recipient.md) collection|Aggregation of Cc recipients from all messages on the thread|
 |DateTimeLastDelivered|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |HasAttachments|Boolean||
-|Id|String| Read-only.|
+|Id|String|The unique identifier for the conversation thread. Read-only.|
 |IsLocked|Boolean||
-|Preview|String||
-|ToRecipients|[Recipient](recipient.md) collection||
+|Preview|String|A preview of the last post in the thread.|
+|ToRecipients|[Recipient](recipient.md) collection|Aggregation of To recipients from all messages on the thread|
 |Topic|String||
 |UniqueSenders|String collection||
 
@@ -66,7 +66,7 @@ Here is a JSON representation of the resource
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
-|Posts|[Post](post.md) collection| Read-only. Nullable.|
+|Posts|[Post](post.md) collection|Collection with all the identifiers of the posts that compose the thread. A navigation property. Read-only. Nullable.|
 
 #### Tasks
 

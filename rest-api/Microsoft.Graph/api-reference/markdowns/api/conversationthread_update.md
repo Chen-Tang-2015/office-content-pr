@@ -17,12 +17,12 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|CcRecipients|Recipient||
+|CcRecipients|Recipient|Aggregation of Cc recipients from all messages on the thread|
 |DateTimeLastDelivered|DateTimeOffset||
 |HasAttachments|Boolean||
 |IsLocked|Boolean||
-|Preview|String||
-|ToRecipients|Recipient||
+|Preview|String|A preview of the last post in the thread.|
+|ToRecipients|Recipient|Aggregation of To recipients from all messages on the thread|
 |Topic|String||
 |UniqueSenders|String||
 

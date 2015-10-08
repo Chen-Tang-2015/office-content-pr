@@ -1,6 +1,6 @@
 {
   "name": "Group",
-  "description": "",
+  "description": "A group is a shared resource that people can use to collaborate and communicate.",
   "collectionOf": null,
   "isComplexType": false,
   "isEntitySet": false,
@@ -15,13 +15,11 @@
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
-  "restPath": [
-
-  ],
+  "restPath": [],
   "properties": [
     {
       "name": "description",
-      "description": "",
+      "description": "Description of the group.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -34,7 +32,7 @@
     },
     {
       "name": "dirSyncEnabled",
-      "description": "",
+      "description": "Indicates if the group was synced from an on-premises directory.",
       "isKey": false,
       "dataType": "Boolean",
       "isReadOnly": false,
@@ -47,7 +45,7 @@
     },
     {
       "name": "displayName",
-      "description": "",
+      "description": "Name of the group.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -60,7 +58,7 @@
     },
     {
       "name": "creationOptions",
-      "description": "",
+      "description": "Specifies optional behavior for the creation of groups.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -73,7 +71,7 @@
     },
     {
       "name": "groupTypes",
-      "description": "",
+      "description": "Specifies the following on group creation: distribution group, security group, email-enabled security group, or a unified group (aka Office 365 Group).",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -86,7 +84,7 @@
     },
     {
       "name": "isPublic",
-      "description": "",
+      "description": "Indicates whether the group is open to the public for joining. You can set this only on group creation. True by default. Set this to false to create a private group where only the group name is visible to everyone, and only group members can search and access group data. Non-group members  can still send and receive emails from private groups.",
       "isKey": false,
       "dataType": "Boolean",
       "isReadOnly": false,
@@ -99,7 +97,7 @@
     },
     {
       "name": "lastDirSyncTime",
-      "description": "",
+      "description": "Indicates the last time at which the group was synced with the on-premises directory.",
       "isKey": false,
       "dataType": "DateTimeOffset",
       "isReadOnly": false,
@@ -112,7 +110,7 @@
     },
     {
       "name": "mail",
-      "description": "",
+      "description": "The SMTP address for the group specified in the form of \"serviceadmins@contoso.onmicrosoft.com\".",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -125,7 +123,7 @@
     },
     {
       "name": "mailNickname",
-      "description": "",
+      "description": "The mail alias for the group. You must specify this property when creating a group.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -138,7 +136,7 @@
     },
     {
       "name": "mailEnabled",
-      "description": "",
+      "description": "Specifies whether the group is mail-enabled. If the securityEnabled property is also true, the group is a mail-enabled security group; otherwise, the group is a distribution group.",
       "isKey": false,
       "dataType": "Boolean",
       "isReadOnly": false,
@@ -151,7 +149,7 @@
     },
     {
       "name": "onPremisesSecurityIdentifier",
-      "description": "",
+      "description": "The on-premises security identifier (SID) for the group that was synchronized from on-premises to the cloud.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -164,7 +162,7 @@
     },
     {
       "name": "provisioningErrors",
-      "description": "",
+      "description": "A collection of error details (of type ProvisioningError) that are preventing this group from being provisioned successfully.",
       "isKey": false,
       "dataType": "ProvisioningError",
       "isReadOnly": false,
@@ -177,7 +175,7 @@
     },
     {
       "name": "proxyAddresses",
-      "description": "",
+      "description": "Specifies SMTP addresses for the group, in the form of \"SMTP:serviceadmins@contoso.onmicrosoft.com\", as an example.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -190,7 +188,7 @@
     },
     {
       "name": "securityEnabled",
-      "description": "",
+      "description": "Specifies whether the group is a security group. If the `mailEnabled` property is also true, the group is a mail-enabled security group; otherwise it is a security group. You can enable the security of an Office 365 Group after the group is created, but once you do that, you won't be able to change it back.",
       "isKey": false,
       "dataType": "Boolean",
       "isReadOnly": false,
@@ -203,7 +201,7 @@
     },
     {
       "name": "AccessType",
-      "description": "",
+      "description": "Indicates the access type of the group (eg. Private, Secret, Public).",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -216,7 +214,7 @@
     },
     {
       "name": "EmailAddress",
-      "description": "",
+      "description": "The primary SMTP address of the group.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -229,7 +227,7 @@
     },
     {
       "name": "AllowExternalSenders",
-      "description": "",
+      "description": "Default is false. Indicates if external members can send email to group.",
       "isKey": false,
       "dataType": "Boolean",
       "isReadOnly": false,
@@ -242,7 +240,7 @@
     },
     {
       "name": "AutoSubscribeNewMembers",
-      "description": "",
+      "description": "Default is false. Indicates if new members added to the group will be auto-subscribed.",
       "isKey": false,
       "dataType": "Boolean",
       "isReadOnly": false,
@@ -255,7 +253,7 @@
     },
     {
       "name": "IsSubscribedByMail",
-      "description": "",
+      "description": "Default value is true. Whether group allows members to subscribe for email conversations.",
       "isKey": false,
       "dataType": "Boolean",
       "isReadOnly": false,
@@ -268,7 +266,7 @@
     },
     {
       "name": "IsFavorite",
-      "description": "",
+      "description": "Indicates whether the logged in user has this group pinned.",
       "isKey": false,
       "dataType": "Boolean",
       "isReadOnly": false,
@@ -281,7 +279,7 @@
     },
     {
       "name": "UnseenCount",
-      "description": "",
+      "description": "Count of posts that a specific user has not seen since his last visit.",
       "isKey": false,
       "dataType": "Int32",
       "isReadOnly": false,
@@ -333,7 +331,7 @@
     },
     {
       "name": "appRoleAssignments",
-      "description": "",
+      "description": "The set of applications that a group is assigned to. A navigation property.",
       "isKey": false,
       "dataType": "AppRoleAssignment",
       "isReadOnly": true,
@@ -346,7 +344,7 @@
     },
     {
       "name": "members",
-      "description": "",
+      "description": "Users, contacts, and groups that are members of the group. A navigation property.",
       "isKey": false,
       "dataType": "DirectoryObject",
       "isReadOnly": true,
@@ -372,7 +370,7 @@
     },
     {
       "name": "createdOnBehalfOf",
-      "description": "",
+      "description": "The user that this group was created on behalf of. A navigation property.",
       "isKey": false,
       "dataType": "DirectoryObject",
       "isReadOnly": true,
@@ -385,7 +383,7 @@
     },
     {
       "name": "owners",
-      "description": "",
+      "description": "The owners of the group. The owners are a set of non-admin users who are allowed to modify this group. A navigation property.",
       "isKey": false,
       "dataType": "DirectoryObject",
       "isReadOnly": true,
@@ -398,7 +396,7 @@
     },
     {
       "name": "GroupPhoto",
-      "description": "",
+      "description": "A photo representing the group. A navigation property.",
       "isKey": false,
       "dataType": "Photo",
       "isReadOnly": true,
@@ -411,7 +409,7 @@
     },
     {
       "name": "GroupPhotos",
-      "description": "",
+      "description": "A collection of photos of the group. A navigation property.",
       "isKey": false,
       "dataType": "Photo",
       "isReadOnly": true,
@@ -424,7 +422,7 @@
     },
     {
       "name": "Conversations",
-      "description": "",
+      "description": "The collection of conversations ([Conversation](#ConversationResource)) in the group. A navigation property.",
       "isKey": false,
       "dataType": "Conversation",
       "isReadOnly": true,
@@ -437,7 +435,7 @@
     },
     {
       "name": "Threads",
-      "description": "",
+      "description": "The threads of a conversation ([ConversationThread](#ConversationThreadResource)) in the group. A navigation property.",
       "isKey": false,
       "dataType": "ConversationThread",
       "isReadOnly": true,
@@ -450,7 +448,7 @@
     },
     {
       "name": "Calendar",
-      "description": "",
+      "description": "The group calendar. A navigation property.",
       "isKey": false,
       "dataType": "Calendar",
       "isReadOnly": true,
@@ -463,7 +461,7 @@
     },
     {
       "name": "Events",
-      "description": "",
+      "description": "The collection of events in the group calendar. A navigation property.",
       "isKey": false,
       "dataType": "Event",
       "isReadOnly": true,
@@ -476,7 +474,7 @@
     },
     {
       "name": "CalendarView",
-      "description": "",
+      "description": "A collection of events within a date range in the group calendar. A navigation property.",
       "isKey": false,
       "dataType": "Event",
       "isReadOnly": true,
@@ -590,15 +588,9 @@
       "isReturnTypeCollection": false,
       "httpSuccessCode": "200",
       "isFunction": false,
-      "scopes": [
-
-      ],
-      "errorCodes": [
-
-      ],
-      "parameters": [
-
-      ]
+      "scopes": [],
+      "errorCodes": [],
+      "parameters": []
     },
     {
       "name": "UnsubscribeByMail",
@@ -610,15 +602,9 @@
       "isReturnTypeCollection": false,
       "httpSuccessCode": "200",
       "isFunction": false,
-      "scopes": [
-
-      ],
-      "errorCodes": [
-
-      ],
-      "parameters": [
-
-      ]
+      "scopes": [],
+      "errorCodes": [],
+      "parameters": []
     },
     {
       "name": "AddFavorite",
@@ -630,15 +616,9 @@
       "isReturnTypeCollection": false,
       "httpSuccessCode": "200",
       "isFunction": false,
-      "scopes": [
-
-      ],
-      "errorCodes": [
-
-      ],
-      "parameters": [
-
-      ]
+      "scopes": [],
+      "errorCodes": [],
+      "parameters": []
     },
     {
       "name": "RemoveFavorite",
@@ -650,15 +630,9 @@
       "isReturnTypeCollection": false,
       "httpSuccessCode": "200",
       "isFunction": false,
-      "scopes": [
-
-      ],
-      "errorCodes": [
-
-      ],
-      "parameters": [
-
-      ]
+      "scopes": [],
+      "errorCodes": [],
+      "parameters": []
     },
     {
       "name": "ResetUnseenCount",
@@ -670,15 +644,9 @@
       "isReturnTypeCollection": false,
       "httpSuccessCode": "200",
       "isFunction": false,
-      "scopes": [
-
-      ],
-      "errorCodes": [
-
-      ],
-      "parameters": [
-
-      ]
+      "scopes": [],
+      "errorCodes": [],
+      "parameters": []
     },
     {
       "name": "checkMemberGroups",
@@ -690,12 +658,8 @@
       "isReturnTypeCollection": true,
       "httpSuccessCode": "200",
       "isFunction": false,
-      "scopes": [
-
-      ],
-      "errorCodes": [
-
-      ],
+      "scopes": [],
+      "errorCodes": [],
       "parameters": [
         {
           "name": "groupIds",
@@ -718,12 +682,8 @@
       "isReturnTypeCollection": true,
       "httpSuccessCode": "200",
       "isFunction": false,
-      "scopes": [
-
-      ],
-      "errorCodes": [
-
-      ],
+      "scopes": [],
+      "errorCodes": [],
       "parameters": [
         {
           "name": "securityEnabledOnly",
@@ -746,12 +706,8 @@
       "isReturnTypeCollection": true,
       "httpSuccessCode": "200",
       "isFunction": false,
-      "scopes": [
-
-      ],
-      "errorCodes": [
-
-      ],
+      "scopes": [],
+      "errorCodes": [],
       "parameters": [
         {
           "name": "securityEnabledOnly",

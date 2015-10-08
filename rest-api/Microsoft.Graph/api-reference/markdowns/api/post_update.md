@@ -20,15 +20,15 @@ In the request body, supply the values for relevant fields that should be update
 |Body|ItemBody||
 |Categories|String||
 |ChangeKey|String||
-|ConversationId|String||
-|ConversationThreadId|String||
+|ConversationId|String|The conversation that contains this post. This is a navigation property.|
+|ConversationThreadId|String|The thread that contains this post. This is a navigation property.|
 |DateTimeCreated|DateTimeOffset||
 |DateTimeLastModified|DateTimeOffset||
-|DateTimeReceived|DateTimeOffset||
-|From|Recipient||
-|HasAttachments|Boolean||
-|NewParticipants|Recipient||
-|Sender|Recipient||
+|DateTimeReceived|DateTimeOffset|Specifies when the post was delivered. This is a default property.|
+|From|Recipient|Used in delegate access scenarios. Indicates who posted the message on behalf of another user. This is a default property.|
+|HasAttachments|Boolean|Indicates whether the post has at least one attachment. This is a default property.|
+|NewParticipants|Recipient|Conversation participants that were added to the thread as part of this post.|
+|Sender|Recipient|Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.|
 
 #### Response
 If successful, this method returns a `200 OK` response code and updated [Post](../resources/post.md) object in the response body.

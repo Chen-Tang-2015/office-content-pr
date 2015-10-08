@@ -1,6 +1,6 @@
 {
   "name": "Conversation",
-  "description": "",
+  "description": "A conversation is a collection of [threads](#ConversationThreadResource). All threads and posts in a conversation share the same subject.",
   "collectionOf": null,
   "isComplexType": false,
   "isEntitySet": false,
@@ -15,13 +15,11 @@
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
-  "restPath": [
-
-  ],
+  "restPath": [],
   "properties": [
     {
       "name": "Topic",
-      "description": "",
+      "description": "The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -34,7 +32,7 @@
     },
     {
       "name": "HasAttachments",
-      "description": "",
+      "description": "Indicates whether the Conversation has at least one attachment.",
       "isKey": false,
       "dataType": "Boolean",
       "isReadOnly": false,
@@ -60,7 +58,7 @@
     },
     {
       "name": "UniqueSenders",
-      "description": "",
+      "description": "All the users that sent a message to this Conversation.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -86,7 +84,7 @@
     },
     {
       "name": "Id",
-      "description": "",
+      "description": "The group's unique identifier.",
       "isKey": true,
       "dataType": "String",
       "isReadOnly": true,
@@ -112,7 +110,7 @@
     },
     {
       "name": "Threads",
-      "description": "",
+      "description": "A collection of all the conversation threads in the conversation. A navigation property.",
       "isKey": false,
       "dataType": "ConversationThread",
       "isReadOnly": true,
@@ -124,7 +122,5 @@
       "isUnicode": null
     }
   ],
-  "methods": [
-
-  ]
+  "methods": []
 }
