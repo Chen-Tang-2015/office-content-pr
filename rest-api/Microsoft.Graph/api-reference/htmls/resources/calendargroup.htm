@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>CalendarGroup resource type</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+  
+</head>
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="calendargroup-resource-type">CalendarGroup resource type</h1>
+<p>A group of calendars.</p>
+<h4 id="json-representation">JSON representation</h4>
+<p>Here is a JSON representation of the resource</p>
+<pre><code class="json">{
+  &quot;Calendars&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.Calendar&quot;
+    }
+  ],
+  &quot;ChangeKey&quot;: &quot;String&quot;,
+  &quot;ClassId&quot;: &quot;String&quot;,
+  &quot;Extensions&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.Extension&quot;
+    }
+  ],
+  &quot;Id&quot;: &quot;String (identifier)&quot;,
+  &quot;Name&quot;: &quot;String&quot;
+}
+
+</code></pre>
+
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">ChangeKey</td>
+	<td align="left">String</td>
+	<td align="left">Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object.</td>
+</tr>
+<tr>
+	<td align="left">ClassId</td>
+	<td align="left">Guid</td>
+	<td align="left">The class identifier.</td>
+</tr>
+<tr>
+	<td align="left">Id</td>
+	<td align="left">String</td>
+	<td align="left">The group's unique identifier. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">Name</td>
+	<td align="left">String</td>
+	<td align="left">The group name.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relationships">Relationships</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Relationship</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">Calendars</td>
+	<td align="left"><a href="calendar.htm">Calendar</a> collection</td>
+	<td align="left">The calendars in the calendar group. Navigation property. Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">Extensions</td>
+	<td align="left"><a href="extension.htm">Extension</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tasks">Tasks</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Task</th>
+	<th align="left">Return Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><a href="../api/calendargroup_get.htm">Get CalendarGroup</a></td>
+	<td align="left"><a href="calendargroup.htm">CalendarGroup</a></td>
+	<td align="left">Read properties and relationships of calendarGroup object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/calendargroup_post_calendars.htm">Create Calendar</a></td>
+	<td align="left"><a href="calendar.htm">Calendar</a></td>
+	<td align="left">Create a new Calendar by posting to the Calendars collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/calendargroup_post_extensions.htm">Create Extension</a></td>
+	<td align="left"><a href="extension.htm">Extension</a></td>
+	<td align="left">Create a new Extension by posting to the Extensions collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/calendargroup_update.htm">Update</a></td>
+	<td align="left"><a href="calendargroup.htm">CalendarGroup</a></td>
+	<td align="left">Update CalendarGroup object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/calendargroup_delete.htm">Delete</a></td>
+	<td align="left">Void</td>
+	<td align="left">Delete CalendarGroup object.</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+

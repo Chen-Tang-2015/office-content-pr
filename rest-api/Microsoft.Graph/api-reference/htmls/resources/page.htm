@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Page resource type</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+  
+</head>
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="page-resource-type">Page resource type</h1>
+<h4 id="json-representation">JSON representation</h4>
+<p>Here is a JSON representation of the resource</p>
+<pre><code class="json">{
+  &quot;content&quot;: &quot;String&quot;,
+  &quot;contentUrl&quot;: &quot;String&quot;,
+  &quot;createdByAppId&quot;: &quot;String&quot;,
+  &quot;createdTime&quot;: &quot;String (timestamp)&quot;,
+  &quot;id&quot;: &quot;String (identifier)&quot;,
+  &quot;lastModifiedTime&quot;: &quot;String (timestamp)&quot;,
+  &quot;links&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.PageLinks&quot;
+  },
+  &quot;parentNotebook&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.Notebook&quot;
+  },
+  &quot;parentSection&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.Section&quot;
+  },
+  &quot;self&quot;: &quot;String&quot;,
+  &quot;title&quot;: &quot;String&quot;
+}
+
+</code></pre>
+
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">content</td>
+	<td align="left">Stream</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">contentUrl</td>
+	<td align="left">String</td>
+	<td align="left">The URL for the page's HTML content</td>
+</tr>
+<tr>
+	<td align="left">createdByAppId</td>
+	<td align="left">String</td>
+	<td align="left">The unique identifier of the application that created the page</td>
+</tr>
+<tr>
+	<td align="left">createdTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The date and time when the page was created in UTC format The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">id</td>
+	<td align="left">String</td>
+	<td align="left">Org.OData.Core.V1.Description  Read-only.</td>
+</tr>
+<tr>
+	<td align="left">lastModifiedTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">links</td>
+	<td align="left"><a href="pagelinks.htm">PageLinks</a></td>
+	<td align="left">The oneNoteClientURL link to open the page in the OneNote native client if it 's installed, and oneNoteWebUrl to open the page in OneNote Online</td>
+</tr>
+<tr>
+	<td align="left">self</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">title</td>
+	<td align="left">String</td>
+	<td align="left">The title of the page</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relationships">Relationships</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Relationship</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">parentNotebook</td>
+	<td align="left"><a href="notebook.htm">Notebook</a></td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">parentSection</td>
+	<td align="left"><a href="section.htm">Section</a></td>
+	<td align="left">Read-only.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tasks">Tasks</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Task</th>
+	<th align="left">Return Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><a href="../api/page_get.htm">Get Page</a></td>
+	<td align="left"><a href="page.htm">Page</a></td>
+	<td align="left">Read properties and relationships of page object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/page_update.htm">Update</a></td>
+	<td align="left"><a href="page.htm">Page</a></td>
+	<td align="left">Update Page object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/page_delete.htm">Delete</a></td>
+	<td align="left">Void</td>
+	<td align="left">Delete Page object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/page_copytosection.htm">Copytosection</a></td>
+	<td align="left"><a href="copypagemodel.htm">CopyPageModel</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/page_patchcontent.htm">Patchcontent</a></td>
+	<td align="left"><a href="none.htm">None</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/page_thumbnail.htm">Thumbnail</a></td>
+	<td align="left">Stream</td>
+	<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+

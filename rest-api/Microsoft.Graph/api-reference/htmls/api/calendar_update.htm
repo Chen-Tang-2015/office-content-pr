@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Update Calendar</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+  
+</head>
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="update-calendar">Update Calendar</h1>
+<p>Update the properties of calendar object.</p>
+<h4 id="http-request">HTTP request</h4>
+<pre><code class="http">
+</code></pre>
+
+<h4 id="optional-request-headers">Optional request headers</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Name</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">X-Sample-Header</td>
+	<td align="left">string</td>
+	<td align="left">Sample of how the HTTP headers used by the API could be displayed.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="request-body">Request body</h4>
+<p>In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.</p>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">ChangeKey</td>
+	<td align="left">String</td>
+	<td align="left">Identifies the version of the calendar object. Every time the calendar is changed, ChangeKey  changes as well. This allows Exchange to apply changes to the correct version of the object.</td>
+</tr>
+<tr>
+	<td align="left">Color</td>
+	<td align="left">String</td>
+	<td align="left">Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: LightBlue=0, LightGreen=1, LightOrange=2, LightGray=3, LightYellow=4, LightTeal=5, LightPink=6, LightBrown=7, LightRed=8, MaxColor=9, Auto=-1  Possible values are: <code>isExclusive</code> true,<code>options</code> {&quot;LightBlue&quot;=&gt;{&quot;value&quot;=&gt;&quot;0&quot;, &quot;description&quot;=&gt;&quot;&quot;}, &quot;LightGreen&quot;=&gt;{&quot;value&quot;=&gt;&quot;1&quot;, &quot;description&quot;=&gt;&quot;&quot;}, &quot;LightOrange&quot;=&gt;{&quot;value&quot;=&gt;&quot;2&quot;, &quot;description&quot;=&gt;&quot;&quot;}, &quot;LightGray&quot;=&gt;{&quot;value&quot;=&gt;&quot;3&quot;, &quot;description&quot;=&gt;&quot;&quot;}, &quot;LightYellow&quot;=&gt;{&quot;value&quot;=&gt;&quot;4&quot;, &quot;description&quot;=&gt;&quot;&quot;}, &quot;LightTeal&quot;=&gt;{&quot;value&quot;=&gt;&quot;5&quot;, &quot;description&quot;=&gt;&quot;&quot;}, &quot;LightPink&quot;=&gt;{&quot;value&quot;=&gt;&quot;6&quot;, &quot;description&quot;=&gt;&quot;&quot;}, &quot;LightBrown&quot;=&gt;{&quot;value&quot;=&gt;&quot;7&quot;, &quot;description&quot;=&gt;&quot;&quot;}, &quot;LightRed&quot;=&gt;{&quot;value&quot;=&gt;&quot;8&quot;, &quot;description&quot;=&gt;&quot;&quot;}, &quot;MaxColor&quot;=&gt;{&quot;value&quot;=&gt;&quot;9&quot;, &quot;description&quot;=&gt;&quot;&quot;}, &quot;Auto&quot;=&gt;{&quot;value&quot;=&gt;&quot;-1&quot;, &quot;description&quot;=&gt;&quot;&quot;}}</td>
+</tr>
+<tr>
+	<td align="left">Name</td>
+	<td align="left">String</td>
+	<td align="left">The calendar name.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="response">Response</h4>
+<p>If successful, this method returns a <code>200 OK</code> response code and updated <a href="../resources/calendar.htm">Calendar</a> object in the response body.</p>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+

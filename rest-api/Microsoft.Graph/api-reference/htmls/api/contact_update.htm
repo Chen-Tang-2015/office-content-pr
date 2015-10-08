@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Update Contact</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+  
+</head>
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="update-contact">Update Contact</h1>
+<p>Update the properties of contact object.</p>
+<h4 id="http-request">HTTP request</h4>
+<pre><code class="http">
+</code></pre>
+
+<h4 id="optional-request-headers">Optional request headers</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Name</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">X-Sample-Header</td>
+	<td align="left">string</td>
+	<td align="left">Sample of how the HTTP headers used by the API could be displayed.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="request-body">Request body</h4>
+<p>In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.</p>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">AssistantName</td>
+	<td align="left">String</td>
+	<td align="left">The name of the contact's assistant.</td>
+</tr>
+<tr>
+	<td align="left">Birthday</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The contact's birthday.</td>
+</tr>
+<tr>
+	<td align="left">BusinessAddress</td>
+	<td align="left">PhysicalAddress</td>
+	<td align="left">The contact's business address.</td>
+</tr>
+<tr>
+	<td align="left">BusinessHomePage</td>
+	<td align="left">String</td>
+	<td align="left">The business home page of the contact.</td>
+</tr>
+<tr>
+	<td align="left">BusinessPhones</td>
+	<td align="left">String</td>
+	<td align="left">The contact's business phone numbers.</td>
+</tr>
+<tr>
+	<td align="left">Categories</td>
+	<td align="left">String</td>
+	<td align="left">The categories associated with the contact.</td>
+</tr>
+<tr>
+	<td align="left">ChangeKey</td>
+	<td align="left">String</td>
+	<td align="left">Identifies the version of the contact. Every time the contact is changed, ChangeKey  changes as well. This allows Exchange to apply changes to the correct version of the object.</td>
+</tr>
+<tr>
+	<td align="left">CompanyName</td>
+	<td align="left">String</td>
+	<td align="left">The name of the contact's company.</td>
+</tr>
+<tr>
+	<td align="left">DateTimeCreated</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The time the contact was created.</td>
+</tr>
+<tr>
+	<td align="left">DateTimeLastModified</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The time the contact was modified.</td>
+</tr>
+<tr>
+	<td align="left">Department</td>
+	<td align="left">String</td>
+	<td align="left">The contact's department.</td>
+</tr>
+<tr>
+	<td align="left">DisplayName</td>
+	<td align="left">String</td>
+	<td align="left">The contact's display name.</td>
+</tr>
+<tr>
+	<td align="left">EmailAddresses</td>
+	<td align="left">EmailAddress</td>
+	<td align="left">The contact's email addresses.</td>
+</tr>
+<tr>
+	<td align="left">FileAs</td>
+	<td align="left">String</td>
+	<td align="left">The name the contact is filed under.</td>
+</tr>
+<tr>
+	<td align="left">Generation</td>
+	<td align="left">String</td>
+	<td align="left">The contact's generation.</td>
+</tr>
+<tr>
+	<td align="left">GivenName</td>
+	<td align="left">String</td>
+	<td align="left">The contact's given name.</td>
+</tr>
+<tr>
+	<td align="left">HomeAddress</td>
+	<td align="left">PhysicalAddress</td>
+	<td align="left">The contact's home address.</td>
+</tr>
+<tr>
+	<td align="left">HomePhones</td>
+	<td align="left">String</td>
+	<td align="left">The contact's home phone numbers.</td>
+</tr>
+<tr>
+	<td align="left">ImAddresses</td>
+	<td align="left">String</td>
+	<td align="left">The contact's instant messaging (IM) addresses.</td>
+</tr>
+<tr>
+	<td align="left">Initials</td>
+	<td align="left">String</td>
+	<td align="left">The contact's initials.</td>
+</tr>
+<tr>
+	<td align="left">JobTitle</td>
+	<td align="left">String</td>
+	<td align="left">The contact's job title.</td>
+</tr>
+<tr>
+	<td align="left">Manager</td>
+	<td align="left">String</td>
+	<td align="left">The name of the contact's manager.</td>
+</tr>
+<tr>
+	<td align="left">MiddleName</td>
+	<td align="left">String</td>
+	<td align="left">The contact's middle name.</td>
+</tr>
+<tr>
+	<td align="left">MobilePhone1</td>
+	<td align="left">String</td>
+	<td align="left">The contact's mobile phone number.</td>
+</tr>
+<tr>
+	<td align="left">NickName</td>
+	<td align="left">String</td>
+	<td align="left">The contact's nickname.</td>
+</tr>
+<tr>
+	<td align="left">OfficeLocation</td>
+	<td align="left">String</td>
+	<td align="left">The location of the contact's office.</td>
+</tr>
+<tr>
+	<td align="left">OtherAddress</td>
+	<td align="left">PhysicalAddress</td>
+	<td align="left">Other addresses for the contact.</td>
+</tr>
+<tr>
+	<td align="left">ParentFolderId</td>
+	<td align="left">String</td>
+	<td align="left">The ID of the contact's parent folder.</td>
+</tr>
+<tr>
+	<td align="left">Profession</td>
+	<td align="left">String</td>
+	<td align="left">The contact's profession.</td>
+</tr>
+<tr>
+	<td align="left">Surname</td>
+	<td align="left">String</td>
+	<td align="left">The contact's surname.</td>
+</tr>
+<tr>
+	<td align="left">Title</td>
+	<td align="left">String</td>
+	<td align="left">The contact's title.</td>
+</tr>
+<tr>
+	<td align="left">YomiCompanyName</td>
+	<td align="left">String</td>
+	<td align="left">The phonetic Japanese company name of the contact. This property is optional.</td>
+</tr>
+<tr>
+	<td align="left">YomiGivenName</td>
+	<td align="left">String</td>
+	<td align="left">The phonetic Japanese given name (first name) of the contact. This property is optional.</td>
+</tr>
+<tr>
+	<td align="left">YomiSurname</td>
+	<td align="left">String</td>
+	<td align="left">The phonetic Japanese surname (last name)  of the contact. This property is optional.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="response">Response</h4>
+<p>If successful, this method returns a <code>200 OK</code> response code and updated <a href="../resources/contact.htm">Contact</a> object in the response body.</p>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+

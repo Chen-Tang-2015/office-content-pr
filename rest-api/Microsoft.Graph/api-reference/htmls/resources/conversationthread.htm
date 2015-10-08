@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>ConversationThread resource type</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+  
+</head>
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="conversationthread-resource-type">ConversationThread resource type</h1>
+<h4 id="json-representation">JSON representation</h4>
+<p>Here is a JSON representation of the resource</p>
+<pre><code class="json">{
+  &quot;CcRecipients&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.Recipient&quot;
+    }
+  ],
+  &quot;DateTimeLastDelivered&quot;: &quot;String (timestamp)&quot;,
+  &quot;Extensions&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.Extension&quot;
+    }
+  ],
+  &quot;HasAttachments&quot;: true,
+  &quot;Id&quot;: &quot;String (identifier)&quot;,
+  &quot;IsLocked&quot;: true,
+  &quot;Posts&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.Post&quot;
+    }
+  ],
+  &quot;Preview&quot;: &quot;String&quot;,
+  &quot;ToRecipients&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.Recipient&quot;
+    }
+  ],
+  &quot;Topic&quot;: &quot;String&quot;,
+  &quot;UniqueSenders&quot;: [
+    &quot;String&quot;
+  ]
+}
+
+</code></pre>
+
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">CcRecipients</td>
+	<td align="left"><a href="recipient.htm">Recipient</a> collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">DateTimeLastDelivered</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">HasAttachments</td>
+	<td align="left">Boolean</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">Id</td>
+	<td align="left">String</td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">IsLocked</td>
+	<td align="left">Boolean</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">Preview</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">ToRecipients</td>
+	<td align="left"><a href="recipient.htm">Recipient</a> collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">Topic</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">UniqueSenders</td>
+	<td align="left">String collection</td>
+	<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h4 id="relationships">Relationships</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Relationship</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">Extensions</td>
+	<td align="left"><a href="extension.htm">Extension</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">Posts</td>
+	<td align="left"><a href="post.htm">Post</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tasks">Tasks</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Task</th>
+	<th align="left">Return Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><a href="../api/conversationthread_get.htm">Get ConversationThread</a></td>
+	<td align="left"><a href="conversationthread.htm">ConversationThread</a></td>
+	<td align="left">Read properties and relationships of conversationThread object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/conversationthread_post_extensions.htm">Create Extension</a></td>
+	<td align="left"><a href="extension.htm">Extension</a></td>
+	<td align="left">Create a new Extension by posting to the Extensions collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/conversationthread_post_posts.htm">Create Post</a></td>
+	<td align="left"><a href="post.htm">Post</a></td>
+	<td align="left">Create a new Post by posting to the Posts collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/conversationthread_update.htm">Update</a></td>
+	<td align="left"><a href="conversationthread.htm">ConversationThread</a></td>
+	<td align="left">Update ConversationThread object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/conversationthread_delete.htm">Delete</a></td>
+	<td align="left">Void</td>
+	<td align="left">Delete ConversationThread object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/conversationthread_reply.htm">Reply</a></td>
+	<td align="left"><a href="none.htm">None</a></td>
+	<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+

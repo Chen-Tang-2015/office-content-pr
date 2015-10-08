@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>RecurrenceRange resource type</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+  
+</head>
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="recurrencerange-resource-type">RecurrenceRange resource type</h1>
+<p>The duration of an event.</p>
+<h4 id="json-representation">JSON representation</h4>
+<p>Here is a JSON representation of the resource</p>
+<pre><code class="json">{
+  &quot;EndDate&quot;: &quot;String (timestamp)&quot;,
+  &quot;NumberOfOccurrences&quot;: 1024,
+  &quot;StartDate&quot;: &quot;String (timestamp)&quot;,
+  &quot;Type&quot;: &quot;String&quot;
+}
+
+</code></pre>
+
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">EndDate</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The end date of the series.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">NumberOfOccurrences</td>
+	<td align="left">Int32</td>
+	<td align="left">How many times to repeat the event.</td>
+</tr>
+<tr>
+	<td align="left">StartDate</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The start date of the series.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">Type</td>
+	<td align="left">String</td>
+	<td align="left">The recurrence range: EndDate = 0, NoEnd = 1, Numbered = 2. Possible values are: <code>EndDate</code>, <code>NoEnd</code>, <code>Numbered</code>.</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+

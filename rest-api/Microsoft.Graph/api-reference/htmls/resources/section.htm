@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Section resource type</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+  
+</head>
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="section-resource-type">Section resource type</h1>
+<h4 id="json-representation">JSON representation</h4>
+<p>Here is a JSON representation of the resource</p>
+<pre><code class="json">{
+  &quot;createdBy&quot;: &quot;String&quot;,
+  &quot;createdTime&quot;: &quot;String (timestamp)&quot;,
+  &quot;id&quot;: &quot;String (identifier)&quot;,
+  &quot;isDefault&quot;: true,
+  &quot;lastModifiedBy&quot;: &quot;String&quot;,
+  &quot;lastModifiedTime&quot;: &quot;String (timestamp)&quot;,
+  &quot;name&quot;: &quot;String&quot;,
+  &quot;pages&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.Page&quot;
+    }
+  ],
+  &quot;pagesUrl&quot;: &quot;String&quot;,
+  &quot;parentNotebook&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.Notebook&quot;
+  },
+  &quot;parentSectionGroup&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.SectionGroup&quot;
+  },
+  &quot;self&quot;: &quot;String&quot;
+}
+
+</code></pre>
+
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">createdBy</td>
+	<td align="left">String</td>
+	<td align="left">The user who created the section.</td>
+</tr>
+<tr>
+	<td align="left">createdTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The date and time when the section was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">id</td>
+	<td align="left">String</td>
+	<td align="left">Org.OData.Core.V1.Description  Read-only.</td>
+</tr>
+<tr>
+	<td align="left">isDefault</td>
+	<td align="left">Boolean</td>
+	<td align="left">Indicates whether this is the user's default section.</td>
+</tr>
+<tr>
+	<td align="left">lastModifiedBy</td>
+	<td align="left">String</td>
+	<td align="left">The user who last modified the section.</td>
+</tr>
+<tr>
+	<td align="left">lastModifiedTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The date and time when the section was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">name</td>
+	<td align="left">String</td>
+	<td align="left">The name of the section.</td>
+</tr>
+<tr>
+	<td align="left">pagesUrl</td>
+	<td align="left">String</td>
+	<td align="left">The /pages endpoint where you can get details for all the pages in the section.</td>
+</tr>
+<tr>
+	<td align="left">self</td>
+	<td align="left">String</td>
+	<td align="left">The endpoint where you can get details about the section.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relationships">Relationships</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Relationship</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">pages</td>
+	<td align="left"><a href="page.htm">Page</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">parentNotebook</td>
+	<td align="left"><a href="notebook.htm">Notebook</a></td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">parentSectionGroup</td>
+	<td align="left"><a href="sectiongroup.htm">SectionGroup</a></td>
+	<td align="left">Read-only.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tasks">Tasks</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Task</th>
+	<th align="left">Return Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><a href="../api/section_get.htm">Get Section</a></td>
+	<td align="left"><a href="section.htm">Section</a></td>
+	<td align="left">Read properties and relationships of section object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/section_post_pages.htm">Create Page</a></td>
+	<td align="left"><a href="page.htm">Page</a></td>
+	<td align="left">Create a new Page by posting to the pages collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/section_update.htm">Update</a></td>
+	<td align="left"><a href="section.htm">Section</a></td>
+	<td align="left">Update Section object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/section_delete.htm">Delete</a></td>
+	<td align="left">Void</td>
+	<td align="left">Delete Section object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/section_copytonotebook.htm">Copytonotebook</a></td>
+	<td align="left"><a href="copysectionmodel.htm">CopySectionModel</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/section_copytosectiongroup.htm">Copytosectiongroup</a></td>
+	<td align="left"><a href="copysectionmodel.htm">CopySectionModel</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/section_thumbnail.htm">Thumbnail</a></td>
+	<td align="left">Stream</td>
+	<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+

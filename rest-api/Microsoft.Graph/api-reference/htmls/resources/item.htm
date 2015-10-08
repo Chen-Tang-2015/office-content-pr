@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>item resource type</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+  
+</head>
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="item-resource-type">item resource type</h1>
+<p>The Item resource type represents metadata for an item in OneDrive. All top-level filesystem objects in OneDrive are Item resources. If an item is a <a href="../facets/folder_facet.htm">Folder</a> or <a href="../facets/file_facet.htm">File</a> facet, the Item resource will contain a value for either the <strong>folder</strong> or <strong>file</strong> property, respectively.  </p>
+<h4 id="json-representation">JSON representation</h4>
+<p>Here is a JSON representation of the resource</p>
+<pre><code class="json">{
+  &quot;children&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.item&quot;
+    }
+  ],
+  &quot;createdBy&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.identitySet&quot;
+  },
+  &quot;createdByUser&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.User&quot;
+  },
+  &quot;createdDateTime&quot;: &quot;String (timestamp)&quot;,
+  &quot;deleted&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.deleted&quot;
+  },
+  &quot;eTag&quot;: &quot;String&quot;,
+  &quot;file&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.file&quot;
+  },
+  &quot;folder&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.folder&quot;
+  },
+  &quot;id&quot;: &quot;String (identifier)&quot;,
+  &quot;image&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.image&quot;
+  },
+  &quot;lastModifiedBy&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.identitySet&quot;
+  },
+  &quot;lastModifiedByUser&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.User&quot;
+  },
+  &quot;lastModifiedDateTime&quot;: &quot;String (timestamp)&quot;,
+  &quot;name&quot;: &quot;String&quot;,
+  &quot;parentReference&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.itemReference&quot;
+  },
+  &quot;photo&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.photo&quot;
+  },
+  &quot;searchResult&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.searchResult&quot;
+  },
+  &quot;size&quot;: 1024,
+  &quot;thumbnails&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.thumbnailSet&quot;
+    }
+  ],
+  &quot;webDavUrl&quot;: &quot;String&quot;,
+  &quot;webUrl&quot;: &quot;String&quot;
+}
+
+</code></pre>
+
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">createdBy</td>
+	<td align="left"><a href="identityset.htm">identitySet</a></td>
+	<td align="left">Identity of the user, device, and application which created the item. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">createdDateTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">Date and time of item creation. Read-only.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">deleted</td>
+	<td align="left"><a href="deleted.htm">deleted</a></td>
+	<td align="left">Information about the deleted state of the item. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">eTag</td>
+	<td align="left">String</td>
+	<td align="left">eTag for the entire item (metadata + content). Read-only.</td>
+</tr>
+<tr>
+	<td align="left">file</td>
+	<td align="left"><a href="file.htm">file</a></td>
+	<td align="left">File metadata, if the item is a file. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">folder</td>
+	<td align="left"><a href="folder.htm">folder</a></td>
+	<td align="left">Folder metadata, if the item is a folder. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">id</td>
+	<td align="left">String</td>
+	<td align="left">The unique identifier of the item within the Drive. Read-only. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">image</td>
+	<td align="left"><a href="image.htm">image</a></td>
+	<td align="left">Image metadata, if the item is an image. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">lastModifiedBy</td>
+	<td align="left"><a href="identityset.htm">identitySet</a></td>
+	<td align="left">Identity of the user, device, and application which last modified the item. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">lastModifiedDateTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">Date and time the item was last modified. Read-only.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">name</td>
+	<td align="left">String</td>
+	<td align="left">The name of the item (filename and extension). Read-write.</td>
+</tr>
+<tr>
+	<td align="left">parentReference</td>
+	<td align="left"><a href="itemreference.htm">itemReference</a></td>
+	<td align="left">Parent information, if the item has a parent. Read-write.</td>
+</tr>
+<tr>
+	<td align="left">photo</td>
+	<td align="left"><a href="photo.htm">photo</a></td>
+	<td align="left">Photo metadata, if the item is a photo. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">searchResult</td>
+	<td align="left"><a href="searchresult.htm">searchResult</a></td>
+	<td align="left">Search metadata, if the item is from a search result.</td>
+</tr>
+<tr>
+	<td align="left">size</td>
+	<td align="left">Int64</td>
+	<td align="left">Size of the item in bytes. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">webDavUrl</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">webUrl</td>
+	<td align="left">String</td>
+	<td align="left">URL that displays the resource in the browser. Read-only.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relationships">Relationships</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Relationship</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">children</td>
+	<td align="left"><a href="item.htm">item</a> collection</td>
+	<td align="left">Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">createdByUser</td>
+	<td align="left"><a href="user.htm">User</a></td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">lastModifiedByUser</td>
+	<td align="left"><a href="user.htm">User</a></td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">thumbnails</td>
+	<td align="left"><a href="thumbnailset.htm">thumbnailSet</a> collection</td>
+	<td align="left">Collection containing <a href="thumbnailSet.htm">ThumbnailSet</a> objects associated with the item. For more info, see <a href="../items/thumbnails.htm">getting thumbnails</a>. Read-only. Nullable.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tasks">Tasks</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Task</th>
+	<th align="left">Return Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><a href="../api/item_get.htm">Get item</a></td>
+	<td align="left"><a href="item.htm">item</a></td>
+	<td align="left">Read properties and relationships of item object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_post_children.htm">Create item</a></td>
+	<td align="left"><a href="item.htm">item</a></td>
+	<td align="left">Create a new item by posting to the children collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_post_thumbnails.htm">Create thumbnailSet</a></td>
+	<td align="left"><a href="thumbnailset.htm">thumbnailSet</a></td>
+	<td align="left">Create a new thumbnailSet by posting to the thumbnails collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_update.htm">Update</a></td>
+	<td align="left"><a href="item.htm">item</a></td>
+	<td align="left">Update item object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_delete.htm">Delete</a></td>
+	<td align="left">Void</td>
+	<td align="left">Delete item object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_content.htm">Content</a></td>
+	<td align="left">Stream</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_copy.htm">Copy</a></td>
+	<td align="left"><a href="item.htm">item</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_createlink.htm">Createlink</a></td>
+	<td align="left"><a href="permission.htm">permission</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_createsession.htm">Createsession</a></td>
+	<td align="left"><a href="uploadsession.htm">uploadSession</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_delta.htm">Delta</a></td>
+	<td align="left"><a href="item.htm">item</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_search.htm">Search</a></td>
+	<td align="left"><a href="item.htm">item</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_uploadcontent.htm">Uploadcontent</a></td>
+	<td align="left"><a href="none.htm">None</a></td>
+	<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+
