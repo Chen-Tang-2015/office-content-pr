@@ -9,7 +9,7 @@ Getting API reference contribution from both engineering teams and content devel
 3. **Fork** the repository to your own GitHub account.
 4. The files are in *office-content-pr\rest-api\Microsoft.Graph\api-reference*.
 
-**Note** If you don't have access to the repository, but wish to make contributions, please contact Joe Martella (joem).
+**Note** If you don't have access to the repository, but wish to make contributions, please contact Joe Martella (joem) or Yina Arenas (yinaa).
 
 ## Add rich content
 
@@ -55,4 +55,4 @@ After making some contributions to the API reference, please submit a pull reque
 
 ## Questions or concerns
 
-Please send the above to Joe Martella (**joem**) and he'll get back to you in a timely manner.
+Please send the above to Joe Martella (**joem**) and Yina Arenas (yinaa) and they'll get back to you in a timely manner.
