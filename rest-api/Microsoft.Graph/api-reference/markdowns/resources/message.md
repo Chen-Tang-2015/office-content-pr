@@ -2,18 +2,9 @@
 
 A message in a mailbox folder.
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "Attachments",
-    "Extensions"
-  ],
-  "@odata.type": "microsoft.graph.Message"
-}-->
 
 ```json
 {
@@ -82,7 +73,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |BccRecipients|[Recipient](recipient.md) collection||
@@ -112,13 +103,13 @@ Here is a JSON representation of the resource
 |UniqueBody|[ItemBody](itembody.md)||
 |WebLink|String||
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |Attachments|[Attachment](attachment.md) collection| Read-only. Nullable.|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -136,3 +127,6 @@ Here is a JSON representation of the resource
 |[Reply](../api/message_reply.md)|[None](none.md)||
 |[Replyall](../api/message_replyall.md)|[None](none.md)||
 |[Send](../api/message_send.md)|[None](none.md)||
+
+<!-- uuid: f7ca29c0-1774-4910-9756-4e4962ed4476
+2015-10-09 17:14:36 UTC -->

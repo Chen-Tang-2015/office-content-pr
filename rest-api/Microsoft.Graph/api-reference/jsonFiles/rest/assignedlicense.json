@@ -15,9 +15,8 @@
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
-  "restPath": [
-
-  ],
+  "restPath": {
+  },
   "properties": [
     {
       "name": "disabledPlans",
@@ -28,6 +27,7 @@
       "enumName": null,
       "isCollection": true,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": false,
       "isUnicode": null
@@ -41,6 +41,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": null

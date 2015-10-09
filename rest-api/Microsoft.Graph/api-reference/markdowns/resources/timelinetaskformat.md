@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-
-  ],
-  "@odata.type": "microsoft.graph.TimelineTaskFormat"
-}-->
 
 ```json
 {
@@ -29,7 +21,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |anchorPosition|String| Possible values are: `Top`, `Bottom`.|
@@ -43,14 +35,17 @@ Here is a JSON representation of the resource
 |version|String||
 |visible|Boolean||
 
-#### Relationships
+### Relationships
 None
 
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get TimelineTaskFormat](../api/timelinetaskformat_get.md) | [TimelineTaskFormat](timelinetaskformat.md) |Read properties and relationships of timelineTaskFormat object.|
 |[Update](../api/timelinetaskformat_update.md) | [TimelineTaskFormat](timelinetaskformat.md)	|Update TimelineTaskFormat object. |
 |[Delete](../api/timelinetaskformat_delete.md) | Void	|Delete TimelineTaskFormat object. |
+
+<!-- uuid: 795e70c8-7f47-40d7-80d3-9aa481b49cab
+2015-10-09 17:14:37 UTC -->

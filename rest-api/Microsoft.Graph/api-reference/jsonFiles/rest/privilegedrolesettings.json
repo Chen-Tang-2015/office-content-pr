@@ -15,9 +15,10 @@
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
-  "restPath": [
-
-  ],
+  "restPath": {
+    "/PrivilegedRoles/<Id>/Settings": true,
+    "/PrivilegedRoleAssignments/<UserId|RoleId>/RoleInfo/Settings": true
+  },
   "properties": [
     {
       "name": "MinElevationDuration",
@@ -28,6 +29,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": null
@@ -41,6 +43,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": null
@@ -54,6 +57,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": null
@@ -67,6 +71,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": false,
       "isUnicode": null
@@ -80,6 +85,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": null
@@ -93,6 +99,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": null
@@ -106,6 +113,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": null
@@ -119,6 +127,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": null

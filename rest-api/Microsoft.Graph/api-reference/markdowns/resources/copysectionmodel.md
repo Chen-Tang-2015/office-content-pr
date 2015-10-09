@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-
-  ],
-  "@odata.type": "microsoft.graph.CopySectionModel"
-}-->
 
 ```json
 {
@@ -28,7 +20,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |createdBy|String||
@@ -40,3 +32,6 @@ Here is a JSON representation of the resource
 |name|String||
 |pagesUrl|String||
 |self|String||
+
+<!-- uuid: 02dacc8e-a8e4-4bb0-8ccd-c3c5f93e7a45
+2015-10-09 17:14:36 UTC -->

@@ -1,19 +1,38 @@
 # Create ownedObject
 
 Use this API to create a new ownedObject.
-#### HTTP request
-<!-- { "blockType": "ignored" } -->
+### HTTP request
 ```http
-to be completed....
+POST /users/<objectId>/ownedObjects
+POST /drives/<id>/root/createdByUser/ownedObjects
+POST /drives/<id>/root/lastModifiedByUser/ownedObjects
+
 ```
-#### Request headers
+### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
 | X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
 
-#### Request body
+### Request body
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
 
 
-#### Response
+### Response
 If successful, this method returns `201, Created` response code and [DirectoryObject](../resources/directoryobject.md) object in the response body.
+
+### Example
+##### Response
+Here is an example of the response.
+```json
+HTTP/1.1 201 Created
+Content-type: application/json
+Content-length: 111
+{
+  "objectType": "objectType-value",
+  "objectId": "objectId-value",
+  "deletionTimestamp": "datetime-value"
+}
+```
+
+<!-- uuid: 0eb4c913-c220-488a-ac0d-270fb80b6e4d
+2015-10-09 17:14:37 UTC -->

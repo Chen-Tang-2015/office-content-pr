@@ -15,9 +15,8 @@
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
-  "restPath": [
-
-  ],
+  "restPath": {
+  },
   "properties": [
     {
       "name": "file",

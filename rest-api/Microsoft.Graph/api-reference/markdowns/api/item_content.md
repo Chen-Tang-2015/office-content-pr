@@ -4,7 +4,14 @@
 #### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-to be completed....
+POST /groups/<objectId>/drive/<id>/items/<id>/content
+POST /groups/<objectId>/drive/<id>/root/<id>/content
+POST /users/<objectId>/JoinedGroups/<objectId>/drive/<id>/items/<id>/content
+POST /users/<objectId>/JoinedGroups/<objectId>/drive/<id>/root/<id>/content
+POST /users/<objectId>/drive/<id>/items/<id>/content
+POST /users/<objectId>/drive/<id>/root/<id>/content
+POST /drives/<id>/items/<id>/content
+POST /drives/<id>/root/<id>/content
 ```
 #### Request headers
 | Name       | Type | Description|

@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "Extensions"
-  ],
-  "@odata.type": "microsoft.graph.DirectoryRoleTemplate"
-}-->
 
 ```json
 {
@@ -29,7 +21,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |deletionTimestamp|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
@@ -38,12 +30,12 @@ Here is a JSON representation of the resource
 |objectId|String| Read-only.|
 |objectType|String||
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -54,3 +46,6 @@ Here is a JSON representation of the resource
 |[Checkmembergroups](../api/directoryroletemplate_checkmembergroups.md)|String||
 |[Get MemberGroups](../api/directoryroletemplate_getmembergroups.md)|String||
 |[Get MemberObjects](../api/directoryroletemplate_getmemberobjects.md)|String||
+
+<!-- uuid: ec91718a-ff1b-4c0d-8bbf-4aa5f09fc52e
+2015-10-09 17:14:36 UTC -->

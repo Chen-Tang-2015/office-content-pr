@@ -1,19 +1,44 @@
 # Create Section
 
 Use this API to create a new Section.
-#### HTTP request
-<!-- { "blockType": "ignored" } -->
+### HTTP request
 ```http
-to be completed....
+POST /users/<objectId>/notes/sections
+POST /drives/<id>/root/createdByUser/notes/sections
+POST /drives/<id>/root/lastModifiedByUser/notes/sections
+
 ```
-#### Request headers
+### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
 | X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
 
-#### Request body
+### Request body
 In the request body, supply a JSON representation of [Section](../resources/section.md) object.
 
 
-#### Response
+### Response
 If successful, this method returns `201, Created` response code and [Section](../resources/section.md) object in the response body.
+
+### Example
+##### Response
+Here is an example of the response.
+```json
+HTTP/1.1 201 Created
+Content-type: application/json
+Content-length: 276
+{
+  "isDefault": true,
+  "pagesUrl": "pagesUrl-value",
+  "name": "name-value",
+  "createdBy": "createdBy-value",
+  "lastModifiedBy": "lastModifiedBy-value",
+  "lastModifiedTime": "datetime-value",
+  "id": "id-value",
+  "self": "self-value",
+  "createdTime": "datetime-value"
+}
+```
+
+<!-- uuid: c9a9e616-9e8e-4bb8-af09-ac47a5859efd
+2015-10-09 17:14:36 UTC -->

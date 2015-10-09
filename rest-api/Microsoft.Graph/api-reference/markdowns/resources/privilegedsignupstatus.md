@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-
-  ],
-  "@odata.type": "microsoft.graph.PrivilegedSignupStatus"
-}-->
 
 ```json
 {
@@ -22,18 +14,18 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |IsRegistered|Boolean||
 |Status|String| Possible values are: `Unknown`, `NotRegisteredYet`, `RegisteredSetupNotStarted`, `RegisteredSetupInProgress`, `RegistrationAndSetupCompleted`.|
 |TenantId|String| Read-only.|
 
-#### Relationships
+### Relationships
 None
 
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -45,3 +37,6 @@ None
 |[Issignedup](../api/privilegedsignupstatus_issignedup.md)|Boolean||
 |[Signup](../api/privilegedsignupstatus_signup.md)|[PrivilegedSignupStatus](privilegedsignupstatus.md)||
 |[Skipsetup](../api/privilegedsignupstatus_skipsetup.md)|[None](none.md)||
+
+<!-- uuid: 6304c08d-de46-44a0-ab1a-f70415e5e4e9
+2015-10-09 17:14:37 UTC -->

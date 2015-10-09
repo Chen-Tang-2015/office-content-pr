@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-
-  ],
-  "@odata.type": "microsoft.graph.Task"
-}-->
 
 ```json
 {
@@ -56,7 +48,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |appliedCategories|[AppliedCategoriesCollection](appliedcategoriescollection.md)||
@@ -80,7 +72,7 @@ Here is a JSON representation of the resource
 |title|String||
 |version|String||
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |assignedToTaskBoardFormat|[TaskBoardTaskFormat](taskboardtaskformat.md)| Read-only.|
@@ -89,10 +81,13 @@ Here is a JSON representation of the resource
 |statusTaskBoardFormat|[TaskBoardTaskFormat](taskboardtaskformat.md)| Read-only.|
 |timelineFormat|[TimelineTaskFormat](timelinetaskformat.md)| Read-only.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get Task](../api/task_get.md) | [Task](task.md) |Read properties and relationships of task object.|
 |[Update](../api/task_update.md) | [Task](task.md)	|Update Task object. |
 |[Delete](../api/task_delete.md) | Void	|Delete Task object. |
+
+<!-- uuid: 8f53ab04-2eb5-475e-a92b-ab2c0634d3f9
+2015-10-09 17:14:37 UTC -->

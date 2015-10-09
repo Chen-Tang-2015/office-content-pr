@@ -15,8 +15,22 @@
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
-  "restPath": [],
+  "restPath": {},
   "properties": [
+    {
+      "name": "content",
+      "description": "The content stream.",
+      "isKey": false,
+      "dataType": "Stream",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
     {
       "name": "height",
       "description": "The height of the thumbnail, in pixels.",
@@ -26,8 +40,9 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
-      "isNullable": false,
+      "isNullable": null,
       "isUnicode": null
     },
     {
@@ -39,6 +54,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": false
@@ -52,8 +68,9 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
-      "isNullable": false,
+      "isNullable": null,
       "isUnicode": null
     }
   ],

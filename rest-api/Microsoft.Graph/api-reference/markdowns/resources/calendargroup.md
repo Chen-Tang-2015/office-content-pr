@@ -2,18 +2,9 @@
 
 A group of calendars.
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "Calendars",
-    "Extensions"
-  ],
-  "@odata.type": "microsoft.graph.CalendarGroup"
-}-->
 
 ```json
 {
@@ -34,7 +25,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |ChangeKey|String|Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object.|
@@ -42,13 +33,13 @@ Here is a JSON representation of the resource
 |Id|String|The group's unique identifier. Read-only.|
 |Name|String|The group name.|
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |Calendars|[Calendar](calendar.md) collection|The calendars in the calendar group. Navigation property. Read-only. Nullable.|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -57,3 +48,6 @@ Here is a JSON representation of the resource
 |[Create Extension](../api/calendargroup_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
 |[Update](../api/calendargroup_update.md) | [CalendarGroup](calendargroup.md)	|Update CalendarGroup object. |
 |[Delete](../api/calendargroup_delete.md) | Void	|Delete CalendarGroup object. |
+
+<!-- uuid: f3b936ba-1588-4280-a0e0-d99aba0632ff
+2015-10-09 17:14:35 UTC -->

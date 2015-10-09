@@ -1,18 +1,16 @@
 # Update ItemAttachment
 
 Update the properties of itemattachment object.
-#### HTTP request
-<!-- { "blockType": "ignored" } -->
+### HTTP request
 ```http
 
 ```
-
-#### Optional request headers
+### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
 | X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
 
-#### Request body
+### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
 
 | Property	   | Type	|Description|
@@ -23,5 +21,39 @@ In the request body, supply the values for relevant fields that should be update
 |Name|String||
 |Size|Int32||
 
-#### Response
+### Response
 If successful, this method returns a `200 OK` response code and updated [ItemAttachment](../resources/itemattachment.md) object in the response body.
+### Example
+##### Request
+Here is an example of the request.
+```http
+
+Content-type: application/json
+Content-length: 162
+{
+  "Name": "Name-value",
+  "ContentType": "ContentType-value",
+  "Size": 99,
+  "IsInline": true,
+  "DateTimeLastModified": "datetime-value",
+  "Id": "Id-value"
+}
+```
+##### Response
+Here is an example of the response.
+```json
+HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 162
+{
+  "Name": "Name-value",
+  "ContentType": "ContentType-value",
+  "Size": 99,
+  "IsInline": true,
+  "DateTimeLastModified": "datetime-value",
+  "Id": "Id-value"
+}
+```
+
+<!-- uuid: 30a0e99b-9746-4644-87e9-a1df7e81b8c5
+2015-10-09 17:14:36 UTC -->

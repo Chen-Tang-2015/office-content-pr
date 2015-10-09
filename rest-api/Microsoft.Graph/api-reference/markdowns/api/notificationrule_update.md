@@ -1,18 +1,16 @@
 # Update NotificationRule
 
 Update the properties of notificationrule object.
-#### HTTP request
-<!-- { "blockType": "ignored" } -->
+### HTTP request
 ```http
-
+PATCH /NotificationRules/<Id>
 ```
-
-#### Optional request headers
+### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
 | X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
 
-#### Request body
+### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
 
 | Property	   | Type	|Description|
@@ -25,5 +23,43 @@ In the request body, supply the values for relevant fields that should be update
 |UserId|String||
 |UserName|String||
 
-#### Response
+### Response
 If successful, this method returns a `200 OK` response code and updated [NotificationRule](../resources/notificationrule.md) object in the response body.
+### Example
+##### Request
+Here is an example of the request.
+```http
+PUT /NotificationRules/<Id>
+Content-type: application/json
+Content-length: 260
+{
+  "Id": "Id-value",
+  "UserName": "UserName-value",
+  "UserId": "UserId-value",
+  "RoleName": "RoleName-value",
+  "RoleId": "RoleId-value",
+  "NotificationId": "NotificationId-value",
+  "NotificationName": "NotificationName-value",
+  "Event": "Event-value"
+}
+```
+##### Response
+Here is an example of the response.
+```json
+HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 260
+{
+  "Id": "Id-value",
+  "UserName": "UserName-value",
+  "UserId": "UserId-value",
+  "RoleName": "RoleName-value",
+  "RoleId": "RoleId-value",
+  "NotificationId": "NotificationId-value",
+  "NotificationName": "NotificationName-value",
+  "Event": "Event-value"
+}
+```
+
+<!-- uuid: e26a03a3-70e2-41d8-a10f-447cfa1e6bef
+2015-10-09 17:14:36 UTC -->

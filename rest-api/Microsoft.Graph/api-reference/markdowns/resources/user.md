@@ -2,39 +2,9 @@
 
 A user in the system. The **Me** endpoint is provided as a shortcut for specifying the current user by SMTP address ( `users/sadie@contoso.com`).
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "CalendarGroups",
-    "CalendarView",
-    "Calendars",
-    "ContactFolders",
-    "Contacts",
-    "Events",
-    "Extensions",
-    "Folders",
-    "JoinedGroups",
-    "Messages",
-    "TrendingAround",
-    "UserPhotos",
-    "WorkingWith",
-    "appRoleAssignments",
-    "createdObjects",
-    "directReports",
-    "memberOf",
-    "oauth2PermissionGrants",
-    "ownedDevices",
-    "ownedObjects",
-    "plans",
-    "registeredDevices",
-    "tasks"
-  ],
-  "@odata.type": "microsoft.graph.User"
-}-->
 
 ```json
 {
@@ -263,7 +233,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |AboutMe|String||
@@ -319,7 +289,7 @@ Here is a JSON representation of the resource
 |userPrincipalName|String||
 |userType|String||
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |Calendar|[Calendar](calendar.md)|The user's primary calendar. Navigation property. Read-only.|
@@ -353,7 +323,7 @@ Here is a JSON representation of the resource
 |registeredDevices|[DirectoryObject](directoryobject.md) collection| Read-only. Nullable.|
 |tasks|[Task](task.md) collection| Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -388,3 +358,6 @@ Here is a JSON representation of the resource
 |[Checkmembergroups](../api/user_checkmembergroups.md)|String||
 |[Get MemberGroups](../api/user_getmembergroups.md)|String||
 |[Get MemberObjects](../api/user_getmemberobjects.md)|String||
+
+<!-- uuid: b5c74ecd-4e0a-42be-8359-3b2898f7fc00
+2015-10-09 17:14:37 UTC -->

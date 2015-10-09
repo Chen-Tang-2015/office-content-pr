@@ -15,7 +15,25 @@
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
-  "restPath": [],
+  "restPath": {
+    "/groups/<objectId>/drive/items/<id>/thumbnails/<id>": true,
+    "/groups/<objectId>/drive/shared/<id>/thumbnails/<id>": true,
+    "/groups/<objectId>/drive/special/<id>/thumbnails/<id>": true,
+    "/groups/<objectId>/drive/root/thumbnails/<id>": true,
+    "/users/<objectId>/JoinedGroups/<objectId>/drive/items/<id>/thumbnails/<id>": true,
+    "/users/<objectId>/JoinedGroups/<objectId>/drive/shared/<id>/thumbnails/<id>": true,
+    "/users/<objectId>/JoinedGroups/<objectId>/drive/special/<id>/thumbnails/<id>": true,
+    "/users/<objectId>/JoinedGroups/<objectId>/drive/root/thumbnails/<id>": true,
+    "/users/<objectId>/drive/items/<id>/thumbnails/<id>": true,
+    "/users/<objectId>/drive/shared/<id>/thumbnails/<id>": true,
+    "/users/<objectId>/drive/special/<id>/thumbnails/<id>": true,
+    "/users/<objectId>/drive/root/thumbnails/<id>": true,
+    "/drives/<id>/items/<id>/thumbnails/<id>": true,
+    "/drives/<id>/shared/<id>/thumbnails/<id>": true,
+    "/drives/<id>/special/<id>/thumbnails/<id>": true,
+    "/drives/<id>/root/thumbnails/<id>": true,
+    "/shares/<id>/items/<id>/thumbnails/<id>": true
+  },
   "properties": [
     {
       "name": "id",
@@ -26,6 +44,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": false,
       "isUnicode": false
@@ -39,6 +58,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": null
@@ -52,6 +72,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": null
@@ -65,35 +86,25 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "source",
+      "description": "A custom thumbnail image or the original image used to generate other thumbnails.",
+      "isKey": false,
+      "dataType": "thumbnail",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": null
     }
   ],
-  "methods": [
-    {
-      "name": "getCustomThumbnail",
-      "displayName": "",
-      "description": "",
-      "prerequisites": "",
-      "returnType": "thumbnail",
-      "isReturnNullable": null,
-      "isReturnTypeCollection": false,
-      "httpSuccessCode": "200",
-      "isFunction": true,
-      "scopes": [],
-      "errorCodes": [],
-      "parameters": [
-        {
-          "name": "size",
-          "description": "",
-          "dataType": "String",
-          "isRequired": true,
-          "enumName": null,
-          "isNullable": null,
-          "isUnicode": false
-        }
-      ]
-    }
-  ]
+  "methods": []
 }

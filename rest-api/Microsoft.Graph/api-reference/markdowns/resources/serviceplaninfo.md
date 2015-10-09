@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-
-  ],
-  "@odata.type": "microsoft.graph.ServicePlanInfo"
-}-->
 
 ```json
 {
@@ -21,8 +13,11 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |servicePlanId|Guid||
 |servicePlanName|String||
+
+<!-- uuid: 8e09d210-886e-41ff-8428-931cbc02f8b8
+2015-10-09 17:14:37 UTC -->

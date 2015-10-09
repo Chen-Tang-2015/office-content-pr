@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "Extensions"
-  ],
-  "@odata.type": "microsoft.graph.DeviceConfiguration"
-}-->
 
 ```json
 {
@@ -35,7 +27,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |cloudPublicIssuerCertificates|Binary collection||
@@ -46,12 +38,12 @@ Here is a JSON representation of the resource
 |publicIssuerCertificates|Binary collection||
 |registrationQuota|Int32||
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -62,3 +54,6 @@ Here is a JSON representation of the resource
 |[Checkmembergroups](../api/deviceconfiguration_checkmembergroups.md)|String||
 |[Get MemberGroups](../api/deviceconfiguration_getmembergroups.md)|String||
 |[Get MemberObjects](../api/deviceconfiguration_getmemberobjects.md)|String||
+
+<!-- uuid: fb0e3c4b-0806-4cb5-a2d3-352defd92cdc
+2015-10-09 17:14:36 UTC -->

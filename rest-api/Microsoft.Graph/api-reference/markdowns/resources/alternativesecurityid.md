@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-
-  ],
-  "@odata.type": "microsoft.graph.AlternativeSecurityId"
-}-->
 
 ```json
 {
@@ -22,9 +14,12 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |identityProvider|String||
 |key|Binary||
 |type|Int32||
+
+<!-- uuid: c6318b9a-c412-4158-a5fa-ed476125ddaf
+2015-10-09 17:14:35 UTC -->

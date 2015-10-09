@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-
-  ],
-  "@odata.type": "microsoft.graph.PasswordProfile"
-}-->
 
 ```json
 {
@@ -21,8 +13,11 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |forceChangePasswordNextLogin|Boolean||
 |password|String||
+
+<!-- uuid: 0d56ae92-38a1-47ca-82fe-cb3ae697864d
+2015-10-09 17:14:37 UTC -->

@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "Extensions"
-  ],
-  "@odata.type": "microsoft.graph.ReferenceAttachment"
-}-->
 
 ```json
 {
@@ -30,7 +22,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |ContentType|String||
@@ -40,12 +32,12 @@ Here is a JSON representation of the resource
 |Name|String||
 |Size|Int32||
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -53,3 +45,6 @@ Here is a JSON representation of the resource
 |[Create Extension](../api/referenceattachment_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
 |[Update](../api/referenceattachment_update.md) | [ReferenceAttachment](referenceattachment.md)	|Update ReferenceAttachment object. |
 |[Delete](../api/referenceattachment_delete.md) | Void	|Delete ReferenceAttachment object. |
+
+<!-- uuid: 7d47837a-2d3d-4d70-a064-ea6e5bbfb5af
+2015-10-09 17:14:37 UTC -->

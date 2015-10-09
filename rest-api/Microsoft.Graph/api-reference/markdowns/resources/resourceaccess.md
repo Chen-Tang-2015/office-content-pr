@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-
-  ],
-  "@odata.type": "microsoft.graph.ResourceAccess"
-}-->
 
 ```json
 {
@@ -21,8 +13,11 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |id|Guid||
 |type|String||
+
+<!-- uuid: b1b93c0d-8c04-45a0-86dd-955caaa3f687
+2015-10-09 17:14:37 UTC -->

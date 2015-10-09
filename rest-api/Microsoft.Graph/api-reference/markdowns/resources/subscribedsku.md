@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-
-  ],
-  "@odata.type": "microsoft.graph.SubscribedSku"
-}-->
 
 ```json
 {
@@ -32,7 +24,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |capabilityStatus|String||
@@ -43,14 +35,17 @@ Here is a JSON representation of the resource
 |skuId|Guid||
 |skuPartNumber|String||
 
-#### Relationships
+### Relationships
 None
 
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get SubscribedSku](../api/subscribedsku_get.md) | [SubscribedSku](subscribedsku.md) |Read properties and relationships of subscribedSku object.|
 |[Update](../api/subscribedsku_update.md) | [SubscribedSku](subscribedsku.md)	|Update SubscribedSku object. |
 |[Delete](../api/subscribedsku_delete.md) | Void	|Delete SubscribedSku object. |
+
+<!-- uuid: 990dcbaa-b704-421b-8670-eafe11d0a8df
+2015-10-09 17:14:37 UTC -->

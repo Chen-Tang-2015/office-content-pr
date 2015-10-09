@@ -15,10 +15,40 @@
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
-  "restPath": [
-
-  ],
+  "restPath": {
+    "/groups/<objectId>/drive/items/<id>/permissions/<id>": true,
+    "/groups/<objectId>/drive/shared/<id>/permissions/<id>": true,
+    "/groups/<objectId>/drive/special/<id>/permissions/<id>": true,
+    "/groups/<objectId>/drive/root/permissions/<id>": true,
+    "/users/<objectId>/JoinedGroups/<objectId>/drive/items/<id>/permissions/<id>": true,
+    "/users/<objectId>/JoinedGroups/<objectId>/drive/shared/<id>/permissions/<id>": true,
+    "/users/<objectId>/JoinedGroups/<objectId>/drive/special/<id>/permissions/<id>": true,
+    "/users/<objectId>/JoinedGroups/<objectId>/drive/root/permissions/<id>": true,
+    "/users/<objectId>/drive/items/<id>/permissions/<id>": true,
+    "/users/<objectId>/drive/shared/<id>/permissions/<id>": true,
+    "/users/<objectId>/drive/special/<id>/permissions/<id>": true,
+    "/users/<objectId>/drive/root/permissions/<id>": true,
+    "/drives/<id>/items/<id>/permissions/<id>": true,
+    "/drives/<id>/shared/<id>/permissions/<id>": true,
+    "/drives/<id>/special/<id>/permissions/<id>": true,
+    "/drives/<id>/root/permissions/<id>": true,
+    "/shares/<id>/items/<id>/permissions/<id>": true
+  },
   "properties": [
+    {
+      "name": "grantedTo",
+      "description": "",
+      "isKey": false,
+      "dataType": "identitySet",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
     {
       "name": "id",
       "description": "",
@@ -28,22 +58,38 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": false,
       "isUnicode": false
     },
     {
-      "name": "roles",
+      "name": "invitation",
       "description": "",
       "isKey": false,
-      "dataType": "String",
+      "dataType": "sharingInvitation",
       "isReadOnly": false,
       "enumName": null,
-      "isCollection": true,
+      "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
-      "isUnicode": false
+      "isUnicode": null
+    },
+    {
+      "name": "inheritedFrom",
+      "description": "",
+      "isKey": false,
+      "dataType": "itemReference",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
     },
     {
       "name": "link",
@@ -54,9 +100,38 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": null
+    },
+    {
+      "name": "roles",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": false
+    },
+    {
+      "name": "shareId",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": false
     }
   ],
   "methods": [

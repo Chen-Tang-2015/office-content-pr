@@ -15,7 +15,27 @@
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
-  "restPath": [],
+  "restPath": {
+    "/groups/<objectId>/drive/items/<id>/createdByUser/notes/resources/<id>": true,
+    "/groups/<objectId>/drive/items/<id>/lastModifiedByUser/notes/resources/<id>": true,
+    "/groups/<objectId>/drive/shared/<id>/createdByUser/notes/resources/<id>": true,
+    "/groups/<objectId>/drive/shared/<id>/lastModifiedByUser/notes/resources/<id>": true,
+    "/groups/<objectId>/drive/special/<id>/createdByUser/notes/resources/<id>": true,
+    "/groups/<objectId>/drive/special/<id>/lastModifiedByUser/notes/resources/<id>": true,
+    "/groups/<objectId>/drive/root/createdByUser/notes/resources/<id>": true,
+    "/groups/<objectId>/drive/root/lastModifiedByUser/notes/resources/<id>": true,
+    "/users/<objectId>/notes/resources/<id>": true,
+    "/drives/<id>/items/<id>/createdByUser/notes/resources/<id>": true,
+    "/drives/<id>/items/<id>/lastModifiedByUser/notes/resources/<id>": true,
+    "/drives/<id>/shared/<id>/createdByUser/notes/resources/<id>": true,
+    "/drives/<id>/shared/<id>/lastModifiedByUser/notes/resources/<id>": true,
+    "/drives/<id>/special/<id>/createdByUser/notes/resources/<id>": true,
+    "/drives/<id>/special/<id>/lastModifiedByUser/notes/resources/<id>": true,
+    "/drives/<id>/root/createdByUser/notes/resources/<id>": true,
+    "/drives/<id>/root/lastModifiedByUser/notes/resources/<id>": true,
+    "/shares/<id>/items/<id>/createdByUser/notes/resources/<id>": true,
+    "/shares/<id>/items/<id>/lastModifiedByUser/notes/resources/<id>": true
+  },
   "properties": [
     {
       "name": "id",
@@ -26,6 +46,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": false,
       "isUnicode": false
@@ -39,6 +60,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": false
@@ -52,6 +74,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": null
@@ -65,6 +88,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": false

@@ -15,9 +15,40 @@
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
-  "restPath": [
-
-  ],
+  "restPath": {
+    "/groups/<objectId>/drive/items/<id>/createdByUser/plans/<id>": true,
+    "/groups/<objectId>/drive/items/<id>/lastModifiedByUser/plans/<id>": true,
+    "/groups/<objectId>/drive/shared/<id>/createdByUser/plans/<id>": true,
+    "/groups/<objectId>/drive/shared/<id>/lastModifiedByUser/plans/<id>": true,
+    "/groups/<objectId>/drive/special/<id>/createdByUser/plans/<id>": true,
+    "/groups/<objectId>/drive/special/<id>/lastModifiedByUser/plans/<id>": true,
+    "/groups/<objectId>/drive/root/createdByUser/plans/<id>": true,
+    "/groups/<objectId>/drive/root/lastModifiedByUser/plans/<id>": true,
+    "/groups/<objectId>/plans/<id>": true,
+    "/users/<objectId>/JoinedGroups/<objectId>/plans/<id>": true,
+    "/users/<objectId>/plans/<id>": true,
+    "/drives/<id>/items/<id>/createdByUser/JoinedGroups/<objectId>/plans/<id>": true,
+    "/drives/<id>/items/<id>/createdByUser/plans/<id>": true,
+    "/drives/<id>/items/<id>/lastModifiedByUser/JoinedGroups/<objectId>/plans/<id>": true,
+    "/drives/<id>/items/<id>/lastModifiedByUser/plans/<id>": true,
+    "/drives/<id>/shared/<id>/createdByUser/JoinedGroups/<objectId>/plans/<id>": true,
+    "/drives/<id>/shared/<id>/createdByUser/plans/<id>": true,
+    "/drives/<id>/shared/<id>/lastModifiedByUser/JoinedGroups/<objectId>/plans/<id>": true,
+    "/drives/<id>/shared/<id>/lastModifiedByUser/plans/<id>": true,
+    "/drives/<id>/special/<id>/createdByUser/JoinedGroups/<objectId>/plans/<id>": true,
+    "/drives/<id>/special/<id>/createdByUser/plans/<id>": true,
+    "/drives/<id>/special/<id>/lastModifiedByUser/JoinedGroups/<objectId>/plans/<id>": true,
+    "/drives/<id>/special/<id>/lastModifiedByUser/plans/<id>": true,
+    "/drives/<id>/root/createdByUser/JoinedGroups/<objectId>/plans/<id>": true,
+    "/drives/<id>/root/createdByUser/plans/<id>": true,
+    "/drives/<id>/root/lastModifiedByUser/JoinedGroups/<objectId>/plans/<id>": true,
+    "/drives/<id>/root/lastModifiedByUser/plans/<id>": true,
+    "/shares/<id>/items/<id>/createdByUser/JoinedGroups/<objectId>/plans/<id>": true,
+    "/shares/<id>/items/<id>/createdByUser/plans/<id>": true,
+    "/shares/<id>/items/<id>/lastModifiedByUser/JoinedGroups/<objectId>/plans/<id>": true,
+    "/shares/<id>/items/<id>/lastModifiedByUser/plans/<id>": true,
+    "/plans/<id>": true
+  },
   "properties": [
     {
       "name": "createdBy",
@@ -28,6 +59,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": false
@@ -41,6 +73,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": false
@@ -54,6 +87,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": false,
       "isUnicode": false
@@ -67,6 +101,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": null
@@ -80,6 +115,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": null
@@ -93,6 +129,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": false,
       "isUnicode": false
@@ -106,6 +143,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": false
@@ -119,6 +157,7 @@
       "enumName": null,
       "isCollection": true,
       "isRelationship": true,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": true,
       "isUnicode": null
@@ -132,6 +171,7 @@
       "enumName": null,
       "isCollection": true,
       "isRelationship": true,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": true,
       "isUnicode": null
@@ -145,6 +185,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": true,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": false,
       "isUnicode": null
@@ -158,6 +199,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": true,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": false,
       "isUnicode": null
@@ -171,6 +213,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": true,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": false,
       "isUnicode": null
@@ -184,6 +227,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": true,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": false,
       "isUnicode": null
@@ -197,6 +241,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": true,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": false,
       "isUnicode": null

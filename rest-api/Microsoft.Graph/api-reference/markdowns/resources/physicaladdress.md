@@ -2,17 +2,9 @@
 
 The physical address of a contact.
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-
-  ],
-  "@odata.type": "microsoft.graph.PhysicalAddress"
-}-->
 
 ```json
 {
@@ -24,7 +16,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |City|String|The city.|
@@ -32,3 +24,6 @@ Here is a JSON representation of the resource
 |PostalCode|String|The postal code.|
 |State|String|The state.|
 |Street|String|The street.|
+
+<!-- uuid: 7e39a8b1-2361-45c0-8ef5-5fd240d09db1
+2015-10-09 17:14:37 UTC -->

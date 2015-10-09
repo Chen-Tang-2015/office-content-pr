@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-
-  ],
-  "@odata.type": "microsoft.graph.CopyNotebookModel"
-}-->
 
 ```json
 {
@@ -34,7 +26,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |createdBy|String||
@@ -50,3 +42,6 @@ Here is a JSON representation of the resource
 |sectionsUrl|String||
 |self|String||
 |userRole|String| Possible values are: `Owner`, `Contributor`, `Reader`, `None`.|
+
+<!-- uuid: 98a4c14c-859a-4534-90ec-d5ca6739f899
+2015-10-09 17:14:36 UTC -->

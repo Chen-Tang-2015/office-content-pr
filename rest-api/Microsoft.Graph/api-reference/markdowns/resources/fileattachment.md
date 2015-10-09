@@ -2,17 +2,9 @@
 
 A file (such as a text file or Word document) attached to a message or event. The  **ContentBytes** property contains the base64-encoded contents of the file.
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "Extensions"
-  ],
-  "@odata.type": "microsoft.graph.FileAttachment"
-}-->
 
 ```json
 {
@@ -34,7 +26,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |ContentBytes|Binary||
@@ -48,12 +40,12 @@ Here is a JSON representation of the resource
 |Name|String||
 |Size|Int32||
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -61,3 +53,6 @@ Here is a JSON representation of the resource
 |[Create Extension](../api/fileattachment_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
 |[Update](../api/fileattachment_update.md) | [FileAttachment](fileattachment.md)	|Update FileAttachment object. |
 |[Delete](../api/fileattachment_delete.md) | Void	|Delete FileAttachment object. |
+
+<!-- uuid: 284c6ec7-798b-4d3b-b021-0d97639f7a68
+2015-10-09 17:14:36 UTC -->

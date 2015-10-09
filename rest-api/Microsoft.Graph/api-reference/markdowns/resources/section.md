@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "pages"
-  ],
-  "@odata.type": "microsoft.graph.Section"
-}-->
 
 ```json
 {
@@ -39,7 +31,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |createdBy|String|The user who created the section. |
@@ -52,14 +44,14 @@ Here is a JSON representation of the resource
 |pagesUrl|String|The /pages endpoint where you can get details for all the pages in the section.|
 |self|String|The endpoint where you can get details about the section. |
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |pages|[Page](page.md) collection|A section in a OneNote notebook  Read-only. Nullable.|
 |parentNotebook|[Notebook](notebook.md)|The notebook that contains the section, expanded by default with the id, name, and self properties selected.  Read-only.|
 |parentSectionGroup|[SectionGroup](sectiongroup.md)|The section group that contains the section, expanded by default with the id, name, and self properties selected.  Read-only.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -70,3 +62,6 @@ Here is a JSON representation of the resource
 |[Copytonotebook](../api/section_copytonotebook.md)|[CopySectionModel](copysectionmodel.md)||
 |[Copytosectiongroup](../api/section_copytosectiongroup.md)|[CopySectionModel](copysectionmodel.md)||
 |[Thumbnail](../api/section_thumbnail.md)|Stream||
+
+<!-- uuid: b0d8142e-d951-42be-9bc6-7f7a4a8dcc93
+2015-10-09 17:14:37 UTC -->

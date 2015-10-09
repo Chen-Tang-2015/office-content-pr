@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "Extensions"
-  ],
-  "@odata.type": "microsoft.graph.Photo"
-}-->
 
 ```json
 {
@@ -27,19 +19,19 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |Height|Int32||
 |Id|String| Read-only.|
 |Width|Int32||
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -47,3 +39,6 @@ Here is a JSON representation of the resource
 |[Create Extension](../api/photo_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
 |[Update](../api/photo_update.md) | [Photo](photo.md)	|Update Photo object. |
 |[Delete](../api/photo_delete.md) | Void	|Delete Photo object. |
+
+<!-- uuid: 4739f2a3-3a71-45ee-970e-979a4643fc97
+2015-10-09 17:14:37 UTC -->

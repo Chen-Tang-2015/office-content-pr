@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "tasks"
-  ],
-  "@odata.type": "microsoft.graph.Bucket"
-}-->
 
 ```json
 {
@@ -31,7 +23,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |activeTasks|Int32||
@@ -42,12 +34,12 @@ Here is a JSON representation of the resource
 |totalTasks|Int32||
 |version|String||
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |tasks|[Task](task.md) collection| Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -55,3 +47,6 @@ Here is a JSON representation of the resource
 |[Create Task](../api/bucket_post_tasks.md) |[Task](task.md)| Create a new Task by posting to the tasks collection.|
 |[Update](../api/bucket_update.md) | [Bucket](bucket.md)	|Update Bucket object. |
 |[Delete](../api/bucket_delete.md) | Void	|Delete Bucket object. |
+
+<!-- uuid: a2e20ebd-1849-472e-821f-a973bc8add68
+2015-10-09 17:14:35 UTC -->

@@ -15,7 +15,27 @@
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
-  "restPath": [],
+  "restPath": {
+    "/groups/<objectId>/drive/items/<id>/createdByUser/CalendarGroups/<Id>": true,
+    "/groups/<objectId>/drive/items/<id>/lastModifiedByUser/CalendarGroups/<Id>": true,
+    "/groups/<objectId>/drive/shared/<id>/createdByUser/CalendarGroups/<Id>": true,
+    "/groups/<objectId>/drive/shared/<id>/lastModifiedByUser/CalendarGroups/<Id>": true,
+    "/groups/<objectId>/drive/special/<id>/createdByUser/CalendarGroups/<Id>": true,
+    "/groups/<objectId>/drive/special/<id>/lastModifiedByUser/CalendarGroups/<Id>": true,
+    "/groups/<objectId>/drive/root/createdByUser/CalendarGroups/<Id>": true,
+    "/groups/<objectId>/drive/root/lastModifiedByUser/CalendarGroups/<Id>": true,
+    "/users/<objectId>/CalendarGroups/<Id>": true,
+    "/drives/<id>/items/<id>/createdByUser/CalendarGroups/<Id>": true,
+    "/drives/<id>/items/<id>/lastModifiedByUser/CalendarGroups/<Id>": true,
+    "/drives/<id>/shared/<id>/createdByUser/CalendarGroups/<Id>": true,
+    "/drives/<id>/shared/<id>/lastModifiedByUser/CalendarGroups/<Id>": true,
+    "/drives/<id>/special/<id>/createdByUser/CalendarGroups/<Id>": true,
+    "/drives/<id>/special/<id>/lastModifiedByUser/CalendarGroups/<Id>": true,
+    "/drives/<id>/root/createdByUser/CalendarGroups/<Id>": true,
+    "/drives/<id>/root/lastModifiedByUser/CalendarGroups/<Id>": true,
+    "/shares/<id>/items/<id>/createdByUser/CalendarGroups/<Id>": true,
+    "/shares/<id>/items/<id>/lastModifiedByUser/CalendarGroups/<Id>": true
+  },
   "properties": [
     {
       "name": "Name",
@@ -26,6 +46,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": false
@@ -39,6 +60,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": false
@@ -52,6 +74,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": null
@@ -65,6 +88,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": false,
       "isUnicode": false
@@ -78,6 +102,7 @@
       "enumName": null,
       "isCollection": true,
       "isRelationship": true,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": true,
       "isUnicode": null
@@ -91,6 +116,7 @@
       "enumName": null,
       "isCollection": true,
       "isRelationship": true,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": true,
       "isUnicode": null

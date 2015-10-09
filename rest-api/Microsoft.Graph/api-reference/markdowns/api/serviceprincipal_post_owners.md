@@ -1,19 +1,36 @@
 # Create owner
 
 Use this API to create a new owner.
-#### HTTP request
-<!-- { "blockType": "ignored" } -->
+### HTTP request
 ```http
-to be completed....
+POST /servicePrincipals/<objectId>/owners
+
 ```
-#### Request headers
+### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
 | X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
 
-#### Request body
+### Request body
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
 
 
-#### Response
+### Response
 If successful, this method returns `201, Created` response code and [DirectoryObject](../resources/directoryobject.md) object in the response body.
+
+### Example
+##### Response
+Here is an example of the response.
+```json
+HTTP/1.1 201 Created
+Content-type: application/json
+Content-length: 111
+{
+  "objectType": "objectType-value",
+  "objectId": "objectId-value",
+  "deletionTimestamp": "datetime-value"
+}
+```
+
+<!-- uuid: c3e2f28d-f86d-46d7-a3b8-efa2eff03cef
+2015-10-09 17:14:37 UTC -->

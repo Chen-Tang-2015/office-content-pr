@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-
-  ],
-  "@odata.type": "microsoft.graph.PrivilegedRoleSummary"
-}-->
 
 ```json
 {
@@ -25,7 +17,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |ElevatedCount|Int32||
@@ -35,14 +27,17 @@ Here is a JSON representation of the resource
 |Status|String| Possible values are: `Ok`, `Bad`.|
 |UsersCount|Int32||
 
-#### Relationships
+### Relationships
 None
 
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get PrivilegedRoleSummary](../api/privilegedrolesummary_get.md) | [PrivilegedRoleSummary](privilegedrolesummary.md) |Read properties and relationships of privilegedRoleSummary object.|
 |[Update](../api/privilegedrolesummary_update.md) | [PrivilegedRoleSummary](privilegedrolesummary.md)	|Update PrivilegedRoleSummary object. |
 |[Delete](../api/privilegedrolesummary_delete.md) | Void	|Delete PrivilegedRoleSummary object. |
+
+<!-- uuid: 2870a9c9-0851-4eaa-af69-d6a6a20f118b
+2015-10-09 17:14:37 UTC -->

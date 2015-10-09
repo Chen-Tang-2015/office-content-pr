@@ -15,7 +15,27 @@
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
-  "restPath": [],
+  "restPath": {
+    "/groups/<objectId>/drive/items/<id>/createdByUser/notes": true,
+    "/groups/<objectId>/drive/items/<id>/lastModifiedByUser/notes": true,
+    "/groups/<objectId>/drive/shared/<id>/createdByUser/notes": true,
+    "/groups/<objectId>/drive/shared/<id>/lastModifiedByUser/notes": true,
+    "/groups/<objectId>/drive/special/<id>/createdByUser/notes": true,
+    "/groups/<objectId>/drive/special/<id>/lastModifiedByUser/notes": true,
+    "/groups/<objectId>/drive/root/createdByUser/notes": true,
+    "/groups/<objectId>/drive/root/lastModifiedByUser/notes": true,
+    "/users/<objectId>/notes": true,
+    "/drives/<id>/items/<id>/createdByUser/notes": true,
+    "/drives/<id>/items/<id>/lastModifiedByUser/notes": true,
+    "/drives/<id>/shared/<id>/createdByUser/notes": true,
+    "/drives/<id>/shared/<id>/lastModifiedByUser/notes": true,
+    "/drives/<id>/special/<id>/createdByUser/notes": true,
+    "/drives/<id>/special/<id>/lastModifiedByUser/notes": true,
+    "/drives/<id>/root/createdByUser/notes": true,
+    "/drives/<id>/root/lastModifiedByUser/notes": true,
+    "/shares/<id>/items/<id>/createdByUser/notes": true,
+    "/shares/<id>/items/<id>/lastModifiedByUser/notes": true
+  },
   "properties": [
     {
       "name": "id",
@@ -26,6 +46,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": false,
       "isUnicode": false
@@ -39,6 +60,7 @@
       "enumName": null,
       "isCollection": true,
       "isRelationship": true,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": true,
       "isUnicode": null
@@ -52,6 +74,7 @@
       "enumName": null,
       "isCollection": true,
       "isRelationship": true,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": true,
       "isUnicode": null
@@ -65,6 +88,7 @@
       "enumName": null,
       "isCollection": true,
       "isRelationship": true,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": true,
       "isUnicode": null
@@ -78,6 +102,7 @@
       "enumName": null,
       "isCollection": true,
       "isRelationship": true,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": true,
       "isUnicode": null
@@ -91,6 +116,7 @@
       "enumName": null,
       "isCollection": true,
       "isRelationship": true,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": true,
       "isUnicode": null

@@ -1,18 +1,18 @@
 # Update Notebook
 
 Update the properties of notebook object.
-#### HTTP request
-<!-- { "blockType": "ignored" } -->
+### HTTP request
 ```http
-
+PATCH /users/<objectId>/notes/notebooks/<id>
+PATCH /users/<objectId>/notes/pages/<id>/parentNotebook
+PATCH /users/<objectId>/notes/sections/<id>/parentNotebook
 ```
-
-#### Optional request headers
+### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
 | X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
 
-#### Request body
+### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
 
 | Property	   | Type	|Description|
@@ -28,7 +28,57 @@ In the request body, supply the values for relevant fields that should be update
 |sectionGroupsUrl|String|The URL for the sectionGroups navigation property, which returns all the section groups in the notebook.|
 |sectionsUrl|String|The URL for the sections navigation property, which returns all the sections in the notebook.|
 |self|String|The endpoint where you can get details about the notebook.|
-|userRole|String|One of three values: Owner, Contributor, or Reader. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Possible values are: `isExclusive` true,`options` {"Owner"=>{"value"=>"0", "description"=>""}, "Contributor"=>{"value"=>"1", "description"=>""}, "Reader"=>{"value"=>"2", "description"=>""}, "None"=>{"value"=>"-1", "description"=>""}}|
+|userRole|String|One of three values: Owner, Contributor, or Reader. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Possible values are: `Owner`, `Contributor`, `Reader`, `None`.|
 
-#### Response
+### Response
 If successful, this method returns a `200 OK` response code and updated [Notebook](../resources/notebook.md) object in the response body.
+### Example
+##### Request
+Here is an example of the request.
+```http
+PUT /users/<objectId>/notes/notebooks/<id>
+Content-type: application/json
+Content-length: 400
+{
+  "isDefault": true,
+  "userRole": "userRole-value",
+  "isShared": true,
+  "sectionsUrl": "sectionsUrl-value",
+  "sectionGroupsUrl": "sectionGroupsUrl-value",
+  "links": {
+  },
+  "name": "name-value",
+  "createdBy": "createdBy-value",
+  "lastModifiedBy": "lastModifiedBy-value",
+  "lastModifiedTime": "datetime-value",
+  "id": "id-value",
+  "self": "self-value",
+  "createdTime": "datetime-value"
+}
+```
+##### Response
+Here is an example of the response.
+```json
+HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 400
+{
+  "isDefault": true,
+  "userRole": "userRole-value",
+  "isShared": true,
+  "sectionsUrl": "sectionsUrl-value",
+  "sectionGroupsUrl": "sectionGroupsUrl-value",
+  "links": {
+  },
+  "name": "name-value",
+  "createdBy": "createdBy-value",
+  "lastModifiedBy": "lastModifiedBy-value",
+  "lastModifiedTime": "datetime-value",
+  "id": "id-value",
+  "self": "self-value",
+  "createdTime": "datetime-value"
+}
+```
+
+<!-- uuid: c3aa6d24-82f8-46df-a898-df209ff27e8f
+2015-10-09 17:14:36 UTC -->

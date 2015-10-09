@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "Extensions"
-  ],
-  "@odata.type": "microsoft.graph.TenantDetail"
-}-->
 
 ```json
 {
@@ -70,7 +62,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |assignedPlans|[AssignedPlan](assignedplan.md) collection||
@@ -96,12 +88,12 @@ Here is a JSON representation of the resource
 |telephoneNumber|String||
 |verifiedDomains|[VerifiedDomain](verifieddomain.md) collection||
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -112,3 +104,6 @@ Here is a JSON representation of the resource
 |[Checkmembergroups](../api/tenantdetail_checkmembergroups.md)|String||
 |[Get MemberGroups](../api/tenantdetail_getmembergroups.md)|String||
 |[Get MemberObjects](../api/tenantdetail_getmemberobjects.md)|String||
+
+<!-- uuid: 7c458ed1-d686-482c-8c70-71e998eb0ff6
+2015-10-09 17:14:37 UTC -->

@@ -1,17 +1,19 @@
 # Section: CopyToSectionGroup
 
 
-#### HTTP request
-<!-- { "blockType": "ignored" } -->
+### HTTP request
 ```http
-to be completed....
+POST /users/<objectId>/notes/sections/<id>/CopyToSectionGroup
+POST /users/<objectId>/notes/pages/<id>/parentSection/CopyToSectionGroup
+POST /drives/<id>/root/createdByUser/notes/sections/<id>/CopyToSectionGroup
+
 ```
-#### Request headers
+### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
 | X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
 
-#### Request body
+### Request body
 In the request body, provide a JSON object with the following parameters.
 
 | Parameter	   | Type	|Description|
@@ -21,5 +23,40 @@ In the request body, provide a JSON object with the following parameters.
 |siteId|String||
 |renameAs|String||
 
-#### Response
+### Response
 If successful, this method returns `200, OK` response code and [CopySectionModel](../resources/copysectionmodel.md) object in the response body.
+
+### Example
+Here is an example of how to call this API.
+##### Request
+```http
+POST /users/<objectId>/notes/sections/<id>/CopyToSectionGroup
+Content-type: application/json
+Content-length: 130
+{
+  "id": "id-value",
+  "siteCollectionId": "siteCollectionId-value",
+  "siteId": "siteId-value",
+  "renameAs": "renameAs-value"
+}
+```
+##### Response
+```json
+HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 276
+{
+  "isDefault": true,
+  "pagesUrl": "pagesUrl-value",
+  "name": "name-value",
+  "createdBy": "createdBy-value",
+  "lastModifiedBy": "lastModifiedBy-value",
+  "lastModifiedTime": "datetime-value",
+  "id": "id-value",
+  "self": "self-value",
+  "createdTime": "datetime-value"
+}
+```
+
+<!-- uuid: 3f7f74e4-cb0b-45f9-88cf-1c8ac0df3906
+2015-10-09 17:14:37 UTC -->

@@ -15,9 +15,39 @@
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
-  "restPath": [
-
-  ],
+  "restPath": {
+    "/groups/<objectId>/drive/items/<id>/createdByUser/details": true,
+    "/groups/<objectId>/drive/items/<id>/lastModifiedByUser/details": true,
+    "/groups/<objectId>/drive/shared/<id>/createdByUser/details": true,
+    "/groups/<objectId>/drive/shared/<id>/lastModifiedByUser/details": true,
+    "/groups/<objectId>/drive/special/<id>/createdByUser/details": true,
+    "/groups/<objectId>/drive/special/<id>/lastModifiedByUser/details": true,
+    "/groups/<objectId>/drive/root/createdByUser/details": true,
+    "/groups/<objectId>/drive/root/lastModifiedByUser/details": true,
+    "/groups/<objectId>/details": true,
+    "/users/<objectId>/JoinedGroups/<objectId>/details": true,
+    "/users/<objectId>/details": true,
+    "/drives/<id>/items/<id>/createdByUser/JoinedGroups/<objectId>/details": true,
+    "/drives/<id>/items/<id>/createdByUser/details": true,
+    "/drives/<id>/items/<id>/lastModifiedByUser/JoinedGroups/<objectId>/details": true,
+    "/drives/<id>/items/<id>/lastModifiedByUser/details": true,
+    "/drives/<id>/shared/<id>/createdByUser/JoinedGroups/<objectId>/details": true,
+    "/drives/<id>/shared/<id>/createdByUser/details": true,
+    "/drives/<id>/shared/<id>/lastModifiedByUser/JoinedGroups/<objectId>/details": true,
+    "/drives/<id>/shared/<id>/lastModifiedByUser/details": true,
+    "/drives/<id>/special/<id>/createdByUser/JoinedGroups/<objectId>/details": true,
+    "/drives/<id>/special/<id>/createdByUser/details": true,
+    "/drives/<id>/special/<id>/lastModifiedByUser/JoinedGroups/<objectId>/details": true,
+    "/drives/<id>/special/<id>/lastModifiedByUser/details": true,
+    "/drives/<id>/root/createdByUser/JoinedGroups/<objectId>/details": true,
+    "/drives/<id>/root/createdByUser/details": true,
+    "/drives/<id>/root/lastModifiedByUser/JoinedGroups/<objectId>/details": true,
+    "/drives/<id>/root/lastModifiedByUser/details": true,
+    "/shares/<id>/items/<id>/createdByUser/JoinedGroups/<objectId>/details": true,
+    "/shares/<id>/items/<id>/createdByUser/details": true,
+    "/shares/<id>/items/<id>/lastModifiedByUser/JoinedGroups/<objectId>/details": true,
+    "/shares/<id>/items/<id>/lastModifiedByUser/details": true
+  },
   "properties": [
     {
       "name": "userData",
@@ -28,6 +58,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": null
@@ -41,6 +72,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": false,
       "isUnicode": false
@@ -54,6 +86,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": false

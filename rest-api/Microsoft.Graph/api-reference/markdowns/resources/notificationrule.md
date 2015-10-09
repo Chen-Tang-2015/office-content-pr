@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-
-  ],
-  "@odata.type": "microsoft.graph.NotificationRule"
-}-->
 
 ```json
 {
@@ -27,7 +19,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |Event|String||
@@ -39,11 +31,11 @@ Here is a JSON representation of the resource
 |UserId|String||
 |UserName|String||
 
-#### Relationships
+### Relationships
 None
 
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -51,3 +43,6 @@ None
 |[Update](../api/notificationrule_update.md) | [NotificationRule](notificationrule.md)	|Update NotificationRule object. |
 |[Delete](../api/notificationrule_delete.md) | Void	|Delete NotificationRule object. |
 |[Eventtypes](../api/notificationrule_eventtypes.md)|String||
+
+<!-- uuid: c2f4ea77-2f9d-4910-b049-4f2747638dde
+2015-10-09 17:14:36 UTC -->

@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-
-  ],
-  "@odata.type": "microsoft.graph.UserDetails"
-}-->
 
 ```json
 {
@@ -24,21 +16,24 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |id|String| Read-only.|
 |userData|[UserDataCollection](userdatacollection.md)||
 |version|String||
 
-#### Relationships
+### Relationships
 None
 
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get UserDetails](../api/userdetails_get.md) | [UserDetails](userdetails.md) |Read properties and relationships of userDetails object.|
 |[Update](../api/userdetails_update.md) | [UserDetails](userdetails.md)	|Update UserDetails object. |
 |[Delete](../api/userdetails_delete.md) | Void	|Delete UserDetails object. |
+
+<!-- uuid: bc572402-5be1-4a43-8b49-914b6fbc127a
+2015-10-09 17:14:37 UTC -->

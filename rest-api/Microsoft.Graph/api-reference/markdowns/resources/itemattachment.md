@@ -2,17 +2,9 @@
 
 A message or event that's attached to another message or event.
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "Extensions"
-  ],
-  "@odata.type": "microsoft.graph.ItemAttachment"
-}-->
 
 ```json
 {
@@ -33,7 +25,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |ContentType|String||
@@ -43,13 +35,13 @@ Here is a JSON representation of the resource
 |Name|String||
 |Size|Int32||
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 |Item|[OutlookItem](outlookitem.md)| Read-only.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -57,3 +49,6 @@ Here is a JSON representation of the resource
 |[Create Extension](../api/itemattachment_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
 |[Update](../api/itemattachment_update.md) | [ItemAttachment](itemattachment.md)	|Update ItemAttachment object. |
 |[Delete](../api/itemattachment_delete.md) | Void	|Delete ItemAttachment object. |
+
+<!-- uuid: f48d635d-977a-4a62-ac20-59a97f47d883
+2015-10-09 17:14:36 UTC -->

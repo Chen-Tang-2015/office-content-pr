@@ -2,18 +2,9 @@
 
 A conversation is a collection of [threads](#ConversationThreadResource). All threads and posts in a conversation share the same subject.
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "Extensions",
-    "Threads"
-  ],
-  "@odata.type": "microsoft.graph.Conversation"
-}-->
 
 ```json
 {
@@ -38,7 +29,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |DateTimeLastDelivered|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
@@ -48,13 +39,13 @@ Here is a JSON representation of the resource
 |Topic|String|The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.|
 |UniqueSenders|String collection|All the users that sent a message to this Conversation.|
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 |Threads|[ConversationThread](conversationthread.md) collection|A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -63,3 +54,6 @@ Here is a JSON representation of the resource
 |[Create Thread](../api/conversation_post_threads.md) |[ConversationThread](conversationthread.md)| Create a new Thread by posting to the Threads collection.|
 |[Update](../api/conversation_update.md) | [Conversation](conversation.md)	|Update Conversation object. |
 |[Delete](../api/conversation_delete.md) | Void	|Delete Conversation object. |
+
+<!-- uuid: 92e2d54e-245d-4e4d-a798-eea004be80df
+2015-10-09 17:14:36 UTC -->

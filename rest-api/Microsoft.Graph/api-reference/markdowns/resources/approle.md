@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-
-  ],
-  "@odata.type": "microsoft.graph.AppRole"
-}-->
 
 ```json
 {
@@ -27,7 +19,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |allowedMemberTypes|String collection||
@@ -36,3 +28,6 @@ Here is a JSON representation of the resource
 |id|Guid||
 |isEnabled|Boolean||
 |value|String||
+
+<!-- uuid: f1945cd1-c336-464b-ac97-146e05a5d97e
+2015-10-09 17:14:35 UTC -->

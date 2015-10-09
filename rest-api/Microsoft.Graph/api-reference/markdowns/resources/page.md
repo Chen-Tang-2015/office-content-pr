@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-
-  ],
-  "@odata.type": "microsoft.graph.Page"
-}-->
 
 ```json
 {
@@ -36,7 +28,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |content|Stream||
@@ -49,13 +41,13 @@ Here is a JSON representation of the resource
 |self|String||
 |title|String|The title of the page |
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |parentNotebook|[Notebook](notebook.md)|A page in a OneNote section  Read-only.|
 |parentSection|[Section](section.md)| Read-only.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -65,3 +57,6 @@ Here is a JSON representation of the resource
 |[Copytosection](../api/page_copytosection.md)|[CopyPageModel](copypagemodel.md)||
 |[Patchcontent](../api/page_patchcontent.md)|[None](none.md)||
 |[Thumbnail](../api/page_thumbnail.md)|Stream||
+
+<!-- uuid: 187bcc95-549a-4acd-9b85-b5da1196e747
+2015-10-09 17:14:37 UTC -->

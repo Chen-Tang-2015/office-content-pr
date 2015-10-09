@@ -1,19 +1,56 @@
 # Create Task
 
 Use this API to create a new Task.
-#### HTTP request
-<!-- { "blockType": "ignored" } -->
+### HTTP request
 ```http
-to be completed....
+POST /users/<objectId>/tasks
+POST /drives/<id>/root/createdByUser/tasks
+POST /drives/<id>/root/lastModifiedByUser/tasks
+
 ```
-#### Request headers
+### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
 | X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
 
-#### Request body
+### Request body
 In the request body, supply a JSON representation of [Task](../resources/task.md) object.
 
 
-#### Response
+### Response
 If successful, this method returns `201, Created` response code and [Task](../resources/task.md) object in the response body.
+
+### Example
+##### Response
+Here is an example of the response.
+```json
+HTTP/1.1 201 Created
+Content-type: application/json
+Content-length: 641
+{
+  "createdBy": "createdBy-value",
+  "assignedTo": "assignedTo-value",
+  "planId": "planId-value",
+  "bucketId": "bucketId-value",
+  "title": "title-value",
+  "orderHint": "orderHint-value",
+  "assigneePriority": "assigneePriority-value",
+  "percentComplete": 99,
+  "startDate": "datetime-value",
+  "assignedToDate": "datetime-value",
+  "createdDate": "datetime-value",
+  "assignedBy": "assignedBy-value",
+  "dueDate": "datetime-value",
+  "hasNotes": true,
+  "previewType": "previewType-value",
+  "completedDate": "datetime-value",
+  "numberOfReferences": 99,
+  "appliedCategories": {
+  },
+  "id": "id-value",
+  "version": "version-value"
+}
+```
+
+<!-- uuid: f477b1db-73f7-484e-8c4e-9b0a7115a8e8
+2015-10-09 17:14:37 UTC -->

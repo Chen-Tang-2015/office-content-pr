@@ -2,18 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "sectionGroups",
-    "sections"
-  ],
-  "@odata.type": "microsoft.graph.Notebook"
-}-->
 
 ```json
 {
@@ -45,7 +36,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |createdBy|String|The user who created the notebook.|
@@ -62,13 +53,13 @@ Here is a JSON representation of the resource
 |self|String|The endpoint where you can get details about the notebook.|
 |userRole|String|One of three values: Owner, Contributor, or Reader. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Possible values are: `Owner`, `Contributor`, `Reader`, `None`.|
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |sectionGroups|[SectionGroup](sectiongroup.md) collection|The section groups in the notebook. Can be navigated to using the sectionGroupsUrl property or expanded in a GET request. Read-only. Nullable.|
 |sections|[Section](section.md) collection|The sections in the notebook. Can be navigated to using the sectionsUrl property or expanded in a GET request. Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -78,3 +69,6 @@ Here is a JSON representation of the resource
 |[Update](../api/notebook_update.md) | [Notebook](notebook.md)	|Update Notebook object. |
 |[Delete](../api/notebook_delete.md) | Void	|Delete Notebook object. |
 |[Copynotebook](../api/notebook_copynotebook.md)|[CopyNotebookModel](copynotebookmodel.md)||
+
+<!-- uuid: 1d9e11f2-0590-4f8e-aa48-7a3e857ef4d6
+2015-10-09 17:14:36 UTC -->

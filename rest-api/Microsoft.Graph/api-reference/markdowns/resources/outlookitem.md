@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "Extensions"
-  ],
-  "@odata.type": "microsoft.graph.OutlookItem"
-}-->
 
 ```json
 {
@@ -31,7 +23,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |Categories|String collection||
@@ -40,12 +32,12 @@ Here is a JSON representation of the resource
 |DateTimeLastModified|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |Id|String| Read-only.|
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -53,3 +45,6 @@ Here is a JSON representation of the resource
 |[Create Extension](../api/outlookitem_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
 |[Update](../api/outlookitem_update.md) | [OutlookItem](outlookitem.md)	|Update OutlookItem object. |
 |[Delete](../api/outlookitem_delete.md) | Void	|Delete OutlookItem object. |
+
+<!-- uuid: 937d9b50-86c3-4ade-b4a1-4774f2a07c81
+2015-10-09 17:14:37 UTC -->

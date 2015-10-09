@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-
-  ],
-  "@odata.type": "microsoft.graph.PlanDetails"
-}-->
 
 ```json
 {
@@ -30,7 +22,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |category0Description|String||
@@ -43,14 +35,17 @@ Here is a JSON representation of the resource
 |sharedWith|[UserIdCollection](useridcollection.md)||
 |version|String||
 
-#### Relationships
+### Relationships
 None
 
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get PlanDetails](../api/plandetails_get.md) | [PlanDetails](plandetails.md) |Read properties and relationships of planDetails object.|
 |[Update](../api/plandetails_update.md) | [PlanDetails](plandetails.md)	|Update PlanDetails object. |
 |[Delete](../api/plandetails_delete.md) | Void	|Delete PlanDetails object. |
+
+<!-- uuid: ac44b5e6-8b55-42b9-88b9-c0da73ffce4b
+2015-10-09 17:14:37 UTC -->

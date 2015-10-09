@@ -2,21 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "Extensions",
-    "memberOf",
-    "members",
-    "ownedObjects",
-    "owners"
-  ],
-  "@odata.type": "microsoft.graph.DirectoryRole"
-}-->
 
 ```json
 {
@@ -56,7 +44,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |deletionTimestamp|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
@@ -68,7 +56,7 @@ Here is a JSON representation of the resource
 |roleDisabled|Boolean||
 |roleTemplateId|String||
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
@@ -77,7 +65,7 @@ Here is a JSON representation of the resource
 |ownedObjects|[DirectoryObject](directoryobject.md) collection| Read-only. Nullable.|
 |owners|[DirectoryObject](directoryobject.md) collection| Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -92,3 +80,6 @@ Here is a JSON representation of the resource
 |[Checkmembergroups](../api/directoryrole_checkmembergroups.md)|String||
 |[Get MemberGroups](../api/directoryrole_getmembergroups.md)|String||
 |[Get MemberObjects](../api/directoryrole_getmemberobjects.md)|String||
+
+<!-- uuid: e31e11b6-4be3-475d-a9eb-14797dc5a82c
+2015-10-09 17:14:36 UTC -->

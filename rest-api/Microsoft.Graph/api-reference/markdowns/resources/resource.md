@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-
-  ],
-  "@odata.type": "microsoft.graph.Resource"
-}-->
 
 ```json
 {
@@ -23,7 +15,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |content|Stream|A stream of the content of this resource. |
@@ -31,14 +23,17 @@ Here is a JSON representation of the resource
 |id|String|The unique id of this resource.  Read-only.|
 |self|String||
 
-#### Relationships
+### Relationships
 None
 
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get Resource](../api/resource_get.md) | [Resource](resource.md) |Read properties and relationships of resource object.|
 |[Update](../api/resource_update.md) | [Resource](resource.md)	|Update Resource object. |
 |[Delete](../api/resource_delete.md) | Void	|Delete Resource object. |
+
+<!-- uuid: 3b48472a-6ee2-48fb-91da-96f107811205
+2015-10-09 17:14:37 UTC -->

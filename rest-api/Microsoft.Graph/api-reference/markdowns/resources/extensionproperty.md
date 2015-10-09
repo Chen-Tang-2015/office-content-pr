@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "Extensions"
-  ],
-  "@odata.type": "microsoft.graph.ExtensionProperty"
-}-->
 
 ```json
 {
@@ -34,7 +26,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |appDisplayName|String||
@@ -46,12 +38,12 @@ Here is a JSON representation of the resource
 |objectType|String||
 |targetObjects|String collection||
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -62,3 +54,6 @@ Here is a JSON representation of the resource
 |[Checkmembergroups](../api/extensionproperty_checkmembergroups.md)|String||
 |[Get MemberGroups](../api/extensionproperty_getmembergroups.md)|String||
 |[Get MemberObjects](../api/extensionproperty_getmemberobjects.md)|String||
+
+<!-- uuid: 9c8d9ad5-f024-4038-8c8d-1a86181c7e28
+2015-10-09 17:14:36 UTC -->

@@ -2,19 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "Extensions",
-    "directReports",
-    "memberOf"
-  ],
-  "@odata.type": "microsoft.graph.OrgContact"
-}-->
 
 ```json
 {
@@ -70,7 +60,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |city|String||
@@ -99,7 +89,7 @@ Here is a JSON representation of the resource
 |telephoneNumber|String||
 |thumbnailPhoto|Stream||
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
@@ -107,7 +97,7 @@ Here is a JSON representation of the resource
 |manager|[DirectoryObject](directoryobject.md)| Read-only.|
 |memberOf|[DirectoryObject](directoryobject.md) collection| Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -120,3 +110,6 @@ Here is a JSON representation of the resource
 |[Checkmembergroups](../api/orgcontact_checkmembergroups.md)|String||
 |[Get MemberGroups](../api/orgcontact_getmembergroups.md)|String||
 |[Get MemberObjects](../api/orgcontact_getmemberobjects.md)|String||
+
+<!-- uuid: e0724ccc-c7ec-40fc-b6d7-57ad6a701961
+2015-10-09 17:14:37 UTC -->

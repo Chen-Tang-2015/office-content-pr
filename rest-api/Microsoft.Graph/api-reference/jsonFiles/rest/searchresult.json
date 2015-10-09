@@ -15,11 +15,23 @@
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
-  "restPath": [
-
-  ],
+  "restPath": {
+  },
   "properties": [
-
+    {
+      "name": "onClickTelemetryUrl",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": false
+    }
   ],
   "methods": [
 

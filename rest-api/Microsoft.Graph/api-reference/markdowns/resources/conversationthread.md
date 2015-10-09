@@ -2,18 +2,9 @@
 
 A thread is a collection of [posts](#PostResource). The last post's recipients collection is the aggregated recipients of the entire thread. A thread can have a growing collection of recipients. A new thread is created when a recipient is removed from the thread.
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "Extensions",
-    "Posts"
-  ],
-  "@odata.type": "microsoft.graph.ConversationThread"
-}-->
 
 ```json
 {
@@ -49,7 +40,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |CcRecipients|[Recipient](recipient.md) collection|Aggregation of Cc recipients from all messages on the thread|
@@ -62,13 +53,13 @@ Here is a JSON representation of the resource
 |Topic|String||
 |UniqueSenders|String collection||
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 |Posts|[Post](post.md) collection|Collection with all the identifiers of the posts that compose the thread. A navigation property. Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -78,3 +69,6 @@ Here is a JSON representation of the resource
 |[Update](../api/conversationthread_update.md) | [ConversationThread](conversationthread.md)	|Update ConversationThread object. |
 |[Delete](../api/conversationthread_delete.md) | Void	|Delete ConversationThread object. |
 |[Reply](../api/conversationthread_reply.md)|[None](none.md)||
+
+<!-- uuid: 806bcb75-db49-4a2e-984b-c51d03abd4a3
+2015-10-09 17:14:36 UTC -->

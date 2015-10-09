@@ -2,30 +2,9 @@
 
 A group is a shared resource that people can use to collaborate and communicate.
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "AcceptedSenders",
-    "CalendarView",
-    "Conversations",
-    "Events",
-    "Extensions",
-    "GroupPhotos",
-    "RejectedSenders",
-    "Threads",
-    "appRoleAssignments",
-    "memberOf",
-    "members",
-    "owners",
-    "plans",
-    "tasks"
-  ],
-  "@odata.type": "microsoft.graph.Group"
-}-->
 
 ```json
 {
@@ -151,7 +130,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |AccessType|String|Indicates the access type of the group (eg. Private, Secret, Public). Possible values are: `None`, `Private`, `Secret`, `Public`.|
@@ -179,7 +158,7 @@ Here is a JSON representation of the resource
 |proxyAddresses|String collection|Specifies SMTP addresses for the group, in the form of "SMTP:serviceadmins@contoso.onmicrosoft.com", as an example.|
 |securityEnabled|Boolean|Specifies whether the group is a security group. If the `mailEnabled` property is also true, the group is a mail-enabled security group; otherwise it is a security group. You can enable the security of an Office 365 Group after the group is created, but once you do that, you won't be able to change it back.|
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |AcceptedSenders|[DirectoryObject](directoryobject.md) collection| Read-only. Nullable.|
@@ -202,7 +181,7 @@ Here is a JSON representation of the resource
 |plans|[Plan](plan.md) collection| Read-only. Nullable.|
 |tasks|[Task](task.md) collection| Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -231,3 +210,6 @@ Here is a JSON representation of the resource
 |[Checkmembergroups](../api/group_checkmembergroups.md)|String||
 |[Get MemberGroups](../api/group_getmembergroups.md)|String||
 |[Get MemberObjects](../api/group_getmemberobjects.md)|String||
+
+<!-- uuid: f626cf19-d4e5-4600-81e2-beb7c9befb86
+2015-10-09 17:14:36 UTC -->

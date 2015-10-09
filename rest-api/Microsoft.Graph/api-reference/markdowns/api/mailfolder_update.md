@@ -1,18 +1,18 @@
 # Update MailFolder
 
 Update the properties of mailfolder object.
-#### HTTP request
-<!-- { "blockType": "ignored" } -->
+### HTTP request
 ```http
-
+PATCH /users/<objectId>/RootFolder
+PATCH /users/<objectId>/Folders/<Id>
+PATCH /drives/<id>/root/createdByUser/RootFolder
 ```
-
-#### Optional request headers
+### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
 | X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
 
-#### Request body
+### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
 
 | Property	   | Type	|Description|
@@ -21,5 +21,35 @@ In the request body, supply the values for relevant fields that should be update
 |DisplayName|String||
 |ParentFolderId|String||
 
-#### Response
+### Response
 If successful, this method returns a `200 OK` response code and updated [MailFolder](../resources/mailfolder.md) object in the response body.
+### Example
+##### Request
+Here is an example of the request.
+```http
+PUT /users/<objectId>/RootFolder
+Content-type: application/json
+Content-length: 130
+{
+  "ParentFolderId": "ParentFolderId-value",
+  "DisplayName": "DisplayName-value",
+  "ChildFolderCount": 99,
+  "Id": "Id-value"
+}
+```
+##### Response
+Here is an example of the response.
+```json
+HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 130
+{
+  "ParentFolderId": "ParentFolderId-value",
+  "DisplayName": "DisplayName-value",
+  "ChildFolderCount": 99,
+  "Id": "Id-value"
+}
+```
+
+<!-- uuid: fd8a46f0-9f4b-4344-96d0-a4f64c6a26e5
+2015-10-09 17:14:36 UTC -->

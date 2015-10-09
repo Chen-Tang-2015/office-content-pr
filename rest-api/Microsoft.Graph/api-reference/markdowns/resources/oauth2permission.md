@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-
-  ],
-  "@odata.type": "microsoft.graph.OAuth2Permission"
-}-->
 
 ```json
 {
@@ -27,7 +19,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |adminConsentDescription|String||
@@ -38,3 +30,6 @@ Here is a JSON representation of the resource
 |userConsentDescription|String||
 |userConsentDisplayName|String||
 |value|String||
+
+<!-- uuid: 82ccb7e1-c6c9-41f7-9e39-a9271ba14719
+2015-10-09 17:14:36 UTC -->

@@ -2,19 +2,9 @@
 
 A folder that contains contacts.
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "ChildFolders",
-    "Contacts",
-    "Extensions"
-  ],
-  "@odata.type": "microsoft.graph.ContactFolder"
-}-->
 
 ```json
 {
@@ -39,21 +29,21 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |DisplayName|String|The folder's display name.|
 |Id|String|Unique identifier of the contact folder. Read-only.|
 |ParentFolderId|String|The ID of the folder's parent folder.|
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |ChildFolders|[ContactFolder](contactfolder.md) collection|The collection of child folders in the folder. Navigation property. Read-only. Nullable.|
 |Contacts|[Contact](contact.md) collection|The contacts in the folder. Navigation property. Read-only. Nullable.|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -63,3 +53,6 @@ Here is a JSON representation of the resource
 |[Create Extension](../api/contactfolder_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
 |[Update](../api/contactfolder_update.md) | [ContactFolder](contactfolder.md)	|Update ContactFolder object. |
 |[Delete](../api/contactfolder_delete.md) | Void	|Delete ContactFolder object. |
+
+<!-- uuid: 7c3ce2a4-ee14-4eb4-9565-0b78155db373
+2015-10-09 17:14:36 UTC -->

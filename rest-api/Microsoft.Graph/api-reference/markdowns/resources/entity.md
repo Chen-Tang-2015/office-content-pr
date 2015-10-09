@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "Extensions"
-  ],
-  "@odata.type": "microsoft.graph.Entity"
-}-->
 
 ```json
 {
@@ -25,20 +17,23 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |Id|String| Read-only.|
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get Entity](../api/entity_get.md) | [Entity](entity.md) |Read properties and relationships of entity object.|
 |[Create Extension](../api/entity_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
 |[Delete](../api/entity_delete.md) | Void	|Delete Entity object. |
+
+<!-- uuid: 6ca814ff-a818-4702-96cf-a6dc02d23004
+2015-10-09 17:14:36 UTC -->

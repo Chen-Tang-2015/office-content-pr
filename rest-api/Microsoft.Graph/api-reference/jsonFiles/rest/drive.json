@@ -15,21 +15,17 @@
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
-  "restPath": [],
+  "restPath": {
+    "/groups/<objectId>/drive": true,
+    "/users/<objectId>/JoinedGroups/<objectId>/drive": true,
+    "/users/<objectId>/drive": true,
+    "/drives/<id>": true,
+    "/shares/<id>/items/<id>/createdByUser/JoinedGroups/<objectId>/drive": true,
+    "/shares/<id>/items/<id>/createdByUser/drive": true,
+    "/shares/<id>/items/<id>/lastModifiedByUser/JoinedGroups/<objectId>/drive": true,
+    "/shares/<id>/items/<id>/lastModifiedByUser/drive": true
+  },
   "properties": [
-    {
-      "name": "driveType",
-      "description": "Enumerated value that identifies the type of drive account. OneDrive drives will show as `personal`.",
-      "isKey": false,
-      "dataType": "String",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": false
-    },
     {
       "name": "id",
       "description": "The unique identifier of the drive.",
@@ -39,8 +35,23 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": false,
+      "isUnicode": false
+    },
+    {
+      "name": "driveType",
+      "description": "Enumerated value that identifies the type of drive account. OneDrive drives will show as `personal`.",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
       "isUnicode": false
     },
     {
@@ -52,6 +63,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": null
@@ -65,6 +77,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": null
@@ -78,6 +91,35 @@
       "enumName": null,
       "isCollection": true,
       "isRelationship": true,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": true,
+      "isUnicode": null
+    },
+    {
+      "name": "shared",
+      "description": "",
+      "isKey": false,
+      "dataType": "item",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": true,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": true,
+      "isUnicode": null
+    },
+    {
+      "name": "special",
+      "description": "Collection of common folders available in OneDrive.",
+      "isKey": false,
+      "dataType": "item",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": true,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": true,
       "isUnicode": null
@@ -91,10 +133,26 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": true,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": false,
       "isUnicode": null
     }
   ],
-  "methods": []
+  "methods": [
+    {
+      "name": "allPhotos",
+      "displayName": "",
+      "description": "",
+      "prerequisites": "",
+      "returnType": "item",
+      "isReturnNullable": false,
+      "isReturnTypeCollection": true,
+      "httpSuccessCode": "200",
+      "isFunction": true,
+      "scopes": [],
+      "errorCodes": [],
+      "parameters": []
+    }
+  ]
 }

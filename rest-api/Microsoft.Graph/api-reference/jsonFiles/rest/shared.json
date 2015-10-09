@@ -1,0 +1,53 @@
+{
+  "name": "shared",
+  "description": "",
+  "collectionOf": null,
+  "isComplexType": true,
+  "isEntitySet": false,
+  "allowPatch": false,
+  "allowUpsert": false,
+  "allowPatchCreate": false,
+  "allowDelete": false,
+  "info": null,
+  "propertyNotes": "",
+  "relationshipNotes": "",
+  "methodNotes": "",
+  "createDescription": "",
+  "updateDescription": "",
+  "deleteDescription": "",
+  "restPath": {
+  },
+  "properties": [
+    {
+      "name": "owner",
+      "description": "",
+      "isKey": false,
+      "dataType": "identitySet",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "scope",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": false
+    }
+  ],
+  "methods": [
+
+  ]
+}

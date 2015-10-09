@@ -2,18 +2,9 @@
 
 An individual message posted to a group conversation.
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "Attachments",
-    "Extensions"
-  ],
-  "@odata.type": "microsoft.graph.Post"
-}-->
 
 ```json
 {
@@ -58,7 +49,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |Body|[ItemBody](itembody.md)||
@@ -75,14 +66,14 @@ Here is a JSON representation of the resource
 |NewParticipants|[Recipient](recipient.md) collection|Conversation participants that were added to the thread as part of this post.|
 |Sender|[Recipient](recipient.md)|Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.|
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |Attachments|[Attachment](attachment.md) collection|Contains the collection of attachments for the post. This is a navigation property. Read-only. Nullable.|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 |InReplyTo|[Post](post.md)|Identifies the post that this post is in reply to. This property can be null. This is a navigation property. Read-only.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -93,3 +84,6 @@ Here is a JSON representation of the resource
 |[Delete](../api/post_delete.md) | Void	|Delete Post object. |
 |[Forward](../api/post_forward.md)|[None](none.md)||
 |[Reply](../api/post_reply.md)|[None](none.md)||
+
+<!-- uuid: c07a6ec3-8a07-4c2a-aa6e-9dd3476e7e65
+2015-10-09 17:14:37 UTC -->

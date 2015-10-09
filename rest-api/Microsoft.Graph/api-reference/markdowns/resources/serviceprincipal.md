@@ -2,23 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "Extensions",
-    "appRoleAssignments",
-    "createdObjects",
-    "memberOf",
-    "oauth2PermissionGrants",
-    "ownedObjects",
-    "owners"
-  ],
-  "@odata.type": "microsoft.graph.ServicePrincipal"
-}-->
 
 ```json
 {
@@ -110,7 +96,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |accountEnabled|Boolean||
@@ -136,7 +122,7 @@ Here is a JSON representation of the resource
 |servicePrincipalNames|String collection||
 |tags|String collection||
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
@@ -149,7 +135,7 @@ Here is a JSON representation of the resource
 |ownedObjects|[DirectoryObject](directoryobject.md) collection| Read-only. Nullable.|
 |owners|[DirectoryObject](directoryobject.md) collection| Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -166,3 +152,6 @@ Here is a JSON representation of the resource
 |[Checkmembergroups](../api/serviceprincipal_checkmembergroups.md)|String||
 |[Get MemberGroups](../api/serviceprincipal_getmembergroups.md)|String||
 |[Get MemberObjects](../api/serviceprincipal_getmemberobjects.md)|String||
+
+<!-- uuid: c3bb72fd-c344-4f41-97ac-e7f77e2212c7
+2015-10-09 17:14:37 UTC -->

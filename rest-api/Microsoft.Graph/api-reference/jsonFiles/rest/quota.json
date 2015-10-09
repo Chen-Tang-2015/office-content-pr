@@ -15,9 +15,8 @@
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
-  "restPath": [
-
-  ],
+  "restPath": {
+  },
   "properties": [
     {
       "name": "deleted",
@@ -28,8 +27,9 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
-      "isNullable": false,
+      "isNullable": null,
       "isUnicode": null
     },
     {
@@ -41,8 +41,9 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
-      "isNullable": false,
+      "isNullable": null,
       "isUnicode": null
     },
     {
@@ -54,6 +55,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": false
@@ -67,8 +69,23 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
-      "isNullable": false,
+      "isNullable": null,
+      "isUnicode": null
+    },
+    {
+      "name": "used",
+      "description": "",
+      "isKey": false,
+      "dataType": "Int64",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
       "isUnicode": null
     }
   ],

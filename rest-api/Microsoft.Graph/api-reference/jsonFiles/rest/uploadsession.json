@@ -15,10 +15,23 @@
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
-  "restPath": [
-
-  ],
+  "restPath": {
+  },
   "properties": [
+    {
+      "name": "uploadUrl",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": false
+    },
     {
       "name": "expirationDateTime",
       "description": "",
@@ -28,8 +41,9 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
-      "isNullable": false,
+      "isNullable": null,
       "isUnicode": null
     },
     {
@@ -41,19 +55,7 @@
       "enumName": null,
       "isCollection": true,
       "isRelationship": false,
-      "allowPostToCollection": true,
-      "isNullable": null,
-      "isUnicode": false
-    },
-    {
-      "name": "uploadUrl",
-      "description": "",
-      "isKey": false,
-      "dataType": "String",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": false

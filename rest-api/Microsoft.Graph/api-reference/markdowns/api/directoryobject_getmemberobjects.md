@@ -1,22 +1,50 @@
 # DirectoryObject: getMemberObjects
 
 
-#### HTTP request
-<!-- { "blockType": "ignored" } -->
+### HTTP request
 ```http
-to be completed....
+POST /users/<objectId>/manager/getMemberObjects
+POST /contacts/<objectId>/manager/getMemberObjects
+POST /directoryObjects/<objectId>/getMemberObjects
+
 ```
-#### Request headers
+### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
 | X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
 
-#### Request body
+### Request body
 In the request body, provide a JSON object with the following parameters.
 
 | Parameter	   | Type	|Description|
 |:---------------|:--------|:----------|
 |securityEnabledOnly|Boolean||
 
-#### Response
+### Response
 If successful, this method returns `200, OK` response code and String collection object in the response body.
+
+### Example
+Here is an example of how to call this API.
+##### Request
+```http
+POST /users/<objectId>/manager/getMemberObjects
+Content-type: application/json
+Content-length: 33
+{
+  "securityEnabledOnly": true
+}
+```
+##### Response
+```json
+HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 39
+{
+  "value": [
+    "String-value"
+  ]
+}
+```
+
+<!-- uuid: c67c067a-5a86-40a9-995c-0b2fe5788bc5
+2015-10-09 17:14:36 UTC -->

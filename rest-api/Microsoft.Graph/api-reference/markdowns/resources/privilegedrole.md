@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "Assignments"
-  ],
-  "@odata.type": "microsoft.graph.PrivilegedRole"
-}-->
 
 ```json
 {
@@ -32,20 +24,20 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |Id|Guid| Read-only.|
 |Name|String||
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |Assignments|[PrivilegedRoleAssignment](privilegedroleassignment.md) collection| Read-only. Nullable.|
 |Settings|[PrivilegedRoleSettings](privilegedrolesettings.md)| Read-only.|
 |Summary|[PrivilegedRoleSummary](privilegedrolesummary.md)| Read-only.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -55,3 +47,6 @@ Here is a JSON representation of the resource
 |[Delete](../api/privilegedrole_delete.md) | Void	|Delete PrivilegedRole object. |
 |[Selfactivate](../api/privilegedrole_selfactivate.md)|[PrivilegedRoleAssignment](privilegedroleassignment.md)||
 |[Selfdeactivate](../api/privilegedrole_selfdeactivate.md)|[PrivilegedRoleAssignment](privilegedroleassignment.md)||
+
+<!-- uuid: 65d339ed-efff-4568-a93b-c58d68850707
+2015-10-09 17:14:37 UTC -->

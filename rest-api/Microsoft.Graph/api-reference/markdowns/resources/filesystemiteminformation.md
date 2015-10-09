@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-
-  ],
-  "@odata.type": "microsoft.graph.FileSystemItemInformation"
-}-->
 
 ```json
 {
@@ -29,10 +21,13 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |file|[file](file.md)||
 |folder|[folder](folder.md)||
 |name|String||
 |parentReference|[itemReference](itemreference.md)||
+
+<!-- uuid: fd291877-17b5-4fe2-a9ab-8e895a909666
+2015-10-09 17:14:36 UTC -->

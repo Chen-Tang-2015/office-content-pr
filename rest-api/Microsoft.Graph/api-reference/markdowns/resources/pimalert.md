@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-
-  ],
-  "@odata.type": "microsoft.graph.PimAlert"
-}-->
 
 ```json
 {
@@ -35,7 +27,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |AdditionalData|String||
@@ -55,11 +47,11 @@ Here is a JSON representation of the resource
 |SeverityLevel|Int32||
 |WasDismissed|Boolean||
 
-#### Relationships
+### Relationships
 None
 
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -69,3 +61,6 @@ None
 |[Dismiss](../api/pimalert_dismiss.md)|[PimAlert](pimalert.md)||
 |[Fix](../api/pimalert_fix.md)|[PimAlert](pimalert.md)||
 |[Reactivate](../api/pimalert_reactivate.md)|[PimAlert](pimalert.md)||
+
+<!-- uuid: e5083796-abfb-417c-9ae3-58237b3a6149
+2015-10-09 17:14:37 UTC -->

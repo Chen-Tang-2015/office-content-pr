@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "Extensions"
-  ],
-  "@odata.type": "microsoft.graph.DirectoryLinkChange"
-}-->
 
 ```json
 {
@@ -34,7 +26,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |associationType|String||
@@ -48,12 +40,12 @@ Here is a JSON representation of the resource
 |targetObjectType|String||
 |targetObjectUri|String||
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -64,3 +56,6 @@ Here is a JSON representation of the resource
 |[Checkmembergroups](../api/directorylinkchange_checkmembergroups.md)|String||
 |[Get MemberGroups](../api/directorylinkchange_getmembergroups.md)|String||
 |[Get MemberObjects](../api/directorylinkchange_getmemberobjects.md)|String||
+
+<!-- uuid: d1ef9c28-0bae-4fc0-ae73-515f5ed243a3
+2015-10-09 17:14:36 UTC -->

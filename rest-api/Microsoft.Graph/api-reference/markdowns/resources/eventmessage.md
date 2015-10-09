@@ -2,18 +2,9 @@
 
 A message that represents a meeting request, meeting cancel message, meeting accept message, meeting tentatively accept message, or meeting declined message.
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "Attachments",
-    "Extensions"
-  ],
-  "@odata.type": "microsoft.graph.EventMessage"
-}-->
 
 ```json
 {
@@ -86,7 +77,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |BccRecipients|[Recipient](recipient.md) collection||
@@ -117,14 +108,14 @@ Here is a JSON representation of the resource
 |UniqueBody|[ItemBody](itembody.md)||
 |WebLink|String||
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |Attachments|[Attachment](attachment.md) collection| Read-only. Nullable.|
 |Event|[Event](event.md)| The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property.  Read-only.|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -142,3 +133,6 @@ Here is a JSON representation of the resource
 |[Reply](../api/eventmessage_reply.md)|[None](none.md)||
 |[Replyall](../api/eventmessage_replyall.md)|[None](none.md)||
 |[Send](../api/eventmessage_send.md)|[None](none.md)||
+
+<!-- uuid: 19a76397-2a55-47b9-b40f-493ab10544e9
+2015-10-09 17:14:36 UTC -->

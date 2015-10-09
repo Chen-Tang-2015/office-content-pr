@@ -2,17 +2,9 @@
 
 A contact. Contacts are contained in contact folders.
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "Extensions"
-  ],
-  "@odata.type": "microsoft.graph.Contact"
-}-->
 
 ```json
 {
@@ -80,7 +72,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |AssistantName|String|The name of the contact's assistant.|
@@ -119,13 +111,13 @@ Here is a JSON representation of the resource
 |YomiGivenName|String|The phonetic Japanese given name (first name) of the contact. This property is optional.|
 |YomiSurname|String|The phonetic Japanese surname (last name)  of the contact. This property is optional.|
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |ContactPhoto|[Photo](photo.md)| Read-only.|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -133,3 +125,6 @@ Here is a JSON representation of the resource
 |[Create Extension](../api/contact_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
 |[Update](../api/contact_update.md) | [Contact](contact.md)	|Update Contact object. |
 |[Delete](../api/contact_delete.md) | Void	|Delete Contact object. |
+
+<!-- uuid: 02f7b8b0-337a-49ca-9e51-8f2fe9d49aea
+2015-10-09 17:14:36 UTC -->

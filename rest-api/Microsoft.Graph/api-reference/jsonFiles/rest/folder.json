@@ -15,7 +15,7 @@
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
-  "restPath": [],
+  "restPath": {},
   "properties": [
     {
       "name": "childCount",
@@ -26,8 +26,9 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
-      "isNullable": false,
+      "isNullable": null,
       "isUnicode": null
     }
   ],

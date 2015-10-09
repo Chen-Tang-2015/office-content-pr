@@ -2,19 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "ChildFolders",
-    "Extensions",
-    "Messages"
-  ],
-  "@odata.type": "microsoft.graph.MailFolder"
-}-->
 
 ```json
 {
@@ -40,7 +30,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |ChildFolderCount|Int32||
@@ -48,14 +38,14 @@ Here is a JSON representation of the resource
 |Id|String| Read-only.|
 |ParentFolderId|String||
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |ChildFolders|[MailFolder](mailfolder.md) collection| Read-only. Nullable.|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 |Messages|[Message](message.md) collection| Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -67,3 +57,6 @@ Here is a JSON representation of the resource
 |[Delete](../api/mailfolder_delete.md) | Void	|Delete MailFolder object. |
 |[Copy](../api/mailfolder_copy.md)|[MailFolder](mailfolder.md)||
 |[Move](../api/mailfolder_move.md)|[MailFolder](mailfolder.md)||
+
+<!-- uuid: 5373b42e-8f4a-4029-ab17-8799a949611f
+2015-10-09 17:14:36 UTC -->

@@ -2,18 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "sectionGroups",
-    "sections"
-  ],
-  "@odata.type": "microsoft.graph.SectionGroup"
-}-->
 
 ```json
 {
@@ -45,7 +36,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |createdBy|String|The user who created the section group.|
@@ -58,7 +49,7 @@ Here is a JSON representation of the resource
 |sectionsUrl|String|The URL for the sections navigation property, which returns all the sections in the section group.|
 |self|String|The endpoint where you can get details about the section group.|
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |parentNotebook|[Notebook](notebook.md)|The notebook that contains the section group, expanded by default with the id, name, and self properties selected. Read-only.|
@@ -66,7 +57,7 @@ Here is a JSON representation of the resource
 |sectionGroups|[SectionGroup](sectiongroup.md) collection| Read-only. Nullable.|
 |sections|[Section](section.md) collection|The sections in the section group. Can be navigated to using the sectionsUrl property or expanded in a GET request. Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -75,3 +66,6 @@ Here is a JSON representation of the resource
 |[Create Section](../api/sectiongroup_post_sections.md) |[Section](section.md)| Create a new Section by posting to the sections collection.|
 |[Update](../api/sectiongroup_update.md) | [SectionGroup](sectiongroup.md)	|Update SectionGroup object. |
 |[Delete](../api/sectiongroup_delete.md) | Void	|Delete SectionGroup object. |
+
+<!-- uuid: d4f9b082-61d6-48e4-8ada-f3ba5a6ae616
+2015-10-09 17:14:37 UTC -->

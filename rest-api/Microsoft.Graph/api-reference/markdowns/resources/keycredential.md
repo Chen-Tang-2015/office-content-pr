@@ -2,17 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-
-  ],
-  "@odata.type": "microsoft.graph.KeyCredential"
-}-->
 
 ```json
 {
@@ -26,7 +18,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |customKeyIdentifier|Binary||
@@ -36,3 +28,6 @@ Here is a JSON representation of the resource
 |type|String||
 |usage|String||
 |value|Binary||
+
+<!-- uuid: 17adcdad-94dc-4895-834c-a0ee3e870c52
+2015-10-09 17:14:36 UTC -->

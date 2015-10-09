@@ -2,18 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "buckets",
-    "tasks"
-  ],
-  "@odata.type": "microsoft.graph.Plan"
-}-->
 
 ```json
 {
@@ -52,7 +43,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |activeTasks|Int32||
@@ -63,7 +54,7 @@ Here is a JSON representation of the resource
 |totalTasks|Int32||
 |version|String||
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |assignedToTaskBoard|[PlanTaskBoard](plantaskboard.md)| Read-only.|
@@ -74,7 +65,7 @@ Here is a JSON representation of the resource
 |tasks|[Task](task.md) collection| Read-only. Nullable.|
 |timeline|[PlanTimeline](plantimeline.md)| Read-only.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -83,3 +74,6 @@ Here is a JSON representation of the resource
 |[Create Task](../api/plan_post_tasks.md) |[Task](task.md)| Create a new Task by posting to the tasks collection.|
 |[Update](../api/plan_update.md) | [Plan](plan.md)	|Update Plan object. |
 |[Delete](../api/plan_delete.md) | Void	|Delete Plan object. |
+
+<!-- uuid: 5c1a8f88-4484-415c-8936-c8b4f1ca85f5
+2015-10-09 17:14:37 UTC -->

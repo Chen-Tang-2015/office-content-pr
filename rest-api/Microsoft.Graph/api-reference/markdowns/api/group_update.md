@@ -1,23 +1,23 @@
 # Update Group
 
 Update the properties of group object.
-#### HTTP request
-<!-- { "blockType": "ignored" } -->
+### HTTP request
 ```http
-
+PATCH /groups/<objectId>
+PATCH /users/<objectId>/JoinedGroups/<objectId>
+PATCH /drives/<id>/root/createdByUser/JoinedGroups/<objectId>
 ```
-
-#### Optional request headers
+### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
 | X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
 
-#### Request body
+### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|AccessType|String|Indicates the access type of the group (eg. Private, Secret, Public). Possible values are: `isExclusive` true,`options` {"None"=>{"value"=>"0", "description"=>""}, "Private"=>{"value"=>"1", "description"=>""}, "Secret"=>{"value"=>"2", "description"=>""}, "Public"=>{"value"=>"3", "description"=>""}}|
+|AccessType|String|Indicates the access type of the group (eg. Private, Secret, Public). Possible values are: `None`, `Private`, `Secret`, `Public`.|
 |AllowExternalSenders|Boolean|Default is false. Indicates if external members can send email to group.|
 |AutoSubscribeNewMembers|Boolean|Default is false. Indicates if new members added to the group will be auto-subscribed.|
 |EmailAddress|String|The primary SMTP address of the group.|
@@ -41,5 +41,93 @@ In the request body, supply the values for relevant fields that should be update
 |proxyAddresses|String|Specifies SMTP addresses for the group, in the form of "SMTP:serviceadmins@contoso.onmicrosoft.com", as an example.|
 |securityEnabled|Boolean|Specifies whether the group is a security group. If the `mailEnabled` property is also true, the group is a mail-enabled security group; otherwise it is a security group. You can enable the security of an Office 365 Group after the group is created, but once you do that, you won't be able to change it back.|
 
-#### Response
+### Response
 If successful, this method returns a `200 OK` response code and updated [Group](../resources/group.md) object in the response body.
+### Example
+##### Request
+Here is an example of the request.
+```http
+PUT /groups/<objectId>
+Content-type: application/json
+Content-length: 873
+{
+  "description": "description-value",
+  "dirSyncEnabled": true,
+  "displayName": "displayName-value",
+  "creationOptions": [
+    "creationOptions-value"
+  ],
+  "groupTypes": [
+    "groupTypes-value"
+  ],
+  "isPublic": true,
+  "lastDirSyncTime": "datetime-value",
+  "mail": "mail-value",
+  "mailNickname": "mailNickname-value",
+  "mailEnabled": true,
+  "onPremisesSecurityIdentifier": "onPremisesSecurityIdentifier-value",
+  "provisioningErrors": [
+    {
+    }
+  ],
+  "proxyAddresses": [
+    "proxyAddresses-value"
+  ],
+  "securityEnabled": true,
+  "AccessType": "AccessType-value",
+  "EmailAddress": "EmailAddress-value",
+  "AllowExternalSenders": true,
+  "AutoSubscribeNewMembers": true,
+  "IsSubscribedByMail": true,
+  "IsFavorite": true,
+  "UnseenCount": 99,
+  "objectType": "objectType-value",
+  "objectId": "objectId-value",
+  "deletionTimestamp": "datetime-value"
+}
+```
+##### Response
+Here is an example of the response.
+```json
+HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 873
+{
+  "description": "description-value",
+  "dirSyncEnabled": true,
+  "displayName": "displayName-value",
+  "creationOptions": [
+    "creationOptions-value"
+  ],
+  "groupTypes": [
+    "groupTypes-value"
+  ],
+  "isPublic": true,
+  "lastDirSyncTime": "datetime-value",
+  "mail": "mail-value",
+  "mailNickname": "mailNickname-value",
+  "mailEnabled": true,
+  "onPremisesSecurityIdentifier": "onPremisesSecurityIdentifier-value",
+  "provisioningErrors": [
+    {
+    }
+  ],
+  "proxyAddresses": [
+    "proxyAddresses-value"
+  ],
+  "securityEnabled": true,
+  "AccessType": "AccessType-value",
+  "EmailAddress": "EmailAddress-value",
+  "AllowExternalSenders": true,
+  "AutoSubscribeNewMembers": true,
+  "IsSubscribedByMail": true,
+  "IsFavorite": true,
+  "UnseenCount": 99,
+  "objectType": "objectType-value",
+  "objectId": "objectId-value",
+  "deletionTimestamp": "datetime-value"
+}
+```
+
+<!-- uuid: c3bdfd82-2f2b-4d3a-8de8-84a463ae5ffc
+2015-10-09 17:14:36 UTC -->

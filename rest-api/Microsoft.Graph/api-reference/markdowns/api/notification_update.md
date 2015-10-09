@@ -1,18 +1,16 @@
 # Update Notification
 
 Update the properties of notification object.
-#### HTTP request
-<!-- { "blockType": "ignored" } -->
+### HTTP request
 ```http
-
+PATCH /Notifications/<Id>
 ```
-
-#### Optional request headers
+### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
 | X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
 
-#### Request body
+### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
 
 | Property	   | Type	|Description|
@@ -21,5 +19,35 @@ In the request body, supply the values for relevant fields that should be update
 |NotificationTarget|String||
 |NotificationType|String||
 
-#### Response
+### Response
 If successful, this method returns a `200 OK` response code and updated [Notification](../resources/notification.md) object in the response body.
+### Example
+##### Request
+Here is an example of the request.
+```http
+PUT /Notifications/<Id>
+Content-type: application/json
+Content-length: 160
+{
+  "Id": "Id-value",
+  "DisplayName": "DisplayName-value",
+  "NotificationType": "NotificationType-value",
+  "NotificationTarget": "NotificationTarget-value"
+}
+```
+##### Response
+Here is an example of the response.
+```json
+HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 160
+{
+  "Id": "Id-value",
+  "DisplayName": "DisplayName-value",
+  "NotificationType": "NotificationType-value",
+  "NotificationTarget": "NotificationTarget-value"
+}
+```
+
+<!-- uuid: 3e9768db-a83f-44bc-a522-17e06bc6db2f
+2015-10-09 17:14:36 UTC -->

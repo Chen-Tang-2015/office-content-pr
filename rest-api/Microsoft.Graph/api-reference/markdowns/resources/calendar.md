@@ -2,19 +2,9 @@
 
 A calendar which is a container for events.
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "CalendarView",
-    "Events",
-    "Extensions"
-  ],
-  "@odata.type": "microsoft.graph.Calendar"
-}-->
 
 ```json
 {
@@ -40,7 +30,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |ChangeKey|String|Identifies the version of the calendar object. Every time the calendar is changed, ChangeKey  changes as well. This allows Exchange to apply changes to the correct version of the object.|
@@ -48,14 +38,14 @@ Here is a JSON representation of the resource
 |Id|String|The group's unique identifier. Read-only.|
 |Name|String|The calendar name.|
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |CalendarView|[Event](event.md) collection|The calendar view for the calendar. Navigation property. Read-only. Nullable.|
 |Events|[Event](event.md) collection|The events in the calendar. Navigation property. Read-only. Nullable.|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -65,3 +55,6 @@ Here is a JSON representation of the resource
 |[Create Extension](../api/calendar_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
 |[Update](../api/calendar_update.md) | [Calendar](calendar.md)	|Update Calendar object. |
 |[Delete](../api/calendar_delete.md) | Void	|Delete Calendar object. |
+
+<!-- uuid: 4010c969-80c5-41cb-93cf-ba23be21040c
+2015-10-09 17:14:35 UTC -->

@@ -2,19 +2,9 @@
 
 
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "Extensions",
-    "registeredOwners",
-    "registeredUsers"
-  ],
-  "@odata.type": "microsoft.graph.Device"
-}-->
 
 ```json
 {
@@ -58,7 +48,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |accountEnabled|Boolean||
@@ -78,14 +68,14 @@ Here is a JSON representation of the resource
 |objectId|String| Read-only.|
 |objectType|String||
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 |registeredOwners|[DirectoryObject](directoryobject.md) collection| Read-only. Nullable.|
 |registeredUsers|[DirectoryObject](directoryobject.md) collection| Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -98,3 +88,6 @@ Here is a JSON representation of the resource
 |[Checkmembergroups](../api/device_checkmembergroups.md)|String||
 |[Get MemberGroups](../api/device_getmembergroups.md)|String||
 |[Get MemberObjects](../api/device_getmemberobjects.md)|String||
+
+<!-- uuid: 89d3494a-e665-4c15-806c-9236545065ed
+2015-10-09 17:14:36 UTC -->

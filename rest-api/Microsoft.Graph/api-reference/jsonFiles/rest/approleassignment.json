@@ -15,9 +15,41 @@
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
-  "restPath": [
-
-  ],
+  "restPath": {
+    "/groups/<objectId>/appRoleAssignments/<objectId>": true,
+    "/groups/<objectId>/drive/items/<id>/createdByUser/appRoleAssignments/<objectId>": true,
+    "/groups/<objectId>/drive/items/<id>/lastModifiedByUser/appRoleAssignments/<objectId>": true,
+    "/groups/<objectId>/drive/shared/<id>/createdByUser/appRoleAssignments/<objectId>": true,
+    "/groups/<objectId>/drive/shared/<id>/lastModifiedByUser/appRoleAssignments/<objectId>": true,
+    "/groups/<objectId>/drive/special/<id>/createdByUser/appRoleAssignments/<objectId>": true,
+    "/groups/<objectId>/drive/special/<id>/lastModifiedByUser/appRoleAssignments/<objectId>": true,
+    "/groups/<objectId>/drive/root/createdByUser/appRoleAssignments/<objectId>": true,
+    "/groups/<objectId>/drive/root/lastModifiedByUser/appRoleAssignments/<objectId>": true,
+    "/servicePrincipals/<objectId>/appRoleAssignedTo": true,
+    "/servicePrincipals/<objectId>/appRoleAssignments/<objectId>": true,
+    "/users/<objectId>/appRoleAssignments/<objectId>": true,
+    "/users/<objectId>/JoinedGroups/<objectId>/appRoleAssignments/<objectId>": true,
+    "/drives/<id>/items/<id>/createdByUser/appRoleAssignments/<objectId>": true,
+    "/drives/<id>/items/<id>/createdByUser/JoinedGroups/<objectId>/appRoleAssignments/<objectId>": true,
+    "/drives/<id>/items/<id>/lastModifiedByUser/appRoleAssignments/<objectId>": true,
+    "/drives/<id>/items/<id>/lastModifiedByUser/JoinedGroups/<objectId>/appRoleAssignments/<objectId>": true,
+    "/drives/<id>/shared/<id>/createdByUser/appRoleAssignments/<objectId>": true,
+    "/drives/<id>/shared/<id>/createdByUser/JoinedGroups/<objectId>/appRoleAssignments/<objectId>": true,
+    "/drives/<id>/shared/<id>/lastModifiedByUser/appRoleAssignments/<objectId>": true,
+    "/drives/<id>/shared/<id>/lastModifiedByUser/JoinedGroups/<objectId>/appRoleAssignments/<objectId>": true,
+    "/drives/<id>/special/<id>/createdByUser/appRoleAssignments/<objectId>": true,
+    "/drives/<id>/special/<id>/createdByUser/JoinedGroups/<objectId>/appRoleAssignments/<objectId>": true,
+    "/drives/<id>/special/<id>/lastModifiedByUser/appRoleAssignments/<objectId>": true,
+    "/drives/<id>/special/<id>/lastModifiedByUser/JoinedGroups/<objectId>/appRoleAssignments/<objectId>": true,
+    "/drives/<id>/root/createdByUser/appRoleAssignments/<objectId>": true,
+    "/drives/<id>/root/createdByUser/JoinedGroups/<objectId>/appRoleAssignments/<objectId>": true,
+    "/drives/<id>/root/lastModifiedByUser/appRoleAssignments/<objectId>": true,
+    "/drives/<id>/root/lastModifiedByUser/JoinedGroups/<objectId>/appRoleAssignments/<objectId>": true,
+    "/shares/<id>/items/<id>/createdByUser/appRoleAssignments/<objectId>": true,
+    "/shares/<id>/items/<id>/createdByUser/JoinedGroups/<objectId>/appRoleAssignments/<objectId>": true,
+    "/shares/<id>/items/<id>/lastModifiedByUser/appRoleAssignments/<objectId>": true,
+    "/shares/<id>/items/<id>/lastModifiedByUser/JoinedGroups/<objectId>/appRoleAssignments/<objectId>": true
+  },
   "properties": [
     {
       "name": "creationTimestamp",
@@ -28,6 +60,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": null
@@ -41,6 +74,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": false,
       "isUnicode": null
@@ -54,6 +88,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": false
@@ -67,6 +102,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": null
@@ -80,6 +116,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": false
@@ -93,6 +130,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": false
@@ -106,6 +144,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": null
@@ -119,6 +158,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": false
@@ -132,6 +172,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": false,
       "isUnicode": false
@@ -145,6 +186,7 @@
       "enumName": null,
       "isCollection": false,
       "isRelationship": false,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": null,
       "isUnicode": null
@@ -158,6 +200,7 @@
       "enumName": null,
       "isCollection": true,
       "isRelationship": true,
+      "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": true,
       "isUnicode": null
@@ -185,6 +228,7 @@
           "name": "groupIds",
           "description": "",
           "dataType": "String",
+          "isCollection": true,
           "isRequired": true,
           "enumName": null,
           "isNullable": false,
@@ -213,6 +257,7 @@
           "name": "securityEnabledOnly",
           "description": "",
           "dataType": "Boolean",
+          "isCollection": false,
           "isRequired": true,
           "enumName": null,
           "isNullable": null,
@@ -241,6 +286,7 @@
           "name": "securityEnabledOnly",
           "description": "",
           "dataType": "Boolean",
+          "isCollection": false,
           "isRequired": true,
           "enumName": null,
           "isNullable": null,

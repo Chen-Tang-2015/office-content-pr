@@ -2,19 +2,9 @@
 
 An event in a calendar.
 
-#### JSON representation
+### JSON representation
 
 Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-    "Attachments",
-    "Extensions",
-    "Instances"
-  ],
-  "@odata.type": "microsoft.graph.Event"
-}-->
 
 ```json
 {
@@ -85,7 +75,7 @@ Here is a JSON representation of the resource
 }
 
 ```
-#### Properties
+### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |Attendees|[Attendee](attendee.md) collection|The collection of attendees for the event.|
@@ -119,7 +109,7 @@ Here is a JSON representation of the resource
 |WebLink|String|The URL to open the event in Outlook Web App.<br/><br/>The event will open in the browser if you are logged in to your mailbox via Outlook Web App. You will be prompted to login if you are not already logged in with the browser.<br/><br/>This URL can be accessed from within an iFrame.|
 |iCalUId|String||
 
-#### Relationships
+### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |Attachments|[Attachment](attachment.md) collection|The collection of [FileAttachment](#FileAttachmentResource) and [ItemAttachment](#FileAttachmentResource) attachments for the event. Navigation property. Read-only. Nullable.|
@@ -127,7 +117,7 @@ Here is a JSON representation of the resource
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 |Instances|[Event](event.md) collection|The instances of the event. Navigation property. Read-only. Nullable.|
 
-#### Tasks
+### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
@@ -140,3 +130,6 @@ Here is a JSON representation of the resource
 |[Accept](../api/event_accept.md)|[None](none.md)||
 |[Decline](../api/event_decline.md)|[None](none.md)||
 |[Tentativelyaccept](../api/event_tentativelyaccept.md)|[None](none.md)||
+
+<!-- uuid: 660f6d03-442a-4c53-8a88-68f40d60e0f6
+2015-10-09 17:14:36 UTC -->

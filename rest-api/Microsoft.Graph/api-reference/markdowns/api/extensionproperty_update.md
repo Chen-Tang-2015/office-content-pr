@@ -1,18 +1,16 @@
 # Update ExtensionProperty
 
 Update the properties of extensionproperty object.
-#### HTTP request
-<!-- { "blockType": "ignored" } -->
+### HTTP request
 ```http
-
+PATCH /applications/<objectId>/extensionProperties/<objectId>
 ```
-
-#### Optional request headers
+### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
 | X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
 
-#### Request body
+### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
 
 | Property	   | Type	|Description|
@@ -25,5 +23,47 @@ In the request body, supply the values for relevant fields that should be update
 |objectType|String||
 |targetObjects|String||
 
-#### Response
+### Response
 If successful, this method returns a `200 OK` response code and updated [ExtensionProperty](../resources/extensionproperty.md) object in the response body.
+### Example
+##### Request
+Here is an example of the request.
+```http
+PUT /applications/<objectId>/extensionProperties/<objectId>
+Content-type: application/json
+Content-length: 297
+{
+  "appDisplayName": "appDisplayName-value",
+  "name": "name-value",
+  "dataType": "dataType-value",
+  "isSyncedFromOnPremises": true,
+  "targetObjects": [
+    "targetObjects-value"
+  ],
+  "objectType": "objectType-value",
+  "objectId": "objectId-value",
+  "deletionTimestamp": "datetime-value"
+}
+```
+##### Response
+Here is an example of the response.
+```json
+HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 297
+{
+  "appDisplayName": "appDisplayName-value",
+  "name": "name-value",
+  "dataType": "dataType-value",
+  "isSyncedFromOnPremises": true,
+  "targetObjects": [
+    "targetObjects-value"
+  ],
+  "objectType": "objectType-value",
+  "objectId": "objectId-value",
+  "deletionTimestamp": "datetime-value"
+}
+```
+
+<!-- uuid: 3073089c-64d8-499d-a816-52a0b0a97614
+2015-10-09 17:14:36 UTC -->
