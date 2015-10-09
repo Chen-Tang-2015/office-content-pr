@@ -57,6 +57,7 @@ The following tables list the Microsoft Graph API permission scopes and explains
 | _Sites.ReadWrite.All_ |    `Edit or delete items in all site collections` | Allows the application to edit or delete documents and list items in all site collections on behalf of the signed-in user |
 | _Tasks.Read.All_ |    `Read the user's tasks and projects`(preview) | Allows the app to read the user's tasks and projects on behalf of the user |
 | _Tasks.ReadWrite.All_ |    `Read and write the user's tasks and projects` (preview) | Allows the app to create, read, update and delete the user's tasks and projects on behalf of the user |
+
 <!-- | _Sites.Read.All_ |    `Read items in all site collections` | Allows the application to read documents and list  items in all site collections on behalf of the signed-in user |-->
 
 ##Permission scope scenarios
