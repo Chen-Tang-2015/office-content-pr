@@ -127,6 +127,8 @@ Here is a JSON representation of the resource
 |webDavUrl|String||
 |webUrl|String|URL that displays the resource in the browser. Read-only.|
 
+**Note:** The `eTag` and `cTag` properties work differently on containers (folders). The `cTag` value is modified when content or metadata of any descendant of the folder is changed. The `eTag` value is only modified when the folder's properties are changed, except for properties that are derived from descendants (like `childCount` or `lastModifiedDateTime`).
+
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
@@ -136,6 +138,8 @@ Here is a JSON representation of the resource
 |permissions|[permission](permission.md) collection| Read-only. Nullable.|
 |thumbnails|[thumbnailSet](thumbnailset.md) collection|Collection containing [ThumbnailSet](thumbnailSet.md) objects associated with the item. For more info, see [getting thumbnails](../items/thumbnails.md). Read-only. Nullable.|
 |versions|[item](item.md) collection| Read-only. Nullable.|
+
+**Note:** This table defines the relationships that the Item resource has to other resources.
 
 ### Tasks
 
@@ -149,12 +153,12 @@ Here is a JSON representation of the resource
 |[Update](../api/item_update.md) | [item](item.md)	|Update item object. |
 |[Delete](../api/item_delete.md) | Void	|Delete item object. |
 |[Allphotos](../api/item_allphotos.md)|[item](item.md)||
-|[Copy](../api/item_copy.md)|[item](item.md)||
+|[Copy](../api/item_copy.md)|[item](item.md)|Creates a copy of an Item (including any children) on OneDrive, under a new parent.|
 |[Createlink](../api/item_createlink.md)|[permission](permission.md)||
 |[Createsession](../api/item_createsession.md)|[uploadSession](uploadsession.md)||
 |[Delta](../api/item_delta.md)|[item](item.md)||
 |[Invite](../api/item_invite.md)|[permission](permission.md)||
 |[Search](../api/item_search.md)|[item](item.md)||
 
-<!-- uuid: 7ee4d1ff-54b4-4085-abc7-61ed16efb1f0
-2015-10-09 18:41:46 UTC -->
+<!-- uuid: fabb6e1a-1fd1-4f9f-b69d-80e285fc07c8
+2015-10-09 18:49:54 UTC -->
