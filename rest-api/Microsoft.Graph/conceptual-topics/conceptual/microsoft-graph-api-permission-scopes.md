@@ -54,11 +54,12 @@ The following tables list the Microsoft Graph API permission scopes and explains
 | _Calendar.ReadWrite_ |    `Have full access to user calendars`  | Allows the app to create, read, update, and delete events in user calendars. 
 | _Files.Read_ |    `Read users' files` | Allows the application to read the current user's files
 | _Files.ReadWrite_ |   `Edit or delete users' files`             | Allows the app to edit or delete the current user's files. |
+| _Sites.Read.All_ |    `Read items in all site collections` | Allows the application to read documents and list  items in all site collections on behalf of the signed-in user |
 | _Sites.ReadWrite.All_ |    `Edit or delete items in all site collections` | Allows the application to edit or delete documents and list items in all site collections on behalf of the signed-in user |
 | _Tasks.Read.All_ |    `Read the user's tasks and projects`(preview) | Allows the app to read the user's tasks and projects on behalf of the user |
 | _Tasks.ReadWrite.All_ |    `Read and write the user's tasks and projects` (preview) | Allows the app to create, read, update and delete the user's tasks and projects on behalf of the user |
 
-<!-- | _Sites.Read.All_ |    `Read items in all site collections` | Allows the application to read documents and list  items in all site collections on behalf of the signed-in user |-->
+<!-- -->
 
 ##Permission scope scenarios
 The following are some app scenarios using the `User` and `Group` resources and their corresponding required scopes. The following table shows the permission scopes needed for an app to be able to perform specific operations. Note that in some cases the ability of the app to perform some operations will depend on whether the permission scope is app-only or delegated, and, in the case of delegated permission scopes, on the privileges of the signed-in user. 
@@ -82,7 +83,7 @@ The following are some app scenarios using the `User` and `Group` resources and 
 | **App tasks involving Group**	 |  **Required scopes** |  **Permissions** |
 |:-------------------------------|:---------------------|:---------------|
 | App wants to read basic group info (only display name and picture), for example to show in a group picking experience	 | _Group.Read.All_  | `Read all groups` (preview) |
-| App wants to read all content in all unified groups, including files, conversations.  It also needs to show group memberships, be able to update group memberships, (if owner).  | 	_Sites.Read.All_, _Group.Read.All_ | `Read items in all site collections`, `Read all groups` (preview) |
+| App wants to read all content in all unified groups, including files, conversations.  It also needs to show group memberships, be able to update group memberships, (if owner).  |  _Group.Read.All_ | `Read items in all site collections`, `Read all groups` (preview) |
 | App wants to read and write all content in all unified groups, including files, conversations.  It also needs to show group memberships, be able to update group memberships, (if owner).  | 	_Group.ReadWrite.All_, _Sites.ReadWrite.All_ |  `Read and write all groups` (preview), `Edit or delete items in all site collections` |
 | App wants to discover (find) a unified group. It allows the user to search for a particular group and choose one from the enumerated list to allow the user to join the group.	 | _Group.ReadWrite.All_ | `Read and write all groups` (preview) |
 | App wants to create a group through AAD Graph | 	_Group.ReadWrite.All_ | `Read and write all groups` (preview) |
