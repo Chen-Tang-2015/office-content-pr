@@ -54,11 +54,10 @@ The following tables list the Microsoft Graph API permission scopes and explains
 | _Calendar.ReadWrite_ |    `Have full access to user calendars`  | Allows the app to create, read, update, and delete events in user calendars. 
 | _Files.Read_ |    `Read users' files` | Allows the application to read the current user's files
 | _Files.ReadWrite_ |   `Edit or delete users' files`             | Allows the app to edit or delete the current user's files. |
-<!-- | _Sites.Read.All_ |    `Read items in all site collections` | Allows the application to read documents and list  items in all site collections on behalf of the signed-in user |-->
 | _Sites.ReadWrite.All_ |    `Edit or delete items in all site collections` | Allows the application to edit or delete documents and list items in all site collections on behalf of the signed-in user |
 | _Tasks.Read.All_ |    `Read the user's tasks and projects`(preview) | Allows the app to read the user's tasks and projects on behalf of the user |
 | _Tasks.ReadWrite.All_ |    `Read and write the user's tasks and projects` (preview) | Allows the app to create, read, update and delete the user's tasks and projects on behalf of the user |
-
+<!-- | _Sites.Read.All_ |    `Read items in all site collections` | Allows the application to read documents and list  items in all site collections on behalf of the signed-in user |-->
 
 ##Permission scope scenarios
 The following are some app scenarios using the `User` and `Group` resources and their corresponding required scopes. The following table shows the permission scopes needed for an app to be able to perform specific operations. Note that in some cases the ability of the app to perform some operations will depend on whether the permission scope is app-only or delegated, and, in the case of delegated permission scopes, on the privileges of the signed-in user. 
