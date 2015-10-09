@@ -211,5 +211,5 @@ Here is a JSON representation of the resource
 |[Get MemberGroups](../api/group_getmembergroups.md)|String||
 |[Get MemberObjects](../api/group_getmemberobjects.md)|String||
 
-<!-- uuid: f626cf19-d4e5-4600-81e2-beb7c9befb86
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 5c9312f1-6b5a-45dc-8a06-62c4e30d9286
+2015-10-09 18:41:46 UTC -->

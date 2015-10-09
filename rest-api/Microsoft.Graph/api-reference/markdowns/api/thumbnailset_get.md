@@ -3,9 +3,9 @@
 Retrieve the properties and relationships of thumbnailset object.
 ### HTTP request
 ```http
+GET /drive/root/thumbnails/<id>
+GET /drive/items/<id>/thumbnails/<id>
 GET /drives/<id>/root/thumbnails/<id>
-GET /shares/<id>/items/<id>/thumbnails/<id>
-GET /drives/<id>/items/<id>/thumbnails/<id>
 ```
 ### Optional query parameters
 You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
@@ -38,5 +38,5 @@ Content-length: 96
 }
 ```
 
-<!-- uuid: 5eeaed52-eb92-42c9-a3b9-813df222e6bd
-2015-10-09 17:14:37 UTC -->
+<!-- uuid: 1c70548f-49aa-4142-bb60-bd96586aca12
+2015-10-09 18:41:47 UTC -->

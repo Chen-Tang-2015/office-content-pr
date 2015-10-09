@@ -4,8 +4,8 @@ Use this API to create a new ownedDevice.
 ### HTTP request
 ```http
 POST /users/<objectId>/ownedDevices
-POST /drives/<id>/root/createdByUser/ownedDevices
-POST /drives/<id>/root/lastModifiedByUser/ownedDevices
+POST /drive/root/createdByUser/ownedDevices
+POST /drive/root/lastModifiedByUser/ownedDevices
 
 ```
 ### Request headers
@@ -34,5 +34,5 @@ Content-length: 111
 }
 ```
 
-<!-- uuid: 199c1ef8-badf-486a-b818-28651c02ea89
-2015-10-09 17:14:37 UTC -->
+<!-- uuid: 1aa8441e-1604-4488-804e-f2df58bdcd28
+2015-10-09 18:41:47 UTC -->

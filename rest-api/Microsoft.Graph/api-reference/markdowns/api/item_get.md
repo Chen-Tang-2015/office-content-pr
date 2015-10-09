@@ -3,9 +3,9 @@
 Retrieve the properties and relationships of item object.
 ### HTTP request
 ```http
+GET /drive/root
+GET /drive/items/<id>
 GET /drives/<id>/root
-GET /shares/<id>/items/<id>
-GET /drives/<id>/items/<id>
 ```
 ### Optional query parameters
 You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
@@ -72,5 +72,5 @@ Content-length: 665
 }
 ```
 
-<!-- uuid: 3550b94c-35ad-407a-94de-96ac0f225aac
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 5c396716-0733-4ed3-ab6e-537b1921a1db
+2015-10-09 18:41:46 UTC -->

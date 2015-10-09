@@ -5,7 +5,7 @@
 ```http
 POST /groups/<objectId>/SubscribeByMail
 POST /users/<objectId>/JoinedGroups/<objectId>/SubscribeByMail
-POST /drives/<id>/root/createdByUser/JoinedGroups/<objectId>/SubscribeByMail
+POST /drive/root/createdByUser/JoinedGroups/<objectId>/SubscribeByMail
 
 ```
 ### Request headers
@@ -35,5 +35,5 @@ Content-length: 3
 }
 ```
 
-<!-- uuid: f26382d3-5dd9-4985-8d56-7651141f4c01
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 653a25a9-695b-4626-add0-5ac7910c81d4
+2015-10-09 18:41:46 UTC -->

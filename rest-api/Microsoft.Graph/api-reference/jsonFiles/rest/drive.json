@@ -12,6 +12,7 @@
   "propertyNotes": "",
   "relationshipNotes": "",
   "methodNotes": "",
+  "listDescription": "",
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
@@ -23,7 +24,8 @@
     "/shares/<id>/items/<id>/createdByUser/JoinedGroups/<objectId>/drive": true,
     "/shares/<id>/items/<id>/createdByUser/drive": true,
     "/shares/<id>/items/<id>/lastModifiedByUser/JoinedGroups/<objectId>/drive": true,
-    "/shares/<id>/items/<id>/lastModifiedByUser/drive": true
+    "/shares/<id>/items/<id>/lastModifiedByUser/drive": true,
+    "/drive": true
   },
   "properties": [
     {

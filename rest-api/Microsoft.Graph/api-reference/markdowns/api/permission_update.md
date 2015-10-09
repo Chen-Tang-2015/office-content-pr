@@ -3,9 +3,9 @@
 Update the properties of permission object.
 ### HTTP request
 ```http
+PATCH /drive/root/permissions/<id>
+PATCH /drive/items/<id>/permissions/<id>
 PATCH /drives/<id>/root/permissions/<id>
-PATCH /shares/<id>/items/<id>/permissions/<id>
-PATCH /drives/<id>/items/<id>/permissions/<id>
 ```
 ### Optional request headers
 | Name       | Type | Description|
@@ -30,7 +30,7 @@ If successful, this method returns a `200 OK` response code and updated [permiss
 ##### Request
 Here is an example of the request.
 ```http
-PUT /drives/<id>/root/permissions/<id>
+PUT /drive/root/permissions/<id>
 Content-type: application/json
 Content-length: 176
 {
@@ -72,5 +72,5 @@ Content-length: 176
 }
 ```
 
-<!-- uuid: e9219c1b-0403-4be4-8d70-bd4de2663d1a
-2015-10-09 17:14:37 UTC -->
+<!-- uuid: d06d0b2a-4743-4d0f-a17e-32216b41f2d8
+2015-10-09 18:41:46 UTC -->

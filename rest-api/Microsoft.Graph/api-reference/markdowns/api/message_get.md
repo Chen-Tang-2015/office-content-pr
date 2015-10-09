@@ -4,8 +4,8 @@ Retrieve the properties and relationships of message object.
 ### HTTP request
 ```http
 GET /users/<objectId>/Messages/<Id>
+GET /drive/root/createdByUser/Messages/<Id>
 GET /users/<objectId>/RootFolder/Messages/<Id>
-GET /users/<objectId>/Folders/<Id>/Messages/<Id>
 ```
 ### Optional query parameters
 You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
@@ -73,5 +73,5 @@ Content-length: 838
 }
 ```
 
-<!-- uuid: fb444132-b2f4-43ab-b9cd-7a2951107fa4
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: f1a505fa-9ed7-43dd-b227-cbf8f583f525
+2015-10-09 18:41:46 UTC -->

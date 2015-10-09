@@ -89,5 +89,5 @@ Here is a JSON representation of the resource
 |[Get MemberGroups](../api/device_getmembergroups.md)|String||
 |[Get MemberObjects](../api/device_getmemberobjects.md)|String||
 
-<!-- uuid: 89d3494a-e665-4c15-806c-9236545065ed
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 2a21e451-55f3-4e74-8fe9-15e56567e65c
+2015-10-09 18:41:45 UTC -->

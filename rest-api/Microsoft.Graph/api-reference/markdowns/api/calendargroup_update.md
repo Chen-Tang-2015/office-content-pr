@@ -4,8 +4,8 @@ Update the properties of calendargroup object.
 ### HTTP request
 ```http
 PATCH /users/<objectId>/CalendarGroups/<Id>
-PATCH /drives/<id>/root/createdByUser/CalendarGroups/<Id>
-PATCH /drives/<id>/root/lastModifiedByUser/CalendarGroups/<Id>
+PATCH /drive/root/createdByUser/CalendarGroups/<Id>
+PATCH /drive/root/lastModifiedByUser/CalendarGroups/<Id>
 ```
 ### Optional request headers
 | Name       | Type | Description|
@@ -51,5 +51,5 @@ Content-length: 110
 }
 ```
 
-<!-- uuid: 1e32687e-f0c5-4d29-b630-67709484ddf8
-2015-10-09 17:14:35 UTC -->
+<!-- uuid: dc5fdd9a-c398-4887-8df8-4e8f9d8934db
+2015-10-09 18:41:45 UTC -->

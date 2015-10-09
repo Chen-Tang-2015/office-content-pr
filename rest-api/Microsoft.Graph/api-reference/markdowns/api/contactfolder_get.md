@@ -4,8 +4,8 @@ Retrieve the properties and relationships of contactfolder object.
 ### HTTP request
 ```http
 GET /users/<objectId>/ContactFolders/<Id>
-GET /drives/<id>/root/createdByUser/ContactFolders/<Id>
-GET /drives/<id>/root/lastModifiedByUser/ContactFolders/<Id>
+GET /drive/root/createdByUser/ContactFolders/<Id>
+GET /drive/root/lastModifiedByUser/ContactFolders/<Id>
 ```
 ### Optional query parameters
 You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
@@ -32,5 +32,5 @@ Content-length: 104
 }
 ```
 
-<!-- uuid: 641e1105-e624-435e-9534-e9396acaa59a
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 7f49b039-44eb-42f6-bf93-ca123a82761e
+2015-10-09 18:41:45 UTC -->

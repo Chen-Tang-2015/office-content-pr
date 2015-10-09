@@ -5,7 +5,7 @@ Use this API to create a new Message.
 ```http
 POST /users/<objectId>/RootFolder/Messages
 POST /users/<objectId>/Folders/<Id>/Messages
-POST /drives/<id>/root/createdByUser/RootFolder/Messages
+POST /drive/root/createdByUser/RootFolder/Messages
 
 ```
 ### Request headers
@@ -75,5 +75,5 @@ Content-length: 838
 }
 ```
 
-<!-- uuid: aca0d7ec-e30c-44c9-87ef-fa8f99cb9f3e
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 03eb2db2-f49b-425d-b6b8-a9acfee77204
+2015-10-09 18:41:46 UTC -->

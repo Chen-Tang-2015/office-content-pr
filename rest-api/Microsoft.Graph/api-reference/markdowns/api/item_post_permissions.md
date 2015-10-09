@@ -3,9 +3,9 @@
 Use this API to create a new permission.
 ### HTTP request
 ```http
+POST /drive/root/permissions
+POST /drive/items/<id>/permissions
 POST /drives/<id>/root/permissions
-POST /shares/<id>/items/<id>/permissions
-POST /drives/<id>/items/<id>/permissions
 
 ```
 ### Request headers
@@ -44,5 +44,5 @@ Content-length: 176
 }
 ```
 
-<!-- uuid: eaaf31bb-7396-4155-a1f7-876dd39e476a
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 46c29f77-5887-49c4-a2ce-b9e3b440f76d
+2015-10-09 18:41:46 UTC -->

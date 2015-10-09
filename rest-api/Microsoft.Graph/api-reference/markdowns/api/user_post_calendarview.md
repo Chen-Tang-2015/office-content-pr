@@ -4,8 +4,8 @@ Use this API to create a new CalendarView.
 ### HTTP request
 ```http
 POST /users/<objectId>/CalendarView
-POST /drives/<id>/root/createdByUser/CalendarView
-POST /drives/<id>/root/lastModifiedByUser/CalendarView
+POST /drive/root/createdByUser/CalendarView
+POST /drive/root/lastModifiedByUser/CalendarView
 
 ```
 ### Request headers
@@ -71,5 +71,5 @@ Content-length: 901
 }
 ```
 
-<!-- uuid: b276a652-25ef-47f3-8cb4-9db7058ee7e2
-2015-10-09 17:14:37 UTC -->
+<!-- uuid: 06730090-f328-4687-936b-99f0ae25365c
+2015-10-09 18:41:47 UTC -->

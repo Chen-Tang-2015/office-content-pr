@@ -3,9 +3,9 @@
 Use this API to create a new special.
 ### HTTP request
 ```http
+POST /drive/special
 POST /drives/<id>/special
 POST /users/<objectId>/drive/special
-POST /groups/<objectId>/drive/special
 
 ```
 ### Request headers
@@ -74,5 +74,5 @@ Content-length: 665
 }
 ```
 
-<!-- uuid: 80bee5b4-f483-4f69-9746-b7c9ba353819
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 13eec5fb-0bb4-455d-ad05-5727228ed6a7
+2015-10-09 18:41:45 UTC -->

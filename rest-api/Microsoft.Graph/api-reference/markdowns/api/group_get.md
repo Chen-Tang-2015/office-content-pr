@@ -5,7 +5,7 @@ Retrieve the properties and relationships of group object.
 ```http
 GET /groups/<objectId>
 GET /users/<objectId>/JoinedGroups/<objectId>
-GET /drives/<id>/root/createdByUser/JoinedGroups/<objectId>
+GET /drive/root/createdByUser/JoinedGroups/<objectId>
 ```
 ### Optional query parameters
 You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
@@ -62,5 +62,5 @@ Content-length: 873
 }
 ```
 
-<!-- uuid: 3fb8d080-a0bd-48c3-8c9f-7225eaf8157e
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: d93b0b37-4bfc-48a8-8302-d51cd09dfc89
+2015-10-09 18:41:46 UTC -->

@@ -12,6 +12,7 @@
   "propertyNotes": "",
   "relationshipNotes": "",
   "methodNotes": "",
+  "listDescription": "",
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
@@ -27,7 +28,15 @@
     "/drives/<id>/root/createdByUser/JoinedGroups/<objectId>": true,
     "/drives/<id>/root/lastModifiedByUser/JoinedGroups/<objectId>": true,
     "/shares/<id>/items/<id>/createdByUser/JoinedGroups/<objectId>": true,
-    "/shares/<id>/items/<id>/lastModifiedByUser/JoinedGroups/<objectId>": true
+    "/shares/<id>/items/<id>/lastModifiedByUser/JoinedGroups/<objectId>": true,
+    "/drive/items/<id>/createdByUser/JoinedGroups/<objectId>": true,
+    "/drive/items/<id>/lastModifiedByUser/JoinedGroups/<objectId>": true,
+    "/drive/shared/<id>/createdByUser/JoinedGroups/<objectId>": true,
+    "/drive/shared/<id>/lastModifiedByUser/JoinedGroups/<objectId>": true,
+    "/drive/special/<id>/createdByUser/JoinedGroups/<objectId>": true,
+    "/drive/special/<id>/lastModifiedByUser/JoinedGroups/<objectId>": true,
+    "/drive/root/createdByUser/JoinedGroups/<objectId>": true,
+    "/drive/root/lastModifiedByUser/JoinedGroups/<objectId>": true
   },
   "properties": [
     {

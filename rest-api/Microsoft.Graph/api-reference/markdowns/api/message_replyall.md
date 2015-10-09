@@ -4,8 +4,8 @@
 ### HTTP request
 ```http
 POST /users/<objectId>/Messages/<Id>/ReplyAll
+POST /drive/root/createdByUser/Messages/<Id>/ReplyAll
 POST /users/<objectId>/RootFolder/Messages/<Id>/ReplyAll
-POST /users/<objectId>/Folders/<Id>/Messages/<Id>/ReplyAll
 
 ```
 ### Request headers
@@ -43,5 +43,5 @@ Content-length: 3
 }
 ```
 
-<!-- uuid: ffcb08bb-cd3e-4317-ae3b-5536c3fa04a4
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 01c77af9-91ab-4d29-8757-e8a13347b150
+2015-10-09 18:41:46 UTC -->

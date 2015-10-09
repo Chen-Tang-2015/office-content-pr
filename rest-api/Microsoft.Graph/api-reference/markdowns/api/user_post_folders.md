@@ -4,8 +4,8 @@ Use this API to create a new MailFolder.
 ### HTTP request
 ```http
 POST /users/<objectId>/Folders
-POST /drives/<id>/root/createdByUser/Folders
-POST /drives/<id>/root/lastModifiedByUser/Folders
+POST /drive/root/createdByUser/Folders
+POST /drive/root/lastModifiedByUser/Folders
 
 ```
 ### Request headers
@@ -35,5 +35,5 @@ Content-length: 130
 }
 ```
 
-<!-- uuid: cca2561a-24f8-459b-9fcb-d07645ba1e94
-2015-10-09 17:14:37 UTC -->
+<!-- uuid: b4c5e14c-5b2b-40fb-8f87-c66847187b0f
+2015-10-09 18:41:47 UTC -->

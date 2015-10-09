@@ -4,8 +4,8 @@ Use this API to create a new Section.
 ### HTTP request
 ```http
 POST /users/<objectId>/notes/sectionGroups/<id>/sections
-POST /drives/<id>/root/createdByUser/notes/sectionGroups/<id>/sections
-POST /users/<objectId>/notes/sections/<id>/parentSectionGroup/sections
+POST /drive/root/createdByUser/notes/sectionGroups/<id>/sections
+POST /drive/root/lastModifiedByUser/notes/sectionGroups/<id>/sections
 
 ```
 ### Request headers
@@ -40,5 +40,5 @@ Content-length: 276
 }
 ```
 
-<!-- uuid: a793049f-0e98-4487-a195-c2cc029f16a1
-2015-10-09 17:14:37 UTC -->
+<!-- uuid: cf13a0b1-d7ca-4e6b-8446-bff9fd2749af
+2015-10-09 18:41:47 UTC -->

@@ -5,7 +5,7 @@ Retrieve the properties and relationships of userdetails object.
 ```http
 GET /users/<objectId>/details
 GET /groups/<objectId>/details
-GET /drives/<id>/root/createdByUser/details
+GET /drive/root/createdByUser/details
 ```
 ### Optional query parameters
 You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
@@ -33,5 +33,5 @@ Content-length: 73
 }
 ```
 
-<!-- uuid: 04be4c6a-6714-44d1-940e-827dd7b66ab1
-2015-10-09 17:14:37 UTC -->
+<!-- uuid: a6672048-76d7-4a14-9f87-1d94f590c2ad
+2015-10-09 18:41:47 UTC -->

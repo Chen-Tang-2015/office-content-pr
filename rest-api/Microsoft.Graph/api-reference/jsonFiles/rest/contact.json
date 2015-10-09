@@ -12,6 +12,7 @@
   "propertyNotes": "",
   "relationshipNotes": "",
   "methodNotes": "",
+  "listDescription": "",
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
@@ -53,7 +54,23 @@
     "/shares/<id>/items/<id>/createdByUser/Contacts/<Id>": true,
     "/shares/<id>/items/<id>/createdByUser/ContactFolders/<Id>/Contacts/<Id>": true,
     "/shares/<id>/items/<id>/lastModifiedByUser/Contacts/<Id>": true,
-    "/shares/<id>/items/<id>/lastModifiedByUser/ContactFolders/<Id>/Contacts/<Id>": true
+    "/shares/<id>/items/<id>/lastModifiedByUser/ContactFolders/<Id>/Contacts/<Id>": true,
+    "/drive/items/<id>/createdByUser/Contacts/<Id>": true,
+    "/drive/items/<id>/createdByUser/ContactFolders/<Id>/Contacts/<Id>": true,
+    "/drive/items/<id>/lastModifiedByUser/Contacts/<Id>": true,
+    "/drive/items/<id>/lastModifiedByUser/ContactFolders/<Id>/Contacts/<Id>": true,
+    "/drive/shared/<id>/createdByUser/Contacts/<Id>": true,
+    "/drive/shared/<id>/createdByUser/ContactFolders/<Id>/Contacts/<Id>": true,
+    "/drive/shared/<id>/lastModifiedByUser/Contacts/<Id>": true,
+    "/drive/shared/<id>/lastModifiedByUser/ContactFolders/<Id>/Contacts/<Id>": true,
+    "/drive/special/<id>/createdByUser/Contacts/<Id>": true,
+    "/drive/special/<id>/createdByUser/ContactFolders/<Id>/Contacts/<Id>": true,
+    "/drive/special/<id>/lastModifiedByUser/Contacts/<Id>": true,
+    "/drive/special/<id>/lastModifiedByUser/ContactFolders/<Id>/Contacts/<Id>": true,
+    "/drive/root/createdByUser/Contacts/<Id>": true,
+    "/drive/root/createdByUser/ContactFolders/<Id>/Contacts/<Id>": true,
+    "/drive/root/lastModifiedByUser/Contacts/<Id>": true,
+    "/drive/root/lastModifiedByUser/ContactFolders/<Id>/Contacts/<Id>": true
   },
   "properties": [
     {

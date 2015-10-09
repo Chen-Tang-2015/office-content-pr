@@ -31,5 +31,5 @@ Here is a JSON representation of the resource
 |Month|Int32|The month that the item occurs on.  This is a number from 1 to 12.|
 |Type|String|The recurrence pattern type: Daily = 0, Weekly = 1, AbsoluteMonthly = 2, RelativeMonthly = 3, AbsoluteYearly = 4, RelativeYearly = 5. Possible values are: `Daily`, `Weekly`, `AbsoluteMonthly`, `RelativeMonthly`, `AbsoluteYearly`, `RelativeYearly`.|
 
-<!-- uuid: a5c0c36e-e51d-4cc0-be5e-d55e47c24d08
-2015-10-09 17:14:37 UTC -->
+<!-- uuid: 2aa18066-8fc1-45a5-ad66-a907251fe3c7
+2015-10-09 18:41:47 UTC -->

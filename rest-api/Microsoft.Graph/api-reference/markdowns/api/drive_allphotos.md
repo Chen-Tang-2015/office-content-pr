@@ -3,9 +3,9 @@
 
 ### HTTP request
 ```http
+POST /drive/allPhotos
 POST /drives/<id>/allPhotos
 POST /users/<objectId>/drive/allPhotos
-POST /groups/<objectId>/drive/allPhotos
 
 ```
 ### Request headers
@@ -22,7 +22,7 @@ If successful, this method returns `200, OK` response code and [item](../resourc
 Here is an example of how to call this API.
 ##### Request
 ```http
-POST /drives/<id>/allPhotos
+POST /drive/allPhotos
 Content-type: application/json
 Content-length: 0
 ```
@@ -30,53 +30,57 @@ Content-length: 0
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 665
+Content-length: 867
 {
-  "content": "content-value",
-  "createdBy": {
-  },
-  "createdDateTime": "datetime-value",
-  "cTag": "cTag-value",
-  "description": "description-value",
-  "eTag": "eTag-value",
-  "id": "id-value",
-  "lastModifiedBy": {
-  },
-  "lastModifiedDateTime": "datetime-value",
-  "name": "name-value",
-  "parentReference": {
-  },
-  "size": 99,
-  "webDavUrl": "webDavUrl-value",
-  "webUrl": "webUrl-value",
-  "audio": {
-  },
-  "deleted": {
-  },
-  "file": {
-  },
-  "fileSystemInfo": {
-  },
-  "folder": {
-  },
-  "image": {
-  },
-  "location": {
-  },
-  "openWith": {
-  },
-  "photo": {
-  },
-  "searchResult": {
-  },
-  "shared": {
-  },
-  "specialFolder": {
-  },
-  "video": {
-  }
+  "values": [
+    {
+      "content": "content-value",
+      "createdBy": {
+      },
+      "createdDateTime": "datetime-value",
+      "cTag": "cTag-value",
+      "description": "description-value",
+      "eTag": "eTag-value",
+      "id": "id-value",
+      "lastModifiedBy": {
+      },
+      "lastModifiedDateTime": "datetime-value",
+      "name": "name-value",
+      "parentReference": {
+      },
+      "size": 99,
+      "webDavUrl": "webDavUrl-value",
+      "webUrl": "webUrl-value",
+      "audio": {
+      },
+      "deleted": {
+      },
+      "file": {
+      },
+      "fileSystemInfo": {
+      },
+      "folder": {
+      },
+      "image": {
+      },
+      "location": {
+      },
+      "openWith": {
+      },
+      "photo": {
+      },
+      "searchResult": {
+      },
+      "shared": {
+      },
+      "specialFolder": {
+      },
+      "video": {
+      }
+    }
+  ]
 }
 ```
 
-<!-- uuid: 75d65a78-52cb-4129-bb0f-30842dbf5509
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 819f0e22-31ae-49d5-8733-5b56352a752c
+2015-10-09 18:41:45 UTC -->

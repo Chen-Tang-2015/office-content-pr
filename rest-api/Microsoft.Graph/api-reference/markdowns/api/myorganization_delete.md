@@ -3,7 +3,7 @@
 Delete MyOrganization.
 ### HTTP request
 ```http
-
+DELETE /myOrganization
 
 ```
 ### Request headers
@@ -19,5 +19,5 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: aa9a0f9a-dfcd-4429-9971-665d3c1e0554
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 2e627408-61fd-44d5-b064-8dea92480b81
+2015-10-09 18:41:46 UTC -->

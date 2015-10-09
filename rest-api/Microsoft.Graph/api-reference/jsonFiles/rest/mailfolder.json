@@ -12,6 +12,7 @@
   "propertyNotes": "",
   "relationshipNotes": "",
   "methodNotes": "",
+  "listDescription": "",
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
@@ -53,7 +54,23 @@
     "/shares/<id>/items/<id>/createdByUser/Folders/<Id>": true,
     "/shares/<id>/items/<id>/createdByUser/RootFolder": true,
     "/shares/<id>/items/<id>/lastModifiedByUser/Folders/<Id>": true,
-    "/shares/<id>/items/<id>/lastModifiedByUser/RootFolder": true
+    "/shares/<id>/items/<id>/lastModifiedByUser/RootFolder": true,
+    "/drive/items/<id>/createdByUser/Folders/<Id>": true,
+    "/drive/items/<id>/createdByUser/RootFolder": true,
+    "/drive/items/<id>/lastModifiedByUser/Folders/<Id>": true,
+    "/drive/items/<id>/lastModifiedByUser/RootFolder": true,
+    "/drive/shared/<id>/createdByUser/Folders/<Id>": true,
+    "/drive/shared/<id>/createdByUser/RootFolder": true,
+    "/drive/shared/<id>/lastModifiedByUser/Folders/<Id>": true,
+    "/drive/shared/<id>/lastModifiedByUser/RootFolder": true,
+    "/drive/special/<id>/createdByUser/Folders/<Id>": true,
+    "/drive/special/<id>/createdByUser/RootFolder": true,
+    "/drive/special/<id>/lastModifiedByUser/Folders/<Id>": true,
+    "/drive/special/<id>/lastModifiedByUser/RootFolder": true,
+    "/drive/root/createdByUser/Folders/<Id>": true,
+    "/drive/root/createdByUser/RootFolder": true,
+    "/drive/root/lastModifiedByUser/Folders/<Id>": true,
+    "/drive/root/lastModifiedByUser/RootFolder": true
   },
   "properties": [
     {

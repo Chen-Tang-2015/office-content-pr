@@ -12,6 +12,7 @@
   "propertyNotes": "",
   "relationshipNotes": "",
   "methodNotes": "",
+  "listDescription": "",
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
@@ -34,7 +35,15 @@
     "/drives/<id>/root/createdByUser/TrendingAround": true,
     "/drives/<id>/root/lastModifiedByUser/TrendingAround": true,
     "/shares/<id>/items/<id>/createdByUser/TrendingAround": true,
-    "/shares/<id>/items/<id>/lastModifiedByUser/TrendingAround": true
+    "/shares/<id>/items/<id>/lastModifiedByUser/TrendingAround": true,
+    "/drive/items/<id>/createdByUser/TrendingAround": true,
+    "/drive/items/<id>/lastModifiedByUser/TrendingAround": true,
+    "/drive/shared/<id>/createdByUser/TrendingAround": true,
+    "/drive/shared/<id>/lastModifiedByUser/TrendingAround": true,
+    "/drive/special/<id>/createdByUser/TrendingAround": true,
+    "/drive/special/<id>/lastModifiedByUser/TrendingAround": true,
+    "/drive/root/createdByUser/TrendingAround": true,
+    "/drive/root/lastModifiedByUser/TrendingAround": true
   },
   "properties": [
 

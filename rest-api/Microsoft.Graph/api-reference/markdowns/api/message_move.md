@@ -4,8 +4,8 @@
 ### HTTP request
 ```http
 POST /users/<objectId>/Messages/<Id>/Move
+POST /drive/root/createdByUser/Messages/<Id>/Move
 POST /users/<objectId>/RootFolder/Messages/<Id>/Move
-POST /users/<objectId>/Folders/<Id>/Messages/<Id>/Move
 
 ```
 ### Request headers
@@ -87,5 +87,5 @@ Content-length: 838
 }
 ```
 
-<!-- uuid: fa70d819-7895-4cff-b12d-4485c7474269
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 21479ead-2d27-43d0-9c13-6d486a0d3a21
+2015-10-09 18:41:46 UTC -->

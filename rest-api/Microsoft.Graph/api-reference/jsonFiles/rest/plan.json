@@ -12,6 +12,7 @@
   "propertyNotes": "",
   "relationshipNotes": "",
   "methodNotes": "",
+  "listDescription": "",
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
@@ -47,7 +48,23 @@
     "/shares/<id>/items/<id>/createdByUser/plans/<id>": true,
     "/shares/<id>/items/<id>/lastModifiedByUser/JoinedGroups/<objectId>/plans/<id>": true,
     "/shares/<id>/items/<id>/lastModifiedByUser/plans/<id>": true,
-    "/plans/<id>": true
+    "/plans/<id>": true,
+    "/drive/items/<id>/createdByUser/JoinedGroups/<objectId>/plans/<id>": true,
+    "/drive/items/<id>/createdByUser/plans/<id>": true,
+    "/drive/items/<id>/lastModifiedByUser/JoinedGroups/<objectId>/plans/<id>": true,
+    "/drive/items/<id>/lastModifiedByUser/plans/<id>": true,
+    "/drive/shared/<id>/createdByUser/JoinedGroups/<objectId>/plans/<id>": true,
+    "/drive/shared/<id>/createdByUser/plans/<id>": true,
+    "/drive/shared/<id>/lastModifiedByUser/JoinedGroups/<objectId>/plans/<id>": true,
+    "/drive/shared/<id>/lastModifiedByUser/plans/<id>": true,
+    "/drive/special/<id>/createdByUser/JoinedGroups/<objectId>/plans/<id>": true,
+    "/drive/special/<id>/createdByUser/plans/<id>": true,
+    "/drive/special/<id>/lastModifiedByUser/JoinedGroups/<objectId>/plans/<id>": true,
+    "/drive/special/<id>/lastModifiedByUser/plans/<id>": true,
+    "/drive/root/createdByUser/JoinedGroups/<objectId>/plans/<id>": true,
+    "/drive/root/createdByUser/plans/<id>": true,
+    "/drive/root/lastModifiedByUser/JoinedGroups/<objectId>/plans/<id>": true,
+    "/drive/root/lastModifiedByUser/plans/<id>": true
   },
   "properties": [
     {

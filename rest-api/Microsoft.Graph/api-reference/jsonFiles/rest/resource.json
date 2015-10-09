@@ -12,6 +12,7 @@
   "propertyNotes": "",
   "relationshipNotes": "",
   "methodNotes": "",
+  "listDescription": "",
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
@@ -34,7 +35,16 @@
     "/drives/<id>/root/createdByUser/notes/resources/<id>": true,
     "/drives/<id>/root/lastModifiedByUser/notes/resources/<id>": true,
     "/shares/<id>/items/<id>/createdByUser/notes/resources/<id>": true,
-    "/shares/<id>/items/<id>/lastModifiedByUser/notes/resources/<id>": true
+    "/shares/<id>/items/<id>/lastModifiedByUser/notes/resources/<id>": true,
+    "/drive/items/<id>/createdByUser/notes/resources/<id>": true,
+    "/drive/items/<id>/lastModifiedByUser/notes/resources/<id>": true,
+    "/drive/shared/<id>/createdByUser/notes/resources/<id>": true,
+    "/drive/shared/<id>/lastModifiedByUser/notes/resources/<id>": true,
+    "/drive/special/<id>/createdByUser/notes/resources/<id>": true,
+    "/drive/special/<id>/lastModifiedByUser/notes/resources/<id>": true,
+    "/drive/root/createdByUser/notes/resources/<id>": true,
+    "/drive/root/lastModifiedByUser/notes/resources/<id>": true,
+    "/myOrganization/siteCollections/<id>/sites/<id>/notes/resources/<id>": true
   },
   "properties": [
     {

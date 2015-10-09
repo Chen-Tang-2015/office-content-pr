@@ -4,8 +4,8 @@ Update the properties of contact object.
 ### HTTP request
 ```http
 PATCH /users/<objectId>/Contacts/<Id>
-PATCH /drives/<id>/root/createdByUser/Contacts/<Id>
-PATCH /drives/<id>/root/lastModifiedByUser/Contacts/<Id>
+PATCH /drive/root/createdByUser/Contacts/<Id>
+PATCH /drive/root/lastModifiedByUser/Contacts/<Id>
 ```
 ### Optional request headers
 | Name       | Type | Description|
@@ -172,5 +172,5 @@ Content-length: 1289
 }
 ```
 
-<!-- uuid: f94a2b67-7ef0-442b-a05b-e88255433f67
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 573040a4-0e30-4233-86f6-3a72f52b2713
+2015-10-09 18:41:45 UTC -->

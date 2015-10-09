@@ -4,8 +4,8 @@ Use this API to create a new CalendarGroup.
 ### HTTP request
 ```http
 POST /users/<objectId>/CalendarGroups
-POST /drives/<id>/root/createdByUser/CalendarGroups
-POST /drives/<id>/root/lastModifiedByUser/CalendarGroups
+POST /drive/root/createdByUser/CalendarGroups
+POST /drive/root/lastModifiedByUser/CalendarGroups
 
 ```
 ### Request headers
@@ -35,5 +35,5 @@ Content-length: 110
 }
 ```
 
-<!-- uuid: 91c922b4-af8e-4290-9515-876b736e5922
-2015-10-09 17:14:37 UTC -->
+<!-- uuid: 2c8a3101-ccd9-41fb-bfce-738c59be27b9
+2015-10-09 18:41:47 UTC -->

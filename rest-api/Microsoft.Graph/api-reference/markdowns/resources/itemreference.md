@@ -21,5 +21,5 @@ Here is a JSON representation of the resource
 |id|String|Unique identifier for the item.|
 |path|String|Path that used to navigate to the item.|
 
-<!-- uuid: eead1d3c-0532-456f-8d7c-f6a9bded7db6
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 96c99f44-517b-444e-82b5-81eb8780cd35
+2015-10-09 18:41:46 UTC -->

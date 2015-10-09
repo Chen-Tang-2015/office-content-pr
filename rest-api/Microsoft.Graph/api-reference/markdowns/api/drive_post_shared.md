@@ -3,9 +3,9 @@
 Use this API to create a new shared.
 ### HTTP request
 ```http
+POST /drive/shared
 POST /drives/<id>/shared
 POST /users/<objectId>/drive/shared
-POST /groups/<objectId>/drive/shared
 
 ```
 ### Request headers
@@ -74,5 +74,5 @@ Content-length: 665
 }
 ```
 
-<!-- uuid: 3a8a9819-23ed-49fe-a158-e30a4b18188d
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: eb79d37a-53af-4b6c-a5f5-818f6bb7da6e
+2015-10-09 18:41:45 UTC -->

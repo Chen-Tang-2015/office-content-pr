@@ -4,8 +4,8 @@ Use this API to create a new Section.
 ### HTTP request
 ```http
 POST /users/<objectId>/notes/notebooks/<id>/sections
+POST /drive/root/createdByUser/notes/notebooks/<id>/sections
 POST /users/<objectId>/notes/pages/<id>/parentNotebook/sections
-POST /users/<objectId>/notes/sections/<id>/parentNotebook/sections
 
 ```
 ### Request headers
@@ -40,5 +40,5 @@ Content-length: 276
 }
 ```
 
-<!-- uuid: 665f58f4-a19a-4711-aa57-c37807ab4d15
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 24184bd4-d614-4011-b835-024c6474f3ea
+2015-10-09 18:41:46 UTC -->

@@ -4,8 +4,8 @@ Delete Notebook.
 ### HTTP request
 ```http
 DELETE /users/<objectId>/notes/notebooks/<id>
+DELETE /drive/root/createdByUser/notes/notebooks/<id>
 DELETE /users/<objectId>/notes/pages/<id>/parentNotebook
-DELETE /users/<objectId>/notes/sections/<id>/parentNotebook
 
 ```
 ### Request headers
@@ -21,5 +21,5 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: 27051656-f42e-4543-a178-e8fbd3c4cc1d
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: c9e68a88-695c-496b-aa82-a410298ba977
+2015-10-09 18:41:46 UTC -->

@@ -12,6 +12,7 @@
   "propertyNotes": "",
   "relationshipNotes": "",
   "methodNotes": "",
+  "listDescription": "",
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
@@ -32,7 +33,11 @@
     "/drives/<id>/shared/<id>/thumbnails/<id>": true,
     "/drives/<id>/special/<id>/thumbnails/<id>": true,
     "/drives/<id>/root/thumbnails/<id>": true,
-    "/shares/<id>/items/<id>/thumbnails/<id>": true
+    "/shares/<id>/items/<id>/thumbnails/<id>": true,
+    "/drive/items/<id>/thumbnails/<id>": true,
+    "/drive/shared/<id>/thumbnails/<id>": true,
+    "/drive/special/<id>/thumbnails/<id>": true,
+    "/drive/root/thumbnails/<id>": true
   },
   "properties": [
     {

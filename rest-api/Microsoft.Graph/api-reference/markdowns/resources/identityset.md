@@ -27,5 +27,5 @@ Here is a JSON representation of the resource
 |device|[identity](identity.md)|An Identity resource that represents the device.|
 |user|[identity](identity.md)|An Identity resource that represents a user.|
 
-<!-- uuid: dee39581-64eb-43bf-9af4-d1a6028861fa
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 50b66f9f-edca-4ec3-98be-51c7a589f32c
+2015-10-09 18:41:46 UTC -->

@@ -4,8 +4,8 @@ Delete Message.
 ### HTTP request
 ```http
 DELETE /users/<objectId>/Messages/<Id>
+DELETE /drive/root/createdByUser/Messages/<Id>
 DELETE /users/<objectId>/RootFolder/Messages/<Id>
-DELETE /users/<objectId>/Folders/<Id>/Messages/<Id>
 
 ```
 ### Request headers
@@ -21,5 +21,5 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: 51d0048f-7d1f-4033-bbf8-eed27ac951e8
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 6e84e939-5c01-4d7e-84eb-720686a8f638
+2015-10-09 18:41:46 UTC -->

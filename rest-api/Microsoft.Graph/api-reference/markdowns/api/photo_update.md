@@ -5,7 +5,7 @@ Update the properties of photo object.
 ```http
 PATCH /users/<objectId>/UserPhoto
 PATCH /groups/<objectId>/GroupPhoto
-PATCH /drives/<id>/root/createdByUser/UserPhoto
+PATCH /drive/root/createdByUser/UserPhoto
 ```
 ### Optional request headers
 | Name       | Type | Description|
@@ -48,5 +48,5 @@ Content-length: 53
 }
 ```
 
-<!-- uuid: 08ef6076-5128-4d12-8dff-c5ac5b5346ed
-2015-10-09 17:14:37 UTC -->
+<!-- uuid: b20a9e54-cdec-4352-b4e8-8098cad5ac05
+2015-10-09 18:41:46 UTC -->

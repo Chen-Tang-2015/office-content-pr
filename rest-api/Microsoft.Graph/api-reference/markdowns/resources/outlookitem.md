@@ -46,5 +46,5 @@ Here is a JSON representation of the resource
 |[Update](../api/outlookitem_update.md) | [OutlookItem](outlookitem.md)	|Update OutlookItem object. |
 |[Delete](../api/outlookitem_delete.md) | Void	|Delete OutlookItem object. |
 
-<!-- uuid: 937d9b50-86c3-4ade-b4a1-4774f2a07c81
-2015-10-09 17:14:37 UTC -->
+<!-- uuid: 856a2bcd-6f02-4228-8be5-16700cf5de9a
+2015-10-09 18:41:46 UTC -->

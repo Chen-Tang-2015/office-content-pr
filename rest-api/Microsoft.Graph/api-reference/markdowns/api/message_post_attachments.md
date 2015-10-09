@@ -4,8 +4,8 @@ Use this API to create a new Attachment.
 ### HTTP request
 ```http
 POST /users/<objectId>/Messages/<Id>/Attachments
+POST /drive/root/createdByUser/Messages/<Id>/Attachments
 POST /users/<objectId>/RootFolder/Messages/<Id>/Attachments
-POST /users/<objectId>/Folders/<Id>/Messages/<Id>/Attachments
 
 ```
 ### Request headers
@@ -37,5 +37,5 @@ Content-length: 162
 }
 ```
 
-<!-- uuid: 4d918ce2-508e-4134-8b6c-ce992aeb0692
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 74587e49-49d4-4d08-a70c-97ba2c1e20b4
+2015-10-09 18:41:46 UTC -->

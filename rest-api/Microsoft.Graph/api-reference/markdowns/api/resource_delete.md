@@ -4,8 +4,8 @@ Delete Resource.
 ### HTTP request
 ```http
 DELETE /users/<objectId>/notes/resources/<id>
-DELETE /drives/<id>/root/createdByUser/notes/resources/<id>
-DELETE /drives/<id>/root/lastModifiedByUser/notes/resources/<id>
+DELETE /drive/root/createdByUser/notes/resources/<id>
+DELETE /drive/root/lastModifiedByUser/notes/resources/<id>
 
 ```
 ### Request headers
@@ -21,5 +21,5 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: bbc51b65-0a9a-4415-8ded-8396d47680ab
-2015-10-09 17:14:37 UTC -->
+<!-- uuid: 10f5e5fc-8ae8-40b2-a38d-697e3569c81f
+2015-10-09 18:41:47 UTC -->

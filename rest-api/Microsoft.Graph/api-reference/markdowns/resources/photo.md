@@ -40,5 +40,5 @@ Here is a JSON representation of the resource
 |[Update](../api/photo_update.md) | [Photo](photo.md)	|Update Photo object. |
 |[Delete](../api/photo_delete.md) | Void	|Delete Photo object. |
 
-<!-- uuid: 4739f2a3-3a71-45ee-970e-979a4643fc97
-2015-10-09 17:14:37 UTC -->
+<!-- uuid: 9bcbc2ba-c9bf-4a09-bd83-9d82ce34babc
+2015-10-09 18:41:46 UTC -->

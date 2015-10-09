@@ -4,8 +4,8 @@ Update the properties of sectiongroup object.
 ### HTTP request
 ```http
 PATCH /users/<objectId>/notes/sectionGroups/<id>
-PATCH /drives/<id>/root/createdByUser/notes/sectionGroups/<id>
-PATCH /users/<objectId>/notes/sections/<id>/parentSectionGroup
+PATCH /drive/root/createdByUser/notes/sectionGroups/<id>
+PATCH /drive/root/lastModifiedByUser/notes/sectionGroups/<id>
 ```
 ### Optional request headers
 | Name       | Type | Description|
@@ -66,5 +66,5 @@ Content-length: 309
 }
 ```
 
-<!-- uuid: c411b167-534d-4954-8612-3a926cbd7486
-2015-10-09 17:14:37 UTC -->
+<!-- uuid: 3f719f56-8573-44e3-a123-6f7b8a707b36
+2015-10-09 18:41:47 UTC -->

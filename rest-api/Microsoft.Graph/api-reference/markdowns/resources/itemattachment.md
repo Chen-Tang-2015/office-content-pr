@@ -50,5 +50,5 @@ Here is a JSON representation of the resource
 |[Update](../api/itemattachment_update.md) | [ItemAttachment](itemattachment.md)	|Update ItemAttachment object. |
 |[Delete](../api/itemattachment_delete.md) | Void	|Delete ItemAttachment object. |
 
-<!-- uuid: f48d635d-977a-4a62-ac20-59a97f47d883
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: c0de3f3c-55bb-4611-b39e-c3b629beeac9
+2015-10-09 18:41:46 UTC -->

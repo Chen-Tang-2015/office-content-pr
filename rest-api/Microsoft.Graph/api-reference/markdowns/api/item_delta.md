@@ -3,9 +3,9 @@
 
 ### HTTP request
 ```http
+POST /drive/root/delta
+POST /drive/items/<id>/delta
 POST /drives/<id>/root/delta
-POST /shares/<id>/items/<id>/delta
-POST /drives/<id>/items/<id>/delta
 
 ```
 ### Request headers
@@ -27,7 +27,7 @@ If successful, this method returns `200, OK` response code and [item](../resourc
 Here is an example of how to call this API.
 ##### Request
 ```http
-POST /drives/<id>/root/delta
+POST /drive/root/delta
 Content-type: application/json
 Content-length: 0
 ```
@@ -35,53 +35,57 @@ Content-length: 0
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 665
+Content-length: 867
 {
-  "content": "content-value",
-  "createdBy": {
-  },
-  "createdDateTime": "datetime-value",
-  "cTag": "cTag-value",
-  "description": "description-value",
-  "eTag": "eTag-value",
-  "id": "id-value",
-  "lastModifiedBy": {
-  },
-  "lastModifiedDateTime": "datetime-value",
-  "name": "name-value",
-  "parentReference": {
-  },
-  "size": 99,
-  "webDavUrl": "webDavUrl-value",
-  "webUrl": "webUrl-value",
-  "audio": {
-  },
-  "deleted": {
-  },
-  "file": {
-  },
-  "fileSystemInfo": {
-  },
-  "folder": {
-  },
-  "image": {
-  },
-  "location": {
-  },
-  "openWith": {
-  },
-  "photo": {
-  },
-  "searchResult": {
-  },
-  "shared": {
-  },
-  "specialFolder": {
-  },
-  "video": {
-  }
+  "values": [
+    {
+      "content": "content-value",
+      "createdBy": {
+      },
+      "createdDateTime": "datetime-value",
+      "cTag": "cTag-value",
+      "description": "description-value",
+      "eTag": "eTag-value",
+      "id": "id-value",
+      "lastModifiedBy": {
+      },
+      "lastModifiedDateTime": "datetime-value",
+      "name": "name-value",
+      "parentReference": {
+      },
+      "size": 99,
+      "webDavUrl": "webDavUrl-value",
+      "webUrl": "webUrl-value",
+      "audio": {
+      },
+      "deleted": {
+      },
+      "file": {
+      },
+      "fileSystemInfo": {
+      },
+      "folder": {
+      },
+      "image": {
+      },
+      "location": {
+      },
+      "openWith": {
+      },
+      "photo": {
+      },
+      "searchResult": {
+      },
+      "shared": {
+      },
+      "specialFolder": {
+      },
+      "video": {
+      }
+    }
+  ]
 }
 ```
 
-<!-- uuid: 35b9b875-b549-47cd-ad3b-71631f80dacf
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: dbe6a9af-6671-4842-8b38-ab7bdd1db7f6
+2015-10-09 18:41:46 UTC -->

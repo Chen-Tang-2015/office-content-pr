@@ -12,6 +12,7 @@
   "propertyNotes": "",
   "relationshipNotes": "",
   "methodNotes": "",
+  "listDescription": "",
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
@@ -32,7 +33,11 @@
     "/drives/<id>/shared/<id>": true,
     "/drives/<id>/special/<id>": true,
     "/drives/<id>/root": true,
-    "/shares/<id>/items/<id>": true
+    "/shares/<id>/items/<id>": true,
+    "/drive/items/<id>": true,
+    "/drive/shared/<id>": true,
+    "/drive/special/<id>": true,
+    "/drive/root": true
   },
   "properties": [
     {

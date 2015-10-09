@@ -12,6 +12,7 @@
   "propertyNotes": "",
   "relationshipNotes": "",
   "methodNotes": "",
+  "listDescription": "",
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
@@ -36,7 +37,15 @@
     "/drives/<id>/root/createdByUser/oauth2PermissionGrants/<objectId>": true,
     "/drives/<id>/root/lastModifiedByUser/oauth2PermissionGrants/<objectId>": true,
     "/shares/<id>/items/<id>/createdByUser/oauth2PermissionGrants/<objectId>": true,
-    "/shares/<id>/items/<id>/lastModifiedByUser/oauth2PermissionGrants/<objectId>": true
+    "/shares/<id>/items/<id>/lastModifiedByUser/oauth2PermissionGrants/<objectId>": true,
+    "/drive/items/<id>/createdByUser/oauth2PermissionGrants/<objectId>": true,
+    "/drive/items/<id>/lastModifiedByUser/oauth2PermissionGrants/<objectId>": true,
+    "/drive/shared/<id>/createdByUser/oauth2PermissionGrants/<objectId>": true,
+    "/drive/shared/<id>/lastModifiedByUser/oauth2PermissionGrants/<objectId>": true,
+    "/drive/special/<id>/createdByUser/oauth2PermissionGrants/<objectId>": true,
+    "/drive/special/<id>/lastModifiedByUser/oauth2PermissionGrants/<objectId>": true,
+    "/drive/root/createdByUser/oauth2PermissionGrants/<objectId>": true,
+    "/drive/root/lastModifiedByUser/oauth2PermissionGrants/<objectId>": true
   },
   "properties": [
     {

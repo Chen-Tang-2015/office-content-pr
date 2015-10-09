@@ -5,7 +5,7 @@
 ```http
 POST /groups/<objectId>/ResetUnseenCount
 POST /users/<objectId>/JoinedGroups/<objectId>/ResetUnseenCount
-POST /drives/<id>/root/createdByUser/JoinedGroups/<objectId>/ResetUnseenCount
+POST /drive/root/createdByUser/JoinedGroups/<objectId>/ResetUnseenCount
 
 ```
 ### Request headers
@@ -35,5 +35,5 @@ Content-length: 3
 }
 ```
 
-<!-- uuid: 2585043e-4b69-45e9-9417-591e7d8d9cea
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 9140fc1a-ab13-4f0f-8744-c9cc7a3ebbc6
+2015-10-09 18:41:46 UTC -->

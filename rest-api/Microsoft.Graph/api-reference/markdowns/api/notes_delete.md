@@ -4,8 +4,8 @@ Delete Notes.
 ### HTTP request
 ```http
 DELETE /users/<objectId>/notes
-DELETE /drives/<id>/root/createdByUser/notes
-DELETE /drives/<id>/root/lastModifiedByUser/notes
+DELETE /drive/root/createdByUser/notes
+DELETE /drive/root/lastModifiedByUser/notes
 
 ```
 ### Request headers
@@ -21,5 +21,5 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: 98e63309-145d-490b-9443-e56b7f23a212
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: bbf447dd-084d-4b69-a396-2cf9d16aed78
+2015-10-09 18:41:46 UTC -->

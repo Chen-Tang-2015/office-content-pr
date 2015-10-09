@@ -3,9 +3,9 @@
 
 ### HTTP request
 ```http
+POST /drive/root/copy
+POST /drive/items/<id>/copy
 POST /drives/<id>/root/copy
-POST /shares/<id>/items/<id>/copy
-POST /drives/<id>/items/<id>/copy
 
 ```
 ### Request headers
@@ -28,7 +28,7 @@ If successful, this method returns `200, OK` response code and [item](../resourc
 Here is an example of how to call this API.
 ##### Request
 ```http
-POST /drives/<id>/root/copy
+POST /drive/root/copy
 Content-type: application/json
 Content-length: 54
 {
@@ -89,5 +89,5 @@ Content-length: 665
 }
 ```
 
-<!-- uuid: eb11ccd6-e9b7-46ff-b337-a7bf241e1834
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 3d448d0b-7222-487c-99c9-75c0b4b370a1
+2015-10-09 18:41:46 UTC -->

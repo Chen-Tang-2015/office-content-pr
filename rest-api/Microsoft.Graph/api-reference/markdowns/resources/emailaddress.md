@@ -19,5 +19,5 @@ Here is a JSON representation of the resource
 |Address|String|The email address of the person or entity.|
 |Name|String|The display name of the person or entity.|
 
-<!-- uuid: 172ea5a9-220d-44a4-ae9b-af2e0355c4dd
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 800a8dfd-0aac-42ae-88ea-1eec65d6f43d
+2015-10-09 18:41:45 UTC -->

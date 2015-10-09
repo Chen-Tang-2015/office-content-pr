@@ -29,5 +29,5 @@ Here is a JSON representation of the resource
 |isEnabled|Boolean||
 |value|String||
 
-<!-- uuid: f1945cd1-c336-464b-ac97-146e05a5d97e
-2015-10-09 17:14:35 UTC -->
+<!-- uuid: d2529fa4-70c4-4ca4-901d-974c577ac43d
+2015-10-09 18:41:45 UTC -->

@@ -111,5 +111,5 @@ Here is a JSON representation of the resource
 |[Get MemberGroups](../api/orgcontact_getmembergroups.md)|String||
 |[Get MemberObjects](../api/orgcontact_getmemberobjects.md)|String||
 
-<!-- uuid: e0724ccc-c7ec-40fc-b6d7-57ad6a701961
-2015-10-09 17:14:37 UTC -->
+<!-- uuid: 9f53b269-d542-45ae-ab63-d338c0e652f6
+2015-10-09 18:41:46 UTC -->

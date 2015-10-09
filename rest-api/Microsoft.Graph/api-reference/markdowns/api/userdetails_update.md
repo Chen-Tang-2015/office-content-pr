@@ -5,7 +5,7 @@ Update the properties of userdetails object.
 ```http
 PATCH /users/<objectId>/details
 PATCH /groups/<objectId>/details
-PATCH /drives/<id>/root/createdByUser/details
+PATCH /drive/root/createdByUser/details
 ```
 ### Optional request headers
 | Name       | Type | Description|
@@ -50,5 +50,5 @@ Content-length: 73
 }
 ```
 
-<!-- uuid: 55bc1b22-0384-4bf1-87d3-12ff81b57655
-2015-10-09 17:14:37 UTC -->
+<!-- uuid: b7f5adde-3674-4546-a2a9-b7f09610330a
+2015-10-09 18:41:47 UTC -->

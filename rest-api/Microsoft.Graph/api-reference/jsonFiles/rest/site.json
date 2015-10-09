@@ -12,10 +12,12 @@
   "propertyNotes": "",
   "relationshipNotes": "",
   "methodNotes": "",
+  "listDescription": "",
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
   "restPath": {
+    "/myOrganization/siteCollections/<id>/sites/<id>": true
   },
   "properties": [
     {

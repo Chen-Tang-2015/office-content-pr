@@ -3,7 +3,7 @@
 Retrieve the properties and relationships of site object.
 ### HTTP request
 ```http
-
+GET /myOrganization/siteCollections/<id>/sites/<id>
 ```
 ### Optional query parameters
 You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
@@ -28,5 +28,5 @@ Content-length: 22
 }
 ```
 
-<!-- uuid: b204a8a7-c1d5-4784-aaf2-4b5e02f5ac46
-2015-10-09 17:14:37 UTC -->
+<!-- uuid: bd9eb5bc-33d7-43ed-832d-cc336968dff9
+2015-10-09 18:41:47 UTC -->

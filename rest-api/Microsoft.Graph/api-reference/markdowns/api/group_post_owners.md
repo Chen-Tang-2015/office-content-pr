@@ -5,7 +5,7 @@ Use this API to create a new owner.
 ```http
 POST /groups/<objectId>/owners
 POST /users/<objectId>/JoinedGroups/<objectId>/owners
-POST /drives/<id>/root/createdByUser/JoinedGroups/<objectId>/owners
+POST /drive/root/createdByUser/JoinedGroups/<objectId>/owners
 
 ```
 ### Request headers
@@ -34,5 +34,5 @@ Content-length: 111
 }
 ```
 
-<!-- uuid: 1cba6893-7e59-4d76-9ff0-0f31dbca0cb6
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 6c8fca37-4108-43bd-a18b-91155f714f87
+2015-10-09 18:41:46 UTC -->

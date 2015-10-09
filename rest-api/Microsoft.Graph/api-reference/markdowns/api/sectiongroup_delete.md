@@ -4,8 +4,8 @@ Delete SectionGroup.
 ### HTTP request
 ```http
 DELETE /users/<objectId>/notes/sectionGroups/<id>
-DELETE /drives/<id>/root/createdByUser/notes/sectionGroups/<id>
-DELETE /users/<objectId>/notes/sections/<id>/parentSectionGroup
+DELETE /drive/root/createdByUser/notes/sectionGroups/<id>
+DELETE /drive/root/lastModifiedByUser/notes/sectionGroups/<id>
 
 ```
 ### Request headers
@@ -21,5 +21,5 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: 45aa2884-a9c6-4be1-bfcd-de354584678e
-2015-10-09 17:14:37 UTC -->
+<!-- uuid: e13bb4f6-e369-4938-9f51-491f6a8c79c3
+2015-10-09 18:41:47 UTC -->

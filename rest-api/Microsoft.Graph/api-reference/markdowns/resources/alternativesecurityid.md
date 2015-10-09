@@ -21,5 +21,5 @@ Here is a JSON representation of the resource
 |key|Binary||
 |type|Int32||
 
-<!-- uuid: c6318b9a-c412-4158-a5fa-ed476125ddaf
-2015-10-09 17:14:35 UTC -->
+<!-- uuid: 43e60d6e-4421-404e-95f2-ddf9079cd160
+2015-10-09 18:41:45 UTC -->

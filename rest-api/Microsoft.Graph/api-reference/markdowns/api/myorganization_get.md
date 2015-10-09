@@ -3,7 +3,7 @@
 Retrieve the properties and relationships of myorganization object.
 ### HTTP request
 ```http
-
+GET /myOrganization
 ```
 ### Optional query parameters
 You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
@@ -28,5 +28,5 @@ Content-length: 22
 }
 ```
 
-<!-- uuid: e9aa333d-9ce0-4a23-96cd-e95c4cc9e0dd
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 0f977801-fb94-40ab-881a-b80fbfa96095
+2015-10-09 18:41:46 UTC -->

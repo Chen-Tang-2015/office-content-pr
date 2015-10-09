@@ -3,9 +3,9 @@
 Retrieve the properties and relationships of permission object.
 ### HTTP request
 ```http
+GET /drive/root/permissions/<id>
+GET /drive/items/<id>/permissions/<id>
 GET /drives/<id>/root/permissions/<id>
-GET /shares/<id>/items/<id>/permissions/<id>
-GET /drives/<id>/items/<id>/permissions/<id>
 ```
 ### Optional query parameters
 You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
@@ -42,5 +42,5 @@ Content-length: 176
 }
 ```
 
-<!-- uuid: 473bf898-efbb-48c1-ae8a-08061c0e9cea
-2015-10-09 17:14:37 UTC -->
+<!-- uuid: 541ed91d-de4b-48b5-90eb-883e239229e6
+2015-10-09 18:41:46 UTC -->

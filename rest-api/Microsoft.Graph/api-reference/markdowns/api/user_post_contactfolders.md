@@ -4,8 +4,8 @@ Use this API to create a new ContactFolder.
 ### HTTP request
 ```http
 POST /users/<objectId>/ContactFolders
-POST /drives/<id>/root/createdByUser/ContactFolders
-POST /drives/<id>/root/lastModifiedByUser/ContactFolders
+POST /drive/root/createdByUser/ContactFolders
+POST /drive/root/lastModifiedByUser/ContactFolders
 
 ```
 ### Request headers
@@ -34,5 +34,5 @@ Content-length: 104
 }
 ```
 
-<!-- uuid: 293d1301-7bc8-4f2e-8d31-5768bf570130
-2015-10-09 17:14:37 UTC -->
+<!-- uuid: d7874db5-181e-4127-8eef-6a7cc1b6e9ff
+2015-10-09 18:41:47 UTC -->

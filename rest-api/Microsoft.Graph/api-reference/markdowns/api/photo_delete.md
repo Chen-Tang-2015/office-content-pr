@@ -5,7 +5,7 @@ Delete Photo.
 ```http
 DELETE /users/<objectId>/UserPhoto
 DELETE /groups/<objectId>/GroupPhoto
-DELETE /drives/<id>/root/createdByUser/UserPhoto
+DELETE /drive/root/createdByUser/UserPhoto
 
 ```
 ### Request headers
@@ -21,5 +21,5 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: 3b7719bd-51e2-445e-b786-d0465fd1e35f
-2015-10-09 17:14:37 UTC -->
+<!-- uuid: 08650226-33d0-464e-909a-b98b70810f96
+2015-10-09 18:41:46 UTC -->

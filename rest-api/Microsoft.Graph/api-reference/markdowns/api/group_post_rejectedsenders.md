@@ -5,7 +5,7 @@ Use this API to create a new RejectedSender.
 ```http
 POST /groups/<objectId>/RejectedSenders
 POST /users/<objectId>/JoinedGroups/<objectId>/RejectedSenders
-POST /drives/<id>/root/createdByUser/JoinedGroups/<objectId>/RejectedSenders
+POST /drive/root/createdByUser/JoinedGroups/<objectId>/RejectedSenders
 
 ```
 ### Request headers
@@ -34,5 +34,5 @@ Content-length: 111
 }
 ```
 
-<!-- uuid: ad52acc8-c14a-445c-8580-2e8fb057524a
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 39b01cb2-b753-4106-adf5-7fe6a03b52cd
+2015-10-09 18:41:46 UTC -->

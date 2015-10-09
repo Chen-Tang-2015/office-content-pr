@@ -156,5 +156,5 @@ Here is a JSON representation of the resource
 |[Invite](../api/item_invite.md)|[permission](permission.md)||
 |[Search](../api/item_search.md)|[item](item.md)||
 
-<!-- uuid: fa5b8116-dc75-449f-9efe-d4b9fcc85ec3
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 7ee4d1ff-54b4-4085-abc7-61ed16efb1f0
+2015-10-09 18:41:46 UTC -->

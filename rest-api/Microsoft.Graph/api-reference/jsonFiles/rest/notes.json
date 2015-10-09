@@ -12,6 +12,7 @@
   "propertyNotes": "",
   "relationshipNotes": "",
   "methodNotes": "",
+  "listDescription": "",
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
@@ -34,7 +35,16 @@
     "/drives/<id>/root/createdByUser/notes": true,
     "/drives/<id>/root/lastModifiedByUser/notes": true,
     "/shares/<id>/items/<id>/createdByUser/notes": true,
-    "/shares/<id>/items/<id>/lastModifiedByUser/notes": true
+    "/shares/<id>/items/<id>/lastModifiedByUser/notes": true,
+    "/drive/items/<id>/createdByUser/notes": true,
+    "/drive/items/<id>/lastModifiedByUser/notes": true,
+    "/drive/shared/<id>/createdByUser/notes": true,
+    "/drive/shared/<id>/lastModifiedByUser/notes": true,
+    "/drive/special/<id>/createdByUser/notes": true,
+    "/drive/special/<id>/lastModifiedByUser/notes": true,
+    "/drive/root/createdByUser/notes": true,
+    "/drive/root/lastModifiedByUser/notes": true,
+    "/myOrganization/siteCollections/<id>/sites/<id>/notes": true
   },
   "properties": [
     {

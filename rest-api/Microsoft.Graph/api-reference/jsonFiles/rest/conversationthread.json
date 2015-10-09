@@ -12,6 +12,7 @@
   "propertyNotes": "",
   "relationshipNotes": "",
   "methodNotes": "",
+  "listDescription": "",
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
@@ -39,7 +40,23 @@
     "/shares/<id>/items/<id>/createdByUser/JoinedGroups/<objectId>/Conversations/<Id>/Threads/<Id>": true,
     "/shares/<id>/items/<id>/createdByUser/JoinedGroups/<objectId>/Threads/<Id>": true,
     "/shares/<id>/items/<id>/lastModifiedByUser/JoinedGroups/<objectId>/Conversations/<Id>/Threads/<Id>": true,
-    "/shares/<id>/items/<id>/lastModifiedByUser/JoinedGroups/<objectId>/Threads/<Id>": true
+    "/shares/<id>/items/<id>/lastModifiedByUser/JoinedGroups/<objectId>/Threads/<Id>": true,
+    "/drive/items/<id>/createdByUser/JoinedGroups/<objectId>/Conversations/<Id>/Threads/<Id>": true,
+    "/drive/items/<id>/createdByUser/JoinedGroups/<objectId>/Threads/<Id>": true,
+    "/drive/items/<id>/lastModifiedByUser/JoinedGroups/<objectId>/Conversations/<Id>/Threads/<Id>": true,
+    "/drive/items/<id>/lastModifiedByUser/JoinedGroups/<objectId>/Threads/<Id>": true,
+    "/drive/shared/<id>/createdByUser/JoinedGroups/<objectId>/Conversations/<Id>/Threads/<Id>": true,
+    "/drive/shared/<id>/createdByUser/JoinedGroups/<objectId>/Threads/<Id>": true,
+    "/drive/shared/<id>/lastModifiedByUser/JoinedGroups/<objectId>/Conversations/<Id>/Threads/<Id>": true,
+    "/drive/shared/<id>/lastModifiedByUser/JoinedGroups/<objectId>/Threads/<Id>": true,
+    "/drive/special/<id>/createdByUser/JoinedGroups/<objectId>/Conversations/<Id>/Threads/<Id>": true,
+    "/drive/special/<id>/createdByUser/JoinedGroups/<objectId>/Threads/<Id>": true,
+    "/drive/special/<id>/lastModifiedByUser/JoinedGroups/<objectId>/Conversations/<Id>/Threads/<Id>": true,
+    "/drive/special/<id>/lastModifiedByUser/JoinedGroups/<objectId>/Threads/<Id>": true,
+    "/drive/root/createdByUser/JoinedGroups/<objectId>/Conversations/<Id>/Threads/<Id>": true,
+    "/drive/root/createdByUser/JoinedGroups/<objectId>/Threads/<Id>": true,
+    "/drive/root/lastModifiedByUser/JoinedGroups/<objectId>/Conversations/<Id>/Threads/<Id>": true,
+    "/drive/root/lastModifiedByUser/JoinedGroups/<objectId>/Threads/<Id>": true
   },
   "properties": [
     {

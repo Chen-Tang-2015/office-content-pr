@@ -3,9 +3,9 @@
 
 ### HTTP request
 ```http
+POST /drive/root/createLink
+POST /drive/items/<id>/createLink
 POST /drives/<id>/root/createLink
-POST /shares/<id>/items/<id>/createLink
-POST /drives/<id>/items/<id>/createLink
 
 ```
 ### Request headers
@@ -27,7 +27,7 @@ If successful, this method returns `200, OK` response code and [permission](../r
 Here is an example of how to call this API.
 ##### Request
 ```http
-POST /drives/<id>/root/createLink
+POST /drive/root/createLink
 Content-type: application/json
 Content-length: 26
 {
@@ -56,5 +56,5 @@ Content-length: 176
 }
 ```
 
-<!-- uuid: d7c47cf1-944f-4aad-bd33-91b476062f72
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 5f3b8592-2ddc-446b-89c3-e57e2977db29
+2015-10-09 18:41:46 UTC -->

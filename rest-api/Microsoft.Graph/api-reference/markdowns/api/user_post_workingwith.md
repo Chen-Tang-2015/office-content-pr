@@ -4,8 +4,8 @@ Use this API to create a new User.
 ### HTTP request
 ```http
 POST /users/<objectId>/WorkingWith
-POST /drives/<id>/root/createdByUser/WorkingWith
-POST /drives/<id>/root/lastModifiedByUser/WorkingWith
+POST /drive/root/createdByUser/WorkingWith
+POST /drive/root/lastModifiedByUser/WorkingWith
 
 ```
 ### Request headers
@@ -112,5 +112,5 @@ Content-length: 2047
 }
 ```
 
-<!-- uuid: eaf0cee8-2a2f-461b-b515-06141423f1df
-2015-10-09 17:14:37 UTC -->
+<!-- uuid: 2ebee8c8-7b06-48cf-9921-ee8322184e35
+2015-10-09 18:41:47 UTC -->

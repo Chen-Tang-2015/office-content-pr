@@ -10,12 +10,14 @@
   "allowDelete": false,
   "info": null,
   "propertyNotes": "",
-  "relationshipNotes": "",
+  "relationshipNotes": null,
   "methodNotes": "",
-  "createDescription": "",
-  "updateDescription": "",
-  "deleteDescription": "",
+  "listDescription": "",
+  "createDescription": null,
+  "updateDescription": null,
+  "deleteDescription": null,
   "restPath": {
+    "/NotificationRules": true
   },
   "properties": [
 

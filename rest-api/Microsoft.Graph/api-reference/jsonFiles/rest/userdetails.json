@@ -12,6 +12,7 @@
   "propertyNotes": "",
   "relationshipNotes": "",
   "methodNotes": "",
+  "listDescription": "",
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
@@ -46,7 +47,23 @@
     "/shares/<id>/items/<id>/createdByUser/JoinedGroups/<objectId>/details": true,
     "/shares/<id>/items/<id>/createdByUser/details": true,
     "/shares/<id>/items/<id>/lastModifiedByUser/JoinedGroups/<objectId>/details": true,
-    "/shares/<id>/items/<id>/lastModifiedByUser/details": true
+    "/shares/<id>/items/<id>/lastModifiedByUser/details": true,
+    "/drive/items/<id>/createdByUser/JoinedGroups/<objectId>/details": true,
+    "/drive/items/<id>/createdByUser/details": true,
+    "/drive/items/<id>/lastModifiedByUser/JoinedGroups/<objectId>/details": true,
+    "/drive/items/<id>/lastModifiedByUser/details": true,
+    "/drive/shared/<id>/createdByUser/JoinedGroups/<objectId>/details": true,
+    "/drive/shared/<id>/createdByUser/details": true,
+    "/drive/shared/<id>/lastModifiedByUser/JoinedGroups/<objectId>/details": true,
+    "/drive/shared/<id>/lastModifiedByUser/details": true,
+    "/drive/special/<id>/createdByUser/JoinedGroups/<objectId>/details": true,
+    "/drive/special/<id>/createdByUser/details": true,
+    "/drive/special/<id>/lastModifiedByUser/JoinedGroups/<objectId>/details": true,
+    "/drive/special/<id>/lastModifiedByUser/details": true,
+    "/drive/root/createdByUser/JoinedGroups/<objectId>/details": true,
+    "/drive/root/createdByUser/details": true,
+    "/drive/root/lastModifiedByUser/JoinedGroups/<objectId>/details": true,
+    "/drive/root/lastModifiedByUser/details": true
   },
   "properties": [
     {

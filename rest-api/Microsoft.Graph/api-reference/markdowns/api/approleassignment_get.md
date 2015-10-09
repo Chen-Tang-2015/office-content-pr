@@ -3,8 +3,8 @@
 Retrieve the properties and relationships of approleassignment object.
 ### HTTP request
 ```http
-GET /servicePrincipals/<objectId>/appRoleAssignedTo
 GET /users/<objectId>/appRoleAssignments/<objectId>
+GET /servicePrincipals/<objectId>/appRoleAssignedTo
 GET /groups/<objectId>/appRoleAssignments/<objectId>
 ```
 ### Optional query parameters
@@ -39,5 +39,5 @@ Content-length: 398
 }
 ```
 
-<!-- uuid: 49678e86-f8f5-4ae0-8349-b2277fbdffeb
-2015-10-09 17:14:35 UTC -->
+<!-- uuid: 8d97df4a-2610-4bac-b928-d8d26fcc040a
+2015-10-09 18:41:45 UTC -->

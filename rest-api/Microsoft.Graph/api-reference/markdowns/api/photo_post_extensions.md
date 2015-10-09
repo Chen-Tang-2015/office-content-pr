@@ -5,7 +5,7 @@ Use this API to create a new Extension.
 ```http
 POST /users/<objectId>/UserPhoto/Extensions
 POST /groups/<objectId>/GroupPhoto/Extensions
-POST /drives/<id>/root/createdByUser/UserPhoto/Extensions
+POST /drive/root/createdByUser/UserPhoto/Extensions
 
 ```
 ### Request headers
@@ -32,5 +32,5 @@ Content-length: 22
 }
 ```
 
-<!-- uuid: 3085263d-7cce-400b-b5a1-ddda8eedf204
-2015-10-09 17:14:37 UTC -->
+<!-- uuid: 6a7ec773-ad8f-46fc-a98b-3a5f0bb446b9
+2015-10-09 18:41:46 UTC -->

@@ -4,8 +4,8 @@ Use this API to create a new Extension.
 ### HTTP request
 ```http
 POST /users/<objectId>/Contacts/<Id>/Extensions
-POST /drives/<id>/root/createdByUser/Contacts/<Id>/Extensions
-POST /drives/<id>/root/lastModifiedByUser/Contacts/<Id>/Extensions
+POST /drive/root/createdByUser/Contacts/<Id>/Extensions
+POST /drive/root/lastModifiedByUser/Contacts/<Id>/Extensions
 
 ```
 ### Request headers
@@ -32,5 +32,5 @@ Content-length: 22
 }
 ```
 
-<!-- uuid: 99dfdf02-8a2f-4d38-92c6-6bd42d7abe3e
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 4f5cb3f3-be48-44c1-ba3f-17c940d1fe77
+2015-10-09 18:41:45 UTC -->

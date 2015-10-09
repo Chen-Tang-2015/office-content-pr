@@ -5,7 +5,7 @@ Update the properties of mailfolder object.
 ```http
 PATCH /users/<objectId>/RootFolder
 PATCH /users/<objectId>/Folders/<Id>
-PATCH /drives/<id>/root/createdByUser/RootFolder
+PATCH /drive/root/createdByUser/RootFolder
 ```
 ### Optional request headers
 | Name       | Type | Description|
@@ -51,5 +51,5 @@ Content-length: 130
 }
 ```
 
-<!-- uuid: fd8a46f0-9f4b-4344-96d0-a4f64c6a26e5
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 0ae56681-7aa2-4a77-8200-8ce8761d8b5d
+2015-10-09 18:41:46 UTC -->

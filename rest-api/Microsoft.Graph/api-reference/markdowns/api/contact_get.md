@@ -4,8 +4,8 @@ Retrieve the properties and relationships of contact object.
 ### HTTP request
 ```http
 GET /users/<objectId>/Contacts/<Id>
-GET /drives/<id>/root/createdByUser/Contacts/<Id>
-GET /drives/<id>/root/lastModifiedByUser/Contacts/<Id>
+GET /drive/root/createdByUser/Contacts/<Id>
+GET /drive/root/lastModifiedByUser/Contacts/<Id>
 ```
 ### Optional query parameters
 You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
@@ -78,5 +78,5 @@ Content-length: 1289
 }
 ```
 
-<!-- uuid: 6b84244c-80cf-4e4d-9850-020aa049d744
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: 22e52cfd-8ce9-49a8-b608-3e9dbb2a3111
+2015-10-09 18:41:45 UTC -->

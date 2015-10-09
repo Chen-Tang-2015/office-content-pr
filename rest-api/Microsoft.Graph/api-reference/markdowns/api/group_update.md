@@ -5,7 +5,7 @@ Update the properties of group object.
 ```http
 PATCH /groups/<objectId>
 PATCH /users/<objectId>/JoinedGroups/<objectId>
-PATCH /drives/<id>/root/createdByUser/JoinedGroups/<objectId>
+PATCH /drive/root/createdByUser/JoinedGroups/<objectId>
 ```
 ### Optional request headers
 | Name       | Type | Description|
@@ -129,5 +129,5 @@ Content-length: 873
 }
 ```
 
-<!-- uuid: c3bdfd82-2f2b-4d3a-8de8-84a463ae5ffc
-2015-10-09 17:14:36 UTC -->
+<!-- uuid: cbb03cbe-0f82-45b5-9d6b-ff44fad8ac5e
+2015-10-09 18:41:46 UTC -->

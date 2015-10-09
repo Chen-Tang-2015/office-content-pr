@@ -3,8 +3,8 @@
 
 ### HTTP request
 ```http
-POST /servicePrincipals/<objectId>/appRoleAssignedTo/getMemberGroups
 POST /users/<objectId>/appRoleAssignments/<objectId>/getMemberGroups
+POST /servicePrincipals/<objectId>/appRoleAssignedTo/getMemberGroups
 POST /groups/<objectId>/appRoleAssignments/<objectId>/getMemberGroups
 
 ```
@@ -27,7 +27,7 @@ If successful, this method returns `200, OK` response code and String collection
 Here is an example of how to call this API.
 ##### Request
 ```http
-POST /servicePrincipals/<objectId>/appRoleAssignedTo/getMemberGroups
+POST /users/<objectId>/appRoleAssignments/<objectId>/getMemberGroups
 Content-type: application/json
 Content-length: 33
 {
@@ -46,5 +46,5 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: bd92bafd-4d48-4886-940a-dac4681e8045
-2015-10-09 17:14:35 UTC -->
+<!-- uuid: 8baa2d22-162c-4d93-ac43-c331197059d7
+2015-10-09 18:41:45 UTC -->

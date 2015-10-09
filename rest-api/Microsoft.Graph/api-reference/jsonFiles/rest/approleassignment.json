@@ -12,6 +12,7 @@
   "propertyNotes": "",
   "relationshipNotes": "",
   "methodNotes": "",
+  "listDescription": "",
   "createDescription": "",
   "updateDescription": "",
   "deleteDescription": "",
@@ -48,7 +49,23 @@
     "/shares/<id>/items/<id>/createdByUser/appRoleAssignments/<objectId>": true,
     "/shares/<id>/items/<id>/createdByUser/JoinedGroups/<objectId>/appRoleAssignments/<objectId>": true,
     "/shares/<id>/items/<id>/lastModifiedByUser/appRoleAssignments/<objectId>": true,
-    "/shares/<id>/items/<id>/lastModifiedByUser/JoinedGroups/<objectId>/appRoleAssignments/<objectId>": true
+    "/shares/<id>/items/<id>/lastModifiedByUser/JoinedGroups/<objectId>/appRoleAssignments/<objectId>": true,
+    "/drive/items/<id>/createdByUser/appRoleAssignments/<objectId>": true,
+    "/drive/items/<id>/createdByUser/JoinedGroups/<objectId>/appRoleAssignments/<objectId>": true,
+    "/drive/items/<id>/lastModifiedByUser/appRoleAssignments/<objectId>": true,
+    "/drive/items/<id>/lastModifiedByUser/JoinedGroups/<objectId>/appRoleAssignments/<objectId>": true,
+    "/drive/shared/<id>/createdByUser/appRoleAssignments/<objectId>": true,
+    "/drive/shared/<id>/createdByUser/JoinedGroups/<objectId>/appRoleAssignments/<objectId>": true,
+    "/drive/shared/<id>/lastModifiedByUser/appRoleAssignments/<objectId>": true,
+    "/drive/shared/<id>/lastModifiedByUser/JoinedGroups/<objectId>/appRoleAssignments/<objectId>": true,
+    "/drive/special/<id>/createdByUser/appRoleAssignments/<objectId>": true,
+    "/drive/special/<id>/createdByUser/JoinedGroups/<objectId>/appRoleAssignments/<objectId>": true,
+    "/drive/special/<id>/lastModifiedByUser/appRoleAssignments/<objectId>": true,
+    "/drive/special/<id>/lastModifiedByUser/JoinedGroups/<objectId>/appRoleAssignments/<objectId>": true,
+    "/drive/root/createdByUser/appRoleAssignments/<objectId>": true,
+    "/drive/root/createdByUser/JoinedGroups/<objectId>/appRoleAssignments/<objectId>": true,
+    "/drive/root/lastModifiedByUser/appRoleAssignments/<objectId>": true,
+    "/drive/root/lastModifiedByUser/JoinedGroups/<objectId>/appRoleAssignments/<objectId>": true
   },
   "properties": [
     {

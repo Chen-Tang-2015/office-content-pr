@@ -3,9 +3,9 @@
 Delete permission.
 ### HTTP request
 ```http
+DELETE /drive/root/permissions/<id>
+DELETE /drive/items/<id>/permissions/<id>
 DELETE /drives/<id>/root/permissions/<id>
-DELETE /shares/<id>/items/<id>/permissions/<id>
-DELETE /drives/<id>/items/<id>/permissions/<id>
 
 ```
 ### Request headers
@@ -21,5 +21,5 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: d09d5485-9fa7-470e-b946-7d347fb5a0ed
-2015-10-09 17:14:37 UTC -->
+<!-- uuid: 73eb3732-4c9d-4da1-bc13-0f6839d74b42
+2015-10-09 18:41:46 UTC -->
