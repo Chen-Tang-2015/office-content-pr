@@ -1,22 +1,16 @@
-
 # Calling Microsoft Graph API
-
 
 In this section:
   
 -	[Calling the REST API](#msg_calling_rest_api)
 -	[Using the .NET client library](#msg_using_client_lib)
 
-
 <a name="msg_call_api_service"> </a>
 ###Call Microsoft Graph API service
-To access and manipulate a graph resource, you call the Microsoft Graph API service, specifying the resource URLs in one of 
+To access and manipulate a Microsoft Graph API resource, you call the Microsoft Graph API service, specifying the resource URLs in one of 
 the HTTPS POST, GET, PATCH or PUT, and DELETE operations permitted on the resource.  
 A resource URL is determined by the Microsoft Graph API entity data model. The prescription is outlined in the entity metadata schema ($metadata). 
 For more information, see the _Understand Microsoft Graph API metadata_ topic.
-
-For every request against the API, a valid access token must supplied in the `Authorization` header. For a reference implementation of these operations, 
-see this Express-based web app sample in Node.js.
 
 To showcase a few representative use cases of the API calls, we present the following basic programming patterns by means of 
 
@@ -36,7 +30,7 @@ entity, either the `objectId` or `userPrincipalName` property may be used as the
 the `userPrincipalName` value as the user's Id. 
 
 ```no-highlight 
-GET https://graph.microsoft.com/beta/contoso.onmicrosoft.com/users/john.doe@contoso.onmicrosoft.com HTTP/1.1
+GET https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/users/john.doe@contoso.onmicrosoft.com HTTP/1.1
 Authorization : Bearer <access_token>
 ```
 
@@ -49,7 +43,7 @@ server: Microsoft-IIS/8.5
 content-length: 982
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/contoso.onmicrosoft.com/$metadata#users/$entity",
+    "@odata.context": "https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/$metadata#users/$entity",
     "objectType": "User",
     "objectId": "c95e3b3a-c33b-48da-a6e9-eb101e8a4205",
     "city": "Redmond",
@@ -71,7 +65,7 @@ To retrieve only the user's biographical data, such as the user's provided _Abou
 $select query option to the previous request. For example,
 
 ```no-highlight 
-GET https://graph.microsoft.com/beta/contoso.onmicrosoft.com/users/john.doe@contoso.onmicrosoft.com?$select=AboutMe,Skills HTTP/1.1
+GET https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/users/john.doe@contoso.onmicrosoft.com?$select=AboutMe,Skills HTTP/1.1
 Authorization : Bearer <access_token>
 ```
 
@@ -84,7 +78,7 @@ odata-version: 4.0
 content-length: 169
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/contoso.onmicrosoft.com/$metadata#users/$entity",
+    "@odata.context": "https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/$metadata#users/$entity",
     "AboutMe": "A cool and nice guy.",
     "Skills": [
         "n-Lingual",
@@ -103,7 +97,7 @@ A manager holds a `directReports` relatioinship with  the other users reporting 
 you can use the following HTTPS GET request to navigate to the intended target via relationship traversal. 
 
 ```no-highlight 
-GET https://graph.microsoft.com/beta/contoso.onmicrosoft.com/users/john.doe@contoso.onmicrosoft.com/directReports HTTP/1.1
+GET https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/users/john.doe@contoso.onmicrosoft.com/directReports HTTP/1.1
 Authorization : Bearer <access_token>
 ```
 
@@ -116,7 +110,7 @@ odata-version: 4.0
 content-length: 152
     
 {
-    "@odata.context": "https://graph.microsoft.com/beta/contoso.onmicrosoft.com/$metadata#users('johndoe%40contoso.onmicrosoft.com')/directReports",
+    "@odata.context": "https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/$metadata#users('johndoe%40contoso.onmicrosoft.com')/directReports",
     "value": []
 }
 ```
@@ -129,7 +123,7 @@ enables graph traversal from an Azure Active Directory node to an Exchange Onlin
 
 
 ```no-highlight 
-GET https://graph.microsoft.com/beta/contoso.onmicrosoft.com/users/messages HTTP/1.1
+GET https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/users/messages HTTP/1.1
 Authorization : Bearer <access_token>
 ```
 
@@ -144,7 +138,7 @@ odata-version: 4.0
 content-length: 147
     
 {
-    "@odata.context": "https://graph.microsoft.com/beta/contoso.onmicrosoft.com/$metadata#users('johndoe%40contoso.onmicrosoft.com')/messages",
+    "@odata.context": "https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/$metadata#users('johndoe%40contoso.onmicrosoft.com')/messages",
     "value": []
 }
 ```
@@ -156,7 +150,7 @@ them to a collection of some of their properties. For example, to query the name
 you can submit the following HTTPS GET request:
 
 ```no-highlight 
-GET https://graph.microsoft.com/beta/me/files?$select=name,type HTTP/1.1
+GET https://graph.microsoft.com/v1.0/me/files?$select=name,type HTTP/1.1
 Authorization : Bearer <access_token>
 ```
 
@@ -164,7 +158,7 @@ The successful response returns a 200 OK status code and a payload containing th
 
 ```no-highlight 
     {
-      "@odata.context": "https://graph.microsoft.com/beta/contoso.onmicrosoft.com/$metadata#users('johndoe@contoso.onmicrosoft.com')/files",
+      "@odata.context": "https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/$metadata#users('johndoe@contoso.onmicrosoft.com')/files",
       "value": [
         {
           "@odata.id": "users/johndoe@contoso.onmicrosoft.com/files/01EKT655BZNCMKTXXVPREY7G2HYHLWC7R3",
@@ -173,11 +167,11 @@ The successful response returns a 200 OK status code and a payload containing th
           "type": "Folder",
           "#Microsoft.Graph.copy": {
             "title": "Microsoft.Graph.copy",
-            "target": "https://graph.microsoft.com/beta/contoso.onmicrosoft.com/users/johndoe@contoso.onmicrosoft.com/files/01EKT655BZNCMKTXXVPREY7G2HYHLWC7R3/Microsoft.Graph.Item/Microsoft.Graph.copy"
+            "target": "https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/users/johndoe@contoso.onmicrosoft.com/files/01EKT655BZNCMKTXXVPREY7G2HYHLWC7R3/Microsoft.Graph.Item/Microsoft.Graph.copy"
           },
           "#Microsoft.Graph.content": {
             "title": "Microsoft.Graph.content",
-            "target": "https://graph.microsoft.com/beta/contoso.onmicrosoft.com/users/johndoe@contoso.onmicrosoft.com/files/01EKT655BZNCMKTXXVPREY7G2HYHLWC7R3/Microsoft.Graph.Item/Microsoft.Graph.content"
+            "target": "https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/users/johndoe@contoso.onmicrosoft.com/files/01EKT655BZNCMKTXXVPREY7G2HYHLWC7R3/Microsoft.Graph.Item/Microsoft.Graph.content"
           }
         }
       ]
@@ -194,7 +188,7 @@ a $filter query option. An example is shown as follows:
 
     
 ```no-highlight 
-GET https://graph.microsoft.com/beta/contoso.onmicrosoft.com/users/?$filter=jobTitle+eq+%27Helper%27 HTTP/1.1
+GET https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/users/?$filter=jobTitle+eq+%27Helper%27 HTTP/1.1
 Authorization : Bearer <access_token>
 ```
 
@@ -207,7 +201,7 @@ odata-version: 4.0
 content-length: 986
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/contoso.onmicrosoft.com/$metadata#users",
+    "@odata.context": "https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/$metadata#users",
     "value": [
         {
             "objectType": "User",
@@ -243,12 +237,12 @@ It appears that the returned user has a unique job title in her organization.
 
 <a name="msg_calling_actions"> </a>
 ###Calling OData actions or functions
-The Office 365 unified API also supports OData actions and functions for you to manipulate the resources. 
+The Microsoft Graph API also supports OData actions and functions for you to manipulate the resources. 
 For example, the following HTTPS POST request lets the signed-in user (`me`) copy a file ("test3.txt") from a folder (`"<id_1>"`) 
 to another folder (`"<id_2>"`). 
 
 ```no-highlight 
-POST https://graph.microsoft.com/beta/me/files/<id_1>/Copy HTTP/1.1
+POST https://graph.microsoft.com/v1.0/me/files/<id_1>/Copy HTTP/1.1
 authorization: bearer <access_token>
 content-type: application/json
 content-length: 96
@@ -261,7 +255,7 @@ content-length: 96
 
 The request payload contains the input to the `Microsoft.Graph.Copy` action, which is also defined in the $metadata.
 
-As you can see from the above examples of the REST API calls, with a single unified endpoint, the Office 365 unified API simplifies 
+As you can see from the above examples of the REST API calls, with a single unified endpoint, the Microsoft Graph API simplifies 
 the application programming interface for all the Office 365 services as well and the Azure Active Directory service. As a result, the 
 boundaries of the otherwise silo-ed services disappear. As an app developer, you are no longer required to keep track of the 
 data sources and to implement custom interfaces between various data sources. 
@@ -269,8 +263,8 @@ data sources and to implement custom interfaces between various data sources.
 
 <a name="msg_using_client_lib"> </a>
 ## Using the .NET client library
-An Office 365 unified API native app uses the Office 365 unified API client library to access and manipulate the unified API resources. 
-The client library exposes a .NET application object model that encapsulates the Office 365 unified API data model ($metadata),
+A Microsoft Graph API native app uses the Microsoft Graph API client library to access and manipulate the API resources. 
+The client library exposes a .NET application object model that encapsulates the Microsoft Graph API data model ($metadata),
 mapping an OData resource type into a .NET class. 
 The CRUD operations in the REST API are translated as calls to the `ExecuteAsync`, `UpdateAsync`, and `DeleteAsync` methods 
 on the corresponding resource class. 
@@ -281,7 +275,7 @@ you should see a strong similarity between calling the REST API and using the cl
 **In this section:**
 
 - [Set up a Visual Studio project](#msg_set_up_visual_studio),
-- [Initialize the Office 365 unified API client](#msg_initialize_client),
+- [Initialize the Microsoft Graph API client](#msg_initialize_client),
 - [Map client library object model to the entity schema](#msg_client_lib_object_model),
 - [Access and manipulate resources with the client library](#msg_access_and_manipulate_resources_with_client_library),
 - [Use query options with the client library](#msg_query_options_with_client_library)
@@ -289,16 +283,16 @@ you should see a strong similarity between calling the REST API and using the cl
 
 <a name="msg_set_up_visual_studio"> </a>
 ###Set up a Visual Studio Project
-The Office 365 unified API client library is available for download as a NuGet package. 
+The Microsoft Graph API client library is available for download as a NuGet package. 
 You can download it using Visual Studio after you have created a Visual Studio solution/project. 
 For more information on how to set up a Visual Studio project to call .NET client library, 
-see this [Office 365 unified API .NET client library sample app](http://aka.ms/o365-win-profile)
+see this [Microsoft Graph API .NET client library sample app](http://aka.ms/o365-win-profile)
  
 <a name="msg_initialize_client"> </a> 
-###Initialize the Office 365 unified API client
-For every Office 365 unified API app, the entry point to the client library is a 
+###Initialize the Microsoft Graph API client
+For every Microsoft Graph API app, the entry point to the client library is a 
 `Microsoft.Graph.GraphService` object. You obtain this object by instantiating 
-the `GraphService` class before accessing any other Office 365 unified API resources.
+the `GraphService` class before accessing any other Microsoft Graph API resources.
  
 ```no-highlight 
 Microsoft.Graph.GraphService client = new
@@ -333,7 +327,7 @@ behind the scenes. We first create a `AuthenticationContext` object and bind it 
 the `AcquireToken` method on the newly created `authenticationContext` object. This will bring up the Azure user sign-in
 page for the user to enter his or her Azure tenant account and password. When the user signs in to Azure successfully, the API
 proceeds to acquire the access token, returns it to the app in the `userAuthnResult` object, and uses it in the subsequent 
-calls to the Office 365 unified API service. The `redirectUri` must match the **REPLY URI** configured for the app in Azure
+calls to the Microsoft Graph API service. The `redirectUri` must match the **REPLY URI** configured for the app in Azure
  application registry. `Constants.ResourceUrl` is a named constant holding a string value of
 `"https://graph.microsoft.com"` and `Constants.ClientIdForUserAuthn` is the **CLIENT ID** value of the app, 
 also configured in Azure. Unlike a web app, the client secret is not used for any native app.
@@ -352,7 +346,7 @@ The same applies to entities and their properties, including navigation properti
 and its child elements, for example, `<Property name="userPrincipalName">` and `<NavigationProperty name="files">`, 
 in metadata become the `User` class, the `User.userPrincipalName` property and the `User.files` property, respectively, in Microsoft.Graph.dll.
  
-The following table summarizes the mappings between the Office 365 unified API entity schemas ($metadata) and its .NET client library.
+The following table summarizes the mappings between the Microsoft Graph API entity schemas ($metadata) and its .NET client library.
 
 
 | **Entity of $metadata**	| **Type/members of Microsoft.Graph.Dll** |
@@ -372,7 +366,7 @@ User me = client.Me;
 
 <a name="msg_access_and_manipulate_resources_with_client_library"> </a> 
 ###Access and manipulate resources with the client library 
-With the client library, you can traverse the graph to access and manipulate the unified API resources by calling the  
+With the client library, you can traverse the graph to access and manipulate the API resources by calling the  
 `ExecuteAsync`, `UpdateAsync` and `DeleteAsync` and other methods.  For example, fetching the `users` collection 
 off the tenant becomes calling the following statement: 
  
@@ -415,7 +409,7 @@ List<IUser> employees = client.users.Where(u=>u.jobTitle!="CEO").ExecuteAsync().
 The `Where` clause invoked before `ExecuteAsync` corresponds to using calling `$filter` query operation in the underlying REST call.
 For this to work, the filtering capabilities must be enabled for the properties used in the predicate. You can check the `<annotations>` tag
 in $metadata to find out if the option is supported for a given entity property. For more information about using `<annotations>` tag, 
-see _Microsoft Office 365 unified API in depth_ in this document.
+see _Understanding Microsoft Graph API metadata_ article.
  
 To navigate along a relationship from a given resource , follow the corresponding navigation property on the source entity. 
 For example, the following snippet gets the list of files that a specific user (`user.objectId`) shared with the signed-in user. 
