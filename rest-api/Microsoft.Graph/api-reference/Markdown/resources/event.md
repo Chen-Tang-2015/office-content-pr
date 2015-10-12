@@ -107,7 +107,7 @@ Here is a JSON representation of the resource
 |Subject|String|The text of the event's subject line.|
 |Type|String|The event type: SingleInstance = 0, Occurrence = 1, Exception = 2, SeriesMaster = 3. Possible values are: `SingleInstance`, `Occurrence`, `Exception`, `SeriesMaster`.|
 |WebLink|String|The URL to open the event in Outlook Web App.<br/><br/>The event will open in the browser if you are logged in to your mailbox via Outlook Web App. You will be prompted to login if you are not already logged in with the browser.<br/><br/>This URL can be accessed from within an iFrame.|
-|iCalUId|String||
+|iCalUId|String|A unique identifier that is shared by all instances of an event across different calendars.|
 
 ### Relationships
 | Relationship | Type	|Description|
@@ -131,5 +131,5 @@ Here is a JSON representation of the resource
 |[Decline](../api/event_decline.md)|[None](none.md)||
 |[Tentativelyaccept](../api/event_tentativelyaccept.md)|[None](none.md)||
 
-<!-- uuid: e2770a3c-4984-40c4-afd6-65f94ac3130d
-2015-10-12 21:30:00 UTC -->
+<!-- uuid: 421460e9-a529-4a45-9c32-b968268a0799
+2015-10-12 23:19:38 UTC -->

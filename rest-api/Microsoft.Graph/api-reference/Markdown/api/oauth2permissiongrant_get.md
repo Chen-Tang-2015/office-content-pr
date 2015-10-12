@@ -5,7 +5,7 @@ Retrieve the properties and relationships of oauth2permissiongrant object.
 ```http
 GET /oauth2PermissionGrants/<objectId>
 GET /users/<objectId>/oauth2PermissionGrants/<objectId>
-GET /servicePrincipals/<objectId>/oauth2PermissionGrants/<objectId>
+GET /drive/root/createdByUser/oauth2PermissionGrants/<objectId>
 ```
 ### Optional query parameters
 You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
@@ -37,5 +37,5 @@ Content-length: 271
 }
 ```
 
-<!-- uuid: 9a5427b2-fd49-443b-8438-fe782bc87129
-2015-10-12 21:30:00 UTC -->
+<!-- uuid: 6c8f2b92-c858-4a2e-be78-ec9bc3a61eaf
+2015-10-12 23:19:39 UTC -->

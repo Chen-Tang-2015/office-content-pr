@@ -17,12 +17,12 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|CcRecipients|Recipient|Aggregation of Cc recipients from all messages on the thread|
+|CcRecipients|Recipient||
 |DateTimeLastDelivered|DateTimeOffset||
 |HasAttachments|Boolean||
 |IsLocked|Boolean||
-|Preview|String|A preview of the last post in the thread.|
-|ToRecipients|Recipient|Aggregation of To recipients from all messages on the thread|
+|Preview|String||
+|ToRecipients|Recipient||
 |Topic|String||
 |UniqueSenders|String||
 
@@ -82,5 +82,5 @@ Content-length: 295
 }
 ```
 
-<!-- uuid: 83c789a1-0837-4676-bc2b-3f64e4a7bf00
-2015-10-12 21:29:59 UTC -->
+<!-- uuid: b90cdd7e-d437-4136-b6ee-87f5d4846f9d
+2015-10-12 23:19:38 UTC -->

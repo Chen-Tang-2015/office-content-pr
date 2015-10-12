@@ -15,8 +15,8 @@ None
 |:---------------|:--------|:----------|
 |[List](../api/drive_list.md) | [drive](drive.md) [] |Get drive object collection. |
 
-<!-- uuid: ac7813b5-d2f4-4150-83ac-750700e71607
-2015-10-12 21:30:00 UTC -->
+<!-- uuid: df477f1d-7b55-4a41-9139-d89a0510c7f1
+2015-10-12 23:19:38 UTC -->
 {
   "driveType": "String",
   "id": "String (identifier)",
@@ -75,5 +75,5 @@ None
 |[Delete](../api/drive_delete.md) | Void	|Delete drive object. |
 |[Allphotos](../api/drive_allphotos.md)|[item](item.md)||
 
-<!-- uuid: e3c209d9-6ff2-43cf-83b2-aac57ee0fa8d
-2015-10-12 21:30:00 UTC -->
+<!-- uuid: 439b772f-7931-4915-9550-2bcc9f51e1af
+2015-10-12 23:19:38 UTC -->

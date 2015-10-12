@@ -5,7 +5,7 @@ Delete Group.
 ```http
 DELETE /groups/<objectId>
 DELETE /users/<objectId>/JoinedGroups/<objectId>
-DELETE /drives/<id>/root/createdByUser/JoinedGroups/<objectId>
+DELETE /drive/root/createdByUser/JoinedGroups/<objectId>
 
 ```
 ### Request headers
@@ -21,5 +21,5 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: be4fe213-8eeb-4870-9e49-c4784d24c7fd
-2015-10-12 21:30:00 UTC -->
+<!-- uuid: 634bc2ea-17be-4646-a738-a296ed9240bb
+2015-10-12 23:19:39 UTC -->

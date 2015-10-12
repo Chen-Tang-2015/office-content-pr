@@ -4,8 +4,8 @@
 ### HTTP request
 ```http
 POST /users/<objectId>/assignLicense
-POST /drives/<id>/root/createdByUser/assignLicense
-POST /drives/<id>/root/lastModifiedByUser/assignLicense
+POST /drive/root/createdByUser/assignLicense
+POST /drive/root/lastModifiedByUser/assignLicense
 
 ```
 ### Request headers
@@ -131,5 +131,5 @@ Content-length: 2047
 }
 ```
 
-<!-- uuid: 50b0e668-1fc5-4bf3-a69c-5761f2967243
-2015-10-12 21:30:02 UTC -->
+<!-- uuid: 8098945c-8f26-4d1f-8fa5-90cb3c6437e3
+2015-10-12 23:19:40 UTC -->

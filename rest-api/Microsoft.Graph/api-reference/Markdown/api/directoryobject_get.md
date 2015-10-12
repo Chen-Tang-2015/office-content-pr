@@ -4,8 +4,8 @@ Retrieve the properties and relationships of directoryobject object.
 ### HTTP request
 ```http
 GET /users/<objectId>/manager
-GET /contacts/<objectId>/manager
 GET /directoryObjects/<objectId>
+GET /contacts/<objectId>/manager
 ```
 ### Optional query parameters
 You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
@@ -32,5 +32,5 @@ Content-length: 111
 }
 ```
 
-<!-- uuid: 16b42aac-846e-441f-a4a1-b419fba02077
-2015-10-12 21:29:59 UTC -->
+<!-- uuid: 4c57a57f-a8ee-41bf-92a9-aa36a4437d89
+2015-10-12 23:19:38 UTC -->

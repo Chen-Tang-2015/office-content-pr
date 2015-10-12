@@ -1,6 +1,6 @@
 # Create version
 
-**Note** You can't create empty files in OneDrive. See Upload item contents for more info about creating a file with metadata and contents in an API call.
+Use this API to create a new version.
 ### HTTP request
 ```http
 POST /drive/root/versions
@@ -74,5 +74,5 @@ Content-length: 665
 }
 ```
 
-<!-- uuid: 6c08c932-320d-4b2c-8474-bb337d93c617
-2015-10-12 21:30:00 UTC -->
+<!-- uuid: 22b05c43-0c5b-4cc9-a482-5b90354c1874
+2015-10-12 23:19:39 UTC -->

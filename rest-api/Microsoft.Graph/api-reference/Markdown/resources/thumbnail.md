@@ -23,5 +23,5 @@ Here is a JSON representation of the resource
 |url|String|The URL used to fetch the thumbnail content.|
 |width|Int32|The width of the thumbnail, in pixels.|
 
-<!-- uuid: 4cf48141-3d00-45e0-bec6-5604f39bf932
-2015-10-12 21:30:01 UTC -->
+<!-- uuid: b87b8c82-06b4-4200-975c-084ba70e1b52
+2015-10-12 23:19:40 UTC -->

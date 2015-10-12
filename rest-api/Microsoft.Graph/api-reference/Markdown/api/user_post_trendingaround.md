@@ -4,8 +4,8 @@ Use this API to create a new File.
 ### HTTP request
 ```http
 POST /users/<objectId>/TrendingAround
-POST /drives/<id>/root/createdByUser/TrendingAround
-POST /drives/<id>/root/lastModifiedByUser/TrendingAround
+POST /drive/root/createdByUser/TrendingAround
+POST /drive/root/lastModifiedByUser/TrendingAround
 
 ```
 ### Request headers
@@ -31,5 +31,5 @@ Content-length: 3
 }
 ```
 
-<!-- uuid: 42a91604-530f-461a-97d7-e87d74e728fc
-2015-10-12 21:30:01 UTC -->
+<!-- uuid: 2847d4bc-0eab-4d9d-aa46-b0175ffe17f5
+2015-10-12 23:19:40 UTC -->

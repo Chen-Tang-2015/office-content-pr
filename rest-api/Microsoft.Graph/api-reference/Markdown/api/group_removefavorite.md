@@ -5,7 +5,7 @@
 ```http
 POST /groups/<objectId>/RemoveFavorite
 POST /users/<objectId>/JoinedGroups/<objectId>/RemoveFavorite
-POST /drives/<id>/root/createdByUser/JoinedGroups/<objectId>/RemoveFavorite
+POST /drive/root/createdByUser/JoinedGroups/<objectId>/RemoveFavorite
 
 ```
 ### Request headers
@@ -35,5 +35,5 @@ Content-length: 3
 }
 ```
 
-<!-- uuid: b0d48401-ac91-448c-a501-7f237374284b
-2015-10-12 21:30:00 UTC -->
+<!-- uuid: c6c3bdfc-ded6-48bb-b4f8-fd6de647f5c8
+2015-10-12 23:19:39 UTC -->

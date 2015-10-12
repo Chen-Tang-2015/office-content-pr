@@ -4,8 +4,8 @@ Update the properties of contact object.
 ### HTTP request
 ```http
 PATCH /users/<objectId>/Contacts/<Id>
-PATCH /drives/<id>/root/createdByUser/Contacts/<Id>
-PATCH /drives/<id>/root/lastModifiedByUser/Contacts/<Id>
+PATCH /drive/root/createdByUser/Contacts/<Id>
+PATCH /drive/root/lastModifiedByUser/Contacts/<Id>
 ```
 ### Optional request headers
 | Name       | Type | Description|
@@ -17,40 +17,40 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|AssistantName|String||
-|Birthday|DateTimeOffset||
-|BusinessAddress|PhysicalAddress||
-|BusinessHomePage|String||
-|BusinessPhones|String||
-|Categories|String||
-|ChangeKey|String||
-|CompanyName|String||
-|DateTimeCreated|DateTimeOffset||
-|DateTimeLastModified|DateTimeOffset||
-|Department|String|The name for the department in which the contact works.|
-|DisplayName|String|The display name for the contact.|
-|EmailAddresses|EmailAddress||
-|FileAs|String||
-|Generation|String||
-|GivenName|String|The given name (first name) of the contact.|
-|HomeAddress|PhysicalAddress||
-|HomePhones|String||
-|ImAddresses|String||
-|Initials|String||
-|JobTitle|String|The contactΓÇÖs job title.|
-|Manager|String|The user or contact that is this contactΓÇÖs manager. Inherited from [DirectoryObject].            HTTP Methods: GET, PUT, DELETE|
-|MiddleName|String||
-|MobilePhone1|String||
-|NickName|String||
-|OfficeLocation|String||
-|OtherAddress|PhysicalAddress||
-|ParentFolderId|String||
-|Profession|String||
-|Surname|String|The contact's surname (family name or last name).|
-|Title|String||
-|YomiCompanyName|String||
-|YomiGivenName|String||
-|YomiSurname|String||
+|AssistantName|String|The name of the contact's assistant.|
+|Birthday|DateTimeOffset|The contact's birthday.|
+|BusinessAddress|PhysicalAddress|The contact's business address.|
+|BusinessHomePage|String|The business home page of the contact.|
+|BusinessPhones|String|The contact's business phone numbers.|
+|Categories|String|The categories associated with the contact.|
+|ChangeKey|String|Identifies the version of the contact. Every time the contact is changed, ChangeKey  changes as well. This allows Exchange to apply changes to the correct version of the object.|
+|CompanyName|String|The name of the contact's company.|
+|DateTimeCreated|DateTimeOffset|The time the contact was created.|
+|DateTimeLastModified|DateTimeOffset|The time the contact was modified.|
+|Department|String|The contact's department.|
+|DisplayName|String|The contact's display name.|
+|EmailAddresses|EmailAddress|The contact's email addresses.|
+|FileAs|String|The name the contact is filed under.|
+|Generation|String|The contact's generation.|
+|GivenName|String|The contact's given name.|
+|HomeAddress|PhysicalAddress|The contact's home address.|
+|HomePhones|String|The contact's home phone numbers.|
+|ImAddresses|String|The contact's instant messaging (IM) addresses.|
+|Initials|String|The contact's initials.|
+|JobTitle|String|The contact's job title.|
+|Manager|String|The name of the contact's manager.|
+|MiddleName|String|The contact's middle name.|
+|MobilePhone1|String|The contact's mobile phone number.|
+|NickName|String|The contact's nickname.|
+|OfficeLocation|String|The location of the contact's office.|
+|OtherAddress|PhysicalAddress|Other addresses for the contact.|
+|ParentFolderId|String|The ID of the contact's parent folder.|
+|Profession|String|The contact's profession.|
+|Surname|String|The contact's surname.|
+|Title|String|The contact's title.|
+|YomiCompanyName|String|The phonetic Japanese company name of the contact. This property is optional.|
+|YomiGivenName|String|The phonetic Japanese given name (first name) of the contact. This property is optional.|
+|YomiSurname|String|The phonetic Japanese surname (last name)  of the contact. This property is optional.|
 
 ### Response
 If successful, this method returns a `200 OK` response code and updated [Contact](../resources/contact.md) object in the response body.
@@ -172,5 +172,5 @@ Content-length: 1289
 }
 ```
 
-<!-- uuid: bc21fbd0-0b67-4401-a78d-6657e993b58e
-2015-10-12 21:29:59 UTC -->
+<!-- uuid: 09493a1d-c9da-42c6-ab27-f641f6c96785
+2015-10-12 23:19:38 UTC -->

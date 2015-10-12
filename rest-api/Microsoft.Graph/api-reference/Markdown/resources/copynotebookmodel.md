@@ -43,5 +43,5 @@ Here is a JSON representation of the resource
 |self|String||
 |userRole|String| Possible values are: `Owner`, `Contributor`, `Reader`, `None`.|
 
-<!-- uuid: a9bceb2a-35a4-4d07-beb1-aa87cbc0e273
-2015-10-12 21:29:59 UTC -->
+<!-- uuid: 2b4f16a4-345b-403b-9101-a0836c6a3513
+2015-10-12 23:19:38 UTC -->

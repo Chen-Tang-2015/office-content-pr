@@ -4,8 +4,8 @@ Use this API to create a new registeredDevice.
 ### HTTP request
 ```http
 POST /users/<objectId>/registeredDevices
-POST /drives/<id>/root/createdByUser/registeredDevices
-POST /drives/<id>/root/lastModifiedByUser/registeredDevices
+POST /drive/root/createdByUser/registeredDevices
+POST /drive/root/lastModifiedByUser/registeredDevices
 
 ```
 ### Request headers
@@ -34,5 +34,5 @@ Content-length: 111
 }
 ```
 
-<!-- uuid: 4f75852b-3186-4762-ba59-1192335d3491
-2015-10-12 21:30:01 UTC -->
+<!-- uuid: bfb02932-d5d0-4346-98c7-f54275067035
+2015-10-12 23:19:40 UTC -->

@@ -571,7 +571,7 @@
     },
     {
       "name": "iCalUId",
-      "description": "",
+      "description": "A unique identifier that is shared by all instances of an event across different calendars.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,

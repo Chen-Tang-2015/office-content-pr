@@ -1,6 +1,6 @@
 # Create item
 
-**Note** You can't create empty files in OneDrive. See Upload item contents for more info about creating a file with metadata and contents in an API call.
+Use this API to create a new item.
 ### HTTP request
 ```http
 POST /drive/items
@@ -74,5 +74,5 @@ Content-length: 665
 }
 ```
 
-<!-- uuid: 715d554b-f9b8-4d63-be79-bd02528d3518
-2015-10-12 21:30:00 UTC -->
+<!-- uuid: 0e8d2028-bdce-4d83-92b6-00b4a15c56c0
+2015-10-12 23:19:38 UTC -->

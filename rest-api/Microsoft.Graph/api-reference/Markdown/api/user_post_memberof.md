@@ -4,8 +4,8 @@ Use this API to create a new memberOf.
 ### HTTP request
 ```http
 POST /users/<objectId>/memberOf
-POST /drives/<id>/root/createdByUser/memberOf
-POST /drives/<id>/root/lastModifiedByUser/memberOf
+POST /drive/root/createdByUser/memberOf
+POST /drive/root/lastModifiedByUser/memberOf
 
 ```
 ### Request headers
@@ -34,5 +34,5 @@ Content-length: 111
 }
 ```
 
-<!-- uuid: 31b67c07-5e5b-4aa8-ad70-dbac43908dbf
-2015-10-12 21:30:01 UTC -->
+<!-- uuid: 51e9338e-3ba0-42ba-9bdb-4226c51dc33b
+2015-10-12 23:19:40 UTC -->

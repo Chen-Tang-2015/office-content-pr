@@ -15,8 +15,8 @@ None
 |:---------------|:--------|:----------|
 |[List](../api/deviceconfiguration_list.md) | [DeviceConfiguration](deviceconfiguration.md) [] |Get deviceConfiguration object collection. |
 
-<!-- uuid: c0d54aca-59c4-40ad-80a8-72498e69ff7c
-2015-10-12 21:29:59 UTC --> "objectType": "String",
+<!-- uuid: a3dbea1c-9915-4a6b-a821-8ee70a9d2086
+2015-10-12 23:19:38 UTC --> "objectType": "String",
   "publicIssuerCertificates": [
     "String"
   ],
@@ -52,5 +52,5 @@ None
 |[Get MemberGroups](../api/deviceconfiguration_getmembergroups.md)|String||
 |[Get MemberObjects](../api/deviceconfiguration_getmemberobjects.md)|String||
 
-<!-- uuid: 29a5d4c0-85c7-46c9-84cd-ef456d08d039
-2015-10-12 21:29:59 UTC -->
+<!-- uuid: b4bacc0a-209b-4d6a-ab2d-669af4bafa72
+2015-10-12 23:19:38 UTC -->

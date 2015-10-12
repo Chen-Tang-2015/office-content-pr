@@ -4,8 +4,8 @@ Use this API to create a new Group.
 ### HTTP request
 ```http
 POST /users/<objectId>/JoinedGroups
-POST /drives/<id>/root/createdByUser/JoinedGroups
-POST /drives/<id>/root/lastModifiedByUser/JoinedGroups
+POST /drive/root/createdByUser/JoinedGroups
+POST /drive/root/lastModifiedByUser/JoinedGroups
 
 ```
 ### Request headers
@@ -64,5 +64,5 @@ Content-length: 873
 }
 ```
 
-<!-- uuid: f2cf74e8-28ef-4704-805d-e41e1a81bab9
-2015-10-12 21:30:01 UTC -->
+<!-- uuid: 39583169-97b5-49c7-a045-5b4160d849a7
+2015-10-12 23:19:40 UTC -->

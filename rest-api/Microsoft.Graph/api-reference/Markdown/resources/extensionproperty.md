@@ -55,5 +55,5 @@ Here is a JSON representation of the resource
 |[Get MemberGroups](../api/extensionproperty_getmembergroups.md)|String||
 |[Get MemberObjects](../api/extensionproperty_getmemberobjects.md)|String||
 
-<!-- uuid: 5f47d558-8204-4776-93e7-d11d7a52e538
-2015-10-12 21:30:00 UTC -->
+<!-- uuid: c66a1cf5-5691-4d59-b659-71c4b9dc0c10
+2015-10-12 23:19:39 UTC -->

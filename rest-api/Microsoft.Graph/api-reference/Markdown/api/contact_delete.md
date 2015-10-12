@@ -4,8 +4,8 @@ Delete Contact.
 ### HTTP request
 ```http
 DELETE /users/<objectId>/Contacts/<Id>
-DELETE /drives/<id>/root/createdByUser/Contacts/<Id>
-DELETE /drives/<id>/root/lastModifiedByUser/Contacts/<Id>
+DELETE /drive/root/createdByUser/Contacts/<Id>
+DELETE /drive/root/lastModifiedByUser/Contacts/<Id>
 
 ```
 ### Request headers
@@ -21,5 +21,5 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: 48c23ec9-e5ea-41dd-bcb9-93ee70415a9c
-2015-10-12 21:29:59 UTC -->
+<!-- uuid: f78a98b7-eebd-43df-a773-0ca1e8ad7130
+2015-10-12 23:19:38 UTC -->

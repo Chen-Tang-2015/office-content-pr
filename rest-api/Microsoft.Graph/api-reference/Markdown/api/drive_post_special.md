@@ -1,6 +1,6 @@
 # Create special
 
-**Note** You can't create empty files in OneDrive. See Upload item contents for more info about creating a file with metadata and contents in an API call.
+Use this API to create a new special.
 ### HTTP request
 ```http
 POST /drive/special
@@ -74,5 +74,5 @@ Content-length: 665
 }
 ```
 
-<!-- uuid: 34cd5b66-8d2d-4398-95f9-8036a58372b2
-2015-10-12 21:30:00 UTC -->
+<!-- uuid: d4f31a3b-372f-4088-a67e-ce1551cd20ae
+2015-10-12 23:19:38 UTC -->

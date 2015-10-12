@@ -5,7 +5,7 @@ Use this API to create a new Extension.
 ```http
 POST /groups/<objectId>/Extensions
 POST /users/<objectId>/JoinedGroups/<objectId>/Extensions
-POST /drives/<id>/root/createdByUser/JoinedGroups/<objectId>/Extensions
+POST /drive/root/createdByUser/JoinedGroups/<objectId>/Extensions
 
 ```
 ### Request headers
@@ -32,5 +32,5 @@ Content-length: 22
 }
 ```
 
-<!-- uuid: 3cbf1da3-a08c-49a4-8cc8-c9aadcb92a71
-2015-10-12 21:30:00 UTC -->
+<!-- uuid: 0cc58a8a-4cd3-4d28-82f9-875f2be751d9
+2015-10-12 23:19:39 UTC -->

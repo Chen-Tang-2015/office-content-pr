@@ -4,8 +4,8 @@ Use this API to create a new UserPhoto.
 ### HTTP request
 ```http
 POST /users/<objectId>/UserPhotos
-POST /drives/<id>/root/createdByUser/UserPhotos
-POST /drives/<id>/root/lastModifiedByUser/UserPhotos
+POST /drive/root/createdByUser/UserPhotos
+POST /drive/root/lastModifiedByUser/UserPhotos
 
 ```
 ### Request headers
@@ -34,5 +34,5 @@ Content-length: 53
 }
 ```
 
-<!-- uuid: e8cae474-6a2a-4b14-9f70-f4576d83edae
-2015-10-12 21:30:01 UTC -->
+<!-- uuid: fd510a80-4820-455b-95b8-e7c18dddc894
+2015-10-12 23:19:40 UTC -->

@@ -1,6 +1,6 @@
 {
   "name": "Post",
-  "description": "An individual message posted to a group conversation.",
+  "description": "",
   "collectionOf": null,
   "isComplexType": false,
   "isEntitySet": false,
@@ -75,7 +75,7 @@
     },
     {
       "name": "DateTimeReceived",
-      "description": "Specifies when the post was delivered. This is a default property.",
+      "description": "",
       "isKey": false,
       "dataType": "DateTimeOffset",
       "isReadOnly": false,
@@ -89,7 +89,7 @@
     },
     {
       "name": "HasAttachments",
-      "description": "Indicates whether the post has at least one attachment. This is a default property.",
+      "description": "",
       "isKey": false,
       "dataType": "Boolean",
       "isReadOnly": false,
@@ -103,7 +103,7 @@
     },
     {
       "name": "From",
-      "description": "Used in delegate access scenarios. Indicates who posted the message on behalf of another user. This is a default property.",
+      "description": "",
       "isKey": false,
       "dataType": "Recipient",
       "isReadOnly": false,
@@ -117,7 +117,7 @@
     },
     {
       "name": "Sender",
-      "description": "Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.",
+      "description": "",
       "isKey": false,
       "dataType": "Recipient",
       "isReadOnly": false,
@@ -131,7 +131,7 @@
     },
     {
       "name": "ConversationThreadId",
-      "description": "The thread that contains this post. This is a navigation property.",
+      "description": "",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -145,7 +145,7 @@
     },
     {
       "name": "ConversationId",
-      "description": "The conversation that contains this post. This is a navigation property.",
+      "description": "",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -159,7 +159,7 @@
     },
     {
       "name": "NewParticipants",
-      "description": "Conversation participants that were added to the thread as part of this post.",
+      "description": "",
       "isKey": false,
       "dataType": "Recipient",
       "isReadOnly": false,
@@ -243,7 +243,7 @@
     },
     {
       "name": "Attachments",
-      "description": "Contains the collection of attachments for the post. This is a navigation property.",
+      "description": "",
       "isKey": false,
       "dataType": "Attachment",
       "isReadOnly": true,
@@ -257,7 +257,7 @@
     },
     {
       "name": "InReplyTo",
-      "description": "Identifies the post that this post is in reply to. This property can be null. This is a navigation property.",
+      "description": "",
       "isKey": false,
       "dataType": "Post",
       "isReadOnly": true,
@@ -295,8 +295,12 @@
       "isReturnTypeCollection": false,
       "httpSuccessCode": "200",
       "isFunction": false,
-      "scopes": [],
-      "errorCodes": [],
+      "scopes": [
+
+      ],
+      "errorCodes": [
+
+      ],
       "parameters": [
         {
           "name": "Comment",
@@ -330,8 +334,12 @@
       "isReturnTypeCollection": false,
       "httpSuccessCode": "200",
       "isFunction": false,
-      "scopes": [],
-      "errorCodes": [],
+      "scopes": [
+
+      ],
+      "errorCodes": [
+
+      ],
       "parameters": [
         {
           "name": "Post",

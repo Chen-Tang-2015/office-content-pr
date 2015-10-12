@@ -127,8 +127,6 @@ Here is a JSON representation of the resource
 |webDavUrl|String||
 |webUrl|String|URL that displays the resource in the browser. Read-only.|
 
-**Note:** The `eTag` and `cTag` properties work differently on containers (folders). The `cTag` value is modified when content or metadata of any descendant of the folder is changed. The `eTag` value is only modified when the folder's properties are changed, except for properties that are derived from descendants (like `childCount` or `lastModifiedDateTime`).
-
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
@@ -138,8 +136,6 @@ Here is a JSON representation of the resource
 |permissions|[permission](permission.md) collection| Read-only. Nullable.|
 |thumbnails|[thumbnailSet](thumbnailset.md) collection|Collection containing [ThumbnailSet](thumbnailSet.md) objects associated with the item. For more info, see [getting thumbnails](../items/thumbnails.md). Read-only. Nullable.|
 |versions|[item](item.md) collection| Read-only. Nullable.|
-
-**Note:** This table defines the relationships that the Item resource has to other resources.
 
 ### Tasks
 
@@ -153,12 +149,12 @@ Here is a JSON representation of the resource
 |[Update](../api/item_update.md) | [item](item.md)	|Update item object. |
 |[Delete](../api/item_delete.md) | Void	|Delete item object. |
 |[Allphotos](../api/item_allphotos.md)|[item](item.md)||
-|[Copy](../api/item_copy.md)|[item](item.md)|Creates a copy of an Item (including any children) on OneDrive, under a new parent.|
+|[Copy](../api/item_copy.md)|[item](item.md)||
 |[Createlink](../api/item_createlink.md)|[permission](permission.md)||
 |[Createsession](../api/item_createsession.md)|[uploadSession](uploadsession.md)||
 |[Delta](../api/item_delta.md)|[item](item.md)||
 |[Invite](../api/item_invite.md)|[permission](permission.md)||
 |[Search](../api/item_search.md)|[item](item.md)||
 
-<!-- uuid: 4f1d5eb9-4127-4716-87e8-b5114b838cba
-2015-10-12 21:30:00 UTC -->
+<!-- uuid: 8154d2a0-cc78-4fc4-9965-c9c9b2e25806
+2015-10-12 23:19:39 UTC -->

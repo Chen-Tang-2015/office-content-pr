@@ -5,7 +5,7 @@ Use this API to create a new AppRoleAssignment.
 ```http
 POST /groups/<objectId>/appRoleAssignments
 POST /users/<objectId>/JoinedGroups/<objectId>/appRoleAssignments
-POST /drives/<id>/root/createdByUser/JoinedGroups/<objectId>/appRoleAssignments
+POST /drive/root/createdByUser/JoinedGroups/<objectId>/appRoleAssignments
 
 ```
 ### Request headers
@@ -41,5 +41,5 @@ Content-length: 398
 }
 ```
 
-<!-- uuid: 555a6a3f-eadd-4927-ae7c-92b9586c9057
-2015-10-12 21:30:00 UTC -->
+<!-- uuid: 710a0496-037e-4946-8933-d68f75d1d0b6
+2015-10-12 23:19:39 UTC -->

@@ -1,6 +1,6 @@
 # Create children
 
-**Note** You can't create empty files in OneDrive. See Upload item contents for more info about creating a file with metadata and contents in an API call.
+Use this API to create a new children.
 ### HTTP request
 ```http
 POST /drive/root/children
@@ -74,5 +74,5 @@ Content-length: 665
 }
 ```
 
-<!-- uuid: 0c8aff8a-5382-402c-89e1-727841e28343
-2015-10-12 21:30:00 UTC -->
+<!-- uuid: 7eb940e4-3264-4c50-ae33-8a6497b25630
+2015-10-12 23:19:39 UTC -->

@@ -4,8 +4,8 @@
 ### HTTP request
 ```http
 POST /users/<objectId>/manager/getMemberGroups
-POST /contacts/<objectId>/manager/getMemberGroups
 POST /directoryObjects/<objectId>/getMemberGroups
+POST /contacts/<objectId>/manager/getMemberGroups
 
 ```
 ### Request headers
@@ -46,5 +46,5 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: 7d32031c-6893-499a-9be2-533941432c70
-2015-10-12 21:29:59 UTC -->
+<!-- uuid: 8b7e051e-d4f3-4b78-b217-d30f2af29771
+2015-10-12 23:19:38 UTC -->

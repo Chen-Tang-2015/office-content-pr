@@ -5,7 +5,7 @@ Use this API to create a new Thread.
 ```http
 POST /groups/<objectId>/Threads
 POST /users/<objectId>/JoinedGroups/<objectId>/Threads
-POST /drives/<id>/root/createdByUser/JoinedGroups/<objectId>/Threads
+POST /drive/root/createdByUser/JoinedGroups/<objectId>/Threads
 
 ```
 ### Request headers
@@ -48,5 +48,5 @@ Content-length: 295
 }
 ```
 
-<!-- uuid: 3a85381b-bb1f-4fe5-b35a-da438076cc27
-2015-10-12 21:30:00 UTC -->
+<!-- uuid: 9afe7530-5d04-4ab8-af32-8d928329f4bb
+2015-10-12 23:19:39 UTC -->

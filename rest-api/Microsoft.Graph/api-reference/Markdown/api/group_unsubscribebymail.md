@@ -5,7 +5,7 @@
 ```http
 POST /groups/<objectId>/UnsubscribeByMail
 POST /users/<objectId>/JoinedGroups/<objectId>/UnsubscribeByMail
-POST /drives/<id>/root/createdByUser/JoinedGroups/<objectId>/UnsubscribeByMail
+POST /drive/root/createdByUser/JoinedGroups/<objectId>/UnsubscribeByMail
 
 ```
 ### Request headers
@@ -35,5 +35,5 @@ Content-length: 3
 }
 ```
 
-<!-- uuid: b6704261-5673-4a5d-95fa-92be70478d63
-2015-10-12 21:30:00 UTC -->
+<!-- uuid: 991742c7-79b5-45a2-a244-4db5b117de80
+2015-10-12 23:19:39 UTC -->

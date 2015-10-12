@@ -4,8 +4,8 @@ Use this API to create a new ownedObject.
 ### HTTP request
 ```http
 POST /users/<objectId>/ownedObjects
-POST /drives/<id>/root/createdByUser/ownedObjects
-POST /drives/<id>/root/lastModifiedByUser/ownedObjects
+POST /drive/root/createdByUser/ownedObjects
+POST /drive/root/lastModifiedByUser/ownedObjects
 
 ```
 ### Request headers
@@ -34,5 +34,5 @@ Content-length: 111
 }
 ```
 
-<!-- uuid: 3cf3b856-14a1-4b70-b24c-735b3d9ef0b0
-2015-10-12 21:30:01 UTC -->
+<!-- uuid: 59661226-4aab-4914-b4b5-63c56e071c9e
+2015-10-12 23:19:40 UTC -->

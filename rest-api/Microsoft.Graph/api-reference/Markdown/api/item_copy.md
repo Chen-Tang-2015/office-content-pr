@@ -1,8 +1,6 @@
-# Copy an Item on OneDrive
+# item: copy
 
-Creates a copy of an Item (including any children) on OneDrive, under a new parent.
-### Prerequisites
-To call the copy API, the user must have granted the application read access to the specified item to be copied and write access to the destination folder.
+
 ### HTTP request
 ```http
 POST /drive/root/copy
@@ -91,5 +89,5 @@ Content-length: 665
 }
 ```
 
-<!-- uuid: 81d9f065-5629-4cba-b2f1-44078885e2ba
-2015-10-12 21:30:00 UTC -->
+<!-- uuid: c619d5bf-5aff-41b1-a9ef-95bc1a3e471b
+2015-10-12 23:19:39 UTC -->

@@ -4,8 +4,8 @@ Use this API to create a new AppRoleAssignment.
 ### HTTP request
 ```http
 POST /users/<objectId>/appRoleAssignments
-POST /drives/<id>/root/createdByUser/appRoleAssignments
-POST /drives/<id>/root/lastModifiedByUser/appRoleAssignments
+POST /drive/root/createdByUser/appRoleAssignments
+POST /drive/root/lastModifiedByUser/appRoleAssignments
 
 ```
 ### Request headers
@@ -41,5 +41,5 @@ Content-length: 398
 }
 ```
 
-<!-- uuid: 9b936332-b291-459f-8287-2d1f4d52bd0f
-2015-10-12 21:30:01 UTC -->
+<!-- uuid: 5e65c500-3010-4033-9e0f-29a5a7aad12f
+2015-10-12 23:19:40 UTC -->

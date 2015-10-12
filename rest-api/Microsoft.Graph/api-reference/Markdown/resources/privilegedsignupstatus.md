@@ -2,23 +2,21 @@
 
 
 
-### JSON representation
-
-Here is a JSON representation of the resource
-
-```json
-{
-  "IsRegistered": true,
-  "Status": "String",
-  "TenantId": "String (identifier)"
-}
-
-```
 ### Properties
-| Property	   | Type	|Description|
+None
+
+### Relationships
+None
+
+
+### Tasks
+
+| Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
-|IsRegistered|Boolean||
-|Status|String| Possible values are: `Unknown`, `NotRegisteredYet`, `RegisteredSetupNotStarted`, `RegisteredSetupInProgress`, `RegistrationAndSetupCompleted`.|
+|[List](../api/privilegedsignupstatus_list.md) | [PrivilegedSignupStatus](privilegedsignupstatus.md) [] |Get privilegedSignupStatus object collection. |
+
+<!-- uuid: d9581261-f4f7-484c-be99-6a5e540740b3
+2015-10-12 23:19:39 UTC -->dSetupNotStarted`, `RegisteredSetupInProgress`, `RegistrationAndSetupCompleted`.|
 |TenantId|String| Read-only.|
 
 ### Relationships
@@ -38,5 +36,5 @@ None
 |[Signup](../api/privilegedsignupstatus_signup.md)|[PrivilegedSignupStatus](privilegedsignupstatus.md)||
 |[Skipsetup](../api/privilegedsignupstatus_skipsetup.md)|[None](none.md)||
 
-<!-- uuid: 0acf41e0-17cd-4cbb-9188-11e3b44781ac
-2015-10-12 21:30:01 UTC -->
+<!-- uuid: 53f093e1-bbd5-4be5-935f-ed65ee3da1a7
+2015-10-12 23:19:39 UTC -->

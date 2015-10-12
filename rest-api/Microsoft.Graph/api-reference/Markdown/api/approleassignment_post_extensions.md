@@ -3,8 +3,8 @@
 Use this API to create a new Extension.
 ### HTTP request
 ```http
-POST /servicePrincipals/<objectId>/appRoleAssignedTo/Extensions
 POST /users/<objectId>/appRoleAssignments/<objectId>/Extensions
+POST /servicePrincipals/<objectId>/appRoleAssignedTo/Extensions
 POST /groups/<objectId>/appRoleAssignments/<objectId>/Extensions
 
 ```
@@ -32,5 +32,5 @@ Content-length: 22
 }
 ```
 
-<!-- uuid: 49e6f62e-bb10-45b9-a00e-9736fe760437
-2015-10-12 21:29:59 UTC -->
+<!-- uuid: 4daab879-ba58-463d-844d-32a750e0f5a7
+2015-10-12 23:19:38 UTC -->

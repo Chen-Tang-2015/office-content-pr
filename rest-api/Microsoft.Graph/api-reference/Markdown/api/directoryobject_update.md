@@ -4,8 +4,8 @@ Update the properties of directoryobject object.
 ### HTTP request
 ```http
 PATCH /users/<objectId>/manager
-PATCH /contacts/<objectId>/manager
 PATCH /directoryObjects/<objectId>
+PATCH /contacts/<objectId>/manager
 ```
 ### Optional request headers
 | Name       | Type | Description|
@@ -48,5 +48,5 @@ Content-length: 111
 }
 ```
 
-<!-- uuid: 100e9c5d-ba26-45d9-bff7-2f5144874b52
-2015-10-12 21:29:59 UTC -->
+<!-- uuid: df0bc0fb-2830-4861-a99d-90f29de7e7a6
+2015-10-12 23:19:38 UTC -->

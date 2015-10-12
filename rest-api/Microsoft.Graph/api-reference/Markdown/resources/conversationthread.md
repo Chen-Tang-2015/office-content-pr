@@ -1,6 +1,6 @@
 # ConversationThread resource type
 
-A thread is a collection of [posts](#PostResource). The last post's recipients collection is the aggregated recipients of the entire thread. A thread can have a growing collection of recipients. A new thread is created when a recipient is removed from the thread.
+
 
 ### JSON representation
 
@@ -43,13 +43,13 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|CcRecipients|[Recipient](recipient.md) collection|Aggregation of Cc recipients from all messages on the thread|
+|CcRecipients|[Recipient](recipient.md) collection||
 |DateTimeLastDelivered|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |HasAttachments|Boolean||
-|Id|String|The unique identifier for the conversation thread. Read-only.|
+|Id|String| Read-only.|
 |IsLocked|Boolean||
-|Preview|String|A preview of the last post in the thread.|
-|ToRecipients|[Recipient](recipient.md) collection|Aggregation of To recipients from all messages on the thread|
+|Preview|String||
+|ToRecipients|[Recipient](recipient.md) collection||
 |Topic|String||
 |UniqueSenders|String collection||
 
@@ -57,7 +57,7 @@ Here is a JSON representation of the resource
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
-|Posts|[Post](post.md) collection|Collection with all the identifiers of the posts that compose the thread. A navigation property. Read-only. Nullable.|
+|Posts|[Post](post.md) collection| Read-only. Nullable.|
 
 ### Tasks
 
@@ -70,5 +70,5 @@ Here is a JSON representation of the resource
 |[Delete](../api/conversationthread_delete.md) | Void	|Delete ConversationThread object. |
 |[Reply](../api/conversationthread_reply.md)|[None](none.md)||
 
-<!-- uuid: a68a813b-d882-4996-83be-d138f8374fb6
-2015-10-12 21:29:59 UTC -->
+<!-- uuid: 3f1906cd-d218-490f-98cd-07e7c35d2f25
+2015-10-12 23:19:38 UTC -->

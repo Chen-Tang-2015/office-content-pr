@@ -21,5 +21,5 @@ Here is a JSON representation of the resource
 |provisioningStatus|String|For example, ΓÇ£SuccessΓÇ¥.|
 |service|String|The name of the service; for example, ΓÇ£AccessControlS2SΓÇ¥|
 
-<!-- uuid: 55c1c833-7f2c-4114-91f6-4ee42dc1d7a2
-2015-10-12 21:30:01 UTC -->
+<!-- uuid: f23af308-b4a3-400e-8c15-7d242418901e
+2015-10-12 23:19:39 UTC -->

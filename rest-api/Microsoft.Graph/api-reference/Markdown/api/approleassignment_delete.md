@@ -3,8 +3,8 @@
 Delete AppRoleAssignment.
 ### HTTP request
 ```http
-DELETE /servicePrincipals/<objectId>/appRoleAssignedTo
 DELETE /users/<objectId>/appRoleAssignments/<objectId>
+DELETE /servicePrincipals/<objectId>/appRoleAssignedTo
 DELETE /groups/<objectId>/appRoleAssignments/<objectId>
 
 ```
@@ -21,5 +21,5 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: 255197e0-ad65-4c3b-a74f-c877d05f4f88
-2015-10-12 21:29:59 UTC -->
+<!-- uuid: 73e700ad-fa1b-4b2e-b585-c37cf7bbff86
+2015-10-12 23:19:38 UTC -->

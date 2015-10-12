@@ -4,8 +4,8 @@ Delete DirectoryObject.
 ### HTTP request
 ```http
 DELETE /users/<objectId>/manager
-DELETE /contacts/<objectId>/manager
 DELETE /directoryObjects/<objectId>
+DELETE /contacts/<objectId>/manager
 
 ```
 ### Request headers
@@ -21,5 +21,5 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: 298f15ac-c70d-4075-ba22-b14930818ba3
-2015-10-12 21:29:59 UTC -->
+<!-- uuid: e89d6171-8e85-40d9-aedb-65244a563294
+2015-10-12 23:19:38 UTC -->

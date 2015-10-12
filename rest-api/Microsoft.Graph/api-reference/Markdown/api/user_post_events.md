@@ -4,8 +4,8 @@ Use this API to create a new Event.
 ### HTTP request
 ```http
 POST /users/<objectId>/Events
-POST /drives/<id>/root/createdByUser/Events
-POST /drives/<id>/root/lastModifiedByUser/Events
+POST /drive/root/createdByUser/Events
+POST /drive/root/lastModifiedByUser/Events
 
 ```
 ### Request headers
@@ -71,5 +71,5 @@ Content-length: 901
 }
 ```
 
-<!-- uuid: 9eb086d4-9092-4466-b473-eeb465d0f2f5
-2015-10-12 21:30:01 UTC -->
+<!-- uuid: 516809a5-bb05-4e46-b019-70f02b6d1774
+2015-10-12 23:19:40 UTC -->

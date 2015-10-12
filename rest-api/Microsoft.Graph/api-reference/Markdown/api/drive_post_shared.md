@@ -1,6 +1,6 @@
 # Create shared
 
-**Note** You can't create empty files in OneDrive. See Upload item contents for more info about creating a file with metadata and contents in an API call.
+Use this API to create a new shared.
 ### HTTP request
 ```http
 POST /drive/shared
@@ -74,5 +74,5 @@ Content-length: 665
 }
 ```
 
-<!-- uuid: 4d803bb6-2fcf-4d7a-8aec-ca41f1c10f93
-2015-10-12 21:30:00 UTC -->
+<!-- uuid: b33a402b-7d7f-4e06-8dfc-1b23d4b8e128
+2015-10-12 23:19:38 UTC -->

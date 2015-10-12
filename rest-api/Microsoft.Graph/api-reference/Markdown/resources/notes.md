@@ -63,5 +63,5 @@ Here is a JSON representation of the resource
 |[Create Section](../api/notes_post_sections.md) |[Section](section.md)| Create a new Section by posting to the sections collection.|
 |[Delete](../api/notes_delete.md) | Void	|Delete Notes object. |
 
-<!-- uuid: 96621cab-db4d-44ce-8a86-650be803d9e2
-2015-10-12 21:30:00 UTC -->
+<!-- uuid: 560986e6-e204-4aa2-ada0-4ab25daf2617
+2015-10-12 23:19:39 UTC -->

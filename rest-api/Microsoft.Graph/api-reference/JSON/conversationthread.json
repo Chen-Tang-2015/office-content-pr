@@ -1,6 +1,6 @@
 {
   "name": "ConversationThread",
-  "description": "A thread is a collection of [posts](#PostResource). The last post's recipients collection is the aggregated recipients of the entire thread. A thread can have a growing collection of recipients. A new thread is created when a recipient is removed from the thread.",
+  "description": "",
   "collectionOf": null,
   "isComplexType": false,
   "isEntitySet": false,
@@ -61,7 +61,7 @@
   "properties": [
     {
       "name": "ToRecipients",
-      "description": "Aggregation of To recipients from all messages on the thread",
+      "description": "",
       "isKey": false,
       "dataType": "Recipient",
       "isReadOnly": false,
@@ -131,7 +131,7 @@
     },
     {
       "name": "CcRecipients",
-      "description": "Aggregation of Cc recipients from all messages on the thread",
+      "description": "",
       "isKey": false,
       "dataType": "Recipient",
       "isReadOnly": false,
@@ -145,7 +145,7 @@
     },
     {
       "name": "Preview",
-      "description": "A preview of the last post in the thread.",
+      "description": "",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -173,7 +173,7 @@
     },
     {
       "name": "Id",
-      "description": "The unique identifier for the conversation thread.",
+      "description": "",
       "isKey": true,
       "dataType": "String",
       "isReadOnly": true,
@@ -201,7 +201,7 @@
     },
     {
       "name": "Posts",
-      "description": "Collection with all the identifiers of the posts that compose the thread. A navigation property.",
+      "description": "",
       "isKey": false,
       "dataType": "Post",
       "isReadOnly": true,
@@ -225,8 +225,12 @@
       "isReturnTypeCollection": false,
       "httpSuccessCode": "200",
       "isFunction": false,
-      "scopes": [],
-      "errorCodes": [],
+      "scopes": [
+
+      ],
+      "errorCodes": [
+
+      ],
       "parameters": [
         {
           "name": "Post",
