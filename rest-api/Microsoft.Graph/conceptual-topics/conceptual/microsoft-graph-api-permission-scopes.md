@@ -69,6 +69,12 @@ The following tables list the Microsoft Graph API permission scopes and explains
 | _People.ReadWrite_ |    `Read and write users' relevant people lists` (preview) | Allows the app to create, read and write to the ranked list of relevant people of the signed-in user. The list includes local contacts, contacts from social networking, your organization's directory, and people from recent communications (such as email and Skype). |
 | _openid_ |    `Sign users in`(preview) | Allows users to sign in to the app with their work or school accounts and allows the app to see basic user profile information. |
 | _offline_access_ |    `Read and write user's information` (preview) | Allows the app to see and update user's data, even when the user is not actively using the app. |
+| _Notes.Create_ |    `Create pages in users' notebooks` (preview) | Allows the app to read the titles of notebooks and sections and create new pages, notebooks and sections on behalf of the signed-in user. |
+| _Notes.ReadWrite.CreatedByApp_ |    `Limited notebook access` (preview) | Allows the app to read the titles of notebooks and sections; create new pages; read and write limited to pages created by the app on behalf of the signed-in user. |
+| _Notes.Read_ |    `Read notebooks` (preview) | Allows the app to read the titles of notebooks and sections and read all pages on behalf of the signed-in user. It cannot read password protected sections.. |
+| _Notes.ReadWrite_ |    `Read and write notebooks` (preview) | Allows the app to read the titles of notebooks and sections, read all pages, write all pages and create new pages on behalf of the signed-in user.  It cannot access password protected sections. |
+| _Notes.Read.All_ |    `Read notebooks in your organization` (preview) | Allows the app to read the contents of all notebooks and sections that the signed-in user has access to.   It cannot read password protected sections. |
+| _Notes.ReadWrite.All_ |    `Read and write notebooks in your organization` (preview) | Allows the app to read and write the contents of all notebooks and sections that the signed-in user has access to.  It cannot access password protected sections. |
 
 <!-- -->
 
