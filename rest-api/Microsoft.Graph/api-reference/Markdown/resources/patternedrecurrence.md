@@ -23,5 +23,5 @@ Here is a JSON representation of the resource
 |Pattern|[RecurrencePattern](recurrencepattern.md)|The frequency of an event.|
 |Range|[RecurrenceRange](recurrencerange.md)|The duration of an event.|
 
-<!-- uuid: d5e335ae-8943-459f-8693-de98bb932f13
-2015-10-12 23:28:11 UTC -->
+<!-- uuid: 558de535-4016-4d2a-bb22-5940cbd5cc5a
+2015-10-12 23:35:02 UTC -->

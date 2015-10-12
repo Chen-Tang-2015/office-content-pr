@@ -15,8 +15,8 @@ None
 |:---------------|:--------|:----------|
 |[List](../api/drive_list.md) | [drive](drive.md) [] |Get drive object collection. |
 
-<!-- uuid: e4267840-ff42-4473-945b-8356b157569f
-2015-10-12 23:28:10 UTC -->json
+<!-- uuid: 6e94622c-e69c-453d-b57a-ed6a24948b39
+2015-10-12 23:35:01 UTC -->json
 {
   "driveType": "String",
   "id": "String (identifier)",
@@ -50,18 +50,18 @@ None
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|driveType|String||
-|id|String| Read-only.|
-|owner|[identitySet](identityset.md)||
-|quota|[quota](quota.md)||
+|driveType|String|Enumerated value that identifies the type of drive account. OneDrive drives will show as `personal`.|
+|id|String|The unique identifier of the drive. Read-only.|
+|owner|[identitySet](identityset.md)|The user account that owns the drive.|
+|quota|[quota](quota.md)|Information about the drive's storage space quota.|
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|items|[item](item.md) collection| Read-only. Nullable.|
-|root|[item](item.md)| Read-only.|
+|items|[item](item.md) collection|All items contained in the drive. Read-only. Nullable.|
+|root|[item](item.md)|The root folder of the drive. Read-only.|
 |shared|[item](item.md) collection| Read-only. Nullable.|
-|special|[item](item.md) collection| Read-only. Nullable.|
+|special|[item](item.md) collection|Collection of common folders available in OneDrive. Read-only. Nullable.|
 
 ### Tasks
 
@@ -75,5 +75,5 @@ None
 |[Delete](../api/drive_delete.md) | Void	|Delete drive object. |
 |[Allphotos](../api/drive_allphotos.md)|[item](item.md)||
 
-<!-- uuid: 632c747f-5e0d-4fd1-bb81-ddbb476684a2
-2015-10-12 23:28:10 UTC -->
+<!-- uuid: b379fb4a-b79b-429d-ab70-cd594c3178ae
+2015-10-12 23:35:01 UTC -->

@@ -48,5 +48,5 @@ Here is a JSON representation of the resource
 |[Update](../api/bucket_update.md) | [Bucket](bucket.md)	|Update Bucket object. |
 |[Delete](../api/bucket_delete.md) | Void	|Delete Bucket object. |
 
-<!-- uuid: c910d7cc-96a7-4393-8403-23451c5211ff
-2015-10-12 23:28:10 UTC -->
+<!-- uuid: 0cc46e12-0753-4e34-8730-445719b7c2fd
+2015-10-12 23:35:00 UTC -->

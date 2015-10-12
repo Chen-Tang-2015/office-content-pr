@@ -63,5 +63,5 @@ Here is a JSON representation of the resource
 |[Copytosectiongroup](../api/section_copytosectiongroup.md)|[CopySectionModel](copysectionmodel.md)||
 |[Thumbnail](../api/section_thumbnail.md)|Stream||
 
-<!-- uuid: cc3cb39c-d7f2-476f-bc9b-698868076000
-2015-10-12 23:28:12 UTC -->
+<!-- uuid: 4db5a49e-a1d1-4673-93a2-2b0b8d3a121d
+2015-10-12 23:35:02 UTC -->

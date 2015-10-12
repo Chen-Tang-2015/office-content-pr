@@ -25,5 +25,5 @@ Here is a JSON representation of the resource
 |Status|[ResponseStatus](responsestatus.md)|The response (none, accepted, declined, etc.) and time.|
 |Type|String|The attendee type: Required = 0, Optional = 1, Resource = 2. Possible values are: `Required`, `Optional`, `Resource`.|
 
-<!-- uuid: b667bc62-9331-4c22-af30-365fd0fd74b3
-2015-10-12 23:28:10 UTC -->
+<!-- uuid: 361b609f-c077-4c1d-8d9a-712e6ce9d2af
+2015-10-12 23:35:00 UTC -->

@@ -42,7 +42,7 @@
   "properties": [
     {
       "name": "content",
-      "description": "",
+      "description": "The content stream, if the Item represents a file.",
       "isKey": false,
       "dataType": "Stream",
       "isReadOnly": false,
@@ -56,7 +56,7 @@
     },
     {
       "name": "createdBy",
-      "description": "",
+      "description": "Identity of the user, device, and application which created the item. Read-only.",
       "isKey": false,
       "dataType": "identitySet",
       "isReadOnly": false,
@@ -70,7 +70,7 @@
     },
     {
       "name": "createdDateTime",
-      "description": "",
+      "description": "Date and time of item creation. Read-only.",
       "isKey": false,
       "dataType": "DateTimeOffset",
       "isReadOnly": false,
@@ -84,7 +84,7 @@
     },
     {
       "name": "cTag",
-      "description": "",
+      "description": "An eTag for the content of the item. This eTag is not changed if only the metadata is changed. **Note** This property is not returned if the Item is a folder. Read-only.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -98,7 +98,7 @@
     },
     {
       "name": "description",
-      "description": "",
+      "description": "Provide a user-visible description of the item. Read-write.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -112,7 +112,7 @@
     },
     {
       "name": "eTag",
-      "description": "",
+      "description": "eTag for the entire item (metadata + content). Read-only.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -126,7 +126,7 @@
     },
     {
       "name": "id",
-      "description": "",
+      "description": "The unique identifier of the item within the Drive. Read-only.",
       "isKey": true,
       "dataType": "String",
       "isReadOnly": true,
@@ -140,7 +140,7 @@
     },
     {
       "name": "lastModifiedBy",
-      "description": "",
+      "description": "Identity of the user, device, and application which last modified the item. Read-only.",
       "isKey": false,
       "dataType": "identitySet",
       "isReadOnly": false,
@@ -154,7 +154,7 @@
     },
     {
       "name": "lastModifiedDateTime",
-      "description": "",
+      "description": "Date and time the item was last modified. Read-only.",
       "isKey": false,
       "dataType": "DateTimeOffset",
       "isReadOnly": false,
@@ -168,7 +168,7 @@
     },
     {
       "name": "name",
-      "description": "",
+      "description": "The name of the item (filename and extension). Read-write.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -182,7 +182,7 @@
     },
     {
       "name": "parentReference",
-      "description": "",
+      "description": "Parent information, if the item has a parent. Read-write.",
       "isKey": false,
       "dataType": "itemReference",
       "isReadOnly": false,
@@ -196,7 +196,7 @@
     },
     {
       "name": "size",
-      "description": "",
+      "description": "Size of the item in bytes. Read-only.",
       "isKey": false,
       "dataType": "Int64",
       "isReadOnly": false,
@@ -224,7 +224,7 @@
     },
     {
       "name": "webUrl",
-      "description": "",
+      "description": "URL that displays the resource in the browser. Read-only.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -238,7 +238,7 @@
     },
     {
       "name": "audio",
-      "description": "",
+      "description": "Audio metadata, if the item is an audio file. Read-only.",
       "isKey": false,
       "dataType": "audio",
       "isReadOnly": false,
@@ -252,7 +252,7 @@
     },
     {
       "name": "deleted",
-      "description": "",
+      "description": "Information about the deleted state of the item. Read-only.",
       "isKey": false,
       "dataType": "deleted",
       "isReadOnly": false,
@@ -266,7 +266,7 @@
     },
     {
       "name": "file",
-      "description": "",
+      "description": "File metadata, if the item is a file. Read-only.",
       "isKey": false,
       "dataType": "file",
       "isReadOnly": false,
@@ -280,7 +280,7 @@
     },
     {
       "name": "fileSystemInfo",
-      "description": "",
+      "description": "File system information on client. Read-write.",
       "isKey": false,
       "dataType": "fileSystemInfo",
       "isReadOnly": false,
@@ -294,7 +294,7 @@
     },
     {
       "name": "folder",
-      "description": "",
+      "description": "Folder metadata, if the item is a folder. Read-only.",
       "isKey": false,
       "dataType": "folder",
       "isReadOnly": false,
@@ -308,7 +308,7 @@
     },
     {
       "name": "image",
-      "description": "",
+      "description": "Image metadata, if the item is an image. Read-only.",
       "isKey": false,
       "dataType": "image",
       "isReadOnly": false,
@@ -322,7 +322,7 @@
     },
     {
       "name": "location",
-      "description": "",
+      "description": "Location metadata, if the item has location data. Read-only.",
       "isKey": false,
       "dataType": "location",
       "isReadOnly": false,
@@ -350,7 +350,7 @@
     },
     {
       "name": "photo",
-      "description": "",
+      "description": "Photo metadata, if the item is a photo. Read-only.",
       "isKey": false,
       "dataType": "photo",
       "isReadOnly": false,
@@ -364,7 +364,7 @@
     },
     {
       "name": "searchResult",
-      "description": "",
+      "description": "Search metadata, if the item is from a search result.",
       "isKey": false,
       "dataType": "searchResult",
       "isReadOnly": false,
@@ -406,7 +406,7 @@
     },
     {
       "name": "video",
-      "description": "",
+      "description": "Video metadata, if the item is a video. Read-only.",
       "isKey": false,
       "dataType": "video",
       "isReadOnly": false,
@@ -476,7 +476,7 @@
     },
     {
       "name": "children",
-      "description": "",
+      "description": "Collection containing Item objects for the immediate children of Item. Only items representing folders have children.",
       "isKey": false,
       "dataType": "item",
       "isReadOnly": true,
@@ -490,7 +490,7 @@
     },
     {
       "name": "thumbnails",
-      "description": "",
+      "description": "Collection containing [ThumbnailSet](thumbnailSet.md) objects associated with the item. For more info, see [getting thumbnails](../items/thumbnails.md).",
       "isKey": false,
       "dataType": "thumbnailSet",
       "isReadOnly": true,

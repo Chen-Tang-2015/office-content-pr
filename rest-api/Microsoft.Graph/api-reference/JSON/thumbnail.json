@@ -20,7 +20,7 @@
   "properties": [
     {
       "name": "content",
-      "description": "",
+      "description": "The content stream.",
       "isKey": false,
       "dataType": "Stream",
       "isReadOnly": false,
@@ -34,7 +34,7 @@
     },
     {
       "name": "height",
-      "description": "",
+      "description": "The height of the thumbnail, in pixels.",
       "isKey": false,
       "dataType": "Int32",
       "isReadOnly": false,
@@ -48,7 +48,7 @@
     },
     {
       "name": "url",
-      "description": "",
+      "description": "The URL used to fetch the thumbnail content.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -62,7 +62,7 @@
     },
     {
       "name": "width",
-      "description": "",
+      "description": "The width of the thumbnail, in pixels.",
       "isKey": false,
       "dataType": "Int32",
       "isReadOnly": false,

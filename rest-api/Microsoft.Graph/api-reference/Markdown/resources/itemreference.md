@@ -17,9 +17,9 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|driveId|String||
-|id|String||
-|path|String||
+|driveId|String|Unique identifier for the Drive that contains the item.|
+|id|String|Unique identifier for the item.|
+|path|String|Path that used to navigate to the item.|
 
-<!-- uuid: 1ed360ac-3bfe-4d04-a782-4a702997b6bd
-2015-10-12 23:28:11 UTC -->
+<!-- uuid: 9d162083-bf88-4eb6-b188-a178da0686e3
+2015-10-12 23:35:01 UTC -->

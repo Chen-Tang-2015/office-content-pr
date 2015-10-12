@@ -27,11 +27,11 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|id|String| Read-only.|
-|large|[thumbnail](thumbnail.md)||
-|medium|[thumbnail](thumbnail.md)||
-|small|[thumbnail](thumbnail.md)||
-|source|[thumbnail](thumbnail.md)||
+|id|String|The id within the item. Read-only.|
+|large|[thumbnail](thumbnail.md)|A 1920x1920 scaled thumbnail.|
+|medium|[thumbnail](thumbnail.md)|A 176x176 scaled thumbnail.|
+|small|[thumbnail](thumbnail.md)|A 48x48 cropped thumbnail.|
+|source|[thumbnail](thumbnail.md)|A custom thumbnail image or the original image used to generate other thumbnails.|
 
 ### Relationships
 None
@@ -45,5 +45,5 @@ None
 |[Update](../api/thumbnailset_update.md) | [thumbnailSet](thumbnailset.md)	|Update thumbnailSet object. |
 |[Delete](../api/thumbnailset_delete.md) | Void	|Delete thumbnailSet object. |
 
-<!-- uuid: 038d2aa0-6146-4e39-b471-930f7cd07214
-2015-10-12 23:28:12 UTC -->
+<!-- uuid: b972c6cf-9310-440a-a68d-47fa9694c154
+2015-10-12 23:35:02 UTC -->

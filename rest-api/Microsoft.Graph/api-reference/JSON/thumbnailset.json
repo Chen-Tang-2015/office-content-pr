@@ -42,7 +42,7 @@
   "properties": [
     {
       "name": "id",
-      "description": "",
+      "description": "The id within the item.",
       "isKey": true,
       "dataType": "String",
       "isReadOnly": true,
@@ -56,7 +56,7 @@
     },
     {
       "name": "large",
-      "description": "",
+      "description": "A 1920x1920 scaled thumbnail.",
       "isKey": false,
       "dataType": "thumbnail",
       "isReadOnly": false,
@@ -70,7 +70,7 @@
     },
     {
       "name": "medium",
-      "description": "",
+      "description": "A 176x176 scaled thumbnail.",
       "isKey": false,
       "dataType": "thumbnail",
       "isReadOnly": false,
@@ -84,7 +84,7 @@
     },
     {
       "name": "small",
-      "description": "",
+      "description": "A 48x48 cropped thumbnail.",
       "isKey": false,
       "dataType": "thumbnail",
       "isReadOnly": false,
@@ -98,7 +98,7 @@
     },
     {
       "name": "source",
-      "description": "",
+      "description": "A custom thumbnail image or the original image used to generate other thumbnails.",
       "isKey": false,
       "dataType": "thumbnail",
       "isReadOnly": false,

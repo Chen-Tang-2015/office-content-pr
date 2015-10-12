@@ -21,5 +21,5 @@ Here is a JSON representation of the resource
 |disabledPlans|Guid collection|A collection of the unique identifiers for plans that have been disabled.|
 |skuId|Guid|The unique identifier for the SKU.|
 
-<!-- uuid: 72c0d7c6-429c-4261-9fd0-191978adbc35
-2015-10-12 23:28:10 UTC -->
+<!-- uuid: f4993d22-6261-45c5-aba8-04dafeec83cc
+2015-10-12 23:35:00 UTC -->

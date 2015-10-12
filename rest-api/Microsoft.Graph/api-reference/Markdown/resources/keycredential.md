@@ -29,5 +29,5 @@ Here is a JSON representation of the resource
 |usage|String|A string that describes the purpose for which the key can be used; for example, ΓÇ£VerifyΓÇ¥.|
 |value|Binary|            |
 
-<!-- uuid: d058576e-8cb7-414d-a436-0c85743d13d8
-2015-10-12 23:28:11 UTC -->
+<!-- uuid: d2e1b090-4779-468d-8819-3076677f969f
+2015-10-12 23:35:01 UTC -->

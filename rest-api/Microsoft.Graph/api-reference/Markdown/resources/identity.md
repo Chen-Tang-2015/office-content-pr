@@ -16,8 +16,8 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|displayName|String||
-|id|String||
+|displayName|String|The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, OneDrive may show the new value in a future response, but the items associated with the user won't show up as having changed in `view.delta`|
+|id|String|Unique identifier for the identity.|
 
-<!-- uuid: 9da190a7-5544-41d1-af0c-73d785369b23
-2015-10-12 23:28:11 UTC -->
+<!-- uuid: 257012a5-edf5-4cb6-a6f4-12bf3c3f88b4
+2015-10-12 23:35:01 UTC -->

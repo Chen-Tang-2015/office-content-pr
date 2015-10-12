@@ -17,9 +17,9 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|driveType|String||
-|owner|identitySet||
-|quota|quota||
+|driveType|String|Enumerated value that identifies the type of drive account. OneDrive drives will show as `personal`.|
+|owner|identitySet|The user account that owns the drive.|
+|quota|quota|Information about the drive's storage space quota.|
 
 ### Response
 If successful, this method returns a `200 OK` response code and updated [drive](../resources/drive.md) object in the response body.
@@ -55,5 +55,5 @@ Content-length: 92
 }
 ```
 
-<!-- uuid: 58de8599-23fa-43a7-b61d-e10bee6194fe
-2015-10-12 23:28:10 UTC -->
+<!-- uuid: d417bb95-a2a7-4953-97da-808c5f6225e2
+2015-10-12 23:35:01 UTC -->

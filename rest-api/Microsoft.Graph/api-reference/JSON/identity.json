@@ -20,7 +20,7 @@
   "properties": [
     {
       "name": "displayName",
-      "description": "",
+      "description": "The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, OneDrive may show the new value in a future response, but the items associated with the user won't show up as having changed in `view.delta`",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -34,7 +34,7 @@
     },
     {
       "name": "id",
-      "description": "",
+      "description": "Unique identifier for the identity.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,

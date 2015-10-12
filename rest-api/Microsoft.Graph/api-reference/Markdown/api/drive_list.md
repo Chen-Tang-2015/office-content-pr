@@ -3,7 +3,7 @@
 Retrieve a list of drive objects.
 ### HTTP request
 ```http
-GET /drives
+GET /drive
 ```
 ### Optional query parameters
 You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
@@ -37,5 +37,5 @@ Content-length: 146
 }
 ```
 
-<!-- uuid: b51b154b-bb62-443e-a8f8-229bcb0457c0
-2015-10-12 23:28:10 UTC -->
+<!-- uuid: 3183277f-ec4e-452d-9a62-0d1c8f58091b
+2015-10-12 23:35:01 UTC -->>

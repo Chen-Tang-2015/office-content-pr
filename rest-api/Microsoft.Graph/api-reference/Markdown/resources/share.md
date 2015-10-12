@@ -42,5 +42,5 @@ Here is a JSON representation of the resource
 |[Update](../api/share_update.md) | [share](share.md)	|Update share object. |
 |[Delete](../api/share_delete.md) | Void	|Delete share object. |
 
-<!-- uuid: 11be3123-5f90-403f-abd1-e35979a89569
-2015-10-12 23:28:12 UTC -->
+<!-- uuid: 6dc0e7e7-128e-4e32-8b14-ccde989cfcf5
+2015-10-12 23:35:02 UTC -->

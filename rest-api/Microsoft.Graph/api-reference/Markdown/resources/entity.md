@@ -35,5 +35,5 @@ Here is a JSON representation of the resource
 |[Create Extension](../api/entity_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
 |[Delete](../api/entity_delete.md) | Void	|Delete Entity object. |
 
-<!-- uuid: 0c26f573-065e-4017-8e1e-65639e95807a
-2015-10-12 23:28:10 UTC -->
+<!-- uuid: 80e7c395-7fa2-466f-b888-b0f883cc3bf5
+2015-10-12 23:35:01 UTC -->

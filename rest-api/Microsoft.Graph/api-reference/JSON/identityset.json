@@ -20,7 +20,7 @@
   "properties": [
     {
       "name": "application",
-      "description": "",
+      "description": "An Identity resource that represents the application.",
       "isKey": false,
       "dataType": "identity",
       "isReadOnly": false,
@@ -34,7 +34,7 @@
     },
     {
       "name": "device",
-      "description": "",
+      "description": "An Identity resource that represents the device.",
       "isKey": false,
       "dataType": "identity",
       "isReadOnly": false,
@@ -48,7 +48,7 @@
     },
     {
       "name": "user",
-      "description": "",
+      "description": "An Identity resource that represents a user.",
       "isKey": false,
       "dataType": "identity",
       "isReadOnly": false,

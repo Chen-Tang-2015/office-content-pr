@@ -18,10 +18,10 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|content|Stream||
-|height|Int32||
-|url|String||
-|width|Int32||
+|content|Stream|The content stream.|
+|height|Int32|The height of the thumbnail, in pixels.|
+|url|String|The URL used to fetch the thumbnail content.|
+|width|Int32|The width of the thumbnail, in pixels.|
 
-<!-- uuid: 84da8e4a-47e9-48b5-9ea9-97c42024e971
-2015-10-12 23:28:12 UTC -->
+<!-- uuid: 99602c4c-8b1e-4ac0-ab8c-24fa93bc11a7
+2015-10-12 23:35:02 UTC -->

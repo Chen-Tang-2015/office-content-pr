@@ -30,7 +30,7 @@
   "properties": [
     {
       "name": "id",
-      "description": "",
+      "description": "The unique identifier of the drive.",
       "isKey": true,
       "dataType": "String",
       "isReadOnly": true,
@@ -44,7 +44,7 @@
     },
     {
       "name": "driveType",
-      "description": "",
+      "description": "Enumerated value that identifies the type of drive account. OneDrive drives will show as `personal`.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -58,7 +58,7 @@
     },
     {
       "name": "owner",
-      "description": "",
+      "description": "The user account that owns the drive.",
       "isKey": false,
       "dataType": "identitySet",
       "isReadOnly": false,
@@ -72,7 +72,7 @@
     },
     {
       "name": "quota",
-      "description": "",
+      "description": "Information about the drive's storage space quota.",
       "isKey": false,
       "dataType": "quota",
       "isReadOnly": false,
@@ -86,7 +86,7 @@
     },
     {
       "name": "items",
-      "description": "",
+      "description": "All items contained in the drive.",
       "isKey": false,
       "dataType": "item",
       "isReadOnly": true,
@@ -114,7 +114,7 @@
     },
     {
       "name": "special",
-      "description": "",
+      "description": "Collection of common folders available in OneDrive.",
       "isKey": false,
       "dataType": "item",
       "isReadOnly": true,
@@ -128,7 +128,7 @@
     },
     {
       "name": "root",
-      "description": "",
+      "description": "The root folder of the drive.",
       "isKey": false,
       "dataType": "item",
       "isReadOnly": true,

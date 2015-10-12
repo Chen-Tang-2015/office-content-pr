@@ -23,9 +23,9 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|application|[identity](identity.md)||
-|device|[identity](identity.md)||
-|user|[identity](identity.md)||
+|application|[identity](identity.md)|An Identity resource that represents the application.|
+|device|[identity](identity.md)|An Identity resource that represents the device.|
+|user|[identity](identity.md)|An Identity resource that represents a user.|
 
-<!-- uuid: b54a4889-cfc5-4742-855b-5168fec7d62f
-2015-10-12 23:28:11 UTC -->
+<!-- uuid: 0eb0abd3-3187-41b1-ba10-b04271f8ddd5
+2015-10-12 23:35:01 UTC -->

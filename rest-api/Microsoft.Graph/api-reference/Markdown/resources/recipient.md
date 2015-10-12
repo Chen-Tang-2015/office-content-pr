@@ -19,5 +19,5 @@ Here is a JSON representation of the resource
 |:---------------|:--------|:----------|
 |EmailAddress|[EmailAddress](emailaddress.md)|The recipient's email address.|
 
-<!-- uuid: 1d35cb46-9d80-48df-b2ec-8de3d3bb9053
-2015-10-12 23:28:12 UTC -->
+<!-- uuid: 3e390fd9-c5b9-4956-b2e4-e76a3edf8eb1
+2015-10-12 23:35:02 UTC -->

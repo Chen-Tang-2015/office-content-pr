@@ -23,5 +23,5 @@ Here is a JSON representation of the resource
 |StartDate|DateTimeOffset|The start date of the series.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |Type|String|The recurrence range: EndDate = 0, NoEnd = 1, Numbered = 2. Possible values are: `EndDate`, `NoEnd`, `Numbered`.|
 
-<!-- uuid: de934c8f-9baa-4e69-b20a-dce1f5ae603d
-2015-10-12 23:28:12 UTC -->
+<!-- uuid: a35af6b8-471e-4de3-98af-aa9b7c95e96e
+2015-10-12 23:35:02 UTC -->

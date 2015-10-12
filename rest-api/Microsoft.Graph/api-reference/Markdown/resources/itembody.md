@@ -19,5 +19,5 @@ Here is a JSON representation of the resource
 |Content|String|The text or HTML content.|
 |ContentType|String|The content type: Text = 0, HTML = 1. Possible values are: `Text`, `HTML`.|
 
-<!-- uuid: 10c3c017-4e08-4ab0-abc7-44784a6e00de
-2015-10-12 23:28:11 UTC -->
+<!-- uuid: 9be485de-6d16-4c7b-8ef7-dd4ad0cb52fe
+2015-10-12 23:35:01 UTC -->

@@ -23,5 +23,5 @@ Here is a JSON representation of the resource
 |service|String|The name of the service; for example, ΓÇ£AccessControlServiceS2SΓÇ¥.|
 |servicePlanId|Guid|A GUID that identifies the service plan.|
 
-<!-- uuid: d11a01c1-f3fd-48d4-86eb-df6b31ace57b
-2015-10-12 23:28:10 UTC -->
+<!-- uuid: a8fbcda1-1ce8-4b49-8d78-8c384b509416
+2015-10-12 23:35:00 UTC -->

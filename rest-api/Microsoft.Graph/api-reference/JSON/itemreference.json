@@ -20,7 +20,7 @@
   "properties": [
     {
       "name": "driveId",
-      "description": "",
+      "description": "Unique identifier for the Drive that contains the item.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -34,7 +34,7 @@
     },
     {
       "name": "id",
-      "description": "",
+      "description": "Unique identifier for the item.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -48,7 +48,7 @@
     },
     {
       "name": "path",
-      "description": "",
+      "description": "Path that used to navigate to the item.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
