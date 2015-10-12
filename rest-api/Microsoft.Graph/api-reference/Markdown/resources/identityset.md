@@ -1,6 +1,6 @@
 # identitySet resource type
 
-The IdentitySet type is a keyed collection of [Identity](identity.md) objects. It is used to represent a set of identities associated with various events for an item, such as _created by_ or _last modified by_.  
+The IdentitySet type is a keyed collection of [Identity](identity.md) objects. It is used to represent a set of identities associated with various events for an item, such as _created by_ or _last modified by_.  
 
 ### JSON representation
 
@@ -23,9 +23,9 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|application|[identity](identity.md)|An Identity resource that represents the application.|
-|device|[identity](identity.md)|An Identity resource that represents the device.|
-|user|[identity](identity.md)|An Identity resource that represents a user.|
+|application|[identity](identity.md)||
+|device|[identity](identity.md)||
+|user|[identity](identity.md)||
 
-<!-- uuid: 94320e99-7080-40e9-81c5-2f6ddbf10d84
-2015-10-12 23:19:39 UTC -->
+<!-- uuid: b54a4889-cfc5-4742-855b-5168fec7d62f
+2015-10-12 23:28:11 UTC -->

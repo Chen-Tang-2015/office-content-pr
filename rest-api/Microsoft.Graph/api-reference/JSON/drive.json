@@ -1,6 +1,6 @@
 {
   "name": "drive",
-  "description": "The Drive resource represents a drive in OneDrive. It provides information about the owner of the drive, total and available storage space, and exposes a collection of all the [Items][item-resource] contained within the drive.  ",
+  "description": "The Drive resource represents a drive in OneDrive.\r It provides information about the owner of the drive, total and available\r storage space, and exposes a collection of all the [Items][item-resource] contained\r within the drive.\r \r ",
   "collectionOf": null,
   "isComplexType": false,
   "isEntitySet": false,
@@ -30,7 +30,7 @@
   "properties": [
     {
       "name": "id",
-      "description": "The unique identifier of the drive.",
+      "description": "",
       "isKey": true,
       "dataType": "String",
       "isReadOnly": true,
@@ -44,7 +44,7 @@
     },
     {
       "name": "driveType",
-      "description": "Enumerated value that identifies the type of drive account. OneDrive drives will show as `personal`.",
+      "description": "",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -58,7 +58,7 @@
     },
     {
       "name": "owner",
-      "description": "The user account that owns the drive.",
+      "description": "",
       "isKey": false,
       "dataType": "identitySet",
       "isReadOnly": false,
@@ -72,7 +72,7 @@
     },
     {
       "name": "quota",
-      "description": "Information about the drive's storage space quota.",
+      "description": "",
       "isKey": false,
       "dataType": "quota",
       "isReadOnly": false,
@@ -86,7 +86,7 @@
     },
     {
       "name": "items",
-      "description": "All items contained in the drive.",
+      "description": "",
       "isKey": false,
       "dataType": "item",
       "isReadOnly": true,
@@ -114,7 +114,7 @@
     },
     {
       "name": "special",
-      "description": "Collection of common folders available in OneDrive.",
+      "description": "",
       "isKey": false,
       "dataType": "item",
       "isReadOnly": true,
@@ -128,7 +128,7 @@
     },
     {
       "name": "root",
-      "description": "The root folder of the drive.",
+      "description": "",
       "isKey": false,
       "dataType": "item",
       "isReadOnly": true,

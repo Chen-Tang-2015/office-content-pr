@@ -1,6 +1,6 @@
 {
   "name": "thumbnailSet",
-  "description": "The ThumbnailSet type is a keyed collection of [Thumbnail](thumbnail.md) objects. It is used to represent a set of thumbnails associated with a single file on OneDrive.  ",
+  "description": "The ThumbnailSet type is a keyed collection of [Thumbnail](thumbnail.md) objects.\r It is used to represent a set of thumbnails associated with a single file on OneDrive.\r \r ",
   "collectionOf": null,
   "isComplexType": false,
   "isEntitySet": false,
@@ -42,7 +42,7 @@
   "properties": [
     {
       "name": "id",
-      "description": "The id within the item.",
+      "description": "",
       "isKey": true,
       "dataType": "String",
       "isReadOnly": true,
@@ -56,7 +56,7 @@
     },
     {
       "name": "large",
-      "description": "A 1920x1920 scaled thumbnail.",
+      "description": "",
       "isKey": false,
       "dataType": "thumbnail",
       "isReadOnly": false,
@@ -70,7 +70,7 @@
     },
     {
       "name": "medium",
-      "description": "A 176x176 scaled thumbnail.",
+      "description": "",
       "isKey": false,
       "dataType": "thumbnail",
       "isReadOnly": false,
@@ -84,7 +84,7 @@
     },
     {
       "name": "small",
-      "description": "A 48x48 cropped thumbnail.",
+      "description": "",
       "isKey": false,
       "dataType": "thumbnail",
       "isReadOnly": false,
@@ -98,7 +98,7 @@
     },
     {
       "name": "source",
-      "description": "A custom thumbnail image or the original image used to generate other thumbnails.",
+      "description": "",
       "isKey": false,
       "dataType": "thumbnail",
       "isReadOnly": false,

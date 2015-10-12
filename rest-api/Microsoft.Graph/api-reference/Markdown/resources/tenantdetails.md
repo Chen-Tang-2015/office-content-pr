@@ -15,5 +15,5 @@ None
 |:---------------|:--------|:----------|
 |[List](../api/tenantdetail_list.md) | [TenantDetail](tenantdetail.md) [] |Get tenantDetail object collection. |
 
-<!-- uuid: e730849a-bc0f-4072-a455-0259ff82f9f5
-2015-10-12 23:19:40 UTC -->
+<!-- uuid: b28ebc26-2268-4be1-913b-f7a292929a00
+2015-10-12 23:28:12 UTC -->

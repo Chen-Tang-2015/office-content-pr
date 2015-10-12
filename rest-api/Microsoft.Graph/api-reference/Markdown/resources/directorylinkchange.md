@@ -57,5 +57,5 @@ Here is a JSON representation of the resource
 |[Get MemberGroups](../api/directorylinkchange_getmembergroups.md)|String||
 |[Get MemberObjects](../api/directorylinkchange_getmemberobjects.md)|String||
 
-<!-- uuid: c2224d64-510b-4290-9335-bb0d69dd7056
-2015-10-12 23:19:38 UTC -->
+<!-- uuid: 8c86a942-9ed1-4838-b5cc-8b1551cc858d
+2015-10-12 23:28:10 UTC -->

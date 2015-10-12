@@ -1,6 +1,6 @@
 {
   "name": "identity",
-  "description": "The Identity type represents an identity of an _actor_. For example, and actor can be a user, device, or application.  ",
+  "description": "The Identity type represents an identity of an _actor_. For example, and actor can be a user, device, or application.\r \r ",
   "collectionOf": null,
   "isComplexType": true,
   "isEntitySet": false,
@@ -20,7 +20,7 @@
   "properties": [
     {
       "name": "displayName",
-      "description": "The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, OneDrive may show the new value in a future response, but the items associated with the user won't show up as having changed in `view.delta`",
+      "description": "",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -34,7 +34,7 @@
     },
     {
       "name": "id",
-      "description": "Unique identifier for the identity.",
+      "description": "",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,

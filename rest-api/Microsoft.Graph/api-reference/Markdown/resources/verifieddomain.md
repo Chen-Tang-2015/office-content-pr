@@ -27,5 +27,5 @@ Here is a JSON representation of the resource
 |name|String|The domain name; for example, ΓÇ£contoso.onmicrosoft.comΓÇ¥|
 |type|String|For example, ΓÇ£ManagedΓÇ¥.|
 
-<!-- uuid: 2a76f4b8-868a-4ca8-80b6-7acd47c45ef0
-2015-10-12 23:19:40 UTC -->
+<!-- uuid: cd655ce3-d2f5-4dd2-80e9-522d2420ce15
+2015-10-12 23:28:12 UTC -->

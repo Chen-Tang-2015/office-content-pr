@@ -57,5 +57,5 @@ Here is a JSON representation of the resource
 |[Get MemberGroups](../api/approleassignment_getmembergroups.md)|String||
 |[Get MemberObjects](../api/approleassignment_getmemberobjects.md)|String||
 
-<!-- uuid: 6fd68120-3992-45a9-abc2-fc3c5e3975ec
-2015-10-12 23:19:38 UTC -->
+<!-- uuid: 2f2d190b-21f1-4913-8f3e-0be8c7b835bc
+2015-10-12 23:28:10 UTC -->

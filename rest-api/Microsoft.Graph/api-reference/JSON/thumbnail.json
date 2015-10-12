@@ -1,6 +1,6 @@
 {
   "name": "thumbnail",
-  "description": "The Thumbnail resource type represents a thumbnail for an image, video, document, or any file or folder on OneDrive that has a graphical representation.  ",
+  "description": "The Thumbnail resource type represents a thumbnail for an image, video, document, or any file or folder on OneDrive that\r has a graphical representation.\r \r ",
   "collectionOf": null,
   "isComplexType": true,
   "isEntitySet": false,
@@ -20,7 +20,7 @@
   "properties": [
     {
       "name": "content",
-      "description": "The content stream.",
+      "description": "",
       "isKey": false,
       "dataType": "Stream",
       "isReadOnly": false,
@@ -34,7 +34,7 @@
     },
     {
       "name": "height",
-      "description": "The height of the thumbnail, in pixels.",
+      "description": "",
       "isKey": false,
       "dataType": "Int32",
       "isReadOnly": false,
@@ -48,7 +48,7 @@
     },
     {
       "name": "url",
-      "description": "The URL used to fetch the thumbnail content.",
+      "description": "",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -62,7 +62,7 @@
     },
     {
       "name": "width",
-      "description": "The width of the thumbnail, in pixels.",
+      "description": "",
       "isKey": false,
       "dataType": "Int32",
       "isReadOnly": false,

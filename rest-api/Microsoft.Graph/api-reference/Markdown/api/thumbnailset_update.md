@@ -17,10 +17,10 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|large|thumbnail|A 1920x1920 scaled thumbnail.|
-|medium|thumbnail|A 176x176 scaled thumbnail.|
-|small|thumbnail|A 48x48 cropped thumbnail.|
-|source|thumbnail|A custom thumbnail image or the original image used to generate other thumbnails.|
+|large|thumbnail||
+|medium|thumbnail||
+|small|thumbnail||
+|source|thumbnail||
 
 ### Response
 If successful, this method returns a `200 OK` response code and updated [thumbnailSet](../resources/thumbnailset.md) object in the response body.
@@ -62,5 +62,5 @@ Content-length: 96
 }
 ```
 
-<!-- uuid: fb329790-52ce-4add-beb9-57ac2e1b61cb
-2015-10-12 23:19:40 UTC -->
+<!-- uuid: 2ea0a647-0c7e-45dc-95f0-e170ded894ea
+2015-10-12 23:28:12 UTC -->

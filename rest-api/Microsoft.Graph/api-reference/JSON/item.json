@@ -1,6 +1,6 @@
 {
   "name": "item",
-  "description": "The Item resource type represents metadata for an item in OneDrive. All top-level filesystem objects in OneDrive are Item resources. If an item is a [Folder](../facets/folder_facet.md) or [File](../facets/file_facet.md) facet, the Item resource will contain a value for either the **folder** or **file** property, respectively.  ",
+  "description": "The Item resource type represents metadata for an item in OneDrive.\r All top-level filesystem objects in OneDrive are Item resources.\r If an item is a [Folder](../facets/folder_facet.md) or [File](../facets/file_facet.md) facet, the Item resource will contain a value for either the **folder** or **file** property, respectively.\r \r ",
   "collectionOf": null,
   "isComplexType": false,
   "isEntitySet": false,
@@ -42,7 +42,7 @@
   "properties": [
     {
       "name": "content",
-      "description": "The content stream, if the Item represents a file.",
+      "description": "",
       "isKey": false,
       "dataType": "Stream",
       "isReadOnly": false,
@@ -56,7 +56,7 @@
     },
     {
       "name": "createdBy",
-      "description": "Identity of the user, device, and application which created the item. Read-only.",
+      "description": "",
       "isKey": false,
       "dataType": "identitySet",
       "isReadOnly": false,
@@ -70,7 +70,7 @@
     },
     {
       "name": "createdDateTime",
-      "description": "Date and time of item creation. Read-only.",
+      "description": "",
       "isKey": false,
       "dataType": "DateTimeOffset",
       "isReadOnly": false,
@@ -84,7 +84,7 @@
     },
     {
       "name": "cTag",
-      "description": "An eTag for the content of the item. This eTag is not changed if only the metadata is changed. **Note** This property is not returned if the Item is a folder. Read-only.",
+      "description": "",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -98,7 +98,7 @@
     },
     {
       "name": "description",
-      "description": "Provide a user-visible description of the item. Read-write.",
+      "description": "",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -112,7 +112,7 @@
     },
     {
       "name": "eTag",
-      "description": "eTag for the entire item (metadata + content). Read-only.",
+      "description": "",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -126,7 +126,7 @@
     },
     {
       "name": "id",
-      "description": "The unique identifier of the item within the Drive. Read-only.",
+      "description": "",
       "isKey": true,
       "dataType": "String",
       "isReadOnly": true,
@@ -140,7 +140,7 @@
     },
     {
       "name": "lastModifiedBy",
-      "description": "Identity of the user, device, and application which last modified the item. Read-only.",
+      "description": "",
       "isKey": false,
       "dataType": "identitySet",
       "isReadOnly": false,
@@ -154,7 +154,7 @@
     },
     {
       "name": "lastModifiedDateTime",
-      "description": "Date and time the item was last modified. Read-only.",
+      "description": "",
       "isKey": false,
       "dataType": "DateTimeOffset",
       "isReadOnly": false,
@@ -168,7 +168,7 @@
     },
     {
       "name": "name",
-      "description": "The name of the item (filename and extension). Read-write.",
+      "description": "",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -182,7 +182,7 @@
     },
     {
       "name": "parentReference",
-      "description": "Parent information, if the item has a parent. Read-write.",
+      "description": "",
       "isKey": false,
       "dataType": "itemReference",
       "isReadOnly": false,
@@ -196,7 +196,7 @@
     },
     {
       "name": "size",
-      "description": "Size of the item in bytes. Read-only.",
+      "description": "",
       "isKey": false,
       "dataType": "Int64",
       "isReadOnly": false,
@@ -224,7 +224,7 @@
     },
     {
       "name": "webUrl",
-      "description": "URL that displays the resource in the browser. Read-only.",
+      "description": "",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -238,7 +238,7 @@
     },
     {
       "name": "audio",
-      "description": "Audio metadata, if the item is an audio file. Read-only.",
+      "description": "",
       "isKey": false,
       "dataType": "audio",
       "isReadOnly": false,
@@ -252,7 +252,7 @@
     },
     {
       "name": "deleted",
-      "description": "Information about the deleted state of the item. Read-only.",
+      "description": "",
       "isKey": false,
       "dataType": "deleted",
       "isReadOnly": false,
@@ -266,7 +266,7 @@
     },
     {
       "name": "file",
-      "description": "File metadata, if the item is a file. Read-only.",
+      "description": "",
       "isKey": false,
       "dataType": "file",
       "isReadOnly": false,
@@ -280,7 +280,7 @@
     },
     {
       "name": "fileSystemInfo",
-      "description": "File system information on client. Read-write.",
+      "description": "",
       "isKey": false,
       "dataType": "fileSystemInfo",
       "isReadOnly": false,
@@ -294,7 +294,7 @@
     },
     {
       "name": "folder",
-      "description": "Folder metadata, if the item is a folder. Read-only.",
+      "description": "",
       "isKey": false,
       "dataType": "folder",
       "isReadOnly": false,
@@ -308,7 +308,7 @@
     },
     {
       "name": "image",
-      "description": "Image metadata, if the item is an image. Read-only.",
+      "description": "",
       "isKey": false,
       "dataType": "image",
       "isReadOnly": false,
@@ -322,7 +322,7 @@
     },
     {
       "name": "location",
-      "description": "Location metadata, if the item has location data. Read-only.",
+      "description": "",
       "isKey": false,
       "dataType": "location",
       "isReadOnly": false,
@@ -350,7 +350,7 @@
     },
     {
       "name": "photo",
-      "description": "Photo metadata, if the item is a photo. Read-only.",
+      "description": "",
       "isKey": false,
       "dataType": "photo",
       "isReadOnly": false,
@@ -364,7 +364,7 @@
     },
     {
       "name": "searchResult",
-      "description": "Search metadata, if the item is from a search result.",
+      "description": "",
       "isKey": false,
       "dataType": "searchResult",
       "isReadOnly": false,
@@ -406,7 +406,7 @@
     },
     {
       "name": "video",
-      "description": "Video metadata, if the item is a video. Read-only.",
+      "description": "",
       "isKey": false,
       "dataType": "video",
       "isReadOnly": false,
@@ -476,7 +476,7 @@
     },
     {
       "name": "children",
-      "description": "Collection containing Item objects for the immediate children of Item. Only items representing folders have children.",
+      "description": "",
       "isKey": false,
       "dataType": "item",
       "isReadOnly": true,
@@ -490,7 +490,7 @@
     },
     {
       "name": "thumbnails",
-      "description": "Collection containing [ThumbnailSet](thumbnailSet.md) objects associated with the item. For more info, see [getting thumbnails](../items/thumbnails.md).",
+      "description": "",
       "isKey": false,
       "dataType": "thumbnailSet",
       "isReadOnly": true,
