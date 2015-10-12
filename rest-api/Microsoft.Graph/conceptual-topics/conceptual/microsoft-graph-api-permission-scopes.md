@@ -7,9 +7,8 @@ In this section:
 -	[Permission scope concepts](#msg_perm_concepts) 
 -	[Permission scope details](#msg_perm_details)
 
-
- <a name="msg_perm_concepts"> </a>
- ##Permission scope concepts
+<a name="msg_perm_concepts"> </a>
+##Permission scope concepts
 
 ###App-only vs. delegated scopes
 Permission scopes can be either app-only or delegated. App-only scopes (also known as app roles) grant the app the full set of privileges offered by the scope. App-only scopes are typically used by apps that run as a service without a signed-in user being present. Delegated permission scopes are for apps that a user signs in to. These scopes delegate the privileges of the signed-in user to the app, allowing the app to act as the signed in user. The actual privileges granted to the app will be the least privileged combination (the intersection) of the privileges granted by the scope and those possessed by the signed-in user. For example, if the permission scope grants delegated privileges to write all directory objects, but the signed-in user has privileges only to update their own user profile, the app will only be able to write the signed-in user's profile but no other objects.
@@ -55,9 +54,15 @@ The following tables list the Microsoft Graph API permission scopes and explains
 | _Files.Read_ |    `Read users' files` | Allows the application to read the current user's files
 | _Files.ReadWrite_ |   `Edit or delete users' files`             | Allows the app to edit or delete the current user's files. |
 | _Sites.Read.All_ |    `Read items in all site collections` | Allows the application to read documents and list  items in all site collections on behalf of the signed-in user |
-| _Sites.ReadWrite.All_ |    `Edit or delete items in all site collections` | Allows the application to edit or delete documents and list items in all site collections on behalf of the signed-in user |
-| _Tasks.Read.All_ |    `Read the user's tasks and projects`(preview) | Allows the app to read the user's tasks and projects on behalf of the user |
-| _Tasks.ReadWrite.All_ |    `Read and write the user's tasks and projects` (preview) | Allows the app to create, read, update and delete the user's tasks and projects on behalf of the user |
+| _Sites.ReadWrite.All_ |    `Edit or delete items in all site collections` | Allows the application to edit or delete documents and list items in all site collections on behalf of the signed-in user. |
+| _Tasks.Read.All_ |    `Read the user's tasks and projects`(preview) | Allows the app to read the user's tasks and projects on behalf of the user. |
+| _Tasks.ReadWrite.All_ |    `Read and write the user's tasks and projects` (preview) | Allows the app to create, read, update and delete the user's tasks and projects on behalf of the user. |
+| _Files.ReadWrite.Selected_ |    `Read and write files that the user selects`(preview) | Allows the app to read and write files that the user selects. The app has access for several hours after the user selects a file. |
+| _Files.Read.Selected_ |    `Read files that the user selects` (preview) | Allows the app to read files that the user selects. The app has access for several hours after the user selects a file. |
+| _People.Read_ |    `Read users' relevant people lists`(preview) | Allows the app to read a ranked list of relevant people of the signed-in user. The list includes local contacts, contacts from social networking, your organization's directory, and people from recent communications (such as email and Skype). |
+| _People.ReadWrite_ |    `Read and write users' relevant people lists` (preview) | Allows the app to create, read and write to the ranked list of relevant people of the signed-in user. The list includes local contacts, contacts from social networking, your organization's directory, and people from recent communications (such as email and Skype). |
+| _openid_ |    `Sign users in`(preview) | Allows users to sign in to the app with their work or school accounts and allows the app to see basic user profile information. |
+| _offline_access_ |    `Read and write user's information` (preview) | Allows the app to see and update user's data, even when the user is not actively using the app. |
 
 <!-- -->
 
