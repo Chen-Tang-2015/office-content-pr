@@ -1,0 +1,51 @@
+# DirectoryRoleTemplate resource type
+
+Represents a directory role template. A directory role template specifies the property values of a directory role ([DirectoryRole]). There is an associated directory role template object for each of the directory roles that may be activated in a tenant. 
+
+### JSON representation
+
+Here is a JSON representation of the resource
+
+```json
+{
+  "Extensions": [
+    {
+      "@odata.type": "microsoft.graph.Extension"
+    }
+  ],
+  "deletionTimestamp": "String (timestamp)",
+  "description": "String",
+  "displayName": "String",
+  "objectId": "String (identifier)",
+  "objectType": "String"
+}
+
+```
+### Properties
+| Property	   | Type	|Description|
+|:---------------|:--------|:----------|
+|deletionTimestamp|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|description|String|The description to set for the directory role.|
+|displayName|String|The display name to set for the directory role.|
+|objectId|String|The unique identifier for the template. Inherited from [DirectoryObject]. In version 1.5 and later, you specify the **objectId** of the directory role template for the **roleTemplateId** property in the POST request activate a [DirectoryRole] in a tenant.                             **Notes**: **key**, immutable, not nullable, unique.             Read-only.|
+|objectType|String|A string that identifies the object type. For role templates the value is always ΓÇ£RoleTemplateΓÇ¥. Inherited from [DirectoryObject].|
+
+### Relationships
+| Relationship | Type	|Description|
+|:---------------|:--------|:----------|
+|Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
+
+### Tasks
+
+| Task		   | Return Type	|Description|
+|:---------------|:--------|:----------|
+|[Get DirectoryRoleTemplate](../api/directoryroletemplate_get.md) | [DirectoryRoleTemplate](directoryroletemplate.md) |Read properties and relationships of directoryRoleTemplate object.|
+|[Create Extension](../api/directoryroletemplate_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
+|[Update](../api/directoryroletemplate_update.md) | [DirectoryRoleTemplate](directoryroletemplate.md)	|Update DirectoryRoleTemplate object. |
+|[Delete](../api/directoryroletemplate_delete.md) | Void	|Delete DirectoryRoleTemplate object. |
+|[Checkmembergroups](../api/directoryroletemplate_checkmembergroups.md)|String||
+|[Get MemberGroups](../api/directoryroletemplate_getmembergroups.md)|String||
+|[Get MemberObjects](../api/directoryroletemplate_getmemberobjects.md)|String||
+
+<!-- uuid: d0359071-cf01-40ed-a3c9-919d30c9b7b7
+2015-10-12 21:30:00 UTC -->
