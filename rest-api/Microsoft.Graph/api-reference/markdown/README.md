@@ -12,7 +12,7 @@ Getting API reference contribution from both engineering teams and content devel
 
 Add rich descriptions to the generated documentation to help our customers make sense of this gigantic, unified endpoint. 
 
-The process is simple and should be familiar to everyone at this point. Simply find the file you wish to edit (entity types are in the *resources/* folder and actions/functions are in the *api/* folder) and edit the Markdown. In an effort to keep our documentation uniform with the same look and feel across all of it, please adhere to the following guidelines.
+The process is simple and should be familiar to everyone at this point. Simply find the file you wish to edit (entity types are in the *resources/* folder and actions/functions are in the *api/* folder) and edit the Markdown. In an effort to keep our documentation uniform with the same look and feel across all of it, please adhere to the following guidelines:
 
 * For subheadings, use `###` followed by a space and then your heading text.
 * Don't add any new subheadings. If you would like to add one, please send an email to **MSGraphAPIRef@microsoft.com** and we'll talk about it.
