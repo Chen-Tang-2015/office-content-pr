@@ -1,6 +1,6 @@
 # Microsoft Graph API reference contributor's guide
 
-Getting API reference contribution from both engineering teams and content developers is essential to delivering high quality documentation to our customers this fall at **Connect()** on **November 18th**. First of all, thank you for throwing your hat in the ring and providing assistance to make this documentation the best it can be! Please follow the guidelines on this page to make our workflow as painless as possible!
+Getting API reference contribution from both engineering teams and content developers is essential to delivering high quality documentation to our customers this Fall at **Connect()** on **November 18th**. First of all, thank you for throwing your hat in the ring and providing assistance to make this documentation the best it can be! Please follow the guidelines on this page to make our workflow as painless as possible!
 
 ## Get the source files
 
