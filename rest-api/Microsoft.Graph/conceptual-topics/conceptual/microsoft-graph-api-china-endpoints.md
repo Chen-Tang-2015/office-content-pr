@@ -35,6 +35,6 @@ In the following URLs, `{your-sub-domain}` is the name you specify when setting 
 ##  Microsoft Graph API
 |**Office 365 for China**|**Office 365 outside of China**|
 |:-----|:-----|
-| TODO |  `https://graph.microsoft.com/ |
+|`http://microsoftgraph.chinacloudapi.cn` |  `https://graph.microsoft.com/` |
 
 
