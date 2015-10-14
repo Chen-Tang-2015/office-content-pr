@@ -247,5 +247,7 @@ libraires](https://msdn.microsoft.com/en-us/library/azure/dn151135.aspx). For a 
 [Create web apps using CORS to access files in Office 365](../howto/create-web-apps-using-CORS-to-access-files-in-Office-365.md). To see how to use 
 the ADAL .NET library, see [Azure AD Authentication Library for .NET](https://msdn.microsoft.com/en-us/library/azure/jj573266.aspx)
  
+##Additional Resources##
 
+- [Hands on lab: Deep dive into the Office 365 unified API](http://dev.office.com/hands-on-labs/4585)
 
