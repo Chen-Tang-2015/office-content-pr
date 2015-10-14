@@ -506,3 +506,6 @@ always catch exceptions and inspect error messages to learn what query options a
 
 You can see more calling the .NET client library in action in this [sample app](https://github.com/OfficeDev/O365-Win-Profile). 
 
+##Additional Resources##
+
+- [Hands on lab: Deep dive into the Office 365 unified API](http://dev.office.com/hands-on-labs/4585)
