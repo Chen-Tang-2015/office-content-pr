@@ -22,7 +22,7 @@ Go to `https://account.windowszaure.cn` to set up the development environment fo
 |:-----|:-----|
 | `https://login.chinacloudapi.cn` | `https://login.microsoftonline.com` |
 
-Use `https://login.chinacloudapi.cn/common/oauth2/authorize` to authenticate the user and `login.chinacloudapi.cn/common/oauth2/token` to authorize your app for Office 365 for China.
+Use `https://login.chinacloudapi.cn/common/oauth2/authorize` to authenticate the user and `login.chinacloudapi.cn/common/oauth2/token` to authorize your app on Office 365 for China.
 
 ## Office 365 developer site
 
