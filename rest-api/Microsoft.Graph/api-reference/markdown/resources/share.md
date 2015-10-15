@@ -50,8 +50,8 @@ Here is a JSON representation of the resource
 |[Update](../api/share_update.md) | [share](share.md)	|Update share object. |
 |[Delete](../api/share_delete.md) | Void	|Delete share object. |
 
-<!-- uuid: 2a4b9b29-4608-4500-83aa-e9ce561dbbcd
-2015-10-15 16:17:33 UTC -->
+<!-- uuid: 5918654f-b60b-430c-b883-9e471f6cfcc2
+2015-10-15 16:49:30 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "share resource",

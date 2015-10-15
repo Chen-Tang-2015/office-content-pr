@@ -53,8 +53,8 @@ Content-length: 128
 ```
 If successful, this method returns a `200 OK` response code and collection of [PrivilegedSignupStatus](../resources/privilegedsignupstatus.md) objects in the response body.
 
-<!-- uuid: ca29ebd2-059e-40d8-99f0-9f8c16677294
-2015-10-15 16:17:33 UTC -->
+<!-- uuid: 78dba27b-97ce-4f89-bfcb-9da094afef4b
+2015-10-15 16:49:30 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "List PrivilegedSignupStatus",

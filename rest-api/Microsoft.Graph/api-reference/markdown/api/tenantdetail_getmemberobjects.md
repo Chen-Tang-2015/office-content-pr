@@ -56,8 +56,8 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: 9e41f8b1-61ee-470c-bc18-40821c91e3ab
-2015-10-15 16:17:33 UTC -->
+<!-- uuid: 2942a4c4-de75-470f-904c-d4412ec33262
+2015-10-15 16:49:30 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "TenantDetail: getMemberObjects",

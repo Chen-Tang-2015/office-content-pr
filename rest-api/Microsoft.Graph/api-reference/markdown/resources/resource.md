@@ -43,8 +43,8 @@ None
 |[Update](../api/resource_update.md) | [Resource](resource.md)	|Update Resource object. |
 |[Delete](../api/resource_delete.md) | Void	|Delete Resource object. |
 
-<!-- uuid: ec44c525-9a1a-423a-8230-fdc32efb17fc
-2015-10-15 16:17:33 UTC -->
+<!-- uuid: 1a9ba17e-9c90-492b-9b06-0fc56fcc7266
+2015-10-15 16:49:30 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Resource resource",

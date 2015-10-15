@@ -30,18 +30,18 @@ In the request body, supply the values for relevant fields that should be update
 |CompanyName|String|The name of the contact's company.|
 |DateTimeCreated|DateTimeOffset|The time the contact was created.|
 |DateTimeLastModified|DateTimeOffset|The time the contact was modified.|
-|Department|String|The contact's department.|
-|DisplayName|String|The contact's display name.|
+|Department|String|The name for the department in which the contact works.|
+|DisplayName|String|The display name for the contact.|
 |EmailAddresses|EmailAddress|The contact's email addresses.|
 |FileAs|String|The name the contact is filed under.|
 |Generation|String|The contact's generation.|
-|GivenName|String|The contact's given name.|
+|GivenName|String|The given name (first name) of the contact.|
 |HomeAddress|PhysicalAddress|The contact's home address.|
 |HomePhones|String|The contact's home phone numbers.|
 |ImAddresses|String|The contact's instant messaging (IM) addresses.|
 |Initials|String|The contact's initials.|
-|JobTitle|String|The contact's job title.|
-|Manager|String|The name of the contact's manager.|
+|JobTitle|String|The contactΓÇÖs job title.|
+|Manager|String|The user or contact that is this contactΓÇÖs manager. Inherited from [DirectoryObject].            HTTP Methods: GET, PUT, DELETE|
 |MiddleName|String|The contact's middle name.|
 |MobilePhone1|String|The contact's mobile phone number.|
 |NickName|String|The contact's nickname.|
@@ -49,7 +49,7 @@ In the request body, supply the values for relevant fields that should be update
 |OtherAddress|PhysicalAddress|Other addresses for the contact.|
 |ParentFolderId|String|The ID of the contact's parent folder.|
 |Profession|String|The contact's profession.|
-|Surname|String|The contact's surname.|
+|Surname|String|The contact's surname (family name or last name).|
 |Title|String|The contact's title.|
 |YomiCompanyName|String|The phonetic Japanese company name of the contact. This property is optional.|
 |YomiGivenName|String|The phonetic Japanese given name (first name) of the contact. This property is optional.|
@@ -218,8 +218,8 @@ Content-length: 1857
 }
 ```
 
-<!-- uuid: 0829119f-c582-4cc3-a19a-b55ec09621d4
-2015-10-15 16:17:31 UTC -->
+<!-- uuid: ec80aa3d-ead9-4990-9e01-b6a514999ec5
+2015-10-15 16:49:27 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of contact object.",

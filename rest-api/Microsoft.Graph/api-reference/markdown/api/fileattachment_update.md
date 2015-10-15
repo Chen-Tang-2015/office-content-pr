@@ -79,8 +79,8 @@ Content-length: 308
 }
 ```
 
-<!-- uuid: f7c3cdb0-0361-422a-af92-4783097f3cf2
-2015-10-15 16:17:32 UTC -->
+<!-- uuid: efdbc67b-d9a3-4cb7-8c97-9ecfa66b33c4
+2015-10-15 16:49:28 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of fileattachment object.",

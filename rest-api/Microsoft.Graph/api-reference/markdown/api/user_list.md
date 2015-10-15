@@ -139,8 +139,8 @@ Content-length: 3064
 ```
 If successful, this method returns a `200 OK` response code and collection of [User](../resources/user.md) objects in the response body.
 
-<!-- uuid: 37244218-c9bb-4752-9f97-f140187a7d7b
-2015-10-15 16:17:34 UTC -->
+<!-- uuid: 42d852d2-a366-4654-aa11-41de1edc25c9
+2015-10-15 16:49:31 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "List User",

@@ -15,8 +15,8 @@ None
 |:---------------|:--------|:----------|
 |[List](../api/task_list.md) | [Task](task.md) [] |Get task object collection. |
 
-<!-- uuid: 24cc1508-2664-4fb3-8b98-2e1cd053dfe4
-2015-10-15 16:17:33 UTC -->
+<!-- uuid: f115a635-3879-433c-b86c-2c8b5bd527af
+2015-10-15 16:49:30 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "tasks resource",

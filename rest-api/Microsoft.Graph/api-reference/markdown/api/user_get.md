@@ -134,8 +134,8 @@ Content-length: 2650
 ```
 If successful, this method returns a `200 OK` response code and [User](../resources/user.md) object in the response body.
 
-<!-- uuid: fc8ba5a9-d869-48d8-8367-9f2c92f9ff49
-2015-10-15 16:17:33 UTC -->
+<!-- uuid: 0250c6cb-4f12-4200-80ab-57c8af475a27
+2015-10-15 16:49:30 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get User",

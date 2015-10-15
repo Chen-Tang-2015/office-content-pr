@@ -15,8 +15,8 @@ None
 |:---------------|:--------|:----------|
 |[List](../api/user_list.md) | [User](user.md) [] |Get user object collection. |
 
-<!-- uuid: d8c3e16a-9581-42a1-bf91-a132af565664
-2015-10-15 16:17:34 UTC -->
+<!-- uuid: 49d8bfc2-3e75-4ad0-82ba-71f86706d797
+2015-10-15 16:49:31 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "users resource",

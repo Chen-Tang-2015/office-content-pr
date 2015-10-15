@@ -47,8 +47,8 @@ Content-length: 3
 }
 ```
 
-<!-- uuid: eeab75d8-719b-4429-a67a-5ca6617c1d48
-2015-10-15 16:17:32 UTC -->
+<!-- uuid: 52e0325a-01b8-4f6f-a467-f210d844a896
+2015-10-15 16:49:29 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Group: SubscribeByMail",

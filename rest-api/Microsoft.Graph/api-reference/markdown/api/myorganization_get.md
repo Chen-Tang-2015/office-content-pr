@@ -43,8 +43,8 @@ Content-length: 22
 ```
 If successful, this method returns a `200 OK` response code and [MyOrganization](../resources/myorganization.md) object in the response body.
 
-<!-- uuid: 95c0d855-d9dd-4785-aac6-91ea1d357404
-2015-10-15 16:17:32 UTC -->
+<!-- uuid: a04b913d-9da7-413a-88d4-a73aad08b612
+2015-10-15 16:49:29 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get MyOrganization",

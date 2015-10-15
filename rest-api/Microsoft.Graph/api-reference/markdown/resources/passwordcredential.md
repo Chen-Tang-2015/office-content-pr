@@ -33,8 +33,8 @@ Here is a JSON representation of the resource
 |startDate|DateTimeOffset|The date and time at which the password becomes valid.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |value|String|            |
 
-<!-- uuid: c43be3de-22b4-42b1-aeb0-19b282567ac3
-2015-10-15 16:17:32 UTC -->
+<!-- uuid: 1304cc8b-3f58-4be7-b632-9706d3054a98
+2015-10-15 16:49:29 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PasswordCredential resource",

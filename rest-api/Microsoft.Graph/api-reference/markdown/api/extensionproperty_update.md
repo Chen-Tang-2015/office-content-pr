@@ -77,8 +77,8 @@ Content-length: 297
 }
 ```
 
-<!-- uuid: 4bee707f-f9f8-447f-804a-961ab389a0ce
-2015-10-15 16:17:31 UTC -->
+<!-- uuid: eb4f73b2-37e2-41ad-a94b-c51002abe909
+2015-10-15 16:49:28 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of extensionproperty object.",

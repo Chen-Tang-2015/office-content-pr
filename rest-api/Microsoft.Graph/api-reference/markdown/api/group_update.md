@@ -149,8 +149,8 @@ Content-length: 1009
 }
 ```
 
-<!-- uuid: 87a6a1a4-b3b8-4200-9908-25bc362bd881
-2015-10-15 16:17:32 UTC -->
+<!-- uuid: bfdafda7-e87a-48f1-96c1-6b2247153790
+2015-10-15 16:49:29 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of group object.",

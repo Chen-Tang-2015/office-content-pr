@@ -48,8 +48,8 @@ Content-length: 130
 ```
 If successful, this method returns a `200 OK` response code and [MailFolder](../resources/mailfolder.md) object in the response body.
 
-<!-- uuid: 4729d552-44d8-47dc-9bf4-bfe52d0e974e
-2015-10-15 16:17:32 UTC -->
+<!-- uuid: 58d6e8fc-26b3-46f7-9bd0-7f9defe2f93f
+2015-10-15 16:49:29 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get MailFolder",

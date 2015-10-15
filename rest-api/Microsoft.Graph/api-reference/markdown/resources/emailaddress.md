@@ -27,8 +27,8 @@ Here is a JSON representation of the resource
 |Address|String|The email address of the person or entity.|
 |Name|String|The display name of the person or entity.|
 
-<!-- uuid: 5418c1cf-8e55-4777-b76f-fb5bb777b89c
-2015-10-15 16:17:31 UTC -->
+<!-- uuid: a2adfdec-3359-4d57-a344-bfcab210f453
+2015-10-15 16:49:28 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "EmailAddress resource",

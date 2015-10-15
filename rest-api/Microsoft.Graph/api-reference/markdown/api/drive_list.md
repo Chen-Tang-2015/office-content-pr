@@ -6,7 +6,7 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-GET /drives
+GET /drive
 ```
 ### Optional query parameters
 |Name|Value|Description|
@@ -35,7 +35,7 @@ Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "drives"
+  "@odata.type": "drive"
 } -->
 ```json
 HTTP/1.1 200 OK
@@ -73,12 +73,12 @@ Content-length: 580
 ```
 If successful, this method returns a `200 OK` response code and collection of [drive](../resources/drive.md) objects in the response body.
 
-<!-- uuid: d1e39069-d70c-4c4e-a98e-55d4cdbe0e5a
-2015-10-15 16:17:31 UTC -->
+<!-- uuid: 1c5304c8-dc49-4651-bce8-46e754226917
+2015-10-15 16:49:28 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "List drive",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""
-}-->
+}-->->

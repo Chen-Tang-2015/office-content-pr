@@ -52,8 +52,8 @@ Content-length: 201
 ```
 If successful, this method returns a `200 OK` response code and [Conversation](../resources/conversation.md) object in the response body.
 
-<!-- uuid: b68fcd45-34ee-4a9e-baff-929834d9df77
-2015-10-15 16:17:31 UTC -->
+<!-- uuid: 65b6f45d-dfd8-40f9-bb96-93c8d612c218
+2015-10-15 16:49:28 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Conversation",

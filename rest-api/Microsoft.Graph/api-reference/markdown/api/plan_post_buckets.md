@@ -57,8 +57,8 @@ Content-length: 179
 }
 ```
 
-<!-- uuid: dc511941-8ea7-43b0-ad53-3cab46500254
-2015-10-15 16:17:33 UTC -->
+<!-- uuid: 96d7a301-73b7-4648-a7aa-5b0b5c22ce52
+2015-10-15 16:49:29 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Bucket",

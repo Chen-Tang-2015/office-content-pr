@@ -113,8 +113,8 @@ Here is a JSON representation of the resource
 |[Get MemberGroups](../api/tenantdetail_getmembergroups.md)|String||
 |[Get MemberObjects](../api/tenantdetail_getmemberobjects.md)|String||
 
-<!-- uuid: 3d6c511f-634d-4407-b139-9ac9f5abb629
-2015-10-15 16:17:33 UTC -->
+<!-- uuid: 1e860784-d4f9-4017-9853-462848adf5e3
+2015-10-15 16:49:30 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "TenantDetail resource",

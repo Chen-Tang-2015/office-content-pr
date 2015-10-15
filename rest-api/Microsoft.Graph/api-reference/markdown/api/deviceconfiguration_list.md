@@ -54,8 +54,8 @@ Content-length: 415
 ```
 If successful, this method returns a `200 OK` response code and collection of [DeviceConfiguration](../resources/deviceconfiguration.md) objects in the response body.
 
-<!-- uuid: dc8785dd-861d-487b-8f25-fcf8fd81b510
-2015-10-15 16:17:31 UTC -->
+<!-- uuid: 9557fbe0-5efc-466d-8884-ceb5e4303ebf
+2015-10-15 16:49:28 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "List DeviceConfiguration",

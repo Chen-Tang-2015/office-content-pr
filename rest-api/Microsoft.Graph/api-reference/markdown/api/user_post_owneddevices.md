@@ -53,8 +53,8 @@ Content-length: 111
 }
 ```
 
-<!-- uuid: 6c5f5723-a223-4fd7-b5ff-2c7e0ecbf4dd
-2015-10-15 16:17:34 UTC -->
+<!-- uuid: 8bccac27-177e-4a66-8e49-39a33a34c4db
+2015-10-15 16:49:31 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create ownedDevice",

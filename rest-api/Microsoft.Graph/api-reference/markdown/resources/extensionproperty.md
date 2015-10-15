@@ -63,8 +63,8 @@ Here is a JSON representation of the resource
 |[Get MemberGroups](../api/extensionproperty_getmembergroups.md)|String||
 |[Get MemberObjects](../api/extensionproperty_getmemberobjects.md)|String||
 
-<!-- uuid: 470ae518-b22f-4f5a-8a5c-22ec27267b11
-2015-10-15 16:17:31 UTC -->
+<!-- uuid: 97c4a5a0-31d7-4b28-96a2-a456e4393cb0
+2015-10-15 16:49:28 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "ExtensionProperty resource",

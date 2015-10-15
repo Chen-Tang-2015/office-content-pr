@@ -15,8 +15,8 @@ None
 |:---------------|:--------|:----------|
 |[List](../api/group_list.md) | [Group](group.md) [] |Get group object collection. |
 
-<!-- uuid: 6adfc89e-0275-4b2f-85f6-65ef2682ceb2
-2015-10-15 16:17:32 UTC -->
+<!-- uuid: a926b50d-84dd-423b-a6f3-6452667bfc8c
+2015-10-15 16:49:29 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "groups resource",

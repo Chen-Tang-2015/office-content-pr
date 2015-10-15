@@ -93,19 +93,19 @@ Here is a JSON representation of the resource
 |CompanyName|String|The name of the contact's company.|
 |DateTimeCreated|DateTimeOffset|The time the contact was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |DateTimeLastModified|DateTimeOffset|The time the contact was modified.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|Department|String|The contact's department.|
-|DisplayName|String|The contact's display name.|
+|Department|String|The name for the department in which the contact works.|
+|DisplayName|String|The display name for the contact.|
 |EmailAddresses|[EmailAddress](emailaddress.md) collection|The contact's email addresses.|
 |FileAs|String|The name the contact is filed under.|
 |Generation|String|The contact's generation.|
-|GivenName|String|The contact's given name.|
+|GivenName|String|The given name (first name) of the contact.|
 |HomeAddress|[PhysicalAddress](physicaladdress.md)|The contact's home address.|
 |HomePhones|String collection|The contact's home phone numbers.|
 |Id|String|The contact's unique identifier. Read-only.|
 |ImAddresses|String collection|The contact's instant messaging (IM) addresses.|
 |Initials|String|The contact's initials.|
-|JobTitle|String|The contact's job title.|
-|Manager|String|The name of the contact's manager.|
+|JobTitle|String|The contactΓÇÖs job title.|
+|Manager|String|The user or contact that is this contactΓÇÖs manager. Inherited from [DirectoryObject].            HTTP Methods: GET, PUT, DELETE|
 |MiddleName|String|The contact's middle name.|
 |MobilePhone1|String|The contact's mobile phone number.|
 |NickName|String|The contact's nickname.|
@@ -113,7 +113,7 @@ Here is a JSON representation of the resource
 |OtherAddress|[PhysicalAddress](physicaladdress.md)|Other addresses for the contact.|
 |ParentFolderId|String|The ID of the contact's parent folder.|
 |Profession|String|The contact's profession.|
-|Surname|String|The contact's surname.|
+|Surname|String|The contact's surname (family name or last name).|
 |Title|String|The contact's title.|
 |YomiCompanyName|String|The phonetic Japanese company name of the contact. This property is optional.|
 |YomiGivenName|String|The phonetic Japanese given name (first name) of the contact. This property is optional.|
@@ -134,8 +134,8 @@ Here is a JSON representation of the resource
 |[Update](../api/contact_update.md) | [Contact](contact.md)	|Update Contact object. |
 |[Delete](../api/contact_delete.md) | Void	|Delete Contact object. |
 
-<!-- uuid: a3c633d0-c707-469d-8942-96614d26915c
-2015-10-15 16:17:31 UTC -->
+<!-- uuid: 0a370e4c-e8c4-4702-814f-7504f659f285
+2015-10-15 16:49:27 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Contact resource",

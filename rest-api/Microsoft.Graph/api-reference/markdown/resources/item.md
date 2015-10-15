@@ -167,8 +167,8 @@ Here is a JSON representation of the resource
 |[Invite](../api/item_invite.md)|[permission](permission.md)||
 |[Search](../api/item_search.md)|[item](item.md)||
 
-<!-- uuid: 9eace414-9398-4dbe-91d8-7741e6f7c086
-2015-10-15 16:17:32 UTC -->
+<!-- uuid: 625af4a5-0020-40df-aceb-6c954112a756
+2015-10-15 16:49:29 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "item resource",

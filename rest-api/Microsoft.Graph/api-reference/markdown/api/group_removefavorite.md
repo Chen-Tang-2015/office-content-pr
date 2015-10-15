@@ -47,8 +47,8 @@ Content-length: 3
 }
 ```
 
-<!-- uuid: 065e57af-7ddf-4aa2-bbde-3131ac183d69
-2015-10-15 16:17:32 UTC -->
+<!-- uuid: ce411c34-e80f-4ff8-bf7e-92ac37131676
+2015-10-15 16:49:29 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Group: RemoveFavorite",

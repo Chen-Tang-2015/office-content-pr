@@ -68,8 +68,8 @@ Content-length: 185
 }
 ```
 
-<!-- uuid: 9e538c35-d282-453c-8b6a-833ebe9e5214
-2015-10-15 16:17:32 UTC -->
+<!-- uuid: bbad5add-95d9-431b-8a29-b374bb8a6631
+2015-10-15 16:49:29 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of outlookitem object.",

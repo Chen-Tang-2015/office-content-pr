@@ -124,7 +124,7 @@
     },
     {
       "name": "DisplayName",
-      "description": "The contact's display name.",
+      "description": "The display name for the contact.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -138,7 +138,7 @@
     },
     {
       "name": "GivenName",
-      "description": "The contact's given name.",
+      "description": "The given name (first name) of the contact.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -194,7 +194,7 @@
     },
     {
       "name": "Surname",
-      "description": "The contact's surname.",
+      "description": "The contact's surname (family name or last name).",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -264,7 +264,7 @@
     },
     {
       "name": "JobTitle",
-      "description": "The contact's job title.",
+      "description": "The contact’s job title.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -292,7 +292,7 @@
     },
     {
       "name": "Department",
-      "description": "The contact's department.",
+      "description": "The name for the department in which the contact works.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -362,7 +362,7 @@
     },
     {
       "name": "Manager",
-      "description": "The name of the contact's manager.",
+      "description": "The user or contact that is this contact’s manager. Inherited from [DirectoryObject].            HTTP Methods: GET, PUT, DELETE",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,

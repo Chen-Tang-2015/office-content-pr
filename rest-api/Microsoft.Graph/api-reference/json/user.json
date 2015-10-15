@@ -55,7 +55,7 @@
   "properties": [
     {
       "name": "accountEnabled",
-      "description": "",
+      "description": "                **true** if the account is enabled; otherwise, **false**. This property is required when a user is created.            ",
       "isKey": false,
       "dataType": "Boolean",
       "isReadOnly": false,
@@ -69,7 +69,7 @@
     },
     {
       "name": "assignedLicenses",
-      "description": "",
+      "description": "The licenses that are assigned to the user.                            **Notes**: not nullable.            ",
       "isKey": false,
       "dataType": "AssignedLicense",
       "isReadOnly": false,
@@ -83,7 +83,7 @@
     },
     {
       "name": "assignedPlans",
-      "description": "",
+      "description": "The plans that are assigned to the user.                            **Notes**: not nullable.            ",
       "isKey": false,
       "dataType": "AssignedPlan",
       "isReadOnly": false,
@@ -97,7 +97,7 @@
     },
     {
       "name": "city",
-      "description": "",
+      "description": "The city in which the user is located.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -111,7 +111,7 @@
     },
     {
       "name": "country",
-      "description": "",
+      "description": "The country/region in which the user is located; for example, “US” or “UK”.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -125,7 +125,7 @@
     },
     {
       "name": "department",
-      "description": "",
+      "description": "The name for the department in which the user works.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -139,7 +139,7 @@
     },
     {
       "name": "dirSyncEnabled",
-      "description": "",
+      "description": "                **true** if this object is synced from an on-premises directory; **false** if this object was originally synced from an on-premises directory but is no longer synced; **null** if this object has never been synced from an on-premises directory (default).            ",
       "isKey": false,
       "dataType": "Boolean",
       "isReadOnly": false,
@@ -153,7 +153,7 @@
     },
     {
       "name": "displayName",
-      "description": "The user's display name.",
+      "description": "The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial and last name. This property is required when a user is created and it cannot be cleared during updates.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -167,7 +167,7 @@
     },
     {
       "name": "facsimileTelephoneNumber",
-      "description": "",
+      "description": "The telephone number of the user's business fax machine.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -181,7 +181,7 @@
     },
     {
       "name": "givenName",
-      "description": "",
+      "description": "The given name (first name) of the user.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -195,7 +195,7 @@
     },
     {
       "name": "immutableId",
-      "description": "",
+      "description": "This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user’s **userPrincipalName** (UPN) property.                            **Important:** The **$** and **_** characters cannot be used when specifying this property.                                        **Notes**: Requires version 2013-11-08 or newer.            ",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -209,7 +209,7 @@
     },
     {
       "name": "jobTitle",
-      "description": "",
+      "description": "The user’s job title.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -223,7 +223,7 @@
     },
     {
       "name": "lastDirSyncTime",
-      "description": "",
+      "description": "Indicates the last time at which the object was synced with the on-premises directory; for example: \"2013-02-16T03:04:54Z\" ",
       "isKey": false,
       "dataType": "DateTimeOffset",
       "isReadOnly": false,
@@ -237,7 +237,7 @@
     },
     {
       "name": "mail",
-      "description": "",
+      "description": "The SMTP address for the user, for example, \"jeff@contoso.onmicrosoft.com\".",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -251,7 +251,7 @@
     },
     {
       "name": "mailNickname",
-      "description": "",
+      "description": "The mail alias for the user. This property must be specified when a user is created.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -265,7 +265,7 @@
     },
     {
       "name": "mobile",
-      "description": "",
+      "description": "The primary cellular telephone number for the user.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -279,7 +279,7 @@
     },
     {
       "name": "onPremisesSecurityIdentifier",
-      "description": "",
+      "description": "Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud.                            **Notes**: Requires version 1.5 or newer.            ",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -293,7 +293,7 @@
     },
     {
       "name": "otherMails",
-      "description": "",
+      "description": "A list of additional email addresses for the user; for example: [\"bob@contoso.com\", \"Robert@fabrikam.com\"].                            **Notes**: not nullable, the **any** operator is required for filter expressions on multi-valued properties; for more information, see [Supported Queries, Filters, and Paging Options](https://msdn.microsoft.com/library/azure/dn727074.aspx).            ",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -307,7 +307,7 @@
     },
     {
       "name": "passwordPolicies",
-      "description": "",
+      "description": "Specifies password policies for the user. This value is an enumeration with one possible value being “DisableStrongPassword”, which allows weaker passwords than the default policy to be specified. “DisablePasswordExpiration” can also be specified. The two may be specified together; for example: \"DisablePasswordExpiration, DisableStrongPassword\".",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -321,7 +321,7 @@
     },
     {
       "name": "passwordProfile",
-      "description": "",
+      "description": "Specifies the password profile for the user. The profile contains the user’s password. This property is required when a user is created.            The password in the profile must satisfy minimum requirements as specified by the **passwordPolicies** property. By default, a strong password is required. For information about the constraints that must be satisfied for a strong password, see **Password policy** under [Change your password](http://onlinehelp.microsoft.com/office365-enterprises/ff637578.aspx) in the Microsoft Office 365 help pages. ",
       "isKey": false,
       "dataType": "PasswordProfile",
       "isReadOnly": false,
@@ -335,7 +335,7 @@
     },
     {
       "name": "physicalDeliveryOfficeName",
-      "description": "",
+      "description": "The office location in the user's place of business.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -349,7 +349,7 @@
     },
     {
       "name": "postalCode",
-      "description": "",
+      "description": "The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -363,7 +363,7 @@
     },
     {
       "name": "preferredLanguage",
-      "description": "",
+      "description": "The preferred language for the user. Should follow ISO 639-1 Code; for example \"en-US\".",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -377,7 +377,7 @@
     },
     {
       "name": "provisionedPlans",
-      "description": "",
+      "description": "The plans that are provisioned for the user.                            **Notes**: not nullable.            ",
       "isKey": false,
       "dataType": "ProvisionedPlan",
       "isReadOnly": false,
@@ -391,7 +391,7 @@
     },
     {
       "name": "provisioningErrors",
-      "description": "",
+      "description": "A collection of error details that are preventing this user from being provisioned successfully.",
       "isKey": false,
       "dataType": "ProvisioningError",
       "isReadOnly": false,
@@ -405,7 +405,7 @@
     },
     {
       "name": "proxyAddresses",
-      "description": "",
+      "description": "Fpr example: [\"SMTP: bob@contoso.com\", \"smtp: bob@sales.contoso.com\"]                            **Notes**: unique, not nullable, the **any** operator is required for filter expressions on multi-valued properties; for more information, see [Supported Queries, Filters, and Paging Options](https://msdn.microsoft.com/library/azure/dn727074.aspx).            ",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -419,7 +419,7 @@
     },
     {
       "name": "sipProxyAddress",
-      "description": "",
+      "description": "Specifies the voice over IP (VOIP) session initiation protocol (SIP) address for the user.                            **Notes**: Requires version 1.5 or newer.            ",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -433,7 +433,7 @@
     },
     {
       "name": "state",
-      "description": "",
+      "description": "The state or province in the user's address.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -447,7 +447,7 @@
     },
     {
       "name": "streetAddress",
-      "description": "",
+      "description": "The street address of the user's place of business.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -461,7 +461,7 @@
     },
     {
       "name": "surname",
-      "description": "",
+      "description": "The user's surname (family name or last name).                            **Notes**: filterable.            ",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -475,7 +475,7 @@
     },
     {
       "name": "telephoneNumber",
-      "description": "",
+      "description": "The primary telephone number of the user's place of business.",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -489,7 +489,7 @@
     },
     {
       "name": "thumbnailPhoto",
-      "description": "",
+      "description": "A thumbnail photo to be displayed for the user.                            **Notes**: not nullable.            ",
       "isKey": false,
       "dataType": "Stream",
       "isReadOnly": false,
@@ -503,7 +503,7 @@
     },
     {
       "name": "usageLocation",
-      "description": "",
+      "description": "A two letter country code (ISO standard 3166). Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries.  Examples include: \"US\", \"JP\", and \"GB\".                            **Notes**: not nullable.            ",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -517,7 +517,7 @@
     },
     {
       "name": "userPrincipalName",
-      "description": "",
+      "description": "The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created.             The verified domains for the tenant can be accessed from the **VerifiedDomains** property of [TenantDetail]. For example, for contoso.onmicosoft.com, tenant detail can be read by performing a GET to the following URL: https://graph.windows.net/contoso.onmicrosoft.com/tenantDetails?api-version=1.5.                            **Notes**: **key**, unique.            ",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -531,7 +531,7 @@
     },
     {
       "name": "userType",
-      "description": "",
+      "description": "A string value that can be used to classify user types in your directory, such as “Member” and “Guest”.                            **Notes**: Requires version 2013-11-08 or newer.            ",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -741,7 +741,7 @@
     },
     {
       "name": "objectType",
-      "description": "",
+      "description": "A string that identifies the object type. For users the value is always “User”. Inherited from [DirectoryObject].",
       "isKey": false,
       "dataType": "String",
       "isReadOnly": false,
@@ -755,7 +755,7 @@
     },
     {
       "name": "objectId",
-      "description": "",
+      "description": "The unique identifier for the user. Inherited from [DirectoryObject].                            **Notes**: **key**, immutable, not nullable, unique.            ",
       "isKey": true,
       "dataType": "String",
       "isReadOnly": true,
@@ -769,7 +769,7 @@
     },
     {
       "name": "deletionTimestamp",
-      "description": "",
+      "description": "This property is not valid for users and always returns **null**. Inherited from [DirectoryObject].                            **Notes**: Requires version 1.5 or newer.            ",
       "isKey": false,
       "dataType": "DateTimeOffset",
       "isReadOnly": false,
@@ -783,7 +783,7 @@
     },
     {
       "name": "appRoleAssignments",
-      "description": "",
+      "description": "The set of applications that this user is assigned to. Requires version 1.5 or newer.            HTTP Methods:  GET, POST, DELETE",
       "isKey": false,
       "dataType": "AppRoleAssignment",
       "isReadOnly": true,
@@ -797,7 +797,7 @@
     },
     {
       "name": "oauth2PermissionGrants",
-      "description": "",
+      "description": "The set of applications that are granted consent to impersonate this user. Requires version 1.5 or newer.            HTTP Methods:  GET, POST, DELETE",
       "isKey": false,
       "dataType": "OAuth2PermissionGrant",
       "isReadOnly": true,
@@ -811,7 +811,7 @@
     },
     {
       "name": "ownedDevices",
-      "description": "",
+      "description": "Devices that are owned by the user.",
       "isKey": false,
       "dataType": "DirectoryObject",
       "isReadOnly": true,
@@ -825,7 +825,7 @@
     },
     {
       "name": "registeredDevices",
-      "description": "",
+      "description": "Devices that are registered for the user.",
       "isKey": false,
       "dataType": "DirectoryObject",
       "isReadOnly": true,
@@ -839,7 +839,7 @@
     },
     {
       "name": "manager",
-      "description": "",
+      "description": "The user or contact that is this user’s manager. Inherited from [DirectoryObject].            HTTP Methods: GET, PUT, DELETE",
       "isKey": false,
       "dataType": "DirectoryObject",
       "isReadOnly": true,
@@ -853,7 +853,7 @@
     },
     {
       "name": "directReports",
-      "description": "",
+      "description": "The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Inherited from [DirectoryObject].            HTTP Methods: GET",
       "isKey": false,
       "dataType": "DirectoryObject",
       "isReadOnly": true,
@@ -867,7 +867,7 @@
     },
     {
       "name": "memberOf",
-      "description": "",
+      "description": "The groups and directory roles that the user is a member of. Inherited from [DirectoryObject].            HTTP Methods: GET",
       "isKey": false,
       "dataType": "DirectoryObject",
       "isReadOnly": true,
@@ -881,7 +881,7 @@
     },
     {
       "name": "createdObjects",
-      "description": "",
+      "description": "Directory objects that were created by the user. Requires version 2013-11-08 or newer.",
       "isKey": false,
       "dataType": "DirectoryObject",
       "isReadOnly": true,
@@ -895,7 +895,7 @@
     },
     {
       "name": "ownedObjects",
-      "description": "",
+      "description": "Directory objects that are owned by the user. Requires version 2013-11-08 or newer.",
       "isKey": false,
       "dataType": "DirectoryObject",
       "isReadOnly": true,

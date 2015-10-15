@@ -27,8 +27,8 @@ Here is a JSON representation of the resource
 |Content|String|The text or HTML content.|
 |ContentType|String|The content type: Text = 0, HTML = 1. Possible values are: `Text`, `HTML`.|
 
-<!-- uuid: 96957c3c-6927-4221-aba4-6903f44d50be
-2015-10-15 16:17:32 UTC -->
+<!-- uuid: 08859e21-acc5-4bed-93d6-47edf8d1005a
+2015-10-15 16:49:29 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "ItemBody resource",
