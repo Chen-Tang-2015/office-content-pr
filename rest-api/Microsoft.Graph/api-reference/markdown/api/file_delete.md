@@ -1,7 +1,10 @@
 # Delete
 
 Delete File.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 DELETE /users/<objectId>/TrendingAround
 DELETE /drive/root/createdByUser/TrendingAround
@@ -11,7 +14,7 @@ DELETE /drive/root/lastModifiedByUser/TrendingAround
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 Do not supply a request body for this method.
@@ -21,5 +24,12 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: 680e799b-9da2-4160-8c81-0bacb4f4375b
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 390145a9-d9a2-49ea-b996-7b884317e2ef
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Delete",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

@@ -1,7 +1,10 @@
-# Update UserDetails
+# Update the properties of userdetails object.
 
 Update the properties of userdetails object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 PATCH /users/<objectId>/details
 PATCH /groups/<objectId>/details
@@ -10,7 +13,7 @@ PATCH /drive/root/createdByUser/details
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -25,6 +28,10 @@ If successful, this method returns a `200 OK` response code and updated [UserDet
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_userdetails"
+}-->
 ```http
 PUT /users/<objectId>/details
 Content-type: application/json
@@ -37,6 +44,11 @@ Content-length: 73
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "userdetails"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
@@ -50,5 +62,12 @@ Content-length: 73
 }
 ```
 
-<!-- uuid: 11971c78-f7a1-40e9-92ea-0785ee1bdad9
-2015-10-12 23:35:03 UTC -->
+<!-- uuid: f5f4dc14-2732-4025-8e6d-ba9ebacc47b3
+2015-10-15 16:17:34 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of userdetails object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

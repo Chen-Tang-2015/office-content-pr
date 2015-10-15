@@ -1,7 +1,10 @@
 # Create Page
 
 Use this API to create a new Page.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/notes/sections/<id>/pages
 POST /drive/root/createdByUser/notes/sections/<id>/pages
@@ -11,7 +14,7 @@ POST /users/<objectId>/notes/pages/<id>/parentSection/pages
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply a JSON representation of [Page](../resources/page.md) object.
@@ -21,16 +24,38 @@ In the request body, supply a JSON representation of [Page](../resources/page.md
 If successful, this method returns `201, Created` response code and [Page](../resources/page.md) object in the response body.
 
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "create_page_from_section"
+}-->
+```http
+POST /users/<objectId>/notes/sections/<id>/
+Content-type: application/json
+```
+In the request body, supply a JSON representation of [Page](../resources/page.md) object.
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "page"
+} -->
 ```json
 HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 275
+Content-length: 391
 {
   "title": "title-value",
   "createdByAppId": "createdByAppId-value",
   "links": {
+    "oneNoteClientUrl": {
+      "href": "href-value"
+    },
+    "oneNoteWebUrl": {
+      "href": "href-value"
+    }
   },
   "contentUrl": "contentUrl-value",
   "content": "content-value",
@@ -41,5 +66,12 @@ Content-length: 275
 }
 ```
 
-<!-- uuid: 5582d262-d032-43b9-bfb4-4d2c27ab3720
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 122b4ce0-cead-4e6f-8bd6-ffb496346ccb
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Create Page",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

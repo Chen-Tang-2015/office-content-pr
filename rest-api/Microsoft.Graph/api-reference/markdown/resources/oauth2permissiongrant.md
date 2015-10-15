@@ -6,6 +6,14 @@ Represents the OAuth 2.0 delegated permission scopes that have been granted to a
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.OAuth2PermissionGrant"
+}-->
+
 ```json
 {
   "clientId": "String",
@@ -43,5 +51,12 @@ None
 |[Update](../api/oauth2permissiongrant_update.md) | [OAuth2PermissionGrant](oauth2permissiongrant.md)	|Update OAuth2PermissionGrant object. |
 |[Delete](../api/oauth2permissiongrant_delete.md) | Void	|Delete OAuth2PermissionGrant object. |
 
-<!-- uuid: 958e05e9-f110-4849-b4cb-3b6d8b584e22
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 5bf7e720-3587-471c-b57b-8a6ec5825d81
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "OAuth2PermissionGrant resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

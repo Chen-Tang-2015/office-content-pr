@@ -1,7 +1,10 @@
 # Message: Forward
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/Messages/<Id>/Forward
 POST /drive/root/createdByUser/Messages/<Id>/Forward
@@ -11,7 +14,7 @@ POST /users/<objectId>/RootFolder/Messages/<Id>/Forward
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -27,17 +30,30 @@ If successful, this method returns `200, OK` response code and [None](../resourc
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "message_forward"
+}-->
 ```http
 POST /users/<objectId>/Messages/<Id>/Forward
 Content-type: application/json
-Content-length: 69
+Content-length: 166
 {
   "Comment": "Comment-value",
   "ToRecipients": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
     }
   ]
 }
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "none"
+} -->
 ```
 ##### Response
 ```json
@@ -48,5 +64,12 @@ Content-length: 3
 }
 ```
 
-<!-- uuid: 785f475d-a9f3-4134-9cad-bc6782aad118
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: a2227284-79bd-4791-bfdb-e0b325ea430b
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Message: Forward",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

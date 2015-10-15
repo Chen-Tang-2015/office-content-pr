@@ -1,7 +1,10 @@
 # MailFolder: Copy
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/RootFolder/Copy
 POST /users/<objectId>/Folders/<Id>/Copy
@@ -11,7 +14,7 @@ POST /drive/root/createdByUser/RootFolder/Copy
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -26,6 +29,10 @@ If successful, this method returns `200, OK` response code and [MailFolder](../r
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "mailfolder_copy"
+}-->
 ```http
 POST /users/<objectId>/RootFolder/Copy
 Content-type: application/json
@@ -33,6 +40,11 @@ Content-length: 44
 {
   "DestinationId": "DestinationId-value"
 }
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "mailfolder"
+} -->
 ```
 ##### Response
 ```json
@@ -47,5 +59,12 @@ Content-length: 130
 }
 ```
 
-<!-- uuid: 9a820620-5134-41e4-8c19-4e90af908157
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 6ea5fa86-d9bc-4b12-b359-75fa4de9b2bf
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "MailFolder: Copy",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

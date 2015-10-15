@@ -1,7 +1,10 @@
 # PrivilegedRole: SelfActivate
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /PrivilegedRoles/<Id>/SelfActivate
 POST /PrivilegedRoleAssignments/<UserId|RoleId>/RoleInfo/SelfActivate
@@ -10,7 +13,7 @@ POST /PrivilegedRoleAssignments/<UserId|RoleId>/RoleInfo/SelfActivate
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -28,6 +31,10 @@ If successful, this method returns `200, OK` response code and [PrivilegedRoleAs
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "privilegedrole_selfactivate"
+}-->
 ```http
 POST /PrivilegedRoles/<Id>/SelfActivate
 Content-type: application/json
@@ -38,6 +45,11 @@ Content-length: 142
   "TicketNumber": "TicketNumber-value",
   "TicketSystem": "TicketSystem-value"
 }
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "privilegedroleassignment"
+} -->
 ```
 ##### Response
 ```json
@@ -53,5 +65,12 @@ Content-length: 160
 }
 ```
 
-<!-- uuid: c041c2b3-7f56-4193-aa5d-e3fe5d81fa3d
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 67830976-d7ab-4b79-b3df-3274336e22d6
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "PrivilegedRole: SelfActivate",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "Assignments"
+  ],
+  "@odata.type": "microsoft.graph.PrivilegedRole"
+}-->
+
 ```json
 {
   "Assignments": [
@@ -48,5 +56,12 @@ Here is a JSON representation of the resource
 |[Selfactivate](../api/privilegedrole_selfactivate.md)|[PrivilegedRoleAssignment](privilegedroleassignment.md)||
 |[Selfdeactivate](../api/privilegedrole_selfdeactivate.md)|[PrivilegedRoleAssignment](privilegedroleassignment.md)||
 
-<!-- uuid: b3b7e093-af0d-4fbf-b7cc-1e6fae52b3d3
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: bc8ffdf9-e2d4-4283-8fdf-82b8213e60fa
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "PrivilegedRole resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

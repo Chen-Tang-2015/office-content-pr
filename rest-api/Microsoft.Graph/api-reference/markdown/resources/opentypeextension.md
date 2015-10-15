@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "Extensions"
+  ],
+  "@odata.type": "microsoft.graph.OpenTypeExtension"
+}-->
+
 ```json
 {
   "ExtensionName": "String",
@@ -38,5 +46,12 @@ Here is a JSON representation of the resource
 |[Update](../api/opentypeextension_update.md) | [OpenTypeExtension](opentypeextension.md)	|Update OpenTypeExtension object. |
 |[Delete](../api/opentypeextension_delete.md) | Void	|Delete OpenTypeExtension object. |
 
-<!-- uuid: 5bb4d920-cede-4842-945f-7c17f3027249
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: a1c8dea8-4111-4217-8436-d24130bdb2ce
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "OpenTypeExtension resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

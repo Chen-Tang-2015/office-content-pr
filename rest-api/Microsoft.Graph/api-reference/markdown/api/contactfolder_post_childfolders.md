@@ -1,7 +1,10 @@
 # Create ContactFolder
 
 Use this API to create a new ContactFolder.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/ContactFolders/<Id>/ChildFolders
 POST /drive/root/createdByUser/ContactFolders/<Id>/ChildFolders
@@ -11,7 +14,7 @@ POST /drive/root/lastModifiedByUser/ContactFolders/<Id>/ChildFolders
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply a JSON representation of [ContactFolder](../resources/contactfolder.md) object.
@@ -21,8 +24,24 @@ In the request body, supply a JSON representation of [ContactFolder](../resource
 If successful, this method returns `201, Created` response code and [ContactFolder](../resources/contactfolder.md) object in the response body.
 
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "create_contactfolder_from_contactfolder"
+}-->
+```http
+POST /users/<objectId>/ContactFolders/<Id>/
+Content-type: application/json
+```
+In the request body, supply a JSON representation of [ContactFolder](../resources/contactfolder.md) object.
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "contactfolder"
+} -->
 ```json
 HTTP/1.1 201 Created
 Content-type: application/json
@@ -34,5 +53,12 @@ Content-length: 104
 }
 ```
 
-<!-- uuid: 11c0a593-f1d1-4484-8770-b559395b409c
-2015-10-12 23:35:00 UTC -->
+<!-- uuid: 1d427cd5-a49f-4fd9-b478-39b58f3fd70b
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Create ContactFolder",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

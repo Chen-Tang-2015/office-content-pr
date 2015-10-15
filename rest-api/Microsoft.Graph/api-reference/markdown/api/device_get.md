@@ -1,16 +1,19 @@
 # Get Device
 
 Retrieve the properties and relationships of device object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 GET /devices/<objectId>
 ```
 ### Optional query parameters
-You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
+
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 Do not supply a request body for this method.
@@ -19,14 +22,22 @@ If successful, this method returns a `200 OK` response code and [Device](../reso
 ### Example
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "device"
+} -->
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 637
+Content-length: 732
 {
   "accountEnabled": true,
   "alternativeSecurityIds": [
     {
+      "type": 99,
+      "identityProvider": "identityProvider-value",
+      "key": "key-value"
     }
   ],
   "approximateLastLogonTimestamp": "datetime-value",
@@ -47,6 +58,14 @@ Content-length: 637
   "deletionTimestamp": "datetime-value"
 }
 ```
+If successful, this method returns a `200 OK` response code and [Device](../resources/device.md) object in the response body.
 
-<!-- uuid: bc0055e4-2a44-4ba2-a601-d064f4915265
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 929930f4-e23f-4145-bac7-e83fbda8fd91
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Get Device",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

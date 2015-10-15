@@ -6,6 +6,14 @@ Specifies a domain for a tenant. The **verifiedDomains** property of the [Tenant
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.VerifiedDomain"
+}-->
+
 ```json
 {
   "capabilities": "String",
@@ -27,5 +35,12 @@ Here is a JSON representation of the resource
 |name|String|The domain name; for example, ΓÇ£contoso.onmicrosoft.comΓÇ¥|
 |type|String|For example, ΓÇ£ManagedΓÇ¥.|
 
-<!-- uuid: 1f41062f-1126-4b00-8bca-869b0e6d108d
-2015-10-12 23:35:03 UTC -->
+<!-- uuid: 07ee3cb1-0cd4-4b4d-a477-b9d99b6f9982
+2015-10-15 16:17:34 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "VerifiedDomain resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

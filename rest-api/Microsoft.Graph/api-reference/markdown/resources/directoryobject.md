@@ -6,6 +6,14 @@ Represents an Azure Active Directory object. The **DirectoryObject** type is the
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "Extensions"
+  ],
+  "@odata.type": "microsoft.graph.DirectoryObject"
+}-->
+
 ```json
 {
   "Extensions": [
@@ -43,5 +51,12 @@ Here is a JSON representation of the resource
 |[Get MemberGroups](../api/directoryobject_getmembergroups.md)|String||
 |[Get MemberObjects](../api/directoryobject_getmemberobjects.md)|String||
 
-<!-- uuid: 40b3689d-af9d-47b0-b673-c76c542dd098
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 343b9622-8edf-4f6f-95f1-058c3a5652c5
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "DirectoryObject resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

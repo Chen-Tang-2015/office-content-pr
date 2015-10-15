@@ -6,6 +6,14 @@ A message or event that's attached to another message or event.
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "Extensions"
+  ],
+  "@odata.type": "microsoft.graph.ItemAttachment"
+}-->
+
 ```json
 {
   "ContentType": "String",
@@ -50,5 +58,12 @@ Here is a JSON representation of the resource
 |[Update](../api/itemattachment_update.md) | [ItemAttachment](itemattachment.md)	|Update ItemAttachment object. |
 |[Delete](../api/itemattachment_delete.md) | Void	|Delete ItemAttachment object. |
 
-<!-- uuid: a6d405f6-9197-4eb2-b3ae-ad84d14cfb55
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: b7ff542a-7af6-4821-8528-96830301947d
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "ItemAttachment resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

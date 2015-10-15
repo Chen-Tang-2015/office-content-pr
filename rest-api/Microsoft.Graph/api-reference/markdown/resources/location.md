@@ -6,6 +6,14 @@ The location of an event.
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.location"
+}-->
+
 ```json
 {
   "altitude": 1024,
@@ -21,5 +29,12 @@ Here is a JSON representation of the resource
 |latitude|Double||
 |longitude|Double||
 
-<!-- uuid: 53d1bedd-86c7-4d0c-a17b-a58c8cb9a57e
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: a2759503-dadf-4616-baae-cb711139e1d9
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "location resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

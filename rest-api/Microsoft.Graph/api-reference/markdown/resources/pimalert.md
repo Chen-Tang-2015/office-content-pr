@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.PimAlert"
+}-->
+
 ```json
 {
   "AdditionalData": "String",
@@ -62,5 +70,12 @@ None
 |[Fix](../api/pimalert_fix.md)|[PimAlert](pimalert.md)||
 |[Reactivate](../api/pimalert_reactivate.md)|[PimAlert](pimalert.md)||
 
-<!-- uuid: 6cc56563-e798-4ddd-8947-b235f8592c83
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 8e17f36e-fa7b-4d5e-8283-f33f99ec1de5
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "PimAlert resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

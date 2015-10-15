@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.Site"
+}-->
+
 ```json
 {
   "id": "String (identifier)",
@@ -32,5 +40,12 @@ Here is a JSON representation of the resource
 |[Get Site](../api/site_get.md) | [Site](site.md) |Read properties and relationships of site object.|
 |[Delete](../api/site_delete.md) | Void	|Delete Site object. |
 
-<!-- uuid: 3a3a6bde-140a-4651-953a-1abb54843dc1
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 06b1524e-7cb9-4f68-815a-98fb8129c80a
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Site resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

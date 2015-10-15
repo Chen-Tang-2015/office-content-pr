@@ -6,6 +6,17 @@ The Item resource type represents metadata for an item in OneDrive. All top-lev
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "children",
+    "permissions",
+    "thumbnails",
+    "versions"
+  ],
+  "@odata.type": "microsoft.graph.item"
+}-->
+
 ```json
 {
   "audio": {
@@ -156,5 +167,12 @@ Here is a JSON representation of the resource
 |[Invite](../api/item_invite.md)|[permission](permission.md)||
 |[Search](../api/item_search.md)|[item](item.md)||
 
-<!-- uuid: 68107ae4-bf57-4048-9689-f6ac7a521a9d
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 9eace414-9398-4dbe-91d8-7741e6f7c086
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "item resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

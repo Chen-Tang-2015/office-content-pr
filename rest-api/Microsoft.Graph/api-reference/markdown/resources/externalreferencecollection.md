@@ -5,5 +5,12 @@
 ### Properties
 None
 
-<!-- uuid: ab8ddf4f-583e-4958-a414-d7cc72dda6b2
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 2e3c0d9e-0f4e-4605-88a1-a4a798c74428
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "ExternalReferenceCollection resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

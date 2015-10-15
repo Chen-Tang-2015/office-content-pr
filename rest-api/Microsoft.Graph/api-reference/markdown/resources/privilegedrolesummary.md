@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.PrivilegedRoleSummary"
+}-->
+
 ```json
 {
   "ElevatedCount": 1024,
@@ -39,5 +47,12 @@ None
 |[Update](../api/privilegedrolesummary_update.md) | [PrivilegedRoleSummary](privilegedrolesummary.md)	|Update PrivilegedRoleSummary object. |
 |[Delete](../api/privilegedrolesummary_delete.md) | Void	|Delete PrivilegedRoleSummary object. |
 
-<!-- uuid: b09fa2ee-bf4f-406c-994e-870a45e0716a
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 8594c77e-66d6-40ab-864e-53e4601a15ec
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "PrivilegedRoleSummary resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

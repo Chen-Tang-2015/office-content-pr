@@ -6,6 +6,14 @@ The ThumbnailSet type is a keyed collection of [Thumbnail](thumbnail.md) objects
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.thumbnailSet"
+}-->
+
 ```json
 {
   "id": "String (identifier)",
@@ -45,5 +53,12 @@ None
 |[Update](../api/thumbnailset_update.md) | [thumbnailSet](thumbnailset.md)	|Update thumbnailSet object. |
 |[Delete](../api/thumbnailset_delete.md) | Void	|Delete thumbnailSet object. |
 
-<!-- uuid: b972c6cf-9310-440a-a68d-47fa9694c154
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 4742c861-967e-4037-a135-eee9a8d478c9
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "thumbnailSet resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

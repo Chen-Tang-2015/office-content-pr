@@ -1,7 +1,10 @@
 # Create memberOf
 
 Use this API to create a new memberOf.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /contacts/<objectId>/memberOf
 
@@ -9,7 +12,7 @@ POST /contacts/<objectId>/memberOf
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
@@ -19,8 +22,24 @@ In the request body, supply a JSON representation of [DirectoryObject](../resour
 If successful, this method returns `201, Created` response code and [DirectoryObject](../resources/directoryobject.md) object in the response body.
 
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "create_directoryobject_from_orgcontact"
+}-->
+```http
+POST /contacts/<objectId>/
+Content-type: application/json
+```
+In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "directoryobject"
+} -->
 ```json
 HTTP/1.1 201 Created
 Content-type: application/json
@@ -32,5 +51,12 @@ Content-length: 111
 }
 ```
 
-<!-- uuid: 8f1a113d-162b-467a-9377-ffdcf1772471
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 0de30bf9-c07c-4b62-ac07-d4af9a004bc7
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Create memberOf",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

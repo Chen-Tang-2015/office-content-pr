@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.audio"
+}-->
+
 ```json
 {
   "album": "String",
@@ -47,5 +55,12 @@ Here is a JSON representation of the resource
 |trackCount|Int32||
 |year|Int32||
 
-<!-- uuid: e7a47ab3-0583-4891-9192-b3fe1779287f
-2015-10-12 23:35:00 UTC -->
+<!-- uuid: a4563bf1-7206-4b80-b33a-769a2cfa48de
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "audio resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

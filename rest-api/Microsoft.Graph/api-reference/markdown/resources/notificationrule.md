@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.NotificationRule"
+}-->
+
 ```json
 {
   "Event": "String",
@@ -44,5 +52,12 @@ None
 |[Delete](../api/notificationrule_delete.md) | Void	|Delete NotificationRule object. |
 |[Eventtypes](../api/notificationrule_eventtypes.md)|String||
 
-<!-- uuid: 52c1c6d6-33d0-48a7-80bb-5673b46d6645
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: cc376c85-f98a-430a-9b9a-dc5618c01528
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "NotificationRule resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

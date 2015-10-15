@@ -6,6 +6,16 @@ Represents an application. Any application that outsources authentication to Azu
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "Extensions",
+    "extensionProperties",
+    "owners"
+  ],
+  "@odata.type": "microsoft.graph.Application"
+}-->
+
 ```json
 {
   "Extensions": [
@@ -130,5 +140,12 @@ Here is a JSON representation of the resource
 |[Get MemberObjects](../api/application_getmemberobjects.md)|String||
 |[Restore](../api/application_restore.md)|[Application](application.md)||
 
-<!-- uuid: f1e27e8f-3dea-4ff1-9099-e7e1672e8484
-2015-10-12 23:35:00 UTC -->
+<!-- uuid: dcdb1ac5-478a-491e-980e-e7195928229e
+2015-10-15 16:17:30 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Application resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

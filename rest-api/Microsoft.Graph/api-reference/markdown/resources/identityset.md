@@ -6,6 +6,14 @@ The IdentitySet type is a keyed collection of [Identity](identity.md) objects. 
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.identitySet"
+}-->
+
 ```json
 {
   "application": {
@@ -27,5 +35,12 @@ Here is a JSON representation of the resource
 |device|[identity](identity.md)|An Identity resource that represents the device.|
 |user|[identity](identity.md)|An Identity resource that represents a user.|
 
-<!-- uuid: 0eb0abd3-3187-41b1-ba10-b04271f8ddd5
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: c5347415-b4bb-4a03-b1b9-6407ba2f31b6
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "identitySet resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.TaskBoardTaskFormat"
+}-->
+
 ```json
 {
   "id": "String (identifier)",
@@ -35,5 +43,12 @@ None
 |[Update](../api/taskboardtaskformat_update.md) | [TaskBoardTaskFormat](taskboardtaskformat.md)	|Update TaskBoardTaskFormat object. |
 |[Delete](../api/taskboardtaskformat_delete.md) | Void	|Delete TaskBoardTaskFormat object. |
 
-<!-- uuid: beb94322-8b3e-42ab-9baf-2857f8b0b929
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 71953c37-36f8-450f-8896-d932d4ccda31
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "TaskBoardTaskFormat resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

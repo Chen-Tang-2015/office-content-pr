@@ -1,7 +1,10 @@
 # PrivilegedSignupStatus: CompleteSetup
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /PrivilegedSignupStatus/<TenantId>/CompleteSetup
 
@@ -9,7 +12,7 @@ POST /PrivilegedSignupStatus/<TenantId>/CompleteSetup
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 
@@ -19,10 +22,19 @@ If successful, this method returns `200, OK` response code and [None](../resourc
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "privilegedsignupstatus_completesetup"
+}-->
 ```http
 POST /PrivilegedSignupStatus/<TenantId>/CompleteSetup
 Content-type: application/json
 Content-length: 0
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "none"
+} -->
 ```
 ##### Response
 ```json
@@ -33,5 +45,12 @@ Content-length: 3
 }
 ```
 
-<!-- uuid: 92d9c7c4-4047-4499-8b66-bfb226455578
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: ea2e335f-e11d-444a-999e-9579a8ec4dc2
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "PrivilegedSignupStatus: CompleteSetup",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

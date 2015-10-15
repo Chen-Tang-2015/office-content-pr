@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.shared"
+}-->
+
 ```json
 {
   "owner": {
@@ -21,5 +29,12 @@ Here is a JSON representation of the resource
 |owner|[identitySet](identityset.md)||
 |scope|String||
 
-<!-- uuid: e8a8d5fe-625b-4800-b759-7c1143362bd4
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 764e3829-589f-4604-8e2f-b33817c60478
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "shared resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

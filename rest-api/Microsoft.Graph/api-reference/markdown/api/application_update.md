@@ -1,14 +1,17 @@
-# Update Application
+# Update the properties of application object.
 
 Update the properties of application object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 PATCH /applications/<objectId>
 ```
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -44,14 +47,24 @@ If successful, this method returns a `200 OK` response code and updated [Applica
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_application"
+}-->
 ```http
 PUT /applications/<objectId>
 Content-type: application/json
-Content-length: 953
+Content-length: 2108
 {
   "appId": "appId-value",
   "appRoles": [
     {
+      "allowedMemberTypes": "allowedMemberTypes-value",
+      "description": "description-value",
+      "displayName": "displayName-value",
+      "id": "id-value",
+      "isEnabled": true,
+      "value": "value-value"
     }
   ],
   "availableToOtherTenants": true,
@@ -64,6 +77,13 @@ Content-length: 953
   ],
   "keyCredentials": [
     {
+      "customKeyIdentifier": "customKeyIdentifier-value",
+      "endDate": "datetime-value",
+      "keyId": "keyId-value",
+      "startDate": "datetime-value",
+      "type": "type-value",
+      "usage": "usage-value",
+      "value": "value-value"
     }
   ],
   "knownClientApplications": [
@@ -75,11 +95,24 @@ Content-length: 953
   "oauth2AllowUrlPathMatching": true,
   "oauth2Permissions": [
     {
+      "adminConsentDescription": "adminConsentDescription-value",
+      "adminConsentDisplayName": "adminConsentDisplayName-value",
+      "id": "id-value",
+      "isEnabled": true,
+      "type": "type-value",
+      "userConsentDescription": "userConsentDescription-value",
+      "userConsentDisplayName": "userConsentDisplayName-value",
+      "value": "value-value"
     }
   ],
   "oauth2RequirePostResponse": true,
   "passwordCredentials": [
     {
+      "customKeyIdentifier": "customKeyIdentifier-value",
+      "endDate": "datetime-value",
+      "keyId": "keyId-value",
+      "startDate": "datetime-value",
+      "value": "value-value"
     }
   ],
   "publicClient": true,
@@ -88,6 +121,11 @@ Content-length: 953
   ],
   "requiredResourceAccess": [
     {
+      "resourceAppId": "resourceAppId-value",
+      "resourceAccess": {
+        "id": "id-value",
+        "type": "type-value"
+      }
     }
   ],
   "samlMetadataUrl": "samlMetadataUrl-value",
@@ -97,15 +135,26 @@ Content-length: 953
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "application"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 953
+Content-length: 2108
 {
   "appId": "appId-value",
   "appRoles": [
     {
+      "allowedMemberTypes": "allowedMemberTypes-value",
+      "description": "description-value",
+      "displayName": "displayName-value",
+      "id": "id-value",
+      "isEnabled": true,
+      "value": "value-value"
     }
   ],
   "availableToOtherTenants": true,
@@ -118,6 +167,13 @@ Content-length: 953
   ],
   "keyCredentials": [
     {
+      "customKeyIdentifier": "customKeyIdentifier-value",
+      "endDate": "datetime-value",
+      "keyId": "keyId-value",
+      "startDate": "datetime-value",
+      "type": "type-value",
+      "usage": "usage-value",
+      "value": "value-value"
     }
   ],
   "knownClientApplications": [
@@ -129,11 +185,24 @@ Content-length: 953
   "oauth2AllowUrlPathMatching": true,
   "oauth2Permissions": [
     {
+      "adminConsentDescription": "adminConsentDescription-value",
+      "adminConsentDisplayName": "adminConsentDisplayName-value",
+      "id": "id-value",
+      "isEnabled": true,
+      "type": "type-value",
+      "userConsentDescription": "userConsentDescription-value",
+      "userConsentDisplayName": "userConsentDisplayName-value",
+      "value": "value-value"
     }
   ],
   "oauth2RequirePostResponse": true,
   "passwordCredentials": [
     {
+      "customKeyIdentifier": "customKeyIdentifier-value",
+      "endDate": "datetime-value",
+      "keyId": "keyId-value",
+      "startDate": "datetime-value",
+      "value": "value-value"
     }
   ],
   "publicClient": true,
@@ -142,6 +211,11 @@ Content-length: 953
   ],
   "requiredResourceAccess": [
     {
+      "resourceAppId": "resourceAppId-value",
+      "resourceAccess": {
+        "id": "id-value",
+        "type": "type-value"
+      }
     }
   ],
   "samlMetadataUrl": "samlMetadataUrl-value",
@@ -151,5 +225,12 @@ Content-length: 953
 }
 ```
 
-<!-- uuid: b38c69e0-2344-431d-a6fe-5e27ba6b95bb
-2015-10-12 23:35:00 UTC -->
+<!-- uuid: dc2a8392-bb91-4586-8d14-25563524ce0a
+2015-10-15 16:17:30 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of application object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

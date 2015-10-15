@@ -1,7 +1,10 @@
 # Delete
 
 Delete Message.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 DELETE /users/<objectId>/Messages/<Id>
 DELETE /drive/root/createdByUser/Messages/<Id>
@@ -11,7 +14,7 @@ DELETE /users/<objectId>/RootFolder/Messages/<Id>
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 Do not supply a request body for this method.
@@ -21,5 +24,12 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: b6d192b7-7fa3-4774-9ad2-f18a87bfd017
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: e46c1cdd-5836-4703-89d8-ab5b9a9b85ee
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Delete",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

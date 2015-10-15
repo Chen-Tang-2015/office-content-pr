@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "Extensions"
+  ],
+  "@odata.type": "microsoft.graph.OutlookItem"
+}-->
+
 ```json
 {
   "Categories": [
@@ -46,5 +54,12 @@ Here is a JSON representation of the resource
 |[Update](../api/outlookitem_update.md) | [OutlookItem](outlookitem.md)	|Update OutlookItem object. |
 |[Delete](../api/outlookitem_delete.md) | Void	|Delete OutlookItem object. |
 
-<!-- uuid: 62873fa8-a4fa-4a89-be6d-bf1bf2cc0de7
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 62cc2b5a-a8d9-44d7-a86b-9c38db7172ad
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "OutlookItem resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

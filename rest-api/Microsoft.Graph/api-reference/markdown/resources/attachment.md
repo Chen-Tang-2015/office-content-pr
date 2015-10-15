@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "Extensions"
+  ],
+  "@odata.type": "microsoft.graph.Attachment"
+}-->
+
 ```json
 {
   "ContentType": "String",
@@ -46,5 +54,12 @@ Here is a JSON representation of the resource
 |[Update](../api/attachment_update.md) | [Attachment](attachment.md)	|Update Attachment object. |
 |[Delete](../api/attachment_delete.md) | Void	|Delete Attachment object. |
 
-<!-- uuid: 34873ae5-9523-4d35-82b0-29b81d8d53e0
-2015-10-12 23:35:00 UTC -->
+<!-- uuid: 7f131c4d-a935-4617-abc7-bf4f0014bf3f
+2015-10-15 16:17:30 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Attachment resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

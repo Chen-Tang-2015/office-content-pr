@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.uploadSession"
+}-->
+
 ```json
 {
   "expirationDateTime": "String (timestamp)",
@@ -23,5 +31,12 @@ Here is a JSON representation of the resource
 |nextExpectedRanges|String collection||
 |uploadUrl|String||
 
-<!-- uuid: 16802ccd-2285-4fa7-b51a-074d875cbdde
-2015-10-12 23:35:03 UTC -->
+<!-- uuid: 2ec17d17-26d9-48c5-9489-b6484eb234b7
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "uploadSession resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

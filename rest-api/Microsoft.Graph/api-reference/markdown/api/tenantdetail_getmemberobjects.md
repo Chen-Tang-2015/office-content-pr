@@ -1,7 +1,10 @@
 # TenantDetail: getMemberObjects
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /tenantDetails/<objectId>/getMemberObjects
 
@@ -9,7 +12,7 @@ POST /tenantDetails/<objectId>/getMemberObjects
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -24,6 +27,10 @@ If successful, this method returns `200, OK` response code and String collection
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "tenantdetail_getmemberobjects"
+}-->
 ```http
 POST /tenantDetails/<objectId>/getMemberObjects
 Content-type: application/json
@@ -31,6 +38,11 @@ Content-length: 33
 {
   "securityEnabledOnly": true
 }
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "string"
+} -->
 ```
 ##### Response
 ```json
@@ -44,5 +56,12 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: 5880b3bd-a5d6-4c91-bb51-fbd08bfda37b
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 9e41f8b1-61ee-470c-bc18-40821c91e3ab
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "TenantDetail: getMemberObjects",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

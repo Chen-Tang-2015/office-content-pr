@@ -1,7 +1,10 @@
-# Update ConversationThread
+# Update the properties of conversationthread object.
 
 Update the properties of conversationthread object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 PATCH /groups/<objectId>/Threads/<Id>
 PATCH /groups/<objectId>/Conversations/<Id>/Threads/<Id>
@@ -10,7 +13,7 @@ PATCH /users/<objectId>/JoinedGroups/<objectId>/Threads/<Id>
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -31,13 +34,21 @@ If successful, this method returns a `200 OK` response code and updated [Convers
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_conversationthread"
+}-->
 ```http
 PUT /groups/<objectId>/Threads/<Id>
 Content-type: application/json
-Content-length: 295
+Content-length: 489
 {
   "ToRecipients": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
     }
   ],
   "Topic": "Topic-value",
@@ -48,6 +59,10 @@ Content-length: 295
   ],
   "CcRecipients": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
     }
   ],
   "Preview": "Preview-value",
@@ -56,14 +71,23 @@ Content-length: 295
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "conversationthread"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 295
+Content-length: 489
 {
   "ToRecipients": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
     }
   ],
   "Topic": "Topic-value",
@@ -74,6 +98,10 @@ Content-length: 295
   ],
   "CcRecipients": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
     }
   ],
   "Preview": "Preview-value",
@@ -82,5 +110,12 @@ Content-length: 295
 }
 ```
 
-<!-- uuid: 1a5ab594-122e-41c1-abeb-3f938d856cf1
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 5ae7c26a-03e4-4317-9d0a-a2e74d0e0c11
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of conversationthread object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

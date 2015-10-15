@@ -1,18 +1,27 @@
 # Get Attachment
 
 Retrieve the properties and relationships of attachment object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 GET /users/<objectId>/Events/<Id>/Attachments/<Id>
 GET /groups/<objectId>/Events/<Id>/Attachments/<Id>
 GET /users/<objectId>/Messages/<Id>/Attachments/<Id>
 ```
 ### Optional query parameters
-You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
+|Name|Value|Description|
+|:---------------|:--------|:-------|
+|$count|none|The count of related entities can be requested by specifying the $count query option.|
+|$expand|string|Comma-separated list of relationships to expand and include in the response. 
+See relationships table of [Attachment](../resources/attachment.md) object for supported names. |
+|$select|string|Comma-separated list of properties to include in the response.|
+
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 Do not supply a request body for this method.
@@ -21,6 +30,11 @@ If successful, this method returns a `200 OK` response code and [Attachment](../
 ### Example
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "attachment"
+} -->
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
@@ -34,6 +48,14 @@ Content-length: 162
   "Id": "Id-value"
 }
 ```
+If successful, this method returns a `200 OK` response code and [Attachment](../resources/attachment.md) object in the response body.
 
-<!-- uuid: 59907634-336e-4bb0-bf3e-888e945e8225
-2015-10-12 23:35:00 UTC -->
+<!-- uuid: 5f58c84a-5a62-489a-813f-2c904d2d7948
+2015-10-15 16:17:30 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Get Attachment",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

@@ -1,7 +1,10 @@
 # TenantDetail: checkMemberGroups
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /tenantDetails/<objectId>/checkMemberGroups
 
@@ -9,7 +12,7 @@ POST /tenantDetails/<objectId>/checkMemberGroups
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -24,6 +27,10 @@ If successful, this method returns `200, OK` response code and String collection
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "tenantdetail_checkmembergroups"
+}-->
 ```http
 POST /tenantDetails/<objectId>/checkMemberGroups
 Content-type: application/json
@@ -33,6 +40,11 @@ Content-length: 44
     "groupIds-value"
   ]
 }
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "string"
+} -->
 ```
 ##### Response
 ```json
@@ -46,5 +58,12 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: 4fb438e6-ba14-4e75-be36-9692add2b19b
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 80faf704-852f-4eb3-a76a-13837ce87fce
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "TenantDetail: checkMemberGroups",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

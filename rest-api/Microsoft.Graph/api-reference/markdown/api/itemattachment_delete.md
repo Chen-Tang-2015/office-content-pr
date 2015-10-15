@@ -1,7 +1,10 @@
 # Delete
 
 Delete ItemAttachment.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 
 
@@ -9,7 +12,7 @@ Delete ItemAttachment.
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 Do not supply a request body for this method.
@@ -19,5 +22,12 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: 6aa3b24a-1bda-46a7-b7bb-48aabc0c1517
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 02f42b04-7fc5-4e65-adc7-163f12ef8438
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Delete",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

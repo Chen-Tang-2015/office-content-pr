@@ -1,7 +1,10 @@
-# Update Conversation
+# Update the properties of conversation object.
 
 Update the properties of conversation object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 PATCH /groups/<objectId>/Conversations/<Id>
 PATCH /users/<objectId>/JoinedGroups/<objectId>/Conversations/<Id>
@@ -10,7 +13,7 @@ PATCH /drive/root/createdByUser/JoinedGroups/<objectId>/Conversations/<Id>
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -28,6 +31,10 @@ If successful, this method returns a `200 OK` response code and updated [Convers
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_conversation"
+}-->
 ```http
 PUT /groups/<objectId>/Conversations/<Id>
 Content-type: application/json
@@ -44,6 +51,11 @@ Content-length: 201
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "conversation"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
@@ -61,5 +73,12 @@ Content-length: 201
 }
 ```
 
-<!-- uuid: c51e7be4-7f2a-47d2-bf0e-6b12fa02ea9e
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 3a2329c2-8810-4c19-8e42-0b685d3b5fa3
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of conversation object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

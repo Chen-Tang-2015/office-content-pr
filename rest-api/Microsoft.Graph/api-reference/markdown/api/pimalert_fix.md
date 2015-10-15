@@ -1,7 +1,10 @@
 # PimAlert: Fix
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /Alerts/<AlertId>/Fix
 
@@ -9,7 +12,7 @@ POST /Alerts/<AlertId>/Fix
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -24,6 +27,10 @@ If successful, this method returns `200, OK` response code and [PimAlert](../res
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "pimalert_fix"
+}-->
 ```http
 POST /Alerts/<AlertId>/Fix
 Content-type: application/json
@@ -31,6 +38,11 @@ Content-length: 18
 {
   "ItemId": 99
 }
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "pimalert"
+} -->
 ```
 ##### Response
 ```json
@@ -57,5 +69,12 @@ Content-length: 529
 }
 ```
 
-<!-- uuid: 9eb8bf9b-fabe-49ab-936c-06e449a9b365
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 0366b00c-a8b2-4f86-872d-85676fdab35a
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "PimAlert: Fix",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

@@ -6,6 +6,15 @@ A message in a mailbox folder.
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "Attachments",
+    "Extensions"
+  ],
+  "@odata.type": "microsoft.graph.Message"
+}-->
+
 ```json
 {
   "Attachments": [
@@ -128,5 +137,12 @@ Here is a JSON representation of the resource
 |[Replyall](../api/message_replyall.md)|[None](none.md)||
 |[Send](../api/message_send.md)|[None](none.md)||
 
-<!-- uuid: c4c77542-459c-4aa8-847e-49c976e3d5fd
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 753e2298-7cbf-43b0-866a-02aec1709196
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Message resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

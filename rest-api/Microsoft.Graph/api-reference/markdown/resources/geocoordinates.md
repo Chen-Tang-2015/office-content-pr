@@ -6,6 +6,14 @@ The geographic coordinates and elevation of the location.
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.GeoCoordinates"
+}-->
+
 ```json
 {
   "Accuracy": 1024,
@@ -25,5 +33,12 @@ Here is a JSON representation of the resource
 |Latitude|Double|The latitude of the location.|
 |Longitude|Double|The longitude of the location.|
 
-<!-- uuid: ba0b0e8f-b6cb-4678-ba20-75bbcd9a89f7
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: a44a760a-831f-42b0-ac31-1ee5e5f16213
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "GeoCoordinates resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

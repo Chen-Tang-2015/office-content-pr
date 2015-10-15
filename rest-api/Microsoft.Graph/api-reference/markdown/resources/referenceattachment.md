@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "Extensions"
+  ],
+  "@odata.type": "microsoft.graph.ReferenceAttachment"
+}-->
+
 ```json
 {
   "ContentType": "String",
@@ -46,5 +54,12 @@ Here is a JSON representation of the resource
 |[Update](../api/referenceattachment_update.md) | [ReferenceAttachment](referenceattachment.md)	|Update ReferenceAttachment object. |
 |[Delete](../api/referenceattachment_delete.md) | Void	|Delete ReferenceAttachment object. |
 
-<!-- uuid: 1c2a0c01-5e99-47ee-86d9-63a11f16dab8
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 91c8d6ac-3080-47d9-9360-774e0bed61fa
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "ReferenceAttachment resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

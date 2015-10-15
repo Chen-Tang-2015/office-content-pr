@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.recipients"
+}-->
+
 ```json
 {
   "alias": "String",
@@ -23,5 +31,12 @@ Here is a JSON representation of the resource
 |objectId|String||
 |permissionIdentityType|String||
 
-<!-- uuid: bd64e52c-5c70-4959-a4ea-7268296dc58a
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 8ea5b80b-3a06-428a-afe5-dcac288298eb
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "recipients resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

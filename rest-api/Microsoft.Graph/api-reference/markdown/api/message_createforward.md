@@ -1,7 +1,10 @@
 # Message: CreateForward
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/Messages/<Id>/CreateForward
 POST /drive/root/createdByUser/Messages/<Id>/CreateForward
@@ -11,7 +14,7 @@ POST /users/<objectId>/RootFolder/Messages/<Id>/CreateForward
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 
@@ -21,46 +24,83 @@ If successful, this method returns `200, OK` response code and [Message](../reso
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "message_createforward"
+}-->
 ```http
 POST /users/<objectId>/Messages/<Id>/CreateForward
 Content-type: application/json
 Content-length: 0
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "message"
+} -->
 ```
 ##### Response
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 838
+Content-length: 1546
 {
   "Subject": "Subject-value",
   "Body": {
+    "ContentType": "ContentType-value",
+    "Content": "Content-value"
   },
   "BodyPreview": "BodyPreview-value",
   "Importance": "Importance-value",
   "HasAttachments": true,
   "ParentFolderId": "ParentFolderId-value",
   "From": {
+    "EmailAddress": {
+      "Name": "Name-value",
+      "Address": "Address-value"
+    }
   },
   "Sender": {
+    "EmailAddress": {
+      "Name": "Name-value",
+      "Address": "Address-value"
+    }
   },
   "ToRecipients": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
     }
   ],
   "CcRecipients": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
     }
   ],
   "BccRecipients": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
     }
   ],
   "ReplyTo": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
     }
   ],
   "ConversationId": "ConversationId-value",
   "UniqueBody": {
+    "ContentType": "ContentType-value",
+    "Content": "Content-value"
   },
   "DateTimeReceived": "datetime-value",
   "DateTimeSent": "datetime-value",
@@ -79,5 +119,12 @@ Content-length: 838
 }
 ```
 
-<!-- uuid: aad0bda9-e35a-421e-a159-f9491d0a1e19
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 39811073-c6e4-4f25-995b-04e4cf12682c
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Message: CreateForward",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

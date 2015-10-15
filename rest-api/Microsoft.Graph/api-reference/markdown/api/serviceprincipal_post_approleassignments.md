@@ -1,7 +1,10 @@
 # Create AppRoleAssignment
 
 Use this API to create a new AppRoleAssignment.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /servicePrincipals/<objectId>/appRoleAssignments
 
@@ -9,7 +12,7 @@ POST /servicePrincipals/<objectId>/appRoleAssignments
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply a JSON representation of [AppRoleAssignment](../resources/approleassignment.md) object.
@@ -19,8 +22,24 @@ In the request body, supply a JSON representation of [AppRoleAssignment](../reso
 If successful, this method returns `201, Created` response code and [AppRoleAssignment](../resources/approleassignment.md) object in the response body.
 
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "create_approleassignment_from_serviceprincipal"
+}-->
+```http
+POST /servicePrincipals/<objectId>/
+Content-type: application/json
+```
+In the request body, supply a JSON representation of [AppRoleAssignment](../resources/approleassignment.md) object.
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "approleassignment"
+} -->
 ```json
 HTTP/1.1 201 Created
 Content-type: application/json
@@ -39,5 +58,12 @@ Content-length: 398
 }
 ```
 
-<!-- uuid: bc1cbfce-557d-4b54-951a-34dcba472838
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: ba8a9a8d-263a-403e-803c-fc6beefcca32
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Create AppRoleAssignment",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

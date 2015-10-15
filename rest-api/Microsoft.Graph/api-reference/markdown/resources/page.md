@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.Page"
+}-->
+
 ```json
 {
   "content": "String",
@@ -58,5 +66,12 @@ Here is a JSON representation of the resource
 |[Patchcontent](../api/page_patchcontent.md)|[None](none.md)||
 |[Thumbnail](../api/page_thumbnail.md)|Stream||
 
-<!-- uuid: 3eadeae8-bbb9-456f-b972-0b71171542fd
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 5da8393a-4fba-4d58-bf3b-9c84e33d02c4
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Page resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

@@ -15,5 +15,12 @@ None
 |:---------------|:--------|:----------|
 |[List](../api/directoryrole_list.md) | [DirectoryRole](directoryrole.md) [] |Get directoryRole object collection. |
 
-<!-- uuid: f5240879-e796-4298-b547-e2b3f0b267d1
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: aa9310dc-512e-4e6e-b098-7a46244b973d
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "directoryRoles resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

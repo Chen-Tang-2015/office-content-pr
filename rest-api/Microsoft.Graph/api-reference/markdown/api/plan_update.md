@@ -1,7 +1,10 @@
-# Update Plan
+# Update the properties of plan object.
 
 Update the properties of plan object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 PATCH /plans/<id>
 PATCH /users/<objectId>/plans/<id>
@@ -10,7 +13,7 @@ PATCH /groups/<objectId>/plans/<id>
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -29,6 +32,10 @@ If successful, this method returns a `200 OK` response code and updated [Plan](.
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_plan"
+}-->
 ```http
 PUT /plans/<id>
 Content-type: application/json
@@ -44,6 +51,11 @@ Content-length: 179
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "plan"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
@@ -60,5 +72,12 @@ Content-length: 179
 }
 ```
 
-<!-- uuid: ce9b4c9f-5846-4538-9c76-f02a963692db
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 588a671f-1e20-4313-bdf0-1035a687e37a
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of plan object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

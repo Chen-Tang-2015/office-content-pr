@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.itemReference"
+}-->
+
 ```json
 {
   "driveId": "String",
@@ -21,5 +29,12 @@ Here is a JSON representation of the resource
 |id|String|Unique identifier for the item.|
 |path|String|Path that used to navigate to the item.|
 
-<!-- uuid: 9d162083-bf88-4eb6-b188-a178da0686e3
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 52878b68-28de-42f0-807e-bb74678dd252
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "itemReference resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

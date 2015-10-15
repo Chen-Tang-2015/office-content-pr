@@ -6,6 +6,14 @@ Only the read operation is supported on subscribed SKUs; create, update, and del
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.SubscribedSku"
+}-->
+
 ```json
 {
   "capabilityStatus": "String",
@@ -47,5 +55,12 @@ None
 |[Update](../api/subscribedsku_update.md) | [SubscribedSku](subscribedsku.md)	|Update SubscribedSku object. |
 |[Delete](../api/subscribedsku_delete.md) | Void	|Delete SubscribedSku object. |
 
-<!-- uuid: 2192edc7-1e55-4c48-bb2e-905359695a4d
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: fa5a3d83-f7ae-4eb9-b079-fb0a564285e2
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "SubscribedSku resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

@@ -6,6 +6,14 @@ The **provisionedPlans** property of the [User] entity and the [TenantDetail] en
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.ProvisionedPlan"
+}-->
+
 ```json
 {
   "capabilityStatus": "String",
@@ -21,5 +29,12 @@ Here is a JSON representation of the resource
 |provisioningStatus|String|For example, ΓÇ£SuccessΓÇ¥.|
 |service|String|The name of the service; for example, ΓÇ£AccessControlS2SΓÇ¥|
 
-<!-- uuid: bcc849b3-38cc-4bee-be5d-612bea2365f8
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 2cf2f49e-4e09-4cbb-bf0c-86d9b6a3d3fa
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "ProvisionedPlan resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

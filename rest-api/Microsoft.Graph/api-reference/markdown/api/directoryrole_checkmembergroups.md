@@ -1,7 +1,10 @@
 # DirectoryRole: checkMemberGroups
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /directoryRoles/<objectId>/checkMemberGroups
 
@@ -9,7 +12,7 @@ POST /directoryRoles/<objectId>/checkMemberGroups
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -24,6 +27,10 @@ If successful, this method returns `200, OK` response code and String collection
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "directoryrole_checkmembergroups"
+}-->
 ```http
 POST /directoryRoles/<objectId>/checkMemberGroups
 Content-type: application/json
@@ -33,6 +40,11 @@ Content-length: 44
     "groupIds-value"
   ]
 }
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "string"
+} -->
 ```
 ##### Response
 ```json
@@ -46,5 +58,12 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: 6668c37f-8ff7-4aa3-876d-c31f6df807d4
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 79b0e63c-4d93-4f09-bc23-58e3bb621495
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "DirectoryRole: checkMemberGroups",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

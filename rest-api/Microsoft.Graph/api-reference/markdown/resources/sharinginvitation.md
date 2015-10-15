@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.sharingInvitation"
+}-->
+
 ```json
 {
   "email": "String",
@@ -21,5 +29,12 @@ Here is a JSON representation of the resource
 |redeemedBy|String||
 |signInRequired|Boolean||
 
-<!-- uuid: 4b2c8f95-b360-47d2-855c-ddf0cd892382
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: b5bbd7ae-932e-4c64-8c15-b6496e828397
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "sharingInvitation resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

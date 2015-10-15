@@ -6,6 +6,18 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "notebooks",
+    "pages",
+    "resources",
+    "sectionGroups",
+    "sections"
+  ],
+  "@odata.type": "microsoft.graph.Notes"
+}-->
+
 ```json
 {
   "id": "String (identifier)",
@@ -63,5 +75,12 @@ Here is a JSON representation of the resource
 |[Create Section](../api/notes_post_sections.md) |[Section](section.md)| Create a new Section by posting to the sections collection.|
 |[Delete](../api/notes_delete.md) | Void	|Delete Notes object. |
 
-<!-- uuid: 19a94567-2267-40bc-989c-80c890db7c61
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: d5c1146d-c928-42ca-a5a3-6fc97d558d27
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Notes resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

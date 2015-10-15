@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.sharingLink"
+}-->
+
 ```json
 {
   "application": {
@@ -23,5 +31,12 @@ Here is a JSON representation of the resource
 |type|String||
 |webUrl|String||
 
-<!-- uuid: 5892bd7c-113b-4946-864a-a754afedc067
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 1b245405-d37f-49f9-a7b9-9947da173294
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "sharingLink resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

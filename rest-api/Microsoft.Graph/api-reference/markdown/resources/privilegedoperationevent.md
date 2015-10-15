@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.PrivilegedOperationEvent"
+}-->
+
 ```json
 {
   "AdditionalInformation": "String",
@@ -53,5 +61,12 @@ None
 |[Update](../api/privilegedoperationevent_update.md) | [PrivilegedOperationEvent](privilegedoperationevent.md)	|Update PrivilegedOperationEvent object. |
 |[Delete](../api/privilegedoperationevent_delete.md) | Void	|Delete PrivilegedOperationEvent object. |
 
-<!-- uuid: 195a368f-5fa9-46d2-80a4-97df72cacb9b
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 8e633f7e-95b0-47b5-8e51-1439aeb276ef
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "PrivilegedOperationEvent resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

@@ -1,14 +1,17 @@
-# Update EventMessage
+# Update the properties of eventmessage object.
 
 Update the properties of eventmessage object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 
 ```
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -47,40 +50,72 @@ If successful, this method returns a `200 OK` response code and updated [EventMe
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_eventmessage"
+}-->
 ```http
 
 Content-type: application/json
-Content-length: 890
+Content-length: 1598
 {
   "Subject": "Subject-value",
   "Body": {
+    "ContentType": "ContentType-value",
+    "Content": "Content-value"
   },
   "BodyPreview": "BodyPreview-value",
   "Importance": "Importance-value",
   "HasAttachments": true,
   "ParentFolderId": "ParentFolderId-value",
   "From": {
+    "EmailAddress": {
+      "Name": "Name-value",
+      "Address": "Address-value"
+    }
   },
   "Sender": {
+    "EmailAddress": {
+      "Name": "Name-value",
+      "Address": "Address-value"
+    }
   },
   "ToRecipients": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
     }
   ],
   "CcRecipients": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
     }
   ],
   "BccRecipients": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
     }
   ],
   "ReplyTo": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
     }
   ],
   "ConversationId": "ConversationId-value",
   "UniqueBody": {
+    "ContentType": "ContentType-value",
+    "Content": "Content-value"
   },
   "DateTimeReceived": "datetime-value",
   "DateTimeSent": "datetime-value",
@@ -100,41 +135,74 @@ Content-length: 890
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "eventmessage"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 890
+Content-length: 1598
 {
   "Subject": "Subject-value",
   "Body": {
+    "ContentType": "ContentType-value",
+    "Content": "Content-value"
   },
   "BodyPreview": "BodyPreview-value",
   "Importance": "Importance-value",
   "HasAttachments": true,
   "ParentFolderId": "ParentFolderId-value",
   "From": {
+    "EmailAddress": {
+      "Name": "Name-value",
+      "Address": "Address-value"
+    }
   },
   "Sender": {
+    "EmailAddress": {
+      "Name": "Name-value",
+      "Address": "Address-value"
+    }
   },
   "ToRecipients": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
     }
   ],
   "CcRecipients": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
     }
   ],
   "BccRecipients": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
     }
   ],
   "ReplyTo": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
     }
   ],
   "ConversationId": "ConversationId-value",
   "UniqueBody": {
+    "ContentType": "ContentType-value",
+    "Content": "Content-value"
   },
   "DateTimeReceived": "datetime-value",
   "DateTimeSent": "datetime-value",
@@ -154,5 +222,12 @@ Content-length: 890
 }
 ```
 
-<!-- uuid: 00b5061f-a947-4a2c-bed5-a6c38c277bb0
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 7bc471c5-54ee-455b-8b49-42b71eb7018e
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of eventmessage object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

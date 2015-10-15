@@ -1,7 +1,10 @@
-# Update TimelineTaskFormat
+# Update the properties of timelinetaskformat object.
 
 Update the properties of timelinetaskformat object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 PATCH /tasks/<id>/timelineFormat
 PATCH /users/<objectId>/tasks/<id>/timelineFormat
@@ -10,7 +13,7 @@ PATCH /groups/<objectId>/tasks/<id>/timelineFormat
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -32,6 +35,10 @@ If successful, this method returns a `200 OK` response code and updated [Timelin
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_timelinetaskformat"
+}-->
 ```http
 PUT /tasks/<id>/timelineFormat
 Content-type: application/json
@@ -50,6 +57,11 @@ Content-length: 255
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "timelinetaskformat"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
@@ -69,5 +81,12 @@ Content-length: 255
 }
 ```
 
-<!-- uuid: 4161f631-4b8c-44bb-b504-2d82df9cec86
-2015-10-12 23:35:03 UTC -->
+<!-- uuid: 6679c22b-3cb2-48d7-9ab8-232483ce16f5
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of timelinetaskformat object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

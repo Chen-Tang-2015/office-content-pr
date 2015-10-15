@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.permission"
+}-->
+
 ```json
 {
   "grantedTo": {
@@ -51,5 +59,12 @@ None
 |[Update](../api/permission_update.md) | [permission](permission.md)	|Update permission object. |
 |[Delete](../api/permission_delete.md) | Void	|Delete permission object. |
 
-<!-- uuid: a256b4c3-b5be-4c8c-b065-d083ecef7d92
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 40217e83-2c86-46da-bff1-e66b5a5ec138
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "permission resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

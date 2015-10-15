@@ -1,7 +1,10 @@
-# Update PlanTaskBoard
+# Update the properties of plantaskboard object.
 
 Update the properties of plantaskboard object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 PATCH /plans/<id>/bucketTaskBoard
 PATCH /plans/<id>/statusTaskBoard
@@ -10,7 +13,7 @@ PATCH /plans/<id>/assignedToTaskBoard
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -24,6 +27,10 @@ If successful, this method returns a `200 OK` response code and updated [PlanTas
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_plantaskboard"
+}-->
 ```http
 PUT /plans/<id>/bucketTaskBoard
 Content-type: application/json
@@ -35,6 +42,11 @@ Content-length: 76
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "plantaskboard"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
@@ -47,5 +59,12 @@ Content-length: 76
 }
 ```
 
-<!-- uuid: f85e8921-fe71-4613-8a40-2756674c43b2
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 1f9e97ff-0c25-44a4-8f1e-70c911e66ad9
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of plantaskboard object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

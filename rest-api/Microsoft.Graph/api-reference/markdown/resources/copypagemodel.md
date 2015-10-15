@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.CopyPageModel"
+}-->
+
 ```json
 {
   "contentUrl": "String",
@@ -41,5 +49,12 @@ Here is a JSON representation of the resource
 |self|String||
 |title|String||
 
-<!-- uuid: fae57e88-2dc5-4e1f-91f2-b62f0f37a89a
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 5bb0ef20-a8a0-4e6a-bf2b-e6a0b8fcd871
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "CopyPageModel resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

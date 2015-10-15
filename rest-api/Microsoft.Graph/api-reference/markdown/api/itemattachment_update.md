@@ -1,14 +1,17 @@
-# Update ItemAttachment
+# Update the properties of itemattachment object.
 
 Update the properties of itemattachment object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 
 ```
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -26,6 +29,10 @@ If successful, this method returns a `200 OK` response code and updated [ItemAtt
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_itemattachment"
+}-->
 ```http
 
 Content-type: application/json
@@ -40,6 +47,11 @@ Content-length: 162
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "itemattachment"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
@@ -55,5 +67,12 @@ Content-length: 162
 }
 ```
 
-<!-- uuid: 185dc2fd-8cda-40df-8157-d1cdd4cf2fb1
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 2330a76e-6bff-45c2-a956-7411743c8ef3
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of itemattachment object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

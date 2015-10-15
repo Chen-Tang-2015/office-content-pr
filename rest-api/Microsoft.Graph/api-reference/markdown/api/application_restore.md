@@ -1,7 +1,10 @@
 # Application: restore
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /applications/<objectId>/restore
 
@@ -9,7 +12,7 @@ POST /applications/<objectId>/restore
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -24,6 +27,10 @@ If successful, this method returns `200, OK` response code and [Application](../
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "application_restore"
+}-->
 ```http
 POST /applications/<objectId>/restore
 Content-type: application/json
@@ -33,16 +40,27 @@ Content-length: 56
     "identifierUris-value"
   ]
 }
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "application"
+} -->
 ```
 ##### Response
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 953
+Content-length: 2108
 {
   "appId": "appId-value",
   "appRoles": [
     {
+      "allowedMemberTypes": "allowedMemberTypes-value",
+      "description": "description-value",
+      "displayName": "displayName-value",
+      "id": "id-value",
+      "isEnabled": true,
+      "value": "value-value"
     }
   ],
   "availableToOtherTenants": true,
@@ -55,6 +73,13 @@ Content-length: 953
   ],
   "keyCredentials": [
     {
+      "customKeyIdentifier": "customKeyIdentifier-value",
+      "endDate": "datetime-value",
+      "keyId": "keyId-value",
+      "startDate": "datetime-value",
+      "type": "type-value",
+      "usage": "usage-value",
+      "value": "value-value"
     }
   ],
   "knownClientApplications": [
@@ -66,11 +91,24 @@ Content-length: 953
   "oauth2AllowUrlPathMatching": true,
   "oauth2Permissions": [
     {
+      "adminConsentDescription": "adminConsentDescription-value",
+      "adminConsentDisplayName": "adminConsentDisplayName-value",
+      "id": "id-value",
+      "isEnabled": true,
+      "type": "type-value",
+      "userConsentDescription": "userConsentDescription-value",
+      "userConsentDisplayName": "userConsentDisplayName-value",
+      "value": "value-value"
     }
   ],
   "oauth2RequirePostResponse": true,
   "passwordCredentials": [
     {
+      "customKeyIdentifier": "customKeyIdentifier-value",
+      "endDate": "datetime-value",
+      "keyId": "keyId-value",
+      "startDate": "datetime-value",
+      "value": "value-value"
     }
   ],
   "publicClient": true,
@@ -79,6 +117,11 @@ Content-length: 953
   ],
   "requiredResourceAccess": [
     {
+      "resourceAppId": "resourceAppId-value",
+      "resourceAccess": {
+        "id": "id-value",
+        "type": "type-value"
+      }
     }
   ],
   "samlMetadataUrl": "samlMetadataUrl-value",
@@ -88,5 +131,12 @@ Content-length: 953
 }
 ```
 
-<!-- uuid: f5400414-bfa2-4f95-ba77-3a73d4105ebd
-2015-10-12 23:35:00 UTC -->
+<!-- uuid: d9363524-9081-4abc-bc43-ed1884ceacc6
+2015-10-15 16:17:30 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Application: restore",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

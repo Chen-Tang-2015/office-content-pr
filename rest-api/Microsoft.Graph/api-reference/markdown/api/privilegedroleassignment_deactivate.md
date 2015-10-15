@@ -1,7 +1,10 @@
 # PrivilegedRoleAssignment: Deactivate
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /PrivilegedRoleAssignments/<UserId|RoleId>/Deactivate
 POST /PrivilegedRoles/<Id>/Assignments/<UserId|RoleId>/Deactivate
@@ -10,7 +13,7 @@ POST /PrivilegedRoles/<Id>/Assignments/<UserId|RoleId>/Deactivate
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 
@@ -20,10 +23,19 @@ If successful, this method returns `200, OK` response code and [PrivilegedRoleAs
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "privilegedroleassignment_deactivate"
+}-->
 ```http
 POST /PrivilegedRoleAssignments/<UserId|RoleId>/Deactivate
 Content-type: application/json
 Content-length: 0
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "privilegedroleassignment"
+} -->
 ```
 ##### Response
 ```json
@@ -39,5 +51,12 @@ Content-length: 160
 }
 ```
 
-<!-- uuid: b78f2ac0-af06-4879-9637-d742f2ab502d
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 9fd69ce9-1607-443e-a908-92c64572574e
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "PrivilegedRoleAssignment: Deactivate",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

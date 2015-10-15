@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.PlanDetails"
+}-->
+
 ```json
 {
   "category0Description": "String",
@@ -47,5 +55,12 @@ None
 |[Update](../api/plandetails_update.md) | [PlanDetails](plandetails.md)	|Update PlanDetails object. |
 |[Delete](../api/plandetails_delete.md) | Void	|Delete PlanDetails object. |
 
-<!-- uuid: 93f654ce-cb90-4000-8b76-fb1968b784da
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 83c311e9-beb0-445a-84cf-7161cc0b05d8
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "PlanDetails resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

@@ -1,7 +1,10 @@
 # Group: checkMemberGroups
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /groups/<objectId>/checkMemberGroups
 POST /users/<objectId>/JoinedGroups/<objectId>/checkMemberGroups
@@ -11,7 +14,7 @@ POST /drive/root/createdByUser/JoinedGroups/<objectId>/checkMemberGroups
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -26,6 +29,10 @@ If successful, this method returns `200, OK` response code and String collection
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "group_checkmembergroups"
+}-->
 ```http
 POST /groups/<objectId>/checkMemberGroups
 Content-type: application/json
@@ -35,6 +42,11 @@ Content-length: 44
     "groupIds-value"
   ]
 }
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "string"
+} -->
 ```
 ##### Response
 ```json
@@ -48,5 +60,12 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: ee1bda09-33de-4f3e-b9c8-4ef46a271ad4
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 6df85a6a-e6ae-47b1-b41c-55b248e24085
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Group: checkMemberGroups",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

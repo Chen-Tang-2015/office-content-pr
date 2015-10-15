@@ -1,7 +1,10 @@
 # DirectoryRoleTemplate: getMemberObjects
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /directoryRoleTemplates/<objectId>/getMemberObjects
 
@@ -9,7 +12,7 @@ POST /directoryRoleTemplates/<objectId>/getMemberObjects
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -24,6 +27,10 @@ If successful, this method returns `200, OK` response code and String collection
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "directoryroletemplate_getmemberobjects"
+}-->
 ```http
 POST /directoryRoleTemplates/<objectId>/getMemberObjects
 Content-type: application/json
@@ -31,6 +38,11 @@ Content-length: 33
 {
   "securityEnabledOnly": true
 }
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "string"
+} -->
 ```
 ##### Response
 ```json
@@ -44,5 +56,12 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: 01d5842a-3175-4e45-9a9d-cb5a5378cbe2
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: b4f3c9fc-618f-4d51-bc69-c4f7ac8c5073
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "DirectoryRoleTemplate: getMemberObjects",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

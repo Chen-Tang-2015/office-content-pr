@@ -1,14 +1,17 @@
-# Update ExtensionProperty
+# Update the properties of extensionproperty object.
 
 Update the properties of extensionproperty object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 PATCH /applications/<objectId>/extensionProperties/<objectId>
 ```
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -28,6 +31,10 @@ If successful, this method returns a `200 OK` response code and updated [Extensi
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_extensionproperty"
+}-->
 ```http
 PUT /applications/<objectId>/extensionProperties/<objectId>
 Content-type: application/json
@@ -46,6 +53,11 @@ Content-length: 297
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "extensionproperty"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
@@ -65,5 +77,12 @@ Content-length: 297
 }
 ```
 
-<!-- uuid: dd92e7c1-acf1-4201-b706-a28a60ff7eb8
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 4bee707f-f9f8-447f-804a-961ab389a0ce
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of extensionproperty object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

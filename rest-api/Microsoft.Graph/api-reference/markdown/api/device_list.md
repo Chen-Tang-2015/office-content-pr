@@ -1,16 +1,22 @@
 # List Device
 
 Retrieve a list of device objects.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 GET /devices
 ```
 ### Optional query parameters
-You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
+|Name|Value|Description|
+|:---------------|:--------|:-------|
+|$orderby|string|Comma-separated list of properties that are used to sort the order of items in the response collection.|
+
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 Do not supply a request body for this method.
@@ -19,16 +25,24 @@ If successful, this method returns a `200 OK` response code and collection of [D
 ### Example
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "devices"
+} -->
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 751
+Content-length: 858
 {
   "values": [
     {
       "accountEnabled": true,
       "alternativeSecurityIds": [
         {
+          "type": 99,
+          "identityProvider": "identityProvider-value",
+          "key": "key-value"
         }
       ],
       "approximateLastLogonTimestamp": "datetime-value",
@@ -51,6 +65,14 @@ Content-length: 751
   ]
 }
 ```
+If successful, this method returns a `200 OK` response code and collection of [Device](../resources/device.md) objects in the response body.
 
-<!-- uuid: 2aaf584c-ec88-4394-91ee-9b92c8abe0b6
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: a052f356-d420-4c75-b4ee-2cab2cbebe7e
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "List Device",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

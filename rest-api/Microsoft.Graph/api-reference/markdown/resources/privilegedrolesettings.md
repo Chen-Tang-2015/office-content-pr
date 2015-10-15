@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.PrivilegedRoleSettings"
+}-->
+
 ```json
 {
   "ElevationDuration": "String (timestamp)",
@@ -43,5 +51,12 @@ None
 |[Update](../api/privilegedrolesettings_update.md) | [PrivilegedRoleSettings](privilegedrolesettings.md)	|Update PrivilegedRoleSettings object. |
 |[Delete](../api/privilegedrolesettings_delete.md) | Void	|Delete PrivilegedRoleSettings object. |
 
-<!-- uuid: 5a7b120b-ec40-4f56-82c7-65205bc5aec0
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 1f54c2ee-b047-4763-a927-9f4c08555370
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "PrivilegedRoleSettings resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

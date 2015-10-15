@@ -1,14 +1,17 @@
-# Update PrivilegedOperationEvent
+# Update the properties of privilegedoperationevent object.
 
 Update the properties of privilegedoperationevent object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 PATCH /PrivilegedOperationEvents/<Id>
 ```
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -33,6 +36,10 @@ If successful, this method returns a `200 OK` response code and updated [Privile
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_privilegedoperationevent"
+}-->
 ```http
 PUT /PrivilegedOperationEvents/<Id>
 Content-type: application/json
@@ -54,6 +61,11 @@ Content-length: 456
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "privilegedoperationevent"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
@@ -76,5 +88,12 @@ Content-length: 456
 }
 ```
 
-<!-- uuid: 10273975-30c7-4ceb-99e5-d6d85115d571
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: dbe6ec51-f5d6-4803-a676-13f52cea3c43
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of privilegedoperationevent object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

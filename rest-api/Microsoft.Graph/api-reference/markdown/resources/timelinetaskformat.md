@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.TimelineTaskFormat"
+}-->
+
 ```json
 {
   "anchorPosition": "String",
@@ -47,5 +55,12 @@ None
 |[Update](../api/timelinetaskformat_update.md) | [TimelineTaskFormat](timelinetaskformat.md)	|Update TimelineTaskFormat object. |
 |[Delete](../api/timelinetaskformat_delete.md) | Void	|Delete TimelineTaskFormat object. |
 
-<!-- uuid: ee409c00-8c4f-46c5-a6b7-430a4908d94a
-2015-10-12 23:35:03 UTC -->
+<!-- uuid: ab0dcafd-7670-41f0-a2b9-31ed13fd908d
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "TimelineTaskFormat resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

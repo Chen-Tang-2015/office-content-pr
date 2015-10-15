@@ -1,7 +1,10 @@
 # PrivilegedRoleAssignment: Activate
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /PrivilegedRoleAssignments/<UserId|RoleId>/Activate
 POST /PrivilegedRoles/<Id>/Assignments/<UserId|RoleId>/Activate
@@ -10,7 +13,7 @@ POST /PrivilegedRoles/<Id>/Assignments/<UserId|RoleId>/Activate
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -28,6 +31,10 @@ If successful, this method returns `200, OK` response code and [PrivilegedRoleAs
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "privilegedroleassignment_activate"
+}-->
 ```http
 POST /PrivilegedRoleAssignments/<UserId|RoleId>/Activate
 Content-type: application/json
@@ -38,6 +45,11 @@ Content-length: 142
   "TicketNumber": "TicketNumber-value",
   "TicketSystem": "TicketSystem-value"
 }
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "privilegedroleassignment"
+} -->
 ```
 ##### Response
 ```json
@@ -53,5 +65,12 @@ Content-length: 160
 }
 ```
 
-<!-- uuid: 7d6b1786-952e-46e7-86a6-914e4790f120
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: b012020f-f232-48d6-9827-cf8d010dbe79
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "PrivilegedRoleAssignment: Activate",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

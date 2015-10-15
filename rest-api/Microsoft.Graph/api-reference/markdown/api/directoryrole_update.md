@@ -1,14 +1,17 @@
-# Update DirectoryRole
+# Update the properties of directoryrole object.
 
 Update the properties of directoryrole object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 PATCH /directoryRoles/<objectId>
 ```
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -28,6 +31,10 @@ If successful, this method returns a `200 OK` response code and updated [Directo
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_directoryrole"
+}-->
 ```http
 PUT /directoryRoles/<objectId>
 Content-type: application/json
@@ -44,6 +51,11 @@ Content-length: 275
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "directoryrole"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
@@ -61,5 +73,12 @@ Content-length: 275
 }
 ```
 
-<!-- uuid: 8e1689e0-b0a7-4a00-870f-d0b9cc1d4890
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 9c69ab7a-a868-4d7c-8f0c-cccad0194574
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of directoryrole object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

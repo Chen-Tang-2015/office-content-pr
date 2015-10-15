@@ -1,7 +1,10 @@
 # Delete
 
 Delete permission.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 DELETE /drive/root/permissions/<id>
 DELETE /drive/items/<id>/permissions/<id>
@@ -11,7 +14,7 @@ DELETE /drives/<id>/root/permissions/<id>
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 Do not supply a request body for this method.
@@ -21,5 +24,12 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: ff84e274-0c1e-4ef4-8d7a-095043dace1c
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 03a7a01e-dcf0-4dfb-9e99-9324211a2a57
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Delete",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

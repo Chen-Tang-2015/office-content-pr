@@ -1,7 +1,10 @@
-# Update Photo
+# Update the properties of photo object.
 
 Update the properties of photo object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 PATCH /users/<objectId>/UserPhoto
 PATCH /groups/<objectId>/GroupPhoto
@@ -10,7 +13,7 @@ PATCH /drive/root/createdByUser/UserPhoto
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -25,6 +28,10 @@ If successful, this method returns a `200 OK` response code and updated [Photo](
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_photo"
+}-->
 ```http
 PUT /users/<objectId>/UserPhoto
 Content-type: application/json
@@ -36,6 +43,11 @@ Content-length: 53
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "photo"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
@@ -48,5 +60,12 @@ Content-length: 53
 }
 ```
 
-<!-- uuid: 441963a8-acd1-4757-b8fa-9cca85ca4af9
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 5d36d95d-e070-44e3-a0de-80ce9e0f25c1
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of photo object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

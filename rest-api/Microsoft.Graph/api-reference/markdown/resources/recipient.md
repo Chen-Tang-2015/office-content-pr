@@ -6,6 +6,14 @@ A sender or receiver for a message.
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.Recipient"
+}-->
+
 ```json
 {
   "EmailAddress": {
@@ -19,5 +27,12 @@ Here is a JSON representation of the resource
 |:---------------|:--------|:----------|
 |EmailAddress|[EmailAddress](emailaddress.md)|The recipient's email address.|
 
-<!-- uuid: 3e390fd9-c5b9-4956-b2e4-e76a3edf8eb1
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: bfa8ba15-c202-49ac-9c8a-ecbf4b57cb94
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Recipient resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

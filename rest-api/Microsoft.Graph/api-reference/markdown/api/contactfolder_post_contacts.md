@@ -1,7 +1,10 @@
 # Create Contact
 
 Use this API to create a new Contact.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/ContactFolders/<Id>/Contacts
 POST /drive/root/createdByUser/ContactFolders/<Id>/Contacts
@@ -11,7 +14,7 @@ POST /drive/root/lastModifiedByUser/ContactFolders/<Id>/Contacts
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply a JSON representation of [Contact](../resources/contact.md) object.
@@ -21,12 +24,28 @@ In the request body, supply a JSON representation of [Contact](../resources/cont
 If successful, this method returns `201, Created` response code and [Contact](../resources/contact.md) object in the response body.
 
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "create_contact_from_contactfolder"
+}-->
+```http
+POST /users/<objectId>/ContactFolders/<Id>/
+Content-type: application/json
+```
+In the request body, supply a JSON representation of [Contact](../resources/contact.md) object.
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "contact"
+} -->
 ```json
 HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 1289
+Content-length: 1857
 {
   "ParentFolderId": "ParentFolderId-value",
   "Birthday": "datetime-value",
@@ -41,6 +60,8 @@ Content-length: 1289
   "Generation": "Generation-value",
   "EmailAddresses": [
     {
+      "Name": "Name-value",
+      "Address": "Address-value"
     }
   ],
   "ImAddresses": [
@@ -62,10 +83,25 @@ Content-length: 1289
   ],
   "MobilePhone1": "MobilePhone1-value",
   "HomeAddress": {
+    "Street": "Street-value",
+    "City": "City-value",
+    "State": "State-value",
+    "CountryOrRegion": "CountryOrRegion-value",
+    "PostalCode": "PostalCode-value"
   },
   "BusinessAddress": {
+    "Street": "Street-value",
+    "City": "City-value",
+    "State": "State-value",
+    "CountryOrRegion": "CountryOrRegion-value",
+    "PostalCode": "PostalCode-value"
   },
   "OtherAddress": {
+    "Street": "Street-value",
+    "City": "City-value",
+    "State": "State-value",
+    "CountryOrRegion": "CountryOrRegion-value",
+    "PostalCode": "PostalCode-value"
   },
   "YomiCompanyName": "YomiCompanyName-value",
   "YomiGivenName": "YomiGivenName-value",
@@ -80,5 +116,12 @@ Content-length: 1289
 }
 ```
 
-<!-- uuid: 8384c496-9c5f-4c1c-80a1-0b50ee18f646
-2015-10-12 23:35:00 UTC -->
+<!-- uuid: ab69bab2-ae2d-4407-a3fd-963ee952b122
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Create Contact",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

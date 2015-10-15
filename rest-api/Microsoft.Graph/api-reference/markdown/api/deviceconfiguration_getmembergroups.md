@@ -1,7 +1,10 @@
 # DeviceConfiguration: getMemberGroups
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /deviceConfiguration/<objectId>/getMemberGroups
 
@@ -9,7 +12,7 @@ POST /deviceConfiguration/<objectId>/getMemberGroups
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -24,6 +27,10 @@ If successful, this method returns `200, OK` response code and String collection
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "deviceconfiguration_getmembergroups"
+}-->
 ```http
 POST /deviceConfiguration/<objectId>/getMemberGroups
 Content-type: application/json
@@ -31,6 +38,11 @@ Content-length: 33
 {
   "securityEnabledOnly": true
 }
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "string"
+} -->
 ```
 ##### Response
 ```json
@@ -44,5 +56,12 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: 651cce45-1e1c-4b7d-9c91-569a16f887ea
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 6ee65d44-812d-4258-ba34-421d2b214da8
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "DeviceConfiguration: getMemberGroups",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

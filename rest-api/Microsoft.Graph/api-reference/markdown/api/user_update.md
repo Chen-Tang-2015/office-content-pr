@@ -1,7 +1,10 @@
-# Update User
+# Update the properties of user object.
 
 Update the properties of user object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 PATCH /users/<objectId>
 PATCH /drive/root/createdByUser
@@ -10,7 +13,7 @@ PATCH /drive/root/lastModifiedByUser
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -74,18 +77,28 @@ If successful, this method returns a `200 OK` response code and updated [User](.
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_user"
+}-->
 ```http
 PUT /users/<objectId>
 Content-type: application/json
-Content-length: 2047
+Content-length: 2650
 {
   "accountEnabled": true,
   "assignedLicenses": [
     {
+      "disabledPlans": "disabledPlans-value",
+      "skuId": "skuId-value"
     }
   ],
   "assignedPlans": [
     {
+      "assignedTimestamp": "datetime-value",
+      "capabilityStatus": "capabilityStatus-value",
+      "service": "service-value",
+      "servicePlanId": "servicePlanId-value"
     }
   ],
   "city": "city-value",
@@ -107,16 +120,25 @@ Content-length: 2047
   ],
   "passwordPolicies": "passwordPolicies-value",
   "passwordProfile": {
+    "password": "password-value",
+    "forceChangePasswordNextLogin": true
   },
   "physicalDeliveryOfficeName": "physicalDeliveryOfficeName-value",
   "postalCode": "postalCode-value",
   "preferredLanguage": "preferredLanguage-value",
   "provisionedPlans": [
     {
+      "capabilityStatus": "capabilityStatus-value",
+      "provisioningStatus": "provisioningStatus-value",
+      "service": "service-value"
     }
   ],
   "provisioningErrors": [
     {
+      "errorDetail": "errorDetail-value",
+      "resolved": true,
+      "service": "service-value",
+      "timestamp": "datetime-value"
     }
   ],
   "proxyAddresses": [
@@ -163,19 +185,30 @@ Content-length: 2047
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "user"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 2047
+Content-length: 2650
 {
   "accountEnabled": true,
   "assignedLicenses": [
     {
+      "disabledPlans": "disabledPlans-value",
+      "skuId": "skuId-value"
     }
   ],
   "assignedPlans": [
     {
+      "assignedTimestamp": "datetime-value",
+      "capabilityStatus": "capabilityStatus-value",
+      "service": "service-value",
+      "servicePlanId": "servicePlanId-value"
     }
   ],
   "city": "city-value",
@@ -197,16 +230,25 @@ Content-length: 2047
   ],
   "passwordPolicies": "passwordPolicies-value",
   "passwordProfile": {
+    "password": "password-value",
+    "forceChangePasswordNextLogin": true
   },
   "physicalDeliveryOfficeName": "physicalDeliveryOfficeName-value",
   "postalCode": "postalCode-value",
   "preferredLanguage": "preferredLanguage-value",
   "provisionedPlans": [
     {
+      "capabilityStatus": "capabilityStatus-value",
+      "provisioningStatus": "provisioningStatus-value",
+      "service": "service-value"
     }
   ],
   "provisioningErrors": [
     {
+      "errorDetail": "errorDetail-value",
+      "resolved": true,
+      "service": "service-value",
+      "timestamp": "datetime-value"
     }
   ],
   "proxyAddresses": [
@@ -253,5 +295,12 @@ Content-length: 2047
 }
 ```
 
-<!-- uuid: 9c1ca378-3fb8-4ac6-ab68-7acbd565205e
-2015-10-12 23:35:03 UTC -->
+<!-- uuid: 9408ef85-8750-42f9-b92a-63391c33fb71
+2015-10-15 16:17:34 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of user object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

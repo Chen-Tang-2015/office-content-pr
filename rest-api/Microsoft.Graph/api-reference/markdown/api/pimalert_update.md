@@ -1,14 +1,17 @@
-# Update PimAlert
+# Update the properties of pimalert object.
 
 Update the properties of pimalert object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 PATCH /Alerts/<AlertId>
 ```
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -36,6 +39,10 @@ If successful, this method returns a `200 OK` response code and updated [PimAler
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_pimalert"
+}-->
 ```http
 PUT /Alerts/<AlertId>
 Content-type: application/json
@@ -60,6 +67,11 @@ Content-length: 529
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "pimalert"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
@@ -85,5 +97,12 @@ Content-length: 529
 }
 ```
 
-<!-- uuid: 509370d7-182c-4d26-be0a-4de0f8de2c7d
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 0cd594e6-8e5e-45e9-87fe-c9bc7538b00c
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of pimalert object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

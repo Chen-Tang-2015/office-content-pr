@@ -1,15 +1,18 @@
 # SiteCollection: FromUrl
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
-POST /myOrganization/siteCollections/<id>/FromUrl
+POST /myOrganization/siteCollections/<id>/FromUrl(url=url-value)
 
 ```
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request URL, provide following query parameters with values.
@@ -24,10 +27,19 @@ If successful, this method returns `200, OK` response code and [SiteMetadata](..
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "sitecollection_fromurl"
+}-->
 ```http
 POST /myOrganization/siteCollections/<id>/FromUrl
 Content-type: application/json
 Content-length: 0
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "sitemetadata"
+} -->
 ```
 ##### Response
 ```json
@@ -40,5 +52,12 @@ Content-length: 78
 }
 ```
 
-<!-- uuid: 70f816e3-b909-4ccb-974e-75878e5cd381
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 2e699daa-95cb-447a-910b-cf35b993ee5a
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "SiteCollection: FromUrl",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

@@ -1,16 +1,25 @@
 # Get PimAlertInfo
 
 Retrieve the properties and relationships of pimalertinfo object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 GET /AlertInfo/<AlertId>
 ```
 ### Optional query parameters
-You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
+|Name|Value|Description|
+|:---------------|:--------|:-------|
+|$count|none|The count of related entities can be requested by specifying the $count query option.|
+|$expand|string|Comma-separated list of relationships to expand and include in the response. 
+See relationships table of [PimAlertInfo](../resources/pimalertinfo.md) object for supported names. |
+|$select|string|Comma-separated list of properties to include in the response.|
+
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 Do not supply a request body for this method.
@@ -19,6 +28,11 @@ If successful, this method returns a `200 OK` response code and [PimAlertInfo](.
 ### Example
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "pimalertinfo"
+} -->
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
@@ -37,6 +51,14 @@ Content-length: 370
   "HowToPrevent": "HowToPrevent-value"
 }
 ```
+If successful, this method returns a `200 OK` response code and [PimAlertInfo](../resources/pimalertinfo.md) object in the response body.
 
-<!-- uuid: c679f80d-2b20-4c7f-bb43-3c0250a657ec
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: c96b6032-d4e2-4b7c-923d-67ced4d1727d
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Get PimAlertInfo",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

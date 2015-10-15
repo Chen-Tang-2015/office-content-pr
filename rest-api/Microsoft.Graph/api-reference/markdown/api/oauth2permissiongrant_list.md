@@ -1,16 +1,22 @@
 # List OAuth2PermissionGrant
 
 Retrieve a list of oauth2permissiongrant objects.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 GET /oauth2PermissionGrants
 ```
 ### Optional query parameters
-You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
+|Name|Value|Description|
+|:---------------|:--------|:-------|
+|$orderby|string|Comma-separated list of properties that are used to sort the order of items in the response collection.|
+
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 Do not supply a request body for this method.
@@ -19,6 +25,11 @@ If successful, this method returns a `200 OK` response code and collection of [O
 ### Example
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "oauth2permissiongrants"
+} -->
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
@@ -38,6 +49,14 @@ Content-length: 333
   ]
 }
 ```
+If successful, this method returns a `200 OK` response code and collection of [OAuth2PermissionGrant](../resources/oauth2permissiongrant.md) objects in the response body.
 
-<!-- uuid: c77f5e66-8fb6-4b7e-a75e-adec45a523dd
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: db779c7c-7086-4b09-8fb3-ad947af97c6c
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "List OAuth2PermissionGrant",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

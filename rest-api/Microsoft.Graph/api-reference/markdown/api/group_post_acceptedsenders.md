@@ -1,7 +1,10 @@
 # Create AcceptedSender
 
 Use this API to create a new AcceptedSender.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /groups/<objectId>/AcceptedSenders
 POST /users/<objectId>/JoinedGroups/<objectId>/AcceptedSenders
@@ -11,7 +14,7 @@ POST /drive/root/createdByUser/JoinedGroups/<objectId>/AcceptedSenders
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
@@ -21,8 +24,24 @@ In the request body, supply a JSON representation of [DirectoryObject](../resour
 If successful, this method returns `201, Created` response code and [DirectoryObject](../resources/directoryobject.md) object in the response body.
 
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "create_directoryobject_from_group"
+}-->
+```http
+POST /groups/<objectId>/
+Content-type: application/json
+```
+In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "directoryobject"
+} -->
 ```json
 HTTP/1.1 201 Created
 Content-type: application/json
@@ -34,5 +53,12 @@ Content-length: 111
 }
 ```
 
-<!-- uuid: 31fd432b-06bf-4b63-b348-6e9796268512
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 1457f5ef-26a2-4dcd-a7f9-900a798b1747
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Create AcceptedSender",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

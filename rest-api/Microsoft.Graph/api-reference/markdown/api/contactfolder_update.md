@@ -1,7 +1,10 @@
-# Update ContactFolder
+# Update the properties of contactfolder object.
 
 Update the properties of contactfolder object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 PATCH /users/<objectId>/ContactFolders/<Id>
 PATCH /drive/root/createdByUser/ContactFolders/<Id>
@@ -10,7 +13,7 @@ PATCH /drive/root/lastModifiedByUser/ContactFolders/<Id>
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -25,6 +28,10 @@ If successful, this method returns a `200 OK` response code and updated [Contact
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_contactfolder"
+}-->
 ```http
 PUT /users/<objectId>/ContactFolders/<Id>
 Content-type: application/json
@@ -36,6 +43,11 @@ Content-length: 104
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "contactfolder"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
@@ -48,5 +60,12 @@ Content-length: 104
 }
 ```
 
-<!-- uuid: 7412cd8f-5b47-4a1e-8243-750ba393bc1d
-2015-10-12 23:35:00 UTC -->
+<!-- uuid: d282924c-0d08-4555-a095-dcd19dd41df1
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of contactfolder object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

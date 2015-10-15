@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.CopySectionModel"
+}-->
+
 ```json
 {
   "createdBy": "String",
@@ -33,5 +41,12 @@ Here is a JSON representation of the resource
 |pagesUrl|String||
 |self|String||
 
-<!-- uuid: db331a29-2ee9-43f2-986f-9482abd15d6f
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 56b9ea18-dacb-4368-a7c4-a46dc0ac93a7
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "CopySectionModel resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

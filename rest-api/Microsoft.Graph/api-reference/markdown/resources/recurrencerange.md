@@ -6,6 +6,14 @@ The duration of an event.
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.RecurrenceRange"
+}-->
+
 ```json
 {
   "EndDate": "String (timestamp)",
@@ -23,5 +31,12 @@ Here is a JSON representation of the resource
 |StartDate|DateTimeOffset|The start date of the series.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |Type|String|The recurrence range: EndDate = 0, NoEnd = 1, Numbered = 2. Possible values are: `EndDate`, `NoEnd`, `Numbered`.|
 
-<!-- uuid: a35af6b8-471e-4de3-98af-aa9b7c95e96e
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 8806124e-5758-4f5f-8b71-439c61361139
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "RecurrenceRange resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

@@ -1,16 +1,22 @@
 # List Application
 
 Retrieve a list of application objects.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 GET /applications
 ```
 ### Optional query parameters
-You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
+|Name|Value|Description|
+|:---------------|:--------|:-------|
+|$orderby|string|Comma-separated list of properties that are used to sort the order of items in the response collection.|
+
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 Do not supply a request body for this method.
@@ -19,16 +25,27 @@ If successful, this method returns a `200 OK` response code and collection of [A
 ### Example
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "applications"
+} -->
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 1163
+Content-length: 2442
 {
   "values": [
     {
       "appId": "appId-value",
       "appRoles": [
         {
+          "allowedMemberTypes": "allowedMemberTypes-value",
+          "description": "description-value",
+          "displayName": "displayName-value",
+          "id": "id-value",
+          "isEnabled": true,
+          "value": "value-value"
         }
       ],
       "availableToOtherTenants": true,
@@ -41,6 +58,13 @@ Content-length: 1163
       ],
       "keyCredentials": [
         {
+          "customKeyIdentifier": "customKeyIdentifier-value",
+          "endDate": "datetime-value",
+          "keyId": "keyId-value",
+          "startDate": "datetime-value",
+          "type": "type-value",
+          "usage": "usage-value",
+          "value": "value-value"
         }
       ],
       "knownClientApplications": [
@@ -52,11 +76,24 @@ Content-length: 1163
       "oauth2AllowUrlPathMatching": true,
       "oauth2Permissions": [
         {
+          "adminConsentDescription": "adminConsentDescription-value",
+          "adminConsentDisplayName": "adminConsentDisplayName-value",
+          "id": "id-value",
+          "isEnabled": true,
+          "type": "type-value",
+          "userConsentDescription": "userConsentDescription-value",
+          "userConsentDisplayName": "userConsentDisplayName-value",
+          "value": "value-value"
         }
       ],
       "oauth2RequirePostResponse": true,
       "passwordCredentials": [
         {
+          "customKeyIdentifier": "customKeyIdentifier-value",
+          "endDate": "datetime-value",
+          "keyId": "keyId-value",
+          "startDate": "datetime-value",
+          "value": "value-value"
         }
       ],
       "publicClient": true,
@@ -65,6 +102,11 @@ Content-length: 1163
       ],
       "requiredResourceAccess": [
         {
+          "resourceAppId": "resourceAppId-value",
+          "resourceAccess": {
+            "id": "id-value",
+            "type": "type-value"
+          }
         }
       ],
       "samlMetadataUrl": "samlMetadataUrl-value",
@@ -75,6 +117,14 @@ Content-length: 1163
   ]
 }
 ```
+If successful, this method returns a `200 OK` response code and collection of [Application](../resources/application.md) objects in the response body.
 
-<!-- uuid: 8f816d70-afa9-48a6-ba36-fa7061ca0b5a
-2015-10-12 23:35:00 UTC -->
+<!-- uuid: 9f49c94b-2a9f-4b4c-95ca-bb906895799c
+2015-10-15 16:17:30 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "List Application",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

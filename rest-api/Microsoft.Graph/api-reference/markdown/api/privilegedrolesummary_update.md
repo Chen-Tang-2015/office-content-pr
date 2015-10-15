@@ -1,7 +1,10 @@
-# Update PrivilegedRoleSummary
+# Update the properties of privilegedrolesummary object.
 
 Update the properties of privilegedrolesummary object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 PATCH /PrivilegedRoles/<Id>/Summary
 PATCH /PrivilegedRoleAssignments/<UserId|RoleId>/RoleInfo/Summary
@@ -9,7 +12,7 @@ PATCH /PrivilegedRoleAssignments/<UserId|RoleId>/RoleInfo/Summary
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -27,6 +30,10 @@ If successful, this method returns a `200 OK` response code and updated [Privile
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_privilegedrolesummary"
+}-->
 ```http
 PUT /PrivilegedRoles/<Id>/Summary
 Content-type: application/json
@@ -41,6 +48,11 @@ Content-length: 145
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "privilegedrolesummary"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
@@ -56,5 +68,12 @@ Content-length: 145
 }
 ```
 
-<!-- uuid: 8c145003-d6ba-4ecf-ab07-9131b2371ddc
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: ab80df3f-5190-476d-9dda-d72f8a188c8b
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of privilegedrolesummary object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

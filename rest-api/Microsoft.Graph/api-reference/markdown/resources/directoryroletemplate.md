@@ -6,6 +6,14 @@ Represents a directory role template. A directory role template specifies the pr
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "Extensions"
+  ],
+  "@odata.type": "microsoft.graph.DirectoryRoleTemplate"
+}-->
+
 ```json
 {
   "Extensions": [
@@ -47,5 +55,12 @@ Here is a JSON representation of the resource
 |[Get MemberGroups](../api/directoryroletemplate_getmembergroups.md)|String||
 |[Get MemberObjects](../api/directoryroletemplate_getmemberobjects.md)|String||
 
-<!-- uuid: e39d562d-5872-4eca-bbfb-741664b9cf38
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 393879c4-11e7-4032-9bcc-bf93ec118e3b
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "DirectoryRoleTemplate resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

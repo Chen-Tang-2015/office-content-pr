@@ -1,16 +1,25 @@
 # Get SiteCollection
 
 Retrieve the properties and relationships of sitecollection object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 GET /myOrganization/siteCollections/<id>
 ```
 ### Optional query parameters
-You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
+|Name|Value|Description|
+|:---------------|:--------|:-------|
+|$count|none|The count of related entities can be requested by specifying the $count query option.|
+|$expand|string|Comma-separated list of relationships to expand and include in the response. 
+See relationships table of [SiteCollection](../resources/sitecollection.md) object for supported names. |
+|$select|string|Comma-separated list of properties to include in the response.|
+
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 Do not supply a request body for this method.
@@ -19,6 +28,11 @@ If successful, this method returns a `200 OK` response code and [SiteCollection]
 ### Example
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "sitecollection"
+} -->
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
@@ -27,6 +41,14 @@ Content-length: 22
   "id": "id-value"
 }
 ```
+If successful, this method returns a `200 OK` response code and [SiteCollection](../resources/sitecollection.md) object in the response body.
 
-<!-- uuid: 0c1fa8dd-b570-40da-a6f6-96bd0eb6ce6d
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 629afc08-eb64-4c83-8437-91b4fd30591a
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Get SiteCollection",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

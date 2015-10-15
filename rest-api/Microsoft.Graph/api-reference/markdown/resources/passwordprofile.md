@@ -6,6 +6,14 @@ Contains the password profile associated with a user. The **passwordProfile** pr
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.PasswordProfile"
+}-->
+
 ```json
 {
   "forceChangePasswordNextLogin": true,
@@ -19,5 +27,12 @@ Here is a JSON representation of the resource
 |forceChangePasswordNextLogin|Boolean|                **true** if the user must change her password on the next login; otherwise **false**.            |
 |password|String|The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login.             The password must satisfy minimum requirements as specified by the userΓÇÖs **PasswordPolicies** property. By default, a strong password is required.|
 
-<!-- uuid: 83e576bf-5a04-4cdc-88bd-25237ad2d7c4
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 543c8d0c-2074-40d0-bdc1-0393a53fb4af
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "PasswordProfile resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

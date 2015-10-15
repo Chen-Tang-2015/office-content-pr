@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.PrivilegedRoleAssignment"
+}-->
+
 ```json
 {
   "ExpirationTime": "String (timestamp)",
@@ -44,5 +52,12 @@ Here is a JSON representation of the resource
 |[Deactivate](../api/privilegedroleassignment_deactivate.md)|[PrivilegedRoleAssignment](privilegedroleassignment.md)||
 |[My](../api/privilegedroleassignment_my.md)|[PrivilegedRoleAssignment](privilegedroleassignment.md)||
 
-<!-- uuid: 37050ea8-ca6f-4629-8127-6e1c4db9eb5e
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 3d2d51dd-54c7-44b1-90ae-24001d0a8f1d
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "PrivilegedRoleAssignment resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

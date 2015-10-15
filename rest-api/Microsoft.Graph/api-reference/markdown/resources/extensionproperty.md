@@ -6,6 +6,14 @@ Allows an application to define and use a set of additional properties that can 
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "Extensions"
+  ],
+  "@odata.type": "microsoft.graph.ExtensionProperty"
+}-->
+
 ```json
 {
   "Extensions": [
@@ -55,5 +63,12 @@ Here is a JSON representation of the resource
 |[Get MemberGroups](../api/extensionproperty_getmembergroups.md)|String||
 |[Get MemberObjects](../api/extensionproperty_getmemberobjects.md)|String||
 
-<!-- uuid: f302c190-1b41-4816-a618-20729f8c8463
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 470ae518-b22f-4f5a-8a5c-22ec27267b11
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "ExtensionProperty resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

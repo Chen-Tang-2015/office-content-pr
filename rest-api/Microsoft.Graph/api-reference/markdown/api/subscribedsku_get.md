@@ -1,16 +1,19 @@
 # Get SubscribedSku
 
 Retrieve the properties and relationships of subscribedsku object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 GET /subscribedSkus/<objectId>
 ```
 ### Optional query parameters
-You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
+
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 Do not supply a request body for this method.
@@ -19,24 +22,42 @@ If successful, this method returns a `200 OK` response code and [SubscribedSku](
 ### Example
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "subscribedsku"
+} -->
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 235
+Content-length: 388
 {
   "capabilityStatus": "capabilityStatus-value",
   "consumedUnits": 99,
   "objectId": "objectId-value",
   "prepaidUnits": {
+    "enabled": 99,
+    "suspended": 99,
+    "warning": 99
   },
   "servicePlans": [
     {
+      "servicePlanId": "servicePlanId-value",
+      "servicePlanName": "servicePlanName-value"
     }
   ],
   "skuId": "skuId-value",
   "skuPartNumber": "skuPartNumber-value"
 }
 ```
+If successful, this method returns a `200 OK` response code and [SubscribedSku](../resources/subscribedsku.md) object in the response body.
 
-<!-- uuid: 08e1b409-90cb-42c4-b1ca-398913fef469
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: f8af137c-a8bb-4c17-af48-75a2649e31f9
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Get SubscribedSku",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

@@ -6,6 +6,14 @@ A **DirectoryLinkChange** object is returned in the result set of a differential
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "Extensions"
+  ],
+  "@odata.type": "microsoft.graph.DirectoryLinkChange"
+}-->
+
 ```json
 {
   "Extensions": [
@@ -57,5 +65,12 @@ Here is a JSON representation of the resource
 |[Get MemberGroups](../api/directorylinkchange_getmembergroups.md)|String||
 |[Get MemberObjects](../api/directorylinkchange_getmemberobjects.md)|String||
 
-<!-- uuid: 1c8c034d-ffdd-4ad1-b954-07e0a40019df
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: e792a70e-67be-4fd5-8a89-7c410ab8e1be
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "DirectoryLinkChange resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

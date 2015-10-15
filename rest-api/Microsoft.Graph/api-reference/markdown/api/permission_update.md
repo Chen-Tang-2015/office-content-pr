@@ -1,7 +1,10 @@
-# Update permission
+# Update the properties of permission object.
 
 Update the properties of permission object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 PATCH /drive/root/permissions/<id>
 PATCH /drive/items/<id>/permissions/<id>
@@ -10,7 +13,7 @@ PATCH /drives/<id>/root/permissions/<id>
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -29,19 +32,47 @@ If successful, this method returns a `200 OK` response code and updated [permiss
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_permission"
+}-->
 ```http
 PUT /drive/root/permissions/<id>
 Content-type: application/json
-Content-length: 176
+Content-length: 762
 {
   "grantedTo": {
+    "application": {
+      "displayName": "displayName-value",
+      "id": "id-value"
+    },
+    "device": {
+      "displayName": "displayName-value",
+      "id": "id-value"
+    },
+    "user": {
+      "displayName": "displayName-value",
+      "id": "id-value"
+    }
   },
   "id": "id-value",
   "invitation": {
+    "email": "email-value",
+    "redeemedBy": "redeemedBy-value",
+    "signInRequired": true
   },
   "inheritedFrom": {
+    "driveId": "driveId-value",
+    "id": "id-value",
+    "path": "path-value"
   },
   "link": {
+    "application": {
+      "displayName": "displayName-value",
+      "id": "id-value"
+    },
+    "type": "type-value",
+    "webUrl": "webUrl-value"
   },
   "roles": [
     "roles-value"
@@ -50,20 +81,49 @@ Content-length: 176
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "permission"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 176
+Content-length: 762
 {
   "grantedTo": {
+    "application": {
+      "displayName": "displayName-value",
+      "id": "id-value"
+    },
+    "device": {
+      "displayName": "displayName-value",
+      "id": "id-value"
+    },
+    "user": {
+      "displayName": "displayName-value",
+      "id": "id-value"
+    }
   },
   "id": "id-value",
   "invitation": {
+    "email": "email-value",
+    "redeemedBy": "redeemedBy-value",
+    "signInRequired": true
   },
   "inheritedFrom": {
+    "driveId": "driveId-value",
+    "id": "id-value",
+    "path": "path-value"
   },
   "link": {
+    "application": {
+      "displayName": "displayName-value",
+      "id": "id-value"
+    },
+    "type": "type-value",
+    "webUrl": "webUrl-value"
   },
   "roles": [
     "roles-value"
@@ -72,5 +132,12 @@ Content-length: 176
 }
 ```
 
-<!-- uuid: 0e69ac77-773b-47cb-8929-eb366dbb7016
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 117b23d6-2b0f-4aec-a592-014f0ca8196f
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of permission object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

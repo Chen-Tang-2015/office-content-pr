@@ -1,7 +1,10 @@
 # Create Conversation
 
 Use this API to create a new Conversation.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /groups/<objectId>/Conversations
 POST /users/<objectId>/JoinedGroups/<objectId>/Conversations
@@ -11,7 +14,7 @@ POST /drive/root/createdByUser/JoinedGroups/<objectId>/Conversations
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply a JSON representation of [Conversation](../resources/conversation.md) object.
@@ -21,8 +24,24 @@ In the request body, supply a JSON representation of [Conversation](../resources
 If successful, this method returns `201, Created` response code and [Conversation](../resources/conversation.md) object in the response body.
 
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "create_conversation_from_group"
+}-->
+```http
+POST /groups/<objectId>/
+Content-type: application/json
+```
+In the request body, supply a JSON representation of [Conversation](../resources/conversation.md) object.
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "conversation"
+} -->
 ```json
 HTTP/1.1 201 Created
 Content-type: application/json
@@ -39,5 +58,12 @@ Content-length: 201
 }
 ```
 
-<!-- uuid: a7f8ee9d-badd-42d7-bb0a-33c9072b7b08
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 8eec36d2-36f5-4c8b-970d-b7fa9364a7e0
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Create Conversation",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

@@ -1,18 +1,21 @@
 # Get OAuth2PermissionGrant
 
 Retrieve the properties and relationships of oauth2permissiongrant object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 GET /oauth2PermissionGrants/<objectId>
 GET /users/<objectId>/oauth2PermissionGrants/<objectId>
 GET /drive/root/createdByUser/oauth2PermissionGrants/<objectId>
 ```
 ### Optional query parameters
-You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
+
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 Do not supply a request body for this method.
@@ -21,6 +24,11 @@ If successful, this method returns a `200 OK` response code and [OAuth2Permissio
 ### Example
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "oauth2permissiongrant"
+} -->
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
@@ -36,6 +44,14 @@ Content-length: 271
   "startTime": "datetime-value"
 }
 ```
+If successful, this method returns a `200 OK` response code and [OAuth2PermissionGrant](../resources/oauth2permissiongrant.md) object in the response body.
 
-<!-- uuid: 807fcad6-6732-460c-8bd8-a569820bc5e5
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 0d8b990c-0f7c-485b-b255-6d5d8972057b
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Get OAuth2PermissionGrant",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

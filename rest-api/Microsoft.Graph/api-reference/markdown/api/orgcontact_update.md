@@ -1,14 +1,17 @@
-# Update OrgContact
+# Update the properties of orgcontact object.
 
 Update the properties of orgcontact object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 PATCH /contacts/<objectId>
 ```
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -45,10 +48,14 @@ If successful, this method returns a `200 OK` response code and updated [OrgCont
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_orgcontact"
+}-->
 ```http
 PUT /contacts/<objectId>
 Content-type: application/json
-Content-length: 961
+Content-length: 1097
 {
   "city": "city-value",
   "country": "country-value",
@@ -66,6 +73,10 @@ Content-length: 961
   "postalCode": "postalCode-value",
   "provisioningErrors": [
     {
+      "errorDetail": "errorDetail-value",
+      "resolved": true,
+      "service": "service-value",
+      "timestamp": "datetime-value"
     }
   ],
   "proxyAddresses": [
@@ -83,11 +94,16 @@ Content-length: 961
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "orgcontact"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 961
+Content-length: 1097
 {
   "city": "city-value",
   "country": "country-value",
@@ -105,6 +121,10 @@ Content-length: 961
   "postalCode": "postalCode-value",
   "provisioningErrors": [
     {
+      "errorDetail": "errorDetail-value",
+      "resolved": true,
+      "service": "service-value",
+      "timestamp": "datetime-value"
     }
   ],
   "proxyAddresses": [
@@ -122,5 +142,12 @@ Content-length: 961
 }
 ```
 
-<!-- uuid: 8ccf4659-71e5-4a5f-a24a-e2e372322eff
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: ebe62333-1576-4090-b2ca-56ca5f43b886
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of orgcontact object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

@@ -6,6 +6,15 @@ A message that represents a meeting request, meeting cancel message, meeting acc
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "Attachments",
+    "Extensions"
+  ],
+  "@odata.type": "microsoft.graph.EventMessage"
+}-->
+
 ```json
 {
   "Attachments": [
@@ -134,5 +143,12 @@ Here is a JSON representation of the resource
 |[Replyall](../api/eventmessage_replyall.md)|[None](none.md)||
 |[Send](../api/eventmessage_send.md)|[None](none.md)||
 
-<!-- uuid: e85bebd0-f1c9-4ef4-87db-6ce6085337b3
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: b9faa40e-dc67-4341-a9e3-0c0e048da0d3
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "EventMessage resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

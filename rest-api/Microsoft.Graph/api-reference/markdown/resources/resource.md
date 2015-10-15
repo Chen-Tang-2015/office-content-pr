@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.Resource"
+}-->
+
 ```json
 {
   "content": "String",
@@ -35,5 +43,12 @@ None
 |[Update](../api/resource_update.md) | [Resource](resource.md)	|Update Resource object. |
 |[Delete](../api/resource_delete.md) | Void	|Delete Resource object. |
 
-<!-- uuid: 0f179709-2e48-446d-bd04-313762862e5f
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: ec44c525-9a1a-423a-8230-fdc32efb17fc
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Resource resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

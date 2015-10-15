@@ -1,7 +1,10 @@
 # Create Extension
 
 Use this API to create a new Extension.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/Events/<Id>/Attachments/<Id>/Extensions
 POST /groups/<objectId>/Events/<Id>/Attachments/<Id>/Extensions
@@ -11,7 +14,7 @@ POST /users/<objectId>/Messages/<Id>/Attachments/<Id>/Extensions
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply a JSON representation of [Extension](../resources/extension.md) object.
@@ -21,8 +24,24 @@ In the request body, supply a JSON representation of [Extension](../resources/ex
 If successful, this method returns `201, Created` response code and [Extension](../resources/extension.md) object in the response body.
 
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "create_extension_from_attachment"
+}-->
+```http
+POST /users/<objectId>/Events/<Id>/Attachments/<Id>/
+Content-type: application/json
+```
+In the request body, supply a JSON representation of [Extension](../resources/extension.md) object.
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "extension"
+} -->
 ```json
 HTTP/1.1 201 Created
 Content-type: application/json
@@ -32,5 +51,12 @@ Content-length: 22
 }
 ```
 
-<!-- uuid: 9ac51932-cbac-4a38-aadf-09e8d2d15889
-2015-10-12 23:35:00 UTC -->
+<!-- uuid: fad5e414-e4a8-4ec9-b30d-bf8ddca1d5de
+2015-10-15 16:17:30 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Create Extension",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

@@ -1,7 +1,10 @@
 # Delete
 
 Delete Conversation.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 DELETE /groups/<objectId>/Conversations/<Id>
 DELETE /users/<objectId>/JoinedGroups/<objectId>/Conversations/<Id>
@@ -11,7 +14,7 @@ DELETE /drive/root/createdByUser/JoinedGroups/<objectId>/Conversations/<Id>
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 Do not supply a request body for this method.
@@ -21,5 +24,12 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: d86dbd4a-fe1e-4552-ad65-a42f0780dadb
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: e73c7424-ca3d-494c-9cba-938183872378
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Delete",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

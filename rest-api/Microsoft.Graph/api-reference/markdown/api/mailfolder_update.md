@@ -1,7 +1,10 @@
-# Update MailFolder
+# Update the properties of mailfolder object.
 
 Update the properties of mailfolder object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 PATCH /users/<objectId>/RootFolder
 PATCH /users/<objectId>/Folders/<Id>
@@ -10,7 +13,7 @@ PATCH /drive/root/createdByUser/RootFolder
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -26,6 +29,10 @@ If successful, this method returns a `200 OK` response code and updated [MailFol
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_mailfolder"
+}-->
 ```http
 PUT /users/<objectId>/RootFolder
 Content-type: application/json
@@ -38,6 +45,11 @@ Content-length: 130
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "mailfolder"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
@@ -51,5 +63,12 @@ Content-length: 130
 }
 ```
 
-<!-- uuid: 0f8f4c21-cfa8-4530-a302-cc594a3b9b9f
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 859bf39a-f51e-4e68-9777-c2b348b7fa92
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of mailfolder object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

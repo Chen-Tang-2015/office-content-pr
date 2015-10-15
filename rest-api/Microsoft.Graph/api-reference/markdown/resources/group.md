@@ -6,6 +6,27 @@ Represents an Azure Active Directory Group. Inherited from **DirectoryObject**.
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "AcceptedSenders",
+    "CalendarView",
+    "Conversations",
+    "Events",
+    "Extensions",
+    "GroupPhotos",
+    "RejectedSenders",
+    "Threads",
+    "appRoleAssignments",
+    "memberOf",
+    "members",
+    "owners",
+    "plans",
+    "tasks"
+  ],
+  "@odata.type": "microsoft.graph.Group"
+}-->
+
 ```json
 {
   "AcceptedSenders": [
@@ -187,7 +208,7 @@ Here is a JSON representation of the resource
 |:---------------|:--------|:----------|
 |[Get Group](../api/group_get.md) | [Group](group.md) |Read properties and relationships of group object.|
 |[Create AcceptedSender](../api/group_post_acceptedsenders.md) |[DirectoryObject](directoryobject.md)| Create a new AcceptedSender by posting to the AcceptedSenders collection.|
-|[Create CalendarView](../api/group_post_calendarview.md) |[Event](event.md)| Create a new CalendarView by posting to the CalendarView collection.|
+|[Create Event](../api/group_post_calendarview.md) |[Event](event.md)| Create a new Event by posting to the CalendarView collection.|
 |[Create Conversation](../api/group_post_conversations.md) |[Conversation](conversation.md)| Create a new Conversation by posting to the Conversations collection.|
 |[Create Event](../api/group_post_events.md) |[Event](event.md)| Create a new Event by posting to the Events collection.|
 |[Create Extension](../api/group_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
@@ -211,5 +232,12 @@ Here is a JSON representation of the resource
 |[Get MemberGroups](../api/group_getmembergroups.md)|String||
 |[Get MemberObjects](../api/group_getmemberobjects.md)|String||
 
-<!-- uuid: b7c229e4-a29e-4e0e-bd6c-e6b55767fab2
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: b3078ac3-e3a3-4468-970d-e91d351533cc
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Group resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

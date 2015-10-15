@@ -1,7 +1,10 @@
 # Create directReport
 
 Use this API to create a new directReport.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /contacts/<objectId>/directReports
 
@@ -9,7 +12,7 @@ POST /contacts/<objectId>/directReports
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
@@ -19,8 +22,24 @@ In the request body, supply a JSON representation of [DirectoryObject](../resour
 If successful, this method returns `201, Created` response code and [DirectoryObject](../resources/directoryobject.md) object in the response body.
 
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "create_directoryobject_from_orgcontact"
+}-->
+```http
+POST /contacts/<objectId>/
+Content-type: application/json
+```
+In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "directoryobject"
+} -->
 ```json
 HTTP/1.1 201 Created
 Content-type: application/json
@@ -32,5 +51,12 @@ Content-length: 111
 }
 ```
 
-<!-- uuid: 332646e6-0c8f-4cf8-bbc0-3c164a9fd310
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: cdc29e22-7f20-436a-89a8-6ce1928e59ee
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Create directReport",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

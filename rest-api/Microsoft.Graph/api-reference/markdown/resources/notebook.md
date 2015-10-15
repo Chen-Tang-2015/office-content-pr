@@ -6,6 +6,15 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "sectionGroups",
+    "sections"
+  ],
+  "@odata.type": "microsoft.graph.Notebook"
+}-->
+
 ```json
 {
   "createdBy": "String",
@@ -70,5 +79,12 @@ Here is a JSON representation of the resource
 |[Delete](../api/notebook_delete.md) | Void	|Delete Notebook object. |
 |[Copynotebook](../api/notebook_copynotebook.md)|[CopyNotebookModel](copynotebookmodel.md)||
 
-<!-- uuid: de81f81b-148e-4082-b7a8-90cc1a9d9f82
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: b3a09d38-012a-4408-8d5e-114e98273af6
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Notebook resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

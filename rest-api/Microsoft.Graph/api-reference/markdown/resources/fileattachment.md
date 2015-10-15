@@ -6,6 +6,14 @@ A file (such as a text file or Word document) attached to a message or event. Th
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "Extensions"
+  ],
+  "@odata.type": "microsoft.graph.FileAttachment"
+}-->
+
 ```json
 {
   "ContentBytes": "String",
@@ -54,5 +62,12 @@ Here is a JSON representation of the resource
 |[Update](../api/fileattachment_update.md) | [FileAttachment](fileattachment.md)	|Update FileAttachment object. |
 |[Delete](../api/fileattachment_delete.md) | Void	|Delete FileAttachment object. |
 
-<!-- uuid: 0f483e2e-2d38-4b93-aedf-b84d8cefaf9e
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: ec46bd96-6dc2-4b74-8c43-fc37c68d31af
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "FileAttachment resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

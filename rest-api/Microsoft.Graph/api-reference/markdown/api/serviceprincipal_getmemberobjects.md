@@ -1,7 +1,10 @@
 # ServicePrincipal: getMemberObjects
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /servicePrincipals/<objectId>/getMemberObjects
 
@@ -9,7 +12,7 @@ POST /servicePrincipals/<objectId>/getMemberObjects
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -24,6 +27,10 @@ If successful, this method returns `200, OK` response code and String collection
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "serviceprincipal_getmemberobjects"
+}-->
 ```http
 POST /servicePrincipals/<objectId>/getMemberObjects
 Content-type: application/json
@@ -31,6 +38,11 @@ Content-length: 33
 {
   "securityEnabledOnly": true
 }
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "string"
+} -->
 ```
 ##### Response
 ```json
@@ -44,5 +56,12 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: 158ca828-35d4-418e-8e3b-ed56799d00b6
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 9567e97e-258b-405a-b841-d1ccaca3c5ab
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "ServicePrincipal: getMemberObjects",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

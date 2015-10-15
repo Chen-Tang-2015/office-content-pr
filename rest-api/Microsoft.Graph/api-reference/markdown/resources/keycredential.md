@@ -6,6 +6,14 @@ Contains a key credential associated with an application or a service principal.
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.KeyCredential"
+}-->
+
 ```json
 {
   "customKeyIdentifier": "String",
@@ -29,5 +37,12 @@ Here is a JSON representation of the resource
 |usage|String|A string that describes the purpose for which the key can be used; for example, ΓÇ£VerifyΓÇ¥.|
 |value|Binary|            |
 
-<!-- uuid: d2e1b090-4779-468d-8819-3076677f969f
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 25094433-7fec-4ac4-abd1-ea1d54abed86
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "KeyCredential resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

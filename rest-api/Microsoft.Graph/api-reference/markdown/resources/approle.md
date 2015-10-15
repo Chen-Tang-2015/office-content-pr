@@ -6,6 +6,14 @@ Represents an application role that may be requested by a client application cal
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.AppRole"
+}-->
+
 ```json
 {
   "allowedMemberTypes": [
@@ -29,5 +37,12 @@ Here is a JSON representation of the resource
 |isEnabled|Boolean|When creating or updating a role definition, this must be set to **true** (which is the default). To delete a role, this must first be set to **false**.  At that point, in a subsequent call, this role may be removed.|
 |value|String|Specifies the value of the roles claim that the application should expect in the authentication and access tokens.|
 
-<!-- uuid: 0238e3f0-62fc-4947-aa00-81bcf73c5db8
-2015-10-12 23:35:00 UTC -->
+<!-- uuid: 10504874-fa55-49d4-bbdd-88cdd8dee911
+2015-10-15 16:17:30 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "AppRole resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

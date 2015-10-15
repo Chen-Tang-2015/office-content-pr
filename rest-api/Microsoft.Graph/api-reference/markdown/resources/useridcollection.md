@@ -5,5 +5,12 @@
 ### Properties
 None
 
-<!-- uuid: 3b5515f5-9775-4d3e-9638-7cddb273001a
-2015-10-12 23:35:03 UTC -->
+<!-- uuid: 0f671811-36aa-40c0-8765-a6a058e659b6
+2015-10-15 16:17:34 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "UserIdCollection resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

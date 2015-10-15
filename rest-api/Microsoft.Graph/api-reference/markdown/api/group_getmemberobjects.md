@@ -1,7 +1,10 @@
 # Group: getMemberObjects
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /groups/<objectId>/getMemberObjects
 POST /users/<objectId>/JoinedGroups/<objectId>/getMemberObjects
@@ -11,7 +14,7 @@ POST /drive/root/createdByUser/JoinedGroups/<objectId>/getMemberObjects
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -26,6 +29,10 @@ If successful, this method returns `200, OK` response code and String collection
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "group_getmemberobjects"
+}-->
 ```http
 POST /groups/<objectId>/getMemberObjects
 Content-type: application/json
@@ -33,6 +40,11 @@ Content-length: 33
 {
   "securityEnabledOnly": true
 }
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "string"
+} -->
 ```
 ##### Response
 ```json
@@ -46,5 +58,12 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: 7ab6a4c3-c1fc-42f0-a59b-08fd49c59967
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 04c075bc-cf52-4639-b837-55a9961783a1
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Group: getMemberObjects",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

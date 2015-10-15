@@ -1,7 +1,10 @@
 # NotificationRule: EventTypes
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /NotificationRules/<Id>/EventTypes
 
@@ -9,7 +12,7 @@ POST /NotificationRules/<Id>/EventTypes
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 
@@ -19,10 +22,19 @@ If successful, this method returns `200, OK` response code and String collection
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "notificationrule_eventtypes"
+}-->
 ```http
 POST /NotificationRules/<Id>/EventTypes
 Content-type: application/json
 Content-length: 0
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "string"
+} -->
 ```
 ##### Response
 ```json
@@ -36,5 +48,12 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: 5526842a-d8f4-49bf-96d9-c31c7bbf81a5
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: caa7fc4d-5adc-4cab-9f1f-422395afca1d
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "NotificationRule: EventTypes",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

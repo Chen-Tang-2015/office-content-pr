@@ -1,7 +1,10 @@
 # PrivilegedRoleAssignment: My
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /PrivilegedRoleAssignments/<UserId|RoleId>/My
 POST /PrivilegedRoles/<Id>/Assignments/<UserId|RoleId>/My
@@ -10,7 +13,7 @@ POST /PrivilegedRoles/<Id>/Assignments/<UserId|RoleId>/My
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 
@@ -20,10 +23,19 @@ If successful, this method returns `200, OK` response code and [PrivilegedRoleAs
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "privilegedroleassignment_my"
+}-->
 ```http
 POST /PrivilegedRoleAssignments/<UserId|RoleId>/My
 Content-type: application/json
 Content-length: 0
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "privilegedroleassignment"
+} -->
 ```
 ##### Response
 ```json
@@ -39,5 +51,12 @@ Content-length: 160
 }
 ```
 
-<!-- uuid: 301a5d77-fa5a-4597-bdeb-863673acd032
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: cf92d34a-5fba-4896-9c5e-3dabf8b91b4a
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "PrivilegedRoleAssignment: My",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

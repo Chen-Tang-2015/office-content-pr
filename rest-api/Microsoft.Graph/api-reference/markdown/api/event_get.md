@@ -1,18 +1,27 @@
 # Get Event
 
 Retrieve the properties and relationships of event object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 GET /users/<objectId>/Events/<Id>
 GET /groups/<objectId>/Events/<Id>
 GET /users/<objectId>/CalendarView/<Id>
 ```
 ### Optional query parameters
-You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
+|Name|Value|Description|
+|:---------------|:--------|:-------|
+|$count|none|The count of related entities can be requested by specifying the $count query option.|
+|$expand|string|Comma-separated list of relationships to expand and include in the response. 
+See relationships table of [Event](../resources/event.md) object for supported names. |
+|$select|string|Comma-separated list of properties to include in the response.|
+
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 Do not supply a request body for this method.
@@ -21,13 +30,20 @@ If successful, this method returns a `200 OK` response code and [Event](../resou
 ### Example
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "event"
+} -->
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 901
+Content-length: 1794
 {
   "Subject": "Subject-value",
   "Body": {
+    "ContentType": "ContentType-value",
+    "Content": "Content-value"
   },
   "BodyPreview": "BodyPreview-value",
   "Importance": "Importance-value",
@@ -38,9 +54,14 @@ Content-length: 901
   "EndTimeZone": "EndTimeZone-value",
   "Reminder": 99,
   "Location": {
+    "altitude": 99,
+    "latitude": 99,
+    "longitude": 99
   },
   "ShowAs": "ShowAs-value",
   "ResponseStatus": {
+    "Response": "Response-value",
+    "Time": "datetime-value"
   },
   "IsAllDay": true,
   "IsCancelled": true,
@@ -50,11 +71,39 @@ Content-length: 901
   "SeriesMasterId": "SeriesMasterId-value",
   "Attendees": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      },
+      "Status": {
+        "Response": "Response-value",
+        "Time": "datetime-value"
+      },
+      "Type": "Type-value"
     }
   ],
   "Recurrence": {
+    "Pattern": {
+      "Type": "Type-value",
+      "Interval": 99,
+      "Month": 99,
+      "DayOfMonth": 99,
+      "DaysOfWeek": "DaysOfWeek-value",
+      "FirstDayOfWeek": "FirstDayOfWeek-value",
+      "Index": "Index-value"
+    },
+    "Range": {
+      "Type": "Type-value",
+      "StartDate": "datetime-value",
+      "EndDate": "datetime-value",
+      "NumberOfOccurrences": 99
+    }
   },
   "Organizer": {
+    "EmailAddress": {
+      "Name": "Name-value",
+      "Address": "Address-value"
+    }
   },
   "iCalUId": "iCalUId-value",
   "WebLink": "WebLink-value",
@@ -68,6 +117,14 @@ Content-length: 901
   "Id": "Id-value"
 }
 ```
+If successful, this method returns a `200 OK` response code and [Event](../resources/event.md) object in the response body.
 
-<!-- uuid: e7409511-64da-4a57-adb8-c6a5d52d0e7e
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 546f4fe6-88fa-421b-9a45-648bc74d9965
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Get Event",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

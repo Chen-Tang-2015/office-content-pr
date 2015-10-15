@@ -1,7 +1,10 @@
 # Device: checkMemberGroups
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /devices/<objectId>/checkMemberGroups
 
@@ -9,7 +12,7 @@ POST /devices/<objectId>/checkMemberGroups
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -24,6 +27,10 @@ If successful, this method returns `200, OK` response code and String collection
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "device_checkmembergroups"
+}-->
 ```http
 POST /devices/<objectId>/checkMemberGroups
 Content-type: application/json
@@ -33,6 +40,11 @@ Content-length: 44
     "groupIds-value"
   ]
 }
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "string"
+} -->
 ```
 ##### Response
 ```json
@@ -46,5 +58,12 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: 2b92d2a1-07d1-4bba-9eb2-ae4f47afb4c0
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 554bd692-5b7f-4279-92c3-df02ce9ddb83
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Device: checkMemberGroups",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

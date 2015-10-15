@@ -1,7 +1,10 @@
-# Update Page
+# Update the properties of page object.
 
 Update the properties of page object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 PATCH /users/<objectId>/notes/pages/<id>
 PATCH /drive/root/createdByUser/notes/pages/<id>
@@ -10,7 +13,7 @@ PATCH /drive/root/lastModifiedByUser/notes/pages/<id>
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -31,14 +34,24 @@ If successful, this method returns a `200 OK` response code and updated [Page](.
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_page"
+}-->
 ```http
 PUT /users/<objectId>/notes/pages/<id>
 Content-type: application/json
-Content-length: 275
+Content-length: 391
 {
   "title": "title-value",
   "createdByAppId": "createdByAppId-value",
   "links": {
+    "oneNoteClientUrl": {
+      "href": "href-value"
+    },
+    "oneNoteWebUrl": {
+      "href": "href-value"
+    }
   },
   "contentUrl": "contentUrl-value",
   "content": "content-value",
@@ -49,15 +62,26 @@ Content-length: 275
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "page"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 275
+Content-length: 391
 {
   "title": "title-value",
   "createdByAppId": "createdByAppId-value",
   "links": {
+    "oneNoteClientUrl": {
+      "href": "href-value"
+    },
+    "oneNoteWebUrl": {
+      "href": "href-value"
+    }
   },
   "contentUrl": "contentUrl-value",
   "content": "content-value",
@@ -68,5 +92,12 @@ Content-length: 275
 }
 ```
 
-<!-- uuid: 3908c5b5-c37f-42e5-aaed-ca34803eacb8
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: e4e6647f-4073-4043-abde-b2c26fc1a990
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of page object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

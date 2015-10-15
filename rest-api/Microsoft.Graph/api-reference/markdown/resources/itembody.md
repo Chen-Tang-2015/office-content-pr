@@ -6,6 +6,14 @@ The body content of a message or event.
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.ItemBody"
+}-->
+
 ```json
 {
   "Content": "String",
@@ -19,5 +27,12 @@ Here is a JSON representation of the resource
 |Content|String|The text or HTML content.|
 |ContentType|String|The content type: Text = 0, HTML = 1. Possible values are: `Text`, `HTML`.|
 
-<!-- uuid: 9be485de-6d16-4c7b-8ef7-dd4ad0cb52fe
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 96957c3c-6927-4221-aba4-6903f44d50be
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "ItemBody resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

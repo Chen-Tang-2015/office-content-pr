@@ -6,6 +6,14 @@ The frequency of an event.
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.RecurrencePattern"
+}-->
+
 ```json
 {
   "DayOfMonth": 1024,
@@ -31,5 +39,12 @@ Here is a JSON representation of the resource
 |Month|Int32|The month that the item occurs on.  This is a number from 1 to 12.|
 |Type|String|The recurrence pattern type: Daily = 0, Weekly = 1, AbsoluteMonthly = 2, RelativeMonthly = 3, AbsoluteYearly = 4, RelativeYearly = 5. Possible values are: `Daily`, `Weekly`, `AbsoluteMonthly`, `RelativeMonthly`, `AbsoluteYearly`, `RelativeYearly`.|
 
-<!-- uuid: a023b563-9657-43ff-b084-01d20a9d3014
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 0b0f2e50-3eae-4a7d-bb69-8dc1bfb4030c
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "RecurrencePattern resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

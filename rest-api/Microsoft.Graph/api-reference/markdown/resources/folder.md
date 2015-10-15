@@ -6,6 +6,14 @@ A folder in a user's mailbox, such as Inbox, Drafts, and Sent Items. Folders can
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.folder"
+}-->
+
 ```json
 {
   "childCount": 1024
@@ -17,5 +25,12 @@ Here is a JSON representation of the resource
 |:---------------|:--------|:----------|
 |childCount|Int32||
 
-<!-- uuid: 4eecc4fb-ff44-4170-8126-51a171f2aa73
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 29d4b2b7-5288-44ba-8c30-0064dfe3297b
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "folder resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

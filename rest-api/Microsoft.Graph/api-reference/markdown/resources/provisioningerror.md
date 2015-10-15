@@ -6,6 +6,14 @@ The **provisioningErrors** property of the [Contact], [User], and [Group] entiti
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.ProvisioningError"
+}-->
+
 ```json
 {
   "errorDetail": "String",
@@ -23,5 +31,12 @@ Here is a JSON representation of the resource
 |service|String||
 |timestamp|DateTimeOffset|The date and time at which the error occurred.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 
-<!-- uuid: 7cb6d7b1-8446-4aa8-ba3d-58468d31991a
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 33a37399-3d09-4e14-b54d-095d268b97f1
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "ProvisioningError resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

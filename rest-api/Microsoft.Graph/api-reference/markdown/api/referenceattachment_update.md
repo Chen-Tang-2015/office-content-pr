@@ -1,14 +1,17 @@
-# Update ReferenceAttachment
+# Update the properties of referenceattachment object.
 
 Update the properties of referenceattachment object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 
 ```
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -26,6 +29,10 @@ If successful, this method returns a `200 OK` response code and updated [Referen
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_referenceattachment"
+}-->
 ```http
 
 Content-type: application/json
@@ -40,6 +47,11 @@ Content-length: 162
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "referenceattachment"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
@@ -55,5 +67,12 @@ Content-length: 162
 }
 ```
 
-<!-- uuid: 8789991c-1434-4a6e-888c-8cab5fea4fe1
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 2d9557b3-a1af-4c71-aeaf-0179806aa4bb
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of referenceattachment object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

@@ -6,6 +6,36 @@ Represents an Azure AD user account. Inherits from [DirectoryObject].
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "CalendarGroups",
+    "CalendarView",
+    "Calendars",
+    "ContactFolders",
+    "Contacts",
+    "Events",
+    "Extensions",
+    "Folders",
+    "JoinedGroups",
+    "Messages",
+    "TrendingAround",
+    "UserPhotos",
+    "WorkingWith",
+    "appRoleAssignments",
+    "createdObjects",
+    "directReports",
+    "memberOf",
+    "oauth2PermissionGrants",
+    "ownedDevices",
+    "ownedObjects",
+    "plans",
+    "registeredDevices",
+    "tasks"
+  ],
+  "@odata.type": "microsoft.graph.User"
+}-->
+
 ```json
 {
   "AboutMe": "String",
@@ -329,7 +359,7 @@ Here is a JSON representation of the resource
 |:---------------|:--------|:----------|
 |[Get User](../api/user_get.md) | [User](user.md) |Read properties and relationships of user object.|
 |[Create CalendarGroup](../api/user_post_calendargroups.md) |[CalendarGroup](calendargroup.md)| Create a new CalendarGroup by posting to the CalendarGroups collection.|
-|[Create CalendarView](../api/user_post_calendarview.md) |[Event](event.md)| Create a new CalendarView by posting to the CalendarView collection.|
+|[Create Event](../api/user_post_calendarview.md) |[Event](event.md)| Create a new Event by posting to the CalendarView collection.|
 |[Create Calendar](../api/user_post_calendars.md) |[Calendar](calendar.md)| Create a new Calendar by posting to the Calendars collection.|
 |[Create ContactFolder](../api/user_post_contactfolders.md) |[ContactFolder](contactfolder.md)| Create a new ContactFolder by posting to the ContactFolders collection.|
 |[Create Contact](../api/user_post_contacts.md) |[Contact](contact.md)| Create a new Contact by posting to the Contacts collection.|
@@ -359,5 +389,12 @@ Here is a JSON representation of the resource
 |[Get MemberGroups](../api/user_getmembergroups.md)|String||
 |[Get MemberObjects](../api/user_getmemberobjects.md)|String||
 
-<!-- uuid: 0e236943-770e-468b-b167-838457f274f3
-2015-10-12 23:35:03 UTC -->
+<!-- uuid: 92260781-abe2-4d0e-8f6c-b51ab6e4cf45
+2015-10-15 16:17:34 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "User resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

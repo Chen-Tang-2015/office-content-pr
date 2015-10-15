@@ -1,7 +1,10 @@
-# Update SectionGroup
+# Update the properties of sectiongroup object.
 
 Update the properties of sectiongroup object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 PATCH /users/<objectId>/notes/sectionGroups/<id>
 PATCH /drive/root/createdByUser/notes/sectionGroups/<id>
@@ -10,7 +13,7 @@ PATCH /drive/root/lastModifiedByUser/notes/sectionGroups/<id>
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -31,6 +34,10 @@ If successful, this method returns a `200 OK` response code and updated [Section
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_sectiongroup"
+}-->
 ```http
 PUT /users/<objectId>/notes/sectionGroups/<id>
 Content-type: application/json
@@ -48,6 +55,11 @@ Content-length: 309
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "sectiongroup"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
@@ -66,5 +78,12 @@ Content-length: 309
 }
 ```
 
-<!-- uuid: edeb5b34-cb76-4817-a077-d8495a0f7f49
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 06a916ba-a783-4de8-89cf-13f264e8c7a4
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of sectiongroup object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

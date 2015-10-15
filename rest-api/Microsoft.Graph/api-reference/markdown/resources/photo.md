@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "Extensions"
+  ],
+  "@odata.type": "microsoft.graph.Photo"
+}-->
+
 ```json
 {
   "Extensions": [
@@ -40,5 +48,12 @@ Here is a JSON representation of the resource
 |[Update](../api/photo_update.md) | [Photo](photo.md)	|Update Photo object. |
 |[Delete](../api/photo_delete.md) | Void	|Delete Photo object. |
 
-<!-- uuid: 0529ab0c-a1e4-42a5-8727-4b26d9c75d4c
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 3f6183b5-37d0-4b1d-8aa1-0cae3c213d0e
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Photo resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

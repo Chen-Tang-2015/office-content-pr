@@ -6,6 +6,16 @@ A folder that contains contacts.
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "ChildFolders",
+    "Contacts",
+    "Extensions"
+  ],
+  "@odata.type": "microsoft.graph.ContactFolder"
+}-->
+
 ```json
 {
   "ChildFolders": [
@@ -54,5 +64,12 @@ Here is a JSON representation of the resource
 |[Update](../api/contactfolder_update.md) | [ContactFolder](contactfolder.md)	|Update ContactFolder object. |
 |[Delete](../api/contactfolder_delete.md) | Void	|Delete ContactFolder object. |
 
-<!-- uuid: 8c0790f3-110b-4d32-8b4f-759e890da35e
-2015-10-12 23:35:00 UTC -->
+<!-- uuid: 1728be4e-8d00-4079-9701-c9af353abf36
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "ContactFolder resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

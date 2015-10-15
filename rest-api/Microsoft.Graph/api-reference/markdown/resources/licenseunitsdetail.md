@@ -6,6 +6,14 @@ The **prepaidUnits** property of the [SubscribedSku] entity is of type **License
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.LicenseUnitsDetail"
+}-->
+
 ```json
 {
   "enabled": 1024,
@@ -21,5 +29,12 @@ Here is a JSON representation of the resource
 |suspended|Int32|            |
 |warning|Int32|            |
 
-<!-- uuid: f5766f2b-ba71-41d9-885e-f27993ffc6c4
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 51737dc1-d2b4-4c51-a7e5-62a44294c001
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "LicenseUnitsDetail resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

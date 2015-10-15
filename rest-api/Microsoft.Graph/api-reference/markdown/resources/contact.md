@@ -6,6 +6,14 @@ Represents an organizational contact. Inherits from [DirectoryObject].
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "Extensions"
+  ],
+  "@odata.type": "microsoft.graph.Contact"
+}-->
+
 ```json
 {
   "AssistantName": "String",
@@ -126,5 +134,12 @@ Here is a JSON representation of the resource
 |[Update](../api/contact_update.md) | [Contact](contact.md)	|Update Contact object. |
 |[Delete](../api/contact_delete.md) | Void	|Delete Contact object. |
 
-<!-- uuid: 83dc8e67-c09b-4353-93dd-ca7ae9f88918
-2015-10-12 23:35:00 UTC -->
+<!-- uuid: a3c633d0-c707-469d-8942-96614d26915c
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Contact resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

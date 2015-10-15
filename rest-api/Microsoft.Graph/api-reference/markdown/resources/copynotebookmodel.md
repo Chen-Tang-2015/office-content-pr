@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.CopyNotebookModel"
+}-->
+
 ```json
 {
   "createdBy": "String",
@@ -43,5 +51,12 @@ Here is a JSON representation of the resource
 |self|String||
 |userRole|String| Possible values are: `Owner`, `Contributor`, `Reader`, `None`.|
 
-<!-- uuid: b5647d32-71bc-4867-ba18-a557d6916ff5
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: cf8bdd26-026c-45e5-8cb0-c1ab0905cea2
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "CopyNotebookModel resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

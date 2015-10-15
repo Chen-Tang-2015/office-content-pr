@@ -1,7 +1,10 @@
-# Update Event
+# Update the properties of event object.
 
 Update the properties of event object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 PATCH /users/<objectId>/Events/<Id>
 PATCH /groups/<objectId>/Events/<Id>
@@ -10,7 +13,7 @@ PATCH /users/<objectId>/CalendarView/<Id>
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -52,13 +55,19 @@ If successful, this method returns a `200 OK` response code and updated [Event](
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_event"
+}-->
 ```http
 PUT /users/<objectId>/Events/<Id>
 Content-type: application/json
-Content-length: 901
+Content-length: 1794
 {
   "Subject": "Subject-value",
   "Body": {
+    "ContentType": "ContentType-value",
+    "Content": "Content-value"
   },
   "BodyPreview": "BodyPreview-value",
   "Importance": "Importance-value",
@@ -69,9 +78,14 @@ Content-length: 901
   "EndTimeZone": "EndTimeZone-value",
   "Reminder": 99,
   "Location": {
+    "altitude": 99,
+    "latitude": 99,
+    "longitude": 99
   },
   "ShowAs": "ShowAs-value",
   "ResponseStatus": {
+    "Response": "Response-value",
+    "Time": "datetime-value"
   },
   "IsAllDay": true,
   "IsCancelled": true,
@@ -81,11 +95,39 @@ Content-length: 901
   "SeriesMasterId": "SeriesMasterId-value",
   "Attendees": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      },
+      "Status": {
+        "Response": "Response-value",
+        "Time": "datetime-value"
+      },
+      "Type": "Type-value"
     }
   ],
   "Recurrence": {
+    "Pattern": {
+      "Type": "Type-value",
+      "Interval": 99,
+      "Month": 99,
+      "DayOfMonth": 99,
+      "DaysOfWeek": "DaysOfWeek-value",
+      "FirstDayOfWeek": "FirstDayOfWeek-value",
+      "Index": "Index-value"
+    },
+    "Range": {
+      "Type": "Type-value",
+      "StartDate": "datetime-value",
+      "EndDate": "datetime-value",
+      "NumberOfOccurrences": 99
+    }
   },
   "Organizer": {
+    "EmailAddress": {
+      "Name": "Name-value",
+      "Address": "Address-value"
+    }
   },
   "iCalUId": "iCalUId-value",
   "WebLink": "WebLink-value",
@@ -100,14 +142,21 @@ Content-length: 901
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "event"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 901
+Content-length: 1794
 {
   "Subject": "Subject-value",
   "Body": {
+    "ContentType": "ContentType-value",
+    "Content": "Content-value"
   },
   "BodyPreview": "BodyPreview-value",
   "Importance": "Importance-value",
@@ -118,9 +167,14 @@ Content-length: 901
   "EndTimeZone": "EndTimeZone-value",
   "Reminder": 99,
   "Location": {
+    "altitude": 99,
+    "latitude": 99,
+    "longitude": 99
   },
   "ShowAs": "ShowAs-value",
   "ResponseStatus": {
+    "Response": "Response-value",
+    "Time": "datetime-value"
   },
   "IsAllDay": true,
   "IsCancelled": true,
@@ -130,11 +184,39 @@ Content-length: 901
   "SeriesMasterId": "SeriesMasterId-value",
   "Attendees": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      },
+      "Status": {
+        "Response": "Response-value",
+        "Time": "datetime-value"
+      },
+      "Type": "Type-value"
     }
   ],
   "Recurrence": {
+    "Pattern": {
+      "Type": "Type-value",
+      "Interval": 99,
+      "Month": 99,
+      "DayOfMonth": 99,
+      "DaysOfWeek": "DaysOfWeek-value",
+      "FirstDayOfWeek": "FirstDayOfWeek-value",
+      "Index": "Index-value"
+    },
+    "Range": {
+      "Type": "Type-value",
+      "StartDate": "datetime-value",
+      "EndDate": "datetime-value",
+      "NumberOfOccurrences": 99
+    }
   },
   "Organizer": {
+    "EmailAddress": {
+      "Name": "Name-value",
+      "Address": "Address-value"
+    }
   },
   "iCalUId": "iCalUId-value",
   "WebLink": "WebLink-value",
@@ -149,5 +231,12 @@ Content-length: 901
 }
 ```
 
-<!-- uuid: 229769d8-43d1-465f-852a-dab5651b395f
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: b89cc23e-8fdd-4396-9a7a-012ddbdc7e0b
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of event object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

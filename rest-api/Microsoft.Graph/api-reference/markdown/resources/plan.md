@@ -6,6 +6,15 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "buckets",
+    "tasks"
+  ],
+  "@odata.type": "microsoft.graph.Plan"
+}-->
+
 ```json
 {
   "activeTasks": 1024,
@@ -75,5 +84,12 @@ Here is a JSON representation of the resource
 |[Update](../api/plan_update.md) | [Plan](plan.md)	|Update Plan object. |
 |[Delete](../api/plan_delete.md) | Void	|Delete Plan object. |
 
-<!-- uuid: 18589af2-8be7-46dd-bb68-3900b3ad8ed4
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 521d2483-fe4f-47c5-8ebc-91da9fa4f9a0
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Plan resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

@@ -6,6 +6,15 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "sectionGroups",
+    "sections"
+  ],
+  "@odata.type": "microsoft.graph.SectionGroup"
+}-->
+
 ```json
 {
   "createdBy": "String",
@@ -67,5 +76,12 @@ Here is a JSON representation of the resource
 |[Update](../api/sectiongroup_update.md) | [SectionGroup](sectiongroup.md)	|Update SectionGroup object. |
 |[Delete](../api/sectiongroup_delete.md) | Void	|Delete SectionGroup object. |
 
-<!-- uuid: 772a3a55-fedf-46dd-b187-9c6ed63a4f96
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 086b2384-0eb3-4a2e-a0c1-aee03b72d05d
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "SectionGroup resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.UserDetails"
+}-->
+
 ```json
 {
   "id": "String (identifier)",
@@ -35,5 +43,12 @@ None
 |[Update](../api/userdetails_update.md) | [UserDetails](userdetails.md)	|Update UserDetails object. |
 |[Delete](../api/userdetails_delete.md) | Void	|Delete UserDetails object. |
 
-<!-- uuid: 4db8a0fb-bca7-434e-8e81-657cbdebe235
-2015-10-12 23:35:03 UTC -->
+<!-- uuid: 6c962f13-f814-47da-84a4-9cd278371916
+2015-10-15 16:17:34 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "UserDetails resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

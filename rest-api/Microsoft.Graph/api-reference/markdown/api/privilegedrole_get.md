@@ -1,17 +1,20 @@
 # Get PrivilegedRole
 
 Retrieve the properties and relationships of privilegedrole object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 GET /PrivilegedRoles/<Id>
 GET /PrivilegedRoleAssignments/<UserId|RoleId>/RoleInfo
 ```
 ### Optional query parameters
-You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
+
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 Do not supply a request body for this method.
@@ -20,6 +23,11 @@ If successful, this method returns a `200 OK` response code and [PrivilegedRole]
 ### Example
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "privilegedrole"
+} -->
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
@@ -29,6 +37,14 @@ Content-length: 46
   "Name": "Name-value"
 }
 ```
+If successful, this method returns a `200 OK` response code and [PrivilegedRole](../resources/privilegedrole.md) object in the response body.
 
-<!-- uuid: 5c8bbb27-2609-4db1-b0c8-7b9d3a8cd1ab
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 33c372c4-1daf-4313-b461-d96f6baed2f1
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Get PrivilegedRole",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

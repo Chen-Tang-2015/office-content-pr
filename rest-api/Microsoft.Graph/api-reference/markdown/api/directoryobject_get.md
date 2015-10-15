@@ -1,18 +1,21 @@
 # Get DirectoryObject
 
 Retrieve the properties and relationships of directoryobject object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 GET /users/<objectId>/manager
 GET /directoryObjects/<objectId>
 GET /contacts/<objectId>/manager
 ```
 ### Optional query parameters
-You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
+
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 Do not supply a request body for this method.
@@ -21,6 +24,11 @@ If successful, this method returns a `200 OK` response code and [DirectoryObject
 ### Example
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "directoryobject"
+} -->
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
@@ -31,6 +39,14 @@ Content-length: 111
   "deletionTimestamp": "datetime-value"
 }
 ```
+If successful, this method returns a `200 OK` response code and [DirectoryObject](../resources/directoryobject.md) object in the response body.
 
-<!-- uuid: 9e25e0cd-99dd-442c-929a-fd269398acf4
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: e4c02951-51b4-41b5-bbf9-00ede1d266e0
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Get DirectoryObject",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

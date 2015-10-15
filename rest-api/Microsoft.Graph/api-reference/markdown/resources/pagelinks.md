@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.PageLinks"
+}-->
+
 ```json
 {
   "oneNoteClientUrl": {
@@ -23,5 +31,12 @@ Here is a JSON representation of the resource
 |oneNoteClientUrl|[ExternalLink](externallink.md)||
 |oneNoteWebUrl|[ExternalLink](externallink.md)||
 
-<!-- uuid: 5920387a-f698-43b6-80b4-05f3ef153e33
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: dba5d300-3be6-4541-9ed3-1cf77859887e
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "PageLinks resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

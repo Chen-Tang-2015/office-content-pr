@@ -1,7 +1,10 @@
 # Notification: NotificationTypes
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /Notifications/<Id>/NotificationTypes
 
@@ -9,7 +12,7 @@ POST /Notifications/<Id>/NotificationTypes
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 
@@ -19,10 +22,19 @@ If successful, this method returns `200, OK` response code and String collection
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "notification_notificationtypes"
+}-->
 ```http
 POST /Notifications/<Id>/NotificationTypes
 Content-type: application/json
 Content-length: 0
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "string"
+} -->
 ```
 ##### Response
 ```json
@@ -36,5 +48,12 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: 132012ed-27b2-4db7-b16e-ef17152fe1f3
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 8f3d0bea-1dfc-4cbb-80d7-6679dfb66731
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Notification: NotificationTypes",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

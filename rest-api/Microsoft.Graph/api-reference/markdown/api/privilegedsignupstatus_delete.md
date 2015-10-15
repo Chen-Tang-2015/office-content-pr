@@ -1,7 +1,10 @@
 # Delete
 
 Delete PrivilegedSignupStatus.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 DELETE /PrivilegedSignupStatus/<TenantId>
 
@@ -9,7 +12,7 @@ DELETE /PrivilegedSignupStatus/<TenantId>
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 Do not supply a request body for this method.
@@ -19,5 +22,12 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: 3abe223a-fdc5-49d1-843f-bacae7a28f59
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: cb184442-b274-4650-a7af-2755577b2753
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Delete",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

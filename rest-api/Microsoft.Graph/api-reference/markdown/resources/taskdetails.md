@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.TaskDetails"
+}-->
+
 ```json
 {
   "completedBy": "String",
@@ -41,5 +49,12 @@ None
 |[Update](../api/taskdetails_update.md) | [TaskDetails](taskdetails.md)	|Update TaskDetails object. |
 |[Delete](../api/taskdetails_delete.md) | Void	|Delete TaskDetails object. |
 
-<!-- uuid: e2c69aff-76d4-4d71-bdca-63ba72a35e93
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 2bc362d2-4437-4d72-8866-cf221b7dbaac
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "TaskDetails resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

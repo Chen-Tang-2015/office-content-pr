@@ -1,14 +1,17 @@
-# Update TenantDetail
+# Update the properties of tenantdetail object.
 
 Update the properties of tenantdetail object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 PATCH /tenantDetails/<objectId>
 ```
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -42,13 +45,21 @@ If successful, this method returns a `200 OK` response code and updated [TenantD
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_tenantdetail"
+}-->
 ```http
 PUT /tenantDetails/<objectId>
 Content-type: application/json
-Content-length: 1025
+Content-length: 1647
 {
   "assignedPlans": [
     {
+      "assignedTimestamp": "datetime-value",
+      "capabilityStatus": "capabilityStatus-value",
+      "service": "service-value",
+      "servicePlanId": "servicePlanId-value"
     }
   ],
   "city": "city-value",
@@ -64,10 +75,17 @@ Content-length: 1025
   "preferredLanguage": "preferredLanguage-value",
   "provisionedPlans": [
     {
+      "capabilityStatus": "capabilityStatus-value",
+      "provisioningStatus": "provisioningStatus-value",
+      "service": "service-value"
     }
   ],
   "provisioningErrors": [
     {
+      "errorDetail": "errorDetail-value",
+      "resolved": true,
+      "service": "service-value",
+      "timestamp": "datetime-value"
     }
   ],
   "securityComplianceNotificationMails": [
@@ -84,6 +102,12 @@ Content-length: 1025
   "telephoneNumber": "telephoneNumber-value",
   "verifiedDomains": [
     {
+      "capabilities": "capabilities-value",
+      "default": true,
+      "id": "id-value",
+      "initial": true,
+      "name": "name-value",
+      "type": "type-value"
     }
   ],
   "objectType": "objectType-value",
@@ -92,14 +116,23 @@ Content-length: 1025
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "tenantdetail"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 1025
+Content-length: 1647
 {
   "assignedPlans": [
     {
+      "assignedTimestamp": "datetime-value",
+      "capabilityStatus": "capabilityStatus-value",
+      "service": "service-value",
+      "servicePlanId": "servicePlanId-value"
     }
   ],
   "city": "city-value",
@@ -115,10 +148,17 @@ Content-length: 1025
   "preferredLanguage": "preferredLanguage-value",
   "provisionedPlans": [
     {
+      "capabilityStatus": "capabilityStatus-value",
+      "provisioningStatus": "provisioningStatus-value",
+      "service": "service-value"
     }
   ],
   "provisioningErrors": [
     {
+      "errorDetail": "errorDetail-value",
+      "resolved": true,
+      "service": "service-value",
+      "timestamp": "datetime-value"
     }
   ],
   "securityComplianceNotificationMails": [
@@ -135,6 +175,12 @@ Content-length: 1025
   "telephoneNumber": "telephoneNumber-value",
   "verifiedDomains": [
     {
+      "capabilities": "capabilities-value",
+      "default": true,
+      "id": "id-value",
+      "initial": true,
+      "name": "name-value",
+      "type": "type-value"
     }
   ],
   "objectType": "objectType-value",
@@ -143,5 +189,12 @@ Content-length: 1025
 }
 ```
 
-<!-- uuid: 6ceec480-c97c-4b6f-b12e-8aa4a32b89a1
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 1f1b0a1b-39d6-4d18-a7bc-911fc5def093
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of tenantdetail object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

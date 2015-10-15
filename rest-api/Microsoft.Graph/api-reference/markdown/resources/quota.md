@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.quota"
+}-->
+
 ```json
 {
   "deleted": 1024,
@@ -25,5 +33,12 @@ Here is a JSON representation of the resource
 |total|Int64||
 |used|Int64||
 
-<!-- uuid: 25107f3d-61b8-44a3-90db-78c69358c995
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 3020b4a0-0423-4979-98ce-a42007caf66b
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "quota resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

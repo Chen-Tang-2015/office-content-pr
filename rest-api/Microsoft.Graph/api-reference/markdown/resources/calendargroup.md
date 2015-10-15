@@ -6,6 +6,15 @@ A group of calendars.
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "Calendars",
+    "Extensions"
+  ],
+  "@odata.type": "microsoft.graph.CalendarGroup"
+}-->
+
 ```json
 {
   "Calendars": [
@@ -49,5 +58,12 @@ Here is a JSON representation of the resource
 |[Update](../api/calendargroup_update.md) | [CalendarGroup](calendargroup.md)	|Update CalendarGroup object. |
 |[Delete](../api/calendargroup_delete.md) | Void	|Delete CalendarGroup object. |
 
-<!-- uuid: c44018a4-12c7-451e-a57a-895b96e2d477
-2015-10-12 23:35:00 UTC -->
+<!-- uuid: ee13bf49-3a98-47ad-b92a-ef54e98bd255
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "CalendarGroup resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

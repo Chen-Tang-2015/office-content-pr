@@ -1,7 +1,10 @@
 # User: getMemberGroups
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/getMemberGroups
 POST /drive/root/createdByUser/getMemberGroups
@@ -11,7 +14,7 @@ POST /drive/root/lastModifiedByUser/getMemberGroups
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -26,6 +29,10 @@ If successful, this method returns `200, OK` response code and String collection
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "user_getmembergroups"
+}-->
 ```http
 POST /users/<objectId>/getMemberGroups
 Content-type: application/json
@@ -33,6 +40,11 @@ Content-length: 33
 {
   "securityEnabledOnly": true
 }
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "string"
+} -->
 ```
 ##### Response
 ```json
@@ -46,5 +58,12 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: a57633ef-91ea-41b4-97bd-8b54819d0ef5
-2015-10-12 23:35:03 UTC -->
+<!-- uuid: 55b8d2ff-db2f-4429-9a67-04a365b760eb
+2015-10-15 16:17:34 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "User: getMemberGroups",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

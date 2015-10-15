@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.video"
+}-->
+
 ```json
 {
   "bitrate": 1024,
@@ -23,5 +31,12 @@ Here is a JSON representation of the resource
 |height|Int32||
 |width|Int32||
 
-<!-- uuid: ff9f0e7a-b068-47bd-bc5b-bec65bb45118
-2015-10-12 23:35:03 UTC -->
+<!-- uuid: 33621418-e34b-443d-8950-917260fafcde
+2015-10-15 16:17:34 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "video resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

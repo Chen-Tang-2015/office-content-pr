@@ -1,7 +1,10 @@
 # Create special
 
 Use this API to create a new special.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /drive/special
 POST /drives/<id>/special
@@ -11,7 +14,7 @@ POST /users/<objectId>/drive/special
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply a JSON representation of [item](../resources/item.md) object.
@@ -21,15 +24,43 @@ In the request body, supply a JSON representation of [item](../resources/item.md
 If successful, this method returns `201, Created` response code and [item](../resources/item.md) object in the response body.
 
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "create_item_from_drive"
+}-->
+```http
+POST /drive/
+Content-type: application/json
+```
+In the request body, supply a JSON representation of [item](../resources/item.md) object.
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "item"
+} -->
 ```json
 HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 665
+Content-length: 3050
 {
   "content": "content-value",
   "createdBy": {
+    "application": {
+      "displayName": "displayName-value",
+      "id": "id-value"
+    },
+    "device": {
+      "displayName": "displayName-value",
+      "id": "id-value"
+    },
+    "user": {
+      "displayName": "displayName-value",
+      "id": "id-value"
+    }
   },
   "createdDateTime": "datetime-value",
   "cTag": "cTag-value",
@@ -37,42 +68,133 @@ Content-length: 665
   "eTag": "eTag-value",
   "id": "id-value",
   "lastModifiedBy": {
+    "application": {
+      "displayName": "displayName-value",
+      "id": "id-value"
+    },
+    "device": {
+      "displayName": "displayName-value",
+      "id": "id-value"
+    },
+    "user": {
+      "displayName": "displayName-value",
+      "id": "id-value"
+    }
   },
   "lastModifiedDateTime": "datetime-value",
   "name": "name-value",
   "parentReference": {
+    "driveId": "driveId-value",
+    "id": "id-value",
+    "path": "path-value"
   },
   "size": 99,
   "webDavUrl": "webDavUrl-value",
   "webUrl": "webUrl-value",
   "audio": {
+    "album": "album-value",
+    "albumArtist": "albumArtist-value",
+    "artist": "artist-value",
+    "bitrate": 99,
+    "composers": "composers-value",
+    "copyright": "copyright-value",
+    "disc": 99,
+    "discCount": 99,
+    "duration": 99,
+    "genre": "genre-value",
+    "hasDrm": true,
+    "isVariableBitrate": true,
+    "title": "title-value",
+    "track": 99,
+    "trackCount": 99,
+    "year": 99
   },
   "deleted": {
+    "state": "state-value"
   },
   "file": {
   },
   "fileSystemInfo": {
+    "createdDateTime": "datetime-value",
+    "lastModifiedDateTime": "datetime-value"
   },
   "folder": {
+    "childCount": 99
   },
   "image": {
+    "height": 99,
+    "width": 99
   },
   "location": {
+    "altitude": 99,
+    "latitude": 99,
+    "longitude": 99
   },
   "openWith": {
+    "web": {
+      "app": {
+        "displayName": "displayName-value",
+        "id": "id-value"
+      },
+      "viewUrl": "viewUrl-value",
+      "editUrl": "editUrl-value",
+      "viewPostParameters": "viewPostParameters-value",
+      "editPostParameters": "editPostParameters-value"
+    },
+    "webEmbedded": {
+      "app": {
+        "displayName": "displayName-value",
+        "id": "id-value"
+      },
+      "viewUrl": "viewUrl-value",
+      "editUrl": "editUrl-value",
+      "viewPostParameters": "viewPostParameters-value",
+      "editPostParameters": "editPostParameters-value"
+    }
   },
   "photo": {
+    "Width": 99,
+    "Height": 99,
+    "Id": "Id-value"
   },
   "searchResult": {
+    "onClickTelemetryUrl": "onClickTelemetryUrl-value"
   },
   "shared": {
+    "owner": {
+      "application": {
+        "displayName": "displayName-value",
+        "id": "id-value"
+      },
+      "device": {
+        "displayName": "displayName-value",
+        "id": "id-value"
+      },
+      "user": {
+        "displayName": "displayName-value",
+        "id": "id-value"
+      }
+    },
+    "scope": "scope-value"
   },
   "specialFolder": {
+    "name": "name-value"
   },
   "video": {
+    "bitrate": 99,
+    "duration": 99,
+    "height": 99,
+    "width": 99
   }
 }
 ```
 
-<!-- uuid: 89b782f7-1248-4abe-b9b6-028a1d2763c7
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 47880294-479f-4313-85cb-1cffcbdf8401
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Create special",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

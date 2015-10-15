@@ -6,6 +6,14 @@ Contains a password credential associated with an application or a service princ
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.PasswordCredential"
+}-->
+
 ```json
 {
   "customKeyIdentifier": "String",
@@ -25,5 +33,12 @@ Here is a JSON representation of the resource
 |startDate|DateTimeOffset|The date and time at which the password becomes valid.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |value|String|            |
 
-<!-- uuid: d03a9252-d9e8-432a-ad26-579a6062391b
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: c43be3de-22b4-42b1-aeb0-19b282567ac3
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "PasswordCredential resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

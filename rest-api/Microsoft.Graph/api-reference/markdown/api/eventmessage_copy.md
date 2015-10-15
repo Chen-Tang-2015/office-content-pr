@@ -1,7 +1,10 @@
 # EventMessage: Copy
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 
 
@@ -9,7 +12,7 @@
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -24,6 +27,10 @@ If successful, this method returns `200, OK` response code and [Message](../reso
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "eventmessage_copy"
+}-->
 ```http
 
 Content-type: application/json
@@ -31,42 +38,75 @@ Content-length: 44
 {
   "DestinationId": "DestinationId-value"
 }
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "message"
+} -->
 ```
 ##### Response
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 838
+Content-length: 1546
 {
   "Subject": "Subject-value",
   "Body": {
+    "ContentType": "ContentType-value",
+    "Content": "Content-value"
   },
   "BodyPreview": "BodyPreview-value",
   "Importance": "Importance-value",
   "HasAttachments": true,
   "ParentFolderId": "ParentFolderId-value",
   "From": {
+    "EmailAddress": {
+      "Name": "Name-value",
+      "Address": "Address-value"
+    }
   },
   "Sender": {
+    "EmailAddress": {
+      "Name": "Name-value",
+      "Address": "Address-value"
+    }
   },
   "ToRecipients": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
     }
   ],
   "CcRecipients": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
     }
   ],
   "BccRecipients": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
     }
   ],
   "ReplyTo": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
     }
   ],
   "ConversationId": "ConversationId-value",
   "UniqueBody": {
+    "ContentType": "ContentType-value",
+    "Content": "Content-value"
   },
   "DateTimeReceived": "datetime-value",
   "DateTimeSent": "datetime-value",
@@ -85,5 +125,12 @@ Content-length: 838
 }
 ```
 
-<!-- uuid: 04659eff-ab23-414b-9fb0-eb96651faf61
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 0dce4b17-0bb7-481a-9904-f69b53fd4663
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "EventMessage: Copy",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

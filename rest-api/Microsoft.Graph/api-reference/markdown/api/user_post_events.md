@@ -1,7 +1,10 @@
 # Create Event
 
 Use this API to create a new Event.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/Events
 POST /drive/root/createdByUser/Events
@@ -11,7 +14,7 @@ POST /drive/root/lastModifiedByUser/Events
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply a JSON representation of [Event](../resources/event.md) object.
@@ -21,15 +24,33 @@ In the request body, supply a JSON representation of [Event](../resources/event.
 If successful, this method returns `201, Created` response code and [Event](../resources/event.md) object in the response body.
 
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "create_event_from_user"
+}-->
+```http
+POST /users/<objectId>/
+Content-type: application/json
+```
+In the request body, supply a JSON representation of [Event](../resources/event.md) object.
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "event"
+} -->
 ```json
 HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 901
+Content-length: 1794
 {
   "Subject": "Subject-value",
   "Body": {
+    "ContentType": "ContentType-value",
+    "Content": "Content-value"
   },
   "BodyPreview": "BodyPreview-value",
   "Importance": "Importance-value",
@@ -40,9 +61,14 @@ Content-length: 901
   "EndTimeZone": "EndTimeZone-value",
   "Reminder": 99,
   "Location": {
+    "altitude": 99,
+    "latitude": 99,
+    "longitude": 99
   },
   "ShowAs": "ShowAs-value",
   "ResponseStatus": {
+    "Response": "Response-value",
+    "Time": "datetime-value"
   },
   "IsAllDay": true,
   "IsCancelled": true,
@@ -52,11 +78,39 @@ Content-length: 901
   "SeriesMasterId": "SeriesMasterId-value",
   "Attendees": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      },
+      "Status": {
+        "Response": "Response-value",
+        "Time": "datetime-value"
+      },
+      "Type": "Type-value"
     }
   ],
   "Recurrence": {
+    "Pattern": {
+      "Type": "Type-value",
+      "Interval": 99,
+      "Month": 99,
+      "DayOfMonth": 99,
+      "DaysOfWeek": "DaysOfWeek-value",
+      "FirstDayOfWeek": "FirstDayOfWeek-value",
+      "Index": "Index-value"
+    },
+    "Range": {
+      "Type": "Type-value",
+      "StartDate": "datetime-value",
+      "EndDate": "datetime-value",
+      "NumberOfOccurrences": 99
+    }
   },
   "Organizer": {
+    "EmailAddress": {
+      "Name": "Name-value",
+      "Address": "Address-value"
+    }
   },
   "iCalUId": "iCalUId-value",
   "WebLink": "WebLink-value",
@@ -71,5 +125,12 @@ Content-length: 901
 }
 ```
 
-<!-- uuid: baa13c91-3f25-4ff9-b0f8-7cfb954b1059
-2015-10-12 23:35:03 UTC -->
+<!-- uuid: 34041ff2-07c5-446e-a58c-e084890ffe81
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Create Event",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

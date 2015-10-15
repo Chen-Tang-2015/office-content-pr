@@ -1,7 +1,10 @@
 # Create Task
 
 Use this API to create a new Task.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /plans/<id>/tasks
 POST /users/<objectId>/plans/<id>/tasks
@@ -11,7 +14,7 @@ POST /groups/<objectId>/plans/<id>/tasks
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply a JSON representation of [Task](../resources/task.md) object.
@@ -21,8 +24,24 @@ In the request body, supply a JSON representation of [Task](../resources/task.md
 If successful, this method returns `201, Created` response code and [Task](../resources/task.md) object in the response body.
 
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "create_task_from_plan"
+}-->
+```http
+POST /plans/<id>/
+Content-type: application/json
+```
+In the request body, supply a JSON representation of [Task](../resources/task.md) object.
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "task"
+} -->
 ```json
 HTTP/1.1 201 Created
 Content-type: application/json
@@ -52,5 +71,12 @@ Content-length: 641
 }
 ```
 
-<!-- uuid: 3da0dca7-577d-433c-927d-01f05732d048
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 4912427b-a20c-4f95-a6c7-ad0c0f26aaa1
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Create Task",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

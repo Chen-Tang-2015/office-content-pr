@@ -1,7 +1,10 @@
 # PimAlert: Dismiss
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /Alerts/<AlertId>/Dismiss
 
@@ -9,7 +12,7 @@ POST /Alerts/<AlertId>/Dismiss
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 
@@ -19,10 +22,19 @@ If successful, this method returns `200, OK` response code and [PimAlert](../res
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "pimalert_dismiss"
+}-->
 ```http
 POST /Alerts/<AlertId>/Dismiss
 Content-type: application/json
 Content-length: 0
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "pimalert"
+} -->
 ```
 ##### Response
 ```json
@@ -49,5 +61,12 @@ Content-length: 529
 }
 ```
 
-<!-- uuid: 3a9afaa0-729b-45e9-a8d3-4a584a8f747c
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 1cc4e618-3689-44c1-a8bd-67a77573493e
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "PimAlert: Dismiss",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

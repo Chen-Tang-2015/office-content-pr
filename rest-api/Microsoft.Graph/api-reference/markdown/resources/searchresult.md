@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.searchResult"
+}-->
+
 ```json
 {
   "onClickTelemetryUrl": "String"
@@ -17,5 +25,12 @@ Here is a JSON representation of the resource
 |:---------------|:--------|:----------|
 |onClickTelemetryUrl|String||
 
-<!-- uuid: 657884dd-ac39-46df-8fe3-a0e95a73c527
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 2c9565ff-6b07-4dec-a281-f1ec2bd4a5b3
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "searchResult resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

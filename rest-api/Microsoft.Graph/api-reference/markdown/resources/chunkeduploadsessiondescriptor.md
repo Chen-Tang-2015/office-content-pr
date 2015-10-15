@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.chunkedUploadSessionDescriptor"
+}-->
+
 ```json
 {
   "name": "String"
@@ -17,5 +25,12 @@ Here is a JSON representation of the resource
 |:---------------|:--------|:----------|
 |name|String||
 
-<!-- uuid: 572a5999-b487-465a-9dc3-78ed75330861
-2015-10-12 23:35:00 UTC -->
+<!-- uuid: 2c75dd58-6e55-4471-939b-805d93593cf8
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "chunkedUploadSessionDescriptor resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

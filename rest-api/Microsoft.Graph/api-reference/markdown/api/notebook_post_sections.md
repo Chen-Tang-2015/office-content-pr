@@ -1,7 +1,10 @@
 # Create Section
 
 Use this API to create a new Section.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/notes/notebooks/<id>/sections
 POST /drive/root/createdByUser/notes/notebooks/<id>/sections
@@ -11,7 +14,7 @@ POST /users/<objectId>/notes/pages/<id>/parentNotebook/sections
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply a JSON representation of [Section](../resources/section.md) object.
@@ -21,8 +24,24 @@ In the request body, supply a JSON representation of [Section](../resources/sect
 If successful, this method returns `201, Created` response code and [Section](../resources/section.md) object in the response body.
 
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "create_section_from_notebook"
+}-->
+```http
+POST /users/<objectId>/notes/notebooks/<id>/
+Content-type: application/json
+```
+In the request body, supply a JSON representation of [Section](../resources/section.md) object.
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "section"
+} -->
 ```json
 HTTP/1.1 201 Created
 Content-type: application/json
@@ -40,5 +59,12 @@ Content-length: 276
 }
 ```
 
-<!-- uuid: 6728e265-8957-406c-909d-3b0b875d1bfd
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 27001bb2-5418-4758-af12-3bd04f4d9866
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Create Section",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

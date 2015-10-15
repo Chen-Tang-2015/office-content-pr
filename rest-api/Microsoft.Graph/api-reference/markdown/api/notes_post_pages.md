@@ -1,7 +1,10 @@
 # Create Page
 
 Use this API to create a new Page.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/notes/pages
 POST /drive/root/createdByUser/notes/pages
@@ -11,7 +14,7 @@ POST /drive/root/lastModifiedByUser/notes/pages
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply a JSON representation of [Page](../resources/page.md) object.
@@ -21,16 +24,38 @@ In the request body, supply a JSON representation of [Page](../resources/page.md
 If successful, this method returns `201, Created` response code and [Page](../resources/page.md) object in the response body.
 
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "create_page_from_notes"
+}-->
+```http
+POST /users/<objectId>/notes/
+Content-type: application/json
+```
+In the request body, supply a JSON representation of [Page](../resources/page.md) object.
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "page"
+} -->
 ```json
 HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 275
+Content-length: 391
 {
   "title": "title-value",
   "createdByAppId": "createdByAppId-value",
   "links": {
+    "oneNoteClientUrl": {
+      "href": "href-value"
+    },
+    "oneNoteWebUrl": {
+      "href": "href-value"
+    }
   },
   "contentUrl": "contentUrl-value",
   "content": "content-value",
@@ -41,5 +66,12 @@ Content-length: 275
 }
 ```
 
-<!-- uuid: b24e0ac6-e8ea-4abb-a3a7-ae510eb3d007
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 985bb741-1821-4c69-ad39-b8713b5214ed
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Create Page",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

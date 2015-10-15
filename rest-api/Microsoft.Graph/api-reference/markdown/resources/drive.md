@@ -15,8 +15,18 @@ None
 |:---------------|:--------|:----------|
 |[List](../api/drive_list.md) | [drive](drive.md) [] |Get drive object collection. |
 
-<!-- uuid: 6e94622c-e69c-453d-b57a-ed6a24948b39
-2015-10-12 23:35:01 UTC -->json
+<!-- uuid: d3196272-6c0d-496c-9f3b-439e2d807c56
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "drive resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->e"
+}-->
+
+```json
 {
   "driveType": "String",
   "id": "String (identifier)",
@@ -75,5 +85,12 @@ None
 |[Delete](../api/drive_delete.md) | Void	|Delete drive object. |
 |[Allphotos](../api/drive_allphotos.md)|[item](item.md)||
 
-<!-- uuid: b379fb4a-b79b-429d-ab70-cd594c3178ae
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: a73228a9-b09d-4637-8d18-3870cfdf70a4
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "drive resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

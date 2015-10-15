@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.FileSystemItemInformation"
+}-->
+
 ```json
 {
   "file": {
@@ -29,5 +37,12 @@ Here is a JSON representation of the resource
 |name|String||
 |parentReference|[itemReference](itemreference.md)||
 
-<!-- uuid: 219df0a5-64bd-48b6-b01e-e63ec9c3e1c4
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: bbdf5d1d-2e6f-45ae-b284-971c2b6920c8
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "FileSystemItemInformation resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

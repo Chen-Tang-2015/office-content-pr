@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.ExternalLink"
+}-->
+
 ```json
 {
   "href": "String"
@@ -17,5 +25,12 @@ Here is a JSON representation of the resource
 |:---------------|:--------|:----------|
 |href|String||
 
-<!-- uuid: 18917543-45c1-4f54-a2cd-d85365d9322c
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 7f8977b7-c50e-4f7d-88ea-47b28555712a
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "ExternalLink resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

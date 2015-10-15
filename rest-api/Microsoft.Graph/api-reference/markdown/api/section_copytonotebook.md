@@ -1,7 +1,10 @@
 # Section: CopyToNotebook
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/notes/sections/<id>/CopyToNotebook
 POST /drive/root/createdByUser/notes/sections/<id>/CopyToNotebook
@@ -11,7 +14,7 @@ POST /users/<objectId>/notes/pages/<id>/parentSection/CopyToNotebook
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -29,6 +32,10 @@ If successful, this method returns `200, OK` response code and [CopySectionModel
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "section_copytonotebook"
+}-->
 ```http
 POST /users/<objectId>/notes/sections/<id>/CopyToNotebook
 Content-type: application/json
@@ -39,6 +46,11 @@ Content-length: 130
   "siteId": "siteId-value",
   "renameAs": "renameAs-value"
 }
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "copysectionmodel"
+} -->
 ```
 ##### Response
 ```json
@@ -58,5 +70,12 @@ Content-length: 276
 }
 ```
 
-<!-- uuid: d7a58d3c-b294-4ff7-bffc-8b092fe4967b
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: c4db808d-9e0d-447a-804e-c55f80aacf20
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Section: CopyToNotebook",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

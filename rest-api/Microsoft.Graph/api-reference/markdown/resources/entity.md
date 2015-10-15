@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "Extensions"
+  ],
+  "@odata.type": "microsoft.graph.Entity"
+}-->
+
 ```json
 {
   "Extensions": [
@@ -35,5 +43,12 @@ Here is a JSON representation of the resource
 |[Create Extension](../api/entity_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
 |[Delete](../api/entity_delete.md) | Void	|Delete Entity object. |
 
-<!-- uuid: 80e7c395-7fa2-466f-b888-b0f883cc3bf5
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 7a111429-7257-4e4b-8c77-4db36ab41283
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Entity resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

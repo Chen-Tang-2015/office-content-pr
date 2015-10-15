@@ -1,7 +1,10 @@
 # Page: CopyToSection
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/notes/pages/<id>/CopyToSection
 POST /drive/root/createdByUser/notes/pages/<id>/CopyToSection
@@ -11,7 +14,7 @@ POST /drive/root/lastModifiedByUser/notes/pages/<id>/CopyToSection
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -28,6 +31,10 @@ If successful, this method returns `200, OK` response code and [CopyPageModel](.
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "page_copytosection"
+}-->
 ```http
 POST /users/<objectId>/notes/pages/<id>/CopyToSection
 Content-type: application/json
@@ -37,20 +44,60 @@ Content-length: 98
   "siteCollectionId": "siteCollectionId-value",
   "siteId": "siteId-value"
 }
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "copypagemodel"
+} -->
 ```
 ##### Response
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 298
+Content-length: 1258
 {
   "parentSection": {
+    "isDefault": true,
+    "pagesUrl": "pagesUrl-value",
+    "name": "name-value",
+    "createdBy": "createdBy-value",
+    "lastModifiedBy": "lastModifiedBy-value",
+    "lastModifiedTime": "datetime-value",
+    "id": "id-value",
+    "self": "self-value",
+    "createdTime": "datetime-value"
   },
   "parentNotebook": {
+    "isDefault": true,
+    "userRole": "userRole-value",
+    "isShared": true,
+    "sectionsUrl": "sectionsUrl-value",
+    "sectionGroupsUrl": "sectionGroupsUrl-value",
+    "links": {
+      "oneNoteClientUrl": {
+        "href": "href-value"
+      },
+      "oneNoteWebUrl": {
+        "href": "href-value"
+      }
+    },
+    "name": "name-value",
+    "createdBy": "createdBy-value",
+    "lastModifiedBy": "lastModifiedBy-value",
+    "lastModifiedTime": "datetime-value",
+    "id": "id-value",
+    "self": "self-value",
+    "createdTime": "datetime-value"
   },
   "title": "title-value",
   "createdByAppId": "createdByAppId-value",
   "links": {
+    "oneNoteClientUrl": {
+      "href": "href-value"
+    },
+    "oneNoteWebUrl": {
+      "href": "href-value"
+    }
   },
   "contentUrl": "contentUrl-value",
   "lastModifiedTime": "datetime-value",
@@ -60,5 +107,12 @@ Content-length: 298
 }
 ```
 
-<!-- uuid: 467636a9-d8bb-49a0-a558-4674938c0f77
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 05954e50-6dfc-42c6-b617-f055855a46b8
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Page: CopyToSection",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

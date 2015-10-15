@@ -1,7 +1,10 @@
 # Create Bucket
 
 Use this API to create a new Bucket.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /plans/<id>/buckets
 POST /users/<objectId>/plans/<id>/buckets
@@ -11,7 +14,7 @@ POST /groups/<objectId>/plans/<id>/buckets
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply a JSON representation of [Bucket](../resources/bucket.md) object.
@@ -21,8 +24,24 @@ In the request body, supply a JSON representation of [Bucket](../resources/bucke
 If successful, this method returns `201, Created` response code and [Bucket](../resources/bucket.md) object in the response body.
 
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "create_bucket_from_plan"
+}-->
+```http
+POST /plans/<id>/
+Content-type: application/json
+```
+In the request body, supply a JSON representation of [Bucket](../resources/bucket.md) object.
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "bucket"
+} -->
 ```json
 HTTP/1.1 201 Created
 Content-type: application/json
@@ -38,5 +57,12 @@ Content-length: 179
 }
 ```
 
-<!-- uuid: db85312f-526f-4d0a-938c-a24121c70039
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: dc511941-8ea7-43b0-ad53-3cab46500254
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Create Bucket",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

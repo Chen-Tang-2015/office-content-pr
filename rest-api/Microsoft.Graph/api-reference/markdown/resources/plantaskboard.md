@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.PlanTaskBoard"
+}-->
+
 ```json
 {
   "id": "String (identifier)",
@@ -33,5 +41,12 @@ None
 |[Update](../api/plantaskboard_update.md) | [PlanTaskBoard](plantaskboard.md)	|Update PlanTaskBoard object. |
 |[Delete](../api/plantaskboard_delete.md) | Void	|Delete PlanTaskBoard object. |
 
-<!-- uuid: adb00ae4-e309-463e-bede-ad8f7e43c9e4
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: c03f4f95-2564-45b0-9fa9-d4d258ec1ad8
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "PlanTaskBoard resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

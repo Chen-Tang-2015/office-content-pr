@@ -1,18 +1,27 @@
 # Get File
 
 Retrieve the properties and relationships of file object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 GET /users/<objectId>/TrendingAround
 GET /drive/root/createdByUser/TrendingAround
 GET /drive/root/lastModifiedByUser/TrendingAround
 ```
 ### Optional query parameters
-You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
+|Name|Value|Description|
+|:---------------|:--------|:-------|
+|$count|none|The count of related entities can be requested by specifying the $count query option.|
+|$expand|string|Comma-separated list of relationships to expand and include in the response. 
+See relationships table of [File](../resources/file.md) object for supported names. |
+|$select|string|Comma-separated list of properties to include in the response.|
+
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 Do not supply a request body for this method.
@@ -21,6 +30,11 @@ If successful, this method returns a `200 OK` response code and [File](../resour
 ### Example
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "file"
+} -->
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
@@ -28,6 +42,14 @@ Content-length: 3
 {
 }
 ```
+If successful, this method returns a `200 OK` response code and [File](../resources/file.md) object in the response body.
 
-<!-- uuid: 118b01c7-174f-416c-add5-c74b490cdae0
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: c6fce342-4f19-477e-8b67-b644ee94d845
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Get File",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

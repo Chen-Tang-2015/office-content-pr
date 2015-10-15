@@ -6,6 +6,15 @@ A conversation is a collection of [threads](#ConversationThreadResource). All th
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "Extensions",
+    "Threads"
+  ],
+  "@odata.type": "microsoft.graph.Conversation"
+}-->
+
 ```json
 {
   "DateTimeLastDelivered": "String (timestamp)",
@@ -55,5 +64,12 @@ Here is a JSON representation of the resource
 |[Update](../api/conversation_update.md) | [Conversation](conversation.md)	|Update Conversation object. |
 |[Delete](../api/conversation_delete.md) | Void	|Delete Conversation object. |
 
-<!-- uuid: 85437b6e-3c11-4e68-a767-1d70228c13b9
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 67954ffb-aebc-4b86-b374-cdecb4e152f6
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Conversation resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

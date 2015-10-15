@@ -15,8 +15,15 @@ None
 |:---------------|:--------|:----------|
 |[List](../api/privilegedsignupstatus_list.md) | [PrivilegedSignupStatus](privilegedsignupstatus.md) [] |Get privilegedSignupStatus object collection. |
 
-<!-- uuid: c161dfd0-43a3-498b-b3b2-8d2f3c0fe9e1
-2015-10-12 23:35:02 UTC -->dSetupNotStarted`, `RegisteredSetupInProgress`, `RegistrationAndSetupCompleted`.|
+<!-- uuid: 02c6ef2e-4566-41d5-9647-fe307ed82ead
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "PrivilegedSignupStatus resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->redSetupInProgress`, `RegistrationAndSetupCompleted`.|
 |TenantId|String| Read-only.|
 
 ### Relationships
@@ -36,5 +43,12 @@ None
 |[Signup](../api/privilegedsignupstatus_signup.md)|[PrivilegedSignupStatus](privilegedsignupstatus.md)||
 |[Skipsetup](../api/privilegedsignupstatus_skipsetup.md)|[None](none.md)||
 
-<!-- uuid: 0cfd9107-faef-4475-b33a-ff28543bbb7a
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: b6600ca8-2a90-4836-834f-35cb0834f867
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "PrivilegedSignupStatus resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

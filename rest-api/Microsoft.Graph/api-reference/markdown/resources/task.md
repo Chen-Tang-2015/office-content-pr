@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.Task"
+}-->
+
 ```json
 {
   "appliedCategories": {
@@ -89,5 +97,12 @@ Here is a JSON representation of the resource
 |[Update](../api/task_update.md) | [Task](task.md)	|Update Task object. |
 |[Delete](../api/task_delete.md) | Void	|Delete Task object. |
 
-<!-- uuid: 835b3c92-fe09-4bae-be18-68504d523076
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 89004885-b611-4c8a-98e3-1e2ed827781a
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Task resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

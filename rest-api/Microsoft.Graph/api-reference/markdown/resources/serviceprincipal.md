@@ -6,6 +6,20 @@ Represents an instance of an application in a directory. Inherits from [Director
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "Extensions",
+    "appRoleAssignments",
+    "createdObjects",
+    "memberOf",
+    "oauth2PermissionGrants",
+    "ownedObjects",
+    "owners"
+  ],
+  "@odata.type": "microsoft.graph.ServicePrincipal"
+}-->
+
 ```json
 {
   "Extensions": [
@@ -153,5 +167,12 @@ Here is a JSON representation of the resource
 |[Get MemberGroups](../api/serviceprincipal_getmembergroups.md)|String||
 |[Get MemberObjects](../api/serviceprincipal_getmemberobjects.md)|String||
 
-<!-- uuid: d85c470e-7bde-49df-9cd2-55a77abd4eac
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 825cf66b-035a-4f7c-90dc-a50fec743295
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "ServicePrincipal resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

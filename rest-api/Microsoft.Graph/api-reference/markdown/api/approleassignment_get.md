@@ -1,18 +1,21 @@
 # Get AppRoleAssignment
 
 Retrieve the properties and relationships of approleassignment object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 GET /users/<objectId>/appRoleAssignments/<objectId>
 GET /servicePrincipals/<objectId>/appRoleAssignedTo
 GET /groups/<objectId>/appRoleAssignments/<objectId>
 ```
 ### Optional query parameters
-You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
+
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 Do not supply a request body for this method.
@@ -21,6 +24,11 @@ If successful, this method returns a `200 OK` response code and [AppRoleAssignme
 ### Example
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "approleassignment"
+} -->
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
@@ -38,6 +46,14 @@ Content-length: 398
   "deletionTimestamp": "datetime-value"
 }
 ```
+If successful, this method returns a `200 OK` response code and [AppRoleAssignment](../resources/approleassignment.md) object in the response body.
 
-<!-- uuid: aea29181-6c7b-4fc1-bd7d-9e8a39a1abb2
-2015-10-12 23:35:00 UTC -->
+<!-- uuid: d10226a4-cbba-4948-b3ab-1cf39e538df0
+2015-10-15 16:17:30 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Get AppRoleAssignment",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

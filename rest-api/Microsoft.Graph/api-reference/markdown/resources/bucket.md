@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "tasks"
+  ],
+  "@odata.type": "microsoft.graph.Bucket"
+}-->
+
 ```json
 {
   "activeTasks": 1024,
@@ -48,5 +56,12 @@ Here is a JSON representation of the resource
 |[Update](../api/bucket_update.md) | [Bucket](bucket.md)	|Update Bucket object. |
 |[Delete](../api/bucket_delete.md) | Void	|Delete Bucket object. |
 
-<!-- uuid: 0cc46e12-0753-4e34-8730-445719b7c2fd
-2015-10-12 23:35:00 UTC -->
+<!-- uuid: c7eefee8-f606-47e1-bd4c-055afae3ade9
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Bucket resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

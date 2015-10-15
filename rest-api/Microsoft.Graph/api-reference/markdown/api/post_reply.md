@@ -1,7 +1,10 @@
 # Post: Reply
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /groups/<objectId>/Threads/<Id>/Posts/<Id>/Reply
 POST /groups/<objectId>/Conversations/<Id>/Threads/<Id>/Posts/<Id>/Reply
@@ -11,7 +14,7 @@ POST /users/<objectId>/JoinedGroups/<objectId>/Threads/<Id>/Posts/<Id>/Reply
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -26,14 +29,64 @@ If successful, this method returns `200, OK` response code and [None](../resourc
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "post_reply"
+}-->
 ```http
 POST /groups/<objectId>/Threads/<Id>/Posts/<Id>/Reply
 Content-type: application/json
-Content-length: 19
+Content-length: 1075
 {
   "Post": {
+    "Body": {
+      "ContentType": "ContentType-value",
+      "Content": "Content-value"
+    },
+    "DateTimeReceived": "datetime-value",
+    "HasAttachments": true,
+    "From": {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
+    },
+    "Sender": {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
+    },
+    "ConversationThreadId": "ConversationThreadId-value",
+    "ConversationId": "ConversationId-value",
+    "NewParticipants": {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
+    },
+    "ChangeKey": "ChangeKey-value",
+    "Categories": "Categories-value",
+    "DateTimeCreated": "datetime-value",
+    "DateTimeLastModified": "datetime-value",
+    "Id": "Id-value",
+    "Attachments": {
+      "Name": "Name-value",
+      "ContentType": "ContentType-value",
+      "Size": 99,
+      "IsInline": true,
+      "DateTimeLastModified": "datetime-value",
+      "Id": "Id-value"
+    },
+    "InReplyTo": {
+    }
   }
 }
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "none"
+} -->
 ```
 ##### Response
 ```json
@@ -44,5 +97,12 @@ Content-length: 3
 }
 ```
 
-<!-- uuid: f6cc126a-821d-47db-b5b0-f4913284681c
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 6aa6e40d-a659-4828-a7c5-1de7ee1023bc
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Post: Reply",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

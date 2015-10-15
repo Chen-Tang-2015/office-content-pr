@@ -6,6 +6,14 @@ Used to record when a user or group is assigned to an application. In this case,
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "Extensions"
+  ],
+  "@odata.type": "microsoft.graph.AppRoleAssignment"
+}-->
+
 ```json
 {
   "Extensions": [
@@ -57,5 +65,12 @@ Here is a JSON representation of the resource
 |[Get MemberGroups](../api/approleassignment_getmembergroups.md)|String||
 |[Get MemberObjects](../api/approleassignment_getmemberobjects.md)|String||
 
-<!-- uuid: 3268c29a-a6e9-4dea-aead-986ad8eff5ba
-2015-10-12 23:35:00 UTC -->
+<!-- uuid: 8adc6808-035e-4b7e-91b4-75569f9f1b70
+2015-10-15 16:17:30 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "AppRoleAssignment resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

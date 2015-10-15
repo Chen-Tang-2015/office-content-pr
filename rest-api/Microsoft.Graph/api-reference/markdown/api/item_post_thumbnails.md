@@ -1,7 +1,10 @@
 # Create thumbnailSet
 
 Use this API to create a new thumbnailSet.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /drive/root/thumbnails
 POST /drive/items/<id>/thumbnails
@@ -11,7 +14,7 @@ POST /drives/<id>/root/thumbnails
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply a JSON representation of [thumbnailSet](../resources/thumbnailset.md) object.
@@ -21,24 +24,63 @@ In the request body, supply a JSON representation of [thumbnailSet](../resources
 If successful, this method returns `201, Created` response code and [thumbnailSet](../resources/thumbnailset.md) object in the response body.
 
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "create_thumbnailset_from_item"
+}-->
+```http
+POST /drive/root/
+Content-type: application/json
+```
+In the request body, supply a JSON representation of [thumbnailSet](../resources/thumbnailset.md) object.
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "thumbnailset"
+} -->
 ```json
 HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 96
+Content-length: 456
 {
   "id": "id-value",
   "large": {
+    "content": "content-value",
+    "height": 99,
+    "url": "url-value",
+    "width": 99
   },
   "medium": {
+    "content": "content-value",
+    "height": 99,
+    "url": "url-value",
+    "width": 99
   },
   "small": {
+    "content": "content-value",
+    "height": 99,
+    "url": "url-value",
+    "width": 99
   },
   "source": {
+    "content": "content-value",
+    "height": 99,
+    "url": "url-value",
+    "width": 99
   }
 }
 ```
 
-<!-- uuid: aae9469a-7035-49a4-bdd1-a5b4df146d43
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 6d4cf445-d22b-4d86-9395-01110be980a1
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Create thumbnailSet",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

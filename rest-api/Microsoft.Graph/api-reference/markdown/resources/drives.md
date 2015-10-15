@@ -15,5 +15,12 @@ None
 |:---------------|:--------|:----------|
 |[List](../api/drive_list.md) | [drive](drive.md) [] |Get drive object collection. |
 
-<!-- uuid: d16b944f-7fef-4ecb-affb-6899b09972e5
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 35e8ee1a-78fa-42bf-95be-2aa35ae1db74
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "drives resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.Diagnostic"
+}-->
+
 ```json
 {
   "message": "String",
@@ -19,5 +27,12 @@ Here is a JSON representation of the resource
 |message|String||
 |url|String||
 
-<!-- uuid: 5cc88c23-c05f-4430-b79b-4b1f036f1427
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: acf9aacb-a97b-439e-963b-944f3e2433aa
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Diagnostic resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

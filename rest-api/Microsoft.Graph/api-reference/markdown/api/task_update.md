@@ -1,7 +1,10 @@
-# Update Task
+# Update the properties of task object.
 
 Update the properties of task object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 PATCH /tasks/<id>
 PATCH /plans/<id>/tasks/<id>
@@ -10,7 +13,7 @@ PATCH /buckets/<id>/tasks/<id>
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -42,6 +45,10 @@ If successful, this method returns a `200 OK` response code and updated [Task](.
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_task"
+}-->
 ```http
 PUT /tasks/<id>
 Content-type: application/json
@@ -71,6 +78,11 @@ Content-length: 641
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "task"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
@@ -101,5 +113,12 @@ Content-length: 641
 }
 ```
 
-<!-- uuid: 6c760a10-08cf-4277-8cfd-15c13bc0a9f7
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: b76f8c1e-3686-4fbb-a63d-36a7d634f25b
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of task object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

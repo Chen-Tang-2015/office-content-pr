@@ -1,7 +1,10 @@
 # Delete
 
 Delete DirectoryObject.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 DELETE /users/<objectId>/manager
 DELETE /directoryObjects/<objectId>
@@ -11,7 +14,7 @@ DELETE /contacts/<objectId>/manager
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 Do not supply a request body for this method.
@@ -21,5 +24,12 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: 62ec7ff9-a0da-4ee1-a0b6-40ebe9a81fb3
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 85b9747b-e8a8-4384-ae96-5394d59e4180
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Delete",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

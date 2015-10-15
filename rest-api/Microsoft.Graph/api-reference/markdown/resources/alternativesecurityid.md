@@ -6,6 +6,14 @@ Contains an alternative security ID associated with a device. The **alternativeS
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.AlternativeSecurityId"
+}-->
+
 ```json
 {
   "identityProvider": "String",
@@ -21,5 +29,12 @@ Here is a JSON representation of the resource
 |key|Binary|            |
 |type|Int32|            |
 
-<!-- uuid: fc0e65b2-53bb-47f0-be74-3340776bb77d
-2015-10-12 23:35:00 UTC -->
+<!-- uuid: 7d19c4f3-3c9a-4d73-b143-b8ea0c25f9ab
+2015-10-15 16:17:30 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "AlternativeSecurityId resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

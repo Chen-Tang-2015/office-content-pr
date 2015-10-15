@@ -1,16 +1,22 @@
 # List User
 
 Retrieve a list of user objects.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 GET /users
 ```
 ### Optional query parameters
-You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
+|Name|Value|Description|
+|:---------------|:--------|:-------|
+|$orderby|string|Comma-separated list of properties that are used to sort the order of items in the response collection.|
+
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 Do not supply a request body for this method.
@@ -19,20 +25,31 @@ If successful, this method returns a `200 OK` response code and collection of [U
 ### Example
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "users"
+} -->
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 2401
+Content-length: 3064
 {
   "values": [
     {
       "accountEnabled": true,
       "assignedLicenses": [
         {
+          "disabledPlans": "disabledPlans-value",
+          "skuId": "skuId-value"
         }
       ],
       "assignedPlans": [
         {
+          "assignedTimestamp": "datetime-value",
+          "capabilityStatus": "capabilityStatus-value",
+          "service": "service-value",
+          "servicePlanId": "servicePlanId-value"
         }
       ],
       "city": "city-value",
@@ -54,16 +71,25 @@ Content-length: 2401
       ],
       "passwordPolicies": "passwordPolicies-value",
       "passwordProfile": {
+        "password": "password-value",
+        "forceChangePasswordNextLogin": true
       },
       "physicalDeliveryOfficeName": "physicalDeliveryOfficeName-value",
       "postalCode": "postalCode-value",
       "preferredLanguage": "preferredLanguage-value",
       "provisionedPlans": [
         {
+          "capabilityStatus": "capabilityStatus-value",
+          "provisioningStatus": "provisioningStatus-value",
+          "service": "service-value"
         }
       ],
       "provisioningErrors": [
         {
+          "errorDetail": "errorDetail-value",
+          "resolved": true,
+          "service": "service-value",
+          "timestamp": "datetime-value"
         }
       ],
       "proxyAddresses": [
@@ -111,6 +137,14 @@ Content-length: 2401
   ]
 }
 ```
+If successful, this method returns a `200 OK` response code and collection of [User](../resources/user.md) objects in the response body.
 
-<!-- uuid: 4c82421c-f86e-477f-9fc8-7392eb139a5c
-2015-10-12 23:35:03 UTC -->
+<!-- uuid: 37244218-c9bb-4752-9f97-f140187a7d7b
+2015-10-15 16:17:34 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "List User",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

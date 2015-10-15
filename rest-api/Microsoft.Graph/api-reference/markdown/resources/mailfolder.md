@@ -6,6 +6,16 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "ChildFolders",
+    "Extensions",
+    "Messages"
+  ],
+  "@odata.type": "microsoft.graph.MailFolder"
+}-->
+
 ```json
 {
   "ChildFolderCount": 1024,
@@ -58,5 +68,12 @@ Here is a JSON representation of the resource
 |[Copy](../api/mailfolder_copy.md)|[MailFolder](mailfolder.md)||
 |[Move](../api/mailfolder_move.md)|[MailFolder](mailfolder.md)||
 
-<!-- uuid: 1e570092-b2c8-4b42-b057-e1325e37ff02
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 5b802956-0dc3-4f8a-8e2e-63de684a77d4
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "MailFolder resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

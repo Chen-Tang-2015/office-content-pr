@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "pages"
+  ],
+  "@odata.type": "microsoft.graph.Section"
+}-->
+
 ```json
 {
   "createdBy": "String",
@@ -63,5 +71,12 @@ Here is a JSON representation of the resource
 |[Copytosectiongroup](../api/section_copytosectiongroup.md)|[CopySectionModel](copysectionmodel.md)||
 |[Thumbnail](../api/section_thumbnail.md)|Stream||
 
-<!-- uuid: 4db5a49e-a1d1-4673-93a2-2b0b8d3a121d
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: d24e03f5-55fc-4c4b-83a2-55c024d13b63
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Section resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

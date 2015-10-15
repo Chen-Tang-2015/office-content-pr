@@ -6,6 +6,18 @@ Represents an Azure AD directory role. Azure AD directory roles are also known a
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "Extensions",
+    "memberOf",
+    "members",
+    "ownedObjects",
+    "owners"
+  ],
+  "@odata.type": "microsoft.graph.DirectoryRole"
+}-->
+
 ```json
 {
   "Extensions": [
@@ -81,5 +93,12 @@ Here is a JSON representation of the resource
 |[Get MemberGroups](../api/directoryrole_getmembergroups.md)|String||
 |[Get MemberObjects](../api/directoryrole_getmemberobjects.md)|String||
 
-<!-- uuid: 65e3e15c-9199-4faf-b32d-b41b3c0cbd26
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 7579ef09-3115-4d9e-9211-ef75c2c7d5e4
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "DirectoryRole resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

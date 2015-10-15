@@ -1,7 +1,10 @@
 # Notebook: CopyNotebook
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/notes/notebooks/<id>/CopyNotebook
 POST /drive/root/createdByUser/notes/notebooks/<id>/CopyNotebook
@@ -11,7 +14,7 @@ POST /users/<objectId>/notes/pages/<id>/parentNotebook/CopyNotebook
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -28,6 +31,10 @@ If successful, this method returns `200, OK` response code and [CopyNotebookMode
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "notebook_copynotebook"
+}-->
 ```http
 POST /users/<objectId>/notes/notebooks/<id>/CopyNotebook
 Content-type: application/json
@@ -37,12 +44,17 @@ Content-length: 110
   "siteId": "siteId-value",
   "renameAs": "renameAs-value"
 }
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "copynotebookmodel"
+} -->
 ```
 ##### Response
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 400
+Content-length: 516
 {
   "isDefault": true,
   "userRole": "userRole-value",
@@ -50,6 +62,12 @@ Content-length: 400
   "sectionsUrl": "sectionsUrl-value",
   "sectionGroupsUrl": "sectionGroupsUrl-value",
   "links": {
+    "oneNoteClientUrl": {
+      "href": "href-value"
+    },
+    "oneNoteWebUrl": {
+      "href": "href-value"
+    }
   },
   "name": "name-value",
   "createdBy": "createdBy-value",
@@ -61,5 +79,12 @@ Content-length: 400
 }
 ```
 
-<!-- uuid: ed348999-cd0a-4dde-a8fd-b82c436ac8ed
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 8f7fcade-a13e-4989-9938-80aeb6ad547e
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Notebook: CopyNotebook",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

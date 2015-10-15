@@ -6,6 +6,14 @@ The physical address of a contact.
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.PhysicalAddress"
+}-->
+
 ```json
 {
   "City": "String",
@@ -25,5 +33,12 @@ Here is a JSON representation of the resource
 |State|String|The state.|
 |Street|String|The street.|
 
-<!-- uuid: e57081cb-4f40-415c-8a9c-f174e3ac027a
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: a969f367-d239-4e8b-8def-382c68ab2d90
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "PhysicalAddress resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

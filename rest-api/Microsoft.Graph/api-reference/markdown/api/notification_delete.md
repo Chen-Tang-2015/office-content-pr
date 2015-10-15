@@ -1,7 +1,10 @@
 # Delete
 
 Delete Notification.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 DELETE /Notifications/<Id>
 
@@ -9,7 +12,7 @@ DELETE /Notifications/<Id>
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 Do not supply a request body for this method.
@@ -19,5 +22,12 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: ddf6cf5d-3e6d-452d-a5fc-146b238cda62
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 389fe4ce-782b-482d-8a97-01e2c6c5ab6c
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Delete",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

@@ -6,6 +6,14 @@ The Thumbnail resource type represents a thumbnail for an image, video, document
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.thumbnail"
+}-->
+
 ```json
 {
   "content": "String",
@@ -23,5 +31,12 @@ Here is a JSON representation of the resource
 |url|String|The URL used to fetch the thumbnail content.|
 |width|Int32|The width of the thumbnail, in pixels.|
 
-<!-- uuid: 99602c4c-8b1e-4ac0-ab8c-24fa93bc11a7
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 52f9782f-9e2a-4d26-816f-cc54e3a59278
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "thumbnail resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

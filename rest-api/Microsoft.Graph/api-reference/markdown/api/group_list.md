@@ -1,16 +1,22 @@
 # List Group
 
 Retrieve a list of group objects.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 GET /groups
 ```
 ### Optional query parameters
-You can use the [OData query parameters](odata-optional-query-parameters.md) to restrict the shape of the objects returned from this call.
+|Name|Value|Description|
+|:---------------|:--------|:-------|
+|$orderby|string|Comma-separated list of properties that are used to sort the order of items in the response collection.|
+
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 Do not supply a request body for this method.
@@ -19,10 +25,15 @@ If successful, this method returns a `200 OK` response code and collection of [G
 ### Example
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "groups"
+} -->
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 1035
+Content-length: 1187
 {
   "values": [
     {
@@ -43,6 +54,10 @@ Content-length: 1035
       "onPremisesSecurityIdentifier": "onPremisesSecurityIdentifier-value",
       "provisioningErrors": [
         {
+          "errorDetail": "errorDetail-value",
+          "resolved": true,
+          "service": "service-value",
+          "timestamp": "datetime-value"
         }
       ],
       "proxyAddresses": [
@@ -63,6 +78,14 @@ Content-length: 1035
   ]
 }
 ```
+If successful, this method returns a `200 OK` response code and collection of [Group](../resources/group.md) objects in the response body.
 
-<!-- uuid: 40ef6580-fac8-48ac-8b50-d28690cf4af3
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 4e93e758-e054-42ac-889f-e1aa3ac5f4a9
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "List Group",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

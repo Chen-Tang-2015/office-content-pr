@@ -1,7 +1,10 @@
-# Update Group
+# Update the properties of group object.
 
 Update the properties of group object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 PATCH /groups/<objectId>
 PATCH /users/<objectId>/JoinedGroups/<objectId>
@@ -10,7 +13,7 @@ PATCH /drive/root/createdByUser/JoinedGroups/<objectId>
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -46,10 +49,14 @@ If successful, this method returns a `200 OK` response code and updated [Group](
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_group"
+}-->
 ```http
 PUT /groups/<objectId>
 Content-type: application/json
-Content-length: 873
+Content-length: 1009
 {
   "description": "description-value",
   "dirSyncEnabled": true,
@@ -68,6 +75,10 @@ Content-length: 873
   "onPremisesSecurityIdentifier": "onPremisesSecurityIdentifier-value",
   "provisioningErrors": [
     {
+      "errorDetail": "errorDetail-value",
+      "resolved": true,
+      "service": "service-value",
+      "timestamp": "datetime-value"
     }
   ],
   "proxyAddresses": [
@@ -87,11 +98,16 @@ Content-length: 873
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "group"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 873
+Content-length: 1009
 {
   "description": "description-value",
   "dirSyncEnabled": true,
@@ -110,6 +126,10 @@ Content-length: 873
   "onPremisesSecurityIdentifier": "onPremisesSecurityIdentifier-value",
   "provisioningErrors": [
     {
+      "errorDetail": "errorDetail-value",
+      "resolved": true,
+      "service": "service-value",
+      "timestamp": "datetime-value"
     }
   ],
   "proxyAddresses": [
@@ -129,5 +149,12 @@ Content-length: 873
 }
 ```
 
-<!-- uuid: bdba5d85-0596-4ac6-9d2b-18d10ab18532
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 87a6a1a4-b3b8-4200-9908-25bc362bd881
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of group object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

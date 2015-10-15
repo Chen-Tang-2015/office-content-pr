@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.PatchContentCommand"
+}-->
+
 ```json
 {
   "action": "String",
@@ -23,5 +31,12 @@ Here is a JSON representation of the resource
 |position|String| Possible values are: `After`, `Before`.|
 |target|String||
 
-<!-- uuid: a082a945-7ac6-46df-a0bf-2c43ed733fa3
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 8bc01cb9-f38c-416d-a093-fbe3b4f73a8b
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "PatchContentCommand resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

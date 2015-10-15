@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.openWithSet"
+}-->
+
 ```json
 {
   "web": {
@@ -23,5 +31,12 @@ Here is a JSON representation of the resource
 |web|[openWithApp](openwithapp.md)||
 |webEmbedded|[openWithApp](openwithapp.md)||
 
-<!-- uuid: 4b5daa7f-6e07-4326-8e30-93ce878bf1b7
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 0fc4e253-8dbd-4308-baa4-c3cce021a925
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "openWithSet resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

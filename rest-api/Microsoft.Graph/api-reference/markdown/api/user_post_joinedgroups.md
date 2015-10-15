@@ -1,7 +1,10 @@
 # Create Group
 
 Use this API to create a new Group.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/JoinedGroups
 POST /drive/root/createdByUser/JoinedGroups
@@ -11,7 +14,7 @@ POST /drive/root/lastModifiedByUser/JoinedGroups
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply a JSON representation of [Group](../resources/group.md) object.
@@ -21,12 +24,28 @@ In the request body, supply a JSON representation of [Group](../resources/group.
 If successful, this method returns `201, Created` response code and [Group](../resources/group.md) object in the response body.
 
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "create_group_from_user"
+}-->
+```http
+POST /users/<objectId>/
+Content-type: application/json
+```
+In the request body, supply a JSON representation of [Group](../resources/group.md) object.
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "group"
+} -->
 ```json
 HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 873
+Content-length: 1009
 {
   "description": "description-value",
   "dirSyncEnabled": true,
@@ -45,6 +64,10 @@ Content-length: 873
   "onPremisesSecurityIdentifier": "onPremisesSecurityIdentifier-value",
   "provisioningErrors": [
     {
+      "errorDetail": "errorDetail-value",
+      "resolved": true,
+      "service": "service-value",
+      "timestamp": "datetime-value"
     }
   ],
   "proxyAddresses": [
@@ -64,5 +87,12 @@ Content-length: 873
 }
 ```
 
-<!-- uuid: 3970e630-40a1-4cba-8c24-053460e59296
-2015-10-12 23:35:03 UTC -->
+<!-- uuid: eb526fe1-eb76-4ed4-a0e5-4021a5ef65ca
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Create Group",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

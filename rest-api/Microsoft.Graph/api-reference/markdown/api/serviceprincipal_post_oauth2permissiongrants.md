@@ -1,7 +1,10 @@
 # Create OAuth2PermissionGrant
 
 Use this API to create a new OAuth2PermissionGrant.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /servicePrincipals/<objectId>/oauth2PermissionGrants
 
@@ -9,7 +12,7 @@ POST /servicePrincipals/<objectId>/oauth2PermissionGrants
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply a JSON representation of [OAuth2PermissionGrant](../resources/oauth2permissiongrant.md) object.
@@ -19,8 +22,24 @@ In the request body, supply a JSON representation of [OAuth2PermissionGrant](../
 If successful, this method returns `201, Created` response code and [OAuth2PermissionGrant](../resources/oauth2permissiongrant.md) object in the response body.
 
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "create_oauth2permissiongrant_from_serviceprincipal"
+}-->
+```http
+POST /servicePrincipals/<objectId>/
+Content-type: application/json
+```
+In the request body, supply a JSON representation of [OAuth2PermissionGrant](../resources/oauth2permissiongrant.md) object.
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "oauth2permissiongrant"
+} -->
 ```json
 HTTP/1.1 201 Created
 Content-type: application/json
@@ -37,5 +56,12 @@ Content-length: 271
 }
 ```
 
-<!-- uuid: c86cb9b6-670f-4b95-8d91-1ce948bf9dd7
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 7af7d1f3-0854-4484-a923-b2ccc0d93959
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Create OAuth2PermissionGrant",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

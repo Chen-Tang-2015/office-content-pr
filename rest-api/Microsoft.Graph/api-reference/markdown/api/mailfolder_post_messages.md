@@ -1,7 +1,10 @@
 # Create Message
 
 Use this API to create a new Message.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/RootFolder/Messages
 POST /users/<objectId>/Folders/<Id>/Messages
@@ -11,7 +14,7 @@ POST /drive/root/createdByUser/RootFolder/Messages
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply a JSON representation of [Message](../resources/message.md) object.
@@ -21,42 +24,86 @@ In the request body, supply a JSON representation of [Message](../resources/mess
 If successful, this method returns `201, Created` response code and [Message](../resources/message.md) object in the response body.
 
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "create_message_from_mailfolder"
+}-->
+```http
+POST /users/<objectId>/RootFolder/
+Content-type: application/json
+```
+In the request body, supply a JSON representation of [Message](../resources/message.md) object.
 ##### Response
 Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "message"
+} -->
 ```json
 HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 838
+Content-length: 1546
 {
   "Subject": "Subject-value",
   "Body": {
+    "ContentType": "ContentType-value",
+    "Content": "Content-value"
   },
   "BodyPreview": "BodyPreview-value",
   "Importance": "Importance-value",
   "HasAttachments": true,
   "ParentFolderId": "ParentFolderId-value",
   "From": {
+    "EmailAddress": {
+      "Name": "Name-value",
+      "Address": "Address-value"
+    }
   },
   "Sender": {
+    "EmailAddress": {
+      "Name": "Name-value",
+      "Address": "Address-value"
+    }
   },
   "ToRecipients": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
     }
   ],
   "CcRecipients": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
     }
   ],
   "BccRecipients": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
     }
   ],
   "ReplyTo": [
     {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      }
     }
   ],
   "ConversationId": "ConversationId-value",
   "UniqueBody": {
+    "ContentType": "ContentType-value",
+    "Content": "Content-value"
   },
   "DateTimeReceived": "datetime-value",
   "DateTimeSent": "datetime-value",
@@ -75,5 +122,12 @@ Content-length: 838
 }
 ```
 
-<!-- uuid: 026a5988-9d88-44f4-af21-fc960f62404b
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 3fb6a2a3-0423-4c9d-b3c1-9d16fe123bc1
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Create Message",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

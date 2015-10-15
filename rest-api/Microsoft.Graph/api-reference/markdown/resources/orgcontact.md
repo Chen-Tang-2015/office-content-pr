@@ -6,6 +6,16 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "Extensions",
+    "directReports",
+    "memberOf"
+  ],
+  "@odata.type": "microsoft.graph.OrgContact"
+}-->
+
 ```json
 {
   "Extensions": [
@@ -111,5 +121,12 @@ Here is a JSON representation of the resource
 |[Get MemberGroups](../api/orgcontact_getmembergroups.md)|String||
 |[Get MemberObjects](../api/orgcontact_getmemberobjects.md)|String||
 
-<!-- uuid: 151c7606-8056-47bf-a6d0-302ee8e156f0
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 53d813ab-7560-428e-8bb7-5b11eca50eb9
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "OrgContact resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

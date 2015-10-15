@@ -1,7 +1,10 @@
 # Delete
 
 Delete PrivilegedRoleSettings.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 DELETE /PrivilegedRoles/<Id>/Settings
 DELETE /PrivilegedRoleAssignments/<UserId|RoleId>/RoleInfo/Settings
@@ -10,7 +13,7 @@ DELETE /PrivilegedRoleAssignments/<UserId|RoleId>/RoleInfo/Settings
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 Do not supply a request body for this method.
@@ -20,5 +23,12 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: 6ef10cf8-6682-4ab0-8d27-743e9804c6ef
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: de7c50f5-b5b4-4a9e-a5d0-4a4a0b3e15fe
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Delete",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

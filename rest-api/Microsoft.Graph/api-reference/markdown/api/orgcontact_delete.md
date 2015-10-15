@@ -1,7 +1,10 @@
 # Delete
 
 Delete OrgContact.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 DELETE /contacts/<objectId>
 
@@ -9,7 +12,7 @@ DELETE /contacts/<objectId>
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 Do not supply a request body for this method.
@@ -19,5 +22,12 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: d1488453-2c8a-4f23-bc73-da8071a05fd0
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: df150e04-bde5-4e11-9623-dc8cd0e7d527
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Delete",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

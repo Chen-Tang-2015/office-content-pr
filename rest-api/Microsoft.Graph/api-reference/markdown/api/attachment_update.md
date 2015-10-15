@@ -1,7 +1,10 @@
-# Update Attachment
+# Update the properties of attachment object.
 
 Update the properties of attachment object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 PATCH /users/<objectId>/Events/<Id>/Attachments/<Id>
 PATCH /groups/<objectId>/Events/<Id>/Attachments/<Id>
@@ -10,7 +13,7 @@ PATCH /users/<objectId>/Messages/<Id>/Attachments/<Id>
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -28,6 +31,10 @@ If successful, this method returns a `200 OK` response code and updated [Attachm
 ### Example
 ##### Request
 Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_attachment"
+}-->
 ```http
 PUT /users/<objectId>/Events/<Id>/Attachments/<Id>
 Content-type: application/json
@@ -42,6 +49,11 @@ Content-length: 162
 }
 ```
 ##### Response
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "attachment"
+} -->
 Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
@@ -57,5 +69,12 @@ Content-length: 162
 }
 ```
 
-<!-- uuid: 86a5cc8c-5119-4d8c-9e3a-ed7bc09be965
-2015-10-12 23:35:00 UTC -->
+<!-- uuid: 5f131978-bf89-43d5-9d72-7771b0713450
+2015-10-15 16:17:30 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update the properties of attachment object.",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

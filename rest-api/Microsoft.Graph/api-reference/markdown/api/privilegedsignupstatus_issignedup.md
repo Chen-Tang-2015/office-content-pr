@@ -1,7 +1,10 @@
 # PrivilegedSignupStatus: IsSignedUp
 
 
+### Prerequisites
+The following **scopes** are required to execute this API: 
 ### HTTP request
+<!-- { "blockType": "ignored" } -->
 ```http
 POST /PrivilegedSignupStatus/<TenantId>/IsSignedUp
 
@@ -9,7 +12,7 @@ POST /PrivilegedSignupStatus/<TenantId>/IsSignedUp
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP headers used by the API could be displayed.|
+| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
 
 ### Request body
 
@@ -19,10 +22,19 @@ If successful, this method returns `200, OK` response code and Boolean object in
 ### Example
 Here is an example of how to call this API.
 ##### Request
+<!-- {
+  "blockType": "request",
+  "name": "privilegedsignupstatus_issignedup"
+}-->
 ```http
 POST /PrivilegedSignupStatus/<TenantId>/IsSignedUp
 Content-type: application/json
 Content-length: 0
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "boolean"
+} -->
 ```
 ##### Response
 ```json
@@ -34,5 +46,12 @@ Content-length: 19
 }
 ```
 
-<!-- uuid: b6ce08ad-ba2c-4ecb-95e2-9846fcddca1b
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: eae19f03-12c1-431e-b6f5-9e7a699868ab
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "PrivilegedSignupStatus: IsSignedUp",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

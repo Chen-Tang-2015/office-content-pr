@@ -6,6 +6,14 @@ Represents an Azure Active Directory tenant. Only the read and update operations
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "Extensions"
+  ],
+  "@odata.type": "microsoft.graph.TenantDetail"
+}-->
+
 ```json
 {
   "Extensions": [
@@ -105,5 +113,12 @@ Here is a JSON representation of the resource
 |[Get MemberGroups](../api/tenantdetail_getmembergroups.md)|String||
 |[Get MemberObjects](../api/tenantdetail_getmemberobjects.md)|String||
 
-<!-- uuid: 85f4b281-0270-4c0f-9743-59066609fc8e
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: 3d6c511f-634d-4407-b139-9ac9f5abb629
+2015-10-15 16:17:33 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "TenantDetail resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

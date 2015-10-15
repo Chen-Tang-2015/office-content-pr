@@ -6,6 +6,16 @@ Represents a device registered in the directory. Inherits from [DirectoryObject]
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "Extensions",
+    "registeredOwners",
+    "registeredUsers"
+  ],
+  "@odata.type": "microsoft.graph.Device"
+}-->
+
 ```json
 {
   "Extensions": [
@@ -89,5 +99,12 @@ Here is a JSON representation of the resource
 |[Get MemberGroups](../api/device_getmembergroups.md)|String||
 |[Get MemberObjects](../api/device_getmemberobjects.md)|String||
 
-<!-- uuid: 13962de9-70dd-474f-96a1-22ed80f02c3c
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 20333553-4524-4e84-97c2-c6f4cca53dc5
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Device resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

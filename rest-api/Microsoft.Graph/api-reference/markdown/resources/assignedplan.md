@@ -6,6 +6,14 @@ The **assignedPlans** property of both the [User] entity and the [TenantDetail] 
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.AssignedPlan"
+}-->
+
 ```json
 {
   "assignedTimestamp": "String (timestamp)",
@@ -23,5 +31,12 @@ Here is a JSON representation of the resource
 |service|String|The name of the service; for example, ΓÇ£AccessControlServiceS2SΓÇ¥.|
 |servicePlanId|Guid|A GUID that identifies the service plan.|
 
-<!-- uuid: a8fbcda1-1ce8-4b49-8d78-8c384b509416
-2015-10-12 23:35:00 UTC -->
+<!-- uuid: abc1d338-778b-4acc-96b7-567b93f0da42
+2015-10-15 16:17:30 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "AssignedPlan resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

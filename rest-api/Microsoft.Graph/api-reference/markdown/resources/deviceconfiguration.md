@@ -1,25 +1,29 @@
-# DeviceConfiguration resource type
+# deviceConfiguration resource type
 
 
 
-### JSON representation
+### Properties
+None
 
-Here is a JSON representation of the resource
+### Relationships
+None
 
-```json
-{
-  "Extensions": [
-    {
-      "@odata.type": "microsoft.graph.Extension"
-    }
-  ],
-  "cloudPublicIssuerCertificates": [
-    "String"
-  ],
-  "deletionTimestamp": "String (timestamp)",
-  "maximumRegistrationInactivityPeriod": 1024,
-  "objectId": "String (identifier)",
-  "objectType": "String",
+
+### Tasks
+
+| Task		   | Return Type	|Description|
+|:---------------|:--------|:----------|
+|[List](../api/deviceconfiguration_list.md) | [DeviceConfiguration](deviceconfiguration.md) [] |Get deviceConfiguration object collection. |
+
+<!-- uuid: f3f28d0c-6bbe-4eed-808f-7952e47082af
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "deviceConfiguration resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->e": "String",
   "publicIssuerCertificates": [
     "String"
   ],
@@ -55,5 +59,12 @@ Here is a JSON representation of the resource
 |[Get MemberGroups](../api/deviceconfiguration_getmembergroups.md)|String||
 |[Get MemberObjects](../api/deviceconfiguration_getmemberobjects.md)|String||
 
-<!-- uuid: f7b4282d-de51-4a7c-9e8c-a741cac27cc9
-2015-10-12 23:35:01 UTC -->
+<!-- uuid: 1f6bc596-4a45-497d-abe8-cb1a414c3a20
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "DeviceConfiguration resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

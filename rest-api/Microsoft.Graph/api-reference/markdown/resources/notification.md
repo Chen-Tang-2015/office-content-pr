@@ -6,6 +6,14 @@
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.Notification"
+}-->
+
 ```json
 {
   "DisplayName": "String",
@@ -36,5 +44,12 @@ None
 |[Delete](../api/notification_delete.md) | Void	|Delete Notification object. |
 |[Notificationtypes](../api/notification_notificationtypes.md)|String||
 
-<!-- uuid: 97cd058b-fda2-49c4-ba56-61af2df1d5db
-2015-10-12 23:35:02 UTC -->
+<!-- uuid: cdde0771-4e0c-4f04-9818-07beffa03ab8
+2015-10-15 16:17:32 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Notification resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->

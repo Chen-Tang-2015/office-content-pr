@@ -6,6 +6,14 @@ An event attendee.
 
 Here is a JSON representation of the resource
 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.Attendee"
+}-->
+
 ```json
 {
   "EmailAddress": {
@@ -25,5 +33,12 @@ Here is a JSON representation of the resource
 |Status|[ResponseStatus](responsestatus.md)|The response (none, accepted, declined, etc.) and time.|
 |Type|String|The attendee type: Required = 0, Optional = 1, Resource = 2. Possible values are: `Required`, `Optional`, `Resource`.|
 
-<!-- uuid: 361b609f-c077-4c1d-8d9a-712e6ce9d2af
-2015-10-12 23:35:00 UTC -->
+<!-- uuid: 44c8ef83-c45d-438f-bf39-29525306c722
+2015-10-15 16:17:31 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Attendee resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->
