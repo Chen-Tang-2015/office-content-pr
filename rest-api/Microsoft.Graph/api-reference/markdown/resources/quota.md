@@ -33,8 +33,8 @@ Here is a JSON representation of the resource
 |total|Int64||
 |used|Int64||
 
-<!-- uuid: 17f92ae2-b75b-4107-8288-9d7cf31f7275
-2015-10-16 16:12:42 UTC -->
+<!-- uuid: a91f8aa8-f126-40c0-ac5d-937799ebcec0
+2015-10-16 22:29:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "quota resource",

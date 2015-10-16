@@ -43,8 +43,8 @@ None
 |[Update](../api/taskboardtaskformat_update.md) | [TaskBoardTaskFormat](taskboardtaskformat.md)	|Update TaskBoardTaskFormat object. |
 |[Delete](../api/taskboardtaskformat_delete.md) | Void	|Delete TaskBoardTaskFormat object. |
 
-<!-- uuid: 64d4fd1a-9bec-4f5d-b402-22c6c10279ee
-2015-10-16 16:12:42 UTC -->
+<!-- uuid: 22232644-6463-435e-bba1-2a3733bb5350
+2015-10-16 22:29:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "TaskBoardTaskFormat resource",

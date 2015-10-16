@@ -31,8 +31,8 @@ Here is a JSON representation of the resource
 |position|String||
 |target|String||
 
-<!-- uuid: f8eae6d1-483f-484f-a0d3-d17c8de0f97d
-2015-10-16 16:12:41 UTC -->
+<!-- uuid: 974077d0-3bb9-4128-9d28-0780f5bf3351
+2015-10-16 22:29:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PatchContentCommand resource",

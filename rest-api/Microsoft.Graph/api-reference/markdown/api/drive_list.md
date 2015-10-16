@@ -73,8 +73,8 @@ Content-length: 580
 ```
 If successful, this method returns a `200 OK` response code and collection of [drive](../resources/drive.md) objects in the response body.
 
-<!-- uuid: 925d429b-7df6-4d2e-aa15-b24fd78487b8
-2015-10-16 16:12:40 UTC -->
+<!-- uuid: 6c6de649-5b8b-4899-b98c-81c5b2ded144
+2015-10-16 22:29:33 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "List drive",

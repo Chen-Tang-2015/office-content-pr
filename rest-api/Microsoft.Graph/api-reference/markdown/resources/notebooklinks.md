@@ -31,8 +31,8 @@ Here is a JSON representation of the resource
 |oneNoteClientUrl|[ExternalLink](externallink.md)||
 |oneNoteWebUrl|[ExternalLink](externallink.md)||
 
-<!-- uuid: 738648d7-18d0-4a19-844a-e515804a654b
-2015-10-16 16:12:41 UTC -->
+<!-- uuid: 64f08410-9d73-4ad5-b701-eaed30b71b3e
+2015-10-16 22:29:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "NotebookLinks resource",

@@ -91,8 +91,8 @@ Here is a JSON representation of the resource
 |[Get MemberGroups](../api/device_getmembergroups.md)|String||
 |[Get MemberObjects](../api/device_getmemberobjects.md)|String||
 
-<!-- uuid: 0b5d2335-f35d-4698-abd2-e672acf0d272
-2015-10-16 16:12:40 UTC -->
+<!-- uuid: 2e8b9ef4-bb85-4c67-b632-4577a251f49b
+2015-10-16 22:29:33 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Device resource",

@@ -24,8 +24,8 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: 0c64821d-2c8c-494a-ab74-d22243ccbe90
-2015-10-16 16:12:42 UTC -->
+<!-- uuid: 99b8a9ce-1dc4-4891-9f82-84e5b0528e0d
+2015-10-16 22:29:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Delete",

@@ -43,8 +43,8 @@ Content-length: 22
 ```
 If successful, this method returns a `200 OK` response code and [Entity](../resources/entity.md) object in the response body.
 
-<!-- uuid: 6dc0846f-15e7-4b66-953b-7adec1566acc
-2015-10-16 16:12:40 UTC -->
+<!-- uuid: 75c0b83c-f2f1-46bb-9e1c-94318d3f9d66
+2015-10-16 22:29:33 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Entity",

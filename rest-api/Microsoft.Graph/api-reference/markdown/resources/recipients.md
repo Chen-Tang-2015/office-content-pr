@@ -31,8 +31,8 @@ Here is a JSON representation of the resource
 |objectId|String||
 |permissionIdentityType|String||
 
-<!-- uuid: 48496c62-951c-4f38-8763-56bc88be5bd1
-2015-10-16 16:12:42 UTC -->
+<!-- uuid: 25f1528c-dfe7-402f-810d-25f63638d907
+2015-10-16 22:29:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "recipients resource",

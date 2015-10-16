@@ -47,8 +47,8 @@ Content-length: 3
 }
 ```
 
-<!-- uuid: 3039680f-d8ea-45bf-a7ec-f7e5a93c2514
-2015-10-16 16:12:41 UTC -->
+<!-- uuid: 40f2ab2e-e10d-48f8-b3c0-f788ec1c6d21
+2015-10-16 22:29:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Message: Send",

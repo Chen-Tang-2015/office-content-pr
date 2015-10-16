@@ -16,8 +16,8 @@ None
 |[List](../api/bucket_list.md) | [Bucket](bucket.md) [] |Get bucket object collection. |
 |[Create Bucket](../api/bucket_post_buckets.md) |[Bucket](bucket.md)| Create a new Bucket by posting to the buckets collection.|
 
-<!-- uuid: 00034e34-9b56-4049-a303-b7306599aad5
-2015-10-16 16:12:40 UTC -->
+<!-- uuid: 256968f2-9b3d-4948-b4bb-a6a4a8cecac1
+2015-10-16 22:29:33 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "buckets resource",

@@ -48,8 +48,8 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: 8014ab16-2409-43d3-a036-f37a1b0d541a
-2015-10-16 16:12:41 UTC -->
+<!-- uuid: 6c9df33f-eb5a-445c-b3de-cec27f26e318
+2015-10-16 22:29:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "NotificationRule: EventTypes",

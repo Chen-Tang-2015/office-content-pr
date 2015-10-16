@@ -58,8 +58,8 @@ None
 |[Get MemberGroups](../api/approleassignment_getmembergroups.md)|String||
 |[Get MemberObjects](../api/approleassignment_getmemberobjects.md)|String||
 
-<!-- uuid: b6d9cfe6-84b9-4cfd-8fb5-c51d71863a7d
-2015-10-16 16:12:40 UTC -->
+<!-- uuid: bd87dea5-5dbd-4022-897f-5d701cde75a5
+2015-10-16 22:29:33 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "AppRoleAssignment resource",

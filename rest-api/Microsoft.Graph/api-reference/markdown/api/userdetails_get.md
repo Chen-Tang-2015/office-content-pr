@@ -48,8 +48,8 @@ Content-length: 73
 ```
 If successful, this method returns a `200 OK` response code and [UserDetails](../resources/userdetails.md) object in the response body.
 
-<!-- uuid: 18df25ff-cd24-4724-93d9-afe20f3889cf
-2015-10-16 16:12:43 UTC -->
+<!-- uuid: 3fcb8320-0e3d-4eb5-961f-4e198a49b0f0
+2015-10-16 22:29:36 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get UserDetails",

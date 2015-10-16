@@ -36,8 +36,8 @@ None
 |[Get Extension](../api/extension_get.md) | [Extension](extension.md) |Read properties and relationships of extension object.|
 |[Delete](../api/extension_delete.md) | Void	|Delete Extension object. |
 
-<!-- uuid: e03bb7c3-4ab7-4458-bb70-3b40fc8b2360
-2015-10-16 16:12:41 UTC -->
+<!-- uuid: b4d487f0-6988-4946-be93-0079633b1ad6
+2015-10-16 22:29:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Extension resource",

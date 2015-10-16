@@ -55,8 +55,8 @@ Content-length: 456
 ```
 If successful, this method returns a `200 OK` response code and [PrivilegedOperationEvent](../resources/privilegedoperationevent.md) object in the response body.
 
-<!-- uuid: d45ea2a2-1543-48f1-8467-7c4626ffe9e1
-2015-10-16 16:12:42 UTC -->
+<!-- uuid: e42f3995-435e-4028-83bc-93fc3fdbac1b
+2015-10-16 22:29:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get PrivilegedOperationEvent",

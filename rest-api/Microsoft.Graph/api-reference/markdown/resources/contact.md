@@ -142,8 +142,8 @@ Here is a JSON representation of the resource
 |[Update](../api/contact_update.md) | [Contact](contact.md)	|Update Contact object. |
 |[Delete](../api/contact_delete.md) | Void	|Delete Contact object. |
 
-<!-- uuid: 511678e5-6abe-4c49-9881-cdde8af5e543
-2015-10-16 16:12:40 UTC -->
+<!-- uuid: d6432c00-45fd-413a-bf05-03570adfe491
+2015-10-16 22:29:33 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Contact resource",

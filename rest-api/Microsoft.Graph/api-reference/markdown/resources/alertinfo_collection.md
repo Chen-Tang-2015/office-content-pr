@@ -16,8 +16,8 @@ None
 |[List](../api/pimalertinfo_list.md) | [PimAlertInfo](pimalertinfo.md) [] |Get pimAlertInfo object collection. |
 |[Create PimAlertInfo](../api/pimalertinfo_post_alertinfo.md) |[PimAlertInfo](pimalertinfo.md)| Create a new PimAlertInfo by posting to the AlertInfo collection.|
 
-<!-- uuid: adee22a0-1137-4aed-a80a-3c57a497361b
-2015-10-16 16:12:40 UTC -->
+<!-- uuid: 431cada2-1d79-4170-97a8-bfe2dc530e27
+2015-10-16 22:29:33 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "AlertInfo resource",

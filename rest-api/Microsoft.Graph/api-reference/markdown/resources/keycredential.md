@@ -37,8 +37,8 @@ Here is a JSON representation of the resource
 |usage|String|A string that describes the purpose for which the key can be used; for example, ΓÇ£VerifyΓÇ¥.|
 |value|Binary|            |
 
-<!-- uuid: 6604a2d9-1105-4f70-a18e-45cb24a8551c
-2015-10-16 16:12:41 UTC -->
+<!-- uuid: e35bfecc-bdc8-42a5-b9c4-0235de197665
+2015-10-16 22:29:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "KeyCredential resource",

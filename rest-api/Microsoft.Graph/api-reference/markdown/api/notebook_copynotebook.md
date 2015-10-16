@@ -79,8 +79,8 @@ Content-length: 516
 }
 ```
 
-<!-- uuid: cb7f8caa-253e-4678-b41e-9e687aa5cf1f
-2015-10-16 16:12:41 UTC -->
+<!-- uuid: b8255eba-f19d-4079-a9de-b2698172e031
+2015-10-16 22:29:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Notebook: CopyNotebook",

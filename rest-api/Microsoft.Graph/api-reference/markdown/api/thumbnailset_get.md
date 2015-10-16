@@ -69,8 +69,8 @@ Content-length: 456
 ```
 If successful, this method returns a `200 OK` response code and [thumbnailSet](../resources/thumbnailset.md) object in the response body.
 
-<!-- uuid: 50ea9de4-04b2-4464-98de-1dd3a50acba8
-2015-10-16 16:12:42 UTC -->
+<!-- uuid: af16bc98-fde5-44d2-bc2e-5d5c718ab84e
+2015-10-16 22:29:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get thumbnailSet",

@@ -67,8 +67,8 @@ Content-length: 162
 }
 ```
 
-<!-- uuid: f8cf48b8-84df-4aa4-b8a7-f83bd9e8cb73
-2015-10-16 16:12:42 UTC -->
+<!-- uuid: 9ec3ad9f-d0ba-490c-8234-bb19a06dc2c8
+2015-10-16 22:29:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of referenceattachment object.",

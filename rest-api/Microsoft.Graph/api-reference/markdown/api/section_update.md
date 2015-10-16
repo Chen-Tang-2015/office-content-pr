@@ -78,8 +78,8 @@ Content-length: 276
 }
 ```
 
-<!-- uuid: ec5e25d5-1154-48c2-87b1-7745e47882de
-2015-10-16 16:12:42 UTC -->
+<!-- uuid: aba892e0-5f2b-4ec1-a2d1-a8d1c2e32638
+2015-10-16 22:29:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of section object.",

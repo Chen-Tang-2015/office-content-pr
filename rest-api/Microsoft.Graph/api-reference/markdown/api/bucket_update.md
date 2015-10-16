@@ -72,8 +72,8 @@ Content-length: 179
 }
 ```
 
-<!-- uuid: ee818e19-b6eb-477f-90ec-fcb15799c3eb
-2015-10-16 16:12:40 UTC -->
+<!-- uuid: fab32284-219a-4451-9e9d-b36b61cd1c36
+2015-10-16 22:29:33 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of bucket object.",

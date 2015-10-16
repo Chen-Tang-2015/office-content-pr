@@ -56,8 +56,8 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: fdfb9c9b-eabd-446a-afd5-f2b4b850bff6
-2015-10-16 16:12:42 UTC -->
+<!-- uuid: 0cd2ceba-1e93-4686-99b9-1fd9338381ba
+2015-10-16 22:29:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "ServicePrincipal: getMemberObjects",

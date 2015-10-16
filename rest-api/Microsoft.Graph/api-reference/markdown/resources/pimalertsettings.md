@@ -39,8 +39,8 @@ None
 |[Update](../api/pimalertsettings_update.md) | [PimAlertSettings](pimalertsettings.md)	|Update PimAlertSettings object. |
 |[Delete](../api/pimalertsettings_delete.md) | Void	|Delete PimAlertSettings object. |
 
-<!-- uuid: 5eb84408-07f7-4387-8b26-9b286c6cce3c
-2015-10-16 16:12:42 UTC -->
+<!-- uuid: 49b47c24-b3a8-4ea7-a098-f7fa08b04a8e
+2015-10-16 22:29:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PimAlertSettings resource",

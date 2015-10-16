@@ -43,8 +43,8 @@ Here is a JSON representation of the resource
 |[Create SiteCollection](../api/myorganization_post_sitecollections.md) |[SiteCollection](sitecollection.md)| Create a new SiteCollection by posting to the siteCollections collection.|
 |[Delete](../api/myorganization_delete.md) | Void	|Delete MyOrganization object. |
 
-<!-- uuid: 236f2089-71a1-4bb6-b7d4-a14b0f7fffb0
-2015-10-16 16:12:41 UTC -->
+<!-- uuid: 223cde5f-6f2b-43f9-b556-2821b8bcd5f2
+2015-10-16 22:29:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "MyOrganization resource",

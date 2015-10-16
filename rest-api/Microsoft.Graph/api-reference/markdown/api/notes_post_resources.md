@@ -54,8 +54,8 @@ Content-length: 112
 }
 ```
 
-<!-- uuid: 72745cc5-9387-4913-ba70-a1a008e8543e
-2015-10-16 16:12:41 UTC -->
+<!-- uuid: d01d2b22-67a4-45ca-b79f-26fe51aac5ff
+2015-10-16 22:29:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Resource",

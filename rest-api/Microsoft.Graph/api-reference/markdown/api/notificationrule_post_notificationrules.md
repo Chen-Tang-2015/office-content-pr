@@ -56,8 +56,8 @@ Content-length: 260
 }
 ```
 
-<!-- uuid: d995b5bf-0c9b-4f1d-a8fb-371de4a9c8bd
-2015-10-16 16:12:41 UTC -->
+<!-- uuid: cd6eb69a-4021-4997-b650-8614a7cdbe4a
+2015-10-16 22:29:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create NotificationRule",

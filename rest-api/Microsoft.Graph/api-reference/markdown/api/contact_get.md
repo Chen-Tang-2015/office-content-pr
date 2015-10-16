@@ -115,8 +115,8 @@ Content-length: 1977
 ```
 If successful, this method returns a `200 OK` response code and [Contact](../resources/contact.md) object in the response body.
 
-<!-- uuid: 4089a8ae-f202-4a27-93b3-142f9129c940
-2015-10-16 16:12:40 UTC -->
+<!-- uuid: 44b59137-e1df-4ff0-854d-b8a67e198c48
+2015-10-16 22:29:33 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Contact",

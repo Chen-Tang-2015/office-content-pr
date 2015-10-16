@@ -31,8 +31,8 @@ Here is a JSON representation of the resource
 |resourceAccess|[ResourceAccess](resourceaccess.md) collection|The list of OAuth2.0 permission scopes and app roles that the application requires from the specified resource.|
 |resourceAppId|String|The unique identifier for the resource that the application requires access to.  This should be equal to the **appId** declared on the target resource application.|
 
-<!-- uuid: 51e961a4-09ea-4760-b7f4-dec8a438fd50
-2015-10-16 16:12:42 UTC -->
+<!-- uuid: 9f7e5e87-1c14-423a-8396-b54931b6d033
+2015-10-16 22:29:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "RequiredResourceAccess resource",

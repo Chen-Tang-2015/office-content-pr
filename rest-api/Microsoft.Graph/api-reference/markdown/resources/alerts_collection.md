@@ -16,8 +16,8 @@ None
 |[List](../api/pimalert_list.md) | [PimAlert](pimalert.md) [] |Get pimAlert object collection. |
 |[Create PimAlert](../api/pimalert_post_alerts.md) |[PimAlert](pimalert.md)| Create a new PimAlert by posting to the Alerts collection.|
 
-<!-- uuid: 329e9bef-c2b3-47fb-ad20-f2c8f30b2690
-2015-10-16 16:12:40 UTC -->
+<!-- uuid: 2b69a04e-0dae-4087-934d-91f99210f985
+2015-10-16 22:29:33 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Alerts resource",

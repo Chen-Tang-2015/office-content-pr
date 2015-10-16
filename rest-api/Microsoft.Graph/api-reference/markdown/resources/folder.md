@@ -25,8 +25,8 @@ Here is a JSON representation of the resource
 |:---------------|:--------|:----------|
 |childCount|Int32||
 
-<!-- uuid: 0ad511d1-ab1c-4180-8b30-3dab97f9a31b
-2015-10-16 16:12:41 UTC -->
+<!-- uuid: 12d0e66b-0fef-40b8-a3d8-da3cd46841b3
+2015-10-16 22:29:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "folder resource",

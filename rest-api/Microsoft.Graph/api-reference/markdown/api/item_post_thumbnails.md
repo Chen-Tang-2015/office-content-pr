@@ -75,8 +75,8 @@ Content-length: 456
 }
 ```
 
-<!-- uuid: 644a8d21-c821-47c0-a37e-e9d8bc7eff96
-2015-10-16 16:12:41 UTC -->
+<!-- uuid: c9c6a851-702c-4cc9-a6af-d96f7db31836
+2015-10-16 22:29:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create thumbnailSet",
