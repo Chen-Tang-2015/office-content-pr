@@ -85,7 +85,7 @@ The following are some app scenarios using the `User` and `Group` resources and 
 
 | **App tasks involving User**	 |  **Required scopes** | **Permissions** |
 |:-------------------------------|:---------------------|:---------------|
-| App wants to read other users' basic info (only display name and picture), for example to show in a people picking experience	 | _User.ReadBasic.All_  |  `Read all user's basic profiles` |
+| App wants to read other users' basic information (only display name and picture), for example to show in a people picking experience	 | _User.ReadBasic.All_  |  `Read all user's basic profiles` |
 | App wants to read complete user profile for signed in user (see direct reports, and manager, etc)	 | _User.Read_ | `Enable sign-in and read user profile`|
 | App wants to read complete user profile all users	 | _User.Read.All_ |  `Read all user's full profiles`   |
 | App wants to read files, mail and calendar information for the signed in user	 | _User.Read_, _Files.Read_, _Mail.Read_, _Calendar.Read_ | `Enable sign-in and read user profile`, `Read users' files`,  `Read user mail`,  `Read user calendars` |
