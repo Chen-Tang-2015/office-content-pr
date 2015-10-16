@@ -14,7 +14,7 @@ POST /drive/root/lastModifiedByUser/ContactFolders
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [ContactFolder](../resources/contactfolder.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_contactfolder_from_user"
 }-->
 ```http
-POST /users/<objectId>/
+POST /users/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [ContactFolder](../resources/contactfolder.md) object.
@@ -53,8 +53,8 @@ Content-length: 104
 }
 ```
 
-<!-- uuid: b1b95cbf-8f12-4bfd-b279-c617eeb9fa8c
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: 0ff2c3bc-55ba-4e3b-a4d3-2cf1ce3132f8
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create ContactFolder",

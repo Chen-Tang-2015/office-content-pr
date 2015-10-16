@@ -14,7 +14,7 @@ POST /drive/root/createdByUser/JoinedGroups/<objectId>/GroupPhotos
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [Photo](../resources/photo.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_photo_from_group"
 }-->
 ```http
-POST /groups/<objectId>/
+POST /groups/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Photo](../resources/photo.md) object.
@@ -53,8 +53,8 @@ Content-length: 53
 }
 ```
 
-<!-- uuid: d0e804ed-1fbd-4a75-93d8-9fbe0ac766b6
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: b8de5821-e476-4945-abc3-1e5fe4c93e53
+2015-10-16 10:07:54 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create GroupPhoto",

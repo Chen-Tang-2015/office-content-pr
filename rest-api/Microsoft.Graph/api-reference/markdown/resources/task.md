@@ -16,20 +16,10 @@ Here is a JSON representation of the resource
 
 ```json
 {
-  "appliedCategories": {
-    "@odata.type": "microsoft.graph.AppliedCategoriesCollection"
-  },
   "assignedBy": "String",
   "assignedTo": "String",
   "assignedToDate": "String (timestamp)",
-  "assignedToTaskBoardFormat": {
-    "@odata.type": "microsoft.graph.TaskBoardTaskFormat"
-  },
   "assigneePriority": "String",
-  "bucketId": "String",
-  "bucketTaskBoardFormat": {
-    "@odata.type": "microsoft.graph.TaskBoardTaskFormat"
-  },
   "completedDate": "String (timestamp)",
   "createdBy": "String",
   "createdDate": "String (timestamp)",
@@ -43,14 +33,7 @@ Here is a JSON representation of the resource
   "orderHint": "String",
   "percentComplete": 1024,
   "planId": "String",
-  "previewType": "String",
   "startDate": "String (timestamp)",
-  "statusTaskBoardFormat": {
-    "@odata.type": "microsoft.graph.TaskBoardTaskFormat"
-  },
-  "timelineFormat": {
-    "@odata.type": "microsoft.graph.TimelineTaskFormat"
-  },
   "title": "String",
   "version": "String"
 }
@@ -59,12 +42,10 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|appliedCategories|[AppliedCategoriesCollection](appliedcategoriescollection.md)||
 |assignedBy|String||
 |assignedTo|String||
 |assignedToDate|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |assigneePriority|String||
-|bucketId|String||
 |completedDate|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |createdBy|String||
 |createdDate|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
@@ -75,7 +56,6 @@ Here is a JSON representation of the resource
 |orderHint|String||
 |percentComplete|Int32||
 |planId|String||
-|previewType|String| Possible values are: `Automatic`, `NoPreview`, `CheckList`, `Notes`, `Reference`.|
 |startDate|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |title|String||
 |version|String||
@@ -83,11 +63,7 @@ Here is a JSON representation of the resource
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|assignedToTaskBoardFormat|[TaskBoardTaskFormat](taskboardtaskformat.md)| Read-only.|
-|bucketTaskBoardFormat|[TaskBoardTaskFormat](taskboardtaskformat.md)| Read-only.|
 |details|[TaskDetails](taskdetails.md)| Read-only.|
-|statusTaskBoardFormat|[TaskBoardTaskFormat](taskboardtaskformat.md)| Read-only.|
-|timelineFormat|[TimelineTaskFormat](timelinetaskformat.md)| Read-only.|
 
 ### Tasks
 
@@ -97,8 +73,8 @@ Here is a JSON representation of the resource
 |[Update](../api/task_update.md) | [Task](task.md)	|Update Task object. |
 |[Delete](../api/task_delete.md) | Void	|Delete Task object. |
 
-<!-- uuid: d4c0f81c-4abb-489a-b68c-8a6f55e62375
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: 9425c1bc-3025-407b-aecf-5b9426099e0a
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Task resource",

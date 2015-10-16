@@ -501,6 +501,48 @@
       "isUnicode": false
     },
     {
+      "name": "SpouseName",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": false
+    },
+    {
+      "name": "PersonalNotes",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": false
+    },
+    {
+      "name": "Children",
+      "description": "",
+      "isKey": false,
+      "dataType": "String",
+      "isReadOnly": false,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": false,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": null,
+      "isUnicode": false
+    },
+    {
       "name": "ChangeKey",
       "description": "Identifies the version of the contact. Every time the contact is changed, ChangeKey  changes as well. This allows Exchange to apply changes to the correct version of the object.",
       "isKey": false,
@@ -571,20 +613,6 @@
       "isUnicode": false
     },
     {
-      "name": "Extensions",
-      "description": "",
-      "isKey": false,
-      "dataType": "Extension",
-      "isReadOnly": true,
-      "enumName": null,
-      "isCollection": true,
-      "isRelationship": true,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": true,
-      "isUnicode": null
-    },
-    {
       "name": "ContactPhoto",
       "description": "",
       "isKey": false,
@@ -596,6 +624,20 @@
       "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": false,
+      "isUnicode": null
+    },
+    {
+      "name": "Extensions",
+      "description": "",
+      "isKey": false,
+      "dataType": "Extension",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": true,
+      "isRelationship": true,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": true,
       "isUnicode": null
     }
   ],

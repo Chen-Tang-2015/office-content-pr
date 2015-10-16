@@ -12,7 +12,7 @@ POST /applications/<objectId>/restore
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -131,8 +131,8 @@ Content-length: 2108
 }
 ```
 
-<!-- uuid: 0a6a3567-bffa-4842-ae38-e6e4e0409b0e
-2015-10-15 16:49:27 UTC -->
+<!-- uuid: fa16d4a3-7e1d-44ce-8c4d-7db84640f443
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Application: restore",

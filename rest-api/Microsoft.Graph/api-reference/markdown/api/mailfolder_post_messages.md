@@ -6,15 +6,15 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /users/<objectId>/RootFolder/Messages
 POST /users/<objectId>/Folders/<Id>/Messages
-POST /drive/root/createdByUser/RootFolder/Messages
+POST /drive/root/createdByUser/Folders/<Id>/Messages
+POST /drive/root/lastModifiedByUser/Folders/<Id>/Messages
 
 ```
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [Message](../resources/message.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_message_from_mailfolder"
 }-->
 ```http
-POST /users/<objectId>/RootFolder/
+POST /users/<objectId>/Folders/<Id>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Message](../resources/message.md) object.
@@ -122,8 +122,8 @@ Content-length: 1546
 }
 ```
 
-<!-- uuid: bdb4024a-6098-446f-b14d-cb636b159cba
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 5c0b5f25-d253-41d2-9e82-bbe0f83e9222
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Message",

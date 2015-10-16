@@ -143,8 +143,8 @@ Here is a JSON representation of the resource
 |[Replyall](../api/eventmessage_replyall.md)|[None](none.md)||
 |[Send](../api/eventmessage_send.md)|[None](none.md)||
 
-<!-- uuid: f3f5a23e-d45d-4a03-8f57-6bfd0e9a7254
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: 344b09b1-5faf-47dd-9251-2aad87c7b1a8
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "EventMessage resource",

@@ -12,7 +12,7 @@ POST /directoryRoles/<objectId>/ownedObjects
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_directoryobject_from_directoryrole"
 }-->
 ```http
-POST /directoryRoles/<objectId>/
+POST /directoryRoles/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
@@ -51,8 +51,8 @@ Content-length: 111
 }
 ```
 
-<!-- uuid: 8a174a22-71ab-43fb-b74b-cd9695fbd930
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: c6598fc4-143e-4cb2-b231-35fdd1cc1d8d
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create ownedObject",

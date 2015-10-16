@@ -14,7 +14,7 @@ POST /drive/root/lastModifiedByUser/JoinedGroups
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [Group](../resources/group.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_group_from_user"
 }-->
 ```http
-POST /users/<objectId>/
+POST /users/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Group](../resources/group.md) object.
@@ -87,8 +87,8 @@ Content-length: 1009
 }
 ```
 
-<!-- uuid: 8dedac44-125f-4f99-84e6-64b0df5c2c79
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: e948d1c8-0f9a-4b46-886a-fbadce391549
+2015-10-16 16:12:43 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Group",

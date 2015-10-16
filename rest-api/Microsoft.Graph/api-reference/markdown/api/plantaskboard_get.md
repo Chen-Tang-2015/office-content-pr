@@ -21,7 +21,7 @@ See relationships table of [PlanTaskBoard](../resources/plantaskboard.md) object
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -47,8 +47,8 @@ Content-length: 76
 ```
 If successful, this method returns a `200 OK` response code and [PlanTaskBoard](../resources/plantaskboard.md) object in the response body.
 
-<!-- uuid: 2745772a-8e62-49ac-8b3f-736ba4835f92
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: f9631091-7917-4e62-82e6-2e050c2b6531
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get PlanTaskBoard",

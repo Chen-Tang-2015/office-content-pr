@@ -52,8 +52,8 @@ None
 |[Delete](../api/notificationrule_delete.md) | Void	|Delete NotificationRule object. |
 |[Eventtypes](../api/notificationrule_eventtypes.md)|String||
 
-<!-- uuid: 1743b3e6-b250-4a60-b009-2dfda19e2a85
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 44f3b982-d1d8-424d-b1b4-0c45be9624ea
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "NotificationRule resource",

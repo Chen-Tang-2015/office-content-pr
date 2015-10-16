@@ -21,7 +21,7 @@ See relationships table of [Resource](../resources/resource.md) object for suppo
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -48,8 +48,8 @@ Content-length: 112
 ```
 If successful, this method returns a `200 OK` response code and [Resource](../resources/resource.md) object in the response body.
 
-<!-- uuid: 0094cec8-6555-4304-927c-9d52909df172
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: 36426a35-09c8-448a-a579-bf08e2aa37e2
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Resource",

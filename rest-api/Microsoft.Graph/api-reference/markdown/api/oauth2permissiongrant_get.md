@@ -15,7 +15,7 @@ GET /drive/root/createdByUser/oauth2PermissionGrants/<objectId>
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -46,8 +46,8 @@ Content-length: 271
 ```
 If successful, this method returns a `200 OK` response code and [OAuth2PermissionGrant](../resources/oauth2permissiongrant.md) object in the response body.
 
-<!-- uuid: b6285dbd-2db0-4906-8418-31712845962a
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: dafbf6db-6274-468c-a48c-bea7294cfad6
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get OAuth2PermissionGrant",

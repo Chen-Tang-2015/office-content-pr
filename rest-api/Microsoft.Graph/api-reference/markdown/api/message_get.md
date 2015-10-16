@@ -8,7 +8,7 @@ The following **scopes** are required to execute this API:
 ```http
 GET /users/<objectId>/Messages/<Id>
 GET /drive/root/createdByUser/Messages/<Id>
-GET /users/<objectId>/RootFolder/Messages/<Id>
+GET /users/<objectId>/Folders/<Id>/Messages/<Id>
 ```
 ### Optional query parameters
 |Name|Value|Description|
@@ -21,7 +21,7 @@ See relationships table of [Message](../resources/message.md) object for support
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -116,8 +116,8 @@ Content-length: 1546
 ```
 If successful, this method returns a `200 OK` response code and [Message](../resources/message.md) object in the response body.
 
-<!-- uuid: 5490d2db-a5bc-4f2c-8c3f-eecc2d72dba8
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 2c200a59-68b9-4fa1-b115-ab0c4561aaf4
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Message",

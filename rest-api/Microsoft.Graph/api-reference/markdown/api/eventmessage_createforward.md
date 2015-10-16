@@ -12,7 +12,7 @@ The following **scopes** are required to execute this API:
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 
@@ -117,8 +117,8 @@ Content-length: 1546
 }
 ```
 
-<!-- uuid: 78d734f0-8781-4f6f-bf4a-1fac21f2755c
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: bb4b6cb0-448f-45b6-8c5b-22d830603ffa
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "EventMessage: CreateForward",

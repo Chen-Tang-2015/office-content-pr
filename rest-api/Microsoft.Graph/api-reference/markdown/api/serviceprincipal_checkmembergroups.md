@@ -12,7 +12,7 @@ POST /servicePrincipals/<objectId>/checkMemberGroups
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -58,8 +58,8 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: 39a5dba8-9178-42a1-8df7-79bfe4b596f1
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: 0ba7e535-1cb3-44df-98de-8251ced47079
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "ServicePrincipal: checkMemberGroups",

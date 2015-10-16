@@ -26,13 +26,13 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|action|String| Possible values are: `Replace`, `Append`, `Delete`, `Insert`, `Prepend`.|
+|action|String||
 |content|String||
-|position|String| Possible values are: `After`, `Before`.|
+|position|String||
 |target|String||
 
-<!-- uuid: ae2f17ba-f59c-4a93-899b-58d4fe2fa805
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: f8eae6d1-483f-484f-a0d3-d17c8de0f97d
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PatchContentCommand resource",

@@ -14,7 +14,7 @@ DELETE /drive/root/createdByUser/oauth2PermissionGrants/<objectId>
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -24,8 +24,8 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: 39476c79-5428-4413-a557-272c08bf0e6a
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 693b8584-a63b-42fa-9d12-dd4ee2be2d19
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Delete",

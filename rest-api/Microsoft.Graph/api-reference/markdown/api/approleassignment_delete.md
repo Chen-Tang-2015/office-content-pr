@@ -14,7 +14,7 @@ DELETE /groups/<objectId>/appRoleAssignments/<objectId>
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -24,8 +24,8 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: 5fec4b2a-4592-4e12-90af-3896dc6c40fb
-2015-10-15 16:49:27 UTC -->
+<!-- uuid: 07cac952-4609-45e1-9288-2bc879463408
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Delete",

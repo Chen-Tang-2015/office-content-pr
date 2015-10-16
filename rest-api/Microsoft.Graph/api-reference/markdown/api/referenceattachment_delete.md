@@ -12,7 +12,7 @@ The following **scopes** are required to execute this API:
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -22,8 +22,8 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: 5ba5ddd5-ba74-44af-932d-88ead4a60422
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: 5e76a037-a4ad-44e7-a46c-b2e7e93a992e
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Delete",

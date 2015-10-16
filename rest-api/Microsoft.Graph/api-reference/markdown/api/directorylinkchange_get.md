@@ -13,7 +13,7 @@ The following **scopes** are required to execute this API:
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -46,8 +46,8 @@ Content-length: 433
 ```
 If successful, this method returns a `200 OK` response code and [DirectoryLinkChange](../resources/directorylinkchange.md) object in the response body.
 
-<!-- uuid: 108b166c-8726-4326-a744-a5b60a705c0d
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: f653cb41-49af-4700-9286-b6138d9351ce
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get DirectoryLinkChange",

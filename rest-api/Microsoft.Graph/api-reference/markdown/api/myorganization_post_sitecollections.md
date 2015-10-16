@@ -12,7 +12,7 @@ POST /myOrganization/siteCollections
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [SiteCollection](../resources/sitecollection.md) object.
@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_sitecollection_from_myorganization"
 }-->
 ```http
-POST /myOrganization/
+POST /myOrganization
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [SiteCollection](../resources/sitecollection.md) object.
@@ -49,8 +49,8 @@ Content-length: 22
 }
 ```
 
-<!-- uuid: cc0a03fe-f418-4d0f-86ad-ebf2e9585202
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: b66acacd-cbc7-4270-b92d-ae76157c0967
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create SiteCollection",

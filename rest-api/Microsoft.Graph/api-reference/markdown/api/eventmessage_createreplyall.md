@@ -12,7 +12,7 @@ The following **scopes** are required to execute this API:
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 
@@ -117,8 +117,8 @@ Content-length: 1546
 }
 ```
 
-<!-- uuid: 4225f0ea-e3ca-4347-81bd-f9b302115891
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: df97e683-05ea-414c-be08-abfa932b1646
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "EventMessage: CreateReplyAll",

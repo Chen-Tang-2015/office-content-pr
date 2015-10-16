@@ -14,7 +14,7 @@ DELETE /drive/root/lastModifiedByUser/notes/resources/<id>
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -24,8 +24,8 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: 8d7b5096-180f-4174-890b-5e7bbe306fe5
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: e7d0db65-6380-420b-99a8-5b838646b1df
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Delete",

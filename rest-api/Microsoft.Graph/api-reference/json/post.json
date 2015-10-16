@@ -263,20 +263,6 @@
       "isUnicode": null
     },
     {
-      "name": "InReplyTo",
-      "description": "",
-      "isKey": false,
-      "dataType": "Post",
-      "isReadOnly": true,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": true,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": false,
-      "isUnicode": null
-    },
-    {
       "name": "Extensions",
       "description": "",
       "isKey": false,
@@ -288,6 +274,20 @@
       "supportFilter": false,
       "allowPostToCollection": true,
       "isNullable": true,
+      "isUnicode": null
+    },
+    {
+      "name": "InReplyTo",
+      "description": "",
+      "isKey": false,
+      "dataType": "Post",
+      "isReadOnly": true,
+      "enumName": null,
+      "isCollection": false,
+      "isRelationship": true,
+      "supportFilter": false,
+      "allowPostToCollection": true,
+      "isNullable": false,
       "isUnicode": null
     }
   ],

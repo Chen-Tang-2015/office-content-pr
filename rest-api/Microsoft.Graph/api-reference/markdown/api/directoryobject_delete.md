@@ -14,7 +14,7 @@ DELETE /contacts/<objectId>/manager
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -24,8 +24,8 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: 7dfdd25b-3083-4866-86ca-e0d3f40e911e
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: 5da28ae2-7aa8-4e6e-b0dd-0dd7332c249c
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Delete",

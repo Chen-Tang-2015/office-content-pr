@@ -14,7 +14,7 @@ POST /drive/root/createdByUser/JoinedGroups/<objectId>/ResetUnseenCount
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 
@@ -47,8 +47,8 @@ Content-length: 3
 }
 ```
 
-<!-- uuid: 82021a3d-e330-4a31-a035-8ea92683ef6f
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 200a02e5-e78b-4b45-a448-0754955f8dca
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Group: ResetUnseenCount",

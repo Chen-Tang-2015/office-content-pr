@@ -19,7 +19,7 @@ See relationships table of [EventMessage](../resources/eventmessage.md) object f
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -115,8 +115,8 @@ Content-length: 1598
 ```
 If successful, this method returns a `200 OK` response code and [EventMessage](../resources/eventmessage.md) object in the response body.
 
-<!-- uuid: c6d2543b-3383-45d6-8663-ea304f2537b8
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: 734af457-c29a-4ba6-bb5c-8ef020838860
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get EventMessage",

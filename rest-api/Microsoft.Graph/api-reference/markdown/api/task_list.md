@@ -23,7 +23,7 @@ GET /tasks
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -40,14 +40,13 @@ Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 755
+Content-length: 639
 {
   "values": [
     {
       "createdBy": "createdBy-value",
       "assignedTo": "assignedTo-value",
       "planId": "planId-value",
-      "bucketId": "bucketId-value",
       "title": "title-value",
       "orderHint": "orderHint-value",
       "assigneePriority": "assigneePriority-value",
@@ -58,11 +57,8 @@ Content-length: 755
       "assignedBy": "assignedBy-value",
       "dueDate": "datetime-value",
       "hasNotes": true,
-      "previewType": "previewType-value",
       "completedDate": "datetime-value",
       "numberOfReferences": 99,
-      "appliedCategories": {
-      },
       "id": "id-value",
       "version": "version-value"
     }
@@ -71,8 +67,8 @@ Content-length: 755
 ```
 If successful, this method returns a `200 OK` response code and collection of [Task](../resources/task.md) objects in the response body.
 
-<!-- uuid: 726d228f-2184-4137-aa45-8bc8ab26a268
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: c17e00c3-5cec-40d3-9a19-8e6afe232b37
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "List Task",

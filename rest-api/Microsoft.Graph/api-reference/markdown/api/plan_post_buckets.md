@@ -14,7 +14,7 @@ POST /groups/<objectId>/plans/<id>/buckets
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [Bucket](../resources/bucket.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_bucket_from_plan"
 }-->
 ```http
-POST /plans/<id>/
+POST /plans/<id>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Bucket](../resources/bucket.md) object.
@@ -57,8 +57,8 @@ Content-length: 179
 }
 ```
 
-<!-- uuid: 96d7a301-73b7-4648-a7aa-5b0b5c22ce52
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 155a9f75-3973-47c1-9372-98c3b27bf7ca
+2015-10-16 10:08:00 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Bucket",

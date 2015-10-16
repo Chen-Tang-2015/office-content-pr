@@ -14,7 +14,7 @@ POST /drive/root/lastModifiedByUser/memberOf
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_directoryobject_from_user"
 }-->
 ```http
-POST /users/<objectId>/
+POST /users/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
@@ -53,8 +53,8 @@ Content-length: 111
 }
 ```
 
-<!-- uuid: dd0ab40b-3ff3-4468-86ec-6590b62c1a27
-2015-10-15 16:49:31 UTC -->
+<!-- uuid: 53a1021a-96d3-4faa-8584-c29165fddb46
+2015-10-16 16:12:43 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create memberOf",

@@ -31,8 +31,8 @@ Here is a JSON representation of the resource
 |nextExpectedRanges|String collection||
 |uploadUrl|String||
 
-<!-- uuid: 0ed4189f-9c4a-47b2-a53e-4d295242c5b0
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: 52fa669e-a3ac-402e-bb57-dc0485247f59
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "uploadSession resource",

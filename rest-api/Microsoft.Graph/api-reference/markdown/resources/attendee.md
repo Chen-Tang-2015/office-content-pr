@@ -33,8 +33,8 @@ Here is a JSON representation of the resource
 |Status|[ResponseStatus](responsestatus.md)|The response (none, accepted, declined, etc.) and time.|
 |Type|String|The attendee type: Required = 0, Optional = 1, Resource = 2. Possible values are: `Required`, `Optional`, `Resource`.|
 
-<!-- uuid: 91a4142b-7399-45a4-9aca-47f0ceb169b7
-2015-10-15 16:49:27 UTC -->
+<!-- uuid: 96c90ec4-087d-43d2-9d12-bb0073a35e86
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Attendee resource",

@@ -12,7 +12,7 @@ POST /devices/<objectId>/checkMemberGroups
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -58,8 +58,8 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: c8260214-44a4-4ba5-98e3-4db4e796303f
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: e390af9a-5960-4e93-b500-fa74151127e4
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Device: checkMemberGroups",

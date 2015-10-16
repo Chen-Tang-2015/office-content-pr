@@ -14,7 +14,7 @@ POST /users/<objectId>/notes/pages/<id>/parentSection/pages
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [Page](../resources/page.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_page_from_section"
 }-->
 ```http
-POST /users/<objectId>/notes/sections/<id>/
+POST /users/<objectId>/notes/sections/<id>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Page](../resources/page.md) object.
@@ -66,8 +66,8 @@ Content-length: 391
 }
 ```
 
-<!-- uuid: d0ea2332-b81b-4a75-9d69-84c34ebf7590
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: b35585bb-366e-4fb6-b760-b2fcab1d2dbd
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Page",

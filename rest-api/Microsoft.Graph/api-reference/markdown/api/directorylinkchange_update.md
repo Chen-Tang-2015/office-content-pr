@@ -11,7 +11,7 @@ The following **scopes** are required to execute this API:
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -79,8 +79,8 @@ Content-length: 433
 }
 ```
 
-<!-- uuid: cfc0aa8f-3552-42f8-a338-93e81de53370
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: 03c1d026-df6e-4ade-b5ec-9aa8f46aa446
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of directorylinkchange object.",

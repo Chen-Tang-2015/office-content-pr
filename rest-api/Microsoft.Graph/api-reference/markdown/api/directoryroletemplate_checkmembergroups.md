@@ -12,7 +12,7 @@ POST /directoryRoleTemplates/<objectId>/checkMemberGroups
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -58,8 +58,8 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: c4c067bf-5d59-4326-b94f-efde0401224a
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: ffe4207f-52cf-4b5c-a8db-36d57ca396ad
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "DirectoryRoleTemplate: checkMemberGroups",

@@ -12,7 +12,7 @@ POST /contacts/<objectId>/directReports
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_directoryobject_from_orgcontact"
 }-->
 ```http
-POST /contacts/<objectId>/
+POST /contacts/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
@@ -51,8 +51,8 @@ Content-length: 111
 }
 ```
 
-<!-- uuid: b61e9e17-f80e-4d45-8930-daa1e788ba62
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: e9103804-641c-4fc1-b25b-d7a6829eb9c2
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create directReport",

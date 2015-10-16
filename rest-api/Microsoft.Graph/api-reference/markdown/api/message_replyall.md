@@ -8,13 +8,13 @@ The following **scopes** are required to execute this API:
 ```http
 POST /users/<objectId>/Messages/<Id>/ReplyAll
 POST /drive/root/createdByUser/Messages/<Id>/ReplyAll
-POST /users/<objectId>/RootFolder/Messages/<Id>/ReplyAll
+POST /users/<objectId>/Folders/<Id>/Messages/<Id>/ReplyAll
 
 ```
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -55,8 +55,8 @@ Content-length: 3
 }
 ```
 
-<!-- uuid: 3ae582e2-938c-4cfe-a55c-6bfd06a68779
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 947a1795-cead-4152-9843-bed6fa0c509e
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Message: ReplyAll",

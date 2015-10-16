@@ -21,7 +21,7 @@ See relationships table of [PlanTimeline](../resources/plantimeline.md) object f
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -48,8 +48,8 @@ Content-length: 119
 ```
 If successful, this method returns a `200 OK` response code and [PlanTimeline](../resources/plantimeline.md) object in the response body.
 
-<!-- uuid: f6d24892-3536-4648-b0a3-e539ffa4f81c
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: 53206b36-d5c3-4fcf-b964-1c05a5a6d75a
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get PlanTimeline",

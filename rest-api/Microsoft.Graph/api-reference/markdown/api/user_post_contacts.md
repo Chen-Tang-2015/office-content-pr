@@ -14,7 +14,7 @@ POST /drive/root/lastModifiedByUser/Contacts
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [Contact](../resources/contact.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_contact_from_user"
 }-->
 ```http
-POST /users/<objectId>/
+POST /users/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Contact](../resources/contact.md) object.
@@ -45,7 +45,7 @@ Here is an example of the response.
 ```json
 HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 1857
+Content-length: 1977
 {
   "ParentFolderId": "ParentFolderId-value",
   "Birthday": "datetime-value",
@@ -106,6 +106,11 @@ Content-length: 1857
   "YomiCompanyName": "YomiCompanyName-value",
   "YomiGivenName": "YomiGivenName-value",
   "YomiSurname": "YomiSurname-value",
+  "SpouseName": "SpouseName-value",
+  "PersonalNotes": "PersonalNotes-value",
+  "Children": [
+    "Children-value"
+  ],
   "ChangeKey": "ChangeKey-value",
   "Categories": [
     "Categories-value"
@@ -116,8 +121,8 @@ Content-length: 1857
 }
 ```
 
-<!-- uuid: c0cfa7e4-61c8-421c-8a69-60021099eeec
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: 3081ce6f-e770-40f3-a004-d6ecd26ce73e
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Contact",

@@ -16,7 +16,7 @@ GET /subscribedSkus
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -59,8 +59,8 @@ Content-length: 482
 ```
 If successful, this method returns a `200 OK` response code and collection of [SubscribedSku](../resources/subscribedsku.md) objects in the response body.
 
-<!-- uuid: c34a06cb-3900-4db2-9ac2-008866452774
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: 0529ea02-5af3-4ec1-a195-5a18c6165e4a
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "List SubscribedSku",

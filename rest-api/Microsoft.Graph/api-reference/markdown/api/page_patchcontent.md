@@ -14,7 +14,7 @@ POST /drive/root/lastModifiedByUser/notes/pages/<id>/PatchContent
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -62,8 +62,8 @@ Content-length: 3
 }
 ```
 
-<!-- uuid: f4da8059-df64-438a-83a5-6d8ace569df8
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: d2ea02f2-cff7-490e-9365-c128e447d3a1
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Page: PatchContent",

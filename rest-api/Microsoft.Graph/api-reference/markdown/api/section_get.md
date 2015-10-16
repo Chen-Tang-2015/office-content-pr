@@ -21,7 +21,7 @@ See relationships table of [Section](../resources/section.md) object for support
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -53,8 +53,8 @@ Content-length: 276
 ```
 If successful, this method returns a `200 OK` response code and [Section](../resources/section.md) object in the response body.
 
-<!-- uuid: 728ead8c-b765-4757-9b85-b5b83d4b809a
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: fc92f73f-9996-45e8-a315-f1c3a18fdf6e
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Section",

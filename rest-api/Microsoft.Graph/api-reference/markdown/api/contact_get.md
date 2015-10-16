@@ -21,7 +21,7 @@ See relationships table of [Contact](../resources/contact.md) object for support
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -38,7 +38,7 @@ Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 1857
+Content-length: 1977
 {
   "ParentFolderId": "ParentFolderId-value",
   "Birthday": "datetime-value",
@@ -99,6 +99,11 @@ Content-length: 1857
   "YomiCompanyName": "YomiCompanyName-value",
   "YomiGivenName": "YomiGivenName-value",
   "YomiSurname": "YomiSurname-value",
+  "SpouseName": "SpouseName-value",
+  "PersonalNotes": "PersonalNotes-value",
+  "Children": [
+    "Children-value"
+  ],
   "ChangeKey": "ChangeKey-value",
   "Categories": [
     "Categories-value"
@@ -110,8 +115,8 @@ Content-length: 1857
 ```
 If successful, this method returns a `200 OK` response code and [Contact](../resources/contact.md) object in the response body.
 
-<!-- uuid: 649f80df-bc29-4ef8-958a-c861ee26bbd8
-2015-10-15 16:49:27 UTC -->
+<!-- uuid: 4089a8ae-f202-4a27-93b3-142f9129c940
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Contact",

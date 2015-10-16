@@ -12,7 +12,7 @@ POST /servicePrincipals/<objectId>/createdObjects
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_directoryobject_from_serviceprincipal"
 }-->
 ```http
-POST /servicePrincipals/<objectId>/
+POST /servicePrincipals/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
@@ -51,8 +51,8 @@ Content-length: 111
 }
 ```
 
-<!-- uuid: fbd0c325-5279-4528-b2d9-08db7f90b85d
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: a9c366de-dd86-41c6-aca1-657c7af8110f
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create createdObject",

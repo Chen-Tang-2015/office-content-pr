@@ -14,7 +14,7 @@ POST /drive/root/lastModifiedByUser/CalendarGroups/<Id>/Extensions
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [Extension](../resources/extension.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_extension_from_calendargroup"
 }-->
 ```http
-POST /users/<objectId>/CalendarGroups/<Id>/
+POST /users/<objectId>/CalendarGroups/<Id>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Extension](../resources/extension.md) object.
@@ -51,8 +51,8 @@ Content-length: 22
 }
 ```
 
-<!-- uuid: 0fd7778d-a1d4-4776-8214-5b420d5d402e
-2015-10-15 16:49:27 UTC -->
+<!-- uuid: a7710f0a-5020-48dd-a334-baf837b9db45
+2015-10-16 10:07:45 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Extension",

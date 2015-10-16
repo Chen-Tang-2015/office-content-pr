@@ -21,7 +21,7 @@ See relationships table of [TaskDetails](../resources/taskdetails.md) object for
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -38,10 +38,9 @@ Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 177
+Content-length: 139
 {
   "notes": "notes-value",
-  "previewType": "previewType-value",
   "completedBy": "completedBy-value",
   "references": {
   },
@@ -51,8 +50,8 @@ Content-length: 177
 ```
 If successful, this method returns a `200 OK` response code and [TaskDetails](../resources/taskdetails.md) object in the response body.
 
-<!-- uuid: 1fe1e366-4480-4967-a733-de01123a6343
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: a950fbfb-158c-4a2d-8b5d-4319089e288f
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get TaskDetails",

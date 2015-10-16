@@ -11,7 +11,7 @@ PATCH /directoryRoles/<objectId>
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -73,8 +73,8 @@ Content-length: 275
 }
 ```
 
-<!-- uuid: 65987fe6-c656-4c6c-9e65-f1f3814d7b63
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: ddbbfae1-4f89-4c29-a8e6-754b4190e6e9
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of directoryrole object.",

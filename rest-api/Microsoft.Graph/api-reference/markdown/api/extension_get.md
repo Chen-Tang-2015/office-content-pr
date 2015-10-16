@@ -6,9 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-GET /users/<objectId>/Extensions/<Id>
-GET /groups/<objectId>/Extensions/<Id>
-GET /devices/<objectId>/Extensions/<Id>
+GET /users/<objectId>/Events/<Id>/Extensions/<Id>
+GET /groups/<objectId>/Events/<Id>/Extensions/<Id>
+GET /users/<objectId>/Messages/<Id>/Extensions/<Id>
 ```
 ### Optional query parameters
 |Name|Value|Description|
@@ -21,7 +21,7 @@ See relationships table of [Extension](../resources/extension.md) object for sup
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -45,8 +45,8 @@ Content-length: 22
 ```
 If successful, this method returns a `200 OK` response code and [Extension](../resources/extension.md) object in the response body.
 
-<!-- uuid: 7246a65d-ca66-46b9-bb44-870a3c5a451f
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: 5f264ef5-4599-4711-944b-47c4002cfa7d
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Extension",

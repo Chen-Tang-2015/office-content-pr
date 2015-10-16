@@ -9,18 +9,13 @@ Here is a JSON representation of the resource
 <!-- {
   "blockType": "resource",
   "optionalProperties": [
-    "Extensions"
+
   ],
   "@odata.type": "microsoft.graph.DirectoryObject"
 }-->
 
 ```json
 {
-  "Extensions": [
-    {
-      "@odata.type": "microsoft.graph.Extension"
-    }
-  ],
   "deletionTimestamp": "String (timestamp)",
   "objectId": "String (identifier)",
   "objectType": "String"
@@ -35,24 +30,22 @@ Here is a JSON representation of the resource
 |objectType|String|A string that identifies the object type. For example, for groups the value is always ΓÇ£GroupΓÇ¥.|
 
 ### Relationships
-| Relationship | Type	|Description|
-|:---------------|:--------|:----------|
-|Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
+None
+
 
 ### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get DirectoryObject](../api/directoryobject_get.md) | [DirectoryObject](directoryobject.md) |Read properties and relationships of directoryObject object.|
-|[Create Extension](../api/directoryobject_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
 |[Update](../api/directoryobject_update.md) | [DirectoryObject](directoryobject.md)	|Update DirectoryObject object. |
 |[Delete](../api/directoryobject_delete.md) | Void	|Delete DirectoryObject object. |
 |[Checkmembergroups](../api/directoryobject_checkmembergroups.md)|String||
 |[Get MemberGroups](../api/directoryobject_getmembergroups.md)|String||
 |[Get MemberObjects](../api/directoryobject_getmemberobjects.md)|String||
 
-<!-- uuid: b1d24c56-a88b-4def-926e-256b7a527f06
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: dbcae23f-42c8-463f-be41-b4ab6634212a
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "DirectoryObject resource",

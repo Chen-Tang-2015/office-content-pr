@@ -12,7 +12,7 @@ POST /NotificationRules/<Id>/EventTypes
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 
@@ -48,8 +48,8 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: 3220b099-8241-4656-b310-e944e364e4b9
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 8014ab16-2409-43d3-a036-f37a1b0d541a
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "NotificationRule: EventTypes",

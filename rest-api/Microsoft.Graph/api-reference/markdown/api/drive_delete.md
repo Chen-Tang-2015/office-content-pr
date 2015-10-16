@@ -14,7 +14,7 @@ DELETE /users/<objectId>/drive
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -24,8 +24,8 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: 93d5a2c6-5edc-4e9a-8f16-b5d8b8d9d52e
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: 70f8e57c-603f-49c6-a217-3c3dafe15627
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Delete",

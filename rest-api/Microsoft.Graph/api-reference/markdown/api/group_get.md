@@ -15,7 +15,7 @@ GET /drive/root/createdByUser/JoinedGroups/<objectId>
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -75,8 +75,8 @@ Content-length: 1009
 ```
 If successful, this method returns a `200 OK` response code and [Group](../resources/group.md) object in the response body.
 
-<!-- uuid: 6ff86466-71ac-4cca-aebf-109f0dff7a3f
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: b890288a-7c01-4768-a81c-0a1087797b36
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Group",

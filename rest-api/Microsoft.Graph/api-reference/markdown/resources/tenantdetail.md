@@ -9,18 +9,13 @@ Here is a JSON representation of the resource
 <!-- {
   "blockType": "resource",
   "optionalProperties": [
-    "Extensions"
+
   ],
   "@odata.type": "microsoft.graph.TenantDetail"
 }-->
 
 ```json
 {
-  "Extensions": [
-    {
-      "@odata.type": "microsoft.graph.Extension"
-    }
-  ],
   "assignedPlans": [
     {
       "@odata.type": "microsoft.graph.AssignedPlan"
@@ -97,24 +92,22 @@ Here is a JSON representation of the resource
 |verifiedDomains|[VerifiedDomain](verifieddomain.md) collection|The collection of domains associated with this tenant.                            **Notes**: not nullable.            |
 
 ### Relationships
-| Relationship | Type	|Description|
-|:---------------|:--------|:----------|
-|Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
+None
+
 
 ### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get TenantDetail](../api/tenantdetail_get.md) | [TenantDetail](tenantdetail.md) |Read properties and relationships of tenantDetail object.|
-|[Create Extension](../api/tenantdetail_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
 |[Update](../api/tenantdetail_update.md) | [TenantDetail](tenantdetail.md)	|Update TenantDetail object. |
 |[Delete](../api/tenantdetail_delete.md) | Void	|Delete TenantDetail object. |
 |[Checkmembergroups](../api/tenantdetail_checkmembergroups.md)|String||
 |[Get MemberGroups](../api/tenantdetail_getmembergroups.md)|String||
 |[Get MemberObjects](../api/tenantdetail_getmemberobjects.md)|String||
 
-<!-- uuid: 1e860784-d4f9-4017-9853-462848adf5e3
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: 5cf2883f-f7f2-4472-b84b-f31d3b70f69a
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "TenantDetail resource",

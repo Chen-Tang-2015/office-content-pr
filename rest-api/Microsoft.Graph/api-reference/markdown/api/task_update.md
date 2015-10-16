@@ -8,24 +8,22 @@ The following **scopes** are required to execute this API:
 ```http
 PATCH /tasks/<id>
 PATCH /plans/<id>/tasks/<id>
-PATCH /buckets/<id>/tasks/<id>
+PATCH /users/<objectId>/tasks/<id>
 ```
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|appliedCategories|AppliedCategoriesCollection||
 |assignedBy|String||
 |assignedTo|String||
 |assignedToDate|DateTimeOffset||
 |assigneePriority|String||
-|bucketId|String||
 |completedDate|DateTimeOffset||
 |createdBy|String||
 |createdDate|DateTimeOffset||
@@ -35,7 +33,6 @@ In the request body, supply the values for relevant fields that should be update
 |orderHint|String||
 |percentComplete|Int32||
 |planId|String||
-|previewType|String| Possible values are: `Automatic`, `NoPreview`, `CheckList`, `Notes`, `Reference`.|
 |startDate|DateTimeOffset||
 |title|String||
 |version|String||
@@ -52,12 +49,11 @@ Here is an example of the request.
 ```http
 PUT /tasks/<id>
 Content-type: application/json
-Content-length: 641
+Content-length: 541
 {
   "createdBy": "createdBy-value",
   "assignedTo": "assignedTo-value",
   "planId": "planId-value",
-  "bucketId": "bucketId-value",
   "title": "title-value",
   "orderHint": "orderHint-value",
   "assigneePriority": "assigneePriority-value",
@@ -68,11 +64,8 @@ Content-length: 641
   "assignedBy": "assignedBy-value",
   "dueDate": "datetime-value",
   "hasNotes": true,
-  "previewType": "previewType-value",
   "completedDate": "datetime-value",
   "numberOfReferences": 99,
-  "appliedCategories": {
-  },
   "id": "id-value",
   "version": "version-value"
 }
@@ -87,12 +80,11 @@ Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 641
+Content-length: 541
 {
   "createdBy": "createdBy-value",
   "assignedTo": "assignedTo-value",
   "planId": "planId-value",
-  "bucketId": "bucketId-value",
   "title": "title-value",
   "orderHint": "orderHint-value",
   "assigneePriority": "assigneePriority-value",
@@ -103,18 +95,15 @@ Content-length: 641
   "assignedBy": "assignedBy-value",
   "dueDate": "datetime-value",
   "hasNotes": true,
-  "previewType": "previewType-value",
   "completedDate": "datetime-value",
   "numberOfReferences": 99,
-  "appliedCategories": {
-  },
   "id": "id-value",
   "version": "version-value"
 }
 ```
 
-<!-- uuid: 51479416-36bc-403a-969d-f7f6d0430ebd
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: 780d74d4-f317-4a42-8057-a1b0d4058812
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of task object.",

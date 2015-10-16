@@ -14,7 +14,7 @@ POST /users/<objectId>/JoinedGroups/<objectId>/Threads/<Id>/Posts/<Id>/Reply
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -97,8 +97,8 @@ Content-length: 3
 }
 ```
 
-<!-- uuid: c4eba52d-af24-4a40-a9f0-b5381c5fce00
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: 931eb4a8-da2e-4eba-9b52-a2d83dd289b8
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Post: Reply",

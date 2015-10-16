@@ -14,7 +14,7 @@ POST /drive/root/lastModifiedByUser/ownedDevices
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_directoryobject_from_user"
 }-->
 ```http
-POST /users/<objectId>/
+POST /users/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
@@ -53,8 +53,8 @@ Content-length: 111
 }
 ```
 
-<!-- uuid: 8bccac27-177e-4a66-8e49-39a33a34c4db
-2015-10-15 16:49:31 UTC -->
+<!-- uuid: 9bce9ce7-7e83-4503-8ac1-564e3c032014
+2015-10-16 16:12:43 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create ownedDevice",

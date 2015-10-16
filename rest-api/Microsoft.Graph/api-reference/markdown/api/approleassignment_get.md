@@ -15,7 +15,7 @@ GET /groups/<objectId>/appRoleAssignments/<objectId>
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -48,8 +48,8 @@ Content-length: 398
 ```
 If successful, this method returns a `200 OK` response code and [AppRoleAssignment](../resources/approleassignment.md) object in the response body.
 
-<!-- uuid: 6dde6c96-96ca-4393-b77c-1c4bd309df94
-2015-10-15 16:49:27 UTC -->
+<!-- uuid: d83ed49b-6c18-4c85-87ef-5d777c7b4238
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get AppRoleAssignment",

@@ -14,7 +14,7 @@ POST /drives/<id>/root/search(q=q-value)
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request URL, provide following query parameters with values.
@@ -195,8 +195,8 @@ Content-length: 3636
 }
 ```
 
-<!-- uuid: 5a062c34-2cd3-4677-a478-d53dace5225f
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 9c15810b-8162-41a4-bc83-0e57c70544ab
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "item: search",

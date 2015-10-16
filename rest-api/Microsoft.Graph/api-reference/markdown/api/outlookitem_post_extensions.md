@@ -12,7 +12,7 @@ The following **scopes** are required to execute this API:
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [Extension](../resources/extension.md) object.
@@ -49,8 +49,8 @@ Content-length: 22
 }
 ```
 
-<!-- uuid: 09e16cc6-e4fb-4dd8-ac6f-683c60370fe6
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 1d55ce9f-ad8c-4ffc-ac56-6cb20f06dcff
+2015-10-16 10:08:00 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Extension",

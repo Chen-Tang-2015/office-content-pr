@@ -14,7 +14,7 @@ POST /users/<objectId>/Calendars/<Id>/Extensions
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [Extension](../resources/extension.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_extension_from_calendar"
 }-->
 ```http
-POST /users/<objectId>/Calendar/
+POST /users/<objectId>/Calendar
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Extension](../resources/extension.md) object.
@@ -51,8 +51,8 @@ Content-length: 22
 }
 ```
 
-<!-- uuid: 5e9fb614-f1bb-4341-89a6-9a2438f13e05
-2015-10-15 16:49:27 UTC -->
+<!-- uuid: 457ffc6d-1d7e-483a-b3a9-e5d3f6c574d2
+2015-10-16 10:07:45 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Extension",

@@ -14,7 +14,7 @@ POST /drive/root/lastModifiedByUser/plans
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [Plan](../resources/plan.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_plan_from_user"
 }-->
 ```http
-POST /users/<objectId>/
+POST /users/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Plan](../resources/plan.md) object.
@@ -57,8 +57,8 @@ Content-length: 179
 }
 ```
 
-<!-- uuid: 6c103496-0b15-4222-b23e-b3650f71025f
-2015-10-15 16:49:31 UTC -->
+<!-- uuid: 1bd6fefb-4cad-4f42-b944-069f99e8eee2
+2015-10-16 16:12:43 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Plan",

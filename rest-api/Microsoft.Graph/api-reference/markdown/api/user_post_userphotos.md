@@ -14,7 +14,7 @@ POST /drive/root/lastModifiedByUser/UserPhotos
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [Photo](../resources/photo.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_photo_from_user"
 }-->
 ```http
-POST /users/<objectId>/
+POST /users/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Photo](../resources/photo.md) object.
@@ -53,8 +53,8 @@ Content-length: 53
 }
 ```
 
-<!-- uuid: 3e3bc161-7326-4dca-9ff1-ab3a32d5e135
-2015-10-15 16:49:31 UTC -->
+<!-- uuid: a1f200c2-70c1-435d-a6c6-01e82172f457
+2015-10-16 10:08:07 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create UserPhoto",

@@ -29,6 +29,9 @@ Here is a JSON representation of the resource
     "String"
   ],
   "ChangeKey": "String",
+  "Children": [
+    "String"
+  ],
   "CompanyName": "String",
   "ContactPhoto": {
     "@odata.type": "microsoft.graph.Photo"
@@ -71,7 +74,9 @@ Here is a JSON representation of the resource
     "@odata.type": "microsoft.graph.PhysicalAddress"
   },
   "ParentFolderId": "String",
+  "PersonalNotes": "String",
   "Profession": "String",
+  "SpouseName": "String",
   "Surname": "String",
   "Title": "String",
   "YomiCompanyName": "String",
@@ -90,6 +95,7 @@ Here is a JSON representation of the resource
 |BusinessPhones|String collection|The contact's business phone numbers.|
 |Categories|String collection|The categories associated with the contact.|
 |ChangeKey|String|Identifies the version of the contact. Every time the contact is changed, ChangeKey  changes as well. This allows Exchange to apply changes to the correct version of the object.|
+|Children|String collection||
 |CompanyName|String|The name of the contact's company.|
 |DateTimeCreated|DateTimeOffset|The time the contact was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |DateTimeLastModified|DateTimeOffset|The time the contact was modified.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
@@ -112,7 +118,9 @@ Here is a JSON representation of the resource
 |OfficeLocation|String|The location of the contact's office.|
 |OtherAddress|[PhysicalAddress](physicaladdress.md)|Other addresses for the contact.|
 |ParentFolderId|String|The ID of the contact's parent folder.|
+|PersonalNotes|String||
 |Profession|String|The contact's profession.|
+|SpouseName|String||
 |Surname|String|The contact's surname (family name or last name).|
 |Title|String|The contact's title.|
 |YomiCompanyName|String|The phonetic Japanese company name of the contact. This property is optional.|
@@ -134,8 +142,8 @@ Here is a JSON representation of the resource
 |[Update](../api/contact_update.md) | [Contact](contact.md)	|Update Contact object. |
 |[Delete](../api/contact_delete.md) | Void	|Delete Contact object. |
 
-<!-- uuid: 0a370e4c-e8c4-4702-814f-7504f659f285
-2015-10-15 16:49:27 UTC -->
+<!-- uuid: 511678e5-6abe-4c49-9881-cdde8af5e543
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Contact resource",

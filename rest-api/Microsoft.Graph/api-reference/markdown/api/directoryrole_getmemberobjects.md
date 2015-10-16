@@ -12,7 +12,7 @@ POST /directoryRoles/<objectId>/getMemberObjects
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -56,8 +56,8 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: f3066b2c-24ed-45a9-bfae-d22e940ca3e4
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: a82ff67a-c485-4127-81ca-6b5d44d07d1c
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "DirectoryRole: getMemberObjects",

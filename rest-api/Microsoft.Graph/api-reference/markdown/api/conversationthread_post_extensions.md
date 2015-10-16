@@ -14,7 +14,7 @@ POST /users/<objectId>/JoinedGroups/<objectId>/Threads/<Id>/Extensions
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [Extension](../resources/extension.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_extension_from_conversationthread"
 }-->
 ```http
-POST /groups/<objectId>/Threads/<Id>/
+POST /groups/<objectId>/Threads/<Id>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Extension](../resources/extension.md) object.
@@ -51,8 +51,8 @@ Content-length: 22
 }
 ```
 
-<!-- uuid: cff7abef-142f-4116-984a-94a4c96169c4
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: 0e60ce0e-e6b1-477c-8ee6-d000399faa64
+2015-10-16 10:07:48 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Extension",

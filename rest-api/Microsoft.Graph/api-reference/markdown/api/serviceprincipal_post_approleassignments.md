@@ -12,7 +12,7 @@ POST /servicePrincipals/<objectId>/appRoleAssignments
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [AppRoleAssignment](../resources/approleassignment.md) object.
@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_approleassignment_from_serviceprincipal"
 }-->
 ```http
-POST /servicePrincipals/<objectId>/
+POST /servicePrincipals/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [AppRoleAssignment](../resources/approleassignment.md) object.
@@ -58,8 +58,8 @@ Content-length: 398
 }
 ```
 
-<!-- uuid: 8b63bcfd-4671-477a-b989-608d7c96e76f
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: a9c9f552-b7f8-4fae-afac-d88d2dec1ace
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create AppRoleAssignment",

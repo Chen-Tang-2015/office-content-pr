@@ -6,15 +6,15 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /users/<objectId>/RootFolder/Move
 POST /users/<objectId>/Folders/<Id>/Move
-POST /drive/root/createdByUser/RootFolder/Move
+POST /drive/root/createdByUser/Folders/<Id>/Move
+POST /drive/root/lastModifiedByUser/Folders/<Id>/Move
 
 ```
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -34,7 +34,7 @@ Here is an example of how to call this API.
   "name": "mailfolder_move"
 }-->
 ```http
-POST /users/<objectId>/RootFolder/Move
+POST /users/<objectId>/Folders/<Id>/Move
 Content-type: application/json
 Content-length: 44
 {
@@ -59,8 +59,8 @@ Content-length: 130
 }
 ```
 
-<!-- uuid: 74aa18cd-aad8-429f-abd2-a15ff74ea26e
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: de23941c-e8e2-42ad-b937-5cb1e5abdfa8
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "MailFolder: Move",

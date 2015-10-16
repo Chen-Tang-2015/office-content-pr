@@ -14,7 +14,7 @@ POST /drive/root/createdByUser/JoinedGroups/<objectId>/RejectedSenders
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_directoryobject_from_group"
 }-->
 ```http
-POST /groups/<objectId>/
+POST /groups/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
@@ -53,8 +53,8 @@ Content-length: 111
 }
 ```
 
-<!-- uuid: fd91ad6d-f302-4d3c-9bfc-0b58bb7c1312
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: ba40703e-cd38-47e1-a531-47f71af86ae1
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create RejectedSender",

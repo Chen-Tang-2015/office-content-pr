@@ -8,13 +8,13 @@ The following **scopes** are required to execute this API:
 ```http
 POST /users/<objectId>/Messages/<Id>/Reply
 POST /drive/root/createdByUser/Messages/<Id>/Reply
-POST /users/<objectId>/RootFolder/Messages/<Id>/Reply
+POST /users/<objectId>/Folders/<Id>/Messages/<Id>/Reply
 
 ```
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -55,8 +55,8 @@ Content-length: 3
 }
 ```
 
-<!-- uuid: 4ffde9f1-36e5-4060-93ca-e5fbba32dc7f
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 3552cdbd-ee76-45de-a270-e0a4949ad7be
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Message: Reply",

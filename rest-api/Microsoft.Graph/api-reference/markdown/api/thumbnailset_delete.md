@@ -14,7 +14,7 @@ DELETE /drives/<id>/root/thumbnails/<id>
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -24,8 +24,8 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: 4a64fc8c-9f7c-4aba-9ede-8398909d781d
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: a79421fd-8ba1-456e-9310-482acb59dd57
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Delete",

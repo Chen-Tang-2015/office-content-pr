@@ -14,7 +14,7 @@ POST /groups/<objectId>/appRoleAssignments/<objectId>/checkMemberGroups
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -60,8 +60,8 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: 196ef5d3-7a04-4c09-9baa-a8843ba529cb
-2015-10-15 16:49:27 UTC -->
+<!-- uuid: 083ca4a7-8a5c-4a07-8042-2a5ceea8c40b
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "AppRoleAssignment: checkMemberGroups",

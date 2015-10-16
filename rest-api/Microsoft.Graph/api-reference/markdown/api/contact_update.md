@@ -13,7 +13,7 @@ PATCH /drive/root/lastModifiedByUser/Contacts/<Id>
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -27,6 +27,7 @@ In the request body, supply the values for relevant fields that should be update
 |BusinessPhones|String|The contact's business phone numbers.|
 |Categories|String|The categories associated with the contact.|
 |ChangeKey|String|Identifies the version of the contact. Every time the contact is changed, ChangeKey  changes as well. This allows Exchange to apply changes to the correct version of the object.|
+|Children|String||
 |CompanyName|String|The name of the contact's company.|
 |DateTimeCreated|DateTimeOffset|The time the contact was created.|
 |DateTimeLastModified|DateTimeOffset|The time the contact was modified.|
@@ -48,7 +49,9 @@ In the request body, supply the values for relevant fields that should be update
 |OfficeLocation|String|The location of the contact's office.|
 |OtherAddress|PhysicalAddress|Other addresses for the contact.|
 |ParentFolderId|String|The ID of the contact's parent folder.|
+|PersonalNotes|String||
 |Profession|String|The contact's profession.|
+|SpouseName|String||
 |Surname|String|The contact's surname (family name or last name).|
 |Title|String|The contact's title.|
 |YomiCompanyName|String|The phonetic Japanese company name of the contact. This property is optional.|
@@ -67,7 +70,7 @@ Here is an example of the request.
 ```http
 PUT /users/<objectId>/Contacts/<Id>
 Content-type: application/json
-Content-length: 1857
+Content-length: 1977
 {
   "ParentFolderId": "ParentFolderId-value",
   "Birthday": "datetime-value",
@@ -128,6 +131,11 @@ Content-length: 1857
   "YomiCompanyName": "YomiCompanyName-value",
   "YomiGivenName": "YomiGivenName-value",
   "YomiSurname": "YomiSurname-value",
+  "SpouseName": "SpouseName-value",
+  "PersonalNotes": "PersonalNotes-value",
+  "Children": [
+    "Children-value"
+  ],
   "ChangeKey": "ChangeKey-value",
   "Categories": [
     "Categories-value"
@@ -147,7 +155,7 @@ Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 1857
+Content-length: 1977
 {
   "ParentFolderId": "ParentFolderId-value",
   "Birthday": "datetime-value",
@@ -208,6 +216,11 @@ Content-length: 1857
   "YomiCompanyName": "YomiCompanyName-value",
   "YomiGivenName": "YomiGivenName-value",
   "YomiSurname": "YomiSurname-value",
+  "SpouseName": "SpouseName-value",
+  "PersonalNotes": "PersonalNotes-value",
+  "Children": [
+    "Children-value"
+  ],
   "ChangeKey": "ChangeKey-value",
   "Categories": [
     "Categories-value"
@@ -218,8 +231,8 @@ Content-length: 1857
 }
 ```
 
-<!-- uuid: ec80aa3d-ead9-4990-9e01-b6a514999ec5
-2015-10-15 16:49:27 UTC -->
+<!-- uuid: 40425550-00b1-49d9-a875-6aa5d4e90d90
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of contact object.",

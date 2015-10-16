@@ -13,19 +13,13 @@ PATCH /groups/<objectId>/plans/<id>/details
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|category0Description|String||
-|category1Description|String||
-|category2Description|String||
-|category3Description|String||
-|category4Description|String||
-|category5Description|String||
 |sharedWith|UserIdCollection||
 |version|String||
 
@@ -41,16 +35,10 @@ Here is an example of the request.
 ```http
 PUT /plans/<id>/details
 Content-type: application/json
-Content-length: 411
+Content-length: 75
 {
   "sharedWith": {
   },
-  "category0Description": "category0Description-value",
-  "category1Description": "category1Description-value",
-  "category2Description": "category2Description-value",
-  "category3Description": "category3Description-value",
-  "category4Description": "category4Description-value",
-  "category5Description": "category5Description-value",
   "id": "id-value",
   "version": "version-value"
 }
@@ -65,23 +53,17 @@ Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 411
+Content-length: 75
 {
   "sharedWith": {
   },
-  "category0Description": "category0Description-value",
-  "category1Description": "category1Description-value",
-  "category2Description": "category2Description-value",
-  "category3Description": "category3Description-value",
-  "category4Description": "category4Description-value",
-  "category5Description": "category5Description-value",
   "id": "id-value",
   "version": "version-value"
 }
 ```
 
-<!-- uuid: d1f9591b-8fec-4252-94fc-b0baae00f4e8
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: cd2d73b8-de78-45cd-9f5b-c71a9a38228f
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of plandetails object.",

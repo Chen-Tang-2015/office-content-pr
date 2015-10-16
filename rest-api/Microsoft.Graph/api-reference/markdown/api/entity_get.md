@@ -19,7 +19,7 @@ See relationships table of [Entity](../resources/entity.md) object for supported
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -43,8 +43,8 @@ Content-length: 22
 ```
 If successful, this method returns a `200 OK` response code and [Entity](../resources/entity.md) object in the response body.
 
-<!-- uuid: 120fb2be-2535-45ec-bd5b-caa7a58f594c
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: 6dc0846f-15e7-4b66-953b-7adec1566acc
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Entity",

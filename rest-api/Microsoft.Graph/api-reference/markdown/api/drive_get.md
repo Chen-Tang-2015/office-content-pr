@@ -21,7 +21,7 @@ See relationships table of [drive](../resources/drive.md) object for supported n
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -67,8 +67,8 @@ Content-length: 458
 ```
 If successful, this method returns a `200 OK` response code and [drive](../resources/drive.md) object in the response body.
 
-<!-- uuid: 23a694d1-e883-435a-9976-1c88afba97df
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: 6ad834ea-c1b4-46f8-93f0-233c3a088a75
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get drive",

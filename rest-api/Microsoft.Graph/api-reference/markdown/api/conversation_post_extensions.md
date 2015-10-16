@@ -14,7 +14,7 @@ POST /drive/root/createdByUser/JoinedGroups/<objectId>/Conversations/<Id>/Extens
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [Extension](../resources/extension.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_extension_from_conversation"
 }-->
 ```http
-POST /groups/<objectId>/Conversations/<Id>/
+POST /groups/<objectId>/Conversations/<Id>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Extension](../resources/extension.md) object.
@@ -51,8 +51,8 @@ Content-length: 22
 }
 ```
 
-<!-- uuid: ad1bee3a-7044-4675-a3cd-54cf977f9fd1
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: bcd7f0ea-b862-42be-998a-4767ae30293c
+2015-10-16 10:07:47 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Extension",

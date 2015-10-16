@@ -12,7 +12,7 @@ POST /tenantDetails/<objectId>/getMemberObjects
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -56,8 +56,8 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: 2942a4c4-de75-470f-904c-d4412ec33262
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: 6a6bca9b-4a14-4fdc-8fa7-7aab1d9a66c6
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "TenantDetail: getMemberObjects",

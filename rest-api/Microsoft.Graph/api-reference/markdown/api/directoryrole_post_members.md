@@ -12,7 +12,7 @@ POST /directoryRoles/<objectId>/members
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_directoryobject_from_directoryrole"
 }-->
 ```http
-POST /directoryRoles/<objectId>/
+POST /directoryRoles/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
@@ -51,8 +51,8 @@ Content-length: 111
 }
 ```
 
-<!-- uuid: d356ff30-b1de-4675-86c2-16ebc8f8a37f
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: e7b3365f-e917-4380-a7a6-517112526211
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create member",

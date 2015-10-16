@@ -14,7 +14,7 @@ POST /drive/root/createdByUser/JoinedGroups/<objectId>/RemoveFavorite
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 
@@ -47,8 +47,8 @@ Content-length: 3
 }
 ```
 
-<!-- uuid: ce411c34-e80f-4ff8-bf7e-92ac37131676
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 45627868-e6b7-428f-80a6-bf38d79c854f
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Group: RemoveFavorite",

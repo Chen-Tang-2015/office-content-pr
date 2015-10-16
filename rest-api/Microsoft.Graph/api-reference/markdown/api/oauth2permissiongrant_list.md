@@ -16,7 +16,7 @@ GET /oauth2PermissionGrants
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -51,8 +51,8 @@ Content-length: 333
 ```
 If successful, this method returns a `200 OK` response code and collection of [OAuth2PermissionGrant](../resources/oauth2permissiongrant.md) objects in the response body.
 
-<!-- uuid: 8339acf0-82b5-4ea9-ac06-b220535806ed
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: ca6c6b2d-c12c-4946-a4d2-04acc2a2c0a5
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "List OAuth2PermissionGrant",

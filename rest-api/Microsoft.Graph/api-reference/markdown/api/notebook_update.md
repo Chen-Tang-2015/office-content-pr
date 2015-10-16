@@ -13,7 +13,7 @@ PATCH /users/<objectId>/notes/pages/<id>/parentNotebook
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -31,7 +31,7 @@ In the request body, supply the values for relevant fields that should be update
 |sectionGroupsUrl|String|The URL for the sectionGroups navigation property, which returns all the section groups in the notebook.|
 |sectionsUrl|String|The URL for the sections navigation property, which returns all the sections in the notebook.|
 |self|String|The endpoint where you can get details about the notebook.|
-|userRole|String|One of three values: Owner, Contributor, or Reader. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Possible values are: `Owner`, `Contributor`, `Reader`, `None`.|
+|userRole|String|One of three values: Owner, Contributor, or Reader. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook.|
 
 ### Response
 If successful, this method returns a `200 OK` response code and updated [Notebook](../resources/notebook.md) object in the response body.
@@ -104,8 +104,8 @@ Content-length: 516
 }
 ```
 
-<!-- uuid: fcc79bdd-59e8-4189-bd9f-e1b957c6bf02
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 19b6e63c-d8f8-45c3-966a-45dfda71ea70
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of notebook object.",

@@ -9,7 +9,7 @@ Here is a JSON representation of the resource
 <!-- {
   "blockType": "resource",
   "optionalProperties": [
-    "Extensions"
+
   ],
   "@odata.type": "microsoft.graph.Attachment"
 }-->
@@ -18,11 +18,6 @@ Here is a JSON representation of the resource
 {
   "ContentType": "String",
   "DateTimeLastModified": "String (timestamp)",
-  "Extensions": [
-    {
-      "@odata.type": "microsoft.graph.Extension"
-    }
-  ],
   "Id": "String (identifier)",
   "IsInline": true,
   "Name": "String",
@@ -41,21 +36,19 @@ Here is a JSON representation of the resource
 |Size|Int32||
 
 ### Relationships
-| Relationship | Type	|Description|
-|:---------------|:--------|:----------|
-|Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
+None
+
 
 ### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get Attachment](../api/attachment_get.md) | [Attachment](attachment.md) |Read properties and relationships of attachment object.|
-|[Create Extension](../api/attachment_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
 |[Update](../api/attachment_update.md) | [Attachment](attachment.md)	|Update Attachment object. |
 |[Delete](../api/attachment_delete.md) | Void	|Delete Attachment object. |
 
-<!-- uuid: b98fed5b-0904-4749-9b80-e582b28481da
-2015-10-15 16:49:27 UTC -->
+<!-- uuid: 045cea5d-5b7d-4eb8-800a-b3ef1b307d4c
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Attachment resource",

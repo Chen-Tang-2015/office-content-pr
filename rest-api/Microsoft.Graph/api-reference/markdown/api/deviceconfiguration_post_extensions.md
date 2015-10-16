@@ -12,7 +12,7 @@ POST /deviceConfiguration/<objectId>/Extensions
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [Extension](../resources/extension.md) object.
@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_extension_from_deviceconfiguration"
 }-->
 ```http
-POST /deviceConfiguration/<objectId>/
+POST /deviceConfiguration/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Extension](../resources/extension.md) object.
@@ -49,8 +49,8 @@ Content-length: 22
 }
 ```
 
-<!-- uuid: f3978b83-df72-499c-9976-86eb33f4c79b
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: 83ba38bd-c453-4d02-bf62-ce23830761aa
+2015-10-16 10:07:48 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Extension",

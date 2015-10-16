@@ -13,7 +13,7 @@ GET /deviceConfiguration/<objectId>
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -47,8 +47,8 @@ Content-length: 341
 ```
 If successful, this method returns a `200 OK` response code and [DeviceConfiguration](../resources/deviceconfiguration.md) object in the response body.
 
-<!-- uuid: 4e37b289-59dd-482c-b866-400f8d6a28c2
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: 0086e73a-da2e-4fcd-a38c-fc128be5ecbc
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get DeviceConfiguration",

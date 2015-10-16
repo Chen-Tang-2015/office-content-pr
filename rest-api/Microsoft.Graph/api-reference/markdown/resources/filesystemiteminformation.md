@@ -37,8 +37,8 @@ Here is a JSON representation of the resource
 |name|String||
 |parentReference|[itemReference](itemreference.md)||
 
-<!-- uuid: 1345054b-3d6b-48fd-a704-db040a24485d
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: a2d36785-f95e-4367-ba31-53447a9f1a25
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "FileSystemItemInformation resource",

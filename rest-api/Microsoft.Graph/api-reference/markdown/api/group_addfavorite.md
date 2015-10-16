@@ -14,7 +14,7 @@ POST /drive/root/createdByUser/JoinedGroups/<objectId>/AddFavorite
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 
@@ -47,8 +47,8 @@ Content-length: 3
 }
 ```
 
-<!-- uuid: 457b0437-5ea1-44e5-90c5-e1f70025094d
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 203746d2-2a40-4608-871c-6c49cfb3b3d6
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Group: AddFavorite",

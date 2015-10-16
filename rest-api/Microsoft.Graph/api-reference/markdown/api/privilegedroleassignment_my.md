@@ -13,7 +13,7 @@ POST /PrivilegedRoles/<Id>/Assignments/<UserId|RoleId>/My
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 
@@ -51,8 +51,8 @@ Content-length: 160
 }
 ```
 
-<!-- uuid: 39409a96-30c5-46c3-a635-78d65843e61b
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: 03432f77-772e-4b37-8c02-afd7c9579e25
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PrivilegedRoleAssignment: My",

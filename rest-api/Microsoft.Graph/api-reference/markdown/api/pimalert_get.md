@@ -19,7 +19,7 @@ See relationships table of [PimAlert](../resources/pimalert.md) object for suppo
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -58,8 +58,8 @@ Content-length: 529
 ```
 If successful, this method returns a `200 OK` response code and [PimAlert](../resources/pimalert.md) object in the response body.
 
-<!-- uuid: fd967faf-7d01-438d-86e3-b63ecd0a6d0b
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 20de7413-cdff-4543-9054-3f40e75f2837
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get PimAlert",

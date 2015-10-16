@@ -19,7 +19,7 @@ See relationships table of [Site](../resources/site.md) object for supported nam
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -43,8 +43,8 @@ Content-length: 22
 ```
 If successful, this method returns a `200 OK` response code and [Site](../resources/site.md) object in the response body.
 
-<!-- uuid: 89291a9e-33f8-4b15-afb4-3adb4f6abdc3
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: 79b7a752-9cd6-4706-b167-e35beeca3a54
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Site",

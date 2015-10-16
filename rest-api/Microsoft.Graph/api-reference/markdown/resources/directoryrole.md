@@ -9,7 +9,6 @@ Here is a JSON representation of the resource
 <!-- {
   "blockType": "resource",
   "optionalProperties": [
-    "Extensions",
     "memberOf",
     "members",
     "ownedObjects",
@@ -20,11 +19,6 @@ Here is a JSON representation of the resource
 
 ```json
 {
-  "Extensions": [
-    {
-      "@odata.type": "microsoft.graph.Extension"
-    }
-  ],
   "deletionTimestamp": "String (timestamp)",
   "description": "String",
   "displayName": "String",
@@ -71,7 +65,6 @@ Here is a JSON representation of the resource
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 |memberOf|[DirectoryObject](directoryobject.md) collection| Read-only. Nullable.|
 |members|[DirectoryObject](directoryobject.md) collection|Users and service principals that are members of this directory role. Inherited from [DirectoryObject].            HTTP Methods: GET, POST, DELETE Read-only. Nullable.|
 |ownedObjects|[DirectoryObject](directoryobject.md) collection| Read-only. Nullable.|
@@ -82,7 +75,6 @@ Here is a JSON representation of the resource
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get DirectoryRole](../api/directoryrole_get.md) | [DirectoryRole](directoryrole.md) |Read properties and relationships of directoryRole object.|
-|[Create Extension](../api/directoryrole_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
 |[Create memberOf](../api/directoryrole_post_memberof.md) |[DirectoryObject](directoryobject.md)| Create a new memberOf by posting to the memberOf collection.|
 |[Create member](../api/directoryrole_post_members.md) |[DirectoryObject](directoryobject.md)| Create a new member by posting to the members collection.|
 |[Create ownedObject](../api/directoryrole_post_ownedobjects.md) |[DirectoryObject](directoryobject.md)| Create a new ownedObject by posting to the ownedObjects collection.|
@@ -93,8 +85,8 @@ Here is a JSON representation of the resource
 |[Get MemberGroups](../api/directoryrole_getmembergroups.md)|String||
 |[Get MemberObjects](../api/directoryrole_getmemberobjects.md)|String||
 
-<!-- uuid: d5b86176-bd4a-41b9-b7ae-a2c8e67bc62a
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: 7a900d7d-f86d-4bcc-b778-58c9c35e9ffa
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "DirectoryRole resource",

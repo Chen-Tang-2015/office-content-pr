@@ -12,7 +12,7 @@ POST /contacts/<objectId>/Extensions
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [Extension](../resources/extension.md) object.
@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_extension_from_orgcontact"
 }-->
 ```http
-POST /contacts/<objectId>/
+POST /contacts/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Extension](../resources/extension.md) object.
@@ -49,8 +49,8 @@ Content-length: 22
 }
 ```
 
-<!-- uuid: f4c395c3-4809-40f0-ba28-d784d285351b
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 6e497ef6-f55c-4469-8058-4f214ab68d8c
+2015-10-16 10:07:59 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Extension",

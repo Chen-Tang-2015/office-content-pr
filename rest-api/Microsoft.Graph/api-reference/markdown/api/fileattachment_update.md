@@ -11,7 +11,7 @@ The following **scopes** are required to execute this API:
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -23,7 +23,6 @@ In the request body, supply the values for relevant fields that should be update
 |ContentLocation|String||
 |ContentType|String||
 |DateTimeLastModified|DateTimeOffset||
-|IsContactPhoto|Boolean||
 |IsInline|Boolean||
 |Name|String||
 |Size|Int32||
@@ -40,11 +39,10 @@ Here is an example of the request.
 ```http
 
 Content-type: application/json
-Content-length: 308
+Content-length: 282
 {
   "ContentId": "ContentId-value",
   "ContentLocation": "ContentLocation-value",
-  "IsContactPhoto": true,
   "ContentBytes": "ContentBytes-value",
   "Name": "Name-value",
   "ContentType": "ContentType-value",
@@ -64,11 +62,10 @@ Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 308
+Content-length: 282
 {
   "ContentId": "ContentId-value",
   "ContentLocation": "ContentLocation-value",
-  "IsContactPhoto": true,
   "ContentBytes": "ContentBytes-value",
   "Name": "Name-value",
   "ContentType": "ContentType-value",
@@ -79,8 +76,8 @@ Content-length: 308
 }
 ```
 
-<!-- uuid: efdbc67b-d9a3-4cb7-8c97-9ecfa66b33c4
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: 70c7c796-6c30-4338-9547-5d30ece96ed7
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of fileattachment object.",

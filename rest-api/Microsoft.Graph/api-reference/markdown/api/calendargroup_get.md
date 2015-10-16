@@ -21,7 +21,7 @@ See relationships table of [CalendarGroup](../resources/calendargroup.md) object
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -48,8 +48,8 @@ Content-length: 110
 ```
 If successful, this method returns a `200 OK` response code and [CalendarGroup](../resources/calendargroup.md) object in the response body.
 
-<!-- uuid: 7c2cf15a-b43c-4043-9c7f-08f7681f799a
-2015-10-15 16:49:27 UTC -->
+<!-- uuid: 7e7dfe30-8ecc-4d93-b687-3de2693f65bc
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get CalendarGroup",

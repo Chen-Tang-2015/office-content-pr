@@ -19,7 +19,7 @@ See relationships table of [share](../resources/share.md) object for supported n
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -58,8 +58,8 @@ Content-length: 330
 ```
 If successful, this method returns a `200 OK` response code and [share](../resources/share.md) object in the response body.
 
-<!-- uuid: c16a5951-e2a2-4044-a730-3aa656edc8ac
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: 49e38908-048b-4f25-8aa6-7dd0305695ca
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get share",

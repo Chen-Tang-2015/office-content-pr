@@ -14,7 +14,7 @@ POST /groups/<objectId>/appRoleAssignments/<objectId>/Extensions
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [Extension](../resources/extension.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_extension_from_approleassignment"
 }-->
 ```http
-POST /users/<objectId>/appRoleAssignments/<objectId>/
+POST /users/<objectId>/appRoleAssignments/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Extension](../resources/extension.md) object.
@@ -51,8 +51,8 @@ Content-length: 22
 }
 ```
 
-<!-- uuid: 056e9fcf-5780-43c8-aa4e-a0d445de3dfa
-2015-10-15 16:49:27 UTC -->
+<!-- uuid: 4252acb4-df09-49ae-8aca-c822d98a30ac
+2015-10-16 10:07:45 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Extension",

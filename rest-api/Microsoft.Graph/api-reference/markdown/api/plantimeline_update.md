@@ -13,14 +13,14 @@ PATCH /groups/<objectId>/plans/<id>/timeline
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|displaySettings|String| Possible values are: `None`, `Today`, `TimeScale`, `TaskDate`, `All`.|
+|displaySettings|String||
 |lockedWidth|Int32||
 |version|String||
 
@@ -63,8 +63,8 @@ Content-length: 119
 }
 ```
 
-<!-- uuid: 93ab53fb-167e-48da-9b73-59f744595227
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: bdfe9ee3-4c83-4275-907e-5f4e235059ce
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of plantimeline object.",

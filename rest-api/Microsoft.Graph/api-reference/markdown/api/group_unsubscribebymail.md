@@ -14,7 +14,7 @@ POST /drive/root/createdByUser/JoinedGroups/<objectId>/UnsubscribeByMail
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 
@@ -47,8 +47,8 @@ Content-length: 3
 }
 ```
 
-<!-- uuid: 063df907-a65f-4443-b238-75ea9ca7c6b4
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 0c5a62d4-b0a6-45ee-a5d4-ea86339a4a30
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Group: UnsubscribeByMail",

@@ -6,14 +6,14 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-PATCH /users/<objectId>/RootFolder
 PATCH /users/<objectId>/Folders/<Id>
-PATCH /drive/root/createdByUser/RootFolder
+PATCH /drive/root/createdByUser/Folders/<Id>
+PATCH /drive/root/lastModifiedByUser/Folders/<Id>
 ```
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -34,7 +34,7 @@ Here is an example of the request.
   "name": "update_mailfolder"
 }-->
 ```http
-PUT /users/<objectId>/RootFolder
+PUT /users/<objectId>/Folders/<Id>
 Content-type: application/json
 Content-length: 130
 {
@@ -63,8 +63,8 @@ Content-length: 130
 }
 ```
 
-<!-- uuid: 8c046262-357c-4c6a-85cd-60cdbe3e9a43
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 22a38564-8a97-4bd6-b351-ffe7651014e7
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of mailfolder object.",

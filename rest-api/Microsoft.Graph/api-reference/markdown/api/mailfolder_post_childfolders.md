@@ -6,15 +6,15 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /users/<objectId>/RootFolder/ChildFolders
 POST /users/<objectId>/Folders/<Id>/ChildFolders
-POST /drive/root/createdByUser/RootFolder/ChildFolders
+POST /drive/root/createdByUser/Folders/<Id>/ChildFolders
+POST /drive/root/lastModifiedByUser/Folders/<Id>/ChildFolders
 
 ```
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [MailFolder](../resources/mailfolder.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_mailfolder_from_mailfolder"
 }-->
 ```http
-POST /users/<objectId>/RootFolder/
+POST /users/<objectId>/Folders/<Id>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [MailFolder](../resources/mailfolder.md) object.
@@ -54,8 +54,8 @@ Content-length: 130
 }
 ```
 
-<!-- uuid: 1d8f19cb-5973-4375-a164-026734959ed1
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 7094470b-a9fe-4c5e-9310-8b9bfcac015b
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create MailFolder",

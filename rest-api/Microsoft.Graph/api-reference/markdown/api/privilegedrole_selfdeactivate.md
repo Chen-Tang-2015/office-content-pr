@@ -13,7 +13,7 @@ POST /PrivilegedRoleAssignments/<UserId|RoleId>/RoleInfo/SelfDeactivate
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 
@@ -51,8 +51,8 @@ Content-length: 160
 }
 ```
 
-<!-- uuid: 0dc76c12-a6f4-4e93-86bf-a3c26b371ade
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: 54d59a85-874b-428b-8865-8ef96e16be23
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PrivilegedRole: SelfDeactivate",

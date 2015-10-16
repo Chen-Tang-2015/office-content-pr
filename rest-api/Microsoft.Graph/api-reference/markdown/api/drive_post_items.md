@@ -14,7 +14,7 @@ POST /users/<objectId>/drive/items
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [item](../resources/item.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_item_from_drive"
 }-->
 ```http
-POST /drive/
+POST /drive
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [item](../resources/item.md) object.
@@ -189,8 +189,8 @@ Content-length: 3050
 }
 ```
 
-<!-- uuid: d47bdc89-2d02-4c1d-87d6-26c31865dd10
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: e9311493-52ba-462d-a70c-aa3312c76ca6
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create item",

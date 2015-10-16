@@ -13,17 +13,17 @@ PATCH /groups/<objectId>/tasks/<id>/timelineFormat
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|anchorPosition|String| Possible values are: `Top`, `Bottom`.|
+|anchorPosition|String||
 |calloutHeight|Int32||
 |color|Int32||
-|drawingStyle|String| Possible values are: `Bar`, `Callout`.|
+|drawingStyle|String||
 |labelOffsetX|Int32||
 |labelOffsetY|Int32||
 |swimlane|Int32||
@@ -81,8 +81,8 @@ Content-length: 255
 }
 ```
 
-<!-- uuid: 491f3e6f-a6c9-4831-864b-1a1fc018fe7d
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: 1676b959-5b14-41f2-b0be-6bac21b1b76c
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of timelinetaskformat object.",

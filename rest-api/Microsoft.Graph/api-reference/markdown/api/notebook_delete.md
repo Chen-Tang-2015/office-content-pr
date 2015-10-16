@@ -14,7 +14,7 @@ DELETE /users/<objectId>/notes/pages/<id>/parentNotebook
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -24,8 +24,8 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: 0228ff2b-f483-40d9-8071-2cc0769408d1
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: d5a28b94-3053-42e5-8010-e22d55dfa3da
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Delete",

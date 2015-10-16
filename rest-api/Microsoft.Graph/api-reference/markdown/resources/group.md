@@ -13,8 +13,6 @@ Here is a JSON representation of the resource
     "CalendarView",
     "Conversations",
     "Events",
-    "Extensions",
-    "GroupPhotos",
     "RejectedSenders",
     "Threads",
     "appRoleAssignments",
@@ -56,19 +54,9 @@ Here is a JSON representation of the resource
       "@odata.type": "microsoft.graph.Event"
     }
   ],
-  "Extensions": [
-    {
-      "@odata.type": "microsoft.graph.Extension"
-    }
-  ],
   "GroupPhoto": {
     "@odata.type": "microsoft.graph.Photo"
   },
-  "GroupPhotos": [
-    {
-      "@odata.type": "microsoft.graph.Photo"
-    }
-  ],
   "IsFavorite": true,
   "IsSubscribedByMail": true,
   "RejectedSenders": [
@@ -95,9 +83,6 @@ Here is a JSON representation of the resource
   ],
   "deletionTimestamp": "String (timestamp)",
   "description": "String",
-  "details": {
-    "@odata.type": "microsoft.graph.UserDetails"
-  },
   "dirSyncEnabled": true,
   "displayName": "String",
   "drive": {
@@ -187,14 +172,11 @@ Here is a JSON representation of the resource
 |CalendarView|[Event](event.md) collection| Read-only. Nullable.|
 |Conversations|[Conversation](conversation.md) collection| Read-only. Nullable.|
 |Events|[Event](event.md) collection| Read-only. Nullable.|
-|Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 |GroupPhoto|[Photo](photo.md)| Read-only.|
-|GroupPhotos|[Photo](photo.md) collection| Read-only. Nullable.|
 |RejectedSenders|[DirectoryObject](directoryobject.md) collection| Read-only. Nullable.|
 |Threads|[ConversationThread](conversationthread.md) collection| Read-only. Nullable.|
 |appRoleAssignments|[AppRoleAssignment](approleassignment.md) collection|Contains the set of applications that a group is assigned to.                            **Notes**: Requires version 1.5 or newer.             Read-only. Nullable.|
 |createdOnBehalfOf|[DirectoryObject](directoryobject.md)| Read-only.|
-|details|[UserDetails](userdetails.md)| Read-only.|
 |drive|[drive](drive.md)| Read-only.|
 |memberOf|[DirectoryObject](directoryobject.md) collection|Groups that this group is a member of. Inherited from [DirectoryObject].            HTTP Methods: GET (supported for all groups)  Read-only. Nullable.|
 |members|[DirectoryObject](directoryobject.md) collection|Users, contacts, and groups that are members of this group. Inherited from [DirectoryObject].            HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) Read-only. Nullable.|
@@ -211,8 +193,6 @@ Here is a JSON representation of the resource
 |[Create Event](../api/group_post_calendarview.md) |[Event](event.md)| Create a new Event by posting to the CalendarView collection.|
 |[Create Conversation](../api/group_post_conversations.md) |[Conversation](conversation.md)| Create a new Conversation by posting to the Conversations collection.|
 |[Create Event](../api/group_post_events.md) |[Event](event.md)| Create a new Event by posting to the Events collection.|
-|[Create Extension](../api/group_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
-|[Create GroupPhoto](../api/group_post_groupphotos.md) |[Photo](photo.md)| Create a new GroupPhoto by posting to the GroupPhotos collection.|
 |[Create RejectedSender](../api/group_post_rejectedsenders.md) |[DirectoryObject](directoryobject.md)| Create a new RejectedSender by posting to the RejectedSenders collection.|
 |[Create Thread](../api/group_post_threads.md) |[ConversationThread](conversationthread.md)| Create a new Thread by posting to the Threads collection.|
 |[Create AppRoleAssignment](../api/group_post_approleassignments.md) |[AppRoleAssignment](approleassignment.md)| Create a new AppRoleAssignment by posting to the appRoleAssignments collection.|
@@ -232,8 +212,8 @@ Here is a JSON representation of the resource
 |[Get MemberGroups](../api/group_getmembergroups.md)|String||
 |[Get MemberObjects](../api/group_getmemberobjects.md)|String||
 
-<!-- uuid: ca538571-e0a4-41a4-a449-32604fbff58d
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 03554400-6f86-4ffc-b33f-9bf57101055b
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Group resource",

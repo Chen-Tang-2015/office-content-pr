@@ -14,7 +14,7 @@ POST /drive/root/lastModifiedByUser/CalendarGroups
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [CalendarGroup](../resources/calendargroup.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_calendargroup_from_user"
 }-->
 ```http
-POST /users/<objectId>/
+POST /users/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [CalendarGroup](../resources/calendargroup.md) object.
@@ -54,8 +54,8 @@ Content-length: 110
 }
 ```
 
-<!-- uuid: 656d6909-5291-49ca-9878-5822df612e1a
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: 858b9592-67a2-40f2-83d6-6805f23246df
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create CalendarGroup",

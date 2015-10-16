@@ -14,7 +14,7 @@ POST /drive/root/lastModifiedByUser/WorkingWith
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [User](../resources/user.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_user_from_user"
 }-->
 ```http
-POST /users/<objectId>/
+POST /users/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [User](../resources/user.md) object.
@@ -115,30 +115,30 @@ Content-length: 2650
   "userPrincipalName": "userPrincipalName-value",
   "userType": "userType-value",
   "MailboxGuid": "MailboxGuid-value",
-  "AboutMe": "AboutMe-value",
-  "Alias": "Alias-value",
-  "Birthday": "datetime-value",
-  "HireDate": "datetime-value",
-  "Interests": [
-    "Interests-value"
+  "aboutMe": "aboutMe-value",
+  "alias": "alias-value",
+  "birthday": "datetime-value",
+  "hireDate": "datetime-value",
+  "interests": [
+    "interests-value"
   ],
-  "MySite": "MySite-value",
-  "PastProjects": [
-    "PastProjects-value"
+  "mySite": "mySite-value",
+  "pastProjects": [
+    "pastProjects-value"
   ],
-  "PreferredName": "PreferredName-value",
-  "PrincipalName": "PrincipalName-value",
-  "Responsibilities": [
-    "Responsibilities-value"
+  "preferredName": "preferredName-value",
+  "principalName": "principalName-value",
+  "responsibilities": [
+    "responsibilities-value"
   ],
-  "Schools": [
-    "Schools-value"
+  "schools": [
+    "schools-value"
   ],
-  "Skills": [
-    "Skills-value"
+  "skills": [
+    "skills-value"
   ],
-  "Tags": [
-    "Tags-value"
+  "tags": [
+    "tags-value"
   ],
   "objectType": "objectType-value",
   "objectId": "objectId-value",
@@ -146,8 +146,8 @@ Content-length: 2650
 }
 ```
 
-<!-- uuid: 6bf8205a-446e-4f4a-850f-aa5f3fd2a756
-2015-10-15 16:49:31 UTC -->
+<!-- uuid: 02ec7ae6-7272-435c-b1e2-7c67108eb60b
+2015-10-16 16:12:43 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create User",

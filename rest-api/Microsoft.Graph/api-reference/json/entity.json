@@ -39,20 +39,6 @@
       "allowPostToCollection": true,
       "isNullable": false,
       "isUnicode": false
-    },
-    {
-      "name": "Extensions",
-      "description": "",
-      "isKey": false,
-      "dataType": "Extension",
-      "isReadOnly": true,
-      "enumName": null,
-      "isCollection": true,
-      "isRelationship": true,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": true,
-      "isUnicode": null
     }
   ],
   "methods": [

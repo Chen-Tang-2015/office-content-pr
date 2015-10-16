@@ -21,7 +21,7 @@ See relationships table of [PlanDetails](../resources/plandetails.md) object for
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -38,24 +38,18 @@ Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 411
+Content-length: 75
 {
   "sharedWith": {
   },
-  "category0Description": "category0Description-value",
-  "category1Description": "category1Description-value",
-  "category2Description": "category2Description-value",
-  "category3Description": "category3Description-value",
-  "category4Description": "category4Description-value",
-  "category5Description": "category5Description-value",
   "id": "id-value",
   "version": "version-value"
 }
 ```
 If successful, this method returns a `200 OK` response code and [PlanDetails](../resources/plandetails.md) object in the response body.
 
-<!-- uuid: 43339874-4087-4c02-bdd4-018b3c3781e1
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: c880cd66-0238-48a1-bb32-2c3f50e71b87
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get PlanDetails",

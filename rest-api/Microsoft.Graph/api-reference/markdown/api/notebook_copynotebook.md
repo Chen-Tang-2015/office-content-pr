@@ -14,7 +14,7 @@ POST /users/<objectId>/notes/pages/<id>/parentNotebook/CopyNotebook
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -79,8 +79,8 @@ Content-length: 516
 }
 ```
 
-<!-- uuid: 410e8cb6-e175-4f62-97ac-81dc76518375
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: cb7f8caa-253e-4678-b41e-9e687aa5cf1f
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Notebook: CopyNotebook",

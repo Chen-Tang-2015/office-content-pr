@@ -14,7 +14,7 @@ POST /users/<objectId>/CalendarView/<Id>/Accept
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -57,8 +57,8 @@ Content-length: 3
 }
 ```
 
-<!-- uuid: 80f322fb-a3e6-48bc-ad05-9cc772c34e2c
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: a2b4b2f6-f433-47b8-9cd3-f00a2ea4b5b3
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Event: Accept",

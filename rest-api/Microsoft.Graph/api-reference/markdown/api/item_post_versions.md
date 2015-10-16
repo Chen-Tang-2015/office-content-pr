@@ -14,7 +14,7 @@ POST /drives/<id>/root/versions
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [item](../resources/item.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_item_from_item"
 }-->
 ```http
-POST /drive/root/
+POST /drive/root
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [item](../resources/item.md) object.
@@ -189,8 +189,8 @@ Content-length: 3050
 }
 ```
 
-<!-- uuid: 485ca4c5-7003-43d0-aab1-ef5da5579653
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 56a9d34a-2e9a-4d59-bfc2-a45dcf1815c7
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create version",

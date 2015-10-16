@@ -16,7 +16,7 @@ GET /PrivilegedRoleAssignments
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -48,8 +48,8 @@ Content-length: 210
 ```
 If successful, this method returns a `200 OK` response code and collection of [PrivilegedRoleAssignment](../resources/privilegedroleassignment.md) objects in the response body.
 
-<!-- uuid: 71528172-f86e-4481-881d-696eca1f5834
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: 7f6091a2-823d-43d1-9297-6c3aab08a3a2
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "List PrivilegedRoleAssignment",

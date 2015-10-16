@@ -1,29 +1,19 @@
 # drive resource type
 
+The Drive resource represents a drive in OneDrive. It provides information about the owner of the drive, total and available storage space, and exposes a collection of all the [Items][item-resource] contained within the drive.  
 
+### JSON representation
 
-### Properties
-None
+Here is a JSON representation of the resource
 
-### Relationships
-None
-
-
-### Tasks
-
-| Task		   | Return Type	|Description|
-|:---------------|:--------|:----------|
-|[List](../api/drive_list.md) | [drive](drive.md) [] |Get drive object collection. |
-
-<!-- uuid: f1fd10d7-a70e-4651-85d3-634502423798
-2015-10-15 16:49:28 UTC -->
 <!-- {
-  "type": "#page.annotation",
-  "description": "drive resource",
-  "keywords": "",
-  "section": "documentation",
-  "tocPath": ""
-}-->e"
+  "blockType": "resource",
+  "optionalProperties": [
+    "items",
+    "shared",
+    "special"
+  ],
+  "@odata.type": "microsoft.graph.drive"
 }-->
 
 ```json
@@ -85,8 +75,8 @@ None
 |[Delete](../api/drive_delete.md) | Void	|Delete drive object. |
 |[Allphotos](../api/drive_allphotos.md)|[item](item.md)||
 
-<!-- uuid: 77b41128-09a0-4511-9f39-f6b1aba16a41
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: ed856205-178c-4b1a-8045-db3104d627af
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "drive resource",

@@ -14,7 +14,7 @@ DELETE /users/<objectId>/CalendarView/<Id>
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -24,8 +24,8 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: efc86fb5-c205-44f7-8c74-86e6349356d8
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: e41df9e8-45c8-45e3-a45e-9a8454504a49
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Delete",

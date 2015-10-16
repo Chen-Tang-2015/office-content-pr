@@ -14,7 +14,7 @@ POST /drive/root/createdByUser/JoinedGroups/<objectId>/Events
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [Event](../resources/event.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_event_from_group"
 }-->
 ```http
-POST /groups/<objectId>/
+POST /groups/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Event](../resources/event.md) object.
@@ -125,8 +125,8 @@ Content-length: 1794
 }
 ```
 
-<!-- uuid: ecf0a412-b255-406d-b7d0-03dcfa5faf5d
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: d7246926-8cbc-4874-8761-39976d41cb6a
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Event",

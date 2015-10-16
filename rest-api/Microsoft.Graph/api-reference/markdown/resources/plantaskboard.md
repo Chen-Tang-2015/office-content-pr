@@ -26,7 +26,7 @@ Here is a JSON representation of the resource
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |id|String| Read-only.|
-|type|String| Possible values are: `Status`, `AssignedTo`, `Bucket`. Read-only.|
+|type|String| Read-only.|
 |version|String||
 
 ### Relationships
@@ -41,8 +41,8 @@ None
 |[Update](../api/plantaskboard_update.md) | [PlanTaskBoard](plantaskboard.md)	|Update PlanTaskBoard object. |
 |[Delete](../api/plantaskboard_delete.md) | Void	|Delete PlanTaskBoard object. |
 
-<!-- uuid: afea763f-1969-43e4-8cd4-0fcde7201b3a
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: 087f0e09-f851-4bb9-ac59-52b98f3c84d3
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PlanTaskBoard resource",

@@ -14,7 +14,7 @@ POST /drive/root/lastModifiedByUser/CalendarView
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [Event](../resources/event.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_event_from_user"
 }-->
 ```http
-POST /users/<objectId>/
+POST /users/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Event](../resources/event.md) object.
@@ -125,8 +125,8 @@ Content-length: 1794
 }
 ```
 
-<!-- uuid: 90889f38-6cc5-4781-a846-6b93ffddfe99
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: 2eab185d-998a-40e3-a68a-b1c0435a4562
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Event",

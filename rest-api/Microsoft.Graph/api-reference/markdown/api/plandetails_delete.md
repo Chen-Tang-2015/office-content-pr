@@ -14,7 +14,7 @@ DELETE /groups/<objectId>/plans/<id>/details
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -24,8 +24,8 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: 5ed0f422-76a3-40f5-af79-e975d131ef0c
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 5b6112e9-f9e4-4ce6-bccd-254676d6e96a
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Delete",

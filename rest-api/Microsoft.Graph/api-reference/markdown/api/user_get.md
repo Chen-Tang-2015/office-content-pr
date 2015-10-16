@@ -15,7 +15,7 @@ GET /drive/root/lastModifiedByUser
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -102,30 +102,30 @@ Content-length: 2650
   "userPrincipalName": "userPrincipalName-value",
   "userType": "userType-value",
   "MailboxGuid": "MailboxGuid-value",
-  "AboutMe": "AboutMe-value",
-  "Alias": "Alias-value",
-  "Birthday": "datetime-value",
-  "HireDate": "datetime-value",
-  "Interests": [
-    "Interests-value"
+  "aboutMe": "aboutMe-value",
+  "alias": "alias-value",
+  "birthday": "datetime-value",
+  "hireDate": "datetime-value",
+  "interests": [
+    "interests-value"
   ],
-  "MySite": "MySite-value",
-  "PastProjects": [
-    "PastProjects-value"
+  "mySite": "mySite-value",
+  "pastProjects": [
+    "pastProjects-value"
   ],
-  "PreferredName": "PreferredName-value",
-  "PrincipalName": "PrincipalName-value",
-  "Responsibilities": [
-    "Responsibilities-value"
+  "preferredName": "preferredName-value",
+  "principalName": "principalName-value",
+  "responsibilities": [
+    "responsibilities-value"
   ],
-  "Schools": [
-    "Schools-value"
+  "schools": [
+    "schools-value"
   ],
-  "Skills": [
-    "Skills-value"
+  "skills": [
+    "skills-value"
   ],
-  "Tags": [
-    "Tags-value"
+  "tags": [
+    "tags-value"
   ],
   "objectType": "objectType-value",
   "objectId": "objectId-value",
@@ -134,8 +134,8 @@ Content-length: 2650
 ```
 If successful, this method returns a `200 OK` response code and [User](../resources/user.md) object in the response body.
 
-<!-- uuid: 0250c6cb-4f12-4200-80ab-57c8af475a27
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: eb9d968e-e25c-4096-ad67-1ef10881a938
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get User",

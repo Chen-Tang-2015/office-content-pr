@@ -23,7 +23,7 @@ GET /shares
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -66,8 +66,8 @@ Content-length: 424
 ```
 If successful, this method returns a `200 OK` response code and collection of [share](../resources/share.md) objects in the response body.
 
-<!-- uuid: 00424268-0610-427d-bd15-1c8609f17674
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: 6e7df362-e009-4e45-a5ac-c41fbbd0717c
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "List share",

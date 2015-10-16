@@ -11,7 +11,7 @@ PATCH /Notifications/<Id>
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -61,8 +61,8 @@ Content-length: 160
 }
 ```
 
-<!-- uuid: cf9a81d8-1d4f-4e67-a50f-59792793c703
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 33637dad-39dc-4aae-b187-5c725715770e
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of notification object.",

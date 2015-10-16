@@ -9,18 +9,13 @@ Here is a JSON representation of the resource
 <!-- {
   "blockType": "resource",
   "optionalProperties": [
-    "Extensions"
+
   ],
   "@odata.type": "microsoft.graph.Extension"
 }-->
 
 ```json
 {
-  "Extensions": [
-    {
-      "@odata.type": "microsoft.graph.Extension"
-    }
-  ],
   "Id": "String (identifier)"
 }
 
@@ -31,20 +26,18 @@ Here is a JSON representation of the resource
 |Id|String| Read-only.|
 
 ### Relationships
-| Relationship | Type	|Description|
-|:---------------|:--------|:----------|
-|Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
+None
+
 
 ### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get Extension](../api/extension_get.md) | [Extension](extension.md) |Read properties and relationships of extension object.|
-|[Create Extension](../api/extension_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
 |[Delete](../api/extension_delete.md) | Void	|Delete Extension object. |
 
-<!-- uuid: 451e864e-faa9-49b1-9541-8d780b62f90e
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: e03bb7c3-4ab7-4458-bb70-3b40fc8b2360
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Extension resource",

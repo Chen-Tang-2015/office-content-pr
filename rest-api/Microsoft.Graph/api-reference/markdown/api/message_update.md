@@ -8,12 +8,12 @@ The following **scopes** are required to execute this API:
 ```http
 PATCH /users/<objectId>/Messages/<Id>
 PATCH /drive/root/createdByUser/Messages/<Id>
-PATCH /users/<objectId>/RootFolder/Messages/<Id>
+PATCH /users/<objectId>/Folders/<Id>/Messages/<Id>
 ```
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -221,8 +221,8 @@ Content-length: 1546
 }
 ```
 
-<!-- uuid: 31250153-4eab-4d9b-8c4a-f2b6c1243c85
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: aef940d0-d531-4d1c-b23d-704ab4fda4a0
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of message object.",

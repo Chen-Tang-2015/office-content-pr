@@ -14,7 +14,7 @@ POST /drive/root/lastModifiedByUser/notes/sections
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [Section](../resources/section.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_section_from_notes"
 }-->
 ```http
-POST /users/<objectId>/notes/
+POST /users/<objectId>/notes
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Section](../resources/section.md) object.
@@ -59,8 +59,8 @@ Content-length: 276
 }
 ```
 
-<!-- uuid: 13993593-254b-4e77-98cd-27bb85fa2331
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 58dee44a-7a3b-4f8c-8956-c6b2315c7e8b
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Section",

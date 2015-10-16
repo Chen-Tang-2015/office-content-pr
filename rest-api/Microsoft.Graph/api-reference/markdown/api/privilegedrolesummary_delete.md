@@ -13,7 +13,7 @@ DELETE /PrivilegedRoleAssignments/<UserId|RoleId>/RoleInfo/Summary
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -23,8 +23,8 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: 57ab0557-61cb-4d0e-a2e9-aaa3e927ccc6
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: a82b0db9-de54-4950-a7df-167732a3a44b
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Delete",

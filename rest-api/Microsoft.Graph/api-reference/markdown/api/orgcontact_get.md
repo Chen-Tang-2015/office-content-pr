@@ -13,7 +13,7 @@ GET /contacts/<objectId>
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -70,8 +70,8 @@ Content-length: 1097
 ```
 If successful, this method returns a `200 OK` response code and [OrgContact](../resources/orgcontact.md) object in the response body.
 
-<!-- uuid: c7b2dfa0-f6df-4255-b85d-78bbafd04998
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: f727ec75-8d50-43db-ad18-53940a5fc255
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get OrgContact",

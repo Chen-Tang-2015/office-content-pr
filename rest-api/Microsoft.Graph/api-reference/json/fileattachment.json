@@ -54,20 +54,6 @@
       "isUnicode": false
     },
     {
-      "name": "IsContactPhoto",
-      "description": "",
-      "isKey": false,
-      "dataType": "Boolean",
-      "isReadOnly": false,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": false,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": false,
-      "isUnicode": null
-    },
-    {
       "name": "ContentBytes",
       "description": "",
       "isKey": false,
@@ -164,20 +150,6 @@
       "allowPostToCollection": true,
       "isNullable": false,
       "isUnicode": false
-    },
-    {
-      "name": "Extensions",
-      "description": "",
-      "isKey": false,
-      "dataType": "Extension",
-      "isReadOnly": true,
-      "enumName": null,
-      "isCollection": true,
-      "isRelationship": true,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": true,
-      "isUnicode": null
     }
   ],
   "methods": []

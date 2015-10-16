@@ -11,7 +11,7 @@ PATCH /PrivilegedOperationEvents/<Id>
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -88,8 +88,8 @@ Content-length: 456
 }
 ```
 
-<!-- uuid: 147c6146-4f69-414d-8d50-916294126072
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: ee8071f1-df40-42b3-b738-be17d1fb83cc
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of privilegedoperationevent object.",

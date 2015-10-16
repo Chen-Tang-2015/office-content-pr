@@ -8,13 +8,13 @@ The following **scopes** are required to execute this API:
 ```http
 POST /users/<objectId>/Messages/<Id>/Send
 POST /drive/root/createdByUser/Messages/<Id>/Send
-POST /users/<objectId>/RootFolder/Messages/<Id>/Send
+POST /users/<objectId>/Folders/<Id>/Messages/<Id>/Send
 
 ```
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 
@@ -47,8 +47,8 @@ Content-length: 3
 }
 ```
 
-<!-- uuid: 1fd67510-822d-4581-a028-f59d3464946e
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 3039680f-d8ea-45bf-a7ec-f7e5a93c2514
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Message: Send",

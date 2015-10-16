@@ -1,29 +1,36 @@
-# myOrganization resource type
+# MyOrganization resource type
 
 
 
+### JSON representation
+
+Here is a JSON representation of the resource
+
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "siteCollections"
+  ],
+  "@odata.type": "microsoft.graph.MyOrganization"
+}-->
+
+```json
+{
+  "id": "String (identifier)",
+  "siteCollections": [
+    {
+      "@odata.type": "microsoft.graph.SiteCollection"
+    }
+  ]
+}
+
+```
 ### Properties
-None
+| Property	   | Type	|Description|
+|:---------------|:--------|:----------|
+|id|String| Read-only.|
 
 ### Relationships
-None
-
-
-### Tasks
-
-| Task		   | Return Type	|Description|
-|:---------------|:--------|:----------|
-|[List](../api/myorganization_list.md) | [MyOrganization](myorganization.md) [] |Get myOrganization object collection. |
-
-<!-- uuid: eb4fc1bc-5dde-4959-a92d-5e7bcae36a09
-2015-10-15 16:49:29 UTC -->
-<!-- {
-  "type": "#page.annotation",
-  "description": "myOrganization resource",
-  "keywords": "",
-  "section": "documentation",
-  "tocPath": ""
-}-->elationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |siteCollections|[SiteCollection](sitecollection.md) collection| Read-only. Nullable.|
@@ -36,8 +43,8 @@ None
 |[Create SiteCollection](../api/myorganization_post_sitecollections.md) |[SiteCollection](sitecollection.md)| Create a new SiteCollection by posting to the siteCollections collection.|
 |[Delete](../api/myorganization_delete.md) | Void	|Delete MyOrganization object. |
 
-<!-- uuid: f971917b-fdee-4023-b9b9-f9e970871aa9
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 236f2089-71a1-4bb6-b7d4-a14b0f7fffb0
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "MyOrganization resource",

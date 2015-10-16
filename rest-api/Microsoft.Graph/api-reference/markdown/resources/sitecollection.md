@@ -44,8 +44,8 @@ Here is a JSON representation of the resource
 |[Delete](../api/sitecollection_delete.md) | Void	|Delete SiteCollection object. |
 |[Fromurl](../api/sitecollection_fromurl.md)|[SiteMetadata](sitemetadata.md)||
 
-<!-- uuid: 12dbe30f-8066-41b9-a780-acaea33b24f2
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: 931c034f-724c-449d-b1ea-9dc4a53028ce
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "SiteCollection resource",

@@ -8,13 +8,13 @@ The following **scopes** are required to execute this API:
 ```http
 POST /users/<objectId>/Messages/<Id>/Copy
 POST /drive/root/createdByUser/Messages/<Id>/Copy
-POST /users/<objectId>/RootFolder/Messages/<Id>/Copy
+POST /users/<objectId>/Folders/<Id>/Messages/<Id>/Copy
 
 ```
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -127,8 +127,8 @@ Content-length: 1546
 }
 ```
 
-<!-- uuid: c91c063e-1b02-4b6b-8678-74ba4b7f6600
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: bb62d54d-64a7-45f2-a3ed-5c38c2cc09e3
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Message: Copy",

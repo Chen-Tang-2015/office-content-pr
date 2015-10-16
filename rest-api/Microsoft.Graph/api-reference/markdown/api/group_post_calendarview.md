@@ -14,7 +14,7 @@ POST /drive/root/createdByUser/JoinedGroups/<objectId>/CalendarView
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [Event](../resources/event.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_event_from_group"
 }-->
 ```http
-POST /groups/<objectId>/
+POST /groups/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Event](../resources/event.md) object.
@@ -125,8 +125,8 @@ Content-length: 1794
 }
 ```
 
-<!-- uuid: 92ea4818-f77b-46bc-96a5-5ca3214828d7
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: dd2b9e51-73ac-44fd-bbf0-14f81907b073
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Event",

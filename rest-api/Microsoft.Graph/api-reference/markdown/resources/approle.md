@@ -37,8 +37,8 @@ Here is a JSON representation of the resource
 |isEnabled|Boolean|When creating or updating a role definition, this must be set to **true** (which is the default). To delete a role, this must first be set to **false**.  At that point, in a subsequent call, this role may be removed.|
 |value|String|Specifies the value of the roles claim that the application should expect in the authentication and access tokens.|
 
-<!-- uuid: f8fb135b-4063-4eb0-bb39-e16cd0ae9315
-2015-10-15 16:49:27 UTC -->
+<!-- uuid: d4af5439-b9d7-4131-ac4d-c7704f4d247b
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "AppRole resource",

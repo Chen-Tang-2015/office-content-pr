@@ -10,7 +10,6 @@ Here is a JSON representation of the resource
   "blockType": "resource",
   "optionalProperties": [
     "ChildFolders",
-    "Extensions",
     "Messages"
   ],
   "@odata.type": "microsoft.graph.MailFolder"
@@ -25,11 +24,6 @@ Here is a JSON representation of the resource
     }
   ],
   "DisplayName": "String",
-  "Extensions": [
-    {
-      "@odata.type": "microsoft.graph.Extension"
-    }
-  ],
   "Id": "String (identifier)",
   "Messages": [
     {
@@ -52,7 +46,6 @@ Here is a JSON representation of the resource
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |ChildFolders|[MailFolder](mailfolder.md) collection| Read-only. Nullable.|
-|Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 |Messages|[Message](message.md) collection| Read-only. Nullable.|
 
 ### Tasks
@@ -61,15 +54,14 @@ Here is a JSON representation of the resource
 |:---------------|:--------|:----------|
 |[Get MailFolder](../api/mailfolder_get.md) | [MailFolder](mailfolder.md) |Read properties and relationships of mailFolder object.|
 |[Create MailFolder](../api/mailfolder_post_childfolders.md) |[MailFolder](mailfolder.md)| Create a new MailFolder by posting to the ChildFolders collection.|
-|[Create Extension](../api/mailfolder_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
 |[Create Message](../api/mailfolder_post_messages.md) |[Message](message.md)| Create a new Message by posting to the Messages collection.|
 |[Update](../api/mailfolder_update.md) | [MailFolder](mailfolder.md)	|Update MailFolder object. |
 |[Delete](../api/mailfolder_delete.md) | Void	|Delete MailFolder object. |
 |[Copy](../api/mailfolder_copy.md)|[MailFolder](mailfolder.md)||
 |[Move](../api/mailfolder_move.md)|[MailFolder](mailfolder.md)||
 
-<!-- uuid: 4f3ac8fa-7c8f-4198-8cb8-a5089b15bfbb
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 9457fbfd-10e6-439b-9ed4-9530d71891b5
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "MailFolder resource",

@@ -8,13 +8,13 @@ The following **scopes** are required to execute this API:
 ```http
 POST /users/<objectId>/Messages/<Id>/Forward
 POST /drive/root/createdByUser/Messages/<Id>/Forward
-POST /users/<objectId>/RootFolder/Messages/<Id>/Forward
+POST /users/<objectId>/Folders/<Id>/Messages/<Id>/Forward
 
 ```
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -64,8 +64,8 @@ Content-length: 3
 }
 ```
 
-<!-- uuid: 4346706c-770c-49a7-b1a9-bf97f88c7d93
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 313642d4-2aa8-47a5-928b-2dc61746245c
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Message: Forward",

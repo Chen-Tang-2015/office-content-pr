@@ -14,7 +14,7 @@ POST /drive/root/lastModifiedByUser/TrendingAround
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [File](../resources/file.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_file_from_user"
 }-->
 ```http
-POST /users/<objectId>/
+POST /users/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [File](../resources/file.md) object.
@@ -50,8 +50,8 @@ Content-length: 3
 }
 ```
 
-<!-- uuid: 779576b1-3aa5-437f-8571-1bbbc00e30f7
-2015-10-15 16:49:31 UTC -->
+<!-- uuid: 77205b95-9b37-4932-8131-46d88f04788d
+2015-10-16 16:12:43 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create File",

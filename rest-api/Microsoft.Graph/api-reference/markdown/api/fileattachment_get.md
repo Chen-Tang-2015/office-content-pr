@@ -19,7 +19,7 @@ See relationships table of [FileAttachment](../resources/fileattachment.md) obje
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -36,11 +36,10 @@ Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 308
+Content-length: 282
 {
   "ContentId": "ContentId-value",
   "ContentLocation": "ContentLocation-value",
-  "IsContactPhoto": true,
   "ContentBytes": "ContentBytes-value",
   "Name": "Name-value",
   "ContentType": "ContentType-value",
@@ -52,8 +51,8 @@ Content-length: 308
 ```
 If successful, this method returns a `200 OK` response code and [FileAttachment](../resources/fileattachment.md) object in the response body.
 
-<!-- uuid: 0c607102-8c0d-4dff-8c8a-487e2da209f0
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: d34ed741-79da-468b-997b-5aeea5f4f739
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get FileAttachment",

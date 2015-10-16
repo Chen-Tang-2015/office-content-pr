@@ -14,7 +14,7 @@ POST /groups/<objectId>/appRoleAssignments/<objectId>/getMemberObjects
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -58,8 +58,8 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: d2bb0329-fc01-4746-990a-7cbabd17c63b
-2015-10-15 16:49:27 UTC -->
+<!-- uuid: 4b81792e-6e3a-4c29-abcb-9aaa74fe1f8f
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "AppRoleAssignment: getMemberObjects",

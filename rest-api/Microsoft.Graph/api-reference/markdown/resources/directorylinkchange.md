@@ -9,18 +9,13 @@ Here is a JSON representation of the resource
 <!-- {
   "blockType": "resource",
   "optionalProperties": [
-    "Extensions"
+
   ],
   "@odata.type": "microsoft.graph.DirectoryLinkChange"
 }-->
 
 ```json
 {
-  "Extensions": [
-    {
-      "@odata.type": "microsoft.graph.Extension"
-    }
-  ],
   "associationType": "String",
   "deletionTimestamp": "String (timestamp)",
   "objectId": "String (identifier)",
@@ -49,24 +44,22 @@ Here is a JSON representation of the resource
 |targetObjectUri|String|The URI for the target object; for example, `ΓÇ£https://graph.windows.net/contoso.com/users/dca803ab-bf26-4753-bf20-e1c56a9c34e2ΓÇ¥`.|
 
 ### Relationships
-| Relationship | Type	|Description|
-|:---------------|:--------|:----------|
-|Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
+None
+
 
 ### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get DirectoryLinkChange](../api/directorylinkchange_get.md) | [DirectoryLinkChange](directorylinkchange.md) |Read properties and relationships of directoryLinkChange object.|
-|[Create Extension](../api/directorylinkchange_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
 |[Update](../api/directorylinkchange_update.md) | [DirectoryLinkChange](directorylinkchange.md)	|Update DirectoryLinkChange object. |
 |[Delete](../api/directorylinkchange_delete.md) | Void	|Delete DirectoryLinkChange object. |
 |[Checkmembergroups](../api/directorylinkchange_checkmembergroups.md)|String||
 |[Get MemberGroups](../api/directorylinkchange_getmembergroups.md)|String||
 |[Get MemberObjects](../api/directorylinkchange_getmemberobjects.md)|String||
 
-<!-- uuid: 06837dd4-a6cf-4f73-a0a8-488190b3dd83
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: e47cb7f8-8fd3-4e56-8e95-2b6b4fc59e95
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "DirectoryLinkChange resource",

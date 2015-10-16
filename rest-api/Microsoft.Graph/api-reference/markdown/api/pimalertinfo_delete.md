@@ -12,7 +12,7 @@ DELETE /AlertInfo/<AlertId>
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -22,8 +22,8 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: bc80ae70-6b55-40c0-8ee7-27abafbf16b1
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 6fe54a7b-6bea-4a02-9432-ecc5d5fb0332
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Delete",

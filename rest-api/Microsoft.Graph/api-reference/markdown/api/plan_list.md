@@ -23,7 +23,7 @@ GET /plans
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -57,8 +57,8 @@ Content-length: 237
 ```
 If successful, this method returns a `200 OK` response code and collection of [Plan](../resources/plan.md) objects in the response body.
 
-<!-- uuid: 85d11a7f-fa76-430f-986f-702b473497ac
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: cabc3e50-fe2f-4dc5-8ae6-61f55088e371
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "List Plan",

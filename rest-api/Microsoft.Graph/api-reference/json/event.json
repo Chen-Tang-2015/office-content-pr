@@ -717,10 +717,10 @@
       "isUnicode": null
     },
     {
-      "name": "Instances",
-      "description": "The instances of the event. Navigation property.",
+      "name": "Extensions",
+      "description": "",
       "isKey": false,
-      "dataType": "Event",
+      "dataType": "Extension",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": true,
@@ -731,10 +731,10 @@
       "isUnicode": null
     },
     {
-      "name": "Extensions",
-      "description": "",
+      "name": "Instances",
+      "description": "The instances of the event. Navigation property.",
       "isKey": false,
-      "dataType": "Extension",
+      "dataType": "Event",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": true,

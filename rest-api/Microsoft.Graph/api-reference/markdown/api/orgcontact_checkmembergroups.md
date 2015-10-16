@@ -12,7 +12,7 @@ POST /contacts/<objectId>/checkMemberGroups
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -58,8 +58,8 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: e5cf1aae-4fb6-4c72-8e91-38c3a45fe1a7
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: e6c8ef1c-e255-4c99-b5e4-c1e4119e9562
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "OrgContact: checkMemberGroups",

@@ -9,7 +9,6 @@ Here is a JSON representation of the resource
 <!-- {
   "blockType": "resource",
   "optionalProperties": [
-    "buckets",
     "tasks"
   ],
   "@odata.type": "microsoft.graph.Plan"
@@ -18,34 +17,17 @@ Here is a JSON representation of the resource
 ```json
 {
   "activeTasks": 1024,
-  "assignedToTaskBoard": {
-    "@odata.type": "microsoft.graph.PlanTaskBoard"
-  },
-  "bucketTaskBoard": {
-    "@odata.type": "microsoft.graph.PlanTaskBoard"
-  },
-  "buckets": [
-    {
-      "@odata.type": "microsoft.graph.Bucket"
-    }
-  ],
   "createdBy": "String",
   "details": {
     "@odata.type": "microsoft.graph.PlanDetails"
   },
   "id": "String (identifier)",
   "owner": "String",
-  "statusTaskBoard": {
-    "@odata.type": "microsoft.graph.PlanTaskBoard"
-  },
   "tasks": [
     {
       "@odata.type": "microsoft.graph.Task"
     }
   ],
-  "timeline": {
-    "@odata.type": "microsoft.graph.PlanTimeline"
-  },
   "title": "String",
   "totalTasks": 1024,
   "version": "String"
@@ -66,26 +48,20 @@ Here is a JSON representation of the resource
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|assignedToTaskBoard|[PlanTaskBoard](plantaskboard.md)| Read-only.|
-|bucketTaskBoard|[PlanTaskBoard](plantaskboard.md)| Read-only.|
-|buckets|[Bucket](bucket.md) collection| Read-only. Nullable.|
 |details|[PlanDetails](plandetails.md)| Read-only.|
-|statusTaskBoard|[PlanTaskBoard](plantaskboard.md)| Read-only.|
 |tasks|[Task](task.md) collection| Read-only. Nullable.|
-|timeline|[PlanTimeline](plantimeline.md)| Read-only.|
 
 ### Tasks
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get Plan](../api/plan_get.md) | [Plan](plan.md) |Read properties and relationships of plan object.|
-|[Create Bucket](../api/plan_post_buckets.md) |[Bucket](bucket.md)| Create a new Bucket by posting to the buckets collection.|
 |[Create Task](../api/plan_post_tasks.md) |[Task](task.md)| Create a new Task by posting to the tasks collection.|
 |[Update](../api/plan_update.md) | [Plan](plan.md)	|Update Plan object. |
 |[Delete](../api/plan_delete.md) | Void	|Delete Plan object. |
 
-<!-- uuid: b501d6b8-a45f-4752-9a42-1f1563ccdfbf
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 926cfd6b-45b9-42d3-80e7-7665a2514f1e
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Plan resource",

@@ -404,10 +404,10 @@
       "isUnicode": null
     },
     {
-      "name": "Extensions",
+      "name": "Attachments",
       "description": "",
       "isKey": false,
-      "dataType": "Extension",
+      "dataType": "Attachment",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": true,
@@ -418,10 +418,10 @@
       "isUnicode": null
     },
     {
-      "name": "Attachments",
+      "name": "Extensions",
       "description": "",
       "isKey": false,
-      "dataType": "Attachment",
+      "dataType": "Extension",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": true,

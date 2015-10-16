@@ -6,15 +6,15 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-DELETE /users/<objectId>/Extensions/<Id>
-DELETE /groups/<objectId>/Extensions/<Id>
-DELETE /devices/<objectId>/Extensions/<Id>
+DELETE /users/<objectId>/Events/<Id>/Extensions/<Id>
+DELETE /groups/<objectId>/Events/<Id>/Extensions/<Id>
+DELETE /users/<objectId>/Messages/<Id>/Extensions/<Id>
 
 ```
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -24,8 +24,8 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: 3b2ea076-ca7e-4db6-9015-0c9270645938
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: a3b33870-cba1-4d72-8e6b-ad3efd0a0994
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Delete",

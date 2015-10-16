@@ -558,7 +558,7 @@
       "isUnicode": null
     },
     {
-      "name": "AboutMe",
+      "name": "aboutMe",
       "description": "",
       "isKey": false,
       "dataType": "String",
@@ -572,7 +572,7 @@
       "isUnicode": false
     },
     {
-      "name": "Alias",
+      "name": "alias",
       "description": "The user's alias. Typically the SMTP address of the user.",
       "isKey": false,
       "dataType": "String",
@@ -586,7 +586,7 @@
       "isUnicode": false
     },
     {
-      "name": "Birthday",
+      "name": "birthday",
       "description": "",
       "isKey": false,
       "dataType": "DateTimeOffset",
@@ -600,7 +600,7 @@
       "isUnicode": null
     },
     {
-      "name": "HireDate",
+      "name": "hireDate",
       "description": "",
       "isKey": false,
       "dataType": "DateTimeOffset",
@@ -614,7 +614,7 @@
       "isUnicode": null
     },
     {
-      "name": "Interests",
+      "name": "interests",
       "description": "",
       "isKey": false,
       "dataType": "String",
@@ -628,7 +628,7 @@
       "isUnicode": false
     },
     {
-      "name": "MySite",
+      "name": "mySite",
       "description": "",
       "isKey": false,
       "dataType": "String",
@@ -642,7 +642,7 @@
       "isUnicode": false
     },
     {
-      "name": "PastProjects",
+      "name": "pastProjects",
       "description": "",
       "isKey": false,
       "dataType": "String",
@@ -656,7 +656,7 @@
       "isUnicode": false
     },
     {
-      "name": "PreferredName",
+      "name": "preferredName",
       "description": "",
       "isKey": false,
       "dataType": "String",
@@ -670,7 +670,7 @@
       "isUnicode": false
     },
     {
-      "name": "PrincipalName",
+      "name": "principalName",
       "description": "",
       "isKey": false,
       "dataType": "String",
@@ -684,7 +684,7 @@
       "isUnicode": false
     },
     {
-      "name": "Responsibilities",
+      "name": "responsibilities",
       "description": "",
       "isKey": false,
       "dataType": "String",
@@ -698,7 +698,7 @@
       "isUnicode": false
     },
     {
-      "name": "Schools",
+      "name": "schools",
       "description": "",
       "isKey": false,
       "dataType": "String",
@@ -712,7 +712,7 @@
       "isUnicode": false
     },
     {
-      "name": "Skills",
+      "name": "skills",
       "description": "",
       "isKey": false,
       "dataType": "String",
@@ -726,7 +726,7 @@
       "isUnicode": false
     },
     {
-      "name": "Tags",
+      "name": "tags",
       "description": "",
       "isKey": false,
       "dataType": "String",
@@ -936,20 +936,6 @@
       "isUnicode": null
     },
     {
-      "name": "RootFolder",
-      "description": "The root folder of the user's mailbox. Navigation property.",
-      "isKey": false,
-      "dataType": "MailFolder",
-      "isReadOnly": true,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": true,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": false,
-      "isUnicode": null
-    },
-    {
       "name": "Calendars",
       "description": "The user's calendars. Navigation property.",
       "isKey": false,
@@ -1062,20 +1048,6 @@
       "isUnicode": null
     },
     {
-      "name": "UserPhotos",
-      "description": "",
-      "isKey": false,
-      "dataType": "Photo",
-      "isReadOnly": true,
-      "enumName": null,
-      "isCollection": true,
-      "isRelationship": true,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": true,
-      "isUnicode": null
-    },
-    {
       "name": "TrendingAround",
       "description": "",
       "isKey": false,
@@ -1132,20 +1104,6 @@
       "isUnicode": null
     },
     {
-      "name": "details",
-      "description": "",
-      "isKey": false,
-      "dataType": "UserDetails",
-      "isReadOnly": true,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": true,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": false,
-      "isUnicode": null
-    },
-    {
       "name": "tasks",
       "description": "",
       "isKey": false,
@@ -1164,34 +1122,6 @@
       "description": "",
       "isKey": false,
       "dataType": "Plan",
-      "isReadOnly": true,
-      "enumName": null,
-      "isCollection": true,
-      "isRelationship": true,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": true,
-      "isUnicode": null
-    },
-    {
-      "name": "notes",
-      "description": "",
-      "isKey": false,
-      "dataType": "Notes",
-      "isReadOnly": true,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": true,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": false,
-      "isUnicode": null
-    },
-    {
-      "name": "Extensions",
-      "description": "",
-      "isKey": false,
-      "dataType": "Extension",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": true,

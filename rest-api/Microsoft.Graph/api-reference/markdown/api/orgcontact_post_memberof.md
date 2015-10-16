@@ -12,7 +12,7 @@ POST /contacts/<objectId>/memberOf
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_directoryobject_from_orgcontact"
 }-->
 ```http
-POST /contacts/<objectId>/
+POST /contacts/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
@@ -51,8 +51,8 @@ Content-length: 111
 }
 ```
 
-<!-- uuid: d5a4a82d-25d0-4981-90c8-448ae4f5d99d
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: f8609542-5981-4306-8569-2f3d97767508
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create memberOf",

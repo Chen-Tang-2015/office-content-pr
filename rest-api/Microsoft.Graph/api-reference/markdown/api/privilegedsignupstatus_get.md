@@ -19,7 +19,7 @@ See relationships table of [PrivilegedSignupStatus](../resources/privilegedsignu
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -45,8 +45,8 @@ Content-length: 86
 ```
 If successful, this method returns a `200 OK` response code and [PrivilegedSignupStatus](../resources/privilegedsignupstatus.md) object in the response body.
 
-<!-- uuid: 0c24f613-3b29-47b9-bec2-a6c4bb8a915a
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: f55c54eb-9f3b-4f22-954a-50caa2ac77be
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get PrivilegedSignupStatus",

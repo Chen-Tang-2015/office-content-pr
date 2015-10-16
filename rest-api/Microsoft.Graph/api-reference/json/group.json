@@ -467,20 +467,6 @@
       "isUnicode": null
     },
     {
-      "name": "GroupPhotos",
-      "description": "",
-      "isKey": false,
-      "dataType": "Photo",
-      "isReadOnly": true,
-      "enumName": null,
-      "isCollection": true,
-      "isRelationship": true,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": true,
-      "isUnicode": null
-    },
-    {
       "name": "Conversations",
       "description": "",
       "isKey": false,
@@ -593,20 +579,6 @@
       "isUnicode": null
     },
     {
-      "name": "details",
-      "description": "",
-      "isKey": false,
-      "dataType": "UserDetails",
-      "isReadOnly": true,
-      "enumName": null,
-      "isCollection": false,
-      "isRelationship": true,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": false,
-      "isUnicode": null
-    },
-    {
       "name": "tasks",
       "description": "",
       "isKey": false,
@@ -625,20 +597,6 @@
       "description": "",
       "isKey": false,
       "dataType": "Plan",
-      "isReadOnly": true,
-      "enumName": null,
-      "isCollection": true,
-      "isRelationship": true,
-      "supportFilter": false,
-      "allowPostToCollection": true,
-      "isNullable": true,
-      "isUnicode": null
-    },
-    {
-      "name": "Extensions",
-      "description": "",
-      "isKey": false,
-      "dataType": "Extension",
       "isReadOnly": true,
       "enumName": null,
       "isCollection": true,

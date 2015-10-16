@@ -13,7 +13,7 @@ PATCH /groups/<objectId>/tasks/<id>/details
 ### Optional request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -22,7 +22,6 @@ In the request body, supply the values for relevant fields that should be update
 |:---------------|:--------|:----------|
 |completedBy|String||
 |notes|String||
-|previewType|String| Possible values are: `Automatic`, `NoPreview`, `CheckList`, `Notes`, `Reference`.|
 |references|ExternalReferenceCollection||
 |version|String||
 
@@ -38,10 +37,9 @@ Here is an example of the request.
 ```http
 PUT /tasks/<id>/details
 Content-type: application/json
-Content-length: 177
+Content-length: 139
 {
   "notes": "notes-value",
-  "previewType": "previewType-value",
   "completedBy": "completedBy-value",
   "references": {
   },
@@ -59,10 +57,9 @@ Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 177
+Content-length: 139
 {
   "notes": "notes-value",
-  "previewType": "previewType-value",
   "completedBy": "completedBy-value",
   "references": {
   },
@@ -71,8 +68,8 @@ Content-length: 177
 }
 ```
 
-<!-- uuid: 7d4d738f-5e50-4e2c-90b2-43a02de34994
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: e0636eaa-a24d-49c6-bd43-3ebb51871e22
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of taskdetails object.",

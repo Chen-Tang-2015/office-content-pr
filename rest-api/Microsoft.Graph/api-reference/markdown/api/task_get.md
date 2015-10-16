@@ -8,7 +8,7 @@ The following **scopes** are required to execute this API:
 ```http
 GET /tasks/<id>
 GET /plans/<id>/tasks/<id>
-GET /buckets/<id>/tasks/<id>
+GET /users/<objectId>/tasks/<id>
 ```
 ### Optional query parameters
 |Name|Value|Description|
@@ -21,7 +21,7 @@ See relationships table of [Task](../resources/task.md) object for supported nam
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -38,12 +38,11 @@ Here is an example of the response.
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 641
+Content-length: 541
 {
   "createdBy": "createdBy-value",
   "assignedTo": "assignedTo-value",
   "planId": "planId-value",
-  "bucketId": "bucketId-value",
   "title": "title-value",
   "orderHint": "orderHint-value",
   "assigneePriority": "assigneePriority-value",
@@ -54,19 +53,16 @@ Content-length: 641
   "assignedBy": "assignedBy-value",
   "dueDate": "datetime-value",
   "hasNotes": true,
-  "previewType": "previewType-value",
   "completedDate": "datetime-value",
   "numberOfReferences": 99,
-  "appliedCategories": {
-  },
   "id": "id-value",
   "version": "version-value"
 }
 ```
 If successful, this method returns a `200 OK` response code and [Task](../resources/task.md) object in the response body.
 
-<!-- uuid: 2c1783b4-39c6-4ab5-aac5-fa2fd2839f46
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: 036ab282-f1c3-4dba-b711-622505b5ac84
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Task",

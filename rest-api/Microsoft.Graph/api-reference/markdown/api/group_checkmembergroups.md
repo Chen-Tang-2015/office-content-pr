@@ -14,7 +14,7 @@ POST /drive/root/createdByUser/JoinedGroups/<objectId>/checkMemberGroups
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -60,8 +60,8 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: 6923e604-a01a-459c-9198-41525a5e44f0
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: a9ee10f8-b8eb-4c23-a80e-d80b7dfadfa1
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Group: checkMemberGroups",

@@ -12,7 +12,7 @@ POST /PrivilegedSignupStatus/<TenantId>/SignUp
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 
@@ -48,8 +48,8 @@ Content-length: 86
 }
 ```
 
-<!-- uuid: 1074e371-76a9-49fc-b57f-60fe6ca2214c
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: c2c4b517-6af3-438c-9a49-e05e1e323eba
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PrivilegedSignupStatus: SignUp",

@@ -14,7 +14,7 @@ DELETE /plans/<id>/assignedToTaskBoard
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -24,8 +24,8 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: 85dd2268-a908-433a-a552-d286342e16cd
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: bd352b86-36af-497a-b963-a379fe4c1c30
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Delete",

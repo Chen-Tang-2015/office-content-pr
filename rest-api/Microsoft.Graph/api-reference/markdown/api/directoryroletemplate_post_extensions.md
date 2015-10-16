@@ -12,7 +12,7 @@ POST /directoryRoleTemplates/<objectId>/Extensions
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [Extension](../resources/extension.md) object.
@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_extension_from_directoryroletemplate"
 }-->
 ```http
-POST /directoryRoleTemplates/<objectId>/
+POST /directoryRoleTemplates/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Extension](../resources/extension.md) object.
@@ -49,8 +49,8 @@ Content-length: 22
 }
 ```
 
-<!-- uuid: f71cc469-d2e6-4684-8712-cf48e6f33f19
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: 009cf0d8-4afa-42c1-bbf4-ff32a322326f
+2015-10-16 10:07:50 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Extension",

@@ -14,7 +14,7 @@ POST /drive/root/createdByUser/JoinedGroups/<objectId>/Threads
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [ConversationThread](../resources/conversationthread.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_conversationthread_from_group"
 }-->
 ```http
-POST /groups/<objectId>/
+POST /groups/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [ConversationThread](../resources/conversationthread.md) object.
@@ -75,8 +75,8 @@ Content-length: 489
 }
 ```
 
-<!-- uuid: 58022dda-3c52-416a-b389-3c9ea5c6d293
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: b6fa226e-d5a9-453a-8957-92d5483b4918
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Thread",

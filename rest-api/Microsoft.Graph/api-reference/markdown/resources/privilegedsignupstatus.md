@@ -2,28 +2,31 @@
 
 
 
-### Properties
-None
+### JSON representation
 
-### Relationships
-None
+Here is a JSON representation of the resource
 
-
-### Tasks
-
-| Task		   | Return Type	|Description|
-|:---------------|:--------|:----------|
-|[List](../api/privilegedsignupstatus_list.md) | [PrivilegedSignupStatus](privilegedsignupstatus.md) [] |Get privilegedSignupStatus object collection. |
-
-<!-- uuid: 8380c861-1d78-4317-b656-4f547b2349c8
-2015-10-15 16:49:30 UTC -->
 <!-- {
-  "type": "#page.annotation",
-  "description": "PrivilegedSignupStatus resource",
-  "keywords": "",
-  "section": "documentation",
-  "tocPath": ""
-}-->redSetupInProgress`, `RegistrationAndSetupCompleted`.|
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.PrivilegedSignupStatus"
+}-->
+
+```json
+{
+  "IsRegistered": true,
+  "Status": "String",
+  "TenantId": "String (identifier)"
+}
+
+```
+### Properties
+| Property	   | Type	|Description|
+|:---------------|:--------|:----------|
+|IsRegistered|Boolean||
+|Status|String| Possible values are: `Unknown`, `NotRegisteredYet`, `RegisteredSetupNotStarted`, `RegisteredSetupInProgress`, `RegistrationAndSetupCompleted`.|
 |TenantId|String| Read-only.|
 
 ### Relationships
@@ -43,8 +46,8 @@ None
 |[Signup](../api/privilegedsignupstatus_signup.md)|[PrivilegedSignupStatus](privilegedsignupstatus.md)||
 |[Skipsetup](../api/privilegedsignupstatus_skipsetup.md)|[None](none.md)||
 
-<!-- uuid: bdb48637-de34-4ad9-be7c-2616c8d203ff
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: af104810-f318-4a70-8718-3776da492374
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PrivilegedSignupStatus resource",

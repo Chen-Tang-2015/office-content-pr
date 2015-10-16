@@ -12,7 +12,7 @@ POST /applications/<objectId>/owners
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_directoryobject_from_application"
 }-->
 ```http
-POST /applications/<objectId>/
+POST /applications/<objectId>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
@@ -51,8 +51,8 @@ Content-length: 111
 }
 ```
 
-<!-- uuid: 04637a39-ef07-4a0c-8d85-d713713bdeee
-2015-10-15 16:49:27 UTC -->
+<!-- uuid: 857b49a0-0463-49cb-bf64-8978a6ac39f1
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create owner",

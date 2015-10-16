@@ -19,7 +19,7 @@ See relationships table of [ItemAttachment](../resources/itemattachment.md) obje
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.
@@ -48,8 +48,8 @@ Content-length: 162
 ```
 If successful, this method returns a `200 OK` response code and [ItemAttachment](../resources/itemattachment.md) object in the response body.
 
-<!-- uuid: e7f437fe-e25c-4e03-b7f4-ad0978c67cf9
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: d85fd87e-ad3e-4c20-8b18-b5f2517f159e
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get ItemAttachment",

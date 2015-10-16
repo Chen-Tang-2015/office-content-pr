@@ -14,7 +14,7 @@ POST /users/<objectId>/JoinedGroups/<objectId>/Threads/<Id>/Posts
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [Post](../resources/post.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_post_from_conversationthread"
 }-->
 ```http
-POST /groups/<objectId>/Threads/<Id>/
+POST /groups/<objectId>/Threads/<Id>
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Post](../resources/post.md) object.
@@ -85,8 +85,8 @@ Content-length: 790
 }
 ```
 
-<!-- uuid: 7cd13517-cc54-4e45-bda5-44513d61f262
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: 8042545d-f9b8-4b1c-8006-9eebc14ef14b
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Post",

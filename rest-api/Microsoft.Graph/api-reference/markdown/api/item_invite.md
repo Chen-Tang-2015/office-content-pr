@@ -14,7 +14,7 @@ POST /drives/<id>/root/invite
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -113,8 +113,8 @@ Content-length: 940
 }
 ```
 
-<!-- uuid: bd76dbb6-beb2-4f0f-acac-32d40c2e92bc
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: ddf3f2cf-8c9c-4491-9101-5a083b6df7fa
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "item: invite",

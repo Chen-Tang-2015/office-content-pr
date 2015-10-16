@@ -10,8 +10,7 @@ Here is a JSON representation of the resource
   "blockType": "resource",
   "optionalProperties": [
     "ChildFolders",
-    "Contacts",
-    "Extensions"
+    "Contacts"
   ],
   "@odata.type": "microsoft.graph.ContactFolder"
 }-->
@@ -29,11 +28,6 @@ Here is a JSON representation of the resource
     }
   ],
   "DisplayName": "String",
-  "Extensions": [
-    {
-      "@odata.type": "microsoft.graph.Extension"
-    }
-  ],
   "Id": "String (identifier)",
   "ParentFolderId": "String"
 }
@@ -51,7 +45,6 @@ Here is a JSON representation of the resource
 |:---------------|:--------|:----------|
 |ChildFolders|[ContactFolder](contactfolder.md) collection|The collection of child folders in the folder. Navigation property. Read-only. Nullable.|
 |Contacts|[Contact](contact.md) collection|The contacts in the folder. Navigation property. Read-only. Nullable.|
-|Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 
 ### Tasks
 
@@ -60,12 +53,11 @@ Here is a JSON representation of the resource
 |[Get ContactFolder](../api/contactfolder_get.md) | [ContactFolder](contactfolder.md) |Read properties and relationships of contactFolder object.|
 |[Create ContactFolder](../api/contactfolder_post_childfolders.md) |[ContactFolder](contactfolder.md)| Create a new ContactFolder by posting to the ChildFolders collection.|
 |[Create Contact](../api/contactfolder_post_contacts.md) |[Contact](contact.md)| Create a new Contact by posting to the Contacts collection.|
-|[Create Extension](../api/contactfolder_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
 |[Update](../api/contactfolder_update.md) | [ContactFolder](contactfolder.md)	|Update ContactFolder object. |
 |[Delete](../api/contactfolder_delete.md) | Void	|Delete ContactFolder object. |
 
-<!-- uuid: a83fd8cc-fde0-4278-8194-b46717562625
-2015-10-15 16:49:28 UTC -->
+<!-- uuid: 84c27b8c-e96c-4e68-8fc7-319ee328f049
+2015-10-16 16:12:40 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "ContactFolder resource",

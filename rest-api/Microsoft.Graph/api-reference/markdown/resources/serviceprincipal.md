@@ -9,7 +9,6 @@ Here is a JSON representation of the resource
 <!-- {
   "blockType": "resource",
   "optionalProperties": [
-    "Extensions",
     "appRoleAssignments",
     "createdObjects",
     "memberOf",
@@ -22,11 +21,6 @@ Here is a JSON representation of the resource
 
 ```json
 {
-  "Extensions": [
-    {
-      "@odata.type": "microsoft.graph.Extension"
-    }
-  ],
   "accountEnabled": true,
   "appDisplayName": "String",
   "appId": "String",
@@ -139,7 +133,6 @@ Here is a JSON representation of the resource
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|Extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 |appRoleAssignedTo|[AppRoleAssignment](approleassignment.md)|Principals (users, groups, and service principals) that are assigned to this service principal. Requires version 1.5 or newer. Read-only.|
 |appRoleAssignments|[AppRoleAssignment](approleassignment.md) collection|Applications that the service principal is assigned to. Requires version 1.5 or newer. Read-only. Nullable.|
 |createdObjects|[DirectoryObject](directoryobject.md) collection|Directory objects created by this service principal. Inherited from [DirectoryObject]. Requires version 2013-11-08 or newer. Read-only. Nullable.|
@@ -154,7 +147,6 @@ Here is a JSON representation of the resource
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get ServicePrincipal](../api/serviceprincipal_get.md) | [ServicePrincipal](serviceprincipal.md) |Read properties and relationships of servicePrincipal object.|
-|[Create Extension](../api/serviceprincipal_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
 |[Create AppRoleAssignment](../api/serviceprincipal_post_approleassignments.md) |[AppRoleAssignment](approleassignment.md)| Create a new AppRoleAssignment by posting to the appRoleAssignments collection.|
 |[Create createdObject](../api/serviceprincipal_post_createdobjects.md) |[DirectoryObject](directoryobject.md)| Create a new createdObject by posting to the createdObjects collection.|
 |[Create memberOf](../api/serviceprincipal_post_memberof.md) |[DirectoryObject](directoryobject.md)| Create a new memberOf by posting to the memberOf collection.|
@@ -167,8 +159,8 @@ Here is a JSON representation of the resource
 |[Get MemberGroups](../api/serviceprincipal_getmembergroups.md)|String||
 |[Get MemberObjects](../api/serviceprincipal_getmemberobjects.md)|String||
 
-<!-- uuid: 9c2ae247-66f9-4e1b-8792-8218cd77c31c
-2015-10-15 16:49:30 UTC -->
+<!-- uuid: 38b330df-b88e-4b3b-8cd5-2549a0ba18b3
+2015-10-16 16:12:42 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "ServicePrincipal resource",

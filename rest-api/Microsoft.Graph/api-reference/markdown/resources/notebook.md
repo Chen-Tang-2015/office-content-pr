@@ -60,7 +60,7 @@ Here is a JSON representation of the resource
 |sectionGroupsUrl|String|The URL for the sectionGroups navigation property, which returns all the section groups in the notebook.|
 |sectionsUrl|String|The URL for the sections navigation property, which returns all the sections in the notebook.|
 |self|String|The endpoint where you can get details about the notebook.|
-|userRole|String|One of three values: Owner, Contributor, or Reader. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Possible values are: `Owner`, `Contributor`, `Reader`, `None`.|
+|userRole|String|One of three values: Owner, Contributor, or Reader. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook.|
 
 ### Relationships
 | Relationship | Type	|Description|
@@ -79,8 +79,8 @@ Here is a JSON representation of the resource
 |[Delete](../api/notebook_delete.md) | Void	|Delete Notebook object. |
 |[Copynotebook](../api/notebook_copynotebook.md)|[CopyNotebookModel](copynotebookmodel.md)||
 
-<!-- uuid: 037ab587-f996-418d-b7e3-cd95d91924b3
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 709a8a3a-9060-4402-92c8-f74f1ee8e8f4
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Notebook resource",

@@ -14,7 +14,7 @@ POST /drive/root/lastModifiedByUser/notes/pages/<id>/CopyToSection
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -107,8 +107,8 @@ Content-length: 1258
 }
 ```
 
-<!-- uuid: 675a8fce-6802-4cd4-9254-0941ab900a95
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 90798e02-f39a-42e3-b64d-22a38edb3251
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Page: CopyToSection",

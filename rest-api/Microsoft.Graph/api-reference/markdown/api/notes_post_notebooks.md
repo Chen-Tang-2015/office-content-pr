@@ -14,7 +14,7 @@ POST /drive/root/lastModifiedByUser/notes/notebooks
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply a JSON representation of [Notebook](../resources/notebook.md) object.
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_notebook_from_notes"
 }-->
 ```http
-POST /users/<objectId>/notes/
+POST /users/<objectId>/notes
 Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Notebook](../resources/notebook.md) object.
@@ -70,8 +70,8 @@ Content-length: 516
 }
 ```
 
-<!-- uuid: c49b4940-05a4-49cf-a6f3-05faa1d563c3
-2015-10-15 16:49:29 UTC -->
+<!-- uuid: 441417e9-4e33-4a80-9b91-46e0aa2e9375
+2015-10-16 16:12:41 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Notebook",

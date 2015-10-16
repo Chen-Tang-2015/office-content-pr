@@ -14,7 +14,7 @@ POST /drive/root/lastModifiedByUser/assignLicense
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample of how the HTTP header. Update accordingly...|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -129,30 +129,30 @@ Content-length: 2650
   "userPrincipalName": "userPrincipalName-value",
   "userType": "userType-value",
   "MailboxGuid": "MailboxGuid-value",
-  "AboutMe": "AboutMe-value",
-  "Alias": "Alias-value",
-  "Birthday": "datetime-value",
-  "HireDate": "datetime-value",
-  "Interests": [
-    "Interests-value"
+  "aboutMe": "aboutMe-value",
+  "alias": "alias-value",
+  "birthday": "datetime-value",
+  "hireDate": "datetime-value",
+  "interests": [
+    "interests-value"
   ],
-  "MySite": "MySite-value",
-  "PastProjects": [
-    "PastProjects-value"
+  "mySite": "mySite-value",
+  "pastProjects": [
+    "pastProjects-value"
   ],
-  "PreferredName": "PreferredName-value",
-  "PrincipalName": "PrincipalName-value",
-  "Responsibilities": [
-    "Responsibilities-value"
+  "preferredName": "preferredName-value",
+  "principalName": "principalName-value",
+  "responsibilities": [
+    "responsibilities-value"
   ],
-  "Schools": [
-    "Schools-value"
+  "schools": [
+    "schools-value"
   ],
-  "Skills": [
-    "Skills-value"
+  "skills": [
+    "skills-value"
   ],
-  "Tags": [
-    "Tags-value"
+  "tags": [
+    "tags-value"
   ],
   "objectType": "objectType-value",
   "objectId": "objectId-value",
@@ -160,8 +160,8 @@ Content-length: 2650
 }
 ```
 
-<!-- uuid: 4ebbe83e-3579-4acc-9ca0-5b6815107442
-2015-10-15 16:49:31 UTC -->
+<!-- uuid: 0101a322-2cec-4a41-a171-b3d51e157c03
+2015-10-16 16:12:43 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "User: assignLicense",
