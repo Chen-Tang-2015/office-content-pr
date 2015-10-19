@@ -2,13 +2,11 @@
 
 _**Applies to:** Office 365_
 
-Underneath the Microsoft Graph API are an array of data stores targeted for individual services in Office 365. The power of this Microsoft Graph API lies 
-in its ability to bring the otherwise siloed data together in such a way that they are integrated into a single connected graph.  To understand the API in its entirety, it is important to have a grasp of its entity schema. 
+For an app developer, understanding the entity schema helps you master the Microsoft Graph API programming patterns.  Underneath the Microsoft Graph API are an array of data stores targeted for individual services in Office 365. The power of the Microsoft Graph API lies in its ability to bring the otherwise siloed data together in such a way that they are integrated into a single connected graph.  To understand the API in its entirety, it is important to have a grasp of its entity schema. 
 
-For an app developer, understanding the entity schema helps you master the Microsoft Graph API programming patterns. 
-Because the entity schema is also used to generate the client libraries of platform-specific SDKs, the knowledge should be valuable to 
-guide you to use the client libraries, as well. In this section, we will explain the API entity data model through a series of scenarios
-and examples to demonstrate how you might get the most out of the metadata schema.
+The entity schema is also used to generate the client libraries of platform-specific SDKs.  As such, entity schema knowledge should be valuable in guiding you on how to use the client libraries, as well. 
+
+In this section, we will explain the API entity data model through a series of scenarios and examples to demonstrate how you might get the most out of the metadata schema.
 
 **In this article**
 
