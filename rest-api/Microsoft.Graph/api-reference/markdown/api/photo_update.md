@@ -62,8 +62,8 @@ Content-length: 53
 }
 ```
 
-<!-- uuid: e2f04152-4f6a-44b1-a487-622ddcf36431
-2015-10-19 09:46:35 UTC -->
+<!-- uuid: cb6aa6b4-36b9-4d69-a3d9-6e34a2ea58bb
+2015-10-19 10:04:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of photo object.",

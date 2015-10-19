@@ -54,12 +54,12 @@ None
 |[Get DirectoryLinkChange](../api/directorylinkchange_get.md) | [DirectoryLinkChange](directorylinkchange.md) |Read properties and relationships of directoryLinkChange object.|
 |[Update](../api/directorylinkchange_update.md) | [DirectoryLinkChange](directorylinkchange.md)	|Update DirectoryLinkChange object. |
 |[Delete](../api/directorylinkchange_delete.md) | None |Delete DirectoryLinkChange object. |
-|[Checkmembergroups](../api/directorylinkchange_checkmembergroups.md)|String||
-|[Get MemberGroups](../api/directorylinkchange_getmembergroups.md)|String||
-|[Get MemberObjects](../api/directorylinkchange_getmemberobjects.md)|String||
+|[Checkmembergroups](../api/directorylinkchange_checkmembergroups.md)|String collection||
+|[Get MemberGroups](../api/directorylinkchange_getmembergroups.md)|String collection||
+|[Get MemberObjects](../api/directorylinkchange_getmemberobjects.md)|String collection||
 
-<!-- uuid: 41140e69-1d19-4a92-a031-3af21aef158d
-2015-10-19 09:46:32 UTC -->
+<!-- uuid: 9c2459fe-c608-4eb1-a76e-e8f745d0aa2f
+2015-10-19 10:04:31 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "DirectoryLinkChange resource",

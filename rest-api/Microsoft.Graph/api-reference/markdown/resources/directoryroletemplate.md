@@ -44,12 +44,12 @@ None
 |[Get DirectoryRoleTemplate](../api/directoryroletemplate_get.md) | [DirectoryRoleTemplate](directoryroletemplate.md) |Read properties and relationships of directoryRoleTemplate object.|
 |[Update](../api/directoryroletemplate_update.md) | [DirectoryRoleTemplate](directoryroletemplate.md)	|Update DirectoryRoleTemplate object. |
 |[Delete](../api/directoryroletemplate_delete.md) | None |Delete DirectoryRoleTemplate object. |
-|[Checkmembergroups](../api/directoryroletemplate_checkmembergroups.md)|String||
-|[Get MemberGroups](../api/directoryroletemplate_getmembergroups.md)|String||
-|[Get MemberObjects](../api/directoryroletemplate_getmemberobjects.md)|String||
+|[Checkmembergroups](../api/directoryroletemplate_checkmembergroups.md)|String collection||
+|[Get MemberGroups](../api/directoryroletemplate_getmembergroups.md)|String collection||
+|[Get MemberObjects](../api/directoryroletemplate_getmemberobjects.md)|String collection||
 
-<!-- uuid: 8ff6bc47-c17f-4340-906d-66c155714941
-2015-10-19 09:46:34 UTC -->
+<!-- uuid: 0b1f1b8a-3edd-4dba-8fe2-352079efda9b
+2015-10-19 10:04:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "DirectoryRoleTemplate resource",

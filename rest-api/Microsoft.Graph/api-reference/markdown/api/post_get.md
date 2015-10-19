@@ -88,8 +88,8 @@ Content-length: 790
 }
 ```
 
-<!-- uuid: acd7e28c-c556-460b-a245-2cfa1bd3a7b8
-2015-10-19 09:46:35 UTC -->
+<!-- uuid: 5157bd14-97a1-4f53-8fc5-8c7596094193
+2015-10-19 10:04:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Post",

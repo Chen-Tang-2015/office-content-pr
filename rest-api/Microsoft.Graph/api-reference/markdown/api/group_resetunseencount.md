@@ -44,8 +44,8 @@ Here is an example of the response.
 HTTP/1.1 200 OK
 ```
 
-<!-- uuid: 8fd80604-bc00-48d3-8b9d-aa102d7f62a8
-2015-10-19 09:46:34 UTC -->
+<!-- uuid: b3dea586-e631-4d5d-b61d-fe0aeeae10cc
+2015-10-19 10:04:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Group: ResetUnseenCount",

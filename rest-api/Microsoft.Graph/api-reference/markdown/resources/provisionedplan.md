@@ -29,8 +29,8 @@ Here is a JSON representation of the resource
 |provisioningStatus|String|For example, ΓÇ£SuccessΓÇ¥.|
 |service|String|The name of the service; for example, ΓÇ£AccessControlS2SΓÇ¥|
 
-<!-- uuid: 5dbe4c8b-09d3-499e-af9e-487aaf569346
-2015-10-19 09:46:35 UTC -->
+<!-- uuid: f559ae7e-453e-4e11-bf40-757f2477f63b
+2015-10-19 10:04:36 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "ProvisionedPlan resource",

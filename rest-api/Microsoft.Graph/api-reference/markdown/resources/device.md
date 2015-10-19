@@ -87,12 +87,12 @@ Here is a JSON representation of the resource
 |[Create registeredUser](../api/device_post_registeredusers.md) |[DirectoryObject](directoryobject.md)| Create a new registeredUser by posting to the registeredUsers collection.|
 |[Update](../api/device_update.md) | [Device](device.md)	|Update Device object. |
 |[Delete](../api/device_delete.md) | None |Delete Device object. |
-|[Checkmembergroups](../api/device_checkmembergroups.md)|String||
-|[Get MemberGroups](../api/device_getmembergroups.md)|String||
-|[Get MemberObjects](../api/device_getmemberobjects.md)|String||
+|[Checkmembergroups](../api/device_checkmembergroups.md)|String collection||
+|[Get MemberGroups](../api/device_getmembergroups.md)|String collection||
+|[Get MemberObjects](../api/device_getmemberobjects.md)|String collection||
 
-<!-- uuid: 94eb5196-1894-4354-93df-a88d3bf5e6fc
-2015-10-19 09:46:32 UTC -->
+<!-- uuid: f5885f72-a50b-4c66-947f-dcaa75b04ce5
+2015-10-19 10:04:31 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Device resource",

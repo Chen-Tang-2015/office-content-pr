@@ -33,8 +33,8 @@ None
 |[List](../api/deviceconfiguration_list.md) | [DeviceConfiguration](deviceconfiguration.md) [] |Get deviceConfiguration object collection. |
 |[Create DeviceConfiguration](../api/deviceconfiguration_post_deviceconfiguration.md) |[DeviceConfiguration](deviceconfiguration.md)| Create a new DeviceConfiguration by posting to the deviceConfiguration collection.|
 
-<!-- uuid: 30ac240f-646a-48ce-9844-c87c538795bc
-2015-10-19 09:46:32 UTC -->
+<!-- uuid: 97b65373-e4da-4db5-b3a3-1827e2759472
+2015-10-19 10:04:31 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "deviceConfiguration resource",

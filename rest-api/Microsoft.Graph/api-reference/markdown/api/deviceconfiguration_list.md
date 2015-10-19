@@ -64,8 +64,8 @@ Content-length: 414
 }
 ```
 
-<!-- uuid: 4d2ec629-9c2d-4750-9484-0c5e73c3a952
-2015-10-19 09:46:32 UTC -->
+<!-- uuid: 11096257-a030-4afb-a783-8975960246bd
+2015-10-19 10:04:31 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "List DeviceConfiguration",

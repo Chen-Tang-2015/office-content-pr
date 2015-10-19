@@ -57,8 +57,8 @@ Content-length: 398
 }
 ```
 
-<!-- uuid: 652e8fb3-209b-49dc-be06-e1f2ea1dd19f
-2015-10-19 09:46:32 UTC -->
+<!-- uuid: 1c1834f1-1b6b-4529-b26e-4b77b4d64a2b
+2015-10-19 10:04:31 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get AppRoleAssignment",

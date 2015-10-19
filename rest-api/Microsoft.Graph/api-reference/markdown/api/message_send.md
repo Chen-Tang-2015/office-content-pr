@@ -44,8 +44,8 @@ Here is an example of the response.
 HTTP/1.1 200 OK
 ```
 
-<!-- uuid: 1bc9017c-f6f9-4ca4-b876-a7bf317627d8
-2015-10-19 09:46:35 UTC -->
+<!-- uuid: 95c573aa-76b0-4623-a544-23af39579b04
+2015-10-19 10:04:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Message: Send",

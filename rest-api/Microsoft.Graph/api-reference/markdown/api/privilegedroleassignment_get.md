@@ -51,8 +51,8 @@ Content-length: 160
 }
 ```
 
-<!-- uuid: 8eba4b8d-c18a-4713-8caf-3fcc704dea70
-2015-10-19 09:46:35 UTC -->
+<!-- uuid: 6d6072f4-35f0-4167-a091-0c1da06671a1
+2015-10-19 10:04:36 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get PrivilegedRoleAssignment",

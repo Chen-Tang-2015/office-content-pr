@@ -1,10 +1,6 @@
 # item resource type
 
-The Item resource type represents metadata for an item in OneDrive.
- All top-level filesystem objects in OneDrive are Item resources.
- If an item is a Folder or File facet, the Item resource will contain a value for either the **folder** or **file** property, respectively.
- 
- 
+The Item resource type represents metadata for an item in OneDrive. All top-level filesystem objects in OneDrive are Item resources. If an item is a [Folder](../facets/folder_facet.md) or [File](../facets/file_facet.md) facet, the Item resource will contain a value for either the **folder** or **file** property, respectively.  
 
 ### JSON representation
 
@@ -165,16 +161,16 @@ Here is a JSON representation of the resource
 |[Create version](../api/item_post_versions.md) |[item](item.md)| Create a new version by posting to the versions collection.|
 |[Update](../api/item_update.md) | [item](item.md)	|Update item object. |
 |[Delete](../api/item_delete.md) | None |Delete item object. |
-|[Allphotos](../api/item_allphotos.md)|[item](item.md)||
+|[Allphotos](../api/item_allphotos.md)|[item](item.md) collection||
 |[Copy](../api/item_copy.md)|[item](item.md)||
 |[Createlink](../api/item_createlink.md)|[permission](permission.md)||
 |[Createsession](../api/item_createsession.md)|[uploadSession](uploadsession.md)||
-|[Delta](../api/item_delta.md)|[item](item.md)||
-|[Invite](../api/item_invite.md)|[permission](permission.md)||
-|[Search](../api/item_search.md)|[item](item.md)||
+|[Delta](../api/item_delta.md)|[item](item.md) collection||
+|[Invite](../api/item_invite.md)|[permission](permission.md) collection||
+|[Search](../api/item_search.md)|[item](item.md) collection||
 
-<!-- uuid: 7a3bb544-d31c-424f-9aa8-fcdecb5b6294
-2015-10-19 09:46:35 UTC -->
+<!-- uuid: fbfe09b1-4561-4b54-a5a2-a507e4c7f613
+2015-10-19 10:04:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "item resource",

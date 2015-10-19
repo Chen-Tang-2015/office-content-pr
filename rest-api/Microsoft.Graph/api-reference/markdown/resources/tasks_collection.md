@@ -33,8 +33,8 @@ None
 |[List](../api/task_list.md) | [Task](task.md) [] |Get task object collection. |
 |[Create Task](../api/task_post_tasks.md) |[Task](task.md)| Create a new Task by posting to the tasks collection.|
 
-<!-- uuid: 07077c43-b019-4da4-aaed-1e443fa0995e
-2015-10-19 09:46:37 UTC -->
+<!-- uuid: 2249fe1f-1f20-4115-a34b-adba2ed87e14
+2015-10-19 10:04:38 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "tasks resource",

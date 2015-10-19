@@ -33,8 +33,8 @@ None
 |[List](../api/privilegedrole_list.md) | [PrivilegedRole](privilegedrole.md) [] |Get privilegedRole object collection. |
 |[Create PrivilegedRole](../api/privilegedrole_post_privilegedroles.md) |[PrivilegedRole](privilegedrole.md)| Create a new PrivilegedRole by posting to the PrivilegedRoles collection.|
 
-<!-- uuid: cc7298a5-de7b-4063-b87f-68fc88ae2572
-2015-10-19 09:46:35 UTC -->
+<!-- uuid: 7a430074-8407-4366-b270-0cadb84ef287
+2015-10-19 10:04:36 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PrivilegedRoles resource",

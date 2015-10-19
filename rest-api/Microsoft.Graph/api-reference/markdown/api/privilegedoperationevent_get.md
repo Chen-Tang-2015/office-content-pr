@@ -64,8 +64,8 @@ Content-length: 456
 }
 ```
 
-<!-- uuid: 75bacd2c-f30c-4931-a7ed-b029bf1f0d64
-2015-10-19 09:46:35 UTC -->
+<!-- uuid: 8cf78d54-6799-4a88-a8d2-dd223f18ed8e
+2015-10-19 10:04:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get PrivilegedOperationEvent",

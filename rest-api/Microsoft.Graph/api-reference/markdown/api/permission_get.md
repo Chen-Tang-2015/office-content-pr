@@ -90,8 +90,8 @@ Content-length: 762
 }
 ```
 
-<!-- uuid: 31fd5e19-1e45-4612-acec-f06660814a46
-2015-10-19 09:46:35 UTC -->
+<!-- uuid: ca722410-050f-4fcb-8c46-6f88f0853476
+2015-10-19 10:04:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get permission",

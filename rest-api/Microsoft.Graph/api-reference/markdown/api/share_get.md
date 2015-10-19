@@ -67,8 +67,8 @@ Content-length: 330
 }
 ```
 
-<!-- uuid: d696e062-8917-4d18-9f46-6935b0b2cc0a
-2015-10-19 09:46:37 UTC -->
+<!-- uuid: 14a24eff-6983-4e1d-9ba8-7985e1903c04
+2015-10-19 10:04:38 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get share",

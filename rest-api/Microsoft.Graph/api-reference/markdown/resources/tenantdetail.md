@@ -102,12 +102,12 @@ None
 |[Get TenantDetail](../api/tenantdetail_get.md) | [TenantDetail](tenantdetail.md) |Read properties and relationships of tenantDetail object.|
 |[Update](../api/tenantdetail_update.md) | [TenantDetail](tenantdetail.md)	|Update TenantDetail object. |
 |[Delete](../api/tenantdetail_delete.md) | None |Delete TenantDetail object. |
-|[Checkmembergroups](../api/tenantdetail_checkmembergroups.md)|String||
-|[Get MemberGroups](../api/tenantdetail_getmembergroups.md)|String||
-|[Get MemberObjects](../api/tenantdetail_getmemberobjects.md)|String||
+|[Checkmembergroups](../api/tenantdetail_checkmembergroups.md)|String collection||
+|[Get MemberGroups](../api/tenantdetail_getmembergroups.md)|String collection||
+|[Get MemberObjects](../api/tenantdetail_getmemberobjects.md)|String collection||
 
-<!-- uuid: b4e1b5f9-5edd-49ec-8f26-4e8b989ed0f5
-2015-10-19 09:46:37 UTC -->
+<!-- uuid: f816a33e-2992-4419-a0a0-9ecd225b8159
+2015-10-19 10:04:38 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "TenantDetail resource",

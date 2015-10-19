@@ -57,8 +57,8 @@ Content-length: 162
 }
 ```
 
-<!-- uuid: 1d08f1e2-5a17-4122-895e-7e733c98bbb9
-2015-10-19 09:46:35 UTC -->
+<!-- uuid: d1f50bbb-297a-40d9-a2ce-188c3b90dfc1
+2015-10-19 10:04:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get ItemAttachment",

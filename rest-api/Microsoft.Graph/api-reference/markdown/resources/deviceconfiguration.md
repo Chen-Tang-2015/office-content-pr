@@ -52,12 +52,12 @@ None
 |[Get DeviceConfiguration](../api/deviceconfiguration_get.md) | [DeviceConfiguration](deviceconfiguration.md) |Read properties and relationships of deviceConfiguration object.|
 |[Update](../api/deviceconfiguration_update.md) | [DeviceConfiguration](deviceconfiguration.md)	|Update DeviceConfiguration object. |
 |[Delete](../api/deviceconfiguration_delete.md) | None |Delete DeviceConfiguration object. |
-|[Checkmembergroups](../api/deviceconfiguration_checkmembergroups.md)|String||
-|[Get MemberGroups](../api/deviceconfiguration_getmembergroups.md)|String||
-|[Get MemberObjects](../api/deviceconfiguration_getmemberobjects.md)|String||
+|[Checkmembergroups](../api/deviceconfiguration_checkmembergroups.md)|String collection||
+|[Get MemberGroups](../api/deviceconfiguration_getmembergroups.md)|String collection||
+|[Get MemberObjects](../api/deviceconfiguration_getmemberobjects.md)|String collection||
 
-<!-- uuid: 4a1dfab4-f1ae-488c-8f34-c78b1727d2c5
-2015-10-19 09:46:32 UTC -->
+<!-- uuid: e8677fa6-6c39-4838-b64d-40fd07ff021e
+2015-10-19 10:04:31 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "DeviceConfiguration resource",

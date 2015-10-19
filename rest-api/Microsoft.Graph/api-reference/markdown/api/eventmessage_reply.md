@@ -53,8 +53,8 @@ Here is an example of the response.
 HTTP/1.1 200 OK
 ```
 
-<!-- uuid: be850bd3-ee46-45d1-ab06-7d13534bc4d9
-2015-10-19 09:46:34 UTC -->
+<!-- uuid: b70ca74d-f298-44bf-ad42-c27462ec63ea
+2015-10-19 10:04:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "EventMessage: Reply",

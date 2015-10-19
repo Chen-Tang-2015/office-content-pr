@@ -52,12 +52,12 @@ None
 |[Get ExtensionProperty](../api/extensionproperty_get.md) | [ExtensionProperty](extensionproperty.md) |Read properties and relationships of extensionProperty object.|
 |[Update](../api/extensionproperty_update.md) | [ExtensionProperty](extensionproperty.md)	|Update ExtensionProperty object. |
 |[Delete](../api/extensionproperty_delete.md) | None |Delete ExtensionProperty object. |
-|[Checkmembergroups](../api/extensionproperty_checkmembergroups.md)|String||
-|[Get MemberGroups](../api/extensionproperty_getmembergroups.md)|String||
-|[Get MemberObjects](../api/extensionproperty_getmemberobjects.md)|String||
+|[Checkmembergroups](../api/extensionproperty_checkmembergroups.md)|String collection||
+|[Get MemberGroups](../api/extensionproperty_getmembergroups.md)|String collection||
+|[Get MemberObjects](../api/extensionproperty_getmemberobjects.md)|String collection||
 
-<!-- uuid: 7189c479-c5d5-44df-afdd-e1e2d559e815
-2015-10-19 09:46:34 UTC -->
+<!-- uuid: 24477699-3267-4c28-ae40-fe1ff59c22a2
+2015-10-19 10:04:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "ExtensionProperty resource",

@@ -212,12 +212,12 @@ Here is a JSON representation of the resource
 |[Resetunseencount](../api/group_resetunseencount.md)|None||
 |[Subscribebymail](../api/group_subscribebymail.md)|None||
 |[Unsubscribebymail](../api/group_unsubscribebymail.md)|None||
-|[Checkmembergroups](../api/group_checkmembergroups.md)|String||
-|[Get MemberGroups](../api/group_getmembergroups.md)|String||
-|[Get MemberObjects](../api/group_getmemberobjects.md)|String||
+|[Checkmembergroups](../api/group_checkmembergroups.md)|String collection||
+|[Get MemberGroups](../api/group_getmembergroups.md)|String collection||
+|[Get MemberObjects](../api/group_getmemberobjects.md)|String collection||
 
-<!-- uuid: 99e7e4bc-3e31-4db5-a01a-bec2b2e4a470
-2015-10-19 09:46:34 UTC -->
+<!-- uuid: b08a1f2d-e8dc-418f-933f-2674d3ab1f28
+2015-10-19 10:04:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Group resource",

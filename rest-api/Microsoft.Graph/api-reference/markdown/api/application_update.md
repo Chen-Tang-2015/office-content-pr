@@ -235,8 +235,8 @@ Content-length: 2150
 }
 ```
 
-<!-- uuid: c5d31c0e-1288-44fb-b6c0-0915f28dab03
-2015-10-19 09:46:32 UTC -->
+<!-- uuid: d1facf0d-1f5b-4900-aaec-5400fdc398b5
+2015-10-19 10:04:31 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of application object.",

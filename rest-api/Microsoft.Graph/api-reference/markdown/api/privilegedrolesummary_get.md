@@ -58,8 +58,8 @@ Content-length: 145
 }
 ```
 
-<!-- uuid: cc7c325f-efd1-4666-be5a-4fd7e7c82c3d
-2015-10-19 09:46:35 UTC -->
+<!-- uuid: 66e95907-90a2-4b67-aafe-06e13505e773
+2015-10-19 10:04:36 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get PrivilegedRoleSummary",

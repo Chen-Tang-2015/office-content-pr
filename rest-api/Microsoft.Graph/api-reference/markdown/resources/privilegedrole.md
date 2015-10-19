@@ -58,8 +58,8 @@ Here is a JSON representation of the resource
 |[Selfactivate](../api/privilegedrole_selfactivate.md)|[PrivilegedRoleAssignment](privilegedroleassignment.md)||
 |[Selfdeactivate](../api/privilegedrole_selfdeactivate.md)|[PrivilegedRoleAssignment](privilegedroleassignment.md)||
 
-<!-- uuid: 7b93f5a2-1be8-45b7-8bbb-8970072ea3ca
-2015-10-19 09:46:35 UTC -->
+<!-- uuid: 16d0f205-9734-474e-8b3b-c6a2808cf1c6
+2015-10-19 10:04:36 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PrivilegedRole resource",

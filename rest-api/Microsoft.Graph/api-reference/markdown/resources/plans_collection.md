@@ -33,8 +33,8 @@ None
 |[List](../api/plan_list.md) | [Plan](plan.md) [] |Get plan object collection. |
 |[Create Plan](../api/plan_post_plans.md) |[Plan](plan.md)| Create a new Plan by posting to the plans collection.|
 
-<!-- uuid: e2654264-c0e3-4ee3-ab41-d31e875ded4c
-2015-10-19 09:46:35 UTC -->
+<!-- uuid: f24c8160-5685-4fbb-b3f3-1216b7cdd90d
+2015-10-19 10:04:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "plans resource",

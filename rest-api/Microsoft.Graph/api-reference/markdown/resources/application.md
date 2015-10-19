@@ -128,13 +128,13 @@ Here is a JSON representation of the resource
 |[Create owner](../api/application_post_owners.md) |[DirectoryObject](directoryobject.md)| Create a new owner by posting to the owners collection.|
 |[Update](../api/application_update.md) | [Application](application.md)	|Update Application object. |
 |[Delete](../api/application_delete.md) | None |Delete Application object. |
-|[Checkmembergroups](../api/application_checkmembergroups.md)|String||
-|[Get MemberGroups](../api/application_getmembergroups.md)|String||
-|[Get MemberObjects](../api/application_getmemberobjects.md)|String||
+|[Checkmembergroups](../api/application_checkmembergroups.md)|String collection||
+|[Get MemberGroups](../api/application_getmembergroups.md)|String collection||
+|[Get MemberObjects](../api/application_getmemberobjects.md)|String collection||
 |[Restore](../api/application_restore.md)|[Application](application.md)||
 
-<!-- uuid: d35fe122-5d16-4d9a-af24-a62b23e7c466
-2015-10-19 09:46:32 UTC -->
+<!-- uuid: 2898d0fc-1b2b-4680-8d48-859cf7ad5eed
+2015-10-19 10:04:31 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Application resource",

@@ -33,8 +33,8 @@ Here is a JSON representation of the resource
 |State|String|The state.|
 |Street|String|The street.|
 
-<!-- uuid: 08727782-c4bc-4b83-a00f-0ae52ea31db3
-2015-10-19 09:46:35 UTC -->
+<!-- uuid: 6568b957-de1f-4028-a840-2b8199c581f5
+2015-10-19 10:04:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PhysicalAddress resource",

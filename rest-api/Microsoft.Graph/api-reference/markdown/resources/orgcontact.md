@@ -110,12 +110,12 @@ Here is a JSON representation of the resource
 |[Create memberOf](../api/orgcontact_post_memberof.md) |[DirectoryObject](directoryobject.md)| Create a new memberOf by posting to the memberOf collection.|
 |[Update](../api/orgcontact_update.md) | [OrgContact](orgcontact.md)	|Update OrgContact object. |
 |[Delete](../api/orgcontact_delete.md) | None |Delete OrgContact object. |
-|[Checkmembergroups](../api/orgcontact_checkmembergroups.md)|String||
-|[Get MemberGroups](../api/orgcontact_getmembergroups.md)|String||
-|[Get MemberObjects](../api/orgcontact_getmemberobjects.md)|String||
+|[Checkmembergroups](../api/orgcontact_checkmembergroups.md)|String collection||
+|[Get MemberGroups](../api/orgcontact_getmembergroups.md)|String collection||
+|[Get MemberObjects](../api/orgcontact_getmemberobjects.md)|String collection||
 
-<!-- uuid: eeb779c5-14dd-4193-bb69-948bc6315bca
-2015-10-19 09:46:35 UTC -->
+<!-- uuid: 62f5f7b6-9026-40fc-b9a1-b80d1f9db77d
+2015-10-19 10:04:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "OrgContact resource",

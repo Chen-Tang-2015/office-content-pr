@@ -54,12 +54,12 @@ None
 |[Get AppRoleAssignment](../api/approleassignment_get.md) | [AppRoleAssignment](approleassignment.md) |Read properties and relationships of appRoleAssignment object.|
 |[Update](../api/approleassignment_update.md) | [AppRoleAssignment](approleassignment.md)	|Update AppRoleAssignment object. |
 |[Delete](../api/approleassignment_delete.md) | None |Delete AppRoleAssignment object. |
-|[Checkmembergroups](../api/approleassignment_checkmembergroups.md)|String||
-|[Get MemberGroups](../api/approleassignment_getmembergroups.md)|String||
-|[Get MemberObjects](../api/approleassignment_getmemberobjects.md)|String||
+|[Checkmembergroups](../api/approleassignment_checkmembergroups.md)|String collection||
+|[Get MemberGroups](../api/approleassignment_getmembergroups.md)|String collection||
+|[Get MemberObjects](../api/approleassignment_getmemberobjects.md)|String collection||
 
-<!-- uuid: 45aaa818-f808-4aa8-8cf4-76d5058cdeca
-2015-10-19 09:46:32 UTC -->
+<!-- uuid: f54d9709-0836-4566-b1e9-73a0f53532c7
+2015-10-19 10:04:31 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "AppRoleAssignment resource",

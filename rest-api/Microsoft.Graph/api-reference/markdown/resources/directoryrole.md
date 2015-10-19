@@ -81,12 +81,12 @@ Here is a JSON representation of the resource
 |[Create owner](../api/directoryrole_post_owners.md) |[DirectoryObject](directoryobject.md)| Create a new owner by posting to the owners collection.|
 |[Update](../api/directoryrole_update.md) | [DirectoryRole](directoryrole.md)	|Update DirectoryRole object. |
 |[Delete](../api/directoryrole_delete.md) | None |Delete DirectoryRole object. |
-|[Checkmembergroups](../api/directoryrole_checkmembergroups.md)|String||
-|[Get MemberGroups](../api/directoryrole_getmembergroups.md)|String||
-|[Get MemberObjects](../api/directoryrole_getmemberobjects.md)|String||
+|[Checkmembergroups](../api/directoryrole_checkmembergroups.md)|String collection||
+|[Get MemberGroups](../api/directoryrole_getmembergroups.md)|String collection||
+|[Get MemberObjects](../api/directoryrole_getmemberobjects.md)|String collection||
 
-<!-- uuid: 9dd90dd0-f176-4739-a986-8498e9b417c3
-2015-10-19 09:46:34 UTC -->
+<!-- uuid: a3ccc1d7-1b54-4a0c-b851-e4321a8bfcbe
+2015-10-19 10:04:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "DirectoryRole resource",

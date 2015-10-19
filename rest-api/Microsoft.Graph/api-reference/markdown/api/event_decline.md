@@ -57,8 +57,8 @@ Here is an example of the response.
 HTTP/1.1 200 OK
 ```
 
-<!-- uuid: 01f8a8ee-ed9a-4506-9be9-e0fdf716f67f
-2015-10-19 09:46:34 UTC -->
+<!-- uuid: 2a017852-41c7-4795-8c56-1d8618d21194
+2015-10-19 10:04:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Event: Decline",

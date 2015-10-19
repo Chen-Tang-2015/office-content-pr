@@ -74,10 +74,10 @@ Here is a JSON representation of the resource
 |[Create special](../api/drive_post_special.md) |[item](item.md)| Create a new special by posting to the special collection.|
 |[Update](../api/drive_update.md) | [drive](drive.md)	|Update drive object. |
 |[Delete](../api/drive_delete.md) | None |Delete drive object. |
-|[Allphotos](../api/drive_allphotos.md)|[item](item.md)||
+|[Allphotos](../api/drive_allphotos.md)|[item](item.md) collection||
 
-<!-- uuid: bc75ee91-aa7c-44f6-8d0f-4785209eb772
-2015-10-19 09:46:34 UTC -->
+<!-- uuid: 36b8c888-c6b9-41e9-ad25-67e1a7e3e73b
+2015-10-19 10:04:33 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "drive resource",
