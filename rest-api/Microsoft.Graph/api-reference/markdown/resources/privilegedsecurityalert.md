@@ -72,8 +72,8 @@ None
 |[Fix](../api/privilegedsecurityalert_fix.md)|[PrivilegedSecurityAlert](privilegedsecurityalert.md)||
 |[Reactivate](../api/privilegedsecurityalert_reactivate.md)|[PrivilegedSecurityAlert](privilegedsecurityalert.md)||
 
-<!-- uuid: d5e46352-6fd6-413e-a75a-8eabb65d59b7
-2015-10-19 10:04:36 UTC -->
+<!-- uuid: 1cb3ab88-1833-4337-9225-f7a863dd2d3f
+2015-10-19 10:21:31 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PrivilegedSecurityAlert resource",

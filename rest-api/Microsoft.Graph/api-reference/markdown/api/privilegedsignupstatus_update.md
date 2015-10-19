@@ -60,8 +60,8 @@ Content-length: 86
 }
 ```
 
-<!-- uuid: c3d4d1df-ec4e-4218-a1fe-22cb6173c3b5
-2015-10-19 10:04:36 UTC -->
+<!-- uuid: b86be6d5-04e2-4173-99ad-dc7140bf32c5
+2015-10-19 10:21:31 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of privilegedsignupstatus object.",

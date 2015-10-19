@@ -2,23 +2,6 @@
 
 
 
-### JSON representation
-
-Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-
-  ],
-  "@odata.type": "microsoft.graph.tasks"
-}-->
-
-```json
-{
-}
-
-```
 ### Properties
 None
 
@@ -30,11 +13,11 @@ None
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
-|[List](../api/task_list.md) | [Task](task.md) [] |Get task object collection. |
+|[List](../api/task_list.md) | [Task](task.md) collection |Get task object collection. |
 |[Create Task](../api/task_post_tasks.md) |[Task](task.md)| Create a new Task by posting to the tasks collection.|
 
-<!-- uuid: 2249fe1f-1f20-4115-a34b-adba2ed87e14
-2015-10-19 10:04:38 UTC -->
+<!-- uuid: 50632a23-2f3f-470c-9cca-b1d1d68b91ca
+2015-10-19 10:21:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "tasks resource",

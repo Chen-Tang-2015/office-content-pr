@@ -35,8 +35,8 @@ Here is a JSON representation of the resource
 |name|String|The domain name; for example, ΓÇ£contoso.onmicrosoft.comΓÇ¥|
 |type|String|For example, ΓÇ£ManagedΓÇ¥.|
 
-<!-- uuid: bf9d4d93-571d-4533-88d8-04c590132bf0
-2015-10-19 10:04:39 UTC -->
+<!-- uuid: c19452d4-84fd-40d4-96bd-203dd72ed85a
+2015-10-19 10:21:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "VerifiedDomain resource",

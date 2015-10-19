@@ -2,23 +2,6 @@
 
 
 
-### JSON representation
-
-Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-
-  ],
-  "@odata.type": "microsoft.graph.devices"
-}-->
-
-```json
-{
-}
-
-```
 ### Properties
 None
 
@@ -30,11 +13,11 @@ None
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
-|[List](../api/device_list.md) | [Device](device.md) [] |Get device object collection. |
+|[List](../api/device_list.md) | [Device](device.md) collection |Get device object collection. |
 |[Create Device](../api/device_post_devices.md) |[Device](device.md)| Create a new Device by posting to the devices collection.|
 
-<!-- uuid: 5ca4614c-1208-4a3b-bb09-3dfd3cd043e3
-2015-10-19 10:04:31 UTC -->
+<!-- uuid: 2f4cd389-b0d0-4d23-a1f5-9eebc273da8a
+2015-10-19 10:21:26 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "devices resource",

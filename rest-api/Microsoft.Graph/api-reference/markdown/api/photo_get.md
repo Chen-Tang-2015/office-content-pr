@@ -56,8 +56,8 @@ Content-length: 53
 }
 ```
 
-<!-- uuid: 51c0bbd7-7ceb-4e8e-a29a-b80411ae631d
-2015-10-19 10:04:35 UTC -->
+<!-- uuid: 40eaf4bd-2fd8-4fac-b9db-c5d2e6e28027
+2015-10-19 10:21:30 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Photo",

@@ -2,23 +2,6 @@
 
 
 
-### JSON representation
-
-Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-
-  ],
-  "@odata.type": "microsoft.graph.plans"
-}-->
-
-```json
-{
-}
-
-```
 ### Properties
 None
 
@@ -30,11 +13,11 @@ None
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
-|[List](../api/plan_list.md) | [Plan](plan.md) [] |Get plan object collection. |
+|[List](../api/plan_list.md) | [Plan](plan.md) collection |Get plan object collection. |
 |[Create Plan](../api/plan_post_plans.md) |[Plan](plan.md)| Create a new Plan by posting to the plans collection.|
 
-<!-- uuid: f24c8160-5685-4fbb-b3f3-1216b7cdd90d
-2015-10-19 10:04:35 UTC -->
+<!-- uuid: 7c1dd3ff-6f95-4b3b-a122-87bef91241e8
+2015-10-19 10:21:31 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "plans resource",

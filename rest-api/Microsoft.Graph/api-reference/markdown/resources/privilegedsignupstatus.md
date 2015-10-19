@@ -46,8 +46,8 @@ None
 |[Signup](../api/privilegedsignupstatus_signup.md)|[PrivilegedSignupStatus](privilegedsignupstatus.md)||
 |[Skipsetup](../api/privilegedsignupstatus_skipsetup.md)|None||
 
-<!-- uuid: 13b74211-4b38-438c-8da3-2d8f27441d08
-2015-10-19 10:04:36 UTC -->
+<!-- uuid: 3cce5957-67ed-4a45-bcee-1edef0e76c82
+2015-10-19 10:21:31 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PrivilegedSignupStatus resource",

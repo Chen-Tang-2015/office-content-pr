@@ -72,8 +72,8 @@ Content-length: 732
 }
 ```
 
-<!-- uuid: bfe7ca6b-3c4b-454d-a0bf-f8b1cc6047e0
-2015-10-19 10:04:31 UTC -->
+<!-- uuid: e3a2de0a-d60d-4f67-9b30-654cd0e3328b
+2015-10-19 10:21:26 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Device",

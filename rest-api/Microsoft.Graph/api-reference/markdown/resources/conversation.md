@@ -56,8 +56,8 @@ Here is a JSON representation of the resource
 |[Update](../api/conversation_update.md) | [Conversation](conversation.md)	|Update Conversation object. |
 |[Delete](../api/conversation_delete.md) | None |Delete Conversation object. |
 
-<!-- uuid: a2e96625-3579-4759-a89e-fdf8a41cba96
-2015-10-19 10:04:31 UTC -->
+<!-- uuid: 8a8ce95d-db04-43f9-95b4-a3b0c60b1734
+2015-10-19 10:21:26 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Conversation resource",

@@ -27,8 +27,8 @@ Here is a JSON representation of the resource
 |crc32Hash|String||
 |sha1Hash|String||
 
-<!-- uuid: ccf0c819-24ec-451f-9d06-8e5924e38d98
-2015-10-19 10:04:34 UTC -->
+<!-- uuid: 8b588af1-69ad-415c-981f-79c19b6e053c
+2015-10-19 10:21:29 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "hashes resource",

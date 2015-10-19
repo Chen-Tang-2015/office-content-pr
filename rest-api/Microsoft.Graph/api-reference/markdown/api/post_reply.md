@@ -103,8 +103,8 @@ Here is an example of the response.
 HTTP/1.1 200 OK
 ```
 
-<!-- uuid: be615d1c-f7a3-43a6-a4fb-6a96ec307536
-2015-10-19 10:04:35 UTC -->
+<!-- uuid: 36cb6533-8973-489a-915b-6f07b7c8053c
+2015-10-19 10:21:31 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Post: Reply",

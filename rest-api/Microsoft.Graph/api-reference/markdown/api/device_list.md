@@ -77,8 +77,8 @@ Content-length: 857
 }
 ```
 
-<!-- uuid: ba9d23b0-9da3-4299-9bc7-e464f375b5be
-2015-10-19 10:04:31 UTC -->
+<!-- uuid: e3f78e0c-2961-439b-b875-c1ac77c474be
+2015-10-19 10:21:26 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "List Device",

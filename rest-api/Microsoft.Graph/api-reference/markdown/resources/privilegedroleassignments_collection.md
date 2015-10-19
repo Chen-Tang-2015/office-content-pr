@@ -2,23 +2,6 @@
 
 
 
-### JSON representation
-
-Here is a JSON representation of the resource
-
-<!-- {
-  "blockType": "resource",
-  "optionalProperties": [
-
-  ],
-  "@odata.type": "microsoft.graph.privilegedroleassignments"
-}-->
-
-```json
-{
-}
-
-```
 ### Properties
 None
 
@@ -30,11 +13,11 @@ None
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
-|[List](../api/privilegedroleassignment_list.md) | [PrivilegedRoleAssignment](privilegedroleassignment.md) [] |Get privilegedRoleAssignment object collection. |
+|[List](../api/privilegedroleassignment_list.md) | [PrivilegedRoleAssignment](privilegedroleassignment.md) collection |Get privilegedRoleAssignment object collection. |
 |[Create PrivilegedRoleAssignment](../api/privilegedroleassignment_post_privilegedroleassignments.md) |[PrivilegedRoleAssignment](privilegedroleassignment.md)| Create a new PrivilegedRoleAssignment by posting to the PrivilegedRoleAssignments collection.|
 
-<!-- uuid: 4d9726ef-9476-443a-b886-64e693ef93a0
-2015-10-19 10:04:36 UTC -->
+<!-- uuid: 599e5e03-50aa-4cbb-b92d-97e9610ed606
+2015-10-19 10:21:31 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PrivilegedRoleAssignments resource",

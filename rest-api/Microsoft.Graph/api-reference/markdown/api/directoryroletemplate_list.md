@@ -58,8 +58,8 @@ Content-length: 236
 }
 ```
 
-<!-- uuid: 0065d3ea-f3ee-4427-80dc-dbcb91a6013f
-2015-10-19 10:04:32 UTC -->
+<!-- uuid: 8a421cca-4009-4d52-9c93-5e0b4d947187
+2015-10-19 10:21:26 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "List DirectoryRoleTemplate",

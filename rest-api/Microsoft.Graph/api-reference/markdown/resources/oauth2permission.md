@@ -39,8 +39,8 @@ Here is a JSON representation of the resource
 |userConsentDisplayName|String|Display name for the permission that appears in the end user consent experience.|
 |value|String|The value of the scope claim that the resource application should expect in the OAuth 2.0 access token.|
 
-<!-- uuid: 8bd6b309-1cb4-451d-a76d-9ff9becc1eb3
-2015-10-19 10:04:34 UTC -->
+<!-- uuid: f83afb10-37f7-4d1b-8f89-3ac275514716
+2015-10-19 10:21:29 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "OAuth2Permission resource",

@@ -53,8 +53,8 @@ Content-length: 160
 }
 ```
 
-<!-- uuid: ae36748a-1904-41cd-8010-0f7674b1a2a7
-2015-10-19 10:04:36 UTC -->
+<!-- uuid: a5f7b191-7b8b-4d7d-8bad-5577a2db90a9
+2015-10-19 10:21:31 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create PrivilegedRoleAssignment",

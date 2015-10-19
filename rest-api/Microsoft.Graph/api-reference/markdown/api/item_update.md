@@ -358,8 +358,8 @@ Content-length: 3050
 }
 ```
 
-<!-- uuid: 472f1321-fa41-412e-a002-9a693bfa2d0d
-2015-10-19 10:04:34 UTC -->
+<!-- uuid: 2f053540-99fb-4e0b-95e6-9681e535c247
+2015-10-19 10:21:29 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of item object.",

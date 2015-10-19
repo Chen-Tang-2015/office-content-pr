@@ -56,8 +56,8 @@ Content-length: 341
 }
 ```
 
-<!-- uuid: 1b214494-def0-4839-856d-983bce3cfa25
-2015-10-19 10:04:31 UTC -->
+<!-- uuid: 76a8cf1c-26d1-4d98-939b-0f63c45fb020
+2015-10-19 10:21:26 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get DeviceConfiguration",
