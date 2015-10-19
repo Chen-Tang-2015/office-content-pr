@@ -32,7 +32,6 @@ Here is an example of the request.
 }-->
 ```http
 POST /drive/root
-Content-type: application/json
 ```
 In the request body, supply a JSON representation of [item](../resources/item.md) object.
 ##### Response
@@ -40,12 +39,13 @@ Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "item"
+  "@odata.type": "microsoft.graph.item"
 } -->
-```json
+```http
 HTTP/1.1 201 Created
 Content-type: application/json
 Content-length: 3050
+
 {
   "content": "content-value",
   "createdBy": {
@@ -189,8 +189,8 @@ Content-length: 3050
 }
 ```
 
-<!-- uuid: 136619ec-a6f2-4278-a4ac-20bb29df5436
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 7c7a6ae9-e737-4a3d-bbc2-d4c22f936920
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create version",

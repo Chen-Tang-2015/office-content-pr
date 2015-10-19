@@ -11,13 +11,13 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.ResourceAccess"
+  "@odata.type": "microsoft.graph.resourceaccess"
 }-->
 
 ```json
 {
-  "id": "String",
-  "type": "String"
+  "id": "Guid-value",
+  "type": "String-value"
 }
 
 ```
@@ -27,8 +27,8 @@ Here is a JSON representation of the resource
 |id|Guid|The unique identifier for one of the [OAuth2Permission] or [AppRole] instances that the resource application exposes.|
 |type|String|Specifies whether the **id** property references an [OAuth2Permission] or an [AppRole]. Possible values are "scope" or "role".|
 
-<!-- uuid: 3722285e-1f99-4252-a12f-9e1575f2fa74
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 6b9c3f1b-a931-498c-b0fa-2435d363849f
+2015-10-19 09:46:36 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "ResourceAccess resource",

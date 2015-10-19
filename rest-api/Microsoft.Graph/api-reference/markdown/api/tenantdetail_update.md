@@ -53,6 +53,7 @@ Here is an example of the request.
 PUT /tenantDetails/<objectId>
 Content-type: application/json
 Content-length: 1647
+
 {
   "assignedPlans": [
     {
@@ -116,16 +117,17 @@ Content-length: 1647
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "tenantdetail"
+  "@odata.type": "microsoft.graph.tenantdetail"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 1647
+
 {
   "assignedPlans": [
     {
@@ -189,8 +191,8 @@ Content-length: 1647
 }
 ```
 
-<!-- uuid: 00cad3c3-0c07-40d9-a46d-f19faecfc681
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 33495b89-e3f4-43d8-88e6-156b49e82fd6
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of tenantdetail object.",

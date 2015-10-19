@@ -14,39 +14,39 @@ Here is a JSON representation of the resource
     "ownedObjects",
     "owners"
   ],
-  "@odata.type": "microsoft.graph.DirectoryRole"
+  "@odata.type": "microsoft.graph.directoryrole"
 }-->
 
 ```json
 {
   "deletionTimestamp": "String (timestamp)",
-  "description": "String",
-  "displayName": "String",
+  "description": "String-value",
+  "displayName": "String-value",
   "isSystem": true,
   "memberOf": [
     {
-      "@odata.type": "microsoft.graph.DirectoryObject"
+      "@odata.type": "microsoft.graph.directoryobject"
     }
   ],
   "members": [
     {
-      "@odata.type": "microsoft.graph.DirectoryObject"
+      "@odata.type": "microsoft.graph.directoryobject"
     }
   ],
-  "objectId": "String (identifier)",
-  "objectType": "String",
+  "objectId": "String-value (identifier)",
+  "objectType": "String-value",
   "ownedObjects": [
     {
-      "@odata.type": "microsoft.graph.DirectoryObject"
+      "@odata.type": "microsoft.graph.directoryobject"
     }
   ],
   "owners": [
     {
-      "@odata.type": "microsoft.graph.DirectoryObject"
+      "@odata.type": "microsoft.graph.directoryobject"
     }
   ],
   "roleDisabled": true,
-  "roleTemplateId": "String"
+  "roleTemplateId": "String-value"
 }
 
 ```
@@ -80,13 +80,13 @@ Here is a JSON representation of the resource
 |[Create ownedObject](../api/directoryrole_post_ownedobjects.md) |[DirectoryObject](directoryobject.md)| Create a new ownedObject by posting to the ownedObjects collection.|
 |[Create owner](../api/directoryrole_post_owners.md) |[DirectoryObject](directoryobject.md)| Create a new owner by posting to the owners collection.|
 |[Update](../api/directoryrole_update.md) | [DirectoryRole](directoryrole.md)	|Update DirectoryRole object. |
-|[Delete](../api/directoryrole_delete.md) | Void	|Delete DirectoryRole object. |
+|[Delete](../api/directoryrole_delete.md) | None |Delete DirectoryRole object. |
 |[Checkmembergroups](../api/directoryrole_checkmembergroups.md)|String||
 |[Get MemberGroups](../api/directoryrole_getmembergroups.md)|String||
 |[Get MemberObjects](../api/directoryrole_getmemberobjects.md)|String||
 
-<!-- uuid: 290292d4-146c-446e-ada0-3cf7baabe0e3
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 9dd90dd0-f176-4739-a986-8498e9b417c3
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "DirectoryRole resource",

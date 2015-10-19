@@ -38,6 +38,7 @@ Here is an example of the request.
 PUT /deviceConfiguration/<objectId>
 Content-type: application/json
 Content-length: 341
+
 {
   "publicIssuerCertificates": [
     "publicIssuerCertificates-value"
@@ -53,16 +54,17 @@ Content-length: 341
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "deviceconfiguration"
+  "@odata.type": "microsoft.graph.deviceconfiguration"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 341
+
 {
   "publicIssuerCertificates": [
     "publicIssuerCertificates-value"
@@ -78,8 +80,8 @@ Content-length: 341
 }
 ```
 
-<!-- uuid: bf2e7294-d33b-484c-9fd6-e798ca01f91e
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 56941c8f-be88-420d-a363-f0ce9b7ffdb8
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of deviceconfiguration object.",

@@ -12,7 +12,7 @@ Here is a JSON representation of the resource
     "ChildFolders",
     "Messages"
   ],
-  "@odata.type": "microsoft.graph.MailFolder"
+  "@odata.type": "microsoft.graph.mailfolder"
 }-->
 
 ```json
@@ -20,17 +20,17 @@ Here is a JSON representation of the resource
   "ChildFolderCount": 1024,
   "ChildFolders": [
     {
-      "@odata.type": "microsoft.graph.MailFolder"
+      "@odata.type": "microsoft.graph.mailfolder"
     }
   ],
-  "DisplayName": "String",
-  "Id": "String (identifier)",
+  "DisplayName": "String-value",
+  "Id": "String-value (identifier)",
   "Messages": [
     {
-      "@odata.type": "microsoft.graph.Message"
+      "@odata.type": "microsoft.graph.message"
     }
   ],
-  "ParentFolderId": "String"
+  "ParentFolderId": "String-value"
 }
 
 ```
@@ -56,12 +56,12 @@ Here is a JSON representation of the resource
 |[Create MailFolder](../api/mailfolder_post_childfolders.md) |[MailFolder](mailfolder.md)| Create a new MailFolder by posting to the ChildFolders collection.|
 |[Create Message](../api/mailfolder_post_messages.md) |[Message](message.md)| Create a new Message by posting to the Messages collection.|
 |[Update](../api/mailfolder_update.md) | [MailFolder](mailfolder.md)	|Update MailFolder object. |
-|[Delete](../api/mailfolder_delete.md) | Void	|Delete MailFolder object. |
+|[Delete](../api/mailfolder_delete.md) | None |Delete MailFolder object. |
 |[Copy](../api/mailfolder_copy.md)|[MailFolder](mailfolder.md)||
 |[Move](../api/mailfolder_move.md)|[MailFolder](mailfolder.md)||
 
-<!-- uuid: 2822c985-81b2-4179-99bc-b164277f014d
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 2fea85e9-0daf-436f-b1cc-2a3121afcfaa
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "MailFolder resource",

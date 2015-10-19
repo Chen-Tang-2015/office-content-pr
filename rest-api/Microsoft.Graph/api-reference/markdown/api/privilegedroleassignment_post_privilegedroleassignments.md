@@ -30,7 +30,6 @@ Here is an example of the request.
 }-->
 ```http
 POST /PrivilegedRoleAssignments
-Content-type: application/json
 ```
 In the request body, supply a JSON representation of [PrivilegedRoleAssignment](../resources/privilegedroleassignment.md) object.
 ##### Response
@@ -38,12 +37,13 @@ Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "privilegedroleassignment"
+  "@odata.type": "microsoft.graph.privilegedroleassignment"
 } -->
-```json
+```http
 HTTP/1.1 201 Created
 Content-type: application/json
 Content-length: 160
+
 {
   "UserId": "UserId-value",
   "RoleId": "RoleId-value",
@@ -53,8 +53,8 @@ Content-length: 160
 }
 ```
 
-<!-- uuid: 79979386-d67c-434f-90e0-6143a3a8eb2c
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 7d625c8f-73e8-4964-8ee9-f8765825a6d5
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create PrivilegedRoleAssignment",

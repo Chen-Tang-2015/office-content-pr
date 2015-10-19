@@ -11,7 +11,7 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.PrivilegedRoleSettings"
+  "@odata.type": "microsoft.graph.privilegedrolesettings"
 }-->
 
 ```json
@@ -22,7 +22,7 @@ Here is a JSON representation of the resource
   "MfaOnElevation": true,
   "MinElevationDuration": "String (timestamp)",
   "NotificationToUserOnElevation": true,
-  "RoleId": "String (identifier)",
+  "RoleId": "Guid-value (identifier)",
   "TicketingInfoOnElevation": true
 }
 
@@ -49,10 +49,10 @@ None
 |:---------------|:--------|:----------|
 |[Get PrivilegedRoleSettings](../api/privilegedrolesettings_get.md) | [PrivilegedRoleSettings](privilegedrolesettings.md) |Read properties and relationships of privilegedRoleSettings object.|
 |[Update](../api/privilegedrolesettings_update.md) | [PrivilegedRoleSettings](privilegedrolesettings.md)	|Update PrivilegedRoleSettings object. |
-|[Delete](../api/privilegedrolesettings_delete.md) | Void	|Delete PrivilegedRoleSettings object. |
+|[Delete](../api/privilegedrolesettings_delete.md) | None |Delete PrivilegedRoleSettings object. |
 
-<!-- uuid: c0a452db-079a-4e0d-ab44-348cb5a9dda1
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: afd15079-42ae-4037-b74b-caac19244a9b
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PrivilegedRoleSettings resource",

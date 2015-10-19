@@ -26,17 +26,27 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and [OutlookItem](../resources/outlookitem.md) object in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_outlookitem"
+}-->
+```http
+
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "outlookitem"
+  "@odata.type": "microsoft.graph.outlookitem"
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 185
+
 {
   "ChangeKey": "ChangeKey-value",
   "Categories": [
@@ -47,10 +57,9 @@ Content-length: 185
   "Id": "Id-value"
 }
 ```
-If successful, this method returns a `200 OK` response code and [OutlookItem](../resources/outlookitem.md) object in the response body.
 
-<!-- uuid: 3d9d39ef-93bc-4763-8247-b143b84e985b
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 3cb22220-aa58-4f51-b891-0902c964d770
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get OutlookItem",

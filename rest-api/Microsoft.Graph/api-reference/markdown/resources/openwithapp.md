@@ -11,7 +11,7 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.openWithApp"
+  "@odata.type": "microsoft.graph.openwithapp"
 }-->
 
 ```json
@@ -19,10 +19,10 @@ Here is a JSON representation of the resource
   "app": {
     "@odata.type": "microsoft.graph.identity"
   },
-  "editPostParameters": "String",
-  "editUrl": "String",
-  "viewPostParameters": "String",
-  "viewUrl": "String"
+  "editPostParameters": "String-value",
+  "editUrl": "String-value",
+  "viewPostParameters": "String-value",
+  "viewUrl": "String-value"
 }
 
 ```
@@ -35,8 +35,8 @@ Here is a JSON representation of the resource
 |viewPostParameters|String||
 |viewUrl|String||
 
-<!-- uuid: 584cb39a-f75b-4f9f-8c87-8c48781aade5
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 53bce78b-9ffc-4bb2-82d9-f365b44da197
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "openWithApp resource",

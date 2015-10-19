@@ -2,6 +2,23 @@
 
 
 
+### JSON representation
+
+Here is a JSON representation of the resource
+
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.privilegedsignupstatus"
+}-->
+
+```json
+{
+}
+
+```
 ### Properties
 None
 
@@ -16,8 +33,8 @@ None
 |[List](../api/privilegedsignupstatus_list.md) | [PrivilegedSignupStatus](privilegedsignupstatus.md) [] |Get privilegedSignupStatus object collection. |
 |[Create PrivilegedSignupStatus](../api/privilegedsignupstatus_post_privilegedsignupstatus.md) |[PrivilegedSignupStatus](privilegedsignupstatus.md)| Create a new PrivilegedSignupStatus by posting to the PrivilegedSignupStatus collection.|
 
-<!-- uuid: f3c1074d-c489-4cdf-a063-d9946f31c406
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: de36b15b-bf33-4e14-8b5b-084f3049b275
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PrivilegedSignupStatus resource",

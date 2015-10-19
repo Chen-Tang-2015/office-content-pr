@@ -20,17 +20,27 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and [TenantDetail](../resources/tenantdetail.md) object in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_tenantdetail"
+}-->
+```http
+GET /tenantDetails/<objectId>
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "tenantdetail"
+  "@odata.type": "microsoft.graph.tenantdetail"
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 1647
+
 {
   "assignedPlans": [
     {
@@ -93,10 +103,9 @@ Content-length: 1647
   "deletionTimestamp": "datetime-value"
 }
 ```
-If successful, this method returns a `200 OK` response code and [TenantDetail](../resources/tenantdetail.md) object in the response body.
 
-<!-- uuid: 1c570437-a20a-4989-9027-22f4c44b1932
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 56e07189-25b9-4825-b100-635410d2b801
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get TenantDetail",

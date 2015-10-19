@@ -39,6 +39,7 @@ Here is an example of the request.
 PUT /NotificationRules/<Id>
 Content-type: application/json
 Content-length: 260
+
 {
   "Id": "Id-value",
   "UserName": "UserName-value",
@@ -51,16 +52,17 @@ Content-length: 260
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "notificationrule"
+  "@odata.type": "microsoft.graph.notificationrule"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 260
+
 {
   "Id": "Id-value",
   "UserName": "UserName-value",
@@ -73,8 +75,8 @@ Content-length: 260
 }
 ```
 
-<!-- uuid: 6d13769f-971a-443a-898f-23fb569bb709
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 3714bf1f-9335-493d-8043-88bf037b978d
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of notificationrule object.",

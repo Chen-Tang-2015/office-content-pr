@@ -27,6 +27,7 @@ If successful, this method returns `200, OK` response code and String collection
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "extensionproperty_checkmembergroups"
@@ -35,22 +36,27 @@ Here is an example of how to call this API.
 POST /applications/<objectId>/extensionProperties/<objectId>/checkMemberGroups
 Content-type: application/json
 Content-length: 44
+
 {
   "groupIds": [
     "groupIds-value"
   ]
 }
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "string"
+  "@odata.type": "string",
+  "isCollection": true
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 39
+
 {
   "value": [
     "String-value"
@@ -58,8 +64,8 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: f8b9f460-fee8-45a1-991e-838afff0cfef
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: c9a802f1-a4a8-45fa-9fe5-fcfeff935c49
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "ExtensionProperty: checkMemberGroups",

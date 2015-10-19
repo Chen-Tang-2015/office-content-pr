@@ -11,13 +11,13 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.Recipient"
+  "@odata.type": "microsoft.graph.recipient"
 }-->
 
 ```json
 {
   "EmailAddress": {
-    "@odata.type": "microsoft.graph.EmailAddress"
+    "@odata.type": "microsoft.graph.emailaddress"
   }
 }
 
@@ -27,8 +27,8 @@ Here is a JSON representation of the resource
 |:---------------|:--------|:----------|
 |EmailAddress|[EmailAddress](emailaddress.md)|The recipient's email address.|
 
-<!-- uuid: 78d2b934-1e6c-4b31-8fdc-8f4a549851bc
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 6ca59aaa-5df4-4e96-8a40-72fb8ca8572e
+2015-10-19 09:46:36 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Recipient resource",

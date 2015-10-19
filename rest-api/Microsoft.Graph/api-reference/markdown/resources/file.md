@@ -2,6 +2,23 @@
 
 
 
+### JSON representation
+
+Here is a JSON representation of the resource
+
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.file"
+}-->
+
+```json
+{
+}
+
+```
 ### Properties
 None
 
@@ -13,10 +30,10 @@ None
 
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
-|[Delete](../api/file_delete.md) | Void	|Delete File object. |
+|[Delete](../api/file_delete.md) | None |Delete File object. |
 
-<!-- uuid: 1fb5fed5-2320-404c-87d8-d15af3352fbe
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 4d4c47c7-487d-473e-95a0-d6e2a8da23cd
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "File resource",

@@ -10,6 +10,7 @@ Here is a JSON representation of the resource
   "blockType": "resource",
   "optionalProperties": [
     "items",
+    "root",
     "shared",
     "special"
   ],
@@ -18,15 +19,15 @@ Here is a JSON representation of the resource
 
 ```json
 {
-  "driveType": "String",
-  "id": "String (identifier)",
+  "driveType": "String-value",
+  "id": "String-value (identifier)",
   "items": [
     {
       "@odata.type": "microsoft.graph.item"
     }
   ],
   "owner": {
-    "@odata.type": "microsoft.graph.identitySet"
+    "@odata.type": "microsoft.graph.identityset"
   },
   "quota": {
     "@odata.type": "microsoft.graph.quota"
@@ -72,11 +73,11 @@ Here is a JSON representation of the resource
 |[Create shared](../api/drive_post_shared.md) |[item](item.md)| Create a new shared by posting to the shared collection.|
 |[Create special](../api/drive_post_special.md) |[item](item.md)| Create a new special by posting to the special collection.|
 |[Update](../api/drive_update.md) | [drive](drive.md)	|Update drive object. |
-|[Delete](../api/drive_delete.md) | Void	|Delete drive object. |
+|[Delete](../api/drive_delete.md) | None |Delete drive object. |
 |[Allphotos](../api/drive_allphotos.md)|[item](item.md)||
 
-<!-- uuid: 080158a0-3e09-425e-8fa4-feaafe7bf4b5
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: bc75ee91-aa7c-44f6-8d0f-4785209eb772
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "drive resource",

@@ -10,50 +10,51 @@ Here is a JSON representation of the resource
   "blockType": "resource",
   "optionalProperties": [
     "Attachments",
-    "Extensions"
+    "Extensions",
+    "InReplyTo"
   ],
-  "@odata.type": "microsoft.graph.Post"
+  "@odata.type": "microsoft.graph.post"
 }-->
 
 ```json
 {
   "Attachments": [
     {
-      "@odata.type": "microsoft.graph.Attachment"
+      "@odata.type": "microsoft.graph.attachment"
     }
   ],
   "Body": {
-    "@odata.type": "microsoft.graph.ItemBody"
+    "@odata.type": "microsoft.graph.itembody"
   },
   "Categories": [
-    "String"
+    "String-value"
   ],
-  "ChangeKey": "String",
-  "ConversationId": "String",
-  "ConversationThreadId": "String",
+  "ChangeKey": "String-value",
+  "ConversationId": "String-value",
+  "ConversationThreadId": "String-value",
   "DateTimeCreated": "String (timestamp)",
   "DateTimeLastModified": "String (timestamp)",
   "DateTimeReceived": "String (timestamp)",
   "Extensions": [
     {
-      "@odata.type": "microsoft.graph.Extension"
+      "@odata.type": "microsoft.graph.extension"
     }
   ],
   "From": {
-    "@odata.type": "microsoft.graph.Recipient"
+    "@odata.type": "microsoft.graph.recipient"
   },
   "HasAttachments": true,
-  "Id": "String (identifier)",
+  "Id": "String-value (identifier)",
   "InReplyTo": {
-    "@odata.type": "microsoft.graph.Post"
+    "@odata.type": "microsoft.graph.post"
   },
   "NewParticipants": [
     {
-      "@odata.type": "microsoft.graph.Recipient"
+      "@odata.type": "microsoft.graph.recipient"
     }
   ],
   "Sender": {
-    "@odata.type": "microsoft.graph.Recipient"
+    "@odata.type": "microsoft.graph.recipient"
   }
 }
 
@@ -90,12 +91,12 @@ Here is a JSON representation of the resource
 |[Create Attachment](../api/post_post_attachments.md) |[Attachment](attachment.md)| Create a new Attachment by posting to the Attachments collection.|
 |[Create Extension](../api/post_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
 |[Update](../api/post_update.md) | [Post](post.md)	|Update Post object. |
-|[Delete](../api/post_delete.md) | Void	|Delete Post object. |
-|[Forward](../api/post_forward.md)|[None](none.md)||
-|[Reply](../api/post_reply.md)|[None](none.md)||
+|[Delete](../api/post_delete.md) | None |Delete Post object. |
+|[Forward](../api/post_forward.md)|None||
+|[Reply](../api/post_reply.md)|None||
 
-<!-- uuid: daf1ceee-3290-47ca-bebe-3260c4e837b8
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 6c517814-c966-49b4-8a06-997c27cfc9c3
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Post resource",

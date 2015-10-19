@@ -31,6 +31,7 @@ If successful, this method returns `200, OK` response code and [PrivilegedRoleAs
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "privilegedroleassignment_activate"
@@ -39,23 +40,27 @@ Here is an example of how to call this API.
 POST /PrivilegedRoleAssignments/<UserId|RoleId>/Activate
 Content-type: application/json
 Content-length: 142
+
 {
   "Reason": "Reason-value",
   "Duration": "Duration-value",
   "TicketNumber": "TicketNumber-value",
   "TicketSystem": "TicketSystem-value"
 }
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "privilegedroleassignment"
+  "@odata.type": "microsoft.graph.privilegedroleassignment"
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 160
+
 {
   "UserId": "UserId-value",
   "RoleId": "RoleId-value",
@@ -65,8 +70,8 @@ Content-length: 160
 }
 ```
 
-<!-- uuid: d3d77625-9aca-4d77-97c6-472ed3a39bb2
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 6cff94da-0b22-4cd5-baf3-2a9e2043f09f
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PrivilegedRoleAssignment: Activate",

@@ -84,12 +84,15 @@ Here is an example of the request.
 ```http
 PUT /users/<objectId>
 Content-type: application/json
-Content-length: 2650
+Content-length: 2668
+
 {
   "accountEnabled": true,
   "assignedLicenses": [
     {
-      "disabledPlans": "disabledPlans-value",
+      "disabledPlans": [
+        "disabledPlans-value"
+      ],
       "skuId": "skuId-value"
     }
   ],
@@ -185,21 +188,24 @@ Content-length: 2650
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "user"
+  "@odata.type": "microsoft.graph.user"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 2650
+Content-length: 2668
+
 {
   "accountEnabled": true,
   "assignedLicenses": [
     {
-      "disabledPlans": "disabledPlans-value",
+      "disabledPlans": [
+        "disabledPlans-value"
+      ],
       "skuId": "skuId-value"
     }
   ],
@@ -295,8 +301,8 @@ Content-length: 2650
 }
 ```
 
-<!-- uuid: b783a136-0743-4b93-ba02-d10f62cb558a
-2015-10-16 22:29:36 UTC -->
+<!-- uuid: 6980aa4e-c5b2-4691-b4aa-1fc4cb88396e
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of user object.",

@@ -23,11 +23,12 @@ In the request body, provide a JSON object with the following parameters.
 |ToRecipients|Recipient||
 
 ### Response
-If successful, this method returns `200, OK` response code and [None](../resources/none.md) object in the response body.
+If successful, this method returns `200, OK` response code. It does not return anything in the response body.
 
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "eventmessage_forward"
@@ -36,6 +37,7 @@ Here is an example of how to call this API.
 
 Content-type: application/json
 Content-length: 166
+
 {
   "Comment": "Comment-value",
   "ToRecipients": [
@@ -47,23 +49,21 @@ Content-length: 166
     }
   ]
 }
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "none"
+  "@odata.type": "microsoft.graph.none"
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
-Content-type: application/json
-Content-length: 3
-{
-}
 ```
 
-<!-- uuid: 7f754328-0b64-4ba7-a431-923d5b5f51e8
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: f41ca4ca-4777-4372-a4d7-efbbe84fe522
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "EventMessage: Forward",

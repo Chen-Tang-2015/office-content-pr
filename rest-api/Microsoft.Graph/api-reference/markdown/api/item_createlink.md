@@ -29,6 +29,7 @@ If successful, this method returns `200, OK` response code and [permission](../r
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "item_createlink"
@@ -37,20 +38,24 @@ Here is an example of how to call this API.
 POST /drive/root/createLink
 Content-type: application/json
 Content-length: 26
+
 {
   "type": "type-value"
 }
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "permission"
+  "@odata.type": "microsoft.graph.permission"
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 762
+
 {
   "grantedTo": {
     "application": {
@@ -92,8 +97,8 @@ Content-length: 762
 }
 ```
 
-<!-- uuid: eafa27ad-07bc-4735-a401-d0f510d841e2
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 5f0b0338-230d-4fa7-9b39-3f3f13cfb1d4
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "item: createLink",

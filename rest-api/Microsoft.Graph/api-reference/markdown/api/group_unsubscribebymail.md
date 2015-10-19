@@ -19,36 +19,33 @@ POST /drive/root/createdByUser/JoinedGroups/<objectId>/UnsubscribeByMail
 ### Request body
 
 ### Response
-If successful, this method returns `200, OK` response code and [None](../resources/none.md) object in the response body.
+If successful, this method returns `200, OK` response code. It does not return anything in the response body.
 
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "group_unsubscribebymail"
 }-->
 ```http
 POST /groups/<objectId>/UnsubscribeByMail
-Content-type: application/json
-Content-length: 0
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "none"
+  "@odata.type": "microsoft.graph.none"
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
-Content-type: application/json
-Content-length: 3
-{
-}
 ```
 
-<!-- uuid: 7a0b03e7-65c1-4ec4-9644-4ef4df156f77
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 9284116f-5388-4fe6-b32a-57d1c15e8820
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Group: UnsubscribeByMail",

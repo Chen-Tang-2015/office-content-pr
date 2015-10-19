@@ -38,6 +38,7 @@ Here is an example of the request.
 PUT /tasks/<id>/details
 Content-type: application/json
 Content-length: 139
+
 {
   "notes": "notes-value",
   "completedBy": "completedBy-value",
@@ -48,16 +49,17 @@ Content-length: 139
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "taskdetails"
+  "@odata.type": "microsoft.graph.taskdetails"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 139
+
 {
   "notes": "notes-value",
   "completedBy": "completedBy-value",
@@ -68,8 +70,8 @@ Content-length: 139
 }
 ```
 
-<!-- uuid: f075c22d-9ad9-405c-8324-4e8f96622d63
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: c8d25277-9699-4c3a-9d36-3f47d91d01e1
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of taskdetails object.",

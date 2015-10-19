@@ -23,19 +23,30 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and collection of [SubscribedSku](../resources/subscribedsku.md) objects in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_subscribedskus"
+}-->
+```http
+GET /subscribedSkus
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "subscribedskus"
+  "@odata.type": "microsoft.graph.subscribedsku",
+  "isCollection": true
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 482
+Content-length: 481
+
 {
-  "values": [
+  "value": [
     {
       "capabilityStatus": "capabilityStatus-value",
       "consumedUnits": 99,
@@ -57,10 +68,9 @@ Content-length: 482
   ]
 }
 ```
-If successful, this method returns a `200 OK` response code and collection of [SubscribedSku](../resources/subscribedsku.md) objects in the response body.
 
-<!-- uuid: d935b845-47fc-4879-8b4a-279e8edd09af
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: f4eccfbc-cdb5-43fa-8feb-282175a767e3
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "List SubscribedSku",

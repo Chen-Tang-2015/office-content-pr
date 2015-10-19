@@ -11,19 +11,19 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.AppRole"
+  "@odata.type": "microsoft.graph.approle"
 }-->
 
 ```json
 {
   "allowedMemberTypes": [
-    "String"
+    "String-value"
   ],
-  "description": "String",
-  "displayName": "String",
-  "id": "String",
+  "description": "String-value",
+  "displayName": "String-value",
+  "id": "Guid-value",
   "isEnabled": true,
-  "value": "String"
+  "value": "String-value"
 }
 
 ```
@@ -37,8 +37,8 @@ Here is a JSON representation of the resource
 |isEnabled|Boolean|When creating or updating a role definition, this must be set to **true** (which is the default). To delete a role, this must first be set to **false**.  At that point, in a subsequent call, this role may be removed.|
 |value|String|Specifies the value of the roles claim that the application should expect in the authentication and access tokens.|
 
-<!-- uuid: 490b592f-245b-4923-a6d2-e21c44fd5e02
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: edab6478-008a-419a-9b1a-0cdc9c7a7946
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "AppRole resource",

@@ -34,6 +34,7 @@ Here is an example of the request.
 PUT /PrivilegedSignupStatus/<TenantId>
 Content-type: application/json
 Content-length: 86
+
 {
   "TenantId": "TenantId-value",
   "IsRegistered": true,
@@ -41,16 +42,17 @@ Content-length: 86
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "privilegedsignupstatus"
+  "@odata.type": "microsoft.graph.privilegedsignupstatus"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 86
+
 {
   "TenantId": "TenantId-value",
   "IsRegistered": true,
@@ -58,8 +60,8 @@ Content-length: 86
 }
 ```
 
-<!-- uuid: 58b8619c-9f5d-43ee-addc-137f5499a464
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: f2213e12-35f8-43ff-96c6-466acd420011
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of privilegedsignupstatus object.",

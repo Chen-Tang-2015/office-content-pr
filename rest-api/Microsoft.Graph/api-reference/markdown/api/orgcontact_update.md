@@ -56,6 +56,7 @@ Here is an example of the request.
 PUT /contacts/<objectId>
 Content-type: application/json
 Content-length: 1097
+
 {
   "city": "city-value",
   "country": "country-value",
@@ -94,16 +95,17 @@ Content-length: 1097
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "orgcontact"
+  "@odata.type": "microsoft.graph.orgcontact"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 1097
+
 {
   "city": "city-value",
   "country": "country-value",
@@ -142,8 +144,8 @@ Content-length: 1097
 }
 ```
 
-<!-- uuid: acd2eb98-0b99-4e6b-ac7f-cabddda0808a
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: e2545d2a-b903-4d0e-a36d-56703a73aca6
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of orgcontact object.",

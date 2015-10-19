@@ -28,17 +28,27 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and [Attachment](../resources/attachment.md) object in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_attachment"
+}-->
+```http
+GET /users/<objectId>/Events/<Id>/Attachments/<Id>
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "attachment"
+  "@odata.type": "microsoft.graph.attachment"
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 162
+
 {
   "Name": "Name-value",
   "ContentType": "ContentType-value",
@@ -48,10 +58,9 @@ Content-length: 162
   "Id": "Id-value"
 }
 ```
-If successful, this method returns a `200 OK` response code and [Attachment](../resources/attachment.md) object in the response body.
 
-<!-- uuid: d82b0d70-c5b1-4e70-8068-01d2b18c2868
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: da97952e-9a7f-4cb5-9920-69da19f0457a
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Attachment",

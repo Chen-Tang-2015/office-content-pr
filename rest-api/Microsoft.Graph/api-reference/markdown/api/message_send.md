@@ -19,36 +19,33 @@ POST /users/<objectId>/Folders/<Id>/Messages/<Id>/Send
 ### Request body
 
 ### Response
-If successful, this method returns `200, OK` response code and [None](../resources/none.md) object in the response body.
+If successful, this method returns `200, OK` response code. It does not return anything in the response body.
 
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "message_send"
 }-->
 ```http
 POST /users/<objectId>/Messages/<Id>/Send
-Content-type: application/json
-Content-length: 0
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "none"
+  "@odata.type": "microsoft.graph.none"
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
-Content-type: application/json
-Content-length: 3
-{
-}
 ```
 
-<!-- uuid: 40f2ab2e-e10d-48f8-b3c0-f788ec1c6d21
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 1bc9017c-f6f9-4ca4-b876-a7bf317627d8
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Message: Send",

@@ -35,6 +35,7 @@ Here is an example of the request.
 PUT /Notifications/<Id>
 Content-type: application/json
 Content-length: 160
+
 {
   "Id": "Id-value",
   "DisplayName": "DisplayName-value",
@@ -43,16 +44,17 @@ Content-length: 160
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "notification"
+  "@odata.type": "microsoft.graph.notification"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 160
+
 {
   "Id": "Id-value",
   "DisplayName": "DisplayName-value",
@@ -61,8 +63,8 @@ Content-length: 160
 }
 ```
 
-<!-- uuid: 7f6dbacd-3a28-4849-9895-7685a0aadbee
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: de0cc1fd-8720-4e6d-b898-8bbaa52fae5e
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of notification object.",

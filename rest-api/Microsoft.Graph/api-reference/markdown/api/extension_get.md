@@ -28,25 +28,34 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and [Extension](../resources/extension.md) object in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_extension"
+}-->
+```http
+GET /users/<objectId>/Events/<Id>/Extensions/<Id>
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "extension"
+  "@odata.type": "microsoft.graph.extension"
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 22
+
 {
   "Id": "Id-value"
 }
 ```
-If successful, this method returns a `200 OK` response code and [Extension](../resources/extension.md) object in the response body.
 
-<!-- uuid: 0ad76558-1152-41f8-b91a-c1bf9cec8df4
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 21b0dcff-49e5-4b56-ba65-28749b7f09e6
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Extension",

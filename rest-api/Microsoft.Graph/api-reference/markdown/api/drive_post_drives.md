@@ -30,7 +30,6 @@ Here is an example of the request.
 }-->
 ```http
 POST /drives
-Content-type: application/json
 ```
 In the request body, supply a JSON representation of [drive](../resources/drive.md) object.
 ##### Response
@@ -38,12 +37,13 @@ Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "drive"
+  "@odata.type": "microsoft.graph.drive"
 } -->
-```json
+```http
 HTTP/1.1 201 Created
 Content-type: application/json
 Content-length: 458
+
 {
   "id": "id-value",
   "driveType": "driveType-value",
@@ -71,8 +71,8 @@ Content-length: 458
 }
 ```
 
-<!-- uuid: fafdc5c6-2b65-4efa-bd9e-a06a0a2c3dc6
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: e3964a93-2487-44fa-afc6-d91247add62e
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create drive",

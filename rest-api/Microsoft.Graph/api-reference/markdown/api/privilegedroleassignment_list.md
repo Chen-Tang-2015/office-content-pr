@@ -23,19 +23,30 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and collection of [PrivilegedRoleAssignment](../resources/privilegedroleassignment.md) objects in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_privilegedroleassignments"
+}-->
+```http
+GET /PrivilegedRoleAssignments
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "privilegedroleassignments"
+  "@odata.type": "microsoft.graph.privilegedroleassignment",
+  "isCollection": true
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 210
+Content-length: 209
+
 {
-  "values": [
+  "value": [
     {
       "UserId": "UserId-value",
       "RoleId": "RoleId-value",
@@ -46,10 +57,9 @@ Content-length: 210
   ]
 }
 ```
-If successful, this method returns a `200 OK` response code and collection of [PrivilegedRoleAssignment](../resources/privilegedroleassignment.md) objects in the response body.
 
-<!-- uuid: f079be0e-4f94-42e7-8f89-16d389c51da5
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 619b5442-090d-42b2-b765-5916ee036f03
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "List PrivilegedRoleAssignment",

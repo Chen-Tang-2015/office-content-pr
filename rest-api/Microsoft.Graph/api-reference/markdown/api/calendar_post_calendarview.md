@@ -32,7 +32,6 @@ Here is an example of the request.
 }-->
 ```http
 POST /users/<objectId>/Calendar
-Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Event](../resources/event.md) object.
 ##### Response
@@ -40,12 +39,13 @@ Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "event"
+  "@odata.type": "microsoft.graph.event"
 } -->
-```json
+```http
 HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 1794
+Content-length: 1812
+
 {
   "Subject": "Subject-value",
   "Body": {
@@ -95,7 +95,9 @@ Content-length: 1794
       "Interval": 99,
       "Month": 99,
       "DayOfMonth": 99,
-      "DaysOfWeek": "DaysOfWeek-value",
+      "DaysOfWeek": [
+        "DaysOfWeek-value"
+      ],
       "FirstDayOfWeek": "FirstDayOfWeek-value",
       "Index": "Index-value"
     },
@@ -125,8 +127,8 @@ Content-length: 1794
 }
 ```
 
-<!-- uuid: b7892442-82c2-40c0-a29a-b78dc6bb3efd
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 4c762c86-3ab7-4adb-b7bb-fb8387f293b6
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Event",

@@ -26,17 +26,27 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and [PrivilegedSecurityAlert](../resources/privilegedsecurityalert.md) object in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_privilegedsecurityalert"
+}-->
+```http
+GET /PrivilegedSecurityAlerts/<AlertId>
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "privilegedsecurityalert"
+  "@odata.type": "microsoft.graph.privilegedsecurityalert"
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 596
+
 {
   "AlertId": "AlertId-value",
   "NumberOfAffectedItems": 99,
@@ -57,10 +67,9 @@ Content-length: 596
   "Status": "Status-value"
 }
 ```
-If successful, this method returns a `200 OK` response code and [PrivilegedSecurityAlert](../resources/privilegedsecurityalert.md) object in the response body.
 
-<!-- uuid: d08f511a-9174-4c0c-9124-46cac205c39a
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: f79b7f2c-8ac8-4c66-a67b-316bc2680981
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get PrivilegedSecurityAlert",

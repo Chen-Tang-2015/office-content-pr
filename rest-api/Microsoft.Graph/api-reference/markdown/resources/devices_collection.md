@@ -2,6 +2,23 @@
 
 
 
+### JSON representation
+
+Here is a JSON representation of the resource
+
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.devices"
+}-->
+
+```json
+{
+}
+
+```
 ### Properties
 None
 
@@ -16,8 +33,8 @@ None
 |[List](../api/device_list.md) | [Device](device.md) [] |Get device object collection. |
 |[Create Device](../api/device_post_devices.md) |[Device](device.md)| Create a new Device by posting to the devices collection.|
 
-<!-- uuid: 4c9354f7-2659-4ea3-acd7-0a8f24f16503
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: f29c725a-725e-41da-ae07-7bc689837d9b
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "devices resource",

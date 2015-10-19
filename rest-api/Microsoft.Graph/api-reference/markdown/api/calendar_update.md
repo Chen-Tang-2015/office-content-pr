@@ -37,6 +37,7 @@ Here is an example of the request.
 PUT /users/<objectId>/Calendar
 Content-type: application/json
 Content-length: 106
+
 {
   "Name": "Name-value",
   "ChangeKey": "ChangeKey-value",
@@ -45,16 +46,17 @@ Content-length: 106
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "calendar"
+  "@odata.type": "microsoft.graph.calendar"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 106
+
 {
   "Name": "Name-value",
   "ChangeKey": "ChangeKey-value",
@@ -63,8 +65,8 @@ Content-length: 106
 }
 ```
 
-<!-- uuid: 1064426b-b81a-4100-b73d-4cf67a1bb667
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: f3fe2f7f-fb15-414c-8bbd-09236c709c0f
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of calendar object.",

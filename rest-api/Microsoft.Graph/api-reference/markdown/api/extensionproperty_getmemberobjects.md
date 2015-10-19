@@ -27,6 +27,7 @@ If successful, this method returns `200, OK` response code and String collection
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "extensionproperty_getmemberobjects"
@@ -35,20 +36,25 @@ Here is an example of how to call this API.
 POST /applications/<objectId>/extensionProperties/<objectId>/getMemberObjects
 Content-type: application/json
 Content-length: 33
+
 {
   "securityEnabledOnly": true
 }
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "string"
+  "@odata.type": "string",
+  "isCollection": true
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 39
+
 {
   "value": [
     "String-value"
@@ -56,8 +62,8 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: 32d37ff9-2649-4b7e-a290-36a8322e0de1
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 0154d5ff-501e-431d-a8e5-4b1b80d4eed9
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "ExtensionProperty: getMemberObjects",

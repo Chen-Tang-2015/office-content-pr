@@ -28,17 +28,27 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and [Contact](../resources/contact.md) object in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_contact"
+}-->
+```http
+GET /users/<objectId>/Contacts/<Id>
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "contact"
+  "@odata.type": "microsoft.graph.contact"
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 1977
+
 {
   "ParentFolderId": "ParentFolderId-value",
   "Birthday": "datetime-value",
@@ -113,10 +123,9 @@ Content-length: 1977
   "Id": "Id-value"
 }
 ```
-If successful, this method returns a `200 OK` response code and [Contact](../resources/contact.md) object in the response body.
 
-<!-- uuid: 44b59137-e1df-4ff0-854d-b8a67e198c48
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 1775c817-814d-48e5-b264-7c7e0d7bb977
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Contact",

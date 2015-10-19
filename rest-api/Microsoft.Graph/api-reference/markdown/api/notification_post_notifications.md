@@ -30,7 +30,6 @@ Here is an example of the request.
 }-->
 ```http
 POST /Notifications
-Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Notification](../resources/notification.md) object.
 ##### Response
@@ -38,12 +37,13 @@ Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "notification"
+  "@odata.type": "microsoft.graph.notification"
 } -->
-```json
+```http
 HTTP/1.1 201 Created
 Content-type: application/json
 Content-length: 160
+
 {
   "Id": "Id-value",
   "DisplayName": "DisplayName-value",
@@ -52,8 +52,8 @@ Content-length: 160
 }
 ```
 
-<!-- uuid: a8af958b-086d-434e-a1fa-b6db48d8e2a5
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 9a9b9326-ed91-4631-baee-7c39820eb9f5
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Notification",

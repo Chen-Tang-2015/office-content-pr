@@ -28,24 +28,33 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and [File](../resources/file.md) object in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_file"
+}-->
+```http
+GET /users/<objectId>/TrendingAround
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "file"
+  "@odata.type": "microsoft.graph.file"
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 3
+
 {
 }
 ```
-If successful, this method returns a `200 OK` response code and [File](../resources/file.md) object in the response body.
 
-<!-- uuid: c41aef6b-6490-48dc-a19f-2121b5e2f8b0
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 5ece60ca-2341-4156-af0e-e0c216eed268
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get File",

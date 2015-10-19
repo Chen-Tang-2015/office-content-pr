@@ -36,6 +36,7 @@ Here is an example of the request.
 PUT /plans/<id>/details
 Content-type: application/json
 Content-length: 75
+
 {
   "sharedWith": {
   },
@@ -44,16 +45,17 @@ Content-length: 75
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "plandetails"
+  "@odata.type": "microsoft.graph.plandetails"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 75
+
 {
   "sharedWith": {
   },
@@ -62,8 +64,8 @@ Content-length: 75
 }
 ```
 
-<!-- uuid: c51af5c9-cf20-4c2b-aa2f-e558eb7895cb
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 612bcf29-b717-4ca9-a126-fbdaccf59797
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of plandetails object.",

@@ -30,7 +30,6 @@ Here is an example of the request.
 }-->
 ```http
 POST /servicePrincipals/<objectId>
-Content-type: application/json
 ```
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
 ##### Response
@@ -38,12 +37,13 @@ Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "directoryobject"
+  "@odata.type": "microsoft.graph.directoryobject"
 } -->
-```json
+```http
 HTTP/1.1 201 Created
 Content-type: application/json
 Content-length: 111
+
 {
   "objectType": "objectType-value",
   "objectId": "objectId-value",
@@ -51,8 +51,8 @@ Content-length: 111
 }
 ```
 
-<!-- uuid: 8ba7afd5-14c5-4d04-b303-cd09a4a2ef74
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: e8457129-f063-45ab-96b9-689feb96347e
+2015-10-19 09:46:36 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create createdObject",

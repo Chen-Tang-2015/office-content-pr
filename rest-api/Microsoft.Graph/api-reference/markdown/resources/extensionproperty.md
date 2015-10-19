@@ -11,20 +11,20 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.ExtensionProperty"
+  "@odata.type": "microsoft.graph.extensionproperty"
 }-->
 
 ```json
 {
-  "appDisplayName": "String",
-  "dataType": "String",
+  "appDisplayName": "String-value",
+  "dataType": "String-value",
   "deletionTimestamp": "String (timestamp)",
   "isSyncedFromOnPremises": true,
-  "name": "String",
-  "objectId": "String (identifier)",
-  "objectType": "String",
+  "name": "String-value",
+  "objectId": "String-value (identifier)",
+  "objectType": "String-value",
   "targetObjects": [
-    "String"
+    "String-value"
   ]
 }
 
@@ -51,13 +51,13 @@ None
 |:---------------|:--------|:----------|
 |[Get ExtensionProperty](../api/extensionproperty_get.md) | [ExtensionProperty](extensionproperty.md) |Read properties and relationships of extensionProperty object.|
 |[Update](../api/extensionproperty_update.md) | [ExtensionProperty](extensionproperty.md)	|Update ExtensionProperty object. |
-|[Delete](../api/extensionproperty_delete.md) | Void	|Delete ExtensionProperty object. |
+|[Delete](../api/extensionproperty_delete.md) | None |Delete ExtensionProperty object. |
 |[Checkmembergroups](../api/extensionproperty_checkmembergroups.md)|String||
 |[Get MemberGroups](../api/extensionproperty_getmembergroups.md)|String||
 |[Get MemberObjects](../api/extensionproperty_getmemberobjects.md)|String||
 
-<!-- uuid: 26569ea6-0a3f-42b6-8196-347c4fcf46f6
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 7189c479-c5d5-44df-afdd-e1e2d559e815
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "ExtensionProperty resource",

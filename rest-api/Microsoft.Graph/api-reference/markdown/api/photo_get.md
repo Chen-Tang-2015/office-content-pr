@@ -28,27 +28,36 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and [Photo](../resources/photo.md) object in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_photo"
+}-->
+```http
+GET /users/<objectId>/UserPhoto
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "photo"
+  "@odata.type": "microsoft.graph.photo"
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 53
+
 {
   "Width": 99,
   "Height": 99,
   "Id": "Id-value"
 }
 ```
-If successful, this method returns a `200 OK` response code and [Photo](../resources/photo.md) object in the response body.
 
-<!-- uuid: e1768e2e-a6a8-4602-ac5b-2af734ad51cb
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: bf163896-d900-4f41-8fb6-25dbac561b84
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Photo",

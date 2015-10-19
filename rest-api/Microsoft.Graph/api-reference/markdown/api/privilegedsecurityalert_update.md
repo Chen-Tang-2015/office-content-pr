@@ -48,6 +48,7 @@ Here is an example of the request.
 PUT /PrivilegedSecurityAlerts/<AlertId>
 Content-type: application/json
 Content-length: 596
+
 {
   "AlertId": "AlertId-value",
   "NumberOfAffectedItems": 99,
@@ -69,16 +70,17 @@ Content-length: 596
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "privilegedsecurityalert"
+  "@odata.type": "microsoft.graph.privilegedsecurityalert"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 596
+
 {
   "AlertId": "AlertId-value",
   "NumberOfAffectedItems": 99,
@@ -100,8 +102,8 @@ Content-length: 596
 }
 ```
 
-<!-- uuid: ed43b979-a882-495b-ada5-4adb218d5746
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 2bd31d3d-027b-436a-9013-d0f4fca8766e
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of privilegedsecurityalert object.",

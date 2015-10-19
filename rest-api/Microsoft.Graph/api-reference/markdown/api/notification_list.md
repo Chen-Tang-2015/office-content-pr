@@ -30,19 +30,30 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and collection of [Notification](../resources/notification.md) objects in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_notifications"
+}-->
+```http
+GET /Notifications
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "notifications"
+  "@odata.type": "microsoft.graph.notification",
+  "isCollection": true
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 206
+Content-length: 205
+
 {
-  "values": [
+  "value": [
     {
       "Id": "Id-value",
       "DisplayName": "DisplayName-value",
@@ -52,10 +63,9 @@ Content-length: 206
   ]
 }
 ```
-If successful, this method returns a `200 OK` response code and collection of [Notification](../resources/notification.md) objects in the response body.
 
-<!-- uuid: 85274465-076f-4d2d-b4fd-40bc8a2b50f1
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 4d98e0d8-ba63-4ec6-9862-c14018b00e26
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "List Notification",

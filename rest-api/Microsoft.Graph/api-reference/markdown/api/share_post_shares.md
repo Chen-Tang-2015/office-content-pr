@@ -30,7 +30,6 @@ Here is an example of the request.
 }-->
 ```http
 POST /shares
-Content-type: application/json
 ```
 In the request body, supply a JSON representation of [share](../resources/share.md) object.
 ##### Response
@@ -38,12 +37,13 @@ Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "share"
+  "@odata.type": "microsoft.graph.share"
 } -->
-```json
+```http
 HTTP/1.1 201 Created
 Content-type: application/json
 Content-length: 330
+
 {
   "id": "id-value",
   "name": "name-value",
@@ -64,8 +64,8 @@ Content-length: 330
 }
 ```
 
-<!-- uuid: cf7879c0-489e-4308-9cbf-766829f7901c
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: e6a6c2fe-d978-4117-ae13-1ba3f1529ca5
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create share",

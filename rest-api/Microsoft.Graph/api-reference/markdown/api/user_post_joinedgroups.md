@@ -32,7 +32,6 @@ Here is an example of the request.
 }-->
 ```http
 POST /users/<objectId>
-Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Group](../resources/group.md) object.
 ##### Response
@@ -40,12 +39,13 @@ Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "group"
+  "@odata.type": "microsoft.graph.group"
 } -->
-```json
+```http
 HTTP/1.1 201 Created
 Content-type: application/json
 Content-length: 1009
+
 {
   "description": "description-value",
   "dirSyncEnabled": true,
@@ -87,8 +87,8 @@ Content-length: 1009
 }
 ```
 
-<!-- uuid: 0ab42de8-990d-464b-b084-70e0037e8d22
-2015-10-16 22:29:36 UTC -->
+<!-- uuid: 6083a080-7772-48c6-999d-807d0035a9a7
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Group",

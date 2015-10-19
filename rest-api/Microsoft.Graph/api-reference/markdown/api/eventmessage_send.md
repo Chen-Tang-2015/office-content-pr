@@ -17,36 +17,33 @@ The following **scopes** are required to execute this API:
 ### Request body
 
 ### Response
-If successful, this method returns `200, OK` response code and [None](../resources/none.md) object in the response body.
+If successful, this method returns `200, OK` response code. It does not return anything in the response body.
 
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "eventmessage_send"
 }-->
 ```http
 
-Content-type: application/json
-Content-length: 0
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "none"
+  "@odata.type": "microsoft.graph.none"
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
-Content-type: application/json
-Content-length: 3
-{
-}
 ```
 
-<!-- uuid: 1bfa144c-f3ad-414a-bd72-d7b0d8a1c5c6
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: ec8d986a-f021-4374-b91c-23bb36794b51
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "EventMessage: Send",

@@ -30,19 +30,30 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and collection of [Task](../resources/task.md) objects in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_tasks"
+}-->
+```http
+GET /tasks
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "tasks"
+  "@odata.type": "microsoft.graph.task",
+  "isCollection": true
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 639
+Content-length: 638
+
 {
-  "values": [
+  "value": [
     {
       "createdBy": "createdBy-value",
       "assignedTo": "assignedTo-value",
@@ -65,10 +76,9 @@ Content-length: 639
   ]
 }
 ```
-If successful, this method returns a `200 OK` response code and collection of [Task](../resources/task.md) objects in the response body.
 
-<!-- uuid: 08d4364e-821e-42c9-b477-cc3ea6937317
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: aa1507f4-eb50-48ac-94e8-185bf5bb74e7
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "List Task",

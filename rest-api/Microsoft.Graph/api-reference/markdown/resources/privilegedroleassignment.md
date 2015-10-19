@@ -9,21 +9,21 @@ Here is a JSON representation of the resource
 <!-- {
   "blockType": "resource",
   "optionalProperties": [
-
+    "RoleInfo"
   ],
-  "@odata.type": "microsoft.graph.PrivilegedRoleAssignment"
+  "@odata.type": "microsoft.graph.privilegedroleassignment"
 }-->
 
 ```json
 {
   "ExpirationTime": "String (timestamp)",
   "IsElevated": true,
-  "ResultMessage": "String",
-  "RoleId": "String (identifier)",
+  "ResultMessage": "String-value",
+  "RoleId": "Guid-value (identifier)",
   "RoleInfo": {
-    "@odata.type": "microsoft.graph.PrivilegedRole"
+    "@odata.type": "microsoft.graph.privilegedrole"
   },
-  "UserId": "String (identifier)"
+  "UserId": "Guid-value (identifier)"
 }
 
 ```
@@ -47,13 +47,13 @@ Here is a JSON representation of the resource
 |:---------------|:--------|:----------|
 |[Get PrivilegedRoleAssignment](../api/privilegedroleassignment_get.md) | [PrivilegedRoleAssignment](privilegedroleassignment.md) |Read properties and relationships of privilegedRoleAssignment object.|
 |[Update](../api/privilegedroleassignment_update.md) | [PrivilegedRoleAssignment](privilegedroleassignment.md)	|Update PrivilegedRoleAssignment object. |
-|[Delete](../api/privilegedroleassignment_delete.md) | Void	|Delete PrivilegedRoleAssignment object. |
+|[Delete](../api/privilegedroleassignment_delete.md) | None |Delete PrivilegedRoleAssignment object. |
 |[Activate](../api/privilegedroleassignment_activate.md)|[PrivilegedRoleAssignment](privilegedroleassignment.md)||
 |[Deactivate](../api/privilegedroleassignment_deactivate.md)|[PrivilegedRoleAssignment](privilegedroleassignment.md)||
 |[My](../api/privilegedroleassignment_my.md)|[PrivilegedRoleAssignment](privilegedroleassignment.md)||
 
-<!-- uuid: 4bb029dd-f42b-4edd-9cec-acbb2fd48500
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 4fe79db3-2f9f-452d-ba1a-aa6832d8f957
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PrivilegedRoleAssignment resource",

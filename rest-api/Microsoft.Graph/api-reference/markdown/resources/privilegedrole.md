@@ -9,25 +9,27 @@ Here is a JSON representation of the resource
 <!-- {
   "blockType": "resource",
   "optionalProperties": [
-    "Assignments"
+    "Assignments",
+    "Settings",
+    "Summary"
   ],
-  "@odata.type": "microsoft.graph.PrivilegedRole"
+  "@odata.type": "microsoft.graph.privilegedrole"
 }-->
 
 ```json
 {
   "Assignments": [
     {
-      "@odata.type": "microsoft.graph.PrivilegedRoleAssignment"
+      "@odata.type": "microsoft.graph.privilegedroleassignment"
     }
   ],
-  "Id": "String (identifier)",
-  "Name": "String",
+  "Id": "Guid-value (identifier)",
+  "Name": "String-value",
   "Settings": {
-    "@odata.type": "microsoft.graph.PrivilegedRoleSettings"
+    "@odata.type": "microsoft.graph.privilegedrolesettings"
   },
   "Summary": {
-    "@odata.type": "microsoft.graph.PrivilegedRoleSummary"
+    "@odata.type": "microsoft.graph.privilegedrolesummary"
   }
 }
 
@@ -52,12 +54,12 @@ Here is a JSON representation of the resource
 |[Get PrivilegedRole](../api/privilegedrole_get.md) | [PrivilegedRole](privilegedrole.md) |Read properties and relationships of privilegedRole object.|
 |[Create Assignment](../api/privilegedrole_post_assignments.md) |[PrivilegedRoleAssignment](privilegedroleassignment.md)| Create a new Assignment by posting to the Assignments collection.|
 |[Update](../api/privilegedrole_update.md) | [PrivilegedRole](privilegedrole.md)	|Update PrivilegedRole object. |
-|[Delete](../api/privilegedrole_delete.md) | Void	|Delete PrivilegedRole object. |
+|[Delete](../api/privilegedrole_delete.md) | None |Delete PrivilegedRole object. |
 |[Selfactivate](../api/privilegedrole_selfactivate.md)|[PrivilegedRoleAssignment](privilegedroleassignment.md)||
 |[Selfdeactivate](../api/privilegedrole_selfdeactivate.md)|[PrivilegedRoleAssignment](privilegedroleassignment.md)||
 
-<!-- uuid: 274dc335-1b04-41cb-99da-465cdce2174e
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 7b93f5a2-1be8-45b7-8bbb-8970072ea3ca
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PrivilegedRole resource",

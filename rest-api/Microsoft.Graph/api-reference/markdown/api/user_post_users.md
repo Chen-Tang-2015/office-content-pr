@@ -30,7 +30,6 @@ Here is an example of the request.
 }-->
 ```http
 POST /users
-Content-type: application/json
 ```
 In the request body, supply a JSON representation of [User](../resources/user.md) object.
 ##### Response
@@ -38,17 +37,20 @@ Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "user"
+  "@odata.type": "microsoft.graph.user"
 } -->
-```json
+```http
 HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 2650
+Content-length: 2668
+
 {
   "accountEnabled": true,
   "assignedLicenses": [
     {
-      "disabledPlans": "disabledPlans-value",
+      "disabledPlans": [
+        "disabledPlans-value"
+      ],
       "skuId": "skuId-value"
     }
   ],
@@ -144,8 +146,8 @@ Content-length: 2650
 }
 ```
 
-<!-- uuid: e606e72c-ba08-4cb4-8905-976b67cab82c
-2015-10-16 22:29:36 UTC -->
+<!-- uuid: a2d775bb-ef73-4dd5-bbd2-71ffdbde7e89
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create User",

@@ -27,6 +27,7 @@ If successful, this method returns `200, OK` response code and String collection
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "directoryroletemplate_checkmembergroups"
@@ -35,22 +36,27 @@ Here is an example of how to call this API.
 POST /directoryRoleTemplates/<objectId>/checkMemberGroups
 Content-type: application/json
 Content-length: 44
+
 {
   "groupIds": [
     "groupIds-value"
   ]
 }
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "string"
+  "@odata.type": "string",
+  "isCollection": true
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 39
+
 {
   "value": [
     "String-value"
@@ -58,8 +64,8 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: 16a8ea25-fb67-4305-a4a2-c0eae27a66dc
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 8feef47b-8076-433f-ac7e-34565008a1d7
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "DirectoryRoleTemplate: checkMemberGroups",

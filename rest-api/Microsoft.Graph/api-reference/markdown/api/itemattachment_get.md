@@ -26,17 +26,27 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and [ItemAttachment](../resources/itemattachment.md) object in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_itemattachment"
+}-->
+```http
+
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "itemattachment"
+  "@odata.type": "microsoft.graph.itemattachment"
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 162
+
 {
   "Name": "Name-value",
   "ContentType": "ContentType-value",
@@ -46,10 +56,9 @@ Content-length: 162
   "Id": "Id-value"
 }
 ```
-If successful, this method returns a `200 OK` response code and [ItemAttachment](../resources/itemattachment.md) object in the response body.
 
-<!-- uuid: d7e34952-a81f-44ae-80e9-8b21f691cbc0
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 1d08f1e2-5a17-4122-895e-7e733c98bbb9
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get ItemAttachment",

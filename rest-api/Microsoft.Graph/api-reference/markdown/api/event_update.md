@@ -62,7 +62,8 @@ Here is an example of the request.
 ```http
 PUT /users/<objectId>/Events/<Id>
 Content-type: application/json
-Content-length: 1794
+Content-length: 1812
+
 {
   "Subject": "Subject-value",
   "Body": {
@@ -112,7 +113,9 @@ Content-length: 1794
       "Interval": 99,
       "Month": 99,
       "DayOfMonth": 99,
-      "DaysOfWeek": "DaysOfWeek-value",
+      "DaysOfWeek": [
+        "DaysOfWeek-value"
+      ],
       "FirstDayOfWeek": "FirstDayOfWeek-value",
       "Index": "Index-value"
     },
@@ -142,16 +145,17 @@ Content-length: 1794
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "event"
+  "@odata.type": "microsoft.graph.event"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 1794
+Content-length: 1812
+
 {
   "Subject": "Subject-value",
   "Body": {
@@ -201,7 +205,9 @@ Content-length: 1794
       "Interval": 99,
       "Month": 99,
       "DayOfMonth": 99,
-      "DaysOfWeek": "DaysOfWeek-value",
+      "DaysOfWeek": [
+        "DaysOfWeek-value"
+      ],
       "FirstDayOfWeek": "FirstDayOfWeek-value",
       "Index": "Index-value"
     },
@@ -231,8 +237,8 @@ Content-length: 1794
 }
 ```
 
-<!-- uuid: 9545c08d-0b5d-4a57-b88f-828ce10b3148
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: eb1cd7db-6d76-4276-a8ea-19e74196c857
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of event object.",

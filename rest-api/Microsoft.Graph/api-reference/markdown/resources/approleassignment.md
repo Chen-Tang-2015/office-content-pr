@@ -11,21 +11,21 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.AppRoleAssignment"
+  "@odata.type": "microsoft.graph.approleassignment"
 }-->
 
 ```json
 {
   "creationTimestamp": "String (timestamp)",
   "deletionTimestamp": "String (timestamp)",
-  "id": "String",
-  "objectId": "String (identifier)",
-  "objectType": "String",
-  "principalDisplayName": "String",
-  "principalId": "String",
-  "principalType": "String",
-  "resourceDisplayName": "String",
-  "resourceId": "String"
+  "id": "Guid-value",
+  "objectId": "String-value (identifier)",
+  "objectType": "String-value",
+  "principalDisplayName": "String-value",
+  "principalId": "Guid-value",
+  "principalType": "String-value",
+  "resourceDisplayName": "String-value",
+  "resourceId": "Guid-value"
 }
 
 ```
@@ -53,13 +53,13 @@ None
 |:---------------|:--------|:----------|
 |[Get AppRoleAssignment](../api/approleassignment_get.md) | [AppRoleAssignment](approleassignment.md) |Read properties and relationships of appRoleAssignment object.|
 |[Update](../api/approleassignment_update.md) | [AppRoleAssignment](approleassignment.md)	|Update AppRoleAssignment object. |
-|[Delete](../api/approleassignment_delete.md) | Void	|Delete AppRoleAssignment object. |
+|[Delete](../api/approleassignment_delete.md) | None |Delete AppRoleAssignment object. |
 |[Checkmembergroups](../api/approleassignment_checkmembergroups.md)|String||
 |[Get MemberGroups](../api/approleassignment_getmembergroups.md)|String||
 |[Get MemberObjects](../api/approleassignment_getmemberobjects.md)|String||
 
-<!-- uuid: bd87dea5-5dbd-4022-897f-5d701cde75a5
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 45aaa818-f808-4aa8-8cf4-76d5058cdeca
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "AppRoleAssignment resource",

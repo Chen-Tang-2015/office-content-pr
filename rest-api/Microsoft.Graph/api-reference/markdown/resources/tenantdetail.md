@@ -11,55 +11,55 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.TenantDetail"
+  "@odata.type": "microsoft.graph.tenantdetail"
 }-->
 
 ```json
 {
   "assignedPlans": [
     {
-      "@odata.type": "microsoft.graph.AssignedPlan"
+      "@odata.type": "microsoft.graph.assignedplan"
     }
   ],
-  "city": "String",
+  "city": "String-value",
   "companyLastDirSyncTime": "String (timestamp)",
-  "country": "String",
-  "countryLetterCode": "String",
+  "country": "String-value",
+  "countryLetterCode": "String-value",
   "deletionTimestamp": "String (timestamp)",
   "dirSyncEnabled": true,
-  "displayName": "String",
+  "displayName": "String-value",
   "marketingNotificationEmails": [
-    "String"
+    "String-value"
   ],
-  "objectId": "String (identifier)",
-  "objectType": "String",
-  "postalCode": "String",
-  "preferredLanguage": "String",
+  "objectId": "String-value (identifier)",
+  "objectType": "String-value",
+  "postalCode": "String-value",
+  "preferredLanguage": "String-value",
   "provisionedPlans": [
     {
-      "@odata.type": "microsoft.graph.ProvisionedPlan"
+      "@odata.type": "microsoft.graph.provisionedplan"
     }
   ],
   "provisioningErrors": [
     {
-      "@odata.type": "microsoft.graph.ProvisioningError"
+      "@odata.type": "microsoft.graph.provisioningerror"
     }
   ],
   "securityComplianceNotificationMails": [
-    "String"
+    "String-value"
   ],
   "securityComplianceNotificationPhones": [
-    "String"
+    "String-value"
   ],
-  "state": "String",
-  "street": "String",
+  "state": "String-value",
+  "street": "String-value",
   "technicalNotificationMails": [
-    "String"
+    "String-value"
   ],
-  "telephoneNumber": "String",
+  "telephoneNumber": "String-value",
   "verifiedDomains": [
     {
-      "@odata.type": "microsoft.graph.VerifiedDomain"
+      "@odata.type": "microsoft.graph.verifieddomain"
     }
   ]
 }
@@ -101,13 +101,13 @@ None
 |:---------------|:--------|:----------|
 |[Get TenantDetail](../api/tenantdetail_get.md) | [TenantDetail](tenantdetail.md) |Read properties and relationships of tenantDetail object.|
 |[Update](../api/tenantdetail_update.md) | [TenantDetail](tenantdetail.md)	|Update TenantDetail object. |
-|[Delete](../api/tenantdetail_delete.md) | Void	|Delete TenantDetail object. |
+|[Delete](../api/tenantdetail_delete.md) | None |Delete TenantDetail object. |
 |[Checkmembergroups](../api/tenantdetail_checkmembergroups.md)|String||
 |[Get MemberGroups](../api/tenantdetail_getmembergroups.md)|String||
 |[Get MemberObjects](../api/tenantdetail_getmemberobjects.md)|String||
 
-<!-- uuid: 291e1e18-807d-4749-8e75-6b9885eea91d
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: b4e1b5f9-5edd-49ec-8f26-4e8b989ed0f5
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "TenantDetail resource",

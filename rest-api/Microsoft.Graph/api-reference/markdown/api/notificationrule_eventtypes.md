@@ -22,25 +22,28 @@ If successful, this method returns `200, OK` response code and String collection
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "notificationrule_eventtypes"
 }-->
 ```http
 POST /NotificationRules/<Id>/EventTypes
-Content-type: application/json
-Content-length: 0
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "string"
+  "@odata.type": "string",
+  "isCollection": true
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 39
+
 {
   "value": [
     "String-value"
@@ -48,8 +51,8 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: 6c9df33f-eb5a-445c-b3de-cec27f26e318
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: d74562d8-d52d-4da4-9389-9fc9c8f88079
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "NotificationRule: EventTypes",

@@ -9,33 +9,33 @@ Here is a JSON representation of the resource
 <!-- {
   "blockType": "resource",
   "optionalProperties": [
-
+    "details"
   ],
-  "@odata.type": "microsoft.graph.Task"
+  "@odata.type": "microsoft.graph.task"
 }-->
 
 ```json
 {
-  "assignedBy": "String",
-  "assignedTo": "String",
+  "assignedBy": "String-value",
+  "assignedTo": "String-value",
   "assignedToDate": "String (timestamp)",
-  "assigneePriority": "String",
+  "assigneePriority": "String-value",
   "completedDate": "String (timestamp)",
-  "createdBy": "String",
+  "createdBy": "String-value",
   "createdDate": "String (timestamp)",
   "details": {
-    "@odata.type": "microsoft.graph.TaskDetails"
+    "@odata.type": "microsoft.graph.taskdetails"
   },
   "dueDate": "String (timestamp)",
   "hasNotes": true,
-  "id": "String (identifier)",
+  "id": "String-value (identifier)",
   "numberOfReferences": 1024,
-  "orderHint": "String",
+  "orderHint": "String-value",
   "percentComplete": 1024,
-  "planId": "String",
+  "planId": "String-value",
   "startDate": "String (timestamp)",
-  "title": "String",
-  "version": "String"
+  "title": "String-value",
+  "version": "String-value"
 }
 
 ```
@@ -71,10 +71,10 @@ Here is a JSON representation of the resource
 |:---------------|:--------|:----------|
 |[Get Task](../api/task_get.md) | [Task](task.md) |Read properties and relationships of task object.|
 |[Update](../api/task_update.md) | [Task](task.md)	|Update Task object. |
-|[Delete](../api/task_delete.md) | Void	|Delete Task object. |
+|[Delete](../api/task_delete.md) | None |Delete Task object. |
 
-<!-- uuid: 7e4c71b2-e105-4d66-9683-f717ac14385f
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 20e49913-7b4d-432b-b15a-14bbaf361c84
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Task resource",

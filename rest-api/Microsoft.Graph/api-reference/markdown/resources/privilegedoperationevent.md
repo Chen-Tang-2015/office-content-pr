@@ -11,24 +11,24 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.PrivilegedOperationEvent"
+  "@odata.type": "microsoft.graph.privilegedoperationevent"
 }-->
 
 ```json
 {
-  "AdditionalInformation": "String",
+  "AdditionalInformation": "String-value",
   "CreationTime": "String (timestamp)",
   "ExpirationTime": "String (timestamp)",
-  "Id": "String (identifier)",
-  "RequestType": "String",
-  "RequestorId": "String",
-  "RequestorName": "String",
-  "RoleId": "String",
-  "RoleName": "String",
-  "TenantId": "String",
-  "UserId": "String",
-  "UserMail": "String",
-  "UserName": "String"
+  "Id": "Guid-value (identifier)",
+  "RequestType": "String-value",
+  "RequestorId": "String-value",
+  "RequestorName": "String-value",
+  "RoleId": "Guid-value",
+  "RoleName": "String-value",
+  "TenantId": "String-value",
+  "UserId": "String-value",
+  "UserMail": "String-value",
+  "UserName": "String-value"
 }
 
 ```
@@ -59,10 +59,10 @@ None
 |:---------------|:--------|:----------|
 |[Get PrivilegedOperationEvent](../api/privilegedoperationevent_get.md) | [PrivilegedOperationEvent](privilegedoperationevent.md) |Read properties and relationships of privilegedOperationEvent object.|
 |[Update](../api/privilegedoperationevent_update.md) | [PrivilegedOperationEvent](privilegedoperationevent.md)	|Update PrivilegedOperationEvent object. |
-|[Delete](../api/privilegedoperationevent_delete.md) | Void	|Delete PrivilegedOperationEvent object. |
+|[Delete](../api/privilegedoperationevent_delete.md) | None |Delete PrivilegedOperationEvent object. |
 
-<!-- uuid: e4b4fd0f-2b0a-410a-a23f-5e1c8690937c
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: c77c6f9f-0305-4ca0-b2a4-4ae702f62722
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PrivilegedOperationEvent resource",

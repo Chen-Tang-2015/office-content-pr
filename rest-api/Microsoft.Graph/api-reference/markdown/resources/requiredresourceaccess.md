@@ -11,17 +11,17 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.RequiredResourceAccess"
+  "@odata.type": "microsoft.graph.requiredresourceaccess"
 }-->
 
 ```json
 {
   "resourceAccess": [
     {
-      "@odata.type": "microsoft.graph.ResourceAccess"
+      "@odata.type": "microsoft.graph.resourceaccess"
     }
   ],
-  "resourceAppId": "String"
+  "resourceAppId": "String-value"
 }
 
 ```
@@ -31,8 +31,8 @@ Here is a JSON representation of the resource
 |resourceAccess|[ResourceAccess](resourceaccess.md) collection|The list of OAuth2.0 permission scopes and app roles that the application requires from the specified resource.|
 |resourceAppId|String|The unique identifier for the resource that the application requires access to.  This should be equal to the **appId** declared on the target resource application.|
 
-<!-- uuid: 9f7e5e87-1c14-423a-8396-b54931b6d033
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 1d504ca2-c2f9-4fcb-b180-2f09121e307e
+2015-10-19 09:46:36 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "RequiredResourceAccess resource",

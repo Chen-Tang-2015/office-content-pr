@@ -43,6 +43,7 @@ Here is an example of the request.
 PUT /users/<objectId>/appRoleAssignments/<objectId>
 Content-type: application/json
 Content-length: 398
+
 {
   "creationTimestamp": "datetime-value",
   "id": "id-value",
@@ -57,16 +58,17 @@ Content-length: 398
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "approleassignment"
+  "@odata.type": "microsoft.graph.approleassignment"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 398
+
 {
   "creationTimestamp": "datetime-value",
   "id": "id-value",
@@ -81,8 +83,8 @@ Content-length: 398
 }
 ```
 
-<!-- uuid: 545eed7a-a586-42d2-9f62-6821122fcb3d
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 38355941-24bb-4a80-84e1-67fe8fe35fab
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of approleassignment object.",

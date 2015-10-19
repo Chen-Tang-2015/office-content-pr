@@ -59,6 +59,7 @@ Here is an example of the request.
 PUT /users/<objectId>/Messages/<Id>
 Content-type: application/json
 Content-length: 1546
+
 {
   "Subject": "Subject-value",
   "Body": {
@@ -135,16 +136,17 @@ Content-length: 1546
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "message"
+  "@odata.type": "microsoft.graph.message"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 1546
+
 {
   "Subject": "Subject-value",
   "Body": {
@@ -221,8 +223,8 @@ Content-length: 1546
 }
 ```
 
-<!-- uuid: 977ec32e-fb11-45da-b119-718101902771
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 3ef08b95-c686-4cf1-b924-a913b250f1a0
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of message object.",

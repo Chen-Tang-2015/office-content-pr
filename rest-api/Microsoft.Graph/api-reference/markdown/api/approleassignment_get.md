@@ -22,17 +22,27 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and [AppRoleAssignment](../resources/approleassignment.md) object in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_approleassignment"
+}-->
+```http
+GET /users/<objectId>/appRoleAssignments/<objectId>
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "approleassignment"
+  "@odata.type": "microsoft.graph.approleassignment"
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 398
+
 {
   "creationTimestamp": "datetime-value",
   "id": "id-value",
@@ -46,10 +56,9 @@ Content-length: 398
   "deletionTimestamp": "datetime-value"
 }
 ```
-If successful, this method returns a `200 OK` response code and [AppRoleAssignment](../resources/approleassignment.md) object in the response body.
 
-<!-- uuid: e4fc72d4-903e-45af-b302-790592666588
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 652e8fb3-209b-49dc-be06-e1f2ea1dd19f
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get AppRoleAssignment",

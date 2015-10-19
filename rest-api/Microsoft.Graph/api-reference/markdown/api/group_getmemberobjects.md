@@ -29,6 +29,7 @@ If successful, this method returns `200, OK` response code and String collection
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "group_getmemberobjects"
@@ -37,20 +38,25 @@ Here is an example of how to call this API.
 POST /groups/<objectId>/getMemberObjects
 Content-type: application/json
 Content-length: 33
+
 {
   "securityEnabledOnly": true
 }
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "string"
+  "@odata.type": "string",
+  "isCollection": true
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 39
+
 {
   "value": [
     "String-value"
@@ -58,8 +64,8 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: 4b2d102f-756b-475b-86d4-bf49869445d9
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 4907a8aa-a4d2-4a0a-8d7c-57af5fc81db4
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Group: getMemberObjects",

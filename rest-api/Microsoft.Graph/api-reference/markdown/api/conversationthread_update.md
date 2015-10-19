@@ -42,6 +42,7 @@ Here is an example of the request.
 PUT /groups/<objectId>/Threads/<Id>
 Content-type: application/json
 Content-length: 489
+
 {
   "ToRecipients": [
     {
@@ -71,16 +72,17 @@ Content-length: 489
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "conversationthread"
+  "@odata.type": "microsoft.graph.conversationthread"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 489
+
 {
   "ToRecipients": [
     {
@@ -110,8 +112,8 @@ Content-length: 489
 }
 ```
 
-<!-- uuid: 557da214-edd7-427f-92a0-136a37888c05
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 94b249be-e28c-45d9-b0a2-50b557f24ea6
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of conversationthread object.",

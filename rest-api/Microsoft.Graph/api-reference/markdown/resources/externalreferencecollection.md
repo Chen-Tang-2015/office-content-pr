@@ -2,11 +2,28 @@
 
 
 
+### JSON representation
+
+Here is a JSON representation of the resource
+
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.externalreferencecollection"
+}-->
+
+```json
+{
+}
+
+```
 ### Properties
 None
 
-<!-- uuid: d7f40cdd-f6f0-4514-b411-d90eb4f6b838
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 34e47730-ec53-48ff-85ed-153b142898cf
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "ExternalReferenceCollection resource",

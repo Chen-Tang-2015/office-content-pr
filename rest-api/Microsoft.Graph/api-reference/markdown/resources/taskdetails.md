@@ -11,18 +11,18 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.TaskDetails"
+  "@odata.type": "microsoft.graph.taskdetails"
 }-->
 
 ```json
 {
-  "completedBy": "String",
-  "id": "String (identifier)",
-  "notes": "String",
+  "completedBy": "String-value",
+  "id": "String-value (identifier)",
+  "notes": "String-value",
   "references": {
-    "@odata.type": "microsoft.graph.ExternalReferenceCollection"
+    "@odata.type": "microsoft.graph.externalreferencecollection"
   },
-  "version": "String"
+  "version": "String-value"
 }
 
 ```
@@ -45,10 +45,10 @@ None
 |:---------------|:--------|:----------|
 |[Get TaskDetails](../api/taskdetails_get.md) | [TaskDetails](taskdetails.md) |Read properties and relationships of taskDetails object.|
 |[Update](../api/taskdetails_update.md) | [TaskDetails](taskdetails.md)	|Update TaskDetails object. |
-|[Delete](../api/taskdetails_delete.md) | Void	|Delete TaskDetails object. |
+|[Delete](../api/taskdetails_delete.md) | None |Delete TaskDetails object. |
 
-<!-- uuid: 7a816187-1e6a-4eef-b0c5-51e242101b7f
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 9f954a3d-307c-42f5-b9f7-3f5196381a66
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "TaskDetails resource",

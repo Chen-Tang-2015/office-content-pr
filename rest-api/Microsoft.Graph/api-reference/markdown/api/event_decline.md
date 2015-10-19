@@ -25,11 +25,12 @@ In the request body, provide a JSON object with the following parameters.
 |SendResponse|Boolean||
 
 ### Response
-If successful, this method returns `200, OK` response code and [None](../resources/none.md) object in the response body.
+If successful, this method returns `200, OK` response code. It does not return anything in the response body.
 
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "event_decline"
@@ -38,27 +39,26 @@ Here is an example of how to call this API.
 POST /users/<objectId>/Events/<Id>/Decline
 Content-type: application/json
 Content-length: 56
+
 {
   "Comment": "Comment-value",
   "SendResponse": true
 }
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "none"
+  "@odata.type": "microsoft.graph.none"
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
-Content-type: application/json
-Content-length: 3
-{
-}
 ```
 
-<!-- uuid: d31477bc-ffe9-4452-8d95-f0afbc81dfed
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 01f8a8ee-ed9a-4506-9be9-e0fdf716f67f
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Event: Decline",

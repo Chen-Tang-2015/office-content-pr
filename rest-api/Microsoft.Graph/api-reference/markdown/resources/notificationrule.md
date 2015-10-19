@@ -11,19 +11,19 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.NotificationRule"
+  "@odata.type": "microsoft.graph.notificationrule"
 }-->
 
 ```json
 {
-  "Event": "String",
-  "Id": "String (identifier)",
-  "NotificationId": "String",
-  "NotificationName": "String",
-  "RoleId": "String",
-  "RoleName": "String",
-  "UserId": "String",
-  "UserName": "String"
+  "Event": "String-value",
+  "Id": "String-value (identifier)",
+  "NotificationId": "String-value",
+  "NotificationName": "String-value",
+  "RoleId": "Guid-value",
+  "RoleName": "String-value",
+  "UserId": "String-value",
+  "UserName": "String-value"
 }
 
 ```
@@ -49,11 +49,11 @@ None
 |:---------------|:--------|:----------|
 |[Get NotificationRule](../api/notificationrule_get.md) | [NotificationRule](notificationrule.md) |Read properties and relationships of notificationRule object.|
 |[Update](../api/notificationrule_update.md) | [NotificationRule](notificationrule.md)	|Update NotificationRule object. |
-|[Delete](../api/notificationrule_delete.md) | Void	|Delete NotificationRule object. |
+|[Delete](../api/notificationrule_delete.md) | None |Delete NotificationRule object. |
 |[Eventtypes](../api/notificationrule_eventtypes.md)|String||
 
-<!-- uuid: 4ef51cf8-3e57-47bc-986d-411f470407f0
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 39c2faa4-e3e5-4f4a-9c77-523317865cff
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "NotificationRule resource",

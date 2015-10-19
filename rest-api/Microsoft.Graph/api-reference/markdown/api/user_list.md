@@ -23,24 +23,37 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and collection of [User](../resources/user.md) objects in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_users"
+}-->
+```http
+GET /users
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "users"
+  "@odata.type": "microsoft.graph.user",
+  "isCollection": true
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 3064
+Content-length: 3089
+
 {
-  "values": [
+  "value": [
     {
       "accountEnabled": true,
       "assignedLicenses": [
         {
-          "disabledPlans": "disabledPlans-value",
+          "disabledPlans": [
+            "disabledPlans-value"
+          ],
           "skuId": "skuId-value"
         }
       ],
@@ -137,10 +150,9 @@ Content-length: 3064
   ]
 }
 ```
-If successful, this method returns a `200 OK` response code and collection of [User](../resources/user.md) objects in the response body.
 
-<!-- uuid: 655e6402-6330-4eed-a566-18154d0ebfa1
-2015-10-16 22:29:36 UTC -->
+<!-- uuid: 68d35542-9a2d-4274-911c-5ce36f8de40b
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "List User",

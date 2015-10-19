@@ -12,24 +12,24 @@ Here is a JSON representation of the resource
     "ChildFolders",
     "Contacts"
   ],
-  "@odata.type": "microsoft.graph.ContactFolder"
+  "@odata.type": "microsoft.graph.contactfolder"
 }-->
 
 ```json
 {
   "ChildFolders": [
     {
-      "@odata.type": "microsoft.graph.ContactFolder"
+      "@odata.type": "microsoft.graph.contactfolder"
     }
   ],
   "Contacts": [
     {
-      "@odata.type": "microsoft.graph.Contact"
+      "@odata.type": "microsoft.graph.contact"
     }
   ],
-  "DisplayName": "String",
-  "Id": "String (identifier)",
-  "ParentFolderId": "String"
+  "DisplayName": "String-value",
+  "Id": "String-value (identifier)",
+  "ParentFolderId": "String-value"
 }
 
 ```
@@ -54,10 +54,10 @@ Here is a JSON representation of the resource
 |[Create ContactFolder](../api/contactfolder_post_childfolders.md) |[ContactFolder](contactfolder.md)| Create a new ContactFolder by posting to the ChildFolders collection.|
 |[Create Contact](../api/contactfolder_post_contacts.md) |[Contact](contact.md)| Create a new Contact by posting to the Contacts collection.|
 |[Update](../api/contactfolder_update.md) | [ContactFolder](contactfolder.md)	|Update ContactFolder object. |
-|[Delete](../api/contactfolder_delete.md) | Void	|Delete ContactFolder object. |
+|[Delete](../api/contactfolder_delete.md) | None |Delete ContactFolder object. |
 
-<!-- uuid: 34ff7e1f-de1e-4bdc-9982-4cc80aeb02d3
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: c96a76a2-8cc9-4b10-82bb-175c2f50a8c9
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "ContactFolder resource",

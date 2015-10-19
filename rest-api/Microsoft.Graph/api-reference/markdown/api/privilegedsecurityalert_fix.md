@@ -27,6 +27,7 @@ If successful, this method returns `200, OK` response code and [PrivilegedSecuri
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "privilegedsecurityalert_fix"
@@ -35,20 +36,24 @@ Here is an example of how to call this API.
 POST /PrivilegedSecurityAlerts/<AlertId>/Fix
 Content-type: application/json
 Content-length: 18
+
 {
   "ItemId": 99
 }
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "privilegedsecurityalert"
+  "@odata.type": "microsoft.graph.privilegedsecurityalert"
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 596
+
 {
   "AlertId": "AlertId-value",
   "NumberOfAffectedItems": 99,
@@ -70,8 +75,8 @@ Content-length: 596
 }
 ```
 
-<!-- uuid: fc75e523-37af-4286-84fb-ad9d4c692566
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 7f9febef-7b13-48bb-9dd2-b3ad5acba974
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PrivilegedSecurityAlert: Fix",

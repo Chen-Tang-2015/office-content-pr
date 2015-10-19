@@ -34,30 +34,32 @@ Here is an example of the request.
 PUT /PrivilegedRoles/<Id>
 Content-type: application/json
 Content-length: 46
+
 {
   "Id": "Id-value",
   "Name": "Name-value"
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "privilegedrole"
+  "@odata.type": "microsoft.graph.privilegedrole"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 46
+
 {
   "Id": "Id-value",
   "Name": "Name-value"
 }
 ```
 
-<!-- uuid: 73bf337c-52f7-4192-ba69-a3baff2bb0fa
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: c2480697-a03d-4059-8dc6-e8cc2f8be17f
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of privilegedrole object.",

@@ -17,22 +17,22 @@ Here is a JSON representation of the resource
 ```json
 {
   "grantedTo": {
-    "@odata.type": "microsoft.graph.identitySet"
+    "@odata.type": "microsoft.graph.identityset"
   },
-  "id": "String (identifier)",
+  "id": "String-value (identifier)",
   "inheritedFrom": {
-    "@odata.type": "microsoft.graph.itemReference"
+    "@odata.type": "microsoft.graph.itemreference"
   },
   "invitation": {
-    "@odata.type": "microsoft.graph.sharingInvitation"
+    "@odata.type": "microsoft.graph.sharinginvitation"
   },
   "link": {
-    "@odata.type": "microsoft.graph.sharingLink"
+    "@odata.type": "microsoft.graph.sharinglink"
   },
   "roles": [
-    "String"
+    "String-value"
   ],
-  "shareId": "String"
+  "shareId": "String-value"
 }
 
 ```
@@ -57,10 +57,10 @@ None
 |:---------------|:--------|:----------|
 |[Get permission](../api/permission_get.md) | [permission](permission.md) |Read properties and relationships of permission object.|
 |[Update](../api/permission_update.md) | [permission](permission.md)	|Update permission object. |
-|[Delete](../api/permission_delete.md) | Void	|Delete permission object. |
+|[Delete](../api/permission_delete.md) | None |Delete permission object. |
 
-<!-- uuid: 58d5e4d6-0b7c-42f8-a33c-faf959463b35
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 2a4b4f9b-126c-437f-9be6-9c8a231f7f3e
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "permission resource",

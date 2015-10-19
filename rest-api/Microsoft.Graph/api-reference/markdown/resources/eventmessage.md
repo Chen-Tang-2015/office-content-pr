@@ -10,79 +10,80 @@ Here is a JSON representation of the resource
   "blockType": "resource",
   "optionalProperties": [
     "Attachments",
+    "Event",
     "Extensions"
   ],
-  "@odata.type": "microsoft.graph.EventMessage"
+  "@odata.type": "microsoft.graph.eventmessage"
 }-->
 
 ```json
 {
   "Attachments": [
     {
-      "@odata.type": "microsoft.graph.Attachment"
+      "@odata.type": "microsoft.graph.attachment"
     }
   ],
   "BccRecipients": [
     {
-      "@odata.type": "microsoft.graph.Recipient"
+      "@odata.type": "microsoft.graph.recipient"
     }
   ],
   "Body": {
-    "@odata.type": "microsoft.graph.ItemBody"
+    "@odata.type": "microsoft.graph.itembody"
   },
-  "BodyPreview": "String",
+  "BodyPreview": "String-value",
   "Categories": [
-    "String"
+    "String-value"
   ],
   "CcRecipients": [
     {
-      "@odata.type": "microsoft.graph.Recipient"
+      "@odata.type": "microsoft.graph.recipient"
     }
   ],
-  "ChangeKey": "String",
-  "ConversationId": "String",
+  "ChangeKey": "String-value",
+  "ConversationId": "String-value",
   "DateTimeCreated": "String (timestamp)",
   "DateTimeLastModified": "String (timestamp)",
   "DateTimeReceived": "String (timestamp)",
   "DateTimeSent": "String (timestamp)",
   "Event": {
-    "@odata.type": "microsoft.graph.Event"
+    "@odata.type": "microsoft.graph.event"
   },
   "Extensions": [
     {
-      "@odata.type": "microsoft.graph.Extension"
+      "@odata.type": "microsoft.graph.extension"
     }
   ],
   "From": {
-    "@odata.type": "microsoft.graph.Recipient"
+    "@odata.type": "microsoft.graph.recipient"
   },
   "HasAttachments": true,
-  "Id": "String (identifier)",
-  "Importance": "String",
+  "Id": "String-value (identifier)",
+  "Importance": "String-value",
   "IsDeliveryReceiptRequested": true,
   "IsDraft": true,
   "IsRead": true,
   "IsReadReceiptRequested": true,
-  "MeetingMessageType": "String",
-  "ParentFolderId": "String",
+  "MeetingMessageType": "String-value",
+  "ParentFolderId": "String-value",
   "ReplyTo": [
     {
-      "@odata.type": "microsoft.graph.Recipient"
+      "@odata.type": "microsoft.graph.recipient"
     }
   ],
   "Sender": {
-    "@odata.type": "microsoft.graph.Recipient"
+    "@odata.type": "microsoft.graph.recipient"
   },
-  "Subject": "String",
+  "Subject": "String-value",
   "ToRecipients": [
     {
-      "@odata.type": "microsoft.graph.Recipient"
+      "@odata.type": "microsoft.graph.recipient"
     }
   ],
   "UniqueBody": {
-    "@odata.type": "microsoft.graph.ItemBody"
+    "@odata.type": "microsoft.graph.itembody"
   },
-  "WebLink": "String"
+  "WebLink": "String-value"
 }
 
 ```
@@ -132,19 +133,19 @@ Here is a JSON representation of the resource
 |[Create Attachment](../api/eventmessage_post_attachments.md) |[Attachment](attachment.md)| Create a new Attachment by posting to the Attachments collection.|
 |[Create Extension](../api/eventmessage_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the Extensions collection.|
 |[Update](../api/eventmessage_update.md) | [EventMessage](eventmessage.md)	|Update EventMessage object. |
-|[Delete](../api/eventmessage_delete.md) | Void	|Delete EventMessage object. |
+|[Delete](../api/eventmessage_delete.md) | None |Delete EventMessage object. |
 |[Copy](../api/eventmessage_copy.md)|[Message](message.md)||
 |[Createforward](../api/eventmessage_createforward.md)|[Message](message.md)||
 |[Createreply](../api/eventmessage_createreply.md)|[Message](message.md)||
 |[Createreplyall](../api/eventmessage_createreplyall.md)|[Message](message.md)||
-|[Forward](../api/eventmessage_forward.md)|[None](none.md)||
+|[Forward](../api/eventmessage_forward.md)|None||
 |[Move](../api/eventmessage_move.md)|[Message](message.md)||
-|[Reply](../api/eventmessage_reply.md)|[None](none.md)||
-|[Replyall](../api/eventmessage_replyall.md)|[None](none.md)||
-|[Send](../api/eventmessage_send.md)|[None](none.md)||
+|[Reply](../api/eventmessage_reply.md)|None||
+|[Replyall](../api/eventmessage_replyall.md)|None||
+|[Send](../api/eventmessage_send.md)|None||
 
-<!-- uuid: 189d181f-8b5b-4cdf-84f7-17f641f5bfcb
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 00602db0-28cb-4ccd-82f7-9e29b085f135
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "EventMessage resource",

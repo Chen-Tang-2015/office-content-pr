@@ -29,6 +29,7 @@ If successful, this method returns `200, OK` response code and [Message](../reso
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "message_move"
@@ -37,20 +38,24 @@ Here is an example of how to call this API.
 POST /users/<objectId>/Messages/<Id>/Move
 Content-type: application/json
 Content-length: 44
+
 {
   "DestinationId": "DestinationId-value"
 }
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "message"
+  "@odata.type": "microsoft.graph.message"
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 1546
+
 {
   "Subject": "Subject-value",
   "Body": {
@@ -127,8 +132,8 @@ Content-length: 1546
 }
 ```
 
-<!-- uuid: 7c502a7b-bf55-40eb-99de-182d00e06c11
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: c8be22b9-3b2a-4f73-97d7-9bad0da50700
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Message: Move",

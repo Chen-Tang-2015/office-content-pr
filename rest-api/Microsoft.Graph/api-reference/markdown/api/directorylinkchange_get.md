@@ -20,17 +20,27 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and [DirectoryLinkChange](../resources/directorylinkchange.md) object in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_directorylinkchange"
+}-->
+```http
+
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "directorylinkchange"
+  "@odata.type": "microsoft.graph.directorylinkchange"
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 433
+
 {
   "associationType": "associationType-value",
   "sourceObjectId": "sourceObjectId-value",
@@ -44,10 +54,9 @@ Content-length: 433
   "deletionTimestamp": "datetime-value"
 }
 ```
-If successful, this method returns a `200 OK` response code and [DirectoryLinkChange](../resources/directorylinkchange.md) object in the response body.
 
-<!-- uuid: bc83a5d2-aae9-450f-99ba-98d82991d051
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: d9f6b6f5-aec9-4ace-982d-584bf61a228a
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get DirectoryLinkChange",

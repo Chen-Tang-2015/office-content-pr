@@ -47,6 +47,7 @@ Here is an example of the request.
 PUT /devices/<objectId>
 Content-type: application/json
 Content-length: 732
+
 {
   "accountEnabled": true,
   "alternativeSecurityIds": [
@@ -75,16 +76,17 @@ Content-length: 732
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "device"
+  "@odata.type": "microsoft.graph.device"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 732
+
 {
   "accountEnabled": true,
   "alternativeSecurityIds": [
@@ -113,8 +115,8 @@ Content-length: 732
 }
 ```
 
-<!-- uuid: c9b79bdc-8f97-406a-b70e-d7f16fdbafea
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: f9f53654-7981-41a2-bc80-8d6b399f9a4a
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of device object.",

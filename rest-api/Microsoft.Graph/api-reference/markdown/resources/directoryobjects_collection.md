@@ -2,6 +2,23 @@
 
 
 
+### JSON representation
+
+Here is a JSON representation of the resource
+
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.directoryobjects"
+}-->
+
+```json
+{
+}
+
+```
 ### Properties
 None
 
@@ -16,8 +33,8 @@ None
 |[List](../api/directoryobject_list.md) | [DirectoryObject](directoryobject.md) [] |Get directoryObject object collection. |
 |[Create DirectoryObject](../api/directoryobject_post_directoryobjects.md) |[DirectoryObject](directoryobject.md)| Create a new DirectoryObject by posting to the directoryObjects collection.|
 
-<!-- uuid: dd944413-e2b5-4928-83ee-1f809f07eb96
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: bbd89ec9-524a-4d54-adac-8ce697bad967
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "directoryObjects resource",

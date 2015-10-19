@@ -36,6 +36,7 @@ Here is an example of the request.
 PUT /PrivilegedRoleAssignments/<UserId|RoleId>
 Content-type: application/json
 Content-length: 160
+
 {
   "UserId": "UserId-value",
   "RoleId": "RoleId-value",
@@ -45,16 +46,17 @@ Content-length: 160
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "privilegedroleassignment"
+  "@odata.type": "microsoft.graph.privilegedroleassignment"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 160
+
 {
   "UserId": "UserId-value",
   "RoleId": "RoleId-value",
@@ -64,8 +66,8 @@ Content-length: 160
 }
 ```
 
-<!-- uuid: d007253a-85e7-4f7d-813a-a58970044fe8
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: a029011e-3b3b-414c-ab0f-ad62de9623c1
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of privilegedroleassignment object.",

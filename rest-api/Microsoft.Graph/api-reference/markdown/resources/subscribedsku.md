@@ -11,24 +11,24 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.SubscribedSku"
+  "@odata.type": "microsoft.graph.subscribedsku"
 }-->
 
 ```json
 {
-  "capabilityStatus": "String",
+  "capabilityStatus": "String-value",
   "consumedUnits": 1024,
-  "objectId": "String (identifier)",
+  "objectId": "String-value (identifier)",
   "prepaidUnits": {
-    "@odata.type": "microsoft.graph.LicenseUnitsDetail"
+    "@odata.type": "microsoft.graph.licenseunitsdetail"
   },
   "servicePlans": [
     {
-      "@odata.type": "microsoft.graph.ServicePlanInfo"
+      "@odata.type": "microsoft.graph.serviceplaninfo"
     }
   ],
-  "skuId": "String",
-  "skuPartNumber": "String"
+  "skuId": "Guid-value",
+  "skuPartNumber": "String-value"
 }
 
 ```
@@ -53,10 +53,10 @@ None
 |:---------------|:--------|:----------|
 |[Get SubscribedSku](../api/subscribedsku_get.md) | [SubscribedSku](subscribedsku.md) |Read properties and relationships of subscribedSku object.|
 |[Update](../api/subscribedsku_update.md) | [SubscribedSku](subscribedsku.md)	|Update SubscribedSku object. |
-|[Delete](../api/subscribedsku_delete.md) | Void	|Delete SubscribedSku object. |
+|[Delete](../api/subscribedsku_delete.md) | None |Delete SubscribedSku object. |
 
-<!-- uuid: 0d99e6ed-fc8c-494a-b77c-521bc6862b90
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 431cc0c5-30e1-4b90-88eb-133ba2b693f5
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "SubscribedSku resource",

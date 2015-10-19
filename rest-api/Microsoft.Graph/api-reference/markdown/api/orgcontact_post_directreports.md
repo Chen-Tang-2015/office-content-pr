@@ -30,7 +30,6 @@ Here is an example of the request.
 }-->
 ```http
 POST /contacts/<objectId>
-Content-type: application/json
 ```
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
 ##### Response
@@ -38,12 +37,13 @@ Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "directoryobject"
+  "@odata.type": "microsoft.graph.directoryobject"
 } -->
-```json
+```http
 HTTP/1.1 201 Created
 Content-type: application/json
 Content-length: 111
+
 {
   "objectType": "objectType-value",
   "objectId": "objectId-value",
@@ -51,8 +51,8 @@ Content-length: 111
 }
 ```
 
-<!-- uuid: 66214429-e0ec-4782-ba00-0f16ac249046
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: e8b4aadc-ac52-4ccb-8985-c810908fc192
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create directReport",

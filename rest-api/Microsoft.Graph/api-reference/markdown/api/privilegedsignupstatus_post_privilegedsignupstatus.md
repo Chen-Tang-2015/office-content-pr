@@ -30,7 +30,6 @@ Here is an example of the request.
 }-->
 ```http
 POST /PrivilegedSignupStatus
-Content-type: application/json
 ```
 In the request body, supply a JSON representation of [PrivilegedSignupStatus](../resources/privilegedsignupstatus.md) object.
 ##### Response
@@ -38,12 +37,13 @@ Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "privilegedsignupstatus"
+  "@odata.type": "microsoft.graph.privilegedsignupstatus"
 } -->
-```json
+```http
 HTTP/1.1 201 Created
 Content-type: application/json
 Content-length: 86
+
 {
   "TenantId": "TenantId-value",
   "IsRegistered": true,
@@ -51,8 +51,8 @@ Content-length: 86
 }
 ```
 
-<!-- uuid: 0bd71ecf-8d7e-489e-8a8a-76f960510ae9
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: a176b254-e50b-4081-b49c-230d2e5ef86c
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create PrivilegedSignupStatus",

@@ -32,7 +32,6 @@ Here is an example of the request.
 }-->
 ```http
 POST /users/<objectId>
-Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Message](../resources/message.md) object.
 ##### Response
@@ -40,12 +39,13 @@ Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "message"
+  "@odata.type": "microsoft.graph.message"
 } -->
-```json
+```http
 HTTP/1.1 201 Created
 Content-type: application/json
 Content-length: 1546
+
 {
   "Subject": "Subject-value",
   "Body": {
@@ -122,8 +122,8 @@ Content-length: 1546
 }
 ```
 
-<!-- uuid: 835c49d7-41a6-493d-862b-f00db1d36739
-2015-10-16 22:29:36 UTC -->
+<!-- uuid: 4644e2d2-20d9-457a-b76c-4c8cc3095b28
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Message",

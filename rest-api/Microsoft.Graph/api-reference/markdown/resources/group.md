@@ -10,127 +10,131 @@ Here is a JSON representation of the resource
   "blockType": "resource",
   "optionalProperties": [
     "AcceptedSenders",
+    "Calendar",
     "CalendarView",
     "Conversations",
     "Events",
+    "GroupPhoto",
     "RejectedSenders",
     "Threads",
     "appRoleAssignments",
+    "createdOnBehalfOf",
+    "drive",
     "memberOf",
     "members",
     "owners",
     "plans",
     "tasks"
   ],
-  "@odata.type": "microsoft.graph.Group"
+  "@odata.type": "microsoft.graph.group"
 }-->
 
 ```json
 {
   "AcceptedSenders": [
     {
-      "@odata.type": "microsoft.graph.DirectoryObject"
+      "@odata.type": "microsoft.graph.directoryobject"
     }
   ],
-  "AccessType": "String",
+  "AccessType": "String-value",
   "AllowExternalSenders": true,
   "AutoSubscribeNewMembers": true,
   "Calendar": {
-    "@odata.type": "microsoft.graph.Calendar"
+    "@odata.type": "microsoft.graph.calendar"
   },
   "CalendarView": [
     {
-      "@odata.type": "microsoft.graph.Event"
+      "@odata.type": "microsoft.graph.event"
     }
   ],
   "Conversations": [
     {
-      "@odata.type": "microsoft.graph.Conversation"
+      "@odata.type": "microsoft.graph.conversation"
     }
   ],
-  "EmailAddress": "String",
+  "EmailAddress": "String-value",
   "Events": [
     {
-      "@odata.type": "microsoft.graph.Event"
+      "@odata.type": "microsoft.graph.event"
     }
   ],
   "GroupPhoto": {
-    "@odata.type": "microsoft.graph.Photo"
+    "@odata.type": "microsoft.graph.photo"
   },
   "IsFavorite": true,
   "IsSubscribedByMail": true,
   "RejectedSenders": [
     {
-      "@odata.type": "microsoft.graph.DirectoryObject"
+      "@odata.type": "microsoft.graph.directoryobject"
     }
   ],
   "Threads": [
     {
-      "@odata.type": "microsoft.graph.ConversationThread"
+      "@odata.type": "microsoft.graph.conversationthread"
     }
   ],
   "UnseenCount": 1024,
   "appRoleAssignments": [
     {
-      "@odata.type": "microsoft.graph.AppRoleAssignment"
+      "@odata.type": "microsoft.graph.approleassignment"
     }
   ],
   "createdOnBehalfOf": {
-    "@odata.type": "microsoft.graph.DirectoryObject"
+    "@odata.type": "microsoft.graph.directoryobject"
   },
   "creationOptions": [
-    "String"
+    "String-value"
   ],
   "deletionTimestamp": "String (timestamp)",
-  "description": "String",
+  "description": "String-value",
   "dirSyncEnabled": true,
-  "displayName": "String",
+  "displayName": "String-value",
   "drive": {
     "@odata.type": "microsoft.graph.drive"
   },
   "groupTypes": [
-    "String"
+    "String-value"
   ],
   "isPublic": true,
   "lastDirSyncTime": "String (timestamp)",
-  "mail": "String",
+  "mail": "String-value",
   "mailEnabled": true,
-  "mailNickname": "String",
+  "mailNickname": "String-value",
   "memberOf": [
     {
-      "@odata.type": "microsoft.graph.DirectoryObject"
+      "@odata.type": "microsoft.graph.directoryobject"
     }
   ],
   "members": [
     {
-      "@odata.type": "microsoft.graph.DirectoryObject"
+      "@odata.type": "microsoft.graph.directoryobject"
     }
   ],
-  "objectId": "String (identifier)",
-  "objectType": "String",
-  "onPremisesSecurityIdentifier": "String",
+  "objectId": "String-value (identifier)",
+  "objectType": "String-value",
+  "onPremisesSecurityIdentifier": "String-value",
   "owners": [
     {
-      "@odata.type": "microsoft.graph.DirectoryObject"
+      "@odata.type": "microsoft.graph.directoryobject"
     }
   ],
   "plans": [
     {
-      "@odata.type": "microsoft.graph.Plan"
+      "@odata.type": "microsoft.graph.plan"
     }
   ],
   "provisioningErrors": [
     {
-      "@odata.type": "microsoft.graph.ProvisioningError"
+      "@odata.type": "microsoft.graph.provisioningerror"
     }
   ],
   "proxyAddresses": [
-    "String"
+    "String-value"
   ],
   "securityEnabled": true,
   "tasks": [
     {
-      "@odata.type": "microsoft.graph.Task"
+      "@odata.type": "microsoft.graph.task"
     }
   ]
 }
@@ -202,18 +206,18 @@ Here is a JSON representation of the resource
 |[Create Plan](../api/group_post_plans.md) |[Plan](plan.md)| Create a new Plan by posting to the plans collection.|
 |[Create Task](../api/group_post_tasks.md) |[Task](task.md)| Create a new Task by posting to the tasks collection.|
 |[Update](../api/group_update.md) | [Group](group.md)	|Update Group object. |
-|[Delete](../api/group_delete.md) | Void	|Delete Group object. |
-|[Addfavorite](../api/group_addfavorite.md)|[None](none.md)||
-|[Removefavorite](../api/group_removefavorite.md)|[None](none.md)||
-|[Resetunseencount](../api/group_resetunseencount.md)|[None](none.md)||
-|[Subscribebymail](../api/group_subscribebymail.md)|[None](none.md)||
-|[Unsubscribebymail](../api/group_unsubscribebymail.md)|[None](none.md)||
+|[Delete](../api/group_delete.md) | None |Delete Group object. |
+|[Addfavorite](../api/group_addfavorite.md)|None||
+|[Removefavorite](../api/group_removefavorite.md)|None||
+|[Resetunseencount](../api/group_resetunseencount.md)|None||
+|[Subscribebymail](../api/group_subscribebymail.md)|None||
+|[Unsubscribebymail](../api/group_unsubscribebymail.md)|None||
 |[Checkmembergroups](../api/group_checkmembergroups.md)|String||
 |[Get MemberGroups](../api/group_getmembergroups.md)|String||
 |[Get MemberObjects](../api/group_getmemberobjects.md)|String||
 
-<!-- uuid: 326a924d-9225-41e7-8e84-2802fc402122
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 99e7e4bc-3e31-4db5-a01a-bec2b2e4a470
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Group resource",

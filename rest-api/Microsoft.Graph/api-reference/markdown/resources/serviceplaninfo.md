@@ -11,13 +11,13 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.ServicePlanInfo"
+  "@odata.type": "microsoft.graph.serviceplaninfo"
 }-->
 
 ```json
 {
-  "servicePlanId": "String",
-  "servicePlanName": "String"
+  "servicePlanId": "Guid-value",
+  "servicePlanName": "String-value"
 }
 
 ```
@@ -27,8 +27,8 @@ Here is a JSON representation of the resource
 |servicePlanId|Guid|The unique identifier of the service plan.|
 |servicePlanName|String|The name of the service plan.|
 
-<!-- uuid: 0fc77dc9-f752-4ba9-b586-8c47555e4ef2
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: b8915fab-6c0a-4d0a-8b80-b506a40d0817
+2015-10-19 09:46:36 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "ServicePlanInfo resource",

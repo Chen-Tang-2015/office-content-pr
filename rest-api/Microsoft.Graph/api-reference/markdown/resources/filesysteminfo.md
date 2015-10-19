@@ -11,7 +11,7 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.fileSystemInfo"
+  "@odata.type": "microsoft.graph.filesysteminfo"
 }-->
 
 ```json
@@ -27,8 +27,8 @@ Here is a JSON representation of the resource
 |createdDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |lastModifiedDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 
-<!-- uuid: f3fb78b8-168d-4264-a540-cec432da8d2c
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 0d6d7a73-3942-470b-93e0-ee165485855c
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "fileSystemInfo resource",

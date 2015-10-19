@@ -11,16 +11,16 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.PhysicalAddress"
+  "@odata.type": "microsoft.graph.physicaladdress"
 }-->
 
 ```json
 {
-  "City": "String",
-  "CountryOrRegion": "String",
-  "PostalCode": "String",
-  "State": "String",
-  "Street": "String"
+  "City": "String-value",
+  "CountryOrRegion": "String-value",
+  "PostalCode": "String-value",
+  "State": "String-value",
+  "Street": "String-value"
 }
 
 ```
@@ -33,8 +33,8 @@ Here is a JSON representation of the resource
 |State|String|The state.|
 |Street|String|The street.|
 
-<!-- uuid: 21b95d46-0070-4c71-a549-f5481d38de24
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 08727782-c4bc-4b83-a00f-0ae52ea31db3
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PhysicalAddress resource",

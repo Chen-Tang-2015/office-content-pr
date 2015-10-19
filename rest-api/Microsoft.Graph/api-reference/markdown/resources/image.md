@@ -27,8 +27,8 @@ Here is a JSON representation of the resource
 |height|Int32||
 |width|Int32||
 
-<!-- uuid: 8580e5b6-fc23-47e3-994c-460819372fcd
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 600ec7b9-4e72-4f89-938e-36a529669f4a
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "image resource",

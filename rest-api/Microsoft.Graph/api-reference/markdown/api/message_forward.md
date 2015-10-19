@@ -25,11 +25,12 @@ In the request body, provide a JSON object with the following parameters.
 |ToRecipients|Recipient||
 
 ### Response
-If successful, this method returns `200, OK` response code and [None](../resources/none.md) object in the response body.
+If successful, this method returns `200, OK` response code. It does not return anything in the response body.
 
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "message_forward"
@@ -38,6 +39,7 @@ Here is an example of how to call this API.
 POST /users/<objectId>/Messages/<Id>/Forward
 Content-type: application/json
 Content-length: 166
+
 {
   "Comment": "Comment-value",
   "ToRecipients": [
@@ -49,23 +51,21 @@ Content-length: 166
     }
   ]
 }
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "none"
+  "@odata.type": "microsoft.graph.none"
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
-Content-type: application/json
-Content-length: 3
-{
-}
 ```
 
-<!-- uuid: 9e5ea7d7-a808-44c8-b86f-0c6d597a3a17
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 89ffd022-72c6-41e7-a45c-4a18af7f2fd2
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Message: Forward",

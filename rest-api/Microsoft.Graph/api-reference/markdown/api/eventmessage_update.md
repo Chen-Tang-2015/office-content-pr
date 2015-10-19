@@ -58,6 +58,7 @@ Here is an example of the request.
 
 Content-type: application/json
 Content-length: 1598
+
 {
   "Subject": "Subject-value",
   "Body": {
@@ -135,16 +136,17 @@ Content-length: 1598
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "eventmessage"
+  "@odata.type": "microsoft.graph.eventmessage"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 1598
+
 {
   "Subject": "Subject-value",
   "Body": {
@@ -222,8 +224,8 @@ Content-length: 1598
 }
 ```
 
-<!-- uuid: 8751f388-614b-445b-b6d7-81e189cb47b0
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 18c46d3c-4ba7-4891-8850-700870993999
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of eventmessage object.",

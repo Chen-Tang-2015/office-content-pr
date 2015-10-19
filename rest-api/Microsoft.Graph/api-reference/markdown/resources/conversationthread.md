@@ -11,34 +11,34 @@ Here is a JSON representation of the resource
   "optionalProperties": [
     "Posts"
   ],
-  "@odata.type": "microsoft.graph.ConversationThread"
+  "@odata.type": "microsoft.graph.conversationthread"
 }-->
 
 ```json
 {
   "CcRecipients": [
     {
-      "@odata.type": "microsoft.graph.Recipient"
+      "@odata.type": "microsoft.graph.recipient"
     }
   ],
   "DateTimeLastDelivered": "String (timestamp)",
   "HasAttachments": true,
-  "Id": "String (identifier)",
+  "Id": "String-value (identifier)",
   "IsLocked": true,
   "Posts": [
     {
-      "@odata.type": "microsoft.graph.Post"
+      "@odata.type": "microsoft.graph.post"
     }
   ],
-  "Preview": "String",
+  "Preview": "String-value",
   "ToRecipients": [
     {
-      "@odata.type": "microsoft.graph.Recipient"
+      "@odata.type": "microsoft.graph.recipient"
     }
   ],
-  "Topic": "String",
+  "Topic": "String-value",
   "UniqueSenders": [
-    "String"
+    "String-value"
   ]
 }
 
@@ -68,11 +68,11 @@ Here is a JSON representation of the resource
 |[Get ConversationThread](../api/conversationthread_get.md) | [ConversationThread](conversationthread.md) |Read properties and relationships of conversationThread object.|
 |[Create Post](../api/conversationthread_post_posts.md) |[Post](post.md)| Create a new Post by posting to the Posts collection.|
 |[Update](../api/conversationthread_update.md) | [ConversationThread](conversationthread.md)	|Update ConversationThread object. |
-|[Delete](../api/conversationthread_delete.md) | Void	|Delete ConversationThread object. |
-|[Reply](../api/conversationthread_reply.md)|[None](none.md)||
+|[Delete](../api/conversationthread_delete.md) | None |Delete ConversationThread object. |
+|[Reply](../api/conversationthread_reply.md)|None||
 
-<!-- uuid: 0a5b3f05-e065-4833-a298-b731c76ee779
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 1559803d-566d-4c4f-b737-dc1439d9ad9c
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "ConversationThread resource",

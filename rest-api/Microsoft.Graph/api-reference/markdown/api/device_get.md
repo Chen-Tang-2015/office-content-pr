@@ -20,17 +20,27 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and [Device](../resources/device.md) object in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_device"
+}-->
+```http
+GET /devices/<objectId>
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "device"
+  "@odata.type": "microsoft.graph.device"
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 732
+
 {
   "accountEnabled": true,
   "alternativeSecurityIds": [
@@ -58,10 +68,9 @@ Content-length: 732
   "deletionTimestamp": "datetime-value"
 }
 ```
-If successful, this method returns a `200 OK` response code and [Device](../resources/device.md) object in the response body.
 
-<!-- uuid: 77793521-f7be-42ae-aec8-807c69f668b5
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: b37f9709-74a9-4fe3-b50f-58858343580f
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Device",

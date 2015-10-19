@@ -11,12 +11,12 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.specialFolder"
+  "@odata.type": "microsoft.graph.specialfolder"
 }-->
 
 ```json
 {
-  "name": "String"
+  "name": "String-value"
 }
 
 ```
@@ -25,8 +25,8 @@ Here is a JSON representation of the resource
 |:---------------|:--------|:----------|
 |name|String||
 
-<!-- uuid: e0968575-6404-4036-9277-57876633608b
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: acff8010-5bc2-49c6-928e-12df1540712d
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "specialFolder resource",

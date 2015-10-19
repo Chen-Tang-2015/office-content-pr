@@ -39,6 +39,7 @@ Here is an example of the request.
 PUT /applications/<objectId>/extensionProperties/<objectId>
 Content-type: application/json
 Content-length: 297
+
 {
   "appDisplayName": "appDisplayName-value",
   "name": "name-value",
@@ -53,16 +54,17 @@ Content-length: 297
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "extensionproperty"
+  "@odata.type": "microsoft.graph.extensionproperty"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 297
+
 {
   "appDisplayName": "appDisplayName-value",
   "name": "name-value",
@@ -77,8 +79,8 @@ Content-length: 297
 }
 ```
 
-<!-- uuid: 871ac9da-8c9e-4b58-8540-3a09582be418
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: d3a5be7a-c44d-4a12-8a10-eefd2143df59
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of extensionproperty object.",

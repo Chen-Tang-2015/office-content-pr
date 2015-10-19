@@ -24,11 +24,12 @@ In the request body, provide a JSON object with the following parameters.
 |Comment|String||
 
 ### Response
-If successful, this method returns `200, OK` response code and [None](../resources/none.md) object in the response body.
+If successful, this method returns `200, OK` response code. It does not return anything in the response body.
 
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "message_replyall"
@@ -37,26 +38,25 @@ Here is an example of how to call this API.
 POST /users/<objectId>/Messages/<Id>/ReplyAll
 Content-type: application/json
 Content-length: 32
+
 {
   "Comment": "Comment-value"
 }
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "none"
+  "@odata.type": "microsoft.graph.none"
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
-Content-type: application/json
-Content-length: 3
-{
-}
 ```
 
-<!-- uuid: 97c35420-c460-44c1-9fcd-6d602aecd9f0
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: b1723921-6fc3-4bb8-b82d-1d3463a3209a
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Message: ReplyAll",

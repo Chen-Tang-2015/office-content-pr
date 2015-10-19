@@ -11,19 +11,19 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.FileAttachment"
+  "@odata.type": "microsoft.graph.fileattachment"
 }-->
 
 ```json
 {
-  "ContentBytes": "String",
-  "ContentId": "String",
-  "ContentLocation": "String",
-  "ContentType": "String",
+  "ContentBytes": "Binary-value",
+  "ContentId": "String-value",
+  "ContentLocation": "String-value",
+  "ContentType": "String-value",
   "DateTimeLastModified": "String (timestamp)",
-  "Id": "String (identifier)",
+  "Id": "String-value (identifier)",
   "IsInline": true,
-  "Name": "String",
+  "Name": "String-value",
   "Size": 1024
 }
 
@@ -51,10 +51,10 @@ None
 |:---------------|:--------|:----------|
 |[Get FileAttachment](../api/fileattachment_get.md) | [FileAttachment](fileattachment.md) |Read properties and relationships of fileAttachment object.|
 |[Update](../api/fileattachment_update.md) | [FileAttachment](fileattachment.md)	|Update FileAttachment object. |
-|[Delete](../api/fileattachment_delete.md) | Void	|Delete FileAttachment object. |
+|[Delete](../api/fileattachment_delete.md) | None |Delete FileAttachment object. |
 
-<!-- uuid: e0f5487e-4fc7-4570-98f9-808b50629bdb
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 05efb2e3-0ec2-4905-a5f4-81b972392afd
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "FileAttachment resource",

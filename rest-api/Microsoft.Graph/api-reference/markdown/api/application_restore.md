@@ -27,6 +27,7 @@ If successful, this method returns `200, OK` response code and [Application](../
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "application_restore"
@@ -35,27 +36,33 @@ Here is an example of how to call this API.
 POST /applications/<objectId>/restore
 Content-type: application/json
 Content-length: 56
+
 {
   "identifierUris": [
     "identifierUris-value"
   ]
 }
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "application"
+  "@odata.type": "microsoft.graph.application"
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 2108
+Content-length: 2150
+
 {
   "appId": "appId-value",
   "appRoles": [
     {
-      "allowedMemberTypes": "allowedMemberTypes-value",
+      "allowedMemberTypes": [
+        "allowedMemberTypes-value"
+      ],
       "description": "description-value",
       "displayName": "displayName-value",
       "id": "id-value",
@@ -118,10 +125,12 @@ Content-length: 2108
   "requiredResourceAccess": [
     {
       "resourceAppId": "resourceAppId-value",
-      "resourceAccess": {
-        "id": "id-value",
-        "type": "type-value"
-      }
+      "resourceAccess": [
+        {
+          "id": "id-value",
+          "type": "type-value"
+        }
+      ]
     }
   ],
   "samlMetadataUrl": "samlMetadataUrl-value",
@@ -131,8 +140,8 @@ Content-length: 2108
 }
 ```
 
-<!-- uuid: 5d515c45-9416-40a5-a4eb-f2abe5ccfede
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 87c0798c-7f17-43bf-b839-27455a0b3763
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Application: restore",

@@ -32,7 +32,6 @@ Here is an example of the request.
 }-->
 ```http
 POST /drive/root
-Content-type: application/json
 ```
 In the request body, supply a JSON representation of [thumbnailSet](../resources/thumbnailset.md) object.
 ##### Response
@@ -40,12 +39,13 @@ Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "thumbnailset"
+  "@odata.type": "microsoft.graph.thumbnailset"
 } -->
-```json
+```http
 HTTP/1.1 201 Created
 Content-type: application/json
 Content-length: 456
+
 {
   "id": "id-value",
   "large": {
@@ -75,8 +75,8 @@ Content-length: 456
 }
 ```
 
-<!-- uuid: c9c6a851-702c-4cc9-a6af-d96f7db31836
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: feff7a28-027f-4fad-8670-f3db21e1af8a
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create thumbnailSet",

@@ -32,7 +32,6 @@ Here is an example of the request.
 }-->
 ```http
 POST /users/<objectId>/Folders/<Id>
-Content-type: application/json
 ```
 In the request body, supply a JSON representation of [MailFolder](../resources/mailfolder.md) object.
 ##### Response
@@ -40,12 +39,13 @@ Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "mailfolder"
+  "@odata.type": "microsoft.graph.mailfolder"
 } -->
-```json
+```http
 HTTP/1.1 201 Created
 Content-type: application/json
 Content-length: 130
+
 {
   "ParentFolderId": "ParentFolderId-value",
   "DisplayName": "DisplayName-value",
@@ -54,8 +54,8 @@ Content-length: 130
 }
 ```
 
-<!-- uuid: e026922d-8cae-48cc-bd49-861e2cff7963
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 71059c31-08d2-44ee-b193-86eedfd2c487
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create MailFolder",

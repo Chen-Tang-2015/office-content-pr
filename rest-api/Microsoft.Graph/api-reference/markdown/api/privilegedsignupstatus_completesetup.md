@@ -17,36 +17,33 @@ POST /PrivilegedSignupStatus/<TenantId>/CompleteSetup
 ### Request body
 
 ### Response
-If successful, this method returns `200, OK` response code and [None](../resources/none.md) object in the response body.
+If successful, this method returns `200, OK` response code. It does not return anything in the response body.
 
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "privilegedsignupstatus_completesetup"
 }-->
 ```http
 POST /PrivilegedSignupStatus/<TenantId>/CompleteSetup
-Content-type: application/json
-Content-length: 0
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "none"
+  "@odata.type": "microsoft.graph.none"
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
-Content-type: application/json
-Content-length: 3
-{
-}
 ```
 
-<!-- uuid: e73cb44e-c317-433c-86fb-c11f50b9d349
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 74f64b73-32a9-45ff-9b48-f9713658495d
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PrivilegedSignupStatus: CompleteSetup",

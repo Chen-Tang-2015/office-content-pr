@@ -29,6 +29,7 @@ If successful, this method returns `200, OK` response code and String collection
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "approleassignment_checkmembergroups"
@@ -37,22 +38,27 @@ Here is an example of how to call this API.
 POST /users/<objectId>/appRoleAssignments/<objectId>/checkMemberGroups
 Content-type: application/json
 Content-length: 44
+
 {
   "groupIds": [
     "groupIds-value"
   ]
 }
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "string"
+  "@odata.type": "string",
+  "isCollection": true
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 39
+
 {
   "value": [
     "String-value"
@@ -60,8 +66,8 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: 7555797c-eb71-46c3-ac6f-f2d5ed7f0810
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 6f277506-792e-42d6-b837-ded616da031a
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "AppRoleAssignment: checkMemberGroups",

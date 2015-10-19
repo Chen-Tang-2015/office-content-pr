@@ -30,7 +30,6 @@ Here is an example of the request.
 }-->
 ```http
 POST /directoryRoles
-Content-type: application/json
 ```
 In the request body, supply a JSON representation of [DirectoryRole](../resources/directoryrole.md) object.
 ##### Response
@@ -38,12 +37,13 @@ Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "directoryrole"
+  "@odata.type": "microsoft.graph.directoryrole"
 } -->
-```json
+```http
 HTTP/1.1 201 Created
 Content-type: application/json
 Content-length: 275
+
 {
   "description": "description-value",
   "displayName": "displayName-value",
@@ -56,8 +56,8 @@ Content-length: 275
 }
 ```
 
-<!-- uuid: d8e73af8-f2af-405d-bd9f-bfb27a61d649
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: fcc8bce4-d396-41ee-805b-ff423a509315
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create DirectoryRole",

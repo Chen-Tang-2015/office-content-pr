@@ -30,19 +30,30 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and collection of [PrivilegedSignupStatus](../resources/privilegedsignupstatus.md) objects in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_privilegedsignupstatus"
+}-->
+```http
+GET /PrivilegedSignupStatus
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "privilegedsignupstatus"
+  "@odata.type": "microsoft.graph.privilegedsignupstatus",
+  "isCollection": true
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 128
+Content-length: 127
+
 {
-  "values": [
+  "value": [
     {
       "TenantId": "TenantId-value",
       "IsRegistered": true,
@@ -51,10 +62,9 @@ Content-length: 128
   ]
 }
 ```
-If successful, this method returns a `200 OK` response code and collection of [PrivilegedSignupStatus](../resources/privilegedsignupstatus.md) objects in the response body.
 
-<!-- uuid: 183441ae-6930-4d1c-bf6e-28652bf1d903
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 40df7792-9bb9-4753-a179-6b820221bec1
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "List PrivilegedSignupStatus",

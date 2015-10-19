@@ -11,27 +11,27 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.PrivilegedSecurityAlert"
+  "@odata.type": "microsoft.graph.privilegedsecurityalert"
 }-->
 
 ```json
 {
-  "AdditionalData": "String",
-  "AlertDescription": "String",
-  "AlertId": "String (identifier)",
-  "AlertName": "String",
-  "AlertType": "String",
-  "HowToPrevent": "String",
+  "AdditionalData": "String-value",
+  "AlertDescription": "String-value",
+  "AlertId": "Guid-value (identifier)",
+  "AlertName": "String-value",
+  "AlertType": "String-value",
+  "HowToPrevent": "String-value",
   "IsActive": true,
   "IsConfigurable": true,
   "IsResolvable": true,
   "LastModifiedTime": "String (timestamp)",
   "LastScannedTime": "String (timestamp)",
-  "MitigationSteps": "String",
+  "MitigationSteps": "String-value",
   "NumberOfAffectedItems": 1024,
-  "SecurityImpact": "String",
-  "SeverityLevel": "String",
-  "Status": "String",
+  "SecurityImpact": "String-value",
+  "SeverityLevel": "String-value",
+  "Status": "String-value",
   "WasDismissed": true
 }
 
@@ -67,13 +67,13 @@ None
 |:---------------|:--------|:----------|
 |[Get PrivilegedSecurityAlert](../api/privilegedsecurityalert_get.md) | [PrivilegedSecurityAlert](privilegedsecurityalert.md) |Read properties and relationships of privilegedSecurityAlert object.|
 |[Update](../api/privilegedsecurityalert_update.md) | [PrivilegedSecurityAlert](privilegedsecurityalert.md)	|Update PrivilegedSecurityAlert object. |
-|[Delete](../api/privilegedsecurityalert_delete.md) | Void	|Delete PrivilegedSecurityAlert object. |
+|[Delete](../api/privilegedsecurityalert_delete.md) | None |Delete PrivilegedSecurityAlert object. |
 |[Dismiss](../api/privilegedsecurityalert_dismiss.md)|[PrivilegedSecurityAlert](privilegedsecurityalert.md)||
 |[Fix](../api/privilegedsecurityalert_fix.md)|[PrivilegedSecurityAlert](privilegedsecurityalert.md)||
 |[Reactivate](../api/privilegedsecurityalert_reactivate.md)|[PrivilegedSecurityAlert](privilegedsecurityalert.md)||
 
-<!-- uuid: 0eb2ab3c-cab0-483e-868a-4797972b8333
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 1d1cafb3-7277-4e69-a593-52d9dd9e57aa
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PrivilegedSecurityAlert resource",

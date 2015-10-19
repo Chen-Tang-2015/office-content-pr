@@ -23,25 +23,27 @@ If successful, this method returns `200, OK` response code and [PrivilegedRoleAs
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "privilegedroleassignment_deactivate"
 }-->
 ```http
 POST /PrivilegedRoleAssignments/<UserId|RoleId>/Deactivate
-Content-type: application/json
-Content-length: 0
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "privilegedroleassignment"
+  "@odata.type": "microsoft.graph.privilegedroleassignment"
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 160
+
 {
   "UserId": "UserId-value",
   "RoleId": "RoleId-value",
@@ -51,8 +53,8 @@ Content-length: 160
 }
 ```
 
-<!-- uuid: 4e077d02-b258-454a-b577-f3e5169e473d
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 417ebc22-9280-453b-9aa3-4924924b50f8
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PrivilegedRoleAssignment: Deactivate",

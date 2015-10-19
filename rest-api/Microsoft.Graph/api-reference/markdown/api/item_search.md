@@ -29,27 +29,30 @@ If successful, this method returns `200, OK` response code and [item](../resourc
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "item_search"
 }-->
 ```http
 POST /drive/root/search
-Content-type: application/json
-Content-length: 0
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "item"
+  "@odata.type": "microsoft.graph.item",
+  "isCollection": true
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 3636
+Content-length: 3635
+
 {
-  "values": [
+  "value": [
     {
       "content": "content-value",
       "createdBy": {
@@ -195,8 +198,8 @@ Content-length: 3636
 }
 ```
 
-<!-- uuid: 4f971646-6c5a-40e0-b950-2e89c51f212b
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 22486d54-0ac0-4acd-982c-7db5f5cfee71
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "item: search",

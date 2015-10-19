@@ -27,6 +27,7 @@ If successful, this method returns `200, OK` response code and String collection
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "orgcontact_getmembergroups"
@@ -35,20 +36,25 @@ Here is an example of how to call this API.
 POST /contacts/<objectId>/getMemberGroups
 Content-type: application/json
 Content-length: 33
+
 {
   "securityEnabledOnly": true
 }
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "string"
+  "@odata.type": "string",
+  "isCollection": true
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 39
+
 {
   "value": [
     "String-value"
@@ -56,8 +62,8 @@ Content-length: 39
 }
 ```
 
-<!-- uuid: d55e8a7c-ff4a-42d7-904e-3200805407ee
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 179e86ca-dd30-4386-be4e-791b6c66ff9d
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "OrgContact: getMemberGroups",

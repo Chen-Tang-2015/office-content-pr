@@ -40,6 +40,7 @@ Here is an example of the request.
 
 Content-type: application/json
 Content-length: 282
+
 {
   "ContentId": "ContentId-value",
   "ContentLocation": "ContentLocation-value",
@@ -53,16 +54,17 @@ Content-length: 282
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "fileattachment"
+  "@odata.type": "microsoft.graph.fileattachment"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 282
+
 {
   "ContentId": "ContentId-value",
   "ContentLocation": "ContentLocation-value",
@@ -76,8 +78,8 @@ Content-length: 282
 }
 ```
 
-<!-- uuid: d373ffd9-7e05-4a94-9dd0-86565f5f3cd4
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 284cb971-60d0-4a1b-bc3e-0e62207acb44
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of fileattachment object.",

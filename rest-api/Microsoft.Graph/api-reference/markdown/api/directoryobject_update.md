@@ -36,6 +36,7 @@ Here is an example of the request.
 PUT /users/<objectId>/manager
 Content-type: application/json
 Content-length: 111
+
 {
   "objectType": "objectType-value",
   "objectId": "objectId-value",
@@ -43,16 +44,17 @@ Content-length: 111
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "directoryobject"
+  "@odata.type": "microsoft.graph.directoryobject"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 111
+
 {
   "objectType": "objectType-value",
   "objectId": "objectId-value",
@@ -60,8 +62,8 @@ Content-length: 111
 }
 ```
 
-<!-- uuid: 4df3a13f-2fec-4fde-8760-39f562528a23
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 52e1bae8-ff7b-4cae-ab00-3475466d9a1c
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of directoryobject object.",

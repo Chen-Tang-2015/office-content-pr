@@ -22,25 +22,27 @@ If successful, this method returns `200, OK` response code and [Message](../reso
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "eventmessage_createreply"
 }-->
 ```http
 
-Content-type: application/json
-Content-length: 0
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "message"
+  "@odata.type": "microsoft.graph.message"
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 1546
+
 {
   "Subject": "Subject-value",
   "Body": {
@@ -117,8 +119,8 @@ Content-length: 1546
 }
 ```
 
-<!-- uuid: 87c04f19-5cc1-417e-be7c-78b64d8509e8
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 505211dc-5b7a-4103-bde8-3021be000eaa
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "EventMessage: CreateReply",

@@ -30,6 +30,7 @@ If successful, this method returns `200, OK` response code and [item](../resourc
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "item_copy"
@@ -38,6 +39,7 @@ Here is an example of how to call this API.
 POST /drive/root/copy
 Content-type: application/json
 Content-length: 133
+
 {
   "parentReference": {
     "driveId": "driveId-value",
@@ -46,17 +48,20 @@ Content-length: 133
   },
   "name": "name-value"
 }
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "item"
+  "@odata.type": "microsoft.graph.item"
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 3050
+
 {
   "content": "content-value",
   "createdBy": {
@@ -200,8 +205,8 @@ Content-length: 3050
 }
 ```
 
-<!-- uuid: 945d4d46-b42b-449f-b2de-08c99bfd90d0
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 30e5666a-ef80-43b0-83f2-c4c3c3d67266
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "item: copy",

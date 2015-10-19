@@ -11,12 +11,12 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.Extension"
+  "@odata.type": "microsoft.graph.extension"
 }-->
 
 ```json
 {
-  "Id": "String (identifier)"
+  "Id": "String-value (identifier)"
 }
 
 ```
@@ -34,10 +34,10 @@ None
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get Extension](../api/extension_get.md) | [Extension](extension.md) |Read properties and relationships of extension object.|
-|[Delete](../api/extension_delete.md) | Void	|Delete Extension object. |
+|[Delete](../api/extension_delete.md) | None |Delete Extension object. |
 
-<!-- uuid: b4d487f0-6988-4946-be93-0079633b1ad6
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: b20fbaf7-d220-4f6c-8e8f-48d88217b407
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Extension resource",

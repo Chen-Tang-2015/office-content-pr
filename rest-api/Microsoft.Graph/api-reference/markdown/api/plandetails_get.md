@@ -28,17 +28,27 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and [PlanDetails](../resources/plandetails.md) object in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_plandetails"
+}-->
+```http
+GET /plans/<id>/details
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "plandetails"
+  "@odata.type": "microsoft.graph.plandetails"
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 75
+
 {
   "sharedWith": {
   },
@@ -46,10 +56,9 @@ Content-length: 75
   "version": "version-value"
 }
 ```
-If successful, this method returns a `200 OK` response code and [PlanDetails](../resources/plandetails.md) object in the response body.
 
-<!-- uuid: 3e06cf61-51ea-4cf6-bb82-d7fd3d2e8599
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: f7f59e5f-22f6-4f10-b3ee-1b141f6fd35f
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get PlanDetails",

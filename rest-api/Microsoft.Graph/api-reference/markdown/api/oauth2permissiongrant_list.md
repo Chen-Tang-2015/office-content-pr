@@ -23,19 +23,30 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and collection of [OAuth2PermissionGrant](../resources/oauth2permissiongrant.md) objects in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_oauth2permissiongrants"
+}-->
+```http
+GET /oauth2PermissionGrants
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "oauth2permissiongrants"
+  "@odata.type": "microsoft.graph.oauth2permissiongrant",
+  "isCollection": true
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 333
+Content-length: 332
+
 {
-  "values": [
+  "value": [
     {
       "clientId": "clientId-value",
       "consentType": "consentType-value",
@@ -49,10 +60,9 @@ Content-length: 333
   ]
 }
 ```
-If successful, this method returns a `200 OK` response code and collection of [OAuth2PermissionGrant](../resources/oauth2permissiongrant.md) objects in the response body.
 
-<!-- uuid: 98ad744f-ad75-4a53-991d-1b3aaf695427
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 75a9c236-7204-4456-aa2b-a7ddef98bf24
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "List OAuth2PermissionGrant",

@@ -28,17 +28,27 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and [CalendarGroup](../resources/calendargroup.md) object in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_calendargroup"
+}-->
+```http
+GET /users/<objectId>/CalendarGroups/<Id>
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "calendargroup"
+  "@odata.type": "microsoft.graph.calendargroup"
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 110
+
 {
   "Name": "Name-value",
   "ChangeKey": "ChangeKey-value",
@@ -46,10 +56,9 @@ Content-length: 110
   "Id": "Id-value"
 }
 ```
-If successful, this method returns a `200 OK` response code and [CalendarGroup](../resources/calendargroup.md) object in the response body.
 
-<!-- uuid: c6b1acbe-2f12-4d67-9178-6929dea19e76
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: c8fcd9bb-0b9d-467f-9b56-133606b642de
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get CalendarGroup",

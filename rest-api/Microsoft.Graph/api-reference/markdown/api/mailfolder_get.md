@@ -28,17 +28,27 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and [MailFolder](../resources/mailfolder.md) object in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_mailfolder"
+}-->
+```http
+GET /users/<objectId>/Folders/<Id>
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "mailfolder"
+  "@odata.type": "microsoft.graph.mailfolder"
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 130
+
 {
   "ParentFolderId": "ParentFolderId-value",
   "DisplayName": "DisplayName-value",
@@ -46,10 +56,9 @@ Content-length: 130
   "Id": "Id-value"
 }
 ```
-If successful, this method returns a `200 OK` response code and [MailFolder](../resources/mailfolder.md) object in the response body.
 
-<!-- uuid: c11f8288-24d5-41f6-ac1b-3b9a5fbe153e
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 84184e00-afe9-443d-bc5d-a74472d97de2
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get MailFolder",

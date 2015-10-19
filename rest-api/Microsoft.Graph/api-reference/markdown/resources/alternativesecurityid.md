@@ -11,13 +11,13 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.AlternativeSecurityId"
+  "@odata.type": "microsoft.graph.alternativesecurityid"
 }-->
 
 ```json
 {
-  "identityProvider": "String",
-  "key": "String",
+  "identityProvider": "String-value",
+  "key": "Binary-value",
   "type": 1024
 }
 
@@ -29,8 +29,8 @@ Here is a JSON representation of the resource
 |key|Binary|            |
 |type|Int32|            |
 
-<!-- uuid: baf5a198-cfe8-43c0-916d-57527206f9f2
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 8ec2814e-1ffc-4d8d-afab-b20c1f45af60
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "AlternativeSecurityId resource",

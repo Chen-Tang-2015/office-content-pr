@@ -11,18 +11,18 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.OAuth2PermissionGrant"
+  "@odata.type": "microsoft.graph.oauth2permissiongrant"
 }-->
 
 ```json
 {
-  "clientId": "String",
-  "consentType": "String",
+  "clientId": "String-value",
+  "consentType": "String-value",
   "expiryTime": "String (timestamp)",
-  "objectId": "String (identifier)",
-  "principalId": "String",
-  "resourceId": "String",
-  "scope": "String",
+  "objectId": "String-value (identifier)",
+  "principalId": "String-value",
+  "resourceId": "String-value",
+  "scope": "String-value",
   "startTime": "String (timestamp)"
 }
 
@@ -49,10 +49,10 @@ None
 |:---------------|:--------|:----------|
 |[Get OAuth2PermissionGrant](../api/oauth2permissiongrant_get.md) | [OAuth2PermissionGrant](oauth2permissiongrant.md) |Read properties and relationships of oAuth2PermissionGrant object.|
 |[Update](../api/oauth2permissiongrant_update.md) | [OAuth2PermissionGrant](oauth2permissiongrant.md)	|Update OAuth2PermissionGrant object. |
-|[Delete](../api/oauth2permissiongrant_delete.md) | Void	|Delete OAuth2PermissionGrant object. |
+|[Delete](../api/oauth2permissiongrant_delete.md) | None |Delete OAuth2PermissionGrant object. |
 
-<!-- uuid: 4dc85f9a-bcc8-4954-82d9-ad1e8c85d1b3
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 2c9c9771-2f63-41c6-ac32-a05acc1264b6
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "OAuth2PermissionGrant resource",

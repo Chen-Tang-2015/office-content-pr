@@ -36,6 +36,7 @@ Here is an example of the request.
 PUT /users/<objectId>/ContactFolders/<Id>
 Content-type: application/json
 Content-length: 104
+
 {
   "ParentFolderId": "ParentFolderId-value",
   "DisplayName": "DisplayName-value",
@@ -43,16 +44,17 @@ Content-length: 104
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "contactfolder"
+  "@odata.type": "microsoft.graph.contactfolder"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 104
+
 {
   "ParentFolderId": "ParentFolderId-value",
   "DisplayName": "DisplayName-value",
@@ -60,8 +62,8 @@ Content-length: 104
 }
 ```
 
-<!-- uuid: 71c2c3f0-409a-49c6-a818-e1786ffd271f
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 3930a001-ac21-4992-b779-f1a9876cd257
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of contactfolder object.",

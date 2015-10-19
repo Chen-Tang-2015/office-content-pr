@@ -33,6 +33,7 @@ Here is an example of the request.
 
 Content-type: application/json
 Content-length: 48
+
 {
   "Id": "Id-value",
   "ExtensionName": {
@@ -40,16 +41,17 @@ Content-length: 48
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "opentypeextension"
+  "@odata.type": "microsoft.graph.opentypeextension"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 48
+
 {
   "Id": "Id-value",
   "ExtensionName": {
@@ -57,8 +59,8 @@ Content-length: 48
 }
 ```
 
-<!-- uuid: ba9f12d5-121f-4069-8060-2ce8e60d8733
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: e7155112-e767-440e-983b-f1f1a6942916
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of opentypeextension object.",

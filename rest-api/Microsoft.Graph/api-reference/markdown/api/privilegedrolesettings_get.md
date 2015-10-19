@@ -27,17 +27,27 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and [PrivilegedRoleSettings](../resources/privilegedrolesettings.md) object in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_privilegedrolesettings"
+}-->
+```http
+GET /PrivilegedRoles/<Id>/Settings
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "privilegedrolesettings"
+  "@odata.type": "microsoft.graph.privilegedrolesettings"
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 289
+
 {
   "MinElevationDuration": "datetime-value",
   "MaxElavationDuration": "datetime-value",
@@ -49,10 +59,9 @@ Content-length: 289
   "LastGlobalAdmin": true
 }
 ```
-If successful, this method returns a `200 OK` response code and [PrivilegedRoleSettings](../resources/privilegedrolesettings.md) object in the response body.
 
-<!-- uuid: e371499b-b607-49d0-8371-ab7788127063
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: a1655fbe-712a-42c7-8785-90c82d5cb124
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get PrivilegedRoleSettings",

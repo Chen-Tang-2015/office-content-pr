@@ -28,17 +28,27 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and [Message](../resources/message.md) object in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_message"
+}-->
+```http
+GET /users/<objectId>/Messages/<Id>
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "message"
+  "@odata.type": "microsoft.graph.message"
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 1546
+
 {
   "Subject": "Subject-value",
   "Body": {
@@ -114,10 +124,9 @@ Content-length: 1546
   "Id": "Id-value"
 }
 ```
-If successful, this method returns a `200 OK` response code and [Message](../resources/message.md) object in the response body.
 
-<!-- uuid: 0da41ebc-f193-4d1e-b6d6-db89e481bbad
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: ad123651-74e0-494d-b208-79b80c8c3130
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Message",

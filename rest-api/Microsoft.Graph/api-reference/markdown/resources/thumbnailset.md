@@ -11,12 +11,12 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.thumbnailSet"
+  "@odata.type": "microsoft.graph.thumbnailset"
 }-->
 
 ```json
 {
-  "id": "String (identifier)",
+  "id": "String-value (identifier)",
   "large": {
     "@odata.type": "microsoft.graph.thumbnail"
   },
@@ -51,10 +51,10 @@ None
 |:---------------|:--------|:----------|
 |[Get thumbnailSet](../api/thumbnailset_get.md) | [thumbnailSet](thumbnailset.md) |Read properties and relationships of thumbnailSet object.|
 |[Update](../api/thumbnailset_update.md) | [thumbnailSet](thumbnailset.md)	|Update thumbnailSet object. |
-|[Delete](../api/thumbnailset_delete.md) | Void	|Delete thumbnailSet object. |
+|[Delete](../api/thumbnailset_delete.md) | None |Delete thumbnailSet object. |
 
-<!-- uuid: e6320e56-8090-4317-b3ea-4f92b595513e
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 5cd3c7e6-d80a-45f1-9034-9ed8e1ae0fe9
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "thumbnailSet resource",

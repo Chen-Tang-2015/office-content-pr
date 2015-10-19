@@ -11,7 +11,7 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.LicenseUnitsDetail"
+  "@odata.type": "microsoft.graph.licenseunitsdetail"
 }-->
 
 ```json
@@ -29,8 +29,8 @@ Here is a JSON representation of the resource
 |suspended|Int32|            |
 |warning|Int32|            |
 
-<!-- uuid: 3b2fab2f-472b-4d27-85c4-ee78b1c2cfed
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 3c9ab441-73cf-4698-b2dc-8892d2417a02
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "LicenseUnitsDetail resource",

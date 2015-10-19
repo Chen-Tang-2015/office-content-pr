@@ -28,17 +28,27 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and [ConversationThread](../resources/conversationthread.md) object in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_conversationthread"
+}-->
+```http
+GET /groups/<objectId>/Threads/<Id>
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "conversationthread"
+  "@odata.type": "microsoft.graph.conversationthread"
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 489
+
 {
   "ToRecipients": [
     {
@@ -67,10 +77,9 @@ Content-length: 489
   "Id": "Id-value"
 }
 ```
-If successful, this method returns a `200 OK` response code and [ConversationThread](../resources/conversationthread.md) object in the response body.
 
-<!-- uuid: 12a5c37f-aef2-425d-b223-2e26bdf06722
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 2aee3cc5-b897-47f8-8749-9d78e8196241
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get ConversationThread",

@@ -52,7 +52,8 @@ Here is an example of the request.
 ```http
 PUT /servicePrincipals/<objectId>
 Content-type: application/json
-Content-length: 1924
+Content-length: 1942
+
 {
   "accountEnabled": true,
   "appDisplayName": "appDisplayName-value",
@@ -61,7 +62,9 @@ Content-length: 1924
   "appRoleAssignmentRequired": true,
   "appRoles": [
     {
-      "allowedMemberTypes": "allowedMemberTypes-value",
+      "allowedMemberTypes": [
+        "allowedMemberTypes-value"
+      ],
       "description": "description-value",
       "displayName": "displayName-value",
       "id": "id-value",
@@ -123,16 +126,17 @@ Content-length: 1924
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "serviceprincipal"
+  "@odata.type": "microsoft.graph.serviceprincipal"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 1924
+Content-length: 1942
+
 {
   "accountEnabled": true,
   "appDisplayName": "appDisplayName-value",
@@ -141,7 +145,9 @@ Content-length: 1924
   "appRoleAssignmentRequired": true,
   "appRoles": [
     {
-      "allowedMemberTypes": "allowedMemberTypes-value",
+      "allowedMemberTypes": [
+        "allowedMemberTypes-value"
+      ],
       "description": "description-value",
       "displayName": "displayName-value",
       "id": "id-value",
@@ -203,8 +209,8 @@ Content-length: 1924
 }
 ```
 
-<!-- uuid: 74585ee1-333d-446b-8493-9dd7426c804f
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: d801f7a4-c1cf-4e14-b1fe-34924fd2d145
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of serviceprincipal object.",

@@ -32,7 +32,6 @@ Here is an example of the request.
 }-->
 ```http
 POST /groups/<objectId>/Threads/<Id>
-Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Post](../resources/post.md) object.
 ##### Response
@@ -40,12 +39,13 @@ Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "post"
+  "@odata.type": "microsoft.graph.post"
 } -->
-```json
+```http
 HTTP/1.1 201 Created
 Content-type: application/json
 Content-length: 790
+
 {
   "Body": {
     "ContentType": "ContentType-value",
@@ -85,8 +85,8 @@ Content-length: 790
 }
 ```
 
-<!-- uuid: d361a077-3c76-46fd-a3d8-ae9f05935e6b
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 819c0779-00cd-4e3a-b19f-ccc7dbcfa52a
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Post",

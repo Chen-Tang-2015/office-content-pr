@@ -28,17 +28,27 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and [item](../resources/item.md) object in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_item"
+}-->
+```http
+GET /drive/root
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "item"
+  "@odata.type": "microsoft.graph.item"
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 3050
+
 {
   "content": "content-value",
   "createdBy": {
@@ -181,10 +191,9 @@ Content-length: 3050
   }
 }
 ```
-If successful, this method returns a `200 OK` response code and [item](../resources/item.md) object in the response body.
 
-<!-- uuid: b48a5514-8fae-4c7d-a20b-dffa0a0a6fce
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 4e97ef7e-b4b4-415d-b398-aab8eb31807f
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get item",

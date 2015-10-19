@@ -11,19 +11,19 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.OAuth2Permission"
+  "@odata.type": "microsoft.graph.oauth2permission"
 }-->
 
 ```json
 {
-  "adminConsentDescription": "String",
-  "adminConsentDisplayName": "String",
-  "id": "String",
+  "adminConsentDescription": "String-value",
+  "adminConsentDisplayName": "String-value",
+  "id": "Guid-value",
   "isEnabled": true,
-  "type": "String",
-  "userConsentDescription": "String",
-  "userConsentDisplayName": "String",
-  "value": "String"
+  "type": "String-value",
+  "userConsentDescription": "String-value",
+  "userConsentDisplayName": "String-value",
+  "value": "String-value"
 }
 
 ```
@@ -39,8 +39,8 @@ Here is a JSON representation of the resource
 |userConsentDisplayName|String|Display name for the permission that appears in the end user consent experience.|
 |value|String|The value of the scope claim that the resource application should expect in the OAuth 2.0 access token.|
 
-<!-- uuid: f519c97e-37c4-4ae5-962f-6540e47bec5e
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 8afdfc76-4aca-404c-95b4-29bf26a74e95
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "OAuth2Permission resource",

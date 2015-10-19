@@ -23,19 +23,30 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and collection of [DeviceConfiguration](../resources/deviceconfiguration.md) objects in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_deviceconfiguration"
+}-->
+```http
+GET /deviceConfiguration
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "deviceconfiguration"
+  "@odata.type": "microsoft.graph.deviceconfiguration",
+  "isCollection": true
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 415
+Content-length: 414
+
 {
-  "values": [
+  "value": [
     {
       "publicIssuerCertificates": [
         "publicIssuerCertificates-value"
@@ -52,10 +63,9 @@ Content-length: 415
   ]
 }
 ```
-If successful, this method returns a `200 OK` response code and collection of [DeviceConfiguration](../resources/deviceconfiguration.md) objects in the response body.
 
-<!-- uuid: a428eee3-1f5e-4499-86f5-590cc0b06d27
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 4d2ec629-9c2d-4750-9484-0c5e73c3a952
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "List DeviceConfiguration",

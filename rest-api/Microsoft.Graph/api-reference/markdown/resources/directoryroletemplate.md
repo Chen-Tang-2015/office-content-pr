@@ -11,16 +11,16 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.DirectoryRoleTemplate"
+  "@odata.type": "microsoft.graph.directoryroletemplate"
 }-->
 
 ```json
 {
   "deletionTimestamp": "String (timestamp)",
-  "description": "String",
-  "displayName": "String",
-  "objectId": "String (identifier)",
-  "objectType": "String"
+  "description": "String-value",
+  "displayName": "String-value",
+  "objectId": "String-value (identifier)",
+  "objectType": "String-value"
 }
 
 ```
@@ -43,13 +43,13 @@ None
 |:---------------|:--------|:----------|
 |[Get DirectoryRoleTemplate](../api/directoryroletemplate_get.md) | [DirectoryRoleTemplate](directoryroletemplate.md) |Read properties and relationships of directoryRoleTemplate object.|
 |[Update](../api/directoryroletemplate_update.md) | [DirectoryRoleTemplate](directoryroletemplate.md)	|Update DirectoryRoleTemplate object. |
-|[Delete](../api/directoryroletemplate_delete.md) | Void	|Delete DirectoryRoleTemplate object. |
+|[Delete](../api/directoryroletemplate_delete.md) | None |Delete DirectoryRoleTemplate object. |
 |[Checkmembergroups](../api/directoryroletemplate_checkmembergroups.md)|String||
 |[Get MemberGroups](../api/directoryroletemplate_getmembergroups.md)|String||
 |[Get MemberObjects](../api/directoryroletemplate_getmemberobjects.md)|String||
 
-<!-- uuid: a3a1901c-48e3-4014-9523-433202ea6478
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 8ff6bc47-c17f-4340-906d-66c155714941
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "DirectoryRoleTemplate resource",

@@ -29,6 +29,7 @@ If successful, this method returns `200, OK` response code and [uploadSession](.
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "item_createsession"
@@ -37,22 +38,26 @@ Here is an example of how to call this API.
 POST /drive/root/createSession
 Content-type: application/json
 Content-length: 44
+
 {
   "item": {
     "name": "name-value"
   }
 }
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "uploadsession"
+  "@odata.type": "microsoft.graph.uploadsession"
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 140
+
 {
   "uploadUrl": "uploadUrl-value",
   "expirationDateTime": "datetime-value",
@@ -62,8 +67,8 @@ Content-length: 140
 }
 ```
 
-<!-- uuid: e5f178b3-0884-4c8f-803f-31a279b6c0e1
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 0fc98d7d-9d46-45f5-8bef-f5583292da82
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "item: createSession",

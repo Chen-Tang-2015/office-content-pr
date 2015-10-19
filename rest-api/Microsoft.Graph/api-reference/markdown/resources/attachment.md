@@ -11,16 +11,16 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.Attachment"
+  "@odata.type": "microsoft.graph.attachment"
 }-->
 
 ```json
 {
-  "ContentType": "String",
+  "ContentType": "String-value",
   "DateTimeLastModified": "String (timestamp)",
-  "Id": "String (identifier)",
+  "Id": "String-value (identifier)",
   "IsInline": true,
-  "Name": "String",
+  "Name": "String-value",
   "Size": 1024
 }
 
@@ -45,10 +45,10 @@ None
 |:---------------|:--------|:----------|
 |[Get Attachment](../api/attachment_get.md) | [Attachment](attachment.md) |Read properties and relationships of attachment object.|
 |[Update](../api/attachment_update.md) | [Attachment](attachment.md)	|Update Attachment object. |
-|[Delete](../api/attachment_delete.md) | Void	|Delete Attachment object. |
+|[Delete](../api/attachment_delete.md) | None |Delete Attachment object. |
 
-<!-- uuid: 8314e693-56ee-4444-9986-c58fd473dc87
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 51507a6f-b719-4f47-8745-8e7f25d5f530
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Attachment resource",

@@ -38,6 +38,7 @@ Here is an example of the request.
 PUT /subscribedSkus/<objectId>
 Content-type: application/json
 Content-length: 388
+
 {
   "capabilityStatus": "capabilityStatus-value",
   "consumedUnits": 99,
@@ -58,16 +59,17 @@ Content-length: 388
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "subscribedsku"
+  "@odata.type": "microsoft.graph.subscribedsku"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 388
+
 {
   "capabilityStatus": "capabilityStatus-value",
   "consumedUnits": 99,
@@ -88,8 +90,8 @@ Content-length: 388
 }
 ```
 
-<!-- uuid: 2a0a37eb-a3f6-42c1-8f2f-87e3ae6c974e
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 58e9051d-33a4-4c05-83b6-19ab8fab23c2
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of subscribedsku object.",

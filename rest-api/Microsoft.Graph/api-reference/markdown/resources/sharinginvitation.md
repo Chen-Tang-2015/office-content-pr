@@ -11,13 +11,13 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.sharingInvitation"
+  "@odata.type": "microsoft.graph.sharinginvitation"
 }-->
 
 ```json
 {
-  "email": "String",
-  "redeemedBy": "String",
+  "email": "String-value",
+  "redeemedBy": "String-value",
   "signInRequired": true
 }
 
@@ -29,8 +29,8 @@ Here is a JSON representation of the resource
 |redeemedBy|String||
 |signInRequired|Boolean||
 
-<!-- uuid: 6091ed47-e242-44e1-8af4-45d8a52bd38b
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 02c79fe7-40d9-4c54-ae3e-872d1329f839
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "sharingInvitation resource",

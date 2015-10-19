@@ -12,25 +12,25 @@ Here is a JSON representation of the resource
     "CalendarView",
     "Events"
   ],
-  "@odata.type": "microsoft.graph.Calendar"
+  "@odata.type": "microsoft.graph.calendar"
 }-->
 
 ```json
 {
   "CalendarView": [
     {
-      "@odata.type": "microsoft.graph.Event"
+      "@odata.type": "microsoft.graph.event"
     }
   ],
-  "ChangeKey": "String",
-  "Color": "String",
+  "ChangeKey": "String-value",
+  "Color": "String-value",
   "Events": [
     {
-      "@odata.type": "microsoft.graph.Event"
+      "@odata.type": "microsoft.graph.event"
     }
   ],
-  "Id": "String (identifier)",
-  "Name": "String"
+  "Id": "String-value (identifier)",
+  "Name": "String-value"
 }
 
 ```
@@ -56,10 +56,10 @@ Here is a JSON representation of the resource
 |[Create Event](../api/calendar_post_calendarview.md) |[Event](event.md)| Create a new Event by posting to the CalendarView collection.|
 |[Create Event](../api/calendar_post_events.md) |[Event](event.md)| Create a new Event by posting to the Events collection.|
 |[Update](../api/calendar_update.md) | [Calendar](calendar.md)	|Update Calendar object. |
-|[Delete](../api/calendar_delete.md) | Void	|Delete Calendar object. |
+|[Delete](../api/calendar_delete.md) | None |Delete Calendar object. |
 
-<!-- uuid: 899bcecc-0c09-4dc3-9743-0a2fb464ea9b
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 1db0f2f3-cf17-47d8-a8d6-5b0dc0d8cb4b
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Calendar resource",

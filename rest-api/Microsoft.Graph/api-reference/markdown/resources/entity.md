@@ -11,12 +11,12 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.Entity"
+  "@odata.type": "microsoft.graph.entity"
 }-->
 
 ```json
 {
-  "Id": "String (identifier)"
+  "Id": "String-value (identifier)"
 }
 
 ```
@@ -34,10 +34,10 @@ None
 | Task		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get Entity](../api/entity_get.md) | [Entity](entity.md) |Read properties and relationships of entity object.|
-|[Delete](../api/entity_delete.md) | Void	|Delete Entity object. |
+|[Delete](../api/entity_delete.md) | None |Delete Entity object. |
 
-<!-- uuid: 199ba63d-1d45-49fa-8cea-dffd14417d7a
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 03bebdb7-d7a3-43f6-a97c-53870a0224c6
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Entity resource",

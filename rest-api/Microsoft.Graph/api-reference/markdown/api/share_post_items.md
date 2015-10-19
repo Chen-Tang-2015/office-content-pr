@@ -30,7 +30,6 @@ Here is an example of the request.
 }-->
 ```http
 POST /shares/<id>
-Content-type: application/json
 ```
 In the request body, supply a JSON representation of [item](../resources/item.md) object.
 ##### Response
@@ -38,12 +37,13 @@ Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "item"
+  "@odata.type": "microsoft.graph.item"
 } -->
-```json
+```http
 HTTP/1.1 201 Created
 Content-type: application/json
 Content-length: 3050
+
 {
   "content": "content-value",
   "createdBy": {
@@ -187,8 +187,8 @@ Content-length: 3050
 }
 ```
 
-<!-- uuid: 12690de1-5bfc-4c9a-ac3b-e2f1628db67d
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: da6ffba0-a96b-4e0d-bced-2057da26d5f6
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create item",

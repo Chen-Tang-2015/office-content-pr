@@ -11,15 +11,15 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.Notification"
+  "@odata.type": "microsoft.graph.notification"
 }-->
 
 ```json
 {
-  "DisplayName": "String",
-  "Id": "String (identifier)",
-  "NotificationTarget": "String",
-  "NotificationType": "String"
+  "DisplayName": "String-value",
+  "Id": "String-value (identifier)",
+  "NotificationTarget": "String-value",
+  "NotificationType": "String-value"
 }
 
 ```
@@ -41,11 +41,11 @@ None
 |:---------------|:--------|:----------|
 |[Get Notification](../api/notification_get.md) | [Notification](notification.md) |Read properties and relationships of notification object.|
 |[Update](../api/notification_update.md) | [Notification](notification.md)	|Update Notification object. |
-|[Delete](../api/notification_delete.md) | Void	|Delete Notification object. |
+|[Delete](../api/notification_delete.md) | None |Delete Notification object. |
 |[Notificationtypes](../api/notification_notificationtypes.md)|String||
 
-<!-- uuid: 0dbacf9b-035c-469e-9cc6-302394ed38af
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 3327df25-fc09-468f-a449-caaa036d32d6
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Notification resource",

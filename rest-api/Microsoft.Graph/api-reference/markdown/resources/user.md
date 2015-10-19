@@ -1,6 +1,7 @@
 # User resource type
 
-Represents an Azure AD user account. Inherits from [DirectoryObject].
+Represents an Azure AD user account. Inherits from DirectoryObject.
+
 
 ### JSON representation
 
@@ -9,6 +10,7 @@ Here is a JSON representation of the resource
 <!-- {
   "blockType": "resource",
   "optionalProperties": [
+    "Calendar",
     "CalendarGroups",
     "CalendarView",
     "Calendars",
@@ -19,10 +21,13 @@ Here is a JSON representation of the resource
     "JoinedGroups",
     "Messages",
     "TrendingAround",
+    "UserPhoto",
     "WorkingWith",
     "appRoleAssignments",
     "createdObjects",
     "directReports",
+    "drive",
+    "manager",
     "memberOf",
     "oauth2PermissionGrants",
     "ownedDevices",
@@ -31,214 +36,214 @@ Here is a JSON representation of the resource
     "registeredDevices",
     "tasks"
   ],
-  "@odata.type": "microsoft.graph.User"
+  "@odata.type": "microsoft.graph.user"
 }-->
 
 ```json
 {
   "Calendar": {
-    "@odata.type": "microsoft.graph.Calendar"
+    "@odata.type": "microsoft.graph.calendar"
   },
   "CalendarGroups": [
     {
-      "@odata.type": "microsoft.graph.CalendarGroup"
+      "@odata.type": "microsoft.graph.calendargroup"
     }
   ],
   "CalendarView": [
     {
-      "@odata.type": "microsoft.graph.Event"
+      "@odata.type": "microsoft.graph.event"
     }
   ],
   "Calendars": [
     {
-      "@odata.type": "microsoft.graph.Calendar"
+      "@odata.type": "microsoft.graph.calendar"
     }
   ],
   "ContactFolders": [
     {
-      "@odata.type": "microsoft.graph.ContactFolder"
+      "@odata.type": "microsoft.graph.contactfolder"
     }
   ],
   "Contacts": [
     {
-      "@odata.type": "microsoft.graph.Contact"
+      "@odata.type": "microsoft.graph.contact"
     }
   ],
   "Events": [
     {
-      "@odata.type": "microsoft.graph.Event"
+      "@odata.type": "microsoft.graph.event"
     }
   ],
   "Folders": [
     {
-      "@odata.type": "microsoft.graph.MailFolder"
+      "@odata.type": "microsoft.graph.mailfolder"
     }
   ],
   "JoinedGroups": [
     {
-      "@odata.type": "microsoft.graph.Group"
+      "@odata.type": "microsoft.graph.group"
     }
   ],
-  "MailboxGuid": "String",
+  "MailboxGuid": "Guid-value",
   "Messages": [
     {
-      "@odata.type": "microsoft.graph.Message"
+      "@odata.type": "microsoft.graph.message"
     }
   ],
   "TrendingAround": [
     {
-      "@odata.type": "microsoft.graph.File"
+      "@odata.type": "microsoft.graph.file"
     }
   ],
   "UserPhoto": {
-    "@odata.type": "microsoft.graph.Photo"
+    "@odata.type": "microsoft.graph.photo"
   },
   "WorkingWith": [
     {
-      "@odata.type": "microsoft.graph.User"
+      "@odata.type": "microsoft.graph.user"
     }
   ],
-  "aboutMe": "String",
+  "aboutMe": "String-value",
   "accountEnabled": true,
-  "alias": "String",
+  "alias": "String-value",
   "appRoleAssignments": [
     {
-      "@odata.type": "microsoft.graph.AppRoleAssignment"
+      "@odata.type": "microsoft.graph.approleassignment"
     }
   ],
   "assignedLicenses": [
     {
-      "@odata.type": "microsoft.graph.AssignedLicense"
+      "@odata.type": "microsoft.graph.assignedlicense"
     }
   ],
   "assignedPlans": [
     {
-      "@odata.type": "microsoft.graph.AssignedPlan"
+      "@odata.type": "microsoft.graph.assignedplan"
     }
   ],
   "birthday": "String (timestamp)",
-  "city": "String",
-  "country": "String",
+  "city": "String-value",
+  "country": "String-value",
   "createdObjects": [
     {
-      "@odata.type": "microsoft.graph.DirectoryObject"
+      "@odata.type": "microsoft.graph.directoryobject"
     }
   ],
   "deletionTimestamp": "String (timestamp)",
-  "department": "String",
+  "department": "String-value",
   "dirSyncEnabled": true,
   "directReports": [
     {
-      "@odata.type": "microsoft.graph.DirectoryObject"
+      "@odata.type": "microsoft.graph.directoryobject"
     }
   ],
-  "displayName": "String",
+  "displayName": "String-value",
   "drive": {
     "@odata.type": "microsoft.graph.drive"
   },
-  "facsimileTelephoneNumber": "String",
-  "givenName": "String",
+  "facsimileTelephoneNumber": "String-value",
+  "givenName": "String-value",
   "hireDate": "String (timestamp)",
-  "immutableId": "String",
+  "immutableId": "String-value",
   "interests": [
-    "String"
+    "String-value"
   ],
-  "jobTitle": "String",
+  "jobTitle": "String-value",
   "lastDirSyncTime": "String (timestamp)",
-  "mail": "String",
-  "mailNickname": "String",
+  "mail": "String-value",
+  "mailNickname": "String-value",
   "manager": {
-    "@odata.type": "microsoft.graph.DirectoryObject"
+    "@odata.type": "microsoft.graph.directoryobject"
   },
   "memberOf": [
     {
-      "@odata.type": "microsoft.graph.DirectoryObject"
+      "@odata.type": "microsoft.graph.directoryobject"
     }
   ],
-  "mobile": "String",
-  "mySite": "String",
+  "mobile": "String-value",
+  "mySite": "String-value",
   "oauth2PermissionGrants": [
     {
-      "@odata.type": "microsoft.graph.OAuth2PermissionGrant"
+      "@odata.type": "microsoft.graph.oauth2permissiongrant"
     }
   ],
-  "objectId": "String (identifier)",
-  "objectType": "String",
-  "onPremisesSecurityIdentifier": "String",
+  "objectId": "String-value (identifier)",
+  "objectType": "String-value",
+  "onPremisesSecurityIdentifier": "String-value",
   "otherMails": [
-    "String"
+    "String-value"
   ],
   "ownedDevices": [
     {
-      "@odata.type": "microsoft.graph.DirectoryObject"
+      "@odata.type": "microsoft.graph.directoryobject"
     }
   ],
   "ownedObjects": [
     {
-      "@odata.type": "microsoft.graph.DirectoryObject"
+      "@odata.type": "microsoft.graph.directoryobject"
     }
   ],
-  "passwordPolicies": "String",
+  "passwordPolicies": "String-value",
   "passwordProfile": {
-    "@odata.type": "microsoft.graph.PasswordProfile"
+    "@odata.type": "microsoft.graph.passwordprofile"
   },
   "pastProjects": [
-    "String"
+    "String-value"
   ],
-  "physicalDeliveryOfficeName": "String",
+  "physicalDeliveryOfficeName": "String-value",
   "plans": [
     {
-      "@odata.type": "microsoft.graph.Plan"
+      "@odata.type": "microsoft.graph.plan"
     }
   ],
-  "postalCode": "String",
-  "preferredLanguage": "String",
-  "preferredName": "String",
-  "principalName": "String",
+  "postalCode": "String-value",
+  "preferredLanguage": "String-value",
+  "preferredName": "String-value",
+  "principalName": "String-value",
   "provisionedPlans": [
     {
-      "@odata.type": "microsoft.graph.ProvisionedPlan"
+      "@odata.type": "microsoft.graph.provisionedplan"
     }
   ],
   "provisioningErrors": [
     {
-      "@odata.type": "microsoft.graph.ProvisioningError"
+      "@odata.type": "microsoft.graph.provisioningerror"
     }
   ],
   "proxyAddresses": [
-    "String"
+    "String-value"
   ],
   "registeredDevices": [
     {
-      "@odata.type": "microsoft.graph.DirectoryObject"
+      "@odata.type": "microsoft.graph.directoryobject"
     }
   ],
   "responsibilities": [
-    "String"
+    "String-value"
   ],
   "schools": [
-    "String"
+    "String-value"
   ],
-  "sipProxyAddress": "String",
+  "sipProxyAddress": "String-value",
   "skills": [
-    "String"
+    "String-value"
   ],
-  "state": "String",
-  "streetAddress": "String",
-  "surname": "String",
+  "state": "String-value",
+  "streetAddress": "String-value",
+  "surname": "String-value",
   "tags": [
-    "String"
+    "String-value"
   ],
   "tasks": [
     {
-      "@odata.type": "microsoft.graph.Task"
+      "@odata.type": "microsoft.graph.task"
     }
   ],
-  "telephoneNumber": "String",
-  "thumbnailPhoto": "String",
-  "usageLocation": "String",
-  "userPrincipalName": "String",
-  "userType": "String"
+  "telephoneNumber": "String-value",
+  "thumbnailPhoto": "Stream-value",
+  "usageLocation": "String-value",
+  "userPrincipalName": "String-value",
+  "userType": "String-value"
 }
 
 ```
@@ -253,7 +258,7 @@ Here is a JSON representation of the resource
 |assignedPlans|[AssignedPlan](assignedplan.md) collection|The plans that are assigned to the user.                            **Notes**: not nullable.            |
 |birthday|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |city|String|The city in which the user is located.|
-|country|String|The country/region in which the user is located; for example, ΓÇ£USΓÇ¥ or ΓÇ£UKΓÇ¥.|
+|country|String|The country/region in which the user is located.|
 |deletionTimestamp|DateTimeOffset|This property is not valid for users and always returns **null**. Inherited from [DirectoryObject].                            **Notes**: Requires version 1.5 or newer.            The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |department|String|The name for the department in which the user works.|
 |dirSyncEnabled|Boolean|                **true** if this object is synced from an on-premises directory; **false** if this object was originally synced from an on-premises directory but is no longer synced; **null** if this object has never been synced from an on-premises directory (default).            |
@@ -261,7 +266,7 @@ Here is a JSON representation of the resource
 |facsimileTelephoneNumber|String|The telephone number of the user's business fax machine.|
 |givenName|String|The given name (first name) of the user.|
 |hireDate|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|immutableId|String|This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the userΓÇÖs **userPrincipalName** (UPN) property.                            **Important:** The **$** and **_** characters cannot be used when specifying this property.                                        **Notes**: Requires version 2013-11-08 or newer.            |
+|immutableId|String|This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user's **userPrincipalName** (UPN) property. **Important:** The **$** and **_** characters cannot be used when specifying this property.  **Notes**: Requires version 2013-11-08 or newer.            |
 |interests|String collection||
 |jobTitle|String|The userΓÇÖs job title.|
 |lastDirSyncTime|DateTimeOffset|Indicates the last time at which the object was synced with the on-premises directory; for example: "2013-02-16T03:04:54Z" The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
@@ -270,11 +275,11 @@ Here is a JSON representation of the resource
 |mobile|String|The primary cellular telephone number for the user.|
 |mySite|String||
 |objectId|String|The unique identifier for the user. Inherited from [DirectoryObject].                            **Notes**: **key**, immutable, not nullable, unique.             Read-only.|
-|objectType|String|A string that identifies the object type. For users the value is always ΓÇ£UserΓÇ¥. Inherited from [DirectoryObject].|
+|objectType|String|A string that identifies the object type. For users the value is always `User`. Inherited from DirectoryObject.|
 |onPremisesSecurityIdentifier|String|Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud.                            **Notes**: Requires version 1.5 or newer.            |
 |otherMails|String collection|A list of additional email addresses for the user; for example: ["bob@contoso.com", "Robert@fabrikam.com"].                            **Notes**: not nullable, the **any** operator is required for filter expressions on multi-valued properties; for more information, see [Supported Queries, Filters, and Paging Options](https://msdn.microsoft.com/library/azure/dn727074.aspx).            |
-|passwordPolicies|String|Specifies password policies for the user. This value is an enumeration with one possible value being ΓÇ£DisableStrongPasswordΓÇ¥, which allows weaker passwords than the default policy to be specified. ΓÇ£DisablePasswordExpirationΓÇ¥ can also be specified. The two may be specified together; for example: "DisablePasswordExpiration, DisableStrongPassword".|
-|passwordProfile|[PasswordProfile](passwordprofile.md)|Specifies the password profile for the user. The profile contains the userΓÇÖs password. This property is required when a user is created.            The password in the profile must satisfy minimum requirements as specified by the **passwordPolicies** property. By default, a strong password is required. For information about the constraints that must be satisfied for a strong password, see **Password policy** under [Change your password](http://onlinehelp.microsoft.com/office365-enterprises/ff637578.aspx) in the Microsoft Office 365 help pages. |
+|passwordPolicies|String|Specifies password policies for the user. This value is an enumeration with one possible value being ΓÇ£DisableStrongPasswordΓÇ¥, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two may be specified together; for example: "DisablePasswordExpiration, DisableStrongPassword".|
+|passwordProfile|[PasswordProfile](passwordprofile.md)|Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created.            The password in the profile must satisfy minimum requirements as specified by the **passwordPolicies** property. By default, a strong password is required. For information about the constraints that must be satisfied for a strong password, see **Password policy** under [Change your password](http://onlinehelp.microsoft.com/office365-enterprises/ff637578.aspx) in the Microsoft Office 365 help pages. |
 |pastProjects|String collection||
 |physicalDeliveryOfficeName|String|The office location in the user's place of business.|
 |postalCode|String|The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code.|
@@ -354,15 +359,15 @@ Here is a JSON representation of the resource
 |[Create registeredDevice](../api/user_post_registereddevices.md) |[DirectoryObject](directoryobject.md)| Create a new registeredDevice by posting to the registeredDevices collection.|
 |[Create Task](../api/user_post_tasks.md) |[Task](task.md)| Create a new Task by posting to the tasks collection.|
 |[Update](../api/user_update.md) | [User](user.md)	|Update User object. |
-|[Delete](../api/user_delete.md) | Void	|Delete User object. |
-|[Sendmail](../api/user_sendmail.md)|[None](none.md)||
+|[Delete](../api/user_delete.md) | None |Delete User object. |
+|[Sendmail](../api/user_sendmail.md)|None||
 |[Assignlicense](../api/user_assignlicense.md)|[User](user.md)||
 |[Checkmembergroups](../api/user_checkmembergroups.md)|String||
 |[Get MemberGroups](../api/user_getmembergroups.md)|String||
 |[Get MemberObjects](../api/user_getmemberobjects.md)|String||
 
-<!-- uuid: a6657288-8135-4a4e-96e4-f71bd729045c
-2015-10-16 22:29:36 UTC -->
+<!-- uuid: 3624492b-3c02-497e-a51f-dd961d8cec5c
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "User resource",

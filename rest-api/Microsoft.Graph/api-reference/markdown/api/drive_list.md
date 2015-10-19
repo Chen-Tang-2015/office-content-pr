@@ -6,7 +6,7 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-GET /drive
+GET /drives
 ```
 ### Optional query parameters
 |Name|Value|Description|
@@ -30,19 +30,30 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and collection of [drive](../resources/drive.md) objects in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_drives"
+}-->
+```http
+GET /drives
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "drive"
+  "@odata.type": "microsoft.graph.drive",
+  "isCollection": true
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 580
+Content-length: 579
+
 {
-  "values": [
+  "value": [
     {
       "id": "id-value",
       "driveType": "driveType-value",
@@ -71,14 +82,13 @@ Content-length: 580
   ]
 }
 ```
-If successful, this method returns a `200 OK` response code and collection of [drive](../resources/drive.md) objects in the response body.
 
-<!-- uuid: 6c6de649-5b8b-4899-b98c-81c5b2ded144
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: f4f1824b-3fbe-45df-a29b-467b8817760a
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "List drive",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""
-}-->->
+}-->

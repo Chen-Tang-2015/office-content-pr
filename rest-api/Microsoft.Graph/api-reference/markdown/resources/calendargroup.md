@@ -11,20 +11,20 @@ Here is a JSON representation of the resource
   "optionalProperties": [
     "Calendars"
   ],
-  "@odata.type": "microsoft.graph.CalendarGroup"
+  "@odata.type": "microsoft.graph.calendargroup"
 }-->
 
 ```json
 {
   "Calendars": [
     {
-      "@odata.type": "microsoft.graph.Calendar"
+      "@odata.type": "microsoft.graph.calendar"
     }
   ],
-  "ChangeKey": "String",
-  "ClassId": "String",
-  "Id": "String (identifier)",
-  "Name": "String"
+  "ChangeKey": "String-value",
+  "ClassId": "Guid-value",
+  "Id": "String-value (identifier)",
+  "Name": "String-value"
 }
 
 ```
@@ -48,10 +48,10 @@ Here is a JSON representation of the resource
 |[Get CalendarGroup](../api/calendargroup_get.md) | [CalendarGroup](calendargroup.md) |Read properties and relationships of calendarGroup object.|
 |[Create Calendar](../api/calendargroup_post_calendars.md) |[Calendar](calendar.md)| Create a new Calendar by posting to the Calendars collection.|
 |[Update](../api/calendargroup_update.md) | [CalendarGroup](calendargroup.md)	|Update CalendarGroup object. |
-|[Delete](../api/calendargroup_delete.md) | Void	|Delete CalendarGroup object. |
+|[Delete](../api/calendargroup_delete.md) | None |Delete CalendarGroup object. |
 
-<!-- uuid: 6e44e93a-23b1-4455-889f-57580c298062
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 5a74b7bf-b687-49c2-844a-ed5d84b4fdbe
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "CalendarGroup resource",

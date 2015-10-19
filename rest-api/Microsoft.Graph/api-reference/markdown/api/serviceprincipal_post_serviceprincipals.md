@@ -30,7 +30,6 @@ Here is an example of the request.
 }-->
 ```http
 POST /servicePrincipals
-Content-type: application/json
 ```
 In the request body, supply a JSON representation of [ServicePrincipal](../resources/serviceprincipal.md) object.
 ##### Response
@@ -38,12 +37,13 @@ Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "serviceprincipal"
+  "@odata.type": "microsoft.graph.serviceprincipal"
 } -->
-```json
+```http
 HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 1924
+Content-length: 1942
+
 {
   "accountEnabled": true,
   "appDisplayName": "appDisplayName-value",
@@ -52,7 +52,9 @@ Content-length: 1924
   "appRoleAssignmentRequired": true,
   "appRoles": [
     {
-      "allowedMemberTypes": "allowedMemberTypes-value",
+      "allowedMemberTypes": [
+        "allowedMemberTypes-value"
+      ],
       "description": "description-value",
       "displayName": "displayName-value",
       "id": "id-value",
@@ -114,8 +116,8 @@ Content-length: 1924
 }
 ```
 
-<!-- uuid: 7ada89fd-fdba-46bd-b0d6-8ab870fc6a51
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: edbd58a6-1ac9-4e97-be9d-f0700923d9d1
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create ServicePrincipal",

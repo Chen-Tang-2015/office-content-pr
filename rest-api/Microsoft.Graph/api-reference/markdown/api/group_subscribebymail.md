@@ -19,36 +19,33 @@ POST /drive/root/createdByUser/JoinedGroups/<objectId>/SubscribeByMail
 ### Request body
 
 ### Response
-If successful, this method returns `200, OK` response code and [None](../resources/none.md) object in the response body.
+If successful, this method returns `200, OK` response code. It does not return anything in the response body.
 
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "group_subscribebymail"
 }-->
 ```http
 POST /groups/<objectId>/SubscribeByMail
-Content-type: application/json
-Content-length: 0
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "none"
+  "@odata.type": "microsoft.graph.none"
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
-Content-type: application/json
-Content-length: 3
-{
-}
 ```
 
-<!-- uuid: 814298b4-f875-414b-9c88-c7510a4f323a
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: dcc30ea2-c503-44fd-b3f1-3ea6231e6416
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Group: SubscribeByMail",

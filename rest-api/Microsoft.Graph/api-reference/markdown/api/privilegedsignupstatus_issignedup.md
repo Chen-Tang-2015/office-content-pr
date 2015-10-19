@@ -22,32 +22,34 @@ If successful, this method returns `200, OK` response code and Boolean object in
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "privilegedsignupstatus_issignedup"
 }-->
 ```http
 POST /PrivilegedSignupStatus/<TenantId>/IsSignedUp
-Content-type: application/json
-Content-length: 0
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
   "@odata.type": "boolean"
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 19
+
 {
   "value": true
 }
 ```
 
-<!-- uuid: 3f412526-d8a0-4e4e-a892-8c704cfbaed9
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 2b8341b8-04d0-487a-9bef-485a4617278e
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PrivilegedSignupStatus: IsSignedUp",

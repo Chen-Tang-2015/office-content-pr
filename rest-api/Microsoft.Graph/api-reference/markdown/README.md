@@ -26,6 +26,7 @@ The process is simple and should be familiar to everyone at this point. Simply f
 **Key things to consider:** 
 
 * Add object, property, method, and parameter descriptions. 
+* Note: Same descriptions can appear in many places. For example, the method descriptions appear in object Tasks table and also in the API file itself. Same object can appear as a relationship in many places. The descriptions that we add should be consistent across these locations.
 * For APIs, add the **scopes** needed under the prerequisites section.
 * For APIs, verify/edit HTTP request. There are hundreds of ways to reach the resource/methods through various resource paths. We have selected only a few for brevity. Add the ones that you wish to highlight. 
 * For APIs, add the HTTP header details (optional or required). The template has a placeholder. If no HTTP headers are used, remove the sub-section. 
@@ -43,6 +44,18 @@ The process is simple and should be familiar to everyone at this point. Simply f
 * Do not change the file name. 
 * Do not move the property, relationship, or tasks tables. 
 * Refrain from adding new columns to the table. 
+
+
+## Run Markdown Scanner tool if you edit/add code or samples.
+
+If you make any edits or additions to JSON structure, HTTP request/response sections, do run the [markdown scanner](https://github.com/OneDrive/markdown-scanner) tool to ensure accurancy. 
+
+At the time of creation of these markdown templates, all the files have been checked using the same tool. The known issues at this point are: 
+
+* Many APIs return string/boolean values (scalars). Looks like the scaler return types are not supported in markdown scanner tool yet. Ignore errors that say `Unable to locate a definition for resource type: <type such as string or boolean>` for the time being. 
+* Following resources don't have a URL path to reach them as per the EDMX/CSDL definitions: _directorylinkchange, entity, eventmessage, fileattachment, itemattachment, opentypeextension, outlookitem, referenceattachment_. APIs associated with these resources contains blank path (until they are manually corrected by the owner team). 
+
+If you face any issues in running the tool, let us know.
 
 ## Submit a pull request
 

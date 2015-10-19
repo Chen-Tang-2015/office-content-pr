@@ -17,36 +17,33 @@ POST /PrivilegedSignupStatus/<TenantId>/SkipSetup
 ### Request body
 
 ### Response
-If successful, this method returns `200, OK` response code and [None](../resources/none.md) object in the response body.
+If successful, this method returns `200, OK` response code. It does not return anything in the response body.
 
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "privilegedsignupstatus_skipsetup"
 }-->
 ```http
 POST /PrivilegedSignupStatus/<TenantId>/SkipSetup
-Content-type: application/json
-Content-length: 0
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "none"
+  "@odata.type": "microsoft.graph.none"
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
-Content-type: application/json
-Content-length: 3
-{
-}
 ```
 
-<!-- uuid: 78397c56-2705-409b-963e-81b80efe3e1f
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 076f60d9-3068-46b7-8c37-6c9262293e1d
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PrivilegedSignupStatus: SkipSetup",

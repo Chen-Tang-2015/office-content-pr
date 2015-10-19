@@ -30,6 +30,7 @@ If successful, this method returns `200, OK` response code and [User](../resourc
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "user_assignlicense"
@@ -37,11 +38,14 @@ Here is an example of how to call this API.
 ```http
 POST /users/<objectId>/assignLicense
 Content-type: application/json
-Content-length: 167
+Content-length: 185
+
 {
   "addLicenses": [
     {
-      "disabledPlans": "disabledPlans-value",
+      "disabledPlans": [
+        "disabledPlans-value"
+      ],
       "skuId": "skuId-value"
     }
   ],
@@ -49,22 +53,27 @@ Content-length: 167
     "removeLicenses-value"
   ]
 }
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "user"
+  "@odata.type": "microsoft.graph.user"
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 2650
+Content-length: 2668
+
 {
   "accountEnabled": true,
   "assignedLicenses": [
     {
-      "disabledPlans": "disabledPlans-value",
+      "disabledPlans": [
+        "disabledPlans-value"
+      ],
       "skuId": "skuId-value"
     }
   ],
@@ -160,8 +169,8 @@ Content-length: 2650
 }
 ```
 
-<!-- uuid: 9a5b231c-7e5d-49ac-a4aa-bd813210beb1
-2015-10-16 22:29:36 UTC -->
+<!-- uuid: 401fb321-5e69-430b-897d-0991946a7033
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "User: assignLicense",

@@ -37,6 +37,7 @@ Here is an example of the request.
 
 Content-type: application/json
 Content-length: 162
+
 {
   "Name": "Name-value",
   "ContentType": "ContentType-value",
@@ -47,16 +48,17 @@ Content-length: 162
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "referenceattachment"
+  "@odata.type": "microsoft.graph.referenceattachment"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 162
+
 {
   "Name": "Name-value",
   "ContentType": "ContentType-value",
@@ -67,8 +69,8 @@ Content-length: 162
 }
 ```
 
-<!-- uuid: 9ec3ad9f-d0ba-490c-8234-bb19a06dc2c8
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: e300cd83-0764-468e-a77e-ea3619719313
+2015-10-19 09:46:36 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of referenceattachment object.",

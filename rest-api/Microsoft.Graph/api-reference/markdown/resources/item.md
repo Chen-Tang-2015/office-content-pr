@@ -1,6 +1,10 @@
 # item resource type
 
-The Item resource type represents metadata for an item in OneDrive. All top-level filesystem objects in OneDrive are Item resources. If an item is a [Folder](../facets/folder_facet.md) or [File](../facets/file_facet.md) facet, the Item resource will contain a value for either the **folder** or **file** property, respectively.  
+The Item resource type represents metadata for an item in OneDrive.
+ All top-level filesystem objects in OneDrive are Item resources.
+ If an item is a Folder or File facet, the Item resource will contain a value for either the **folder** or **file** property, respectively.
+ 
+ 
 
 ### JSON representation
 
@@ -10,6 +14,8 @@ Here is a JSON representation of the resource
   "blockType": "resource",
   "optionalProperties": [
     "children",
+    "createdByUser",
+    "lastModifiedByUser",
     "permissions",
     "thumbnails",
     "versions"
@@ -22,54 +28,54 @@ Here is a JSON representation of the resource
   "audio": {
     "@odata.type": "microsoft.graph.audio"
   },
-  "cTag": "String",
+  "cTag": "String-value",
   "children": [
     {
       "@odata.type": "microsoft.graph.item"
     }
   ],
-  "content": "String",
+  "content": "Stream-value",
   "createdBy": {
-    "@odata.type": "microsoft.graph.identitySet"
+    "@odata.type": "microsoft.graph.identityset"
   },
   "createdByUser": {
-    "@odata.type": "microsoft.graph.User"
+    "@odata.type": "microsoft.graph.user"
   },
   "createdDateTime": "String (timestamp)",
   "deleted": {
     "@odata.type": "microsoft.graph.deleted"
   },
-  "description": "String",
-  "eTag": "String",
+  "description": "String-value",
+  "eTag": "String-value",
   "file": {
     "@odata.type": "microsoft.graph.file"
   },
   "fileSystemInfo": {
-    "@odata.type": "microsoft.graph.fileSystemInfo"
+    "@odata.type": "microsoft.graph.filesysteminfo"
   },
   "folder": {
     "@odata.type": "microsoft.graph.folder"
   },
-  "id": "String (identifier)",
+  "id": "String-value (identifier)",
   "image": {
     "@odata.type": "microsoft.graph.image"
   },
   "lastModifiedBy": {
-    "@odata.type": "microsoft.graph.identitySet"
+    "@odata.type": "microsoft.graph.identityset"
   },
   "lastModifiedByUser": {
-    "@odata.type": "microsoft.graph.User"
+    "@odata.type": "microsoft.graph.user"
   },
   "lastModifiedDateTime": "String (timestamp)",
   "location": {
     "@odata.type": "microsoft.graph.location"
   },
-  "name": "String",
+  "name": "String-value",
   "openWith": {
-    "@odata.type": "microsoft.graph.openWithSet"
+    "@odata.type": "microsoft.graph.openwithset"
   },
   "parentReference": {
-    "@odata.type": "microsoft.graph.itemReference"
+    "@odata.type": "microsoft.graph.itemreference"
   },
   "permissions": [
     {
@@ -80,18 +86,18 @@ Here is a JSON representation of the resource
     "@odata.type": "microsoft.graph.photo"
   },
   "searchResult": {
-    "@odata.type": "microsoft.graph.searchResult"
+    "@odata.type": "microsoft.graph.searchresult"
   },
   "shared": {
     "@odata.type": "microsoft.graph.shared"
   },
   "size": 1024,
   "specialFolder": {
-    "@odata.type": "microsoft.graph.specialFolder"
+    "@odata.type": "microsoft.graph.specialfolder"
   },
   "thumbnails": [
     {
-      "@odata.type": "microsoft.graph.thumbnailSet"
+      "@odata.type": "microsoft.graph.thumbnailset"
     }
   ],
   "versions": [
@@ -102,8 +108,8 @@ Here is a JSON representation of the resource
   "video": {
     "@odata.type": "microsoft.graph.video"
   },
-  "webDavUrl": "String",
-  "webUrl": "String"
+  "webDavUrl": "String-value",
+  "webUrl": "String-value"
 }
 
 ```
@@ -158,7 +164,7 @@ Here is a JSON representation of the resource
 |[Create thumbnailSet](../api/item_post_thumbnails.md) |[thumbnailSet](thumbnailset.md)| Create a new thumbnailSet by posting to the thumbnails collection.|
 |[Create version](../api/item_post_versions.md) |[item](item.md)| Create a new version by posting to the versions collection.|
 |[Update](../api/item_update.md) | [item](item.md)	|Update item object. |
-|[Delete](../api/item_delete.md) | Void	|Delete item object. |
+|[Delete](../api/item_delete.md) | None |Delete item object. |
 |[Allphotos](../api/item_allphotos.md)|[item](item.md)||
 |[Copy](../api/item_copy.md)|[item](item.md)||
 |[Createlink](../api/item_createlink.md)|[permission](permission.md)||
@@ -167,8 +173,8 @@ Here is a JSON representation of the resource
 |[Invite](../api/item_invite.md)|[permission](permission.md)||
 |[Search](../api/item_search.md)|[item](item.md)||
 
-<!-- uuid: 63a730b9-585a-4e2c-b6b3-9ab40daa6bd6
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 7a3bb544-d31c-424f-9aa8-fcdecb5b6294
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "item resource",

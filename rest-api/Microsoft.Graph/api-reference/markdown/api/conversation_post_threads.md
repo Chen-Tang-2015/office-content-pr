@@ -32,7 +32,6 @@ Here is an example of the request.
 }-->
 ```http
 POST /groups/<objectId>/Conversations/<Id>
-Content-type: application/json
 ```
 In the request body, supply a JSON representation of [ConversationThread](../resources/conversationthread.md) object.
 ##### Response
@@ -40,12 +39,13 @@ Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "conversationthread"
+  "@odata.type": "microsoft.graph.conversationthread"
 } -->
-```json
+```http
 HTTP/1.1 201 Created
 Content-type: application/json
 Content-length: 489
+
 {
   "ToRecipients": [
     {
@@ -75,8 +75,8 @@ Content-length: 489
 }
 ```
 
-<!-- uuid: 580fcff1-2194-408d-9aea-24492b00f1ad
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 4b78ef89-de7a-4062-bf6b-bf78f5b9c912
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Thread",

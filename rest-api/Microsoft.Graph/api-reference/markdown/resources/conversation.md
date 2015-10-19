@@ -11,23 +11,23 @@ Here is a JSON representation of the resource
   "optionalProperties": [
     "Threads"
   ],
-  "@odata.type": "microsoft.graph.Conversation"
+  "@odata.type": "microsoft.graph.conversation"
 }-->
 
 ```json
 {
   "DateTimeLastDelivered": "String (timestamp)",
   "HasAttachments": true,
-  "Id": "String (identifier)",
-  "Preview": "String",
+  "Id": "String-value (identifier)",
+  "Preview": "String-value",
   "Threads": [
     {
-      "@odata.type": "microsoft.graph.ConversationThread"
+      "@odata.type": "microsoft.graph.conversationthread"
     }
   ],
-  "Topic": "String",
+  "Topic": "String-value",
   "UniqueSenders": [
-    "String"
+    "String-value"
   ]
 }
 
@@ -54,10 +54,10 @@ Here is a JSON representation of the resource
 |[Get Conversation](../api/conversation_get.md) | [Conversation](conversation.md) |Read properties and relationships of conversation object.|
 |[Create Thread](../api/conversation_post_threads.md) |[ConversationThread](conversationthread.md)| Create a new Thread by posting to the Threads collection.|
 |[Update](../api/conversation_update.md) | [Conversation](conversation.md)	|Update Conversation object. |
-|[Delete](../api/conversation_delete.md) | Void	|Delete Conversation object. |
+|[Delete](../api/conversation_delete.md) | None |Delete Conversation object. |
 
-<!-- uuid: f4d9d2c7-47e7-4f5a-99b9-6b8f32e1f187
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: ee28b2d0-c490-4269-ac60-3d18f3b328b5
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Conversation resource",

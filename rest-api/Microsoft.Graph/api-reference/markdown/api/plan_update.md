@@ -40,6 +40,7 @@ Here is an example of the request.
 PUT /plans/<id>
 Content-type: application/json
 Content-length: 179
+
 {
   "createdBy": "createdBy-value",
   "owner": "owner-value",
@@ -51,16 +52,17 @@ Content-length: 179
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "plan"
+  "@odata.type": "microsoft.graph.plan"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 179
+
 {
   "createdBy": "createdBy-value",
   "owner": "owner-value",
@@ -72,8 +74,8 @@ Content-length: 179
 }
 ```
 
-<!-- uuid: 07d2f9ac-f483-4506-80bd-4e32462e0477
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 246b1a24-9cff-4cc8-af1f-88ea4e997ad1
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of plan object.",

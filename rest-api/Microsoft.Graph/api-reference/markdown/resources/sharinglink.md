@@ -11,7 +11,7 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.sharingLink"
+  "@odata.type": "microsoft.graph.sharinglink"
 }-->
 
 ```json
@@ -19,8 +19,8 @@ Here is a JSON representation of the resource
   "application": {
     "@odata.type": "microsoft.graph.identity"
   },
-  "type": "String",
-  "webUrl": "String"
+  "type": "String-value",
+  "webUrl": "String-value"
 }
 
 ```
@@ -31,8 +31,8 @@ Here is a JSON representation of the resource
 |type|String||
 |webUrl|String||
 
-<!-- uuid: 84f88995-d010-4cda-84b9-fe1190160551
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 5e1f07e3-3cd0-4354-ae4a-139658f0c544
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "sharingLink resource",

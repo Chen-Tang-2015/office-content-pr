@@ -28,17 +28,27 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and [permission](../resources/permission.md) object in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_permission"
+}-->
+```http
+GET /drive/root/permissions/<id>
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "permission"
+  "@odata.type": "microsoft.graph.permission"
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 762
+
 {
   "grantedTo": {
     "application": {
@@ -79,10 +89,9 @@ Content-length: 762
   "shareId": "shareId-value"
 }
 ```
-If successful, this method returns a `200 OK` response code and [permission](../resources/permission.md) object in the response body.
 
-<!-- uuid: 3ce4a7a3-a252-4004-828d-8c7be6bf433a
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 31fd5e19-1e45-4612-acec-f06660814a46
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get permission",

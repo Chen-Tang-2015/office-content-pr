@@ -71,6 +71,7 @@ Here is an example of the request.
 PUT /users/<objectId>/Contacts/<Id>
 Content-type: application/json
 Content-length: 1977
+
 {
   "ParentFolderId": "ParentFolderId-value",
   "Birthday": "datetime-value",
@@ -146,16 +147,17 @@ Content-length: 1977
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "contact"
+  "@odata.type": "microsoft.graph.contact"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 1977
+
 {
   "ParentFolderId": "ParentFolderId-value",
   "Birthday": "datetime-value",
@@ -231,8 +233,8 @@ Content-length: 1977
 }
 ```
 
-<!-- uuid: 6d92fd98-ab50-4d1f-bcb3-88e5f07d4a1c
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: f1a65b0a-c954-4ec8-9bc5-a2eb7006778e
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of contact object.",

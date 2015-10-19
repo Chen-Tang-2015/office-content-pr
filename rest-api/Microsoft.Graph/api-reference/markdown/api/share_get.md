@@ -26,17 +26,27 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and [share](../resources/share.md) object in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_share"
+}-->
+```http
+GET /shares/<id>
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "share"
+  "@odata.type": "microsoft.graph.share"
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 330
+
 {
   "id": "id-value",
   "name": "name-value",
@@ -56,10 +66,9 @@ Content-length: 330
   }
 }
 ```
-If successful, this method returns a `200 OK` response code and [share](../resources/share.md) object in the response body.
 
-<!-- uuid: 5edf9959-d3cb-4157-88cc-d9e7d120aa84
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: d696e062-8917-4d18-9f46-6935b0b2cc0a
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get share",

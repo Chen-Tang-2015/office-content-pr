@@ -11,21 +11,21 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.DirectoryLinkChange"
+  "@odata.type": "microsoft.graph.directorylinkchange"
 }-->
 
 ```json
 {
-  "associationType": "String",
+  "associationType": "String-value",
   "deletionTimestamp": "String (timestamp)",
-  "objectId": "String (identifier)",
-  "objectType": "String",
-  "sourceObjectId": "String",
-  "sourceObjectType": "String",
-  "sourceObjectUri": "String",
-  "targetObjectId": "String",
-  "targetObjectType": "String",
-  "targetObjectUri": "String"
+  "objectId": "String-value (identifier)",
+  "objectType": "String-value",
+  "sourceObjectId": "String-value",
+  "sourceObjectType": "String-value",
+  "sourceObjectUri": "String-value",
+  "targetObjectId": "String-value",
+  "targetObjectType": "String-value",
+  "targetObjectUri": "String-value"
 }
 
 ```
@@ -53,13 +53,13 @@ None
 |:---------------|:--------|:----------|
 |[Get DirectoryLinkChange](../api/directorylinkchange_get.md) | [DirectoryLinkChange](directorylinkchange.md) |Read properties and relationships of directoryLinkChange object.|
 |[Update](../api/directorylinkchange_update.md) | [DirectoryLinkChange](directorylinkchange.md)	|Update DirectoryLinkChange object. |
-|[Delete](../api/directorylinkchange_delete.md) | Void	|Delete DirectoryLinkChange object. |
+|[Delete](../api/directorylinkchange_delete.md) | None |Delete DirectoryLinkChange object. |
 |[Checkmembergroups](../api/directorylinkchange_checkmembergroups.md)|String||
 |[Get MemberGroups](../api/directorylinkchange_getmembergroups.md)|String||
 |[Get MemberObjects](../api/directorylinkchange_getmemberobjects.md)|String||
 
-<!-- uuid: d4b6fb27-1ab3-4d18-b2ed-4e47dea37e4a
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 41140e69-1d19-4a92-a031-3af21aef158d
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "DirectoryLinkChange resource",

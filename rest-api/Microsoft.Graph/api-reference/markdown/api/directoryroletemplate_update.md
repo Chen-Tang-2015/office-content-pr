@@ -36,6 +36,7 @@ Here is an example of the request.
 PUT /directoryRoleTemplates/<objectId>
 Content-type: application/json
 Content-length: 187
+
 {
   "description": "description-value",
   "displayName": "displayName-value",
@@ -45,16 +46,17 @@ Content-length: 187
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "directoryroletemplate"
+  "@odata.type": "microsoft.graph.directoryroletemplate"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 187
+
 {
   "description": "description-value",
   "displayName": "displayName-value",
@@ -64,8 +66,8 @@ Content-length: 187
 }
 ```
 
-<!-- uuid: 87317d08-1cee-4c57-9b39-a41b7c834ad6
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 930bba34-9093-41e1-89af-f5b5a9b8b4e0
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of directoryroletemplate object.",

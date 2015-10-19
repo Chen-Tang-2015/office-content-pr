@@ -22,11 +22,12 @@ In the request body, provide a JSON object with the following parameters.
 |Comment|String||
 
 ### Response
-If successful, this method returns `200, OK` response code and [None](../resources/none.md) object in the response body.
+If successful, this method returns `200, OK` response code. It does not return anything in the response body.
 
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "eventmessage_replyall"
@@ -35,26 +36,25 @@ Here is an example of how to call this API.
 
 Content-type: application/json
 Content-length: 32
+
 {
   "Comment": "Comment-value"
 }
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "none"
+  "@odata.type": "microsoft.graph.none"
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
-Content-type: application/json
-Content-length: 3
-{
-}
 ```
 
-<!-- uuid: 2f23db78-38d3-4b3f-8f55-b1eb1cba7522
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: a5965648-78fe-4b98-a697-b489cfaac9f5
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "EventMessage: ReplyAll",

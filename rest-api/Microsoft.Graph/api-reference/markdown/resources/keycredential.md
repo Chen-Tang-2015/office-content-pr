@@ -11,18 +11,18 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.KeyCredential"
+  "@odata.type": "microsoft.graph.keycredential"
 }-->
 
 ```json
 {
-  "customKeyIdentifier": "String",
+  "customKeyIdentifier": "Binary-value",
   "endDate": "String (timestamp)",
-  "keyId": "String",
+  "keyId": "Guid-value",
   "startDate": "String (timestamp)",
-  "type": "String",
-  "usage": "String",
-  "value": "String"
+  "type": "String-value",
+  "usage": "String-value",
+  "value": "Binary-value"
 }
 
 ```
@@ -37,8 +37,8 @@ Here is a JSON representation of the resource
 |usage|String|A string that describes the purpose for which the key can be used; for example, ΓÇ£VerifyΓÇ¥.|
 |value|Binary|            |
 
-<!-- uuid: e35bfecc-bdc8-42a5-b9c4-0235de197665
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 31b53b66-972c-4846-ba73-f5a94423aaf7
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "KeyCredential resource",

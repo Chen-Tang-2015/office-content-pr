@@ -9,21 +9,21 @@ Here is a JSON representation of the resource
 <!-- {
   "blockType": "resource",
   "optionalProperties": [
-
+    "Item"
   ],
-  "@odata.type": "microsoft.graph.ItemAttachment"
+  "@odata.type": "microsoft.graph.itemattachment"
 }-->
 
 ```json
 {
-  "ContentType": "String",
+  "ContentType": "String-value",
   "DateTimeLastModified": "String (timestamp)",
-  "Id": "String (identifier)",
+  "Id": "String-value (identifier)",
   "IsInline": true,
   "Item": {
-    "@odata.type": "microsoft.graph.OutlookItem"
+    "@odata.type": "microsoft.graph.outlookitem"
   },
-  "Name": "String",
+  "Name": "String-value",
   "Size": 1024
 }
 
@@ -49,10 +49,10 @@ Here is a JSON representation of the resource
 |:---------------|:--------|:----------|
 |[Get ItemAttachment](../api/itemattachment_get.md) | [ItemAttachment](itemattachment.md) |Read properties and relationships of itemAttachment object.|
 |[Update](../api/itemattachment_update.md) | [ItemAttachment](itemattachment.md)	|Update ItemAttachment object. |
-|[Delete](../api/itemattachment_delete.md) | Void	|Delete ItemAttachment object. |
+|[Delete](../api/itemattachment_delete.md) | None |Delete ItemAttachment object. |
 
-<!-- uuid: 07380df1-fa43-4fe7-b6e9-fd18322870b3
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: c2ff412e-f573-4740-8130-a3f5935bc069
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "ItemAttachment resource",

@@ -11,7 +11,7 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.RecurrenceRange"
+  "@odata.type": "microsoft.graph.recurrencerange"
 }-->
 
 ```json
@@ -19,7 +19,7 @@ Here is a JSON representation of the resource
   "EndDate": "String (timestamp)",
   "NumberOfOccurrences": 1024,
   "StartDate": "String (timestamp)",
-  "Type": "String"
+  "Type": "String-value"
 }
 
 ```
@@ -31,8 +31,8 @@ Here is a JSON representation of the resource
 |StartDate|DateTimeOffset|The start date of the series.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |Type|String|The recurrence range: EndDate = 0, NoEnd = 1, Numbered = 2. Possible values are: `EndDate`, `NoEnd`, `Numbered`.|
 
-<!-- uuid: e595cc5f-3135-43e2-99eb-eb34ebdc1b0d
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: bb6cb738-7192-4eeb-ab91-425ff2d56286
+2015-10-19 09:46:36 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "RecurrenceRange resource",

@@ -11,15 +11,15 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.AssignedPlan"
+  "@odata.type": "microsoft.graph.assignedplan"
 }-->
 
 ```json
 {
   "assignedTimestamp": "String (timestamp)",
-  "capabilityStatus": "String",
-  "service": "String",
-  "servicePlanId": "String"
+  "capabilityStatus": "String-value",
+  "service": "String-value",
+  "servicePlanId": "Guid-value"
 }
 
 ```
@@ -31,8 +31,8 @@ Here is a JSON representation of the resource
 |service|String|The name of the service; for example, ΓÇ£AccessControlServiceS2SΓÇ¥.|
 |servicePlanId|Guid|A GUID that identifies the service plan.|
 
-<!-- uuid: fb956098-c718-4e01-bfc8-874995f94a31
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: df1d8093-7495-4d58-b24e-7ba3f19ed01b
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "AssignedPlan resource",

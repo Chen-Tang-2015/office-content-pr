@@ -24,11 +24,12 @@ In the request body, provide a JSON object with the following parameters.
 |Post|Post||
 
 ### Response
-If successful, this method returns `200, OK` response code and [None](../resources/none.md) object in the response body.
+If successful, this method returns `200, OK` response code. It does not return anything in the response body.
 
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "post_reply"
@@ -36,7 +37,8 @@ Here is an example of how to call this API.
 ```http
 POST /groups/<objectId>/Threads/<Id>/Posts/<Id>/Reply
 Content-type: application/json
-Content-length: 1075
+Content-length: 1141
+
 {
   "Post": {
     "Body": {
@@ -59,46 +61,50 @@ Content-length: 1075
     },
     "ConversationThreadId": "ConversationThreadId-value",
     "ConversationId": "ConversationId-value",
-    "NewParticipants": {
-      "EmailAddress": {
-        "Name": "Name-value",
-        "Address": "Address-value"
+    "NewParticipants": [
+      {
+        "EmailAddress": {
+          "Name": "Name-value",
+          "Address": "Address-value"
+        }
       }
-    },
+    ],
     "ChangeKey": "ChangeKey-value",
-    "Categories": "Categories-value",
+    "Categories": [
+      "Categories-value"
+    ],
     "DateTimeCreated": "datetime-value",
     "DateTimeLastModified": "datetime-value",
     "Id": "Id-value",
-    "Attachments": {
-      "Name": "Name-value",
-      "ContentType": "ContentType-value",
-      "Size": 99,
-      "IsInline": true,
-      "DateTimeLastModified": "datetime-value",
-      "Id": "Id-value"
-    },
+    "Attachments": [
+      {
+        "Name": "Name-value",
+        "ContentType": "ContentType-value",
+        "Size": 99,
+        "IsInline": true,
+        "DateTimeLastModified": "datetime-value",
+        "Id": "Id-value"
+      }
+    ],
     "InReplyTo": {
     }
   }
 }
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "none"
+  "@odata.type": "microsoft.graph.none"
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
-Content-type: application/json
-Content-length: 3
-{
-}
 ```
 
-<!-- uuid: 6ada4daf-724f-4510-8c36-56ccddfb6ac3
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: fb577414-7317-498f-a0b0-c5f93d0f7640
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Post: Reply",

@@ -12,7 +12,7 @@ Here is a JSON representation of the resource
     "registeredOwners",
     "registeredUsers"
   ],
-  "@odata.type": "microsoft.graph.Device"
+  "@odata.type": "microsoft.graph.device"
 }-->
 
 ```json
@@ -20,33 +20,33 @@ Here is a JSON representation of the resource
   "accountEnabled": true,
   "alternativeSecurityIds": [
     {
-      "@odata.type": "microsoft.graph.AlternativeSecurityId"
+      "@odata.type": "microsoft.graph.alternativesecurityid"
     }
   ],
   "approximateLastLogonTimestamp": "String (timestamp)",
   "deletionTimestamp": "String (timestamp)",
-  "deviceId": "String",
-  "deviceMetadata": "String",
-  "deviceOSType": "String",
-  "deviceOSVersion": "String",
+  "deviceId": "Guid-value",
+  "deviceMetadata": "String-value",
+  "deviceOSType": "String-value",
+  "deviceOSVersion": "String-value",
   "deviceObjectVersion": 1024,
   "devicePhysicalIds": [
-    "String"
+    "String-value"
   ],
-  "deviceTrustType": "String",
+  "deviceTrustType": "String-value",
   "dirSyncEnabled": true,
-  "displayName": "String",
+  "displayName": "String-value",
   "lastDirSyncTime": "String (timestamp)",
-  "objectId": "String (identifier)",
-  "objectType": "String",
+  "objectId": "String-value (identifier)",
+  "objectType": "String-value",
   "registeredOwners": [
     {
-      "@odata.type": "microsoft.graph.DirectoryObject"
+      "@odata.type": "microsoft.graph.directoryobject"
     }
   ],
   "registeredUsers": [
     {
-      "@odata.type": "microsoft.graph.DirectoryObject"
+      "@odata.type": "microsoft.graph.directoryobject"
     }
   ]
 }
@@ -86,13 +86,13 @@ Here is a JSON representation of the resource
 |[Create registeredOwner](../api/device_post_registeredowners.md) |[DirectoryObject](directoryobject.md)| Create a new registeredOwner by posting to the registeredOwners collection.|
 |[Create registeredUser](../api/device_post_registeredusers.md) |[DirectoryObject](directoryobject.md)| Create a new registeredUser by posting to the registeredUsers collection.|
 |[Update](../api/device_update.md) | [Device](device.md)	|Update Device object. |
-|[Delete](../api/device_delete.md) | Void	|Delete Device object. |
+|[Delete](../api/device_delete.md) | None |Delete Device object. |
 |[Checkmembergroups](../api/device_checkmembergroups.md)|String||
 |[Get MemberGroups](../api/device_getmembergroups.md)|String||
 |[Get MemberObjects](../api/device_getmemberobjects.md)|String||
 
-<!-- uuid: 2e8b9ef4-bb85-4c67-b632-4577a251f49b
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 94eb5196-1894-4354-93df-a88d3bf5e6fc
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Device resource",

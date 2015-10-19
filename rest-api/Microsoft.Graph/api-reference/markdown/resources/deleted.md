@@ -16,7 +16,7 @@ Here is a JSON representation of the resource
 
 ```json
 {
-  "state": "String"
+  "state": "String-value"
 }
 
 ```
@@ -25,8 +25,8 @@ Here is a JSON representation of the resource
 |:---------------|:--------|:----------|
 |state|String||
 
-<!-- uuid: 6c7720fc-9874-45de-9a23-e3211f39a9cb
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 2905089b-056b-44ee-ab0d-d798044abec0
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "deleted resource",

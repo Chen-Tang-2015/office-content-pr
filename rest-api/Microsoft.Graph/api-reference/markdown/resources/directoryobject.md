@@ -11,14 +11,14 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.DirectoryObject"
+  "@odata.type": "microsoft.graph.directoryobject"
 }-->
 
 ```json
 {
   "deletionTimestamp": "String (timestamp)",
-  "objectId": "String (identifier)",
-  "objectType": "String"
+  "objectId": "String-value (identifier)",
+  "objectType": "String-value"
 }
 
 ```
@@ -39,13 +39,13 @@ None
 |:---------------|:--------|:----------|
 |[Get DirectoryObject](../api/directoryobject_get.md) | [DirectoryObject](directoryobject.md) |Read properties and relationships of directoryObject object.|
 |[Update](../api/directoryobject_update.md) | [DirectoryObject](directoryobject.md)	|Update DirectoryObject object. |
-|[Delete](../api/directoryobject_delete.md) | Void	|Delete DirectoryObject object. |
+|[Delete](../api/directoryobject_delete.md) | None |Delete DirectoryObject object. |
 |[Checkmembergroups](../api/directoryobject_checkmembergroups.md)|String||
 |[Get MemberGroups](../api/directoryobject_getmembergroups.md)|String||
 |[Get MemberObjects](../api/directoryobject_getmemberobjects.md)|String||
 
-<!-- uuid: 52f1cebb-7186-42ef-b66a-59f4ba7067cb
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: ab3167eb-6f4a-42bb-aa6a-83d7c1bf2d5c
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "DirectoryObject resource",

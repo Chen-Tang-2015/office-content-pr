@@ -23,19 +23,30 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and collection of [ServicePrincipal](../resources/serviceprincipal.md) objects in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_serviceprincipals"
+}-->
+```http
+GET /servicePrincipals
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "serviceprincipals"
+  "@odata.type": "microsoft.graph.serviceprincipal",
+  "isCollection": true
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 2218
+Content-length: 2243
+
 {
-  "values": [
+  "value": [
     {
       "accountEnabled": true,
       "appDisplayName": "appDisplayName-value",
@@ -44,7 +55,9 @@ Content-length: 2218
       "appRoleAssignmentRequired": true,
       "appRoles": [
         {
-          "allowedMemberTypes": "allowedMemberTypes-value",
+          "allowedMemberTypes": [
+            "allowedMemberTypes-value"
+          ],
           "description": "description-value",
           "displayName": "displayName-value",
           "id": "id-value",
@@ -107,10 +120,9 @@ Content-length: 2218
   ]
 }
 ```
-If successful, this method returns a `200 OK` response code and collection of [ServicePrincipal](../resources/serviceprincipal.md) objects in the response body.
 
-<!-- uuid: 6316d2c4-b58c-4a98-84ed-b70f2ad7e13e
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 2ffd7341-5656-4200-848b-04f37bad957a
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "List ServicePrincipal",

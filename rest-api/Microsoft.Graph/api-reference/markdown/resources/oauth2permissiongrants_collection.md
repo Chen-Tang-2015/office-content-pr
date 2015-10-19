@@ -2,6 +2,23 @@
 
 
 
+### JSON representation
+
+Here is a JSON representation of the resource
+
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.oauth2permissiongrants"
+}-->
+
+```json
+{
+}
+
+```
 ### Properties
 None
 
@@ -16,8 +33,8 @@ None
 |[List](../api/oauth2permissiongrant_list.md) | [OAuth2PermissionGrant](oauth2permissiongrant.md) [] |Get oAuth2PermissionGrant object collection. |
 |[Create OAuth2PermissionGrant](../api/oauth2permissiongrant_post_oauth2permissiongrants.md) |[OAuth2PermissionGrant](oauth2permissiongrant.md)| Create a new OAuth2PermissionGrant by posting to the oauth2PermissionGrants collection.|
 
-<!-- uuid: 357eff04-39c2-4f61-8329-c7495605bc36
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: b917c3c1-414f-430b-b797-4d89a474db4a
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "oauth2PermissionGrants resource",

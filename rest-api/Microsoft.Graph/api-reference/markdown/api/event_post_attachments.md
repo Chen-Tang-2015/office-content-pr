@@ -32,7 +32,6 @@ Here is an example of the request.
 }-->
 ```http
 POST /users/<objectId>/Events/<Id>
-Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Attachment](../resources/attachment.md) object.
 ##### Response
@@ -40,12 +39,13 @@ Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "attachment"
+  "@odata.type": "microsoft.graph.attachment"
 } -->
-```json
+```http
 HTTP/1.1 201 Created
 Content-type: application/json
 Content-length: 162
+
 {
   "Name": "Name-value",
   "ContentType": "ContentType-value",
@@ -56,8 +56,8 @@ Content-length: 162
 }
 ```
 
-<!-- uuid: c1c165f7-03cd-49fd-9c70-67d0c4ff6e47
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 70a9e7ce-de97-488d-8cb0-b680ff2f81ce
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Attachment",

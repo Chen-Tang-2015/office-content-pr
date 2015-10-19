@@ -11,16 +11,16 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.PasswordCredential"
+  "@odata.type": "microsoft.graph.passwordcredential"
 }-->
 
 ```json
 {
-  "customKeyIdentifier": "String",
+  "customKeyIdentifier": "Binary-value",
   "endDate": "String (timestamp)",
-  "keyId": "String",
+  "keyId": "Guid-value",
   "startDate": "String (timestamp)",
-  "value": "String"
+  "value": "String-value"
 }
 
 ```
@@ -33,8 +33,8 @@ Here is a JSON representation of the resource
 |startDate|DateTimeOffset|The date and time at which the password becomes valid.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |value|String|            |
 
-<!-- uuid: a608563f-66c0-47a9-ac08-549ab9186ac4
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 6d6cc21b-b9b9-4120-a7ff-557180c326e8
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PasswordCredential resource",

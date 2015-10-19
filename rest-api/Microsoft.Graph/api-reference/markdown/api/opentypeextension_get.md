@@ -26,27 +26,36 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and [OpenTypeExtension](../resources/opentypeextension.md) object in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_opentypeextension"
+}-->
+```http
+
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "opentypeextension"
+  "@odata.type": "microsoft.graph.opentypeextension"
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 48
+
 {
   "Id": "Id-value",
   "ExtensionName": {
   }
 }
 ```
-If successful, this method returns a `200 OK` response code and [OpenTypeExtension](../resources/opentypeextension.md) object in the response body.
 
-<!-- uuid: 89f5a7f9-2b38-48de-bf47-3d46782d74ae
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 988cfed4-14a8-461c-98b1-42f9d716fc98
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get OpenTypeExtension",

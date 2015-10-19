@@ -10,57 +10,58 @@ Here is a JSON representation of the resource
   "blockType": "resource",
   "optionalProperties": [
     "directReports",
+    "manager",
     "memberOf"
   ],
-  "@odata.type": "microsoft.graph.OrgContact"
+  "@odata.type": "microsoft.graph.orgcontact"
 }-->
 
 ```json
 {
-  "city": "String",
-  "country": "String",
+  "city": "String-value",
+  "country": "String-value",
   "deletionTimestamp": "String (timestamp)",
-  "department": "String",
+  "department": "String-value",
   "dirSyncEnabled": true,
   "directReports": [
     {
-      "@odata.type": "microsoft.graph.DirectoryObject"
+      "@odata.type": "microsoft.graph.directoryobject"
     }
   ],
-  "displayName": "String",
-  "facsimileTelephoneNumber": "String",
-  "givenName": "String",
-  "jobTitle": "String",
+  "displayName": "String-value",
+  "facsimileTelephoneNumber": "String-value",
+  "givenName": "String-value",
+  "jobTitle": "String-value",
   "lastDirSyncTime": "String (timestamp)",
-  "mail": "String",
-  "mailNickname": "String",
+  "mail": "String-value",
+  "mailNickname": "String-value",
   "manager": {
-    "@odata.type": "microsoft.graph.DirectoryObject"
+    "@odata.type": "microsoft.graph.directoryobject"
   },
   "memberOf": [
     {
-      "@odata.type": "microsoft.graph.DirectoryObject"
+      "@odata.type": "microsoft.graph.directoryobject"
     }
   ],
-  "mobile": "String",
-  "objectId": "String (identifier)",
-  "objectType": "String",
-  "physicalDeliveryOfficeName": "String",
-  "postalCode": "String",
+  "mobile": "String-value",
+  "objectId": "String-value (identifier)",
+  "objectType": "String-value",
+  "physicalDeliveryOfficeName": "String-value",
+  "postalCode": "String-value",
   "provisioningErrors": [
     {
-      "@odata.type": "microsoft.graph.ProvisioningError"
+      "@odata.type": "microsoft.graph.provisioningerror"
     }
   ],
   "proxyAddresses": [
-    "String"
+    "String-value"
   ],
-  "sipProxyAddress": "String",
-  "state": "String",
-  "streetAddress": "String",
-  "surname": "String",
-  "telephoneNumber": "String",
-  "thumbnailPhoto": "String"
+  "sipProxyAddress": "String-value",
+  "state": "String-value",
+  "streetAddress": "String-value",
+  "surname": "String-value",
+  "telephoneNumber": "String-value",
+  "thumbnailPhoto": "Stream-value"
 }
 
 ```
@@ -108,13 +109,13 @@ Here is a JSON representation of the resource
 |[Create directReport](../api/orgcontact_post_directreports.md) |[DirectoryObject](directoryobject.md)| Create a new directReport by posting to the directReports collection.|
 |[Create memberOf](../api/orgcontact_post_memberof.md) |[DirectoryObject](directoryobject.md)| Create a new memberOf by posting to the memberOf collection.|
 |[Update](../api/orgcontact_update.md) | [OrgContact](orgcontact.md)	|Update OrgContact object. |
-|[Delete](../api/orgcontact_delete.md) | Void	|Delete OrgContact object. |
+|[Delete](../api/orgcontact_delete.md) | None |Delete OrgContact object. |
 |[Checkmembergroups](../api/orgcontact_checkmembergroups.md)|String||
 |[Get MemberGroups](../api/orgcontact_getmembergroups.md)|String||
 |[Get MemberObjects](../api/orgcontact_getmemberobjects.md)|String||
 
-<!-- uuid: cf0f491b-790b-4964-90f3-733c8bc4f95b
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: eeb779c5-14dd-4193-bb69-948bc6315bca
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "OrgContact resource",

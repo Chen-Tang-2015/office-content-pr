@@ -60,6 +60,7 @@ Here is an example of the request.
 PUT /drive/root
 Content-type: application/json
 Content-length: 3050
+
 {
   "content": "content-value",
   "createdBy": {
@@ -203,16 +204,17 @@ Content-length: 3050
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "item"
+  "@odata.type": "microsoft.graph.item"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 3050
+
 {
   "content": "content-value",
   "createdBy": {
@@ -356,8 +358,8 @@ Content-length: 3050
 }
 ```
 
-<!-- uuid: 207de053-d321-4ea6-a4e7-e477c0adc875
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 7554c2ab-a637-47a9-a195-076b5001cfbd
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of item object.",

@@ -50,6 +50,7 @@ Here is an example of the request.
 PUT /tasks/<id>
 Content-type: application/json
 Content-length: 541
+
 {
   "createdBy": "createdBy-value",
   "assignedTo": "assignedTo-value",
@@ -71,16 +72,17 @@ Content-length: 541
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "task"
+  "@odata.type": "microsoft.graph.task"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 541
+
 {
   "createdBy": "createdBy-value",
   "assignedTo": "assignedTo-value",
@@ -102,8 +104,8 @@ Content-length: 541
 }
 ```
 
-<!-- uuid: 2a6416ef-24c5-485d-8d85-fe52e71fb4a4
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 75e67a5a-4e27-4fb5-8a8a-18ce06cbf5c4
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of task object.",

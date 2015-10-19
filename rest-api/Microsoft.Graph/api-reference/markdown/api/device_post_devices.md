@@ -30,7 +30,6 @@ Here is an example of the request.
 }-->
 ```http
 POST /devices
-Content-type: application/json
 ```
 In the request body, supply a JSON representation of [Device](../resources/device.md) object.
 ##### Response
@@ -38,12 +37,13 @@ Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "device"
+  "@odata.type": "microsoft.graph.device"
 } -->
-```json
+```http
 HTTP/1.1 201 Created
 Content-type: application/json
 Content-length: 732
+
 {
   "accountEnabled": true,
   "alternativeSecurityIds": [
@@ -72,8 +72,8 @@ Content-length: 732
 }
 ```
 
-<!-- uuid: c2cc6870-254c-4911-b5ac-ab47e7d6f3e6
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: 8aeeef7c-70fc-449e-a72e-8e381b97f4d1
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Device",

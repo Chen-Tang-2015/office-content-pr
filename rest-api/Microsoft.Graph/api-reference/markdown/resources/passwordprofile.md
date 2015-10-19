@@ -11,13 +11,13 @@ Here is a JSON representation of the resource
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.PasswordProfile"
+  "@odata.type": "microsoft.graph.passwordprofile"
 }-->
 
 ```json
 {
   "forceChangePasswordNextLogin": true,
-  "password": "String"
+  "password": "String-value"
 }
 
 ```
@@ -27,8 +27,8 @@ Here is a JSON representation of the resource
 |forceChangePasswordNextLogin|Boolean|                **true** if the user must change her password on the next login; otherwise **false**.            |
 |password|String|The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login.             The password must satisfy minimum requirements as specified by the userΓÇÖs **PasswordPolicies** property. By default, a strong password is required.|
 
-<!-- uuid: 11cfdfab-606e-4570-a393-ce24781e532f
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 19529a2a-f278-4af4-b144-77aff063548d
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PasswordProfile resource",

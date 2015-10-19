@@ -29,27 +29,30 @@ If successful, this method returns `200, OK` response code and [item](../resourc
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "item_delta"
 }-->
 ```http
 POST /drive/root/delta
-Content-type: application/json
-Content-length: 0
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "item"
+  "@odata.type": "microsoft.graph.item",
+  "isCollection": true
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 3636
+Content-length: 3635
+
 {
-  "values": [
+  "value": [
     {
       "content": "content-value",
       "createdBy": {
@@ -195,8 +198,8 @@ Content-length: 3636
 }
 ```
 
-<!-- uuid: 0b2a8451-cba7-4ebb-911e-a6eb64cf7f68
-2015-10-16 22:29:34 UTC -->
+<!-- uuid: 5414ca3f-bd9a-46af-a0f1-164880924d6f
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "item: delta",

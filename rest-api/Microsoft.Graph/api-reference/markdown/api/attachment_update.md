@@ -39,6 +39,7 @@ Here is an example of the request.
 PUT /users/<objectId>/Events/<Id>/Attachments/<Id>
 Content-type: application/json
 Content-length: 162
+
 {
   "Name": "Name-value",
   "ContentType": "ContentType-value",
@@ -49,16 +50,17 @@ Content-length: 162
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "attachment"
+  "@odata.type": "microsoft.graph.attachment"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 162
+
 {
   "Name": "Name-value",
   "ContentType": "ContentType-value",
@@ -69,8 +71,8 @@ Content-length: 162
 }
 ```
 
-<!-- uuid: 66a16dc3-8ff8-444c-b2b5-0b89cab180bb
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: e9a56967-5455-4db4-9fcf-d7f5fa632ae5
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of attachment object.",

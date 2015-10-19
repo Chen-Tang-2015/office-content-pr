@@ -30,7 +30,6 @@ Here is an example of the request.
 }-->
 ```http
 POST /PrivilegedSecurityAlerts
-Content-type: application/json
 ```
 In the request body, supply a JSON representation of [PrivilegedSecurityAlert](../resources/privilegedsecurityalert.md) object.
 ##### Response
@@ -38,12 +37,13 @@ Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "privilegedsecurityalert"
+  "@odata.type": "microsoft.graph.privilegedsecurityalert"
 } -->
-```json
+```http
 HTTP/1.1 201 Created
 Content-type: application/json
 Content-length: 596
+
 {
   "AlertId": "AlertId-value",
   "NumberOfAffectedItems": 99,
@@ -65,8 +65,8 @@ Content-length: 596
 }
 ```
 
-<!-- uuid: 3886dc6e-bfae-4d6f-bb46-4f792c74166c
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: cc360a83-7d36-4b8e-b62e-1fd8768622a4
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create PrivilegedSecurityAlert",

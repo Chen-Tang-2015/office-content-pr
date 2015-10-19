@@ -30,7 +30,6 @@ Here is an example of the request.
 }-->
 ```http
 POST /tenantDetails
-Content-type: application/json
 ```
 In the request body, supply a JSON representation of [TenantDetail](../resources/tenantdetail.md) object.
 ##### Response
@@ -38,12 +37,13 @@ Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "tenantdetail"
+  "@odata.type": "microsoft.graph.tenantdetail"
 } -->
-```json
+```http
 HTTP/1.1 201 Created
 Content-type: application/json
 Content-length: 1647
+
 {
   "assignedPlans": [
     {
@@ -107,8 +107,8 @@ Content-length: 1647
 }
 ```
 
-<!-- uuid: 38ef2635-7538-4bd7-93ac-962d0b6128b5
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 6de5c5de-f62e-47e3-ade7-2b563157c683
+2015-10-19 09:46:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create TenantDetail",

@@ -25,11 +25,12 @@ In the request body, provide a JSON object with the following parameters.
 |SendResponse|Boolean||
 
 ### Response
-If successful, this method returns `200, OK` response code and [None](../resources/none.md) object in the response body.
+If successful, this method returns `200, OK` response code. It does not return anything in the response body.
 
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "event_accept"
@@ -38,27 +39,26 @@ Here is an example of how to call this API.
 POST /users/<objectId>/Events/<Id>/Accept
 Content-type: application/json
 Content-length: 56
+
 {
   "Comment": "Comment-value",
   "SendResponse": true
 }
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "none"
+  "@odata.type": "microsoft.graph.none"
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
-Content-type: application/json
-Content-length: 3
-{
-}
 ```
 
-<!-- uuid: 7e65c0b2-a195-40fb-8396-0d4b7a3b9e68
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: b1f9859c-04b8-4ae3-8080-31c92587ce77
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Event: Accept",

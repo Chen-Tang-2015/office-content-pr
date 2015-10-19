@@ -26,17 +26,27 @@ Do not supply a request body for this method.
 ### Response
 If successful, this method returns a `200 OK` response code and [EventMessage](../resources/eventmessage.md) object in the response body.
 ### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "get_eventmessage"
+}-->
+```http
+
+```
 ##### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "eventmessage"
+  "@odata.type": "microsoft.graph.eventmessage"
 } -->
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 1598
+
 {
   "Subject": "Subject-value",
   "Body": {
@@ -113,10 +123,9 @@ Content-length: 1598
   "MeetingMessageType": "MeetingMessageType-value"
 }
 ```
-If successful, this method returns a `200 OK` response code and [EventMessage](../resources/eventmessage.md) object in the response body.
 
-<!-- uuid: 678b9ceb-f08d-4674-a97c-36f4975a5c31
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: afa4ce3c-e2ad-4850-a2f9-ca37764ac1d0
+2015-10-19 09:46:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get EventMessage",

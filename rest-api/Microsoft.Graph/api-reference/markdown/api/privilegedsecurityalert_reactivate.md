@@ -22,25 +22,27 @@ If successful, this method returns `200, OK` response code and [PrivilegedSecuri
 ### Example
 Here is an example of how to call this API.
 ##### Request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "privilegedsecurityalert_reactivate"
 }-->
 ```http
 POST /PrivilegedSecurityAlerts/<AlertId>/Reactivate
-Content-type: application/json
-Content-length: 0
+```
+
+##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "privilegedsecurityalert"
+  "@odata.type": "microsoft.graph.privilegedsecurityalert"
 } -->
-```
-##### Response
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 596
+
 {
   "AlertId": "AlertId-value",
   "NumberOfAffectedItems": 99,
@@ -62,8 +64,8 @@ Content-length: 596
 }
 ```
 
-<!-- uuid: 01bdafe7-9735-46d2-90bc-9eb3a0ce9eb2
-2015-10-16 22:29:35 UTC -->
+<!-- uuid: 41080349-cf5c-42a6-8027-aa83e5ac77e5
+2015-10-19 09:46:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PrivilegedSecurityAlert: Reactivate",

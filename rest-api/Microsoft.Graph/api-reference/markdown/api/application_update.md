@@ -54,12 +54,15 @@ Here is an example of the request.
 ```http
 PUT /applications/<objectId>
 Content-type: application/json
-Content-length: 2108
+Content-length: 2150
+
 {
   "appId": "appId-value",
   "appRoles": [
     {
-      "allowedMemberTypes": "allowedMemberTypes-value",
+      "allowedMemberTypes": [
+        "allowedMemberTypes-value"
+      ],
       "description": "description-value",
       "displayName": "displayName-value",
       "id": "id-value",
@@ -122,10 +125,12 @@ Content-length: 2108
   "requiredResourceAccess": [
     {
       "resourceAppId": "resourceAppId-value",
-      "resourceAccess": {
-        "id": "id-value",
-        "type": "type-value"
-      }
+      "resourceAccess": [
+        {
+          "id": "id-value",
+          "type": "type-value"
+        }
+      ]
     }
   ],
   "samlMetadataUrl": "samlMetadataUrl-value",
@@ -135,21 +140,24 @@ Content-length: 2108
 }
 ```
 ##### Response
+Here is an example of the response.
 <!-- {
   "blockType": "response",
   "truncated": false,
-  "@odata.type": "application"
+  "@odata.type": "microsoft.graph.application"
 } -->
-Here is an example of the response.
-```json
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 2108
+Content-length: 2150
+
 {
   "appId": "appId-value",
   "appRoles": [
     {
-      "allowedMemberTypes": "allowedMemberTypes-value",
+      "allowedMemberTypes": [
+        "allowedMemberTypes-value"
+      ],
       "description": "description-value",
       "displayName": "displayName-value",
       "id": "id-value",
@@ -212,10 +220,12 @@ Content-length: 2108
   "requiredResourceAccess": [
     {
       "resourceAppId": "resourceAppId-value",
-      "resourceAccess": {
-        "id": "id-value",
-        "type": "type-value"
-      }
+      "resourceAccess": [
+        {
+          "id": "id-value",
+          "type": "type-value"
+        }
+      ]
     }
   ],
   "samlMetadataUrl": "samlMetadataUrl-value",
@@ -225,8 +235,8 @@ Content-length: 2108
 }
 ```
 
-<!-- uuid: 39f48ae4-0516-4d79-acd8-4a63e8c8ced9
-2015-10-16 22:29:33 UTC -->
+<!-- uuid: c5d31c0e-1288-44fb-b6c0-0915f28dab03
+2015-10-19 09:46:32 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of application object.",
