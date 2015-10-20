@@ -1,7 +1,8 @@
 
 # Microsoft Graph API app authorization
-## Overview
 
+_**Applies to:** Office 365_
+ 
 In this article, we'll discuss how to authenticate a user, get an access token and renew an access token using a refresh token.
 
 <!--To call the Microsoft Graph API, you have to complete the following tasks.
