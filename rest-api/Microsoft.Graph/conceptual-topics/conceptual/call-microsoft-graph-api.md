@@ -1,6 +1,6 @@
 # Calling Microsoft Graph API
 
-In this section:
+In this article:
   
 - [Calling the REST API](#msg_calling_rest_api)
   - [Navigation from a tenant-level entity set to a member](#msg_nav_from_set_to_member) 
