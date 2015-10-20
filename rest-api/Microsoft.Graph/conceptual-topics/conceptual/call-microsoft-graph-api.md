@@ -1,5 +1,7 @@
 # Calling Microsoft Graph API
 
+_**Applies to:** Office 365_
+ 
 In this article:
   
 - [Calling the REST API](#msg_calling_rest_api)
