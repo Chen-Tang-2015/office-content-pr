@@ -26,7 +26,7 @@ In this article:
 
 - [Get app authorized](#msg_get_app_authorized)
 - [Acquire access token](#msg_get_app_authenticated)
-- [Renew access token](#msg_renew_access_token)
+- [Renew access token using refresh token](#msg_renew_access_token)
 
  <a name="msg_get_app_authorized"> </a>
  
@@ -195,7 +195,7 @@ of these tokens and renew the expiring access token before the refresh token exp
 an expiring access token.
 
 
-<a name="msg_renew_access_token"> </a>
+<a name="msg_renew_access_token using refresh token"> </a>
 ###Renew expiring access token
 To refresh an expired access token, use a POST request similar to the following example, provided that the refresh token has not expired:
 
