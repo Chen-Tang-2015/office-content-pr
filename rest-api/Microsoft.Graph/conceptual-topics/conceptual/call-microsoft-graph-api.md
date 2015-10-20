@@ -2,14 +2,15 @@
 
 In this section:
   
--[Calling the REST API](#msg_calling_rest_api)
-  - [Navigation from a tenant-level entity set to a member](#msg_nav_from_set_to_member) 
+  - [Calling the REST API](#msg_calling_rest_api)
+- [Navigation from a tenant-level entity set to a member](#msg_nav_from_set_to_member) 
 - [Projection from an entity to a subset of its properties](#msg_proj_from_entity_to_props) 
 - [Projection from an entity set to properties set](#msg_proj_from_entities_to_props)
 - [Traversal to another resource by the like-named relationship](#msg_traversal_via_relationship)
 - [Filtering with a query option](#msg_filter_query_option)
 - [Calling OData actions and functions](#msg_calling_actions) 
--	[Using the .NET client library](#msg_using_client_lib)
+
+   -[Using the .NET client library](#msg_using_client_lib)
 
 <a name="msg_call_api_service"> </a>
 ###Call Microsoft Graph API service
