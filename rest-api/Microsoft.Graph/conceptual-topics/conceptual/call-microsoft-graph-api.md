@@ -11,7 +11,7 @@ In this section:
   - [Filtering with a query option](#msg_filter_query_option)
   - [Calling OData actions and functions](#msg_calling_actions) 
 
- - [Using the .NET client library](#msg_using_client_lib)
+- [Using the .NET client library](#msg_using_client_lib)
 
 <a name="msg_call_api_service"> </a>
 ###Call Microsoft Graph API service
