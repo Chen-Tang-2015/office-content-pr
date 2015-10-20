@@ -29,8 +29,6 @@ The following new Microsoft Graph API preview features are available:
 * v2.0 app authentication model 
 
 
-For details about the new preview features, see [Preview developer features on the Office 365 platform](.\platform-development-preview-features-overview.md).
-
 ## Microsoft Graph API known issues
 
 The following are known issues with the Microsoft Graph API.
@@ -56,7 +54,7 @@ The Microsoft Graph API exposes two permission scopes for unified groups:
 * Group.Read.All  
 * Group.ReadWrite.All 
 
-These scopes provide access to group management functions (enumerating groups, enumerating group members) as well as access to content in the group (conversations and events). However, in order to access files in a unified group, you must also request the Sites.Read.All or Site.ReadWrite.All permission scope.  For more information about these permission scopes, see [Get started with Office 365 unified API (preview)](https://msdn.microsoft.com/office/office365/HowTo/get-started-with-office-365-unified-api#msg_register_app).  
+These scopes provide access to group management functions (enumerating groups, enumerating group members) as well as access to content in the group (conversations and events). However, in order to access files in a unified group, you must also request the Sites.Read.All or Site.ReadWrite.All permission scope.  For more information about these permission scopes, see [Microsoft Graph API permission scopes](.\microsoft-graph-api-permission-scopes.md).  
 
 ### Contacts
 
