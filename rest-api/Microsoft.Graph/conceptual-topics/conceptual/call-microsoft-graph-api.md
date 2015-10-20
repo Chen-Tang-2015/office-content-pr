@@ -7,10 +7,53 @@ In this section:
 
 <a name="msg_call_api_service"> </a>
 ###Call Microsoft Graph API service
-To access and manipulate a Microsoft Graph API resource, you call the Microsoft Graph API service, specifying the resource URLs in one of 
-the HTTPS POST, GET, PATCH or PUT, and DELETE operations permitted on the resource.  
+To access and manipulate a Microsoft Graph API resource, you call the Microsoft Graph API service, specifying the resource URLs in one of the following operations permitted on the resource.   
+
+- GET
+- POST
+- PATCH
+- PUT
+- DELETE 
+
+All Microsoft Graph API requests use the following root URL:
+
+```
+	https://graph.microsoft.com/{version}/{tenant}
+```
+
+In this URL:
+- `https://graph.microsoft.com` is the Microsoft Graph API endpoint
+- `{version}` is the target service version. Currently, the Microsoft Graph API is in preview status and is available in 
+the beta namespace. That is, specify {version} as beta.
+- `{tenant}` is the Office 365 tenant specified in one of the following ways:
+  - The tenant ID (GUID)
+  - A domain name for the tenant, for example, contoso.onmicrosoft.com
+  - The alias `me`, which resolves to the tenant of the signed-in user
+  - The alias `myOrganization`, which resolves to the tenant of the signed-in user
+
+For example, if your tenant domain is `https://contoso.onmicrosoft.com`, and you are targeting the beta 
+version of the service, you can send requests to `https://graph.microsoft.com/beta/contoso.onmicrosoft.com`.
+
+The service document ($metadata) is published at the service root. For example, you can view the service document for the v1.0 and beta versions via the following URLs.
+
+Microsoft Graph API v1.0 metadata.
+```
+	https://graph.microsoft.com/v1.0/$metadata
+```
+Microsoft Graph API beta metadata.
+```
+	https://graph.microsoft.com/beta/$metadata
+```
+
+The metadata allows you to see entities, entity types and sets, and enums of the Microsoft Graph REST API. Using the metadata and readily available third-party tools, you can create serialized objects and generate client libraries for simplified 
+use of the REST API.  
+
 A resource URL is determined by the Microsoft Graph API entity data model. The prescription is outlined in the entity metadata schema ($metadata). 
-For more information, see the _Understand Microsoft Graph API metadata_ topic.
+
+>  Note: To undertand how interpret the entity metadata schema ($metadata), see the _Understand Microsoft Graph API metadata_ topic.
+
+The path URL resource names and query parameters are case insensitive. However, values you assign, entity IDs, and 
+other base64 encoded values are case sensitive.
 
 To showcase a few representative use cases of the API calls, we present the following basic programming patterns by means of 
 
@@ -21,9 +64,9 @@ To showcase a few representative use cases of the API calls, we present the foll
 - [Filtering with a query option](#msg_filter_query_option),
 - [Calling OData actions and functions](#msg_calling_actions). 
 
-
 <a name="msg_nav_from_set_to_member"> </a>
 ###Navigation from a set to a member
+
 To view the information about a user, we need to get the `User` entity from the `users` collection on the tenant. To do so, we can
 navigate from the tenant to users and then to the specific user identified by its identifier, using an HTTPS GET request. For a `User` 
 entity, either the `objectId` or `userPrincipalName` property may be used as the identifier. The following example request uses 
