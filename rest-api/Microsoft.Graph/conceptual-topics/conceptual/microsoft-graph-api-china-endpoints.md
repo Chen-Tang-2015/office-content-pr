@@ -16,13 +16,13 @@ The Microsoft Graph API resources and related services for Office 365 operated b
 
 Go to `https://account.windowszaure.cn` to set up the development environment for Office 365 for China.   For more information, see [Set up your Office 365 development environment](..\howto\setup-development-environment.md).
 
-## Azure OAuth
+## Azure OpenId Connect and OAuth
 
 |**Office 365 for China**|**Office 365 outside of China**|
 |:-----|:-----|
-| `https://login.chinacloudapi.cn` | `https://login.microsoftonline.com/common` |
+| `https://login.chinacloudapi.cn` | `https://login.microsoftonline.com` |
 
-Use `TODO` to authenticate the user and `TODO` to authorize your app of Office 365 for China.
+Use `https://login.chinacloudapi.cn/common/oauth2/authorize` to authenticate the user and `login.chinacloudapi.cn/common/oauth2/token` to authorize your app on Office 365 for China.
 
 ## Office 365 developer site
 
@@ -35,6 +35,6 @@ In the following URLs, `{your-sub-domain}` is the name you specify when setting 
 ##  Microsoft Graph API
 |**Office 365 for China**|**Office 365 outside of China**|
 |:-----|:-----|
-| TODO |  `https://graph.microsoft.com/ |
+|`http://microsoftgraph.chinacloudapi.cn` |  `https://graph.microsoft.com/` |
 
 

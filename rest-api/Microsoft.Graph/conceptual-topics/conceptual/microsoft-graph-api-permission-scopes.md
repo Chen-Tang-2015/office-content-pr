@@ -7,9 +7,8 @@ In this section:
 -	[Permission scope concepts](#msg_perm_concepts) 
 -	[Permission scope details](#msg_perm_details)
 
-
- <a name="msg_perm_concepts"> </a>
- ##Permission scope concepts
+<a name="msg_perm_concepts"> </a>
+##Permission scope concepts
 
 ###App-only vs. delegated scopes
 Permission scopes can be either app-only or delegated. App-only scopes (also known as app roles) grant the app the full set of privileges offered by the scope. App-only scopes are typically used by apps that run as a service without a signed-in user being present. Delegated permission scopes are for apps that a user signs in to. These scopes delegate the privileges of the signed-in user to the app, allowing the app to act as the signed in user. The actual privileges granted to the app will be the least privileged combination (the intersection) of the privileges granted by the scope and those possessed by the signed-in user. For example, if the permission scope grants delegated privileges to write all directory objects, but the signed-in user has privileges only to update their own user profile, the app will only be able to write the signed-in user's profile but no other objects.
@@ -36,6 +35,8 @@ The following tables list the Microsoft Graph API permission scopes and explains
 | _Directory.Read.All_           |     `Read directory data`                     | Allows the app to read data in your organization's directory, such as users, groups and apps.   |
 | _Directory.ReadWrite.All_      |     `Read and write directory data`           | Allows the app to read and write data in your organization's directory, such as users, and groups, but prohibits user or group deletion.   |
 | _Directory.AccessAsUser.All_   |     `Access directory as the signed-in user`  | Allows the app to access the same information in the directory as the signed-in user.  A native client app can have the user to consent to this permission. But a web app requires the administrator consent. |
+| _Group.Read.All_ |    `Read all groups` | Allows the app to read all group properties and memberships on behalf of the signed-in user, and read group calendar and conversations on public groups and groups the signed in user is a member of.
+| _Group.ReadWrite.All_ |    `Read and write all groups`| Allows the app to create groups on behalf of the signed-in user and read all group properties and memberships.  Additionally allows the app to update group properties and memberships for groups the signed-in user owns.  Also allows the app to read and write group calendar and conversations on public groups and groups the signed-in user is a member of. |
 
 
 ###Permissions not requiring administrator's consent
@@ -45,8 +46,6 @@ The following tables list the Microsoft Graph API permission scopes and explains
 | _User.Read_       |    `Enable sign-in and read user profile` | Allows users to sign-in to the app, and allows the app to read the profile. It also allow the app to read basic company information of signed-in users. To read the user's manager, directr report, enable `User.ReadBasic.All`. To read a group membership, enable `Group.Read.All`.|
 | _User.ReadWrite_ |    `Read and write access to user profile` | Allows the app to read the profile, group membership, reports and manager of signed-in users. It also allow the app to update profile information on behalf of signed-in users. |
 | _User.ReadBasic.All_ |    `Read all user's basic profiles` | Allows the app to read a basic set of profile properties of other users, including the user's manager and direct reports, in your company or school on behalf of the signed-in user. This includes display name, first and last name, photo, and out of office message. | 
-| _Group.Read.All_ |    `Read all groups` (preview) | Allows the app to read all group properties and memberships on behalf of the signed-in user, and read group calendar and conversations on public groups and groups the signed in user is a member of.
-| _Group.ReadWrite.All_ |    `Read and write all groups` (preview) | Allows the app to create groups on behalf of the signed-in user and read all group properties and memberships.  Additionally allows the app to update group properties and memberships for groups the signed-in user owns.  Also allows the app to read and write group calendar and conversations on public groups and groups the signed-in user is a member of. |
 | _Mail.Read_ |    `Read user mail` | Allows the app to read email in user mailboxes. |
 | _Mail.ReadWrite_ |    `Read and write access to user mail` | Allows the app to create, read, update, and delete email in user mailboxes. Does not include permission to send mail. |
 | _Mail.Send_ |    `Send mail as a user` | Allows the app to send mail as users in the organization. |
@@ -54,12 +53,30 @@ The following tables list the Microsoft Graph API permission scopes and explains
 | _Calendar.ReadWrite_ |    `Have full access to user calendars`  | Allows the app to create, read, update, and delete events in user calendars. 
 | _Files.Read_ |    `Read users' files` | Allows the application to read the current user's files
 | _Files.ReadWrite_ |   `Edit or delete users' files`             | Allows the app to edit or delete the current user's files. |
-| _Sites.Read.All_ |    `Read items in all site collections` | Allows the application to read documents and list  items in all site collections on behalf of the signed-in user | 
-| _Sites.ReadWrite.All_ |    `Edit or delete items in all site collections` | Allows the application to edit or delete documents and list items in all site collections on behalf of the signed-in user |
-<!-- 
-| _Tasks.Read.All_ |    `Read the user's tasks and projects` | Allows the app to read the user's tasks and projects on behalf of the user |
-| _Tasks.ReadWrite.All_ |    `Read and write the user's tasks and projects` | Allows the app to create, read, update and delete the user's tasks and projects on behalf of the user |
--->
+| _Sites.Read.All_ |    `Read items in all site collections` | Allows the application to read documents and list  items in all site collections on behalf of the signed-in user |
+| _Sites.ReadWrite.All_ |    `Edit or delete items in all site collections` | Allows the application to edit or delete documents and list items in all site collections on behalf of the signed-in user. |
+
+
+###Permissions not requiring administrator's consent (preview)
+
+|   **Scope**    |  **Permission**   |  **Description** |
+|:---------------|:------------------|:-----------------|
+| _Tasks.Read.All_ |    `Read the user's tasks and projects`(preview) | Allows the app to read the user's tasks and projects on behalf of the user. |
+| _Tasks.ReadWrite.All_ |    `Read and write the user's tasks and projects` (preview) | Allows the app to create, read, update and delete the user's tasks and projects on behalf of the user. |
+| _Files.ReadWrite.Selected_ |    `Read and write files that the user selects`(preview) | Allows the app to read and write files that the user selects. The app has access for several hours after the user selects a file. |
+| _Files.Read.Selected_ |    `Read files that the user selects` (preview) | Allows the app to read files that the user selects. The app has access for several hours after the user selects a file. |
+| _People.Read_ |    `Read users' relevant people lists`(preview) | Allows the app to read a ranked list of relevant people of the signed-in user. The list includes local contacts, contacts from social networking, your organization's directory, and people from recent communications (such as email and Skype). |
+| _People.ReadWrite_ |    `Read and write users' relevant people lists` (preview) | Allows the app to create, read and write to the ranked list of relevant people of the signed-in user. The list includes local contacts, contacts from social networking, your organization's directory, and people from recent communications (such as email and Skype). |
+| _openid_ |    `Sign users in`(preview) | Allows users to sign in to the app with their work or school accounts and allows the app to see basic user profile information. |
+| _offline_access_ |    `Read and write user's information` (preview) | Allows the app to see and update user's data, even when the user is not actively using the app. |
+| _Notes.Create_ |    `Create pages in users' notebooks` (preview) | Allows the app to read the titles of notebooks and sections and create new pages, notebooks and sections on behalf of the signed-in user. |
+| _Notes.ReadWrite.CreatedByApp_ |    `Limited notebook access` (preview) | Allows the app to read the titles of notebooks and sections; create new pages; read and write limited to pages created by the app on behalf of the signed-in user. |
+| _Notes.Read_ |    `Read notebooks` (preview) | Allows the app to read the titles of notebooks and sections and read all pages on behalf of the signed-in user. It cannot read password protected sections.. |
+| _Notes.ReadWrite_ |    `Read and write notebooks` (preview) | Allows the app to read the titles of notebooks and sections, read all pages, write all pages and create new pages on behalf of the signed-in user.  It cannot access password protected sections. |
+| _Notes.Read.All_ |    `Read notebooks in your organization` (preview) | Allows the app to read the contents of all notebooks and sections that the signed-in user has access to.   It cannot read password protected sections. |
+| _Notes.ReadWrite.All_ |    `Read and write notebooks in your organization` (preview) | Allows the app to read and write the contents of all notebooks and sections that the signed-in user has access to.  It cannot access password protected sections. |
+
+<!-- -->
 
 ##Permission scope scenarios
 The following are some app scenarios using the `User` and `Group` resources and their corresponding required scopes. The following table shows the permission scopes needed for an app to be able to perform specific operations. Note that in some cases the ability of the app to perform some operations will depend on whether the permission scope is app-only or delegated, and, in the case of delegated permission scopes, on the privileges of the signed-in user. 
@@ -68,7 +85,7 @@ The following are some app scenarios using the `User` and `Group` resources and 
 
 | **App tasks involving User**	 |  **Required scopes** | **Permissions** |
 |:-------------------------------|:---------------------|:---------------|
-| App wants to read other users' basic info (only display name and picture), for example to show in a people picking experience	 | _User.ReadBasic.All_  |  `Read all user's basic profiles` |
+| App wants to read other users' basic information (only display name and picture), for example to show in a people picking experience	 | _User.ReadBasic.All_  |  `Read all user's basic profiles` |
 | App wants to read complete user profile for signed in user (see direct reports, and manager, etc)	 | _User.Read_ | `Enable sign-in and read user profile`|
 | App wants to read complete user profile all users	 | _User.Read.All_ |  `Read all user's full profiles`   |
 | App wants to read files, mail and calendar information for the signed in user	 | _User.Read_, _Files.Read_, _Mail.Read_, _Calendar.Read_ | `Enable sign-in and read user profile`, `Read users' files`,  `Read user mail`,  `Read user calendars` |
@@ -82,11 +99,11 @@ The following are some app scenarios using the `User` and `Group` resources and 
     
 | **App tasks involving Group**	 |  **Required scopes** |  **Permissions** |
 |:-------------------------------|:---------------------|:---------------|
-| App wants to read basic group info (only display name and picture), for example to show in a group picking experience	 | _Group.Read.All_  | `Read all groups` (preview) |
-| App wants to read all content in all unified groups, including files, conversations.  It also needs to show group memberships, be able to update group memberships, (if owner).  | 	_Sites.Read.All_, _Group.Read.All_ | `Read items in all site collections`, `Read all groups` (preview) |
-| App wants to read and write all content in all unified groups, including files, conversations.  It also needs to show group memberships, be able to update group memberships, (if owner).  | 	_Group.ReadWrite.All_, _Sites.ReadWrite.All_ |  `Read and write all groups` (preview), `Edit or delete items in all site collections` |
-| App wants to discover (find) a unified group. It allows the user to search for a particular group and choose one from the enumerated list to allow the user to join the group.	 | _Group.ReadWrite.All_ | `Read and write all groups` (preview) |
-| App wants to create a group through AAD Graph | 	_Group.ReadWrite.All_ | `Read and write all groups` (preview) |
+| App wants to read basic group info (only display name and picture), for example to show in a group picking experience	 | _Group.Read.All_  | `Read all groups`|
+| App wants to read all content in all unified groups, including files, conversations.  It also needs to show group memberships, be able to update group memberships, (if owner).  |  _Group.Read.All_ | `Read items in all site collections`, `Read all groups`|
+| App wants to read and write all content in all unified groups, including files, conversations.  It also needs to show group memberships, be able to update group memberships, (if owner).  | 	_Group.ReadWrite.All_, _Sites.ReadWrite.All_ |  `Read and write all groups`, `Edit or delete items in all site collections` |
+| App wants to discover (find) a unified group. It allows the user to search for a particular group and choose one from the enumerated list to allow the user to join the group.	 | _Group.ReadWrite.All_ | `Read and write all groups`|
+| App wants to create a group through AAD Graph | 	_Group.ReadWrite.All_ | `Read and write all groups`|
  
 
 ##Additional Resources##

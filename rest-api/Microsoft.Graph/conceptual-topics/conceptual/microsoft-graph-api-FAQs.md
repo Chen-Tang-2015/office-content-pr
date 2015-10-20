@@ -7,7 +7,6 @@ Your feedback is important to us. Connect with us on [Stack Overflow](http://sta
 
 **In this article**
   
--	[What is the Microsoft Graph API and how is it different from Office 365 APIs?](#msg_what_is_unified_api) 
 -	[What platforms are supported by Microsoft Graph API?](#msg_how_use__unified_api)
 -	[Why use Microsoft Graph API?](#msg_why_use_unified_api)
 -	[What's currently available in Microsoft Graph API](#msg_what_in_unified_api)
@@ -16,31 +15,6 @@ Your feedback is important to us. Connect with us on [Stack Overflow](http://sta
 -	[Does Microsoft Graph API support v2.0 app authentication model?](#msg_how_learn_unified_api) 
 
 
-<a name="msg_what_is_unified_api"> </a>
-## What is the Office 365 unified API?
-    
-The Office 365 unified API exposes multiple APIs from Microsoft cloud services through a single REST API endpoint.  By using the Office 365 unified API, you can turn your formerly difficult or complex queries into simple navigations. The API exposes information about productivity entities and the relationships among them, to enable rich navigation in data through one REST URL namespace (https://graph.microsoft.com), using one authentication and authorization system, and using a consistent and unified metadata, payload format, error handling, library, and more.
-
-<!--It takes information that is stored or inferred across multiple cloud services: 
--	exposing them through one REST URL namespace. The unifying URL namespace is _https://_**graph.microsoft.com**
--	using one authentication and authorization system
--	using a consistent and unified metadata, payload format, error handling, library, and more -->
-
-For example, let's say you want to programmatically retrieve a user's files, profile picture, and find the manager of the person who last edited that file in your organization. Because the information is stored in  multiple services-Azure Active Directory, SharePoint, and Exchange-the task involves multiple steps using Office 365 APIs: 
-
-1. Use the Discovery Service to find the various service endpoints 
-2. Determine the URL of the services your Office 365 apps want to connect to
-3. Then acquire and manage the access token for each service and make the request to the service directly
-
-Now, you can use the use Office 365 unified API to perform the same complex operation via a single REST API endpoint. You don't have to discover and navigate a different endpoint for each service, acquire and manage separate access token for each service, deal with siloed services and varying data model.
-
-<!--discover and navigate a different endpoint for each service
--	acquire and manage separate access token for each service
--	deal with siloed services and varying data model.  Currently each service defines entities independent of each other -->
-
-The following diagram shows the Office 365 unified API developer stack and how it works.
-
-![Office 365 unified API developer stack.](images\O365_unified_API_DevStackFinal3.png)
 
 <a name="msg_how_use_unified_api"> </a>
 ## How to use Office 365 unified API?
@@ -140,7 +114,7 @@ Some of the benefits of using Office 365 unified API  are as follows:
 ## What's in Office 365 unified API?
 Currently, the unified API supports programmatic access to the following entities.
 
-![Office 365 unified API currently available entities.](images\O365_unified_API_entities.png)
+![Office 365 unified API currently available entities.](./images/O365_unified_API_entities.png)
 
 **Users**
 
