@@ -54,7 +54,7 @@ The Microsoft Graph API exposes two permission scopes for unified groups:
 * Group.Read.All  
 * Group.ReadWrite.All 
 
-These scopes provide access to group management functions (enumerating groups, enumerating group members) as well as access to content in the group (conversations and events). However, in order to access files in a unified group, you must also request the Sites.Read.All or Site.ReadWrite.All permission scope.  For more information about these permission scopes, see [Microsoft Graph API permission scopes](.\microsoft-graph-api-permission-scopes.md).  
+These scopes provide access to group management functions (enumerating groups, enumerating group members) as well as access to content in the group (conversations and events). However, in order to access files in a unified group, you must also request the Sites.Read.All or Site.ReadWrite.All permission scope.  For more information about these permission scopes, see [Microsoft Graph API permission scopes](microsoft-graph-api-permission-scopes.md).  
 
 ### Contacts
 
