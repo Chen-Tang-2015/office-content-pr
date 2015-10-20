@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Update DirectoryObject</title>
+  <title>Update the properties of directoryobject object.</title>
+  <meta name="description" content="Update the properties of directoryobject object.">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,13 +20,17 @@
 <div class="container wrapper" id="body">
     <div class="row">
         <div class="col-md-9">
-            <h1 id="update-directoryobject">Update DirectoryObject</h1>
+            <h1 id="update-the-properties-of-directoryobject-object">Update the properties of directoryobject object.</h1>
 <p>Update the properties of directoryobject object.</p>
-<h4 id="http-request">HTTP request</h4>
-<pre><code class="http">
+<h3 id="prerequisites">Prerequisites</h3>
+<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<h3 id="http-request">HTTP request</h3>
+<pre><code class="http">PATCH /users/&lt;objectId&gt;/manager
+PATCH /directoryObjects/&lt;objectId&gt;
+PATCH /contacts/&lt;objectId&gt;/manager
 </code></pre>
 
-<h4 id="optional-request-headers">Optional request headers</h4>
+<h3 id="optional-request-headers">Optional request headers</h3>
 <table>
 <thead>
 <tr>
@@ -38,11 +43,11 @@
 <tr>
 	<td align="left">X-Sample-Header</td>
 	<td align="left">string</td>
-	<td align="left">Sample of how the HTTP headers used by the API could be displayed.</td>
+	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
 </tr>
 </tbody>
 </table>
-<h4 id="request-body">Request body</h4>
+<h3 id="request-body">Request body</h3>
 <p>In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.</p>
 <table>
 <thead>
@@ -56,17 +61,44 @@
 <tr>
 	<td align="left">deletionTimestamp</td>
 	<td align="left">DateTimeOffset</td>
-	<td align="left"></td>
+	<td align="left">The time at which the directory object was deleted. It only applies to those directory objects which can be restored. Currently it is only supported for deleted [Application] objects; all other entities return <strong>null</strong> for this property.                            <strong>Notes</strong>: Requires version 1.5 or newer.</td>
 </tr>
 <tr>
 	<td align="left">objectType</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">A string that identifies the object type. For example, for groups the value is always ΓÇ£GroupΓÇ¥.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="response">Response</h4>
+<h3 id="response">Response</h3>
 <p>If successful, this method returns a <code>200 OK</code> response code and updated <a href="../resources/directoryobject.htm">DirectoryObject</a> object in the response body.</p>
+<h3 id="example">Example</h3>
+<h5 id="request">Request</h5>
+<p>Here is an example of the request.</p>
+<pre><code class="http">PUT /users/&lt;objectId&gt;/manager
+Content-type: application/json
+Content-length: 111
+
+{
+  &quot;objectType&quot;: &quot;objectType-value&quot;,
+  &quot;objectId&quot;: &quot;objectId-value&quot;,
+  &quot;deletionTimestamp&quot;: &quot;datetime-value&quot;
+}
+</code></pre>
+
+<h5 id="response-1">Response</h5>
+<p>Here is an example of the response.</p>
+<pre><code class="http">HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 111
+
+{
+  &quot;objectType&quot;: &quot;objectType-value&quot;,
+  &quot;objectId&quot;: &quot;objectId-value&quot;,
+  &quot;deletionTimestamp&quot;: &quot;datetime-value&quot;
+}
+</code></pre>
+
 
         </div>
         <div id="tocbar" class="col-md-3 visible-md visible-lg">

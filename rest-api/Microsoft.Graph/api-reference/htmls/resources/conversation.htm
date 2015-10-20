@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Conversation resource type</title>
+  <meta name="description" content="Conversation resource">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,32 +22,27 @@
         <div class="col-md-9">
             <h1 id="conversation-resource-type">Conversation resource type</h1>
 <p>A conversation is a collection of <a href="#ConversationThreadResource">threads</a>. All threads and posts in a conversation share the same subject.</p>
-<h4 id="json-representation">JSON representation</h4>
+<h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
   &quot;DateTimeLastDelivered&quot;: &quot;String (timestamp)&quot;,
-  &quot;Extensions&quot;: [
-    {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Extension&quot;
-    }
-  ],
   &quot;HasAttachments&quot;: true,
-  &quot;Id&quot;: &quot;String (identifier)&quot;,
-  &quot;Preview&quot;: &quot;String&quot;,
+  &quot;Id&quot;: &quot;String-value (identifier)&quot;,
+  &quot;Preview&quot;: &quot;String-value&quot;,
   &quot;Threads&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.ConversationThread&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.conversationthread&quot;
     }
   ],
-  &quot;Topic&quot;: &quot;String&quot;,
+  &quot;Topic&quot;: &quot;String-value&quot;,
   &quot;UniqueSenders&quot;: [
-    &quot;String&quot;
+    &quot;String-value&quot;
   ]
 }
 
 </code></pre>
 
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -88,7 +84,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="relationships">Relationships</h4>
+<h3 id="relationships">Relationships</h3>
 <table>
 <thead>
 <tr>
@@ -99,18 +95,13 @@
 </thead>
 <tbody>
 <tr>
-	<td align="left">Extensions</td>
-	<td align="left"><a href="extension.htm">Extension</a> collection</td>
-	<td align="left">Read-only. Nullable.</td>
-</tr>
-<tr>
 	<td align="left">Threads</td>
 	<td align="left"><a href="conversationthread.htm">ConversationThread</a> collection</td>
 	<td align="left">A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="tasks">Tasks</h4>
+<h3 id="tasks">Tasks</h3>
 <table>
 <thead>
 <tr>
@@ -126,11 +117,6 @@
 	<td align="left">Read properties and relationships of conversation object.</td>
 </tr>
 <tr>
-	<td align="left"><a href="../api/conversation_post_extensions.htm">Create Extension</a></td>
-	<td align="left"><a href="extension.htm">Extension</a></td>
-	<td align="left">Create a new Extension by posting to the Extensions collection.</td>
-</tr>
-<tr>
 	<td align="left"><a href="../api/conversation_post_threads.htm">Create Thread</a></td>
 	<td align="left"><a href="conversationthread.htm">ConversationThread</a></td>
 	<td align="left">Create a new Thread by posting to the Threads collection.</td>
@@ -142,7 +128,7 @@
 </tr>
 <tr>
 	<td align="left"><a href="../api/conversation_delete.htm">Delete</a></td>
-	<td align="left">Void</td>
+	<td align="left">None</td>
 	<td align="left">Delete Conversation object.</td>
 </tr>
 </tbody>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Update Application</title>
+  <title>Update the properties of application object.</title>
+  <meta name="description" content="Update the properties of application object.">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,13 +20,15 @@
 <div class="container wrapper" id="body">
     <div class="row">
         <div class="col-md-9">
-            <h1 id="update-application">Update Application</h1>
+            <h1 id="update-the-properties-of-application-object">Update the properties of application object.</h1>
 <p>Update the properties of application object.</p>
-<h4 id="http-request">HTTP request</h4>
-<pre><code class="http">
+<h3 id="prerequisites">Prerequisites</h3>
+<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<h3 id="http-request">HTTP request</h3>
+<pre><code class="http">PATCH /applications/&lt;objectId&gt;
 </code></pre>
 
-<h4 id="optional-request-headers">Optional request headers</h4>
+<h3 id="optional-request-headers">Optional request headers</h3>
 <table>
 <thead>
 <tr>
@@ -38,11 +41,11 @@
 <tr>
 	<td align="left">X-Sample-Header</td>
 	<td align="left">string</td>
-	<td align="left">Sample of how the HTTP headers used by the API could be displayed.</td>
+	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
 </tr>
 </tbody>
 </table>
-<h4 id="request-body">Request body</h4>
+<h3 id="request-body">Request body</h3>
 <p>In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.</p>
 <table>
 <thead>
@@ -56,17 +59,17 @@
 <tr>
 	<td align="left">appId</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The unique identifier for the application.</td>
 </tr>
 <tr>
 	<td align="left">appRoles</td>
 	<td align="left">AppRole</td>
-	<td align="left"></td>
+	<td align="left">The collection of application roles that an application may declare. These roles can be assigned to users, groups or service principals.                              <strong>Notes</strong>: Requires version 1.5, not nullable.</td>
 </tr>
 <tr>
 	<td align="left">availableToOtherTenants</td>
 	<td align="left">Boolean</td>
-	<td align="left"></td>
+	<td align="left"><strong>true</strong> if the application is shared with other tenants; otherwise, <strong>false</strong>.</td>
 </tr>
 <tr>
 	<td align="left">deletionTimestamp</td>
@@ -76,7 +79,7 @@
 <tr>
 	<td align="left">displayName</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The display name for the application.</td>
 </tr>
 <tr>
 	<td align="left">errorUrl</td>
@@ -86,27 +89,27 @@
 <tr>
 	<td align="left">groupMembershipClaims</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">A bitmask that configures the &quot;groups&quot; claim issued in a user or OAuth 2.0 access token that the application expects. The bitmask values are: 0: None, 1: Security groups and Azure AD roles, 2: Reserved, and 4: Reserved. Setting the bitmask to 7 will get all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of.                              <strong>Notes</strong>: Requires version 1.5.</td>
 </tr>
 <tr>
 	<td align="left">homepage</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The URL to the application├óΓé¼Γäós homepage.</td>
 </tr>
 <tr>
 	<td align="left">identifierUris</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The URIs that identify the application. For more information see, <a href="https://azure.microsoft.com/en-us/documentation/articles/active-directory-application-objects/" target="_blank">Application Objects and Service Principal Objects</a>.                              <strong>Notes:</strong> not nullable, the <strong>any</strong> operator is required for filter expressions on multi-valued properties; for more information, see <a href="https://msdn.microsoft.com/library/azure/dn727074.aspx" target="_blank">Supported Queries, Filters, and Paging Options</a>.</td>
 </tr>
 <tr>
 	<td align="left">keyCredentials</td>
 	<td align="left">KeyCredential</td>
-	<td align="left"></td>
+	<td align="left">The collection of key credentials associated with the application                              <strong>Notes:</strong> not nullable</td>
 </tr>
 <tr>
 	<td align="left">knownClientApplications</td>
 	<td align="left">Guid</td>
-	<td align="left"></td>
+	<td align="left">Client applications that are tied to this resource application. Consent to any of the known client applications will result in implicit consent to the resource application through a combined consent dialog (showing the OAuth permission scopes required by the client and the resource).                              <strong>Notes</strong>: Requires version 1.5, not nullable.</td>
 </tr>
 <tr>
 	<td align="left">logoutUrl</td>
@@ -116,22 +119,22 @@
 <tr>
 	<td align="left">mainLogo</td>
 	<td align="left">Stream</td>
-	<td align="left"></td>
+	<td align="left">The main logo for the application.                              <strong>Notes:</strong> not nullable</td>
 </tr>
 <tr>
 	<td align="left">oauth2AllowImplicitFlow</td>
 	<td align="left">Boolean</td>
-	<td align="left"></td>
+	<td align="left">Specifies whether this web application can request OAuth2.0 implicit flow tokens. The default is <strong>false</strong>.                              <strong>Notes</strong>: Requires version 1.5, not nullable.</td>
 </tr>
 <tr>
 	<td align="left">oauth2AllowUrlPathMatching</td>
 	<td align="left">Boolean</td>
-	<td align="left"></td>
+	<td align="left">Specifies whether, as part of OAuth 2.0 token requests, Azure AD will allow path matching of the redirect URI against the application's <strong>replyUrls</strong>. The default is <strong>false</strong>.                              <strong>Notes</strong>: Requires version 1.5, not nullable.</td>
 </tr>
 <tr>
 	<td align="left">oauth2Permissions</td>
 	<td align="left">OAuth2Permission</td>
-	<td align="left"></td>
+	<td align="left">The collection of OAuth 2.0 permission scopes that the web API (resource) application exposes to client applications. These permission scopes may be granted to client applications during consent.                              <strong>Notes</strong>: Requires version 1.5, not nullable.</td>
 </tr>
 <tr>
 	<td align="left">oauth2RequirePostResponse</td>
@@ -141,37 +144,218 @@
 <tr>
 	<td align="left">objectType</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">A string that identifies the object type. For applications the value is always &quot;Application&quot;. Inherited from [DirectoryObject].</td>
 </tr>
 <tr>
 	<td align="left">passwordCredentials</td>
 	<td align="left">PasswordCredential</td>
-	<td align="left"></td>
+	<td align="left">The collection of password credentials associated with the application.                              <strong>Notes:</strong> not nullable</td>
 </tr>
 <tr>
 	<td align="left">publicClient</td>
 	<td align="left">Boolean</td>
-	<td align="left"></td>
+	<td align="left">Specifies whether this application is a public client (such as an installed application running on a mobile device).  Default is <strong>false</strong>.</td>
 </tr>
 <tr>
 	<td align="left">replyUrls</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">Specifies the URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.                              <strong>Notes:</strong> not nullable</td>
 </tr>
 <tr>
 	<td align="left">requiredResourceAccess</td>
 	<td align="left">RequiredResourceAccess</td>
-	<td align="left"></td>
+	<td align="left">Specifies resources that this application requires access to and the set of OAuth permission scopes and application roles that it needs under each of those resources. This pre-configuration of required resource access drives the consent experience.                              <strong>Notes</strong>: Requires version 1.5, not nullable.</td>
 </tr>
 <tr>
 	<td align="left">samlMetadataUrl</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The URL to the SAML metadata for the application.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="response">Response</h4>
+<h3 id="response">Response</h3>
 <p>If successful, this method returns a <code>200 OK</code> response code and updated <a href="../resources/application.htm">Application</a> object in the response body.</p>
+<h3 id="example">Example</h3>
+<h5 id="request">Request</h5>
+<p>Here is an example of the request.</p>
+<pre><code class="http">PUT /applications/&lt;objectId&gt;
+Content-type: application/json
+Content-length: 2150
+
+{
+  &quot;appId&quot;: &quot;appId-value&quot;,
+  &quot;appRoles&quot;: [
+    {
+      &quot;allowedMemberTypes&quot;: [
+        &quot;allowedMemberTypes-value&quot;
+      ],
+      &quot;description&quot;: &quot;description-value&quot;,
+      &quot;displayName&quot;: &quot;displayName-value&quot;,
+      &quot;id&quot;: &quot;id-value&quot;,
+      &quot;isEnabled&quot;: true,
+      &quot;value&quot;: &quot;value-value&quot;
+    }
+  ],
+  &quot;availableToOtherTenants&quot;: true,
+  &quot;displayName&quot;: &quot;displayName-value&quot;,
+  &quot;errorUrl&quot;: &quot;errorUrl-value&quot;,
+  &quot;groupMembershipClaims&quot;: &quot;groupMembershipClaims-value&quot;,
+  &quot;homepage&quot;: &quot;homepage-value&quot;,
+  &quot;identifierUris&quot;: [
+    &quot;identifierUris-value&quot;
+  ],
+  &quot;keyCredentials&quot;: [
+    {
+      &quot;customKeyIdentifier&quot;: &quot;customKeyIdentifier-value&quot;,
+      &quot;endDate&quot;: &quot;datetime-value&quot;,
+      &quot;keyId&quot;: &quot;keyId-value&quot;,
+      &quot;startDate&quot;: &quot;datetime-value&quot;,
+      &quot;type&quot;: &quot;type-value&quot;,
+      &quot;usage&quot;: &quot;usage-value&quot;,
+      &quot;value&quot;: &quot;value-value&quot;
+    }
+  ],
+  &quot;knownClientApplications&quot;: [
+    &quot;knownClientApplications-value&quot;
+  ],
+  &quot;mainLogo&quot;: &quot;mainLogo-value&quot;,
+  &quot;logoutUrl&quot;: &quot;logoutUrl-value&quot;,
+  &quot;oauth2AllowImplicitFlow&quot;: true,
+  &quot;oauth2AllowUrlPathMatching&quot;: true,
+  &quot;oauth2Permissions&quot;: [
+    {
+      &quot;adminConsentDescription&quot;: &quot;adminConsentDescription-value&quot;,
+      &quot;adminConsentDisplayName&quot;: &quot;adminConsentDisplayName-value&quot;,
+      &quot;id&quot;: &quot;id-value&quot;,
+      &quot;isEnabled&quot;: true,
+      &quot;type&quot;: &quot;type-value&quot;,
+      &quot;userConsentDescription&quot;: &quot;userConsentDescription-value&quot;,
+      &quot;userConsentDisplayName&quot;: &quot;userConsentDisplayName-value&quot;,
+      &quot;value&quot;: &quot;value-value&quot;
+    }
+  ],
+  &quot;oauth2RequirePostResponse&quot;: true,
+  &quot;passwordCredentials&quot;: [
+    {
+      &quot;customKeyIdentifier&quot;: &quot;customKeyIdentifier-value&quot;,
+      &quot;endDate&quot;: &quot;datetime-value&quot;,
+      &quot;keyId&quot;: &quot;keyId-value&quot;,
+      &quot;startDate&quot;: &quot;datetime-value&quot;,
+      &quot;value&quot;: &quot;value-value&quot;
+    }
+  ],
+  &quot;publicClient&quot;: true,
+  &quot;replyUrls&quot;: [
+    &quot;replyUrls-value&quot;
+  ],
+  &quot;requiredResourceAccess&quot;: [
+    {
+      &quot;resourceAppId&quot;: &quot;resourceAppId-value&quot;,
+      &quot;resourceAccess&quot;: [
+        {
+          &quot;id&quot;: &quot;id-value&quot;,
+          &quot;type&quot;: &quot;type-value&quot;
+        }
+      ]
+    }
+  ],
+  &quot;samlMetadataUrl&quot;: &quot;samlMetadataUrl-value&quot;,
+  &quot;objectType&quot;: &quot;objectType-value&quot;,
+  &quot;objectId&quot;: &quot;objectId-value&quot;,
+  &quot;deletionTimestamp&quot;: &quot;datetime-value&quot;
+}
+</code></pre>
+
+<h5 id="response-1">Response</h5>
+<p>Here is an example of the response.</p>
+<pre><code class="http">HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 2150
+
+{
+  &quot;appId&quot;: &quot;appId-value&quot;,
+  &quot;appRoles&quot;: [
+    {
+      &quot;allowedMemberTypes&quot;: [
+        &quot;allowedMemberTypes-value&quot;
+      ],
+      &quot;description&quot;: &quot;description-value&quot;,
+      &quot;displayName&quot;: &quot;displayName-value&quot;,
+      &quot;id&quot;: &quot;id-value&quot;,
+      &quot;isEnabled&quot;: true,
+      &quot;value&quot;: &quot;value-value&quot;
+    }
+  ],
+  &quot;availableToOtherTenants&quot;: true,
+  &quot;displayName&quot;: &quot;displayName-value&quot;,
+  &quot;errorUrl&quot;: &quot;errorUrl-value&quot;,
+  &quot;groupMembershipClaims&quot;: &quot;groupMembershipClaims-value&quot;,
+  &quot;homepage&quot;: &quot;homepage-value&quot;,
+  &quot;identifierUris&quot;: [
+    &quot;identifierUris-value&quot;
+  ],
+  &quot;keyCredentials&quot;: [
+    {
+      &quot;customKeyIdentifier&quot;: &quot;customKeyIdentifier-value&quot;,
+      &quot;endDate&quot;: &quot;datetime-value&quot;,
+      &quot;keyId&quot;: &quot;keyId-value&quot;,
+      &quot;startDate&quot;: &quot;datetime-value&quot;,
+      &quot;type&quot;: &quot;type-value&quot;,
+      &quot;usage&quot;: &quot;usage-value&quot;,
+      &quot;value&quot;: &quot;value-value&quot;
+    }
+  ],
+  &quot;knownClientApplications&quot;: [
+    &quot;knownClientApplications-value&quot;
+  ],
+  &quot;mainLogo&quot;: &quot;mainLogo-value&quot;,
+  &quot;logoutUrl&quot;: &quot;logoutUrl-value&quot;,
+  &quot;oauth2AllowImplicitFlow&quot;: true,
+  &quot;oauth2AllowUrlPathMatching&quot;: true,
+  &quot;oauth2Permissions&quot;: [
+    {
+      &quot;adminConsentDescription&quot;: &quot;adminConsentDescription-value&quot;,
+      &quot;adminConsentDisplayName&quot;: &quot;adminConsentDisplayName-value&quot;,
+      &quot;id&quot;: &quot;id-value&quot;,
+      &quot;isEnabled&quot;: true,
+      &quot;type&quot;: &quot;type-value&quot;,
+      &quot;userConsentDescription&quot;: &quot;userConsentDescription-value&quot;,
+      &quot;userConsentDisplayName&quot;: &quot;userConsentDisplayName-value&quot;,
+      &quot;value&quot;: &quot;value-value&quot;
+    }
+  ],
+  &quot;oauth2RequirePostResponse&quot;: true,
+  &quot;passwordCredentials&quot;: [
+    {
+      &quot;customKeyIdentifier&quot;: &quot;customKeyIdentifier-value&quot;,
+      &quot;endDate&quot;: &quot;datetime-value&quot;,
+      &quot;keyId&quot;: &quot;keyId-value&quot;,
+      &quot;startDate&quot;: &quot;datetime-value&quot;,
+      &quot;value&quot;: &quot;value-value&quot;
+    }
+  ],
+  &quot;publicClient&quot;: true,
+  &quot;replyUrls&quot;: [
+    &quot;replyUrls-value&quot;
+  ],
+  &quot;requiredResourceAccess&quot;: [
+    {
+      &quot;resourceAppId&quot;: &quot;resourceAppId-value&quot;,
+      &quot;resourceAccess&quot;: [
+        {
+          &quot;id&quot;: &quot;id-value&quot;,
+          &quot;type&quot;: &quot;type-value&quot;
+        }
+      ]
+    }
+  ],
+  &quot;samlMetadataUrl&quot;: &quot;samlMetadataUrl-value&quot;,
+  &quot;objectType&quot;: &quot;objectType-value&quot;,
+  &quot;objectId&quot;: &quot;objectId-value&quot;,
+  &quot;deletionTimestamp&quot;: &quot;datetime-value&quot;
+}
+</code></pre>
+
 
         </div>
         <div id="tocbar" class="col-md-3 visible-md visible-lg">

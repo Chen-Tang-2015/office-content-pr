@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>ProvisioningError resource type</title>
+  <meta name="description" content="ProvisioningError resource">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,18 +21,19 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="provisioningerror-resource-type">ProvisioningError resource type</h1>
-<h4 id="json-representation">JSON representation</h4>
+<p>The <strong>provisioningErrors</strong> property of the [Contact], [User], and [Group] entities is a collection of <strong>ProvisioningError</strong>.</p>
+<h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
-  &quot;errorDetail&quot;: &quot;String&quot;,
+  &quot;errorDetail&quot;: &quot;String-value&quot;,
   &quot;resolved&quot;: true,
-  &quot;service&quot;: &quot;String&quot;,
+  &quot;service&quot;: &quot;String-value&quot;,
   &quot;timestamp&quot;: &quot;String (timestamp)&quot;
 }
 
 </code></pre>
 
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -44,12 +46,12 @@
 <tr>
 	<td align="left">errorDetail</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">A description of the error.</td>
 </tr>
 <tr>
 	<td align="left">resolved</td>
 	<td align="left">Boolean</td>
-	<td align="left"></td>
+	<td align="left"><strong>true</strong> if the error was resolved; otherwise, <strong>false</strong>.</td>
 </tr>
 <tr>
 	<td align="left">service</td>
@@ -59,7 +61,7 @@
 <tr>
 	<td align="left">timestamp</td>
 	<td align="left">DateTimeOffset</td>
-	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+	<td align="left">The date and time at which the error occurred.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
 </tr>
 </tbody>
 </table>

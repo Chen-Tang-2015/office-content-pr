@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>ServicePlanInfo resource type</title>
+  <meta name="description" content="ServicePlanInfo resource">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,16 +21,17 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="serviceplaninfo-resource-type">ServicePlanInfo resource type</h1>
-<h4 id="json-representation">JSON representation</h4>
+<p>Contains information about a service plan associated with a subscribed SKU. The <strong>servicePlans</strong> property of the [SubscribedSku] entity is a collection of <strong>ServicePlanInfo</strong>.</p>
+<h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
-  &quot;servicePlanId&quot;: &quot;String&quot;,
-  &quot;servicePlanName&quot;: &quot;String&quot;
+  &quot;servicePlanId&quot;: &quot;Guid-value&quot;,
+  &quot;servicePlanName&quot;: &quot;String-value&quot;
 }
 
 </code></pre>
 
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -42,12 +44,12 @@
 <tr>
 	<td align="left">servicePlanId</td>
 	<td align="left">Guid</td>
-	<td align="left"></td>
+	<td align="left">The unique identifier of the service plan.</td>
 </tr>
 <tr>
 	<td align="left">servicePlanName</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The name of the service plan.</td>
 </tr>
 </tbody>
 </table>

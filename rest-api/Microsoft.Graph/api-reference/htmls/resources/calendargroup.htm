@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>CalendarGroup resource type</title>
+  <meta name="description" content="CalendarGroup resource">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,28 +22,23 @@
         <div class="col-md-9">
             <h1 id="calendargroup-resource-type">CalendarGroup resource type</h1>
 <p>A group of calendars.</p>
-<h4 id="json-representation">JSON representation</h4>
+<h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
   &quot;Calendars&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Calendar&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.calendar&quot;
     }
   ],
-  &quot;ChangeKey&quot;: &quot;String&quot;,
-  &quot;ClassId&quot;: &quot;String&quot;,
-  &quot;Extensions&quot;: [
-    {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Extension&quot;
-    }
-  ],
-  &quot;Id&quot;: &quot;String (identifier)&quot;,
-  &quot;Name&quot;: &quot;String&quot;
+  &quot;ChangeKey&quot;: &quot;String-value&quot;,
+  &quot;ClassId&quot;: &quot;Guid-value&quot;,
+  &quot;Id&quot;: &quot;String-value (identifier)&quot;,
+  &quot;Name&quot;: &quot;String-value&quot;
 }
 
 </code></pre>
 
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -74,7 +70,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="relationships">Relationships</h4>
+<h3 id="relationships">Relationships</h3>
 <table>
 <thead>
 <tr>
@@ -89,14 +85,9 @@
 	<td align="left"><a href="calendar.htm">Calendar</a> collection</td>
 	<td align="left">The calendars in the calendar group. Navigation property. Read-only. Nullable.</td>
 </tr>
-<tr>
-	<td align="left">Extensions</td>
-	<td align="left"><a href="extension.htm">Extension</a> collection</td>
-	<td align="left">Read-only. Nullable.</td>
-</tr>
 </tbody>
 </table>
-<h4 id="tasks">Tasks</h4>
+<h3 id="tasks">Tasks</h3>
 <table>
 <thead>
 <tr>
@@ -117,18 +108,13 @@
 	<td align="left">Create a new Calendar by posting to the Calendars collection.</td>
 </tr>
 <tr>
-	<td align="left"><a href="../api/calendargroup_post_extensions.htm">Create Extension</a></td>
-	<td align="left"><a href="extension.htm">Extension</a></td>
-	<td align="left">Create a new Extension by posting to the Extensions collection.</td>
-</tr>
-<tr>
 	<td align="left"><a href="../api/calendargroup_update.htm">Update</a></td>
 	<td align="left"><a href="calendargroup.htm">CalendarGroup</a></td>
 	<td align="left">Update CalendarGroup object.</td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/calendargroup_delete.htm">Delete</a></td>
-	<td align="left">Void</td>
+	<td align="left">None</td>
 	<td align="left">Delete CalendarGroup object.</td>
 </tr>
 </tbody>

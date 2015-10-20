@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Get ConversationThread</title>
+  <meta name="description" content="Get ConversationThread">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,13 +22,42 @@
         <div class="col-md-9">
             <h1 id="get-conversationthread">Get ConversationThread</h1>
 <p>Retrieve the properties and relationships of conversationthread object.</p>
-<h4 id="http-request">HTTP request</h4>
-<pre><code class="http">
+<h3 id="prerequisites">Prerequisites</h3>
+<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<h3 id="http-request">HTTP request</h3>
+<pre><code class="http">GET /groups/&lt;objectId&gt;/Threads/&lt;Id&gt;
+GET /groups/&lt;objectId&gt;/Conversations/&lt;Id&gt;/Threads/&lt;Id&gt;
+GET /users/&lt;objectId&gt;/JoinedGroups/&lt;objectId&gt;/Threads/&lt;Id&gt;
 </code></pre>
 
-<h4 id="optional-query-parameters">Optional query parameters</h4>
-<p>You can use the <a href="odata-optional-query-parameters.htm">OData query parameters</a> to restrict the shape of the objects returned from this call.</p>
-<h4 id="request-headers">Request headers</h4>
+<h3 id="optional-query-parameters">Optional query parameters</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Name</th>
+	<th align="left">Value</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">$count</td>
+	<td align="left">none</td>
+	<td align="left">The count of related entities can be requested by specifying the $count query option.</td>
+</tr>
+<tr>
+	<td align="left">$expand</td>
+	<td align="left">string</td>
+	<td align="left">Comma-separated list of relationships to expand and include in the response. See relationships table of <a href="../resources/conversationthread.htm">ConversationThread</a> object for supported names.</td>
+</tr>
+<tr>
+	<td align="left">$select</td>
+	<td align="left">string</td>
+	<td align="left">Comma-separated list of properties to include in the response.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-headers">Request headers</h3>
 <table>
 <thead>
 <tr>
@@ -40,14 +70,55 @@
 <tr>
 	<td align="left">X-Sample-Header</td>
 	<td align="left">string</td>
-	<td align="left">Sample of how the HTTP headers used by the API could be displayed.</td>
+	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
 </tr>
 </tbody>
 </table>
-<h4 id="request-body">Request body</h4>
+<h3 id="request-body">Request body</h3>
 <p>Do not supply a request body for this method.</p>
-<h4 id="response">Response</h4>
+<h3 id="response">Response</h3>
 <p>If successful, this method returns a <code>200 OK</code> response code and <a href="../resources/conversationthread.htm">ConversationThread</a> object in the response body.</p>
+<h3 id="example">Example</h3>
+<h5 id="request">Request</h5>
+<p>Here is an example of the request.</p>
+<pre><code class="http">GET /groups/&lt;objectId&gt;/Threads/&lt;Id&gt;
+</code></pre>
+
+<h5 id="response-1">Response</h5>
+<p>Here is an example of the response.</p>
+<pre><code class="http">HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 489
+
+{
+  &quot;ToRecipients&quot;: [
+    {
+      &quot;EmailAddress&quot;: {
+        &quot;Name&quot;: &quot;Name-value&quot;,
+        &quot;Address&quot;: &quot;Address-value&quot;
+      }
+    }
+  ],
+  &quot;Topic&quot;: &quot;Topic-value&quot;,
+  &quot;HasAttachments&quot;: true,
+  &quot;DateTimeLastDelivered&quot;: &quot;datetime-value&quot;,
+  &quot;UniqueSenders&quot;: [
+    &quot;UniqueSenders-value&quot;
+  ],
+  &quot;CcRecipients&quot;: [
+    {
+      &quot;EmailAddress&quot;: {
+        &quot;Name&quot;: &quot;Name-value&quot;,
+        &quot;Address&quot;: &quot;Address-value&quot;
+      }
+    }
+  ],
+  &quot;Preview&quot;: &quot;Preview-value&quot;,
+  &quot;IsLocked&quot;: true,
+  &quot;Id&quot;: &quot;Id-value&quot;
+}
+</code></pre>
+
 
         </div>
         <div id="tocbar" class="col-md-3 visible-md visible-lg">

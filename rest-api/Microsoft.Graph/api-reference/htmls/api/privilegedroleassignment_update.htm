@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Update PrivilegedRoleAssignment</title>
+  <title>Update the properties of privilegedroleassignment object.</title>
+  <meta name="description" content="Update the properties of privilegedroleassignment object.">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,13 +20,16 @@
 <div class="container wrapper" id="body">
     <div class="row">
         <div class="col-md-9">
-            <h1 id="update-privilegedroleassignment">Update PrivilegedRoleAssignment</h1>
+            <h1 id="update-the-properties-of-privilegedroleassignment-object">Update the properties of privilegedroleassignment object.</h1>
 <p>Update the properties of privilegedroleassignment object.</p>
-<h4 id="http-request">HTTP request</h4>
-<pre><code class="http">
+<h3 id="prerequisites">Prerequisites</h3>
+<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<h3 id="http-request">HTTP request</h3>
+<pre><code class="http">PATCH /PrivilegedRoleAssignments/&lt;UserId|RoleId&gt;
+PATCH /PrivilegedRoles/&lt;Id&gt;/Assignments/&lt;UserId|RoleId&gt;
 </code></pre>
 
-<h4 id="optional-request-headers">Optional request headers</h4>
+<h3 id="optional-request-headers">Optional request headers</h3>
 <table>
 <thead>
 <tr>
@@ -38,11 +42,11 @@
 <tr>
 	<td align="left">X-Sample-Header</td>
 	<td align="left">string</td>
-	<td align="left">Sample of how the HTTP headers used by the API could be displayed.</td>
+	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
 </tr>
 </tbody>
 </table>
-<h4 id="request-body">Request body</h4>
+<h3 id="request-body">Request body</h3>
 <p>In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.</p>
 <table>
 <thead>
@@ -70,8 +74,39 @@
 </tr>
 </tbody>
 </table>
-<h4 id="response">Response</h4>
+<h3 id="response">Response</h3>
 <p>If successful, this method returns a <code>200 OK</code> response code and updated <a href="../resources/privilegedroleassignment.htm">PrivilegedRoleAssignment</a> object in the response body.</p>
+<h3 id="example">Example</h3>
+<h5 id="request">Request</h5>
+<p>Here is an example of the request.</p>
+<pre><code class="http">PUT /PrivilegedRoleAssignments/&lt;UserId|RoleId&gt;
+Content-type: application/json
+Content-length: 160
+
+{
+  &quot;UserId&quot;: &quot;UserId-value&quot;,
+  &quot;RoleId&quot;: &quot;RoleId-value&quot;,
+  &quot;IsElevated&quot;: true,
+  &quot;ExpirationTime&quot;: &quot;datetime-value&quot;,
+  &quot;ResultMessage&quot;: &quot;ResultMessage-value&quot;
+}
+</code></pre>
+
+<h5 id="response-1">Response</h5>
+<p>Here is an example of the response.</p>
+<pre><code class="http">HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 160
+
+{
+  &quot;UserId&quot;: &quot;UserId-value&quot;,
+  &quot;RoleId&quot;: &quot;RoleId-value&quot;,
+  &quot;IsElevated&quot;: true,
+  &quot;ExpirationTime&quot;: &quot;datetime-value&quot;,
+  &quot;ResultMessage&quot;: &quot;ResultMessage-value&quot;
+}
+</code></pre>
+
 
         </div>
         <div id="tocbar" class="col-md-3 visible-md visible-lg">

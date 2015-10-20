@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Device resource type</title>
+  <meta name="description" content="Device resource">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,51 +21,47 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="device-resource-type">Device resource type</h1>
-<h4 id="json-representation">JSON representation</h4>
+<p>Represents a device registered in the directory. Inherits from [DirectoryObject].</p>
+<h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
-  &quot;Extensions&quot;: [
-    {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Extension&quot;
-    }
-  ],
   &quot;accountEnabled&quot;: true,
   &quot;alternativeSecurityIds&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.AlternativeSecurityId&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.alternativesecurityid&quot;
     }
   ],
   &quot;approximateLastLogonTimestamp&quot;: &quot;String (timestamp)&quot;,
   &quot;deletionTimestamp&quot;: &quot;String (timestamp)&quot;,
-  &quot;deviceId&quot;: &quot;String&quot;,
-  &quot;deviceMetadata&quot;: &quot;String&quot;,
-  &quot;deviceOSType&quot;: &quot;String&quot;,
-  &quot;deviceOSVersion&quot;: &quot;String&quot;,
+  &quot;deviceId&quot;: &quot;Guid-value&quot;,
+  &quot;deviceMetadata&quot;: &quot;String-value&quot;,
+  &quot;deviceOSType&quot;: &quot;String-value&quot;,
+  &quot;deviceOSVersion&quot;: &quot;String-value&quot;,
   &quot;deviceObjectVersion&quot;: 1024,
   &quot;devicePhysicalIds&quot;: [
-    &quot;String&quot;
+    &quot;String-value&quot;
   ],
-  &quot;deviceTrustType&quot;: &quot;String&quot;,
+  &quot;deviceTrustType&quot;: &quot;String-value&quot;,
   &quot;dirSyncEnabled&quot;: true,
-  &quot;displayName&quot;: &quot;String&quot;,
+  &quot;displayName&quot;: &quot;String-value&quot;,
   &quot;lastDirSyncTime&quot;: &quot;String (timestamp)&quot;,
-  &quot;objectId&quot;: &quot;String (identifier)&quot;,
-  &quot;objectType&quot;: &quot;String&quot;,
+  &quot;objectId&quot;: &quot;String-value (identifier)&quot;,
+  &quot;objectType&quot;: &quot;String-value&quot;,
   &quot;registeredOwners&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.DirectoryObject&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.directoryobject&quot;
     }
   ],
   &quot;registeredUsers&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.DirectoryObject&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.directoryobject&quot;
     }
   ]
 }
 
 </code></pre>
 
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -82,7 +79,7 @@
 <tr>
 	<td align="left">alternativeSecurityIds</td>
 	<td align="left"><a href="alternativesecurityid.htm">AlternativeSecurityId</a> collection</td>
-	<td align="left"></td>
+	<td align="left"><strong>Notes:</strong> not nullable, the <strong>any</strong> operator is required for filter expressions on multi-valued properties; for more information, see <a href="https://msdn.microsoft.com/library/azure/dn727074.aspx" target="_blank">Supported Queries, Filters, and Paging Options</a>.</td>
 </tr>
 <tr>
 	<td align="left">approximateLastLogonTimestamp</td>
@@ -107,12 +104,12 @@
 <tr>
 	<td align="left">deviceOSType</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The type of operating system on the device.</td>
 </tr>
 <tr>
 	<td align="left">deviceOSVersion</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The version of the operating system on the device</td>
 </tr>
 <tr>
 	<td align="left">deviceObjectVersion</td>
@@ -122,7 +119,7 @@
 <tr>
 	<td align="left">devicePhysicalIds</td>
 	<td align="left">String collection</td>
-	<td align="left"></td>
+	<td align="left"><strong>Notes:</strong> not nullable</td>
 </tr>
 <tr>
 	<td align="left">deviceTrustType</td>
@@ -132,31 +129,31 @@
 <tr>
 	<td align="left">dirSyncEnabled</td>
 	<td align="left">Boolean</td>
-	<td align="left"></td>
+	<td align="left"><strong>true</strong> if this object is synced from an on-premises directory; <strong>false</strong> if this object was originally synced from an on-premises directory but is no longer synced; <strong>null</strong> if this object has never been synced from an on-premises directory (default).</td>
 </tr>
 <tr>
 	<td align="left">displayName</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The display name for the device.</td>
 </tr>
 <tr>
 	<td align="left">lastDirSyncTime</td>
 	<td align="left">DateTimeOffset</td>
-	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+	<td align="left">The last time at which the object was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
 </tr>
 <tr>
 	<td align="left">objectId</td>
 	<td align="left">String</td>
-	<td align="left">Read-only.</td>
+	<td align="left">The unique identifier for the device. Inherited from [DirectoryObject].                            <strong>Notes: key</strong>, immutable, not nullable, unique             Read-only.</td>
 </tr>
 <tr>
 	<td align="left">objectType</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">A string that identifies the object type. For devices the value is always ΓÇ£DeviceΓÇ¥. Inherited from [DirectoryObject]</td>
 </tr>
 </tbody>
 </table>
-<h4 id="relationships">Relationships</h4>
+<h3 id="relationships">Relationships</h3>
 <table>
 <thead>
 <tr>
@@ -167,23 +164,18 @@
 </thead>
 <tbody>
 <tr>
-	<td align="left">Extensions</td>
-	<td align="left"><a href="extension.htm">Extension</a> collection</td>
-	<td align="left">Read-only. Nullable.</td>
-</tr>
-<tr>
 	<td align="left">registeredOwners</td>
 	<td align="left"><a href="directoryobject.htm">DirectoryObject</a> collection</td>
-	<td align="left">Read-only. Nullable.</td>
+	<td align="left">Users that are registered owners of the device. Read-only. Nullable.</td>
 </tr>
 <tr>
 	<td align="left">registeredUsers</td>
 	<td align="left"><a href="directoryobject.htm">DirectoryObject</a> collection</td>
-	<td align="left">Read-only. Nullable.</td>
+	<td align="left">Users that are registered users of the device. Read-only. Nullable.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="tasks">Tasks</h4>
+<h3 id="tasks">Tasks</h3>
 <table>
 <thead>
 <tr>
@@ -197,11 +189,6 @@
 	<td align="left"><a href="../api/device_get.htm">Get Device</a></td>
 	<td align="left"><a href="device.htm">Device</a></td>
 	<td align="left">Read properties and relationships of device object.</td>
-</tr>
-<tr>
-	<td align="left"><a href="../api/device_post_extensions.htm">Create Extension</a></td>
-	<td align="left"><a href="extension.htm">Extension</a></td>
-	<td align="left">Create a new Extension by posting to the Extensions collection.</td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/device_post_registeredowners.htm">Create registeredOwner</a></td>
@@ -220,22 +207,22 @@
 </tr>
 <tr>
 	<td align="left"><a href="../api/device_delete.htm">Delete</a></td>
-	<td align="left">Void</td>
+	<td align="left">None</td>
 	<td align="left">Delete Device object.</td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/device_checkmembergroups.htm">Checkmembergroups</a></td>
-	<td align="left">String</td>
+	<td align="left">String collection</td>
 	<td align="left"></td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/device_getmembergroups.htm">Get MemberGroups</a></td>
-	<td align="left">String</td>
+	<td align="left">String collection</td>
 	<td align="left"></td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/device_getmemberobjects.htm">Get MemberObjects</a></td>
-	<td align="left">String</td>
+	<td align="left">String collection</td>
 	<td align="left"></td>
 </tr>
 </tbody>

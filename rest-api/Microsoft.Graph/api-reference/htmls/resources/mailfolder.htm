@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>MailFolder resource type</title>
+  <meta name="description" content="MailFolder resource">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,33 +21,28 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="mailfolder-resource-type">MailFolder resource type</h1>
-<h4 id="json-representation">JSON representation</h4>
+<h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
   &quot;ChildFolderCount&quot;: 1024,
   &quot;ChildFolders&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.MailFolder&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.mailfolder&quot;
     }
   ],
-  &quot;DisplayName&quot;: &quot;String&quot;,
-  &quot;Extensions&quot;: [
-    {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Extension&quot;
-    }
-  ],
-  &quot;Id&quot;: &quot;String (identifier)&quot;,
+  &quot;DisplayName&quot;: &quot;String-value&quot;,
+  &quot;Id&quot;: &quot;String-value (identifier)&quot;,
   &quot;Messages&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Message&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.message&quot;
     }
   ],
-  &quot;ParentFolderId&quot;: &quot;String&quot;
+  &quot;ParentFolderId&quot;: &quot;String-value&quot;
 }
 
 </code></pre>
 
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -78,7 +74,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="relationships">Relationships</h4>
+<h3 id="relationships">Relationships</h3>
 <table>
 <thead>
 <tr>
@@ -94,18 +90,13 @@
 	<td align="left">Read-only. Nullable.</td>
 </tr>
 <tr>
-	<td align="left">Extensions</td>
-	<td align="left"><a href="extension.htm">Extension</a> collection</td>
-	<td align="left">Read-only. Nullable.</td>
-</tr>
-<tr>
 	<td align="left">Messages</td>
 	<td align="left"><a href="message.htm">Message</a> collection</td>
 	<td align="left">Read-only. Nullable.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="tasks">Tasks</h4>
+<h3 id="tasks">Tasks</h3>
 <table>
 <thead>
 <tr>
@@ -126,11 +117,6 @@
 	<td align="left">Create a new MailFolder by posting to the ChildFolders collection.</td>
 </tr>
 <tr>
-	<td align="left"><a href="../api/mailfolder_post_extensions.htm">Create Extension</a></td>
-	<td align="left"><a href="extension.htm">Extension</a></td>
-	<td align="left">Create a new Extension by posting to the Extensions collection.</td>
-</tr>
-<tr>
 	<td align="left"><a href="../api/mailfolder_post_messages.htm">Create Message</a></td>
 	<td align="left"><a href="message.htm">Message</a></td>
 	<td align="left">Create a new Message by posting to the Messages collection.</td>
@@ -142,7 +128,7 @@
 </tr>
 <tr>
 	<td align="left"><a href="../api/mailfolder_delete.htm">Delete</a></td>
-	<td align="left">Void</td>
+	<td align="left">None</td>
 	<td align="left">Delete MailFolder object.</td>
 </tr>
 <tr>

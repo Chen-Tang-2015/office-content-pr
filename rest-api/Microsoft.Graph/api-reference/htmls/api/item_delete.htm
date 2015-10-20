@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Delete</title>
+  <meta name="description" content="Delete">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,11 +22,16 @@
         <div class="col-md-9">
             <h1 id="delete">Delete</h1>
 <p>Delete item.</p>
-<h4 id="http-request">HTTP request</h4>
-<pre><code class="http">to be completed....
+<h3 id="prerequisites">Prerequisites</h3>
+<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<h3 id="http-request">HTTP request</h3>
+<pre><code class="http">DELETE /drive/root
+DELETE /drive/items/&lt;id&gt;
+DELETE /drives/&lt;id&gt;/root
+
 </code></pre>
 
-<h4 id="request-headers">Request headers</h4>
+<h3 id="request-headers">Request headers</h3>
 <table>
 <thead>
 <tr>
@@ -38,13 +44,13 @@
 <tr>
 	<td align="left">X-Sample-Header</td>
 	<td align="left">string</td>
-	<td align="left">Sample of how the HTTP headers used by the API could be displayed.</td>
+	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
 </tr>
 </tbody>
 </table>
-<h4 id="request-body">Request body</h4>
+<h3 id="request-body">Request body</h3>
 <p>Do not supply a request body for this method.</p>
-<h4 id="response">Response</h4>
+<h3 id="response">Response</h3>
 <p>If successful, this method returns <code>204, No Content</code> response code. It does not return anything in the response body.</p>
 
         </div>

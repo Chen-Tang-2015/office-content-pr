@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Update Event</title>
+  <title>Update the properties of event object.</title>
+  <meta name="description" content="Update the properties of event object.">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,13 +20,17 @@
 <div class="container wrapper" id="body">
     <div class="row">
         <div class="col-md-9">
-            <h1 id="update-event">Update Event</h1>
+            <h1 id="update-the-properties-of-event-object">Update the properties of event object.</h1>
 <p>Update the properties of event object.</p>
-<h4 id="http-request">HTTP request</h4>
-<pre><code class="http">
+<h3 id="prerequisites">Prerequisites</h3>
+<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<h3 id="http-request">HTTP request</h3>
+<pre><code class="http">PATCH /users/&lt;objectId&gt;/Events/&lt;Id&gt;
+PATCH /groups/&lt;objectId&gt;/Events/&lt;Id&gt;
+PATCH /users/&lt;objectId&gt;/CalendarView/&lt;Id&gt;
 </code></pre>
 
-<h4 id="optional-request-headers">Optional request headers</h4>
+<h3 id="optional-request-headers">Optional request headers</h3>
 <table>
 <thead>
 <tr>
@@ -38,11 +43,11 @@
 <tr>
 	<td align="left">X-Sample-Header</td>
 	<td align="left">string</td>
-	<td align="left">Sample of how the HTTP headers used by the API could be displayed.</td>
+	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
 </tr>
 </tbody>
 </table>
-<h4 id="request-body">Request body</h4>
+<h3 id="request-body">Request body</h3>
 <p>In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.</p>
 <table>
 <thead>
@@ -106,7 +111,7 @@
 <tr>
 	<td align="left">Importance</td>
 	<td align="left">String</td>
-	<td align="left">The importance of the event: Low = 0, Normal = 1, High = 2. Possible values are: <code>isExclusive</code> true,<code>options</code> {&quot;Low&quot;=&gt;{&quot;value&quot;=&gt;&quot;0&quot;, &quot;description&quot;=&gt;&quot;&quot;}, &quot;Normal&quot;=&gt;{&quot;value&quot;=&gt;&quot;1&quot;, &quot;description&quot;=&gt;&quot;&quot;}, &quot;High&quot;=&gt;{&quot;value&quot;=&gt;&quot;2&quot;, &quot;description&quot;=&gt;&quot;&quot;}}</td>
+	<td align="left">The importance of the event: Low = 0, Normal = 1, High = 2. Possible values are: <code>Low</code>, <code>Normal</code>, <code>High</code>.</td>
 </tr>
 <tr>
 	<td align="left">IsAllDay</td>
@@ -166,7 +171,7 @@
 <tr>
 	<td align="left">ShowAs</td>
 	<td align="left">String</td>
-	<td align="left">The status to show: Free = 0, Tentative = 1, Busy = 2, Oof = 3, WorkingElsewhere = 4, Unknown = -1. Possible values are: <code>isExclusive</code> true,<code>options</code> {&quot;Free&quot;=&gt;{&quot;value&quot;=&gt;&quot;0&quot;, &quot;description&quot;=&gt;&quot;&quot;}, &quot;Tentative&quot;=&gt;{&quot;value&quot;=&gt;&quot;1&quot;, &quot;description&quot;=&gt;&quot;&quot;}, &quot;Busy&quot;=&gt;{&quot;value&quot;=&gt;&quot;2&quot;, &quot;description&quot;=&gt;&quot;&quot;}, &quot;Oof&quot;=&gt;{&quot;value&quot;=&gt;&quot;3&quot;, &quot;description&quot;=&gt;&quot;&quot;}, &quot;WorkingElsewhere&quot;=&gt;{&quot;value&quot;=&gt;&quot;4&quot;, &quot;description&quot;=&gt;&quot;&quot;}, &quot;Unknown&quot;=&gt;{&quot;value&quot;=&gt;&quot;-1&quot;, &quot;description&quot;=&gt;&quot;&quot;}}</td>
+	<td align="left">The status to show: Free = 0, Tentative = 1, Busy = 2, Oof = 3, WorkingElsewhere = 4, Unknown = -1. Possible values are: <code>Free</code>, <code>Tentative</code>, <code>Busy</code>, <code>Oof</code>, <code>WorkingElsewhere</code>, <code>Unknown</code>.</td>
 </tr>
 <tr>
 	<td align="left">Start</td>
@@ -186,7 +191,7 @@
 <tr>
 	<td align="left">Type</td>
 	<td align="left">String</td>
-	<td align="left">The event type: SingleInstance = 0, Occurrence = 1, Exception = 2, SeriesMaster = 3. Possible values are: <code>isExclusive</code> true,<code>options</code> {&quot;SingleInstance&quot;=&gt;{&quot;value&quot;=&gt;&quot;0&quot;, &quot;description&quot;=&gt;&quot;&quot;}, &quot;Occurrence&quot;=&gt;{&quot;value&quot;=&gt;&quot;1&quot;, &quot;description&quot;=&gt;&quot;&quot;}, &quot;Exception&quot;=&gt;{&quot;value&quot;=&gt;&quot;2&quot;, &quot;description&quot;=&gt;&quot;&quot;}, &quot;SeriesMaster&quot;=&gt;{&quot;value&quot;=&gt;&quot;3&quot;, &quot;description&quot;=&gt;&quot;&quot;}}</td>
+	<td align="left">The event type: SingleInstance = 0, Occurrence = 1, Exception = 2, SeriesMaster = 3. Possible values are: <code>SingleInstance</code>, <code>Occurrence</code>, <code>Exception</code>, <code>SeriesMaster</code>.</td>
 </tr>
 <tr>
 	<td align="left">WebLink</td>
@@ -196,12 +201,187 @@
 <tr>
 	<td align="left">iCalUId</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">A unique identifier that is shared by all instances of an event across different calendars.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="response">Response</h4>
+<h3 id="response">Response</h3>
 <p>If successful, this method returns a <code>200 OK</code> response code and updated <a href="../resources/event.htm">Event</a> object in the response body.</p>
+<h3 id="example">Example</h3>
+<h5 id="request">Request</h5>
+<p>Here is an example of the request.</p>
+<pre><code class="http">PUT /users/&lt;objectId&gt;/Events/&lt;Id&gt;
+Content-type: application/json
+Content-length: 1812
+
+{
+  &quot;Subject&quot;: &quot;Subject-value&quot;,
+  &quot;Body&quot;: {
+    &quot;ContentType&quot;: &quot;ContentType-value&quot;,
+    &quot;Content&quot;: &quot;Content-value&quot;
+  },
+  &quot;BodyPreview&quot;: &quot;BodyPreview-value&quot;,
+  &quot;Importance&quot;: &quot;Importance-value&quot;,
+  &quot;HasAttachments&quot;: true,
+  &quot;Start&quot;: &quot;datetime-value&quot;,
+  &quot;StartTimeZone&quot;: &quot;StartTimeZone-value&quot;,
+  &quot;End&quot;: &quot;datetime-value&quot;,
+  &quot;EndTimeZone&quot;: &quot;EndTimeZone-value&quot;,
+  &quot;Reminder&quot;: 99,
+  &quot;Location&quot;: {
+    &quot;altitude&quot;: 99,
+    &quot;latitude&quot;: 99,
+    &quot;longitude&quot;: 99
+  },
+  &quot;ShowAs&quot;: &quot;ShowAs-value&quot;,
+  &quot;ResponseStatus&quot;: {
+    &quot;Response&quot;: &quot;Response-value&quot;,
+    &quot;Time&quot;: &quot;datetime-value&quot;
+  },
+  &quot;IsAllDay&quot;: true,
+  &quot;IsCancelled&quot;: true,
+  &quot;IsOrganizer&quot;: true,
+  &quot;ResponseRequested&quot;: true,
+  &quot;Type&quot;: &quot;Type-value&quot;,
+  &quot;SeriesMasterId&quot;: &quot;SeriesMasterId-value&quot;,
+  &quot;Attendees&quot;: [
+    {
+      &quot;EmailAddress&quot;: {
+        &quot;Name&quot;: &quot;Name-value&quot;,
+        &quot;Address&quot;: &quot;Address-value&quot;
+      },
+      &quot;Status&quot;: {
+        &quot;Response&quot;: &quot;Response-value&quot;,
+        &quot;Time&quot;: &quot;datetime-value&quot;
+      },
+      &quot;Type&quot;: &quot;Type-value&quot;
+    }
+  ],
+  &quot;Recurrence&quot;: {
+    &quot;Pattern&quot;: {
+      &quot;Type&quot;: &quot;Type-value&quot;,
+      &quot;Interval&quot;: 99,
+      &quot;Month&quot;: 99,
+      &quot;DayOfMonth&quot;: 99,
+      &quot;DaysOfWeek&quot;: [
+        &quot;DaysOfWeek-value&quot;
+      ],
+      &quot;FirstDayOfWeek&quot;: &quot;FirstDayOfWeek-value&quot;,
+      &quot;Index&quot;: &quot;Index-value&quot;
+    },
+    &quot;Range&quot;: {
+      &quot;Type&quot;: &quot;Type-value&quot;,
+      &quot;StartDate&quot;: &quot;datetime-value&quot;,
+      &quot;EndDate&quot;: &quot;datetime-value&quot;,
+      &quot;NumberOfOccurrences&quot;: 99
+    }
+  },
+  &quot;Organizer&quot;: {
+    &quot;EmailAddress&quot;: {
+      &quot;Name&quot;: &quot;Name-value&quot;,
+      &quot;Address&quot;: &quot;Address-value&quot;
+    }
+  },
+  &quot;iCalUId&quot;: &quot;iCalUId-value&quot;,
+  &quot;WebLink&quot;: &quot;WebLink-value&quot;,
+  &quot;OriginalStart&quot;: &quot;datetime-value&quot;,
+  &quot;ChangeKey&quot;: &quot;ChangeKey-value&quot;,
+  &quot;Categories&quot;: [
+    &quot;Categories-value&quot;
+  ],
+  &quot;DateTimeCreated&quot;: &quot;datetime-value&quot;,
+  &quot;DateTimeLastModified&quot;: &quot;datetime-value&quot;,
+  &quot;Id&quot;: &quot;Id-value&quot;
+}
+</code></pre>
+
+<h5 id="response-1">Response</h5>
+<p>Here is an example of the response.</p>
+<pre><code class="http">HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 1812
+
+{
+  &quot;Subject&quot;: &quot;Subject-value&quot;,
+  &quot;Body&quot;: {
+    &quot;ContentType&quot;: &quot;ContentType-value&quot;,
+    &quot;Content&quot;: &quot;Content-value&quot;
+  },
+  &quot;BodyPreview&quot;: &quot;BodyPreview-value&quot;,
+  &quot;Importance&quot;: &quot;Importance-value&quot;,
+  &quot;HasAttachments&quot;: true,
+  &quot;Start&quot;: &quot;datetime-value&quot;,
+  &quot;StartTimeZone&quot;: &quot;StartTimeZone-value&quot;,
+  &quot;End&quot;: &quot;datetime-value&quot;,
+  &quot;EndTimeZone&quot;: &quot;EndTimeZone-value&quot;,
+  &quot;Reminder&quot;: 99,
+  &quot;Location&quot;: {
+    &quot;altitude&quot;: 99,
+    &quot;latitude&quot;: 99,
+    &quot;longitude&quot;: 99
+  },
+  &quot;ShowAs&quot;: &quot;ShowAs-value&quot;,
+  &quot;ResponseStatus&quot;: {
+    &quot;Response&quot;: &quot;Response-value&quot;,
+    &quot;Time&quot;: &quot;datetime-value&quot;
+  },
+  &quot;IsAllDay&quot;: true,
+  &quot;IsCancelled&quot;: true,
+  &quot;IsOrganizer&quot;: true,
+  &quot;ResponseRequested&quot;: true,
+  &quot;Type&quot;: &quot;Type-value&quot;,
+  &quot;SeriesMasterId&quot;: &quot;SeriesMasterId-value&quot;,
+  &quot;Attendees&quot;: [
+    {
+      &quot;EmailAddress&quot;: {
+        &quot;Name&quot;: &quot;Name-value&quot;,
+        &quot;Address&quot;: &quot;Address-value&quot;
+      },
+      &quot;Status&quot;: {
+        &quot;Response&quot;: &quot;Response-value&quot;,
+        &quot;Time&quot;: &quot;datetime-value&quot;
+      },
+      &quot;Type&quot;: &quot;Type-value&quot;
+    }
+  ],
+  &quot;Recurrence&quot;: {
+    &quot;Pattern&quot;: {
+      &quot;Type&quot;: &quot;Type-value&quot;,
+      &quot;Interval&quot;: 99,
+      &quot;Month&quot;: 99,
+      &quot;DayOfMonth&quot;: 99,
+      &quot;DaysOfWeek&quot;: [
+        &quot;DaysOfWeek-value&quot;
+      ],
+      &quot;FirstDayOfWeek&quot;: &quot;FirstDayOfWeek-value&quot;,
+      &quot;Index&quot;: &quot;Index-value&quot;
+    },
+    &quot;Range&quot;: {
+      &quot;Type&quot;: &quot;Type-value&quot;,
+      &quot;StartDate&quot;: &quot;datetime-value&quot;,
+      &quot;EndDate&quot;: &quot;datetime-value&quot;,
+      &quot;NumberOfOccurrences&quot;: 99
+    }
+  },
+  &quot;Organizer&quot;: {
+    &quot;EmailAddress&quot;: {
+      &quot;Name&quot;: &quot;Name-value&quot;,
+      &quot;Address&quot;: &quot;Address-value&quot;
+    }
+  },
+  &quot;iCalUId&quot;: &quot;iCalUId-value&quot;,
+  &quot;WebLink&quot;: &quot;WebLink-value&quot;,
+  &quot;OriginalStart&quot;: &quot;datetime-value&quot;,
+  &quot;ChangeKey&quot;: &quot;ChangeKey-value&quot;,
+  &quot;Categories&quot;: [
+    &quot;Categories-value&quot;
+  ],
+  &quot;DateTimeCreated&quot;: &quot;datetime-value&quot;,
+  &quot;DateTimeLastModified&quot;: &quot;datetime-value&quot;,
+  &quot;Id&quot;: &quot;Id-value&quot;
+}
+</code></pre>
+
 
         </div>
         <div id="tocbar" class="col-md-3 visible-md visible-lg">

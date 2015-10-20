@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Update Contact</title>
+  <title>Update the properties of contact object.</title>
+  <meta name="description" content="Update the properties of contact object.">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,13 +20,17 @@
 <div class="container wrapper" id="body">
     <div class="row">
         <div class="col-md-9">
-            <h1 id="update-contact">Update Contact</h1>
+            <h1 id="update-the-properties-of-contact-object">Update the properties of contact object.</h1>
 <p>Update the properties of contact object.</p>
-<h4 id="http-request">HTTP request</h4>
-<pre><code class="http">
+<h3 id="prerequisites">Prerequisites</h3>
+<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<h3 id="http-request">HTTP request</h3>
+<pre><code class="http">PATCH /users/&lt;objectId&gt;/Contacts/&lt;Id&gt;
+PATCH /drive/root/createdByUser/Contacts/&lt;Id&gt;
+PATCH /drive/root/lastModifiedByUser/Contacts/&lt;Id&gt;
 </code></pre>
 
-<h4 id="optional-request-headers">Optional request headers</h4>
+<h3 id="optional-request-headers">Optional request headers</h3>
 <table>
 <thead>
 <tr>
@@ -38,11 +43,11 @@
 <tr>
 	<td align="left">X-Sample-Header</td>
 	<td align="left">string</td>
-	<td align="left">Sample of how the HTTP headers used by the API could be displayed.</td>
+	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
 </tr>
 </tbody>
 </table>
-<h4 id="request-body">Request body</h4>
+<h3 id="request-body">Request body</h3>
 <p>In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.</p>
 <table>
 <thead>
@@ -89,6 +94,11 @@
 	<td align="left">Identifies the version of the contact. Every time the contact is changed, ChangeKey  changes as well. This allows Exchange to apply changes to the correct version of the object.</td>
 </tr>
 <tr>
+	<td align="left">Children</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
 	<td align="left">CompanyName</td>
 	<td align="left">String</td>
 	<td align="left">The name of the contact's company.</td>
@@ -106,12 +116,12 @@
 <tr>
 	<td align="left">Department</td>
 	<td align="left">String</td>
-	<td align="left">The contact's department.</td>
+	<td align="left">The name for the department in which the contact works.</td>
 </tr>
 <tr>
 	<td align="left">DisplayName</td>
 	<td align="left">String</td>
-	<td align="left">The contact's display name.</td>
+	<td align="left">The display name for the contact.</td>
 </tr>
 <tr>
 	<td align="left">EmailAddresses</td>
@@ -131,7 +141,7 @@
 <tr>
 	<td align="left">GivenName</td>
 	<td align="left">String</td>
-	<td align="left">The contact's given name.</td>
+	<td align="left">The given name (first name) of the contact.</td>
 </tr>
 <tr>
 	<td align="left">HomeAddress</td>
@@ -156,12 +166,12 @@
 <tr>
 	<td align="left">JobTitle</td>
 	<td align="left">String</td>
-	<td align="left">The contact's job title.</td>
+	<td align="left">The contactΓÇÖs job title.</td>
 </tr>
 <tr>
 	<td align="left">Manager</td>
 	<td align="left">String</td>
-	<td align="left">The name of the contact's manager.</td>
+	<td align="left">The user or contact that is this contactΓÇÖs manager. Inherited from [DirectoryObject].            HTTP Methods: GET, PUT, DELETE</td>
 </tr>
 <tr>
 	<td align="left">MiddleName</td>
@@ -194,14 +204,24 @@
 	<td align="left">The ID of the contact's parent folder.</td>
 </tr>
 <tr>
+	<td align="left">PersonalNotes</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
 	<td align="left">Profession</td>
 	<td align="left">String</td>
 	<td align="left">The contact's profession.</td>
 </tr>
 <tr>
+	<td align="left">SpouseName</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
 	<td align="left">Surname</td>
 	<td align="left">String</td>
-	<td align="left">The contact's surname.</td>
+	<td align="left">The contact's surname (family name or last name).</td>
 </tr>
 <tr>
 	<td align="left">Title</td>
@@ -225,8 +245,171 @@
 </tr>
 </tbody>
 </table>
-<h4 id="response">Response</h4>
+<h3 id="response">Response</h3>
 <p>If successful, this method returns a <code>200 OK</code> response code and updated <a href="../resources/contact.htm">Contact</a> object in the response body.</p>
+<h3 id="example">Example</h3>
+<h5 id="request">Request</h5>
+<p>Here is an example of the request.</p>
+<pre><code class="http">PUT /users/&lt;objectId&gt;/Contacts/&lt;Id&gt;
+Content-type: application/json
+Content-length: 1977
+
+{
+  &quot;ParentFolderId&quot;: &quot;ParentFolderId-value&quot;,
+  &quot;Birthday&quot;: &quot;datetime-value&quot;,
+  &quot;FileAs&quot;: &quot;FileAs-value&quot;,
+  &quot;DisplayName&quot;: &quot;DisplayName-value&quot;,
+  &quot;GivenName&quot;: &quot;GivenName-value&quot;,
+  &quot;Initials&quot;: &quot;Initials-value&quot;,
+  &quot;MiddleName&quot;: &quot;MiddleName-value&quot;,
+  &quot;NickName&quot;: &quot;NickName-value&quot;,
+  &quot;Surname&quot;: &quot;Surname-value&quot;,
+  &quot;Title&quot;: &quot;Title-value&quot;,
+  &quot;Generation&quot;: &quot;Generation-value&quot;,
+  &quot;EmailAddresses&quot;: [
+    {
+      &quot;Name&quot;: &quot;Name-value&quot;,
+      &quot;Address&quot;: &quot;Address-value&quot;
+    }
+  ],
+  &quot;ImAddresses&quot;: [
+    &quot;ImAddresses-value&quot;
+  ],
+  &quot;JobTitle&quot;: &quot;JobTitle-value&quot;,
+  &quot;CompanyName&quot;: &quot;CompanyName-value&quot;,
+  &quot;Department&quot;: &quot;Department-value&quot;,
+  &quot;OfficeLocation&quot;: &quot;OfficeLocation-value&quot;,
+  &quot;Profession&quot;: &quot;Profession-value&quot;,
+  &quot;BusinessHomePage&quot;: &quot;BusinessHomePage-value&quot;,
+  &quot;AssistantName&quot;: &quot;AssistantName-value&quot;,
+  &quot;Manager&quot;: &quot;Manager-value&quot;,
+  &quot;HomePhones&quot;: [
+    &quot;HomePhones-value&quot;
+  ],
+  &quot;BusinessPhones&quot;: [
+    &quot;BusinessPhones-value&quot;
+  ],
+  &quot;MobilePhone1&quot;: &quot;MobilePhone1-value&quot;,
+  &quot;HomeAddress&quot;: {
+    &quot;Street&quot;: &quot;Street-value&quot;,
+    &quot;City&quot;: &quot;City-value&quot;,
+    &quot;State&quot;: &quot;State-value&quot;,
+    &quot;CountryOrRegion&quot;: &quot;CountryOrRegion-value&quot;,
+    &quot;PostalCode&quot;: &quot;PostalCode-value&quot;
+  },
+  &quot;BusinessAddress&quot;: {
+    &quot;Street&quot;: &quot;Street-value&quot;,
+    &quot;City&quot;: &quot;City-value&quot;,
+    &quot;State&quot;: &quot;State-value&quot;,
+    &quot;CountryOrRegion&quot;: &quot;CountryOrRegion-value&quot;,
+    &quot;PostalCode&quot;: &quot;PostalCode-value&quot;
+  },
+  &quot;OtherAddress&quot;: {
+    &quot;Street&quot;: &quot;Street-value&quot;,
+    &quot;City&quot;: &quot;City-value&quot;,
+    &quot;State&quot;: &quot;State-value&quot;,
+    &quot;CountryOrRegion&quot;: &quot;CountryOrRegion-value&quot;,
+    &quot;PostalCode&quot;: &quot;PostalCode-value&quot;
+  },
+  &quot;YomiCompanyName&quot;: &quot;YomiCompanyName-value&quot;,
+  &quot;YomiGivenName&quot;: &quot;YomiGivenName-value&quot;,
+  &quot;YomiSurname&quot;: &quot;YomiSurname-value&quot;,
+  &quot;SpouseName&quot;: &quot;SpouseName-value&quot;,
+  &quot;PersonalNotes&quot;: &quot;PersonalNotes-value&quot;,
+  &quot;Children&quot;: [
+    &quot;Children-value&quot;
+  ],
+  &quot;ChangeKey&quot;: &quot;ChangeKey-value&quot;,
+  &quot;Categories&quot;: [
+    &quot;Categories-value&quot;
+  ],
+  &quot;DateTimeCreated&quot;: &quot;datetime-value&quot;,
+  &quot;DateTimeLastModified&quot;: &quot;datetime-value&quot;,
+  &quot;Id&quot;: &quot;Id-value&quot;
+}
+</code></pre>
+
+<h5 id="response-1">Response</h5>
+<p>Here is an example of the response.</p>
+<pre><code class="http">HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 1977
+
+{
+  &quot;ParentFolderId&quot;: &quot;ParentFolderId-value&quot;,
+  &quot;Birthday&quot;: &quot;datetime-value&quot;,
+  &quot;FileAs&quot;: &quot;FileAs-value&quot;,
+  &quot;DisplayName&quot;: &quot;DisplayName-value&quot;,
+  &quot;GivenName&quot;: &quot;GivenName-value&quot;,
+  &quot;Initials&quot;: &quot;Initials-value&quot;,
+  &quot;MiddleName&quot;: &quot;MiddleName-value&quot;,
+  &quot;NickName&quot;: &quot;NickName-value&quot;,
+  &quot;Surname&quot;: &quot;Surname-value&quot;,
+  &quot;Title&quot;: &quot;Title-value&quot;,
+  &quot;Generation&quot;: &quot;Generation-value&quot;,
+  &quot;EmailAddresses&quot;: [
+    {
+      &quot;Name&quot;: &quot;Name-value&quot;,
+      &quot;Address&quot;: &quot;Address-value&quot;
+    }
+  ],
+  &quot;ImAddresses&quot;: [
+    &quot;ImAddresses-value&quot;
+  ],
+  &quot;JobTitle&quot;: &quot;JobTitle-value&quot;,
+  &quot;CompanyName&quot;: &quot;CompanyName-value&quot;,
+  &quot;Department&quot;: &quot;Department-value&quot;,
+  &quot;OfficeLocation&quot;: &quot;OfficeLocation-value&quot;,
+  &quot;Profession&quot;: &quot;Profession-value&quot;,
+  &quot;BusinessHomePage&quot;: &quot;BusinessHomePage-value&quot;,
+  &quot;AssistantName&quot;: &quot;AssistantName-value&quot;,
+  &quot;Manager&quot;: &quot;Manager-value&quot;,
+  &quot;HomePhones&quot;: [
+    &quot;HomePhones-value&quot;
+  ],
+  &quot;BusinessPhones&quot;: [
+    &quot;BusinessPhones-value&quot;
+  ],
+  &quot;MobilePhone1&quot;: &quot;MobilePhone1-value&quot;,
+  &quot;HomeAddress&quot;: {
+    &quot;Street&quot;: &quot;Street-value&quot;,
+    &quot;City&quot;: &quot;City-value&quot;,
+    &quot;State&quot;: &quot;State-value&quot;,
+    &quot;CountryOrRegion&quot;: &quot;CountryOrRegion-value&quot;,
+    &quot;PostalCode&quot;: &quot;PostalCode-value&quot;
+  },
+  &quot;BusinessAddress&quot;: {
+    &quot;Street&quot;: &quot;Street-value&quot;,
+    &quot;City&quot;: &quot;City-value&quot;,
+    &quot;State&quot;: &quot;State-value&quot;,
+    &quot;CountryOrRegion&quot;: &quot;CountryOrRegion-value&quot;,
+    &quot;PostalCode&quot;: &quot;PostalCode-value&quot;
+  },
+  &quot;OtherAddress&quot;: {
+    &quot;Street&quot;: &quot;Street-value&quot;,
+    &quot;City&quot;: &quot;City-value&quot;,
+    &quot;State&quot;: &quot;State-value&quot;,
+    &quot;CountryOrRegion&quot;: &quot;CountryOrRegion-value&quot;,
+    &quot;PostalCode&quot;: &quot;PostalCode-value&quot;
+  },
+  &quot;YomiCompanyName&quot;: &quot;YomiCompanyName-value&quot;,
+  &quot;YomiGivenName&quot;: &quot;YomiGivenName-value&quot;,
+  &quot;YomiSurname&quot;: &quot;YomiSurname-value&quot;,
+  &quot;SpouseName&quot;: &quot;SpouseName-value&quot;,
+  &quot;PersonalNotes&quot;: &quot;PersonalNotes-value&quot;,
+  &quot;Children&quot;: [
+    &quot;Children-value&quot;
+  ],
+  &quot;ChangeKey&quot;: &quot;ChangeKey-value&quot;,
+  &quot;Categories&quot;: [
+    &quot;Categories-value&quot;
+  ],
+  &quot;DateTimeCreated&quot;: &quot;datetime-value&quot;,
+  &quot;DateTimeLastModified&quot;: &quot;datetime-value&quot;,
+  &quot;Id&quot;: &quot;Id-value&quot;
+}
+</code></pre>
+
 
         </div>
         <div id="tocbar" class="col-md-3 visible-md visible-lg">

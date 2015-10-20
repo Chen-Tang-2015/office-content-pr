@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Task resource type</title>
+  <meta name="description" content="Task resource">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,51 +21,34 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="task-resource-type">Task resource type</h1>
-<h4 id="json-representation">JSON representation</h4>
+<h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
-  &quot;appliedCategories&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.AppliedCategoriesCollection&quot;
-  },
-  &quot;assignedBy&quot;: &quot;String&quot;,
-  &quot;assignedTo&quot;: &quot;String&quot;,
+  &quot;assignedBy&quot;: &quot;String-value&quot;,
+  &quot;assignedTo&quot;: &quot;String-value&quot;,
   &quot;assignedToDate&quot;: &quot;String (timestamp)&quot;,
-  &quot;assignedToTaskBoardFormat&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.TaskBoardTaskFormat&quot;
-  },
-  &quot;assigneePriority&quot;: &quot;String&quot;,
-  &quot;bucketId&quot;: &quot;String&quot;,
-  &quot;bucketTaskBoardFormat&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.TaskBoardTaskFormat&quot;
-  },
+  &quot;assigneePriority&quot;: &quot;String-value&quot;,
   &quot;completedDate&quot;: &quot;String (timestamp)&quot;,
-  &quot;createdBy&quot;: &quot;String&quot;,
+  &quot;createdBy&quot;: &quot;String-value&quot;,
   &quot;createdDate&quot;: &quot;String (timestamp)&quot;,
   &quot;details&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.TaskDetails&quot;
+    &quot;@odata.type&quot;: &quot;microsoft.graph.taskdetails&quot;
   },
   &quot;dueDate&quot;: &quot;String (timestamp)&quot;,
   &quot;hasNotes&quot;: true,
-  &quot;id&quot;: &quot;String (identifier)&quot;,
+  &quot;id&quot;: &quot;String-value (identifier)&quot;,
   &quot;numberOfReferences&quot;: 1024,
-  &quot;orderHint&quot;: &quot;String&quot;,
+  &quot;orderHint&quot;: &quot;String-value&quot;,
   &quot;percentComplete&quot;: 1024,
-  &quot;planId&quot;: &quot;String&quot;,
-  &quot;previewType&quot;: &quot;String&quot;,
+  &quot;planId&quot;: &quot;String-value&quot;,
   &quot;startDate&quot;: &quot;String (timestamp)&quot;,
-  &quot;statusTaskBoardFormat&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.TaskBoardTaskFormat&quot;
-  },
-  &quot;timelineFormat&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.TimelineTaskFormat&quot;
-  },
-  &quot;title&quot;: &quot;String&quot;,
-  &quot;version&quot;: &quot;String&quot;
+  &quot;title&quot;: &quot;String-value&quot;,
+  &quot;version&quot;: &quot;String-value&quot;
 }
 
 </code></pre>
 
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -74,11 +58,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-	<td align="left">appliedCategories</td>
-	<td align="left"><a href="appliedcategoriescollection.htm">AppliedCategoriesCollection</a></td>
-	<td align="left"></td>
-</tr>
 <tr>
 	<td align="left">assignedBy</td>
 	<td align="left">String</td>
@@ -96,11 +75,6 @@
 </tr>
 <tr>
 	<td align="left">assigneePriority</td>
-	<td align="left">String</td>
-	<td align="left"></td>
-</tr>
-<tr>
-	<td align="left">bucketId</td>
 	<td align="left">String</td>
 	<td align="left"></td>
 </tr>
@@ -155,11 +129,6 @@
 	<td align="left"></td>
 </tr>
 <tr>
-	<td align="left">previewType</td>
-	<td align="left">String</td>
-	<td align="left">Possible values are: <code>Automatic</code>, <code>NoPreview</code>, <code>CheckList</code>, <code>Notes</code>, <code>Reference</code>.</td>
-</tr>
-<tr>
 	<td align="left">startDate</td>
 	<td align="left">DateTimeOffset</td>
 	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
@@ -176,7 +145,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="relationships">Relationships</h4>
+<h3 id="relationships">Relationships</h3>
 <table>
 <thead>
 <tr>
@@ -187,33 +156,13 @@
 </thead>
 <tbody>
 <tr>
-	<td align="left">assignedToTaskBoardFormat</td>
-	<td align="left"><a href="taskboardtaskformat.htm">TaskBoardTaskFormat</a></td>
-	<td align="left">Read-only.</td>
-</tr>
-<tr>
-	<td align="left">bucketTaskBoardFormat</td>
-	<td align="left"><a href="taskboardtaskformat.htm">TaskBoardTaskFormat</a></td>
-	<td align="left">Read-only.</td>
-</tr>
-<tr>
 	<td align="left">details</td>
 	<td align="left"><a href="taskdetails.htm">TaskDetails</a></td>
 	<td align="left">Read-only.</td>
 </tr>
-<tr>
-	<td align="left">statusTaskBoardFormat</td>
-	<td align="left"><a href="taskboardtaskformat.htm">TaskBoardTaskFormat</a></td>
-	<td align="left">Read-only.</td>
-</tr>
-<tr>
-	<td align="left">timelineFormat</td>
-	<td align="left"><a href="timelinetaskformat.htm">TimelineTaskFormat</a></td>
-	<td align="left">Read-only.</td>
-</tr>
 </tbody>
 </table>
-<h4 id="tasks">Tasks</h4>
+<h3 id="tasks">Tasks</h3>
 <table>
 <thead>
 <tr>
@@ -235,7 +184,7 @@
 </tr>
 <tr>
 	<td align="left"><a href="../api/task_delete.htm">Delete</a></td>
-	<td align="left">Void</td>
+	<td align="left">None</td>
 	<td align="left">Delete Task object.</td>
 </tr>
 </tbody>

@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Message resource type</title>
+  <meta name="description" content="Message resource">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,76 +22,76 @@
         <div class="col-md-9">
             <h1 id="message-resource-type">Message resource type</h1>
 <p>A message in a mailbox folder.</p>
-<h4 id="json-representation">JSON representation</h4>
+<h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
   &quot;Attachments&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Attachment&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.attachment&quot;
     }
   ],
   &quot;BccRecipients&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Recipient&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.recipient&quot;
     }
   ],
   &quot;Body&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.ItemBody&quot;
+    &quot;@odata.type&quot;: &quot;microsoft.graph.itembody&quot;
   },
-  &quot;BodyPreview&quot;: &quot;String&quot;,
+  &quot;BodyPreview&quot;: &quot;String-value&quot;,
   &quot;Categories&quot;: [
-    &quot;String&quot;
+    &quot;String-value&quot;
   ],
   &quot;CcRecipients&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Recipient&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.recipient&quot;
     }
   ],
-  &quot;ChangeKey&quot;: &quot;String&quot;,
-  &quot;ConversationId&quot;: &quot;String&quot;,
+  &quot;ChangeKey&quot;: &quot;String-value&quot;,
+  &quot;ConversationId&quot;: &quot;String-value&quot;,
   &quot;DateTimeCreated&quot;: &quot;String (timestamp)&quot;,
   &quot;DateTimeLastModified&quot;: &quot;String (timestamp)&quot;,
   &quot;DateTimeReceived&quot;: &quot;String (timestamp)&quot;,
   &quot;DateTimeSent&quot;: &quot;String (timestamp)&quot;,
   &quot;Extensions&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Extension&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.extension&quot;
     }
   ],
   &quot;From&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.Recipient&quot;
+    &quot;@odata.type&quot;: &quot;microsoft.graph.recipient&quot;
   },
   &quot;HasAttachments&quot;: true,
-  &quot;Id&quot;: &quot;String (identifier)&quot;,
-  &quot;Importance&quot;: &quot;String&quot;,
+  &quot;Id&quot;: &quot;String-value (identifier)&quot;,
+  &quot;Importance&quot;: &quot;String-value&quot;,
   &quot;IsDeliveryReceiptRequested&quot;: true,
   &quot;IsDraft&quot;: true,
   &quot;IsRead&quot;: true,
   &quot;IsReadReceiptRequested&quot;: true,
-  &quot;ParentFolderId&quot;: &quot;String&quot;,
+  &quot;ParentFolderId&quot;: &quot;String-value&quot;,
   &quot;ReplyTo&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Recipient&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.recipient&quot;
     }
   ],
   &quot;Sender&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.Recipient&quot;
+    &quot;@odata.type&quot;: &quot;microsoft.graph.recipient&quot;
   },
-  &quot;Subject&quot;: &quot;String&quot;,
+  &quot;Subject&quot;: &quot;String-value&quot;,
   &quot;ToRecipients&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Recipient&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.recipient&quot;
     }
   ],
   &quot;UniqueBody&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.ItemBody&quot;
+    &quot;@odata.type&quot;: &quot;microsoft.graph.itembody&quot;
   },
-  &quot;WebLink&quot;: &quot;String&quot;
+  &quot;WebLink&quot;: &quot;String-value&quot;
 }
 
 </code></pre>
 
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -232,7 +233,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="relationships">Relationships</h4>
+<h3 id="relationships">Relationships</h3>
 <table>
 <thead>
 <tr>
@@ -254,7 +255,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="tasks">Tasks</h4>
+<h3 id="tasks">Tasks</h3>
 <table>
 <thead>
 <tr>
@@ -286,7 +287,7 @@
 </tr>
 <tr>
 	<td align="left"><a href="../api/message_delete.htm">Delete</a></td>
-	<td align="left">Void</td>
+	<td align="left">None</td>
 	<td align="left">Delete Message object.</td>
 </tr>
 <tr>
@@ -311,7 +312,7 @@
 </tr>
 <tr>
 	<td align="left"><a href="../api/message_forward.htm">Forward</a></td>
-	<td align="left"><a href="none.htm">None</a></td>
+	<td align="left">None</td>
 	<td align="left"></td>
 </tr>
 <tr>
@@ -321,17 +322,17 @@
 </tr>
 <tr>
 	<td align="left"><a href="../api/message_reply.htm">Reply</a></td>
-	<td align="left"><a href="none.htm">None</a></td>
+	<td align="left">None</td>
 	<td align="left"></td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/message_replyall.htm">Replyall</a></td>
-	<td align="left"><a href="none.htm">None</a></td>
+	<td align="left">None</td>
 	<td align="left"></td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/message_send.htm">Send</a></td>
-	<td align="left"><a href="none.htm">None</a></td>
+	<td align="left">None</td>
 	<td align="left"></td>
 </tr>
 </tbody>

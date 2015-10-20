@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>DirectoryRoleTemplate resource type</title>
+  <meta name="description" content="DirectoryRoleTemplate resource">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,24 +21,20 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="directoryroletemplate-resource-type">DirectoryRoleTemplate resource type</h1>
-<h4 id="json-representation">JSON representation</h4>
+<p>Represents a directory role template. A directory role template specifies the property values of a directory role ([DirectoryRole]). There is an associated directory role template object for each of the directory roles that may be activated in a tenant. </p>
+<h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
-  &quot;Extensions&quot;: [
-    {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Extension&quot;
-    }
-  ],
   &quot;deletionTimestamp&quot;: &quot;String (timestamp)&quot;,
-  &quot;description&quot;: &quot;String&quot;,
-  &quot;displayName&quot;: &quot;String&quot;,
-  &quot;objectId&quot;: &quot;String (identifier)&quot;,
-  &quot;objectType&quot;: &quot;String&quot;
+  &quot;description&quot;: &quot;String-value&quot;,
+  &quot;displayName&quot;: &quot;String-value&quot;,
+  &quot;objectId&quot;: &quot;String-value (identifier)&quot;,
+  &quot;objectType&quot;: &quot;String-value&quot;
 }
 
 </code></pre>
 
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -55,43 +52,28 @@
 <tr>
 	<td align="left">description</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The description to set for the directory role.</td>
 </tr>
 <tr>
 	<td align="left">displayName</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The display name to set for the directory role.</td>
 </tr>
 <tr>
 	<td align="left">objectId</td>
 	<td align="left">String</td>
-	<td align="left">Read-only.</td>
+	<td align="left">The unique identifier for the template. Inherited from [DirectoryObject]. In version 1.5 and later, you specify the <strong>objectId</strong> of the directory role template for the <strong>roleTemplateId</strong> property in the POST request activate a [DirectoryRole] in a tenant.                             <strong>Notes</strong>: <strong>key</strong>, immutable, not nullable, unique.             Read-only.</td>
 </tr>
 <tr>
 	<td align="left">objectType</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">A string that identifies the object type. For role templates the value is always ΓÇ£RoleTemplateΓÇ¥. Inherited from [DirectoryObject].</td>
 </tr>
 </tbody>
 </table>
-<h4 id="relationships">Relationships</h4>
-<table>
-<thead>
-<tr>
-	<th align="left">Relationship</th>
-	<th align="left">Type</th>
-	<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-	<td align="left">Extensions</td>
-	<td align="left"><a href="extension.htm">Extension</a> collection</td>
-	<td align="left">Read-only. Nullable.</td>
-</tr>
-</tbody>
-</table>
-<h4 id="tasks">Tasks</h4>
+<h3 id="relationships">Relationships</h3>
+<p>None</p>
+<h3 id="tasks">Tasks</h3>
 <table>
 <thead>
 <tr>
@@ -107,33 +89,28 @@
 	<td align="left">Read properties and relationships of directoryRoleTemplate object.</td>
 </tr>
 <tr>
-	<td align="left"><a href="../api/directoryroletemplate_post_extensions.htm">Create Extension</a></td>
-	<td align="left"><a href="extension.htm">Extension</a></td>
-	<td align="left">Create a new Extension by posting to the Extensions collection.</td>
-</tr>
-<tr>
 	<td align="left"><a href="../api/directoryroletemplate_update.htm">Update</a></td>
 	<td align="left"><a href="directoryroletemplate.htm">DirectoryRoleTemplate</a></td>
 	<td align="left">Update DirectoryRoleTemplate object.</td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/directoryroletemplate_delete.htm">Delete</a></td>
-	<td align="left">Void</td>
+	<td align="left">None</td>
 	<td align="left">Delete DirectoryRoleTemplate object.</td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/directoryroletemplate_checkmembergroups.htm">Checkmembergroups</a></td>
-	<td align="left">String</td>
+	<td align="left">String collection</td>
 	<td align="left"></td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/directoryroletemplate_getmembergroups.htm">Get MemberGroups</a></td>
-	<td align="left">String</td>
+	<td align="left">String collection</td>
 	<td align="left"></td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/directoryroletemplate_getmemberobjects.htm">Get MemberObjects</a></td>
-	<td align="left">String</td>
+	<td align="left">String collection</td>
 	<td align="left"></td>
 </tr>
 </tbody>

@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Contact resource type</title>
+  <meta name="description" content="Contact resource">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,76 +21,81 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="contact-resource-type">Contact resource type</h1>
-<p>A contact. Contacts are contained in contact folders.</p>
-<h4 id="json-representation">JSON representation</h4>
+<p>Represents an organizational contact. Inherits from [DirectoryObject].</p>
+<h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
-  &quot;AssistantName&quot;: &quot;String&quot;,
+  &quot;AssistantName&quot;: &quot;String-value&quot;,
   &quot;Birthday&quot;: &quot;String (timestamp)&quot;,
   &quot;BusinessAddress&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.PhysicalAddress&quot;
+    &quot;@odata.type&quot;: &quot;microsoft.graph.physicaladdress&quot;
   },
-  &quot;BusinessHomePage&quot;: &quot;String&quot;,
+  &quot;BusinessHomePage&quot;: &quot;String-value&quot;,
   &quot;BusinessPhones&quot;: [
-    &quot;String&quot;
+    &quot;String-value&quot;
   ],
   &quot;Categories&quot;: [
-    &quot;String&quot;
+    &quot;String-value&quot;
   ],
-  &quot;ChangeKey&quot;: &quot;String&quot;,
-  &quot;CompanyName&quot;: &quot;String&quot;,
+  &quot;ChangeKey&quot;: &quot;String-value&quot;,
+  &quot;Children&quot;: [
+    &quot;String-value&quot;
+  ],
+  &quot;CompanyName&quot;: &quot;String-value&quot;,
   &quot;ContactPhoto&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.Photo&quot;
+    &quot;@odata.type&quot;: &quot;microsoft.graph.photo&quot;
   },
   &quot;DateTimeCreated&quot;: &quot;String (timestamp)&quot;,
   &quot;DateTimeLastModified&quot;: &quot;String (timestamp)&quot;,
-  &quot;Department&quot;: &quot;String&quot;,
-  &quot;DisplayName&quot;: &quot;String&quot;,
+  &quot;Department&quot;: &quot;String-value&quot;,
+  &quot;DisplayName&quot;: &quot;String-value&quot;,
   &quot;EmailAddresses&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.EmailAddress&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.emailaddress&quot;
     }
   ],
   &quot;Extensions&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Extension&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.extension&quot;
     }
   ],
-  &quot;FileAs&quot;: &quot;String&quot;,
-  &quot;Generation&quot;: &quot;String&quot;,
-  &quot;GivenName&quot;: &quot;String&quot;,
+  &quot;FileAs&quot;: &quot;String-value&quot;,
+  &quot;Generation&quot;: &quot;String-value&quot;,
+  &quot;GivenName&quot;: &quot;String-value&quot;,
   &quot;HomeAddress&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.PhysicalAddress&quot;
+    &quot;@odata.type&quot;: &quot;microsoft.graph.physicaladdress&quot;
   },
   &quot;HomePhones&quot;: [
-    &quot;String&quot;
+    &quot;String-value&quot;
   ],
-  &quot;Id&quot;: &quot;String (identifier)&quot;,
+  &quot;Id&quot;: &quot;String-value (identifier)&quot;,
   &quot;ImAddresses&quot;: [
-    &quot;String&quot;
+    &quot;String-value&quot;
   ],
-  &quot;Initials&quot;: &quot;String&quot;,
-  &quot;JobTitle&quot;: &quot;String&quot;,
-  &quot;Manager&quot;: &quot;String&quot;,
-  &quot;MiddleName&quot;: &quot;String&quot;,
-  &quot;MobilePhone1&quot;: &quot;String&quot;,
-  &quot;NickName&quot;: &quot;String&quot;,
-  &quot;OfficeLocation&quot;: &quot;String&quot;,
+  &quot;Initials&quot;: &quot;String-value&quot;,
+  &quot;JobTitle&quot;: &quot;String-value&quot;,
+  &quot;Manager&quot;: &quot;String-value&quot;,
+  &quot;MiddleName&quot;: &quot;String-value&quot;,
+  &quot;MobilePhone1&quot;: &quot;String-value&quot;,
+  &quot;NickName&quot;: &quot;String-value&quot;,
+  &quot;OfficeLocation&quot;: &quot;String-value&quot;,
   &quot;OtherAddress&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.PhysicalAddress&quot;
+    &quot;@odata.type&quot;: &quot;microsoft.graph.physicaladdress&quot;
   },
-  &quot;ParentFolderId&quot;: &quot;String&quot;,
-  &quot;Profession&quot;: &quot;String&quot;,
-  &quot;Surname&quot;: &quot;String&quot;,
-  &quot;Title&quot;: &quot;String&quot;,
-  &quot;YomiCompanyName&quot;: &quot;String&quot;,
-  &quot;YomiGivenName&quot;: &quot;String&quot;,
-  &quot;YomiSurname&quot;: &quot;String&quot;
+  &quot;ParentFolderId&quot;: &quot;String-value&quot;,
+  &quot;PersonalNotes&quot;: &quot;String-value&quot;,
+  &quot;Profession&quot;: &quot;String-value&quot;,
+  &quot;SpouseName&quot;: &quot;String-value&quot;,
+  &quot;Surname&quot;: &quot;String-value&quot;,
+  &quot;Title&quot;: &quot;String-value&quot;,
+  &quot;YomiCompanyName&quot;: &quot;String-value&quot;,
+  &quot;YomiGivenName&quot;: &quot;String-value&quot;,
+  &quot;YomiSurname&quot;: &quot;String-value&quot;
 }
 
 </code></pre>
 
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -135,6 +141,11 @@
 	<td align="left">Identifies the version of the contact. Every time the contact is changed, ChangeKey  changes as well. This allows Exchange to apply changes to the correct version of the object.</td>
 </tr>
 <tr>
+	<td align="left">Children</td>
+	<td align="left">String collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
 	<td align="left">CompanyName</td>
 	<td align="left">String</td>
 	<td align="left">The name of the contact's company.</td>
@@ -152,12 +163,12 @@
 <tr>
 	<td align="left">Department</td>
 	<td align="left">String</td>
-	<td align="left">The contact's department.</td>
+	<td align="left">The name for the department in which the contact works.</td>
 </tr>
 <tr>
 	<td align="left">DisplayName</td>
 	<td align="left">String</td>
-	<td align="left">The contact's display name.</td>
+	<td align="left">The display name for the contact.</td>
 </tr>
 <tr>
 	<td align="left">EmailAddresses</td>
@@ -177,7 +188,7 @@
 <tr>
 	<td align="left">GivenName</td>
 	<td align="left">String</td>
-	<td align="left">The contact's given name.</td>
+	<td align="left">The given name (first name) of the contact.</td>
 </tr>
 <tr>
 	<td align="left">HomeAddress</td>
@@ -207,12 +218,12 @@
 <tr>
 	<td align="left">JobTitle</td>
 	<td align="left">String</td>
-	<td align="left">The contact's job title.</td>
+	<td align="left">The contactΓÇÖs job title.</td>
 </tr>
 <tr>
 	<td align="left">Manager</td>
 	<td align="left">String</td>
-	<td align="left">The name of the contact's manager.</td>
+	<td align="left">The user or contact that is this contactΓÇÖs manager. Inherited from [DirectoryObject].            HTTP Methods: GET, PUT, DELETE</td>
 </tr>
 <tr>
 	<td align="left">MiddleName</td>
@@ -245,14 +256,24 @@
 	<td align="left">The ID of the contact's parent folder.</td>
 </tr>
 <tr>
+	<td align="left">PersonalNotes</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
 	<td align="left">Profession</td>
 	<td align="left">String</td>
 	<td align="left">The contact's profession.</td>
 </tr>
 <tr>
+	<td align="left">SpouseName</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
 	<td align="left">Surname</td>
 	<td align="left">String</td>
-	<td align="left">The contact's surname.</td>
+	<td align="left">The contact's surname (family name or last name).</td>
 </tr>
 <tr>
 	<td align="left">Title</td>
@@ -276,7 +297,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="relationships">Relationships</h4>
+<h3 id="relationships">Relationships</h3>
 <table>
 <thead>
 <tr>
@@ -298,7 +319,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="tasks">Tasks</h4>
+<h3 id="tasks">Tasks</h3>
 <table>
 <thead>
 <tr>
@@ -325,7 +346,7 @@
 </tr>
 <tr>
 	<td align="left"><a href="../api/contact_delete.htm">Delete</a></td>
-	<td align="left">Void</td>
+	<td align="left">None</td>
 	<td align="left">Delete Contact object.</td>
 </tr>
 </tbody>

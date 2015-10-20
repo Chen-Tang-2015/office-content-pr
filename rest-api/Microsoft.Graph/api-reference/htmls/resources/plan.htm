@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Plan resource type</title>
+  <meta name="description" content="Plan resource">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,46 +21,29 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="plan-resource-type">Plan resource type</h1>
-<h4 id="json-representation">JSON representation</h4>
+<h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
   &quot;activeTasks&quot;: 1024,
-  &quot;assignedToTaskBoard&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.PlanTaskBoard&quot;
-  },
-  &quot;bucketTaskBoard&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.PlanTaskBoard&quot;
-  },
-  &quot;buckets&quot;: [
-    {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Bucket&quot;
-    }
-  ],
-  &quot;createdBy&quot;: &quot;String&quot;,
+  &quot;createdBy&quot;: &quot;String-value&quot;,
   &quot;details&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.PlanDetails&quot;
+    &quot;@odata.type&quot;: &quot;microsoft.graph.plandetails&quot;
   },
-  &quot;id&quot;: &quot;String (identifier)&quot;,
-  &quot;owner&quot;: &quot;String&quot;,
-  &quot;statusTaskBoard&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.PlanTaskBoard&quot;
-  },
+  &quot;id&quot;: &quot;String-value (identifier)&quot;,
+  &quot;owner&quot;: &quot;String-value&quot;,
   &quot;tasks&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Task&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.task&quot;
     }
   ],
-  &quot;timeline&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.PlanTimeline&quot;
-  },
-  &quot;title&quot;: &quot;String&quot;,
+  &quot;title&quot;: &quot;String-value&quot;,
   &quot;totalTasks&quot;: 1024,
-  &quot;version&quot;: &quot;String&quot;
+  &quot;version&quot;: &quot;String-value&quot;
 }
 
 </code></pre>
 
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -106,7 +90,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="relationships">Relationships</h4>
+<h3 id="relationships">Relationships</h3>
 <table>
 <thead>
 <tr>
@@ -117,28 +101,8 @@
 </thead>
 <tbody>
 <tr>
-	<td align="left">assignedToTaskBoard</td>
-	<td align="left"><a href="plantaskboard.htm">PlanTaskBoard</a></td>
-	<td align="left">Read-only.</td>
-</tr>
-<tr>
-	<td align="left">bucketTaskBoard</td>
-	<td align="left"><a href="plantaskboard.htm">PlanTaskBoard</a></td>
-	<td align="left">Read-only.</td>
-</tr>
-<tr>
-	<td align="left">buckets</td>
-	<td align="left"><a href="bucket.htm">Bucket</a> collection</td>
-	<td align="left">Read-only. Nullable.</td>
-</tr>
-<tr>
 	<td align="left">details</td>
 	<td align="left"><a href="plandetails.htm">PlanDetails</a></td>
-	<td align="left">Read-only.</td>
-</tr>
-<tr>
-	<td align="left">statusTaskBoard</td>
-	<td align="left"><a href="plantaskboard.htm">PlanTaskBoard</a></td>
 	<td align="left">Read-only.</td>
 </tr>
 <tr>
@@ -146,14 +110,9 @@
 	<td align="left"><a href="task.htm">Task</a> collection</td>
 	<td align="left">Read-only. Nullable.</td>
 </tr>
-<tr>
-	<td align="left">timeline</td>
-	<td align="left"><a href="plantimeline.htm">PlanTimeline</a></td>
-	<td align="left">Read-only.</td>
-</tr>
 </tbody>
 </table>
-<h4 id="tasks">Tasks</h4>
+<h3 id="tasks">Tasks</h3>
 <table>
 <thead>
 <tr>
@@ -169,11 +128,6 @@
 	<td align="left">Read properties and relationships of plan object.</td>
 </tr>
 <tr>
-	<td align="left"><a href="../api/plan_post_buckets.htm">Create Bucket</a></td>
-	<td align="left"><a href="bucket.htm">Bucket</a></td>
-	<td align="left">Create a new Bucket by posting to the buckets collection.</td>
-</tr>
-<tr>
 	<td align="left"><a href="../api/plan_post_tasks.htm">Create Task</a></td>
 	<td align="left"><a href="task.htm">Task</a></td>
 	<td align="left">Create a new Task by posting to the tasks collection.</td>
@@ -185,7 +139,7 @@
 </tr>
 <tr>
 	<td align="left"><a href="../api/plan_delete.htm">Delete</a></td>
-	<td align="left">Void</td>
+	<td align="left">None</td>
 	<td align="left">Delete Plan object.</td>
 </tr>
 </tbody>

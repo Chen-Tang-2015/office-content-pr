@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>ContactFolder resource type</title>
+  <meta name="description" content="ContactFolder resource">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,32 +22,27 @@
         <div class="col-md-9">
             <h1 id="contactfolder-resource-type">ContactFolder resource type</h1>
 <p>A folder that contains contacts.</p>
-<h4 id="json-representation">JSON representation</h4>
+<h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
   &quot;ChildFolders&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.ContactFolder&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.contactfolder&quot;
     }
   ],
   &quot;Contacts&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Contact&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.contact&quot;
     }
   ],
-  &quot;DisplayName&quot;: &quot;String&quot;,
-  &quot;Extensions&quot;: [
-    {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Extension&quot;
-    }
-  ],
-  &quot;Id&quot;: &quot;String (identifier)&quot;,
-  &quot;ParentFolderId&quot;: &quot;String&quot;
+  &quot;DisplayName&quot;: &quot;String-value&quot;,
+  &quot;Id&quot;: &quot;String-value (identifier)&quot;,
+  &quot;ParentFolderId&quot;: &quot;String-value&quot;
 }
 
 </code></pre>
 
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -73,7 +69,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="relationships">Relationships</h4>
+<h3 id="relationships">Relationships</h3>
 <table>
 <thead>
 <tr>
@@ -93,14 +89,9 @@
 	<td align="left"><a href="contact.htm">Contact</a> collection</td>
 	<td align="left">The contacts in the folder. Navigation property. Read-only. Nullable.</td>
 </tr>
-<tr>
-	<td align="left">Extensions</td>
-	<td align="left"><a href="extension.htm">Extension</a> collection</td>
-	<td align="left">Read-only. Nullable.</td>
-</tr>
 </tbody>
 </table>
-<h4 id="tasks">Tasks</h4>
+<h3 id="tasks">Tasks</h3>
 <table>
 <thead>
 <tr>
@@ -126,18 +117,13 @@
 	<td align="left">Create a new Contact by posting to the Contacts collection.</td>
 </tr>
 <tr>
-	<td align="left"><a href="../api/contactfolder_post_extensions.htm">Create Extension</a></td>
-	<td align="left"><a href="extension.htm">Extension</a></td>
-	<td align="left">Create a new Extension by posting to the Extensions collection.</td>
-</tr>
-<tr>
 	<td align="left"><a href="../api/contactfolder_update.htm">Update</a></td>
 	<td align="left"><a href="contactfolder.htm">ContactFolder</a></td>
 	<td align="left">Update ContactFolder object.</td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/contactfolder_delete.htm">Delete</a></td>
-	<td align="left">Void</td>
+	<td align="left">None</td>
 	<td align="left">Delete ContactFolder object.</td>
 </tr>
 </tbody>

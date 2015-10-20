@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>PrivilegedRole: SelfDeactivate</title>
+  <meta name="description" content="PrivilegedRole: SelfDeactivate">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,11 +21,15 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="privilegedrole-selfdeactivate">PrivilegedRole: SelfDeactivate</h1>
-<h4 id="http-request">HTTP request</h4>
-<pre><code class="http">to be completed....
+<h3 id="prerequisites">Prerequisites</h3>
+<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<h3 id="http-request">HTTP request</h3>
+<pre><code class="http">POST /PrivilegedRoles/&lt;Id&gt;/SelfDeactivate
+POST /PrivilegedRoleAssignments/&lt;UserId|RoleId&gt;/RoleInfo/SelfDeactivate
+
 </code></pre>
 
-<h4 id="request-headers">Request headers</h4>
+<h3 id="request-headers">Request headers</h3>
 <table>
 <thead>
 <tr>
@@ -37,13 +42,35 @@
 <tr>
 	<td align="left">X-Sample-Header</td>
 	<td align="left">string</td>
-	<td align="left">Sample of how the HTTP headers used by the API could be displayed.</td>
+	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
 </tr>
 </tbody>
 </table>
-<h4 id="request-body">Request body</h4>
-<h4 id="response">Response</h4>
+<h3 id="request-body">Request body</h3>
+<h3 id="response">Response</h3>
 <p>If successful, this method returns <code>200, OK</code> response code and <a href="../resources/privilegedroleassignment.htm">PrivilegedRoleAssignment</a> object in the response body.</p>
+<h3 id="example">Example</h3>
+<p>Here is an example of how to call this API.</p>
+<h5 id="request">Request</h5>
+<p>Here is an example of the request.</p>
+<pre><code class="http">POST /PrivilegedRoles/&lt;Id&gt;/SelfDeactivate
+</code></pre>
+
+<h5 id="response-1">Response</h5>
+<p>Here is an example of the response.</p>
+<pre><code class="http">HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 160
+
+{
+  &quot;UserId&quot;: &quot;UserId-value&quot;,
+  &quot;RoleId&quot;: &quot;RoleId-value&quot;,
+  &quot;IsElevated&quot;: true,
+  &quot;ExpirationTime&quot;: &quot;datetime-value&quot;,
+  &quot;ResultMessage&quot;: &quot;ResultMessage-value&quot;
+}
+</code></pre>
+
 
         </div>
         <div id="tocbar" class="col-md-3 visible-md visible-lg">

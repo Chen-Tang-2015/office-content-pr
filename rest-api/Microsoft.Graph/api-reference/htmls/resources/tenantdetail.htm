@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>TenantDetail resource type</title>
+  <meta name="description" content="TenantDetail resource">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,65 +21,61 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="tenantdetail-resource-type">TenantDetail resource type</h1>
-<h4 id="json-representation">JSON representation</h4>
+<p>Represents an Azure Active Directory tenant. Only the read and update operations are supported on tenants; create and delete are not supported. Inherits from [DirectoryOjbect].</p>
+<h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
-  &quot;Extensions&quot;: [
-    {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Extension&quot;
-    }
-  ],
   &quot;assignedPlans&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.AssignedPlan&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.assignedplan&quot;
     }
   ],
-  &quot;city&quot;: &quot;String&quot;,
+  &quot;city&quot;: &quot;String-value&quot;,
   &quot;companyLastDirSyncTime&quot;: &quot;String (timestamp)&quot;,
-  &quot;country&quot;: &quot;String&quot;,
-  &quot;countryLetterCode&quot;: &quot;String&quot;,
+  &quot;country&quot;: &quot;String-value&quot;,
+  &quot;countryLetterCode&quot;: &quot;String-value&quot;,
   &quot;deletionTimestamp&quot;: &quot;String (timestamp)&quot;,
   &quot;dirSyncEnabled&quot;: true,
-  &quot;displayName&quot;: &quot;String&quot;,
+  &quot;displayName&quot;: &quot;String-value&quot;,
   &quot;marketingNotificationEmails&quot;: [
-    &quot;String&quot;
+    &quot;String-value&quot;
   ],
-  &quot;objectId&quot;: &quot;String (identifier)&quot;,
-  &quot;objectType&quot;: &quot;String&quot;,
-  &quot;postalCode&quot;: &quot;String&quot;,
-  &quot;preferredLanguage&quot;: &quot;String&quot;,
+  &quot;objectId&quot;: &quot;String-value (identifier)&quot;,
+  &quot;objectType&quot;: &quot;String-value&quot;,
+  &quot;postalCode&quot;: &quot;String-value&quot;,
+  &quot;preferredLanguage&quot;: &quot;String-value&quot;,
   &quot;provisionedPlans&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.ProvisionedPlan&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.provisionedplan&quot;
     }
   ],
   &quot;provisioningErrors&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.ProvisioningError&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.provisioningerror&quot;
     }
   ],
   &quot;securityComplianceNotificationMails&quot;: [
-    &quot;String&quot;
+    &quot;String-value&quot;
   ],
   &quot;securityComplianceNotificationPhones&quot;: [
-    &quot;String&quot;
+    &quot;String-value&quot;
   ],
-  &quot;state&quot;: &quot;String&quot;,
-  &quot;street&quot;: &quot;String&quot;,
+  &quot;state&quot;: &quot;String-value&quot;,
+  &quot;street&quot;: &quot;String-value&quot;,
   &quot;technicalNotificationMails&quot;: [
-    &quot;String&quot;
+    &quot;String-value&quot;
   ],
-  &quot;telephoneNumber&quot;: &quot;String&quot;,
+  &quot;telephoneNumber&quot;: &quot;String-value&quot;,
   &quot;verifiedDomains&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.VerifiedDomain&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.verifieddomain&quot;
     }
   ]
 }
 
 </code></pre>
 
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -91,7 +88,7 @@
 <tr>
 	<td align="left">assignedPlans</td>
 	<td align="left"><a href="assignedplan.htm">AssignedPlan</a> collection</td>
-	<td align="left"></td>
+	<td align="left">The collection of service plans associated with the tenant.                            <strong>Notes</strong>: not nullable.</td>
 </tr>
 <tr>
 	<td align="left">city</td>
@@ -101,7 +98,7 @@
 <tr>
 	<td align="left">companyLastDirSyncTime</td>
 	<td align="left">DateTimeOffset</td>
-	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+	<td align="left">The time and date at which the tenant was last synced with the on-premise directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
 </tr>
 <tr>
 	<td align="left">country</td>
@@ -121,27 +118,27 @@
 <tr>
 	<td align="left">dirSyncEnabled</td>
 	<td align="left">Boolean</td>
-	<td align="left"></td>
+	<td align="left"><strong>true</strong> if this object is synced from an on-premises directory; <strong>false</strong> if this object was originally synced from an on-premises directory but is no longer synced; <strong>null</strong> if this object has never been synced from an on-premises directory (default).</td>
 </tr>
 <tr>
 	<td align="left">displayName</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The display name for the tenant.</td>
 </tr>
 <tr>
 	<td align="left">marketingNotificationEmails</td>
 	<td align="left">String collection</td>
-	<td align="left"></td>
+	<td align="left"><strong>Notes</strong>: not nullable.</td>
 </tr>
 <tr>
 	<td align="left">objectId</td>
 	<td align="left">String</td>
-	<td align="left">Read-only.</td>
+	<td align="left">The unique identifier for the tenant. Inherited from [DirectoryObject].                            <strong>Notes</strong>: <strong>key</strong>, immutable, not nullable, unique.             Read-only.</td>
 </tr>
 <tr>
 	<td align="left">objectType</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">A string that identifies the object type. For tenants the value is always ΓÇ£CompanyΓÇ¥. Inherited from [DirectoryObject].</td>
 </tr>
 <tr>
 	<td align="left">postalCode</td>
@@ -156,12 +153,12 @@
 <tr>
 	<td align="left">provisionedPlans</td>
 	<td align="left"><a href="provisionedplan.htm">ProvisionedPlan</a> collection</td>
-	<td align="left"></td>
+	<td align="left"><strong>Notes</strong>: not nullable.</td>
 </tr>
 <tr>
 	<td align="left">provisioningErrors</td>
 	<td align="left"><a href="provisioningerror.htm">ProvisioningError</a> collection</td>
-	<td align="left"></td>
+	<td align="left"><strong>Notes</strong>: not nullable.</td>
 </tr>
 <tr>
 	<td align="left">securityComplianceNotificationMails</td>
@@ -186,7 +183,7 @@
 <tr>
 	<td align="left">technicalNotificationMails</td>
 	<td align="left">String collection</td>
-	<td align="left"></td>
+	<td align="left"><strong>Notes</strong>: not nullable.</td>
 </tr>
 <tr>
 	<td align="left">telephoneNumber</td>
@@ -196,28 +193,13 @@
 <tr>
 	<td align="left">verifiedDomains</td>
 	<td align="left"><a href="verifieddomain.htm">VerifiedDomain</a> collection</td>
-	<td align="left"></td>
+	<td align="left">The collection of domains associated with this tenant.                            <strong>Notes</strong>: not nullable.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="relationships">Relationships</h4>
-<table>
-<thead>
-<tr>
-	<th align="left">Relationship</th>
-	<th align="left">Type</th>
-	<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-	<td align="left">Extensions</td>
-	<td align="left"><a href="extension.htm">Extension</a> collection</td>
-	<td align="left">Read-only. Nullable.</td>
-</tr>
-</tbody>
-</table>
-<h4 id="tasks">Tasks</h4>
+<h3 id="relationships">Relationships</h3>
+<p>None</p>
+<h3 id="tasks">Tasks</h3>
 <table>
 <thead>
 <tr>
@@ -233,33 +215,28 @@
 	<td align="left">Read properties and relationships of tenantDetail object.</td>
 </tr>
 <tr>
-	<td align="left"><a href="../api/tenantdetail_post_extensions.htm">Create Extension</a></td>
-	<td align="left"><a href="extension.htm">Extension</a></td>
-	<td align="left">Create a new Extension by posting to the Extensions collection.</td>
-</tr>
-<tr>
 	<td align="left"><a href="../api/tenantdetail_update.htm">Update</a></td>
 	<td align="left"><a href="tenantdetail.htm">TenantDetail</a></td>
 	<td align="left">Update TenantDetail object.</td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/tenantdetail_delete.htm">Delete</a></td>
-	<td align="left">Void</td>
+	<td align="left">None</td>
 	<td align="left">Delete TenantDetail object.</td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/tenantdetail_checkmembergroups.htm">Checkmembergroups</a></td>
-	<td align="left">String</td>
+	<td align="left">String collection</td>
 	<td align="left"></td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/tenantdetail_getmembergroups.htm">Get MemberGroups</a></td>
-	<td align="left">String</td>
+	<td align="left">String collection</td>
 	<td align="left"></td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/tenantdetail_getmemberobjects.htm">Get MemberObjects</a></td>
-	<td align="left">String</td>
+	<td align="left">String collection</td>
 	<td align="left"></td>
 </tr>
 </tbody>

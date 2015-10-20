@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>thumbnailSet resource type</title>
+  <meta name="description" content="thumbnailSet resource">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,11 +21,12 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="thumbnailset-resource-type">thumbnailSet resource type</h1>
-<p>The ThumbnailSet type is a keyed collection of <a href="thumbnail.htm">Thumbnail</a> objects. It is used to represent a set of thumbnails associated with a single file on OneDrive.  </p>
-<h4 id="json-representation">JSON representation</h4>
+<p>The ThumbnailSet type is a keyed collection of <a href="thumbnail.htm">Thumbnail</a> objects.
+ It is used to represent a set of thumbnails associated with a single file on OneDrive.</p>
+<h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
-  &quot;id&quot;: &quot;String (identifier)&quot;,
+  &quot;id&quot;: &quot;String-value (identifier)&quot;,
   &quot;large&quot;: {
     &quot;@odata.type&quot;: &quot;microsoft.graph.thumbnail&quot;
   },
@@ -33,12 +35,15 @@
   },
   &quot;small&quot;: {
     &quot;@odata.type&quot;: &quot;microsoft.graph.thumbnail&quot;
+  },
+  &quot;source&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.thumbnail&quot;
   }
 }
 
 </code></pre>
 
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -68,11 +73,16 @@
 	<td align="left"><a href="thumbnail.htm">thumbnail</a></td>
 	<td align="left">A 48x48 cropped thumbnail.</td>
 </tr>
+<tr>
+	<td align="left">source</td>
+	<td align="left"><a href="thumbnail.htm">thumbnail</a></td>
+	<td align="left">A custom thumbnail image or the original image used to generate other thumbnails.</td>
+</tr>
 </tbody>
 </table>
-<h4 id="relationships">Relationships</h4>
+<h3 id="relationships">Relationships</h3>
 <p>None</p>
-<h4 id="tasks">Tasks</h4>
+<h3 id="tasks">Tasks</h3>
 <table>
 <thead>
 <tr>
@@ -94,13 +104,8 @@
 </tr>
 <tr>
 	<td align="left"><a href="../api/thumbnailset_delete.htm">Delete</a></td>
-	<td align="left">Void</td>
+	<td align="left">None</td>
 	<td align="left">Delete thumbnailSet object.</td>
-</tr>
-<tr>
-	<td align="left"><a href="../api/thumbnailset_getcustomthumbnail.htm">Get CustomThumbnail</a></td>
-	<td align="left"><a href="thumbnail.htm">thumbnail</a></td>
-	<td align="left"></td>
 </tr>
 </tbody>
 </table>

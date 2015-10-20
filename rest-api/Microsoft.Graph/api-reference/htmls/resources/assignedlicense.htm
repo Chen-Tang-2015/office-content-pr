@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>AssignedLicense resource type</title>
+  <meta name="description" content="AssignedLicense resource">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,18 +21,19 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="assignedlicense-resource-type">AssignedLicense resource type</h1>
-<h4 id="json-representation">JSON representation</h4>
+<p>Represents a license assigned to a user. The <strong>assignedLicenses</strong> property of the [User] entity is a collection of <strong>AssignedLicense</strong>.</p>
+<h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
   &quot;disabledPlans&quot;: [
-    &quot;String&quot;
+    &quot;Guid-value&quot;
   ],
-  &quot;skuId&quot;: &quot;String&quot;
+  &quot;skuId&quot;: &quot;Guid-value&quot;
 }
 
 </code></pre>
 
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -44,12 +46,12 @@
 <tr>
 	<td align="left">disabledPlans</td>
 	<td align="left">Guid collection</td>
-	<td align="left"></td>
+	<td align="left">A collection of the unique identifiers for plans that have been disabled.</td>
 </tr>
 <tr>
 	<td align="left">skuId</td>
 	<td align="left">Guid</td>
-	<td align="left"></td>
+	<td align="left">The unique identifier for the SKU.</td>
 </tr>
 </tbody>
 </table>

@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>identitySet resource type</title>
+  <meta name="description" content="identitySet resource">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,11 +21,16 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="identityset-resource-type">identitySet resource type</h1>
-<p>The IdentitySet type is a keyed collection of <a href="identity.htm">Identity</a> objects. It is used to represent a set of identities associated with various events for an item, such as <em>created by</em> or <em>last modified by</em>.  </p>
-<h4 id="json-representation">JSON representation</h4>
+<p>The IdentitySet type is a keyed collection of <a href="identity.htm">Identity</a> objects.
+ It is used to represent a set of identities associated with various events for an item, such as
+ <em>created by</em> or <em>last modified by</em>.</p>
+<h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
   &quot;application&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.identity&quot;
+  },
+  &quot;device&quot;: {
     &quot;@odata.type&quot;: &quot;microsoft.graph.identity&quot;
   },
   &quot;user&quot;: {
@@ -34,7 +40,7 @@
 
 </code></pre>
 
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -48,6 +54,11 @@
 	<td align="left">application</td>
 	<td align="left"><a href="identity.htm">identity</a></td>
 	<td align="left">An Identity resource that represents the application.</td>
+</tr>
+<tr>
+	<td align="left">device</td>
+	<td align="left"><a href="identity.htm">identity</a></td>
+	<td align="left">An Identity resource that represents the device.</td>
 </tr>
 <tr>
 	<td align="left">user</td>

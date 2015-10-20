@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Event resource type</title>
+  <meta name="description" content="Event resource">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,78 +22,78 @@
         <div class="col-md-9">
             <h1 id="event-resource-type">Event resource type</h1>
 <p>An event in a calendar.</p>
-<h4 id="json-representation">JSON representation</h4>
+<h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
   &quot;Attachments&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Attachment&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.attachment&quot;
     }
   ],
   &quot;Attendees&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Attendee&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.attendee&quot;
     }
   ],
   &quot;Body&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.ItemBody&quot;
+    &quot;@odata.type&quot;: &quot;microsoft.graph.itembody&quot;
   },
-  &quot;BodyPreview&quot;: &quot;String&quot;,
+  &quot;BodyPreview&quot;: &quot;String-value&quot;,
   &quot;Calendar&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.Calendar&quot;
+    &quot;@odata.type&quot;: &quot;microsoft.graph.calendar&quot;
   },
   &quot;Categories&quot;: [
-    &quot;String&quot;
+    &quot;String-value&quot;
   ],
-  &quot;ChangeKey&quot;: &quot;String&quot;,
+  &quot;ChangeKey&quot;: &quot;String-value&quot;,
   &quot;DateTimeCreated&quot;: &quot;String (timestamp)&quot;,
   &quot;DateTimeLastModified&quot;: &quot;String (timestamp)&quot;,
   &quot;End&quot;: &quot;String (timestamp)&quot;,
-  &quot;EndTimeZone&quot;: &quot;String&quot;,
+  &quot;EndTimeZone&quot;: &quot;String-value&quot;,
   &quot;Extensions&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Extension&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.extension&quot;
     }
   ],
   &quot;HasAttachments&quot;: true,
-  &quot;Id&quot;: &quot;String (identifier)&quot;,
-  &quot;Importance&quot;: &quot;String&quot;,
+  &quot;Id&quot;: &quot;String-value (identifier)&quot;,
+  &quot;Importance&quot;: &quot;String-value&quot;,
   &quot;Instances&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Event&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.event&quot;
     }
   ],
   &quot;IsAllDay&quot;: true,
   &quot;IsCancelled&quot;: true,
   &quot;IsOrganizer&quot;: true,
   &quot;Location&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.Location&quot;
+    &quot;@odata.type&quot;: &quot;microsoft.graph.location&quot;
   },
   &quot;Organizer&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.Recipient&quot;
+    &quot;@odata.type&quot;: &quot;microsoft.graph.recipient&quot;
   },
   &quot;OriginalStart&quot;: &quot;String (timestamp)&quot;,
   &quot;Recurrence&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.PatternedRecurrence&quot;
+    &quot;@odata.type&quot;: &quot;microsoft.graph.patternedrecurrence&quot;
   },
   &quot;Reminder&quot;: 1024,
   &quot;ResponseRequested&quot;: true,
   &quot;ResponseStatus&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.ResponseStatus&quot;
+    &quot;@odata.type&quot;: &quot;microsoft.graph.responsestatus&quot;
   },
-  &quot;SeriesMasterId&quot;: &quot;String&quot;,
-  &quot;ShowAs&quot;: &quot;String&quot;,
+  &quot;SeriesMasterId&quot;: &quot;String-value&quot;,
+  &quot;ShowAs&quot;: &quot;String-value&quot;,
   &quot;Start&quot;: &quot;String (timestamp)&quot;,
-  &quot;StartTimeZone&quot;: &quot;String&quot;,
-  &quot;Subject&quot;: &quot;String&quot;,
-  &quot;Type&quot;: &quot;String&quot;,
-  &quot;WebLink&quot;: &quot;String&quot;,
-  &quot;iCalUId&quot;: &quot;String&quot;
+  &quot;StartTimeZone&quot;: &quot;String-value&quot;,
+  &quot;Subject&quot;: &quot;String-value&quot;,
+  &quot;Type&quot;: &quot;String-value&quot;,
+  &quot;WebLink&quot;: &quot;String-value&quot;,
+  &quot;iCalUId&quot;: &quot;String-value&quot;
 }
 
 </code></pre>
 
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -250,11 +251,11 @@
 <tr>
 	<td align="left">iCalUId</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">A unique identifier that is shared by all instances of an event across different calendars.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="relationships">Relationships</h4>
+<h3 id="relationships">Relationships</h3>
 <table>
 <thead>
 <tr>
@@ -286,7 +287,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="tasks">Tasks</h4>
+<h3 id="tasks">Tasks</h3>
 <table>
 <thead>
 <tr>
@@ -312,9 +313,9 @@
 	<td align="left">Create a new Extension by posting to the Extensions collection.</td>
 </tr>
 <tr>
-	<td align="left"><a href="../api/event_post_instances.htm">Create Instance</a></td>
+	<td align="left"><a href="../api/event_post_instances.htm">Create Event</a></td>
 	<td align="left"><a href="event.htm">Event</a></td>
-	<td align="left">Create a new Instance by posting to the Instances collection.</td>
+	<td align="left">Create a new Event by posting to the Instances collection.</td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/event_update.htm">Update</a></td>
@@ -323,22 +324,22 @@
 </tr>
 <tr>
 	<td align="left"><a href="../api/event_delete.htm">Delete</a></td>
-	<td align="left">Void</td>
+	<td align="left">None</td>
 	<td align="left">Delete Event object.</td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/event_accept.htm">Accept</a></td>
-	<td align="left"><a href="none.htm">None</a></td>
+	<td align="left">None</td>
 	<td align="left"></td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/event_decline.htm">Decline</a></td>
-	<td align="left"><a href="none.htm">None</a></td>
+	<td align="left">None</td>
 	<td align="left"></td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/event_tentativelyaccept.htm">Tentativelyaccept</a></td>
-	<td align="left"><a href="none.htm">None</a></td>
+	<td align="left">None</td>
 	<td align="left"></td>
 </tr>
 </tbody>

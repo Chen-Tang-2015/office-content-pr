@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Update item</title>
+  <title>Update the properties of item object.</title>
+  <meta name="description" content="Update the properties of item object.">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,13 +20,17 @@
 <div class="container wrapper" id="body">
     <div class="row">
         <div class="col-md-9">
-            <h1 id="update-item">Update item</h1>
+            <h1 id="update-the-properties-of-item-object">Update the properties of item object.</h1>
 <p>Update the properties of item object.</p>
-<h4 id="http-request">HTTP request</h4>
-<pre><code class="http">
+<h3 id="prerequisites">Prerequisites</h3>
+<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<h3 id="http-request">HTTP request</h3>
+<pre><code class="http">PATCH /drive/root
+PATCH /drive/items/&lt;id&gt;
+PATCH /drives/&lt;id&gt;/root
 </code></pre>
 
-<h4 id="optional-request-headers">Optional request headers</h4>
+<h3 id="optional-request-headers">Optional request headers</h3>
 <table>
 <thead>
 <tr>
@@ -38,11 +43,11 @@
 <tr>
 	<td align="left">X-Sample-Header</td>
 	<td align="left">string</td>
-	<td align="left">Sample of how the HTTP headers used by the API could be displayed.</td>
+	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
 </tr>
 </tbody>
 </table>
-<h4 id="request-body">Request body</h4>
+<h3 id="request-body">Request body</h3>
 <p>In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.</p>
 <table>
 <thead>
@@ -53,6 +58,21 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+	<td align="left">audio</td>
+	<td align="left">audio</td>
+	<td align="left">Audio metadata, if the item is an audio file. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">cTag</td>
+	<td align="left">String</td>
+	<td align="left">An eTag for the content of the item. This eTag is not changed if only the metadata is changed. <strong>Note</strong> This property is not returned if the Item is a folder. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">content</td>
+	<td align="left">Stream</td>
+	<td align="left">The content stream, if the Item represents a file.</td>
+</tr>
 <tr>
 	<td align="left">createdBy</td>
 	<td align="left">identitySet</td>
@@ -69,6 +89,11 @@
 	<td align="left">Information about the deleted state of the item. Read-only.</td>
 </tr>
 <tr>
+	<td align="left">description</td>
+	<td align="left">String</td>
+	<td align="left">Provide a user-visible description of the item. Read-write.</td>
+</tr>
+<tr>
 	<td align="left">eTag</td>
 	<td align="left">String</td>
 	<td align="left">eTag for the entire item (metadata + content). Read-only.</td>
@@ -77,6 +102,11 @@
 	<td align="left">file</td>
 	<td align="left">file</td>
 	<td align="left">File metadata, if the item is a file. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">fileSystemInfo</td>
+	<td align="left">fileSystemInfo</td>
+	<td align="left">File system information on client. Read-write.</td>
 </tr>
 <tr>
 	<td align="left">folder</td>
@@ -99,9 +129,19 @@
 	<td align="left">Date and time the item was last modified. Read-only.</td>
 </tr>
 <tr>
+	<td align="left">location</td>
+	<td align="left">location</td>
+	<td align="left">Location metadata, if the item has location data. Read-only.</td>
+</tr>
+<tr>
 	<td align="left">name</td>
 	<td align="left">String</td>
 	<td align="left">The name of the item (filename and extension). Read-write.</td>
+</tr>
+<tr>
+	<td align="left">openWith</td>
+	<td align="left">openWithSet</td>
+	<td align="left"></td>
 </tr>
 <tr>
 	<td align="left">parentReference</td>
@@ -119,9 +159,24 @@
 	<td align="left">Search metadata, if the item is from a search result.</td>
 </tr>
 <tr>
+	<td align="left">shared</td>
+	<td align="left">shared</td>
+	<td align="left"></td>
+</tr>
+<tr>
 	<td align="left">size</td>
 	<td align="left">Int64</td>
 	<td align="left">Size of the item in bytes. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">specialFolder</td>
+	<td align="left">specialFolder</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">video</td>
+	<td align="left">video</td>
+	<td align="left">Video metadata, if the item is a video. Read-only.</td>
 </tr>
 <tr>
 	<td align="left">webDavUrl</td>
@@ -135,8 +190,307 @@
 </tr>
 </tbody>
 </table>
-<h4 id="response">Response</h4>
+<h3 id="response">Response</h3>
 <p>If successful, this method returns a <code>200 OK</code> response code and updated <a href="../resources/item.htm">item</a> object in the response body.</p>
+<h3 id="example">Example</h3>
+<h5 id="request">Request</h5>
+<p>Here is an example of the request.</p>
+<pre><code class="http">PUT /drive/root
+Content-type: application/json
+Content-length: 3050
+
+{
+  &quot;content&quot;: &quot;content-value&quot;,
+  &quot;createdBy&quot;: {
+    &quot;application&quot;: {
+      &quot;displayName&quot;: &quot;displayName-value&quot;,
+      &quot;id&quot;: &quot;id-value&quot;
+    },
+    &quot;device&quot;: {
+      &quot;displayName&quot;: &quot;displayName-value&quot;,
+      &quot;id&quot;: &quot;id-value&quot;
+    },
+    &quot;user&quot;: {
+      &quot;displayName&quot;: &quot;displayName-value&quot;,
+      &quot;id&quot;: &quot;id-value&quot;
+    }
+  },
+  &quot;createdDateTime&quot;: &quot;datetime-value&quot;,
+  &quot;cTag&quot;: &quot;cTag-value&quot;,
+  &quot;description&quot;: &quot;description-value&quot;,
+  &quot;eTag&quot;: &quot;eTag-value&quot;,
+  &quot;id&quot;: &quot;id-value&quot;,
+  &quot;lastModifiedBy&quot;: {
+    &quot;application&quot;: {
+      &quot;displayName&quot;: &quot;displayName-value&quot;,
+      &quot;id&quot;: &quot;id-value&quot;
+    },
+    &quot;device&quot;: {
+      &quot;displayName&quot;: &quot;displayName-value&quot;,
+      &quot;id&quot;: &quot;id-value&quot;
+    },
+    &quot;user&quot;: {
+      &quot;displayName&quot;: &quot;displayName-value&quot;,
+      &quot;id&quot;: &quot;id-value&quot;
+    }
+  },
+  &quot;lastModifiedDateTime&quot;: &quot;datetime-value&quot;,
+  &quot;name&quot;: &quot;name-value&quot;,
+  &quot;parentReference&quot;: {
+    &quot;driveId&quot;: &quot;driveId-value&quot;,
+    &quot;id&quot;: &quot;id-value&quot;,
+    &quot;path&quot;: &quot;path-value&quot;
+  },
+  &quot;size&quot;: 99,
+  &quot;webDavUrl&quot;: &quot;webDavUrl-value&quot;,
+  &quot;webUrl&quot;: &quot;webUrl-value&quot;,
+  &quot;audio&quot;: {
+    &quot;album&quot;: &quot;album-value&quot;,
+    &quot;albumArtist&quot;: &quot;albumArtist-value&quot;,
+    &quot;artist&quot;: &quot;artist-value&quot;,
+    &quot;bitrate&quot;: 99,
+    &quot;composers&quot;: &quot;composers-value&quot;,
+    &quot;copyright&quot;: &quot;copyright-value&quot;,
+    &quot;disc&quot;: 99,
+    &quot;discCount&quot;: 99,
+    &quot;duration&quot;: 99,
+    &quot;genre&quot;: &quot;genre-value&quot;,
+    &quot;hasDrm&quot;: true,
+    &quot;isVariableBitrate&quot;: true,
+    &quot;title&quot;: &quot;title-value&quot;,
+    &quot;track&quot;: 99,
+    &quot;trackCount&quot;: 99,
+    &quot;year&quot;: 99
+  },
+  &quot;deleted&quot;: {
+    &quot;state&quot;: &quot;state-value&quot;
+  },
+  &quot;file&quot;: {
+  },
+  &quot;fileSystemInfo&quot;: {
+    &quot;createdDateTime&quot;: &quot;datetime-value&quot;,
+    &quot;lastModifiedDateTime&quot;: &quot;datetime-value&quot;
+  },
+  &quot;folder&quot;: {
+    &quot;childCount&quot;: 99
+  },
+  &quot;image&quot;: {
+    &quot;height&quot;: 99,
+    &quot;width&quot;: 99
+  },
+  &quot;location&quot;: {
+    &quot;altitude&quot;: 99,
+    &quot;latitude&quot;: 99,
+    &quot;longitude&quot;: 99
+  },
+  &quot;openWith&quot;: {
+    &quot;web&quot;: {
+      &quot;app&quot;: {
+        &quot;displayName&quot;: &quot;displayName-value&quot;,
+        &quot;id&quot;: &quot;id-value&quot;
+      },
+      &quot;viewUrl&quot;: &quot;viewUrl-value&quot;,
+      &quot;editUrl&quot;: &quot;editUrl-value&quot;,
+      &quot;viewPostParameters&quot;: &quot;viewPostParameters-value&quot;,
+      &quot;editPostParameters&quot;: &quot;editPostParameters-value&quot;
+    },
+    &quot;webEmbedded&quot;: {
+      &quot;app&quot;: {
+        &quot;displayName&quot;: &quot;displayName-value&quot;,
+        &quot;id&quot;: &quot;id-value&quot;
+      },
+      &quot;viewUrl&quot;: &quot;viewUrl-value&quot;,
+      &quot;editUrl&quot;: &quot;editUrl-value&quot;,
+      &quot;viewPostParameters&quot;: &quot;viewPostParameters-value&quot;,
+      &quot;editPostParameters&quot;: &quot;editPostParameters-value&quot;
+    }
+  },
+  &quot;photo&quot;: {
+    &quot;Width&quot;: 99,
+    &quot;Height&quot;: 99,
+    &quot;Id&quot;: &quot;Id-value&quot;
+  },
+  &quot;searchResult&quot;: {
+    &quot;onClickTelemetryUrl&quot;: &quot;onClickTelemetryUrl-value&quot;
+  },
+  &quot;shared&quot;: {
+    &quot;owner&quot;: {
+      &quot;application&quot;: {
+        &quot;displayName&quot;: &quot;displayName-value&quot;,
+        &quot;id&quot;: &quot;id-value&quot;
+      },
+      &quot;device&quot;: {
+        &quot;displayName&quot;: &quot;displayName-value&quot;,
+        &quot;id&quot;: &quot;id-value&quot;
+      },
+      &quot;user&quot;: {
+        &quot;displayName&quot;: &quot;displayName-value&quot;,
+        &quot;id&quot;: &quot;id-value&quot;
+      }
+    },
+    &quot;scope&quot;: &quot;scope-value&quot;
+  },
+  &quot;specialFolder&quot;: {
+    &quot;name&quot;: &quot;name-value&quot;
+  },
+  &quot;video&quot;: {
+    &quot;bitrate&quot;: 99,
+    &quot;duration&quot;: 99,
+    &quot;height&quot;: 99,
+    &quot;width&quot;: 99
+  }
+}
+</code></pre>
+
+<h5 id="response-1">Response</h5>
+<p>Here is an example of the response.</p>
+<pre><code class="http">HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 3050
+
+{
+  &quot;content&quot;: &quot;content-value&quot;,
+  &quot;createdBy&quot;: {
+    &quot;application&quot;: {
+      &quot;displayName&quot;: &quot;displayName-value&quot;,
+      &quot;id&quot;: &quot;id-value&quot;
+    },
+    &quot;device&quot;: {
+      &quot;displayName&quot;: &quot;displayName-value&quot;,
+      &quot;id&quot;: &quot;id-value&quot;
+    },
+    &quot;user&quot;: {
+      &quot;displayName&quot;: &quot;displayName-value&quot;,
+      &quot;id&quot;: &quot;id-value&quot;
+    }
+  },
+  &quot;createdDateTime&quot;: &quot;datetime-value&quot;,
+  &quot;cTag&quot;: &quot;cTag-value&quot;,
+  &quot;description&quot;: &quot;description-value&quot;,
+  &quot;eTag&quot;: &quot;eTag-value&quot;,
+  &quot;id&quot;: &quot;id-value&quot;,
+  &quot;lastModifiedBy&quot;: {
+    &quot;application&quot;: {
+      &quot;displayName&quot;: &quot;displayName-value&quot;,
+      &quot;id&quot;: &quot;id-value&quot;
+    },
+    &quot;device&quot;: {
+      &quot;displayName&quot;: &quot;displayName-value&quot;,
+      &quot;id&quot;: &quot;id-value&quot;
+    },
+    &quot;user&quot;: {
+      &quot;displayName&quot;: &quot;displayName-value&quot;,
+      &quot;id&quot;: &quot;id-value&quot;
+    }
+  },
+  &quot;lastModifiedDateTime&quot;: &quot;datetime-value&quot;,
+  &quot;name&quot;: &quot;name-value&quot;,
+  &quot;parentReference&quot;: {
+    &quot;driveId&quot;: &quot;driveId-value&quot;,
+    &quot;id&quot;: &quot;id-value&quot;,
+    &quot;path&quot;: &quot;path-value&quot;
+  },
+  &quot;size&quot;: 99,
+  &quot;webDavUrl&quot;: &quot;webDavUrl-value&quot;,
+  &quot;webUrl&quot;: &quot;webUrl-value&quot;,
+  &quot;audio&quot;: {
+    &quot;album&quot;: &quot;album-value&quot;,
+    &quot;albumArtist&quot;: &quot;albumArtist-value&quot;,
+    &quot;artist&quot;: &quot;artist-value&quot;,
+    &quot;bitrate&quot;: 99,
+    &quot;composers&quot;: &quot;composers-value&quot;,
+    &quot;copyright&quot;: &quot;copyright-value&quot;,
+    &quot;disc&quot;: 99,
+    &quot;discCount&quot;: 99,
+    &quot;duration&quot;: 99,
+    &quot;genre&quot;: &quot;genre-value&quot;,
+    &quot;hasDrm&quot;: true,
+    &quot;isVariableBitrate&quot;: true,
+    &quot;title&quot;: &quot;title-value&quot;,
+    &quot;track&quot;: 99,
+    &quot;trackCount&quot;: 99,
+    &quot;year&quot;: 99
+  },
+  &quot;deleted&quot;: {
+    &quot;state&quot;: &quot;state-value&quot;
+  },
+  &quot;file&quot;: {
+  },
+  &quot;fileSystemInfo&quot;: {
+    &quot;createdDateTime&quot;: &quot;datetime-value&quot;,
+    &quot;lastModifiedDateTime&quot;: &quot;datetime-value&quot;
+  },
+  &quot;folder&quot;: {
+    &quot;childCount&quot;: 99
+  },
+  &quot;image&quot;: {
+    &quot;height&quot;: 99,
+    &quot;width&quot;: 99
+  },
+  &quot;location&quot;: {
+    &quot;altitude&quot;: 99,
+    &quot;latitude&quot;: 99,
+    &quot;longitude&quot;: 99
+  },
+  &quot;openWith&quot;: {
+    &quot;web&quot;: {
+      &quot;app&quot;: {
+        &quot;displayName&quot;: &quot;displayName-value&quot;,
+        &quot;id&quot;: &quot;id-value&quot;
+      },
+      &quot;viewUrl&quot;: &quot;viewUrl-value&quot;,
+      &quot;editUrl&quot;: &quot;editUrl-value&quot;,
+      &quot;viewPostParameters&quot;: &quot;viewPostParameters-value&quot;,
+      &quot;editPostParameters&quot;: &quot;editPostParameters-value&quot;
+    },
+    &quot;webEmbedded&quot;: {
+      &quot;app&quot;: {
+        &quot;displayName&quot;: &quot;displayName-value&quot;,
+        &quot;id&quot;: &quot;id-value&quot;
+      },
+      &quot;viewUrl&quot;: &quot;viewUrl-value&quot;,
+      &quot;editUrl&quot;: &quot;editUrl-value&quot;,
+      &quot;viewPostParameters&quot;: &quot;viewPostParameters-value&quot;,
+      &quot;editPostParameters&quot;: &quot;editPostParameters-value&quot;
+    }
+  },
+  &quot;photo&quot;: {
+    &quot;Width&quot;: 99,
+    &quot;Height&quot;: 99,
+    &quot;Id&quot;: &quot;Id-value&quot;
+  },
+  &quot;searchResult&quot;: {
+    &quot;onClickTelemetryUrl&quot;: &quot;onClickTelemetryUrl-value&quot;
+  },
+  &quot;shared&quot;: {
+    &quot;owner&quot;: {
+      &quot;application&quot;: {
+        &quot;displayName&quot;: &quot;displayName-value&quot;,
+        &quot;id&quot;: &quot;id-value&quot;
+      },
+      &quot;device&quot;: {
+        &quot;displayName&quot;: &quot;displayName-value&quot;,
+        &quot;id&quot;: &quot;id-value&quot;
+      },
+      &quot;user&quot;: {
+        &quot;displayName&quot;: &quot;displayName-value&quot;,
+        &quot;id&quot;: &quot;id-value&quot;
+      }
+    },
+    &quot;scope&quot;: &quot;scope-value&quot;
+  },
+  &quot;specialFolder&quot;: {
+    &quot;name&quot;: &quot;name-value&quot;
+  },
+  &quot;video&quot;: {
+    &quot;bitrate&quot;: 99,
+    &quot;duration&quot;: 99,
+    &quot;height&quot;: 99,
+    &quot;width&quot;: 99
+  }
+}
+</code></pre>
+
 
         </div>
         <div id="tocbar" class="col-md-3 visible-md visible-lg">

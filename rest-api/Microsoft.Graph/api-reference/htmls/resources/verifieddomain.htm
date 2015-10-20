@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>VerifiedDomain resource type</title>
+  <meta name="description" content="VerifiedDomain resource">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,20 +21,21 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="verifieddomain-resource-type">VerifiedDomain resource type</h1>
-<h4 id="json-representation">JSON representation</h4>
+<p>Specifies a domain for a tenant. The <strong>verifiedDomains</strong> property of the [TenantDetail] entity is a collection of <strong>VerifiedDomain</strong>.</p>
+<h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
-  &quot;capabilities&quot;: &quot;String&quot;,
+  &quot;capabilities&quot;: &quot;String-value&quot;,
   &quot;default&quot;: true,
-  &quot;id&quot;: &quot;String&quot;,
+  &quot;id&quot;: &quot;String-value&quot;,
   &quot;initial&quot;: true,
-  &quot;name&quot;: &quot;String&quot;,
-  &quot;type&quot;: &quot;String&quot;
+  &quot;name&quot;: &quot;String-value&quot;,
+  &quot;type&quot;: &quot;String-value&quot;
 }
 
 </code></pre>
 
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -46,17 +48,17 @@
 <tr>
 	<td align="left">capabilities</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">For example, ΓÇ£EmailΓÇ¥, ΓÇ£OfficeCommunicationsOnlineΓÇ¥.</td>
 </tr>
 <tr>
 	<td align="left">default</td>
 	<td align="left">Boolean</td>
-	<td align="left"></td>
+	<td align="left"><strong>true</strong> if this is the default domain associated with the tenant; otherwise, <strong>false</strong>.</td>
 </tr>
 <tr>
 	<td align="left">id</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">For example, ΓÇ£00057FFE80187238ΓÇ¥.</td>
 </tr>
 <tr>
 	<td align="left">initial</td>
@@ -66,12 +68,12 @@
 <tr>
 	<td align="left">name</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The domain name; for example, ΓÇ£contoso.onmicrosoft.comΓÇ¥</td>
 </tr>
 <tr>
 	<td align="left">type</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">For example, ΓÇ£ManagedΓÇ¥.</td>
 </tr>
 </tbody>
 </table>

@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Message: Move</title>
+  <meta name="description" content="Message: Move">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,11 +21,16 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="message-move">Message: Move</h1>
-<h4 id="http-request">HTTP request</h4>
-<pre><code class="http">to be completed....
+<h3 id="prerequisites">Prerequisites</h3>
+<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<h3 id="http-request">HTTP request</h3>
+<pre><code class="http">POST /users/&lt;objectId&gt;/Messages/&lt;Id&gt;/Move
+POST /drive/root/createdByUser/Messages/&lt;Id&gt;/Move
+POST /users/&lt;objectId&gt;/Folders/&lt;Id&gt;/Messages/&lt;Id&gt;/Move
+
 </code></pre>
 
-<h4 id="request-headers">Request headers</h4>
+<h3 id="request-headers">Request headers</h3>
 <table>
 <thead>
 <tr>
@@ -37,11 +43,11 @@
 <tr>
 	<td align="left">X-Sample-Header</td>
 	<td align="left">string</td>
-	<td align="left">Sample of how the HTTP headers used by the API could be displayed.</td>
+	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
 </tr>
 </tbody>
 </table>
-<h4 id="request-body">Request body</h4>
+<h3 id="request-body">Request body</h3>
 <p>In the request body, provide a JSON object with the following parameters.</p>
 <table>
 <thead>
@@ -59,8 +65,103 @@
 </tr>
 </tbody>
 </table>
-<h4 id="response">Response</h4>
+<h3 id="response">Response</h3>
 <p>If successful, this method returns <code>200, OK</code> response code and <a href="../resources/message.htm">Message</a> object in the response body.</p>
+<h3 id="example">Example</h3>
+<p>Here is an example of how to call this API.</p>
+<h5 id="request">Request</h5>
+<p>Here is an example of the request.</p>
+<pre><code class="http">POST /users/&lt;objectId&gt;/Messages/&lt;Id&gt;/Move
+Content-type: application/json
+Content-length: 44
+
+{
+  &quot;DestinationId&quot;: &quot;DestinationId-value&quot;
+}
+</code></pre>
+
+<h5 id="response-1">Response</h5>
+<p>Here is an example of the response.</p>
+<pre><code class="http">HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 1546
+
+{
+  &quot;Subject&quot;: &quot;Subject-value&quot;,
+  &quot;Body&quot;: {
+    &quot;ContentType&quot;: &quot;ContentType-value&quot;,
+    &quot;Content&quot;: &quot;Content-value&quot;
+  },
+  &quot;BodyPreview&quot;: &quot;BodyPreview-value&quot;,
+  &quot;Importance&quot;: &quot;Importance-value&quot;,
+  &quot;HasAttachments&quot;: true,
+  &quot;ParentFolderId&quot;: &quot;ParentFolderId-value&quot;,
+  &quot;From&quot;: {
+    &quot;EmailAddress&quot;: {
+      &quot;Name&quot;: &quot;Name-value&quot;,
+      &quot;Address&quot;: &quot;Address-value&quot;
+    }
+  },
+  &quot;Sender&quot;: {
+    &quot;EmailAddress&quot;: {
+      &quot;Name&quot;: &quot;Name-value&quot;,
+      &quot;Address&quot;: &quot;Address-value&quot;
+    }
+  },
+  &quot;ToRecipients&quot;: [
+    {
+      &quot;EmailAddress&quot;: {
+        &quot;Name&quot;: &quot;Name-value&quot;,
+        &quot;Address&quot;: &quot;Address-value&quot;
+      }
+    }
+  ],
+  &quot;CcRecipients&quot;: [
+    {
+      &quot;EmailAddress&quot;: {
+        &quot;Name&quot;: &quot;Name-value&quot;,
+        &quot;Address&quot;: &quot;Address-value&quot;
+      }
+    }
+  ],
+  &quot;BccRecipients&quot;: [
+    {
+      &quot;EmailAddress&quot;: {
+        &quot;Name&quot;: &quot;Name-value&quot;,
+        &quot;Address&quot;: &quot;Address-value&quot;
+      }
+    }
+  ],
+  &quot;ReplyTo&quot;: [
+    {
+      &quot;EmailAddress&quot;: {
+        &quot;Name&quot;: &quot;Name-value&quot;,
+        &quot;Address&quot;: &quot;Address-value&quot;
+      }
+    }
+  ],
+  &quot;ConversationId&quot;: &quot;ConversationId-value&quot;,
+  &quot;UniqueBody&quot;: {
+    &quot;ContentType&quot;: &quot;ContentType-value&quot;,
+    &quot;Content&quot;: &quot;Content-value&quot;
+  },
+  &quot;DateTimeReceived&quot;: &quot;datetime-value&quot;,
+  &quot;DateTimeSent&quot;: &quot;datetime-value&quot;,
+  &quot;IsDeliveryReceiptRequested&quot;: true,
+  &quot;IsReadReceiptRequested&quot;: true,
+  &quot;IsDraft&quot;: true,
+  &quot;IsRead&quot;: true,
+  &quot;WebLink&quot;: &quot;WebLink-value&quot;,
+  &quot;ChangeKey&quot;: &quot;ChangeKey-value&quot;,
+  &quot;Categories&quot;: [
+    &quot;Categories-value&quot;
+  ],
+  &quot;DateTimeCreated&quot;: &quot;datetime-value&quot;,
+  &quot;DateTimeLastModified&quot;: &quot;datetime-value&quot;,
+  &quot;Id&quot;: &quot;Id-value&quot;
+}
+</code></pre>
+
 
         </div>
         <div id="tocbar" class="col-md-3 visible-md visible-lg">

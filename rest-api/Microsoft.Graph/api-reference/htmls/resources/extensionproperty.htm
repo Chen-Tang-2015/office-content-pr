@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>ExtensionProperty resource type</title>
+  <meta name="description" content="ExtensionProperty resource">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,29 +21,25 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="extensionproperty-resource-type">ExtensionProperty resource type</h1>
-<h4 id="json-representation">JSON representation</h4>
+<p>Allows an application to define and use a set of additional properties that can be added to directory objects (users, groups, tenant details, devices, applications, and service principals) without the application requiring an external data store. For more information about extension properties, see <a href="https://msdn.microsoft.com/en-us/library/azure/dn720459.aspx" target="_blank">Azure AD Graph API Directory Schema Extensions</a>. Inherits from [DirectoryObject].</p>
+<h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
-  &quot;Extensions&quot;: [
-    {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Extension&quot;
-    }
-  ],
-  &quot;appDisplayName&quot;: &quot;String&quot;,
-  &quot;dataType&quot;: &quot;String&quot;,
+  &quot;appDisplayName&quot;: &quot;String-value&quot;,
+  &quot;dataType&quot;: &quot;String-value&quot;,
   &quot;deletionTimestamp&quot;: &quot;String (timestamp)&quot;,
   &quot;isSyncedFromOnPremises&quot;: true,
-  &quot;name&quot;: &quot;String&quot;,
-  &quot;objectId&quot;: &quot;String (identifier)&quot;,
-  &quot;objectType&quot;: &quot;String&quot;,
+  &quot;name&quot;: &quot;String-value&quot;,
+  &quot;objectId&quot;: &quot;String-value (identifier)&quot;,
+  &quot;objectType&quot;: &quot;String-value&quot;,
   &quot;targetObjects&quot;: [
-    &quot;String&quot;
+    &quot;String-value&quot;
   ]
 }
 
 </code></pre>
 
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -60,7 +57,7 @@
 <tr>
 	<td align="left">dataType</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">Specifies the type of the directory extension property being added.   Supported types are: Integer, LargeInteger, DateTime (must be specified in ISO 8601 - DateTime is stored in UTC), Binary, Boolean, and String.</td>
 </tr>
 <tr>
 	<td align="left">deletionTimestamp</td>
@@ -70,48 +67,33 @@
 <tr>
 	<td align="left">isSyncedFromOnPremises</td>
 	<td align="left">Boolean</td>
-	<td align="left"></td>
+	<td align="left">Indicates whether the extension property is synced from the on premises directory.                            <strong>Notes</strong>: not nullable.</td>
 </tr>
 <tr>
 	<td align="left">name</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">Specifies the display name for the directory extension property.                            <strong>Notes</strong>: not nullable.</td>
 </tr>
 <tr>
 	<td align="left">objectId</td>
 	<td align="left">String</td>
-	<td align="left">Read-only.</td>
+	<td align="left">The unique identifier for the permission scope. Inherited from [DirectoryObject].                            <strong>Notes</strong>: <strong>key</strong>, immutable, not nullable, unique.             Read-only.</td>
 </tr>
 <tr>
 	<td align="left">objectType</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">A string that identifies the object type. For extension properties the value is always ΓÇ£ExtensionPropertyΓÇ¥. Inherited from [DirectoryObject].</td>
 </tr>
 <tr>
 	<td align="left">targetObjects</td>
 	<td align="left">String collection</td>
-	<td align="left"></td>
+	<td align="left">The directory objects to which the directory extension property is being added.  Supported directory entities that can be extended are: ΓÇ£UserΓÇ¥, ΓÇ£GroupΓÇ¥, ΓÇ£TenantDetailΓÇ¥, ΓÇ£DeviceΓÇ¥, ΓÇ£ApplicationΓÇ¥ and ΓÇ£ServicePrincipalΓÇ¥                            <strong>Notes</strong>: not nullable.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="relationships">Relationships</h4>
-<table>
-<thead>
-<tr>
-	<th align="left">Relationship</th>
-	<th align="left">Type</th>
-	<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-	<td align="left">Extensions</td>
-	<td align="left"><a href="extension.htm">Extension</a> collection</td>
-	<td align="left">Read-only. Nullable.</td>
-</tr>
-</tbody>
-</table>
-<h4 id="tasks">Tasks</h4>
+<h3 id="relationships">Relationships</h3>
+<p>None</p>
+<h3 id="tasks">Tasks</h3>
 <table>
 <thead>
 <tr>
@@ -127,33 +109,28 @@
 	<td align="left">Read properties and relationships of extensionProperty object.</td>
 </tr>
 <tr>
-	<td align="left"><a href="../api/extensionproperty_post_extensions.htm">Create Extension</a></td>
-	<td align="left"><a href="extension.htm">Extension</a></td>
-	<td align="left">Create a new Extension by posting to the Extensions collection.</td>
-</tr>
-<tr>
 	<td align="left"><a href="../api/extensionproperty_update.htm">Update</a></td>
 	<td align="left"><a href="extensionproperty.htm">ExtensionProperty</a></td>
 	<td align="left">Update ExtensionProperty object.</td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/extensionproperty_delete.htm">Delete</a></td>
-	<td align="left">Void</td>
+	<td align="left">None</td>
 	<td align="left">Delete ExtensionProperty object.</td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/extensionproperty_checkmembergroups.htm">Checkmembergroups</a></td>
-	<td align="left">String</td>
+	<td align="left">String collection</td>
 	<td align="left"></td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/extensionproperty_getmembergroups.htm">Get MemberGroups</a></td>
-	<td align="left">String</td>
+	<td align="left">String collection</td>
 	<td align="left"></td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/extensionproperty_getmemberobjects.htm">Get MemberObjects</a></td>
-	<td align="left">String</td>
+	<td align="left">String collection</td>
 	<td align="left"></td>
 </tr>
 </tbody>

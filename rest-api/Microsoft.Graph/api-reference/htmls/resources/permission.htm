@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>permission resource type</title>
+  <meta name="description" content="permission resource">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,21 +21,31 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="permission-resource-type">permission resource type</h1>
-<h4 id="json-representation">JSON representation</h4>
+<h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
-  &quot;id&quot;: &quot;String (identifier)&quot;,
+  &quot;grantedTo&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.identityset&quot;
+  },
+  &quot;id&quot;: &quot;String-value (identifier)&quot;,
+  &quot;inheritedFrom&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.itemreference&quot;
+  },
+  &quot;invitation&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.sharinginvitation&quot;
+  },
   &quot;link&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.sharingLink&quot;
+    &quot;@odata.type&quot;: &quot;microsoft.graph.sharinglink&quot;
   },
   &quot;roles&quot;: [
-    &quot;String&quot;
-  ]
+    &quot;String-value&quot;
+  ],
+  &quot;shareId&quot;: &quot;String-value&quot;
 }
 
 </code></pre>
 
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -45,9 +56,24 @@
 </thead>
 <tbody>
 <tr>
+	<td align="left">grantedTo</td>
+	<td align="left"><a href="identityset.htm">identitySet</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
 	<td align="left">id</td>
 	<td align="left">String</td>
 	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">inheritedFrom</td>
+	<td align="left"><a href="itemreference.htm">itemReference</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">invitation</td>
+	<td align="left"><a href="sharinginvitation.htm">sharingInvitation</a></td>
+	<td align="left"></td>
 </tr>
 <tr>
 	<td align="left">link</td>
@@ -59,11 +85,16 @@
 	<td align="left">String collection</td>
 	<td align="left"></td>
 </tr>
+<tr>
+	<td align="left">shareId</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
 </tbody>
 </table>
-<h4 id="relationships">Relationships</h4>
+<h3 id="relationships">Relationships</h3>
 <p>None</p>
-<h4 id="tasks">Tasks</h4>
+<h3 id="tasks">Tasks</h3>
 <table>
 <thead>
 <tr>
@@ -85,7 +116,7 @@
 </tr>
 <tr>
 	<td align="left"><a href="../api/permission_delete.htm">Delete</a></td>
-	<td align="left">Void</td>
+	<td align="left">None</td>
 	<td align="left">Delete permission object.</td>
 </tr>
 </tbody>

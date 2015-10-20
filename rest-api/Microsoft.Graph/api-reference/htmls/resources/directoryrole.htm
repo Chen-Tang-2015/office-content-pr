@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>DirectoryRole resource type</title>
+  <meta name="description" content="DirectoryRole resource">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,47 +21,43 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="directoryrole-resource-type">DirectoryRole resource type</h1>
-<h4 id="json-representation">JSON representation</h4>
+<p>Represents an Azure AD directory role. Azure AD directory roles are also known as <em>administrator roles</em>. For more information about directory (administrator) roles, see <a href="http://azure.microsoft.com/documentation/articles/active-directory-assign-admin-roles/" target="_blank">Assigning administrator roles in Azure AD</a>.</p>
+<h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
-  &quot;Extensions&quot;: [
-    {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Extension&quot;
-    }
-  ],
   &quot;deletionTimestamp&quot;: &quot;String (timestamp)&quot;,
-  &quot;description&quot;: &quot;String&quot;,
-  &quot;displayName&quot;: &quot;String&quot;,
+  &quot;description&quot;: &quot;String-value&quot;,
+  &quot;displayName&quot;: &quot;String-value&quot;,
   &quot;isSystem&quot;: true,
   &quot;memberOf&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.DirectoryObject&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.directoryobject&quot;
     }
   ],
   &quot;members&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.DirectoryObject&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.directoryobject&quot;
     }
   ],
-  &quot;objectId&quot;: &quot;String (identifier)&quot;,
-  &quot;objectType&quot;: &quot;String&quot;,
+  &quot;objectId&quot;: &quot;String-value (identifier)&quot;,
+  &quot;objectType&quot;: &quot;String-value&quot;,
   &quot;ownedObjects&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.DirectoryObject&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.directoryobject&quot;
     }
   ],
   &quot;owners&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.DirectoryObject&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.directoryobject&quot;
     }
   ],
   &quot;roleDisabled&quot;: true,
-  &quot;roleTemplateId&quot;: &quot;String&quot;
+  &quot;roleTemplateId&quot;: &quot;String-value&quot;
 }
 
 </code></pre>
 
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -78,41 +75,41 @@
 <tr>
 	<td align="left">description</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The description for the directory role.</td>
 </tr>
 <tr>
 	<td align="left">displayName</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The display name for the directory role.</td>
 </tr>
 <tr>
 	<td align="left">isSystem</td>
 	<td align="left">Boolean</td>
-	<td align="left"></td>
+	<td align="left"><strong>true</strong> if the role is a system role; otherwise, <strong>false</strong>.</td>
 </tr>
 <tr>
 	<td align="left">objectId</td>
 	<td align="left">String</td>
-	<td align="left">Read-only.</td>
+	<td align="left">The unique identifier for the directory role. Inherited from [DirectoryObject].                            <strong>Notes</strong>: <strong>key</strong>, immutable, not nullable, unique.             Read-only.</td>
 </tr>
 <tr>
 	<td align="left">objectType</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">A string that identifies the object type. For directory roles the value is always ΓÇ£DirectoryRoleΓÇ¥. Inherited from [DirectoryObject].                            <strong>Note</strong>: In versions prior to 1.5, the value will be ΓÇ£RoleΓÇ¥.</td>
 </tr>
 <tr>
 	<td align="left">roleDisabled</td>
 	<td align="left">Boolean</td>
-	<td align="left"></td>
+	<td align="left"><strong>true</strong> if the directory role is disabled; otherwise, <strong>false</strong>.</td>
 </tr>
 <tr>
 	<td align="left">roleTemplateId</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The <strong>objectId</strong> of the [DirectoryRoleTemplate] that this role is based on.                                        <strong>Notes</strong>: In versions prior to version 1.5, the property is read only. In version 1.5 and later, the property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read only.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="relationships">Relationships</h4>
+<h3 id="relationships">Relationships</h3>
 <table>
 <thead>
 <tr>
@@ -123,11 +120,6 @@
 </thead>
 <tbody>
 <tr>
-	<td align="left">Extensions</td>
-	<td align="left"><a href="extension.htm">Extension</a> collection</td>
-	<td align="left">Read-only. Nullable.</td>
-</tr>
-<tr>
 	<td align="left">memberOf</td>
 	<td align="left"><a href="directoryobject.htm">DirectoryObject</a> collection</td>
 	<td align="left">Read-only. Nullable.</td>
@@ -135,7 +127,7 @@
 <tr>
 	<td align="left">members</td>
 	<td align="left"><a href="directoryobject.htm">DirectoryObject</a> collection</td>
-	<td align="left">Read-only. Nullable.</td>
+	<td align="left">Users and service principals that are members of this directory role. Inherited from [DirectoryObject].            HTTP Methods: GET, POST, DELETE Read-only. Nullable.</td>
 </tr>
 <tr>
 	<td align="left">ownedObjects</td>
@@ -149,7 +141,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="tasks">Tasks</h4>
+<h3 id="tasks">Tasks</h3>
 <table>
 <thead>
 <tr>
@@ -163,11 +155,6 @@
 	<td align="left"><a href="../api/directoryrole_get.htm">Get DirectoryRole</a></td>
 	<td align="left"><a href="directoryrole.htm">DirectoryRole</a></td>
 	<td align="left">Read properties and relationships of directoryRole object.</td>
-</tr>
-<tr>
-	<td align="left"><a href="../api/directoryrole_post_extensions.htm">Create Extension</a></td>
-	<td align="left"><a href="extension.htm">Extension</a></td>
-	<td align="left">Create a new Extension by posting to the Extensions collection.</td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/directoryrole_post_memberof.htm">Create memberOf</a></td>
@@ -196,22 +183,22 @@
 </tr>
 <tr>
 	<td align="left"><a href="../api/directoryrole_delete.htm">Delete</a></td>
-	<td align="left">Void</td>
+	<td align="left">None</td>
 	<td align="left">Delete DirectoryRole object.</td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/directoryrole_checkmembergroups.htm">Checkmembergroups</a></td>
-	<td align="left">String</td>
+	<td align="left">String collection</td>
 	<td align="left"></td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/directoryrole_getmembergroups.htm">Get MemberGroups</a></td>
-	<td align="left">String</td>
+	<td align="left">String collection</td>
 	<td align="left"></td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/directoryrole_getmemberobjects.htm">Get MemberObjects</a></td>
-	<td align="left">String</td>
+	<td align="left">String collection</td>
 	<td align="left"></td>
 </tr>
 </tbody>

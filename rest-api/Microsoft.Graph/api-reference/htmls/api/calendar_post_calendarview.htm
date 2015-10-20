@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Create CalendarView</title>
+  <title>Create Event</title>
+  <meta name="description" content="Create Event">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,13 +20,18 @@
 <div class="container wrapper" id="body">
     <div class="row">
         <div class="col-md-9">
-            <h1 id="create-calendarview">Create CalendarView</h1>
-<p>Use this API to create a new CalendarView.</p>
-<h4 id="http-request">HTTP request</h4>
-<pre><code class="http">to be completed....
+            <h1 id="create-event">Create Event</h1>
+<p>Use this API to create a new Event.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<h3 id="http-request">HTTP request</h3>
+<pre><code class="http">POST /users/&lt;objectId&gt;/Calendar/CalendarView
+POST /groups/&lt;objectId&gt;/Calendar/CalendarView
+POST /users/&lt;objectId&gt;/Calendars/&lt;Id&gt;/CalendarView
+
 </code></pre>
 
-<h4 id="request-headers">Request headers</h4>
+<h3 id="request-headers">Request headers</h3>
 <table>
 <thead>
 <tr>
@@ -38,14 +44,108 @@
 <tr>
 	<td align="left">X-Sample-Header</td>
 	<td align="left">string</td>
-	<td align="left">Sample of how the HTTP headers used by the API could be displayed.</td>
+	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
 </tr>
 </tbody>
 </table>
-<h4 id="request-body">Request body</h4>
+<h3 id="request-body">Request body</h3>
 <p>In the request body, supply a JSON representation of <a href="../resources/event.htm">Event</a> object.</p>
-<h4 id="response">Response</h4>
+<h3 id="response">Response</h3>
 <p>If successful, this method returns <code>201, Created</code> response code and <a href="../resources/event.htm">Event</a> object in the response body.</p>
+<h3 id="example">Example</h3>
+<h5 id="request">Request</h5>
+<p>Here is an example of the request.</p>
+<pre><code class="http">POST /users/&lt;objectId&gt;/Calendar
+</code></pre>
+
+<p>In the request body, supply a JSON representation of <a href="../resources/event.htm">Event</a> object.</p>
+<h5 id="response-1">Response</h5>
+<p>Here is an example of the response.</p>
+<pre><code class="http">HTTP/1.1 201 Created
+Content-type: application/json
+Content-length: 1812
+
+{
+  &quot;Subject&quot;: &quot;Subject-value&quot;,
+  &quot;Body&quot;: {
+    &quot;ContentType&quot;: &quot;ContentType-value&quot;,
+    &quot;Content&quot;: &quot;Content-value&quot;
+  },
+  &quot;BodyPreview&quot;: &quot;BodyPreview-value&quot;,
+  &quot;Importance&quot;: &quot;Importance-value&quot;,
+  &quot;HasAttachments&quot;: true,
+  &quot;Start&quot;: &quot;datetime-value&quot;,
+  &quot;StartTimeZone&quot;: &quot;StartTimeZone-value&quot;,
+  &quot;End&quot;: &quot;datetime-value&quot;,
+  &quot;EndTimeZone&quot;: &quot;EndTimeZone-value&quot;,
+  &quot;Reminder&quot;: 99,
+  &quot;Location&quot;: {
+    &quot;altitude&quot;: 99,
+    &quot;latitude&quot;: 99,
+    &quot;longitude&quot;: 99
+  },
+  &quot;ShowAs&quot;: &quot;ShowAs-value&quot;,
+  &quot;ResponseStatus&quot;: {
+    &quot;Response&quot;: &quot;Response-value&quot;,
+    &quot;Time&quot;: &quot;datetime-value&quot;
+  },
+  &quot;IsAllDay&quot;: true,
+  &quot;IsCancelled&quot;: true,
+  &quot;IsOrganizer&quot;: true,
+  &quot;ResponseRequested&quot;: true,
+  &quot;Type&quot;: &quot;Type-value&quot;,
+  &quot;SeriesMasterId&quot;: &quot;SeriesMasterId-value&quot;,
+  &quot;Attendees&quot;: [
+    {
+      &quot;EmailAddress&quot;: {
+        &quot;Name&quot;: &quot;Name-value&quot;,
+        &quot;Address&quot;: &quot;Address-value&quot;
+      },
+      &quot;Status&quot;: {
+        &quot;Response&quot;: &quot;Response-value&quot;,
+        &quot;Time&quot;: &quot;datetime-value&quot;
+      },
+      &quot;Type&quot;: &quot;Type-value&quot;
+    }
+  ],
+  &quot;Recurrence&quot;: {
+    &quot;Pattern&quot;: {
+      &quot;Type&quot;: &quot;Type-value&quot;,
+      &quot;Interval&quot;: 99,
+      &quot;Month&quot;: 99,
+      &quot;DayOfMonth&quot;: 99,
+      &quot;DaysOfWeek&quot;: [
+        &quot;DaysOfWeek-value&quot;
+      ],
+      &quot;FirstDayOfWeek&quot;: &quot;FirstDayOfWeek-value&quot;,
+      &quot;Index&quot;: &quot;Index-value&quot;
+    },
+    &quot;Range&quot;: {
+      &quot;Type&quot;: &quot;Type-value&quot;,
+      &quot;StartDate&quot;: &quot;datetime-value&quot;,
+      &quot;EndDate&quot;: &quot;datetime-value&quot;,
+      &quot;NumberOfOccurrences&quot;: 99
+    }
+  },
+  &quot;Organizer&quot;: {
+    &quot;EmailAddress&quot;: {
+      &quot;Name&quot;: &quot;Name-value&quot;,
+      &quot;Address&quot;: &quot;Address-value&quot;
+    }
+  },
+  &quot;iCalUId&quot;: &quot;iCalUId-value&quot;,
+  &quot;WebLink&quot;: &quot;WebLink-value&quot;,
+  &quot;OriginalStart&quot;: &quot;datetime-value&quot;,
+  &quot;ChangeKey&quot;: &quot;ChangeKey-value&quot;,
+  &quot;Categories&quot;: [
+    &quot;Categories-value&quot;
+  ],
+  &quot;DateTimeCreated&quot;: &quot;datetime-value&quot;,
+  &quot;DateTimeLastModified&quot;: &quot;datetime-value&quot;,
+  &quot;Id&quot;: &quot;Id-value&quot;
+}
+</code></pre>
+
 
         </div>
         <div id="tocbar" class="col-md-3 visible-md visible-lg">

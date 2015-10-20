@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Update the properties of privilegedsecurityalert object.</title>
+  <meta name="description" content="Update the properties of privilegedsecurityalert object.">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+  
+</head>
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="update-the-properties-of-privilegedsecurityalert-object">Update the properties of privilegedsecurityalert object.</h1>
+<p>Update the properties of privilegedsecurityalert object.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<h3 id="http-request">HTTP request</h3>
+<pre><code class="http">PATCH /PrivilegedSecurityAlerts/&lt;AlertId&gt;
+</code></pre>
+
+<h3 id="optional-request-headers">Optional request headers</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Name</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">X-Sample-Header</td>
+	<td align="left">string</td>
+	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-body">Request body</h3>
+<p>In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.</p>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">AdditionalData</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">AlertDescription</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">AlertName</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">AlertType</td>
+	<td align="left">String</td>
+	<td align="left">Possible values are: <code>High</code>, <code>Medium</code>, <code>Low</code>.</td>
+</tr>
+<tr>
+	<td align="left">HowToPrevent</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">IsActive</td>
+	<td align="left">Boolean</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">IsConfigurable</td>
+	<td align="left">Boolean</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">IsResolvable</td>
+	<td align="left">Boolean</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">LastModifiedTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">LastScannedTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">MitigationSteps</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">NumberOfAffectedItems</td>
+	<td align="left">Int32</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">SecurityImpact</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">SeverityLevel</td>
+	<td align="left">String</td>
+	<td align="left">Possible values are: <code>Vulnerability</code>, <code>AttackSuspect</code>.</td>
+</tr>
+<tr>
+	<td align="left">Status</td>
+	<td align="left">String</td>
+	<td align="left">Possible values are: <code>Active</code>, <code>Dismissed</code>, <code>Inactive</code>.</td>
+</tr>
+<tr>
+	<td align="left">WasDismissed</td>
+	<td align="left">Boolean</td>
+	<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response">Response</h3>
+<p>If successful, this method returns a <code>200 OK</code> response code and updated <a href="../resources/privilegedsecurityalert.htm">PrivilegedSecurityAlert</a> object in the response body.</p>
+<h3 id="example">Example</h3>
+<h5 id="request">Request</h5>
+<p>Here is an example of the request.</p>
+<pre><code class="http">PUT /PrivilegedSecurityAlerts/&lt;AlertId&gt;
+Content-type: application/json
+Content-length: 596
+
+{
+  &quot;AlertId&quot;: &quot;AlertId-value&quot;,
+  &quot;NumberOfAffectedItems&quot;: 99,
+  &quot;AdditionalData&quot;: &quot;AdditionalData-value&quot;,
+  &quot;AlertName&quot;: &quot;AlertName-value&quot;,
+  &quot;AlertDescription&quot;: &quot;AlertDescription-value&quot;,
+  &quot;LastModifiedTime&quot;: &quot;datetime-value&quot;,
+  &quot;LastScannedTime&quot;: &quot;datetime-value&quot;,
+  &quot;SeverityLevel&quot;: &quot;SeverityLevel-value&quot;,
+  &quot;AlertType&quot;: &quot;AlertType-value&quot;,
+  &quot;SecurityImpact&quot;: &quot;SecurityImpact-value&quot;,
+  &quot;MitigationSteps&quot;: &quot;MitigationSteps-value&quot;,
+  &quot;HowToPrevent&quot;: &quot;HowToPrevent-value&quot;,
+  &quot;WasDismissed&quot;: true,
+  &quot;IsActive&quot;: true,
+  &quot;IsResolvable&quot;: true,
+  &quot;IsConfigurable&quot;: true,
+  &quot;Status&quot;: &quot;Status-value&quot;
+}
+</code></pre>
+
+<h5 id="response-1">Response</h5>
+<p>Here is an example of the response.</p>
+<pre><code class="http">HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 596
+
+{
+  &quot;AlertId&quot;: &quot;AlertId-value&quot;,
+  &quot;NumberOfAffectedItems&quot;: 99,
+  &quot;AdditionalData&quot;: &quot;AdditionalData-value&quot;,
+  &quot;AlertName&quot;: &quot;AlertName-value&quot;,
+  &quot;AlertDescription&quot;: &quot;AlertDescription-value&quot;,
+  &quot;LastModifiedTime&quot;: &quot;datetime-value&quot;,
+  &quot;LastScannedTime&quot;: &quot;datetime-value&quot;,
+  &quot;SeverityLevel&quot;: &quot;SeverityLevel-value&quot;,
+  &quot;AlertType&quot;: &quot;AlertType-value&quot;,
+  &quot;SecurityImpact&quot;: &quot;SecurityImpact-value&quot;,
+  &quot;MitigationSteps&quot;: &quot;MitigationSteps-value&quot;,
+  &quot;HowToPrevent&quot;: &quot;HowToPrevent-value&quot;,
+  &quot;WasDismissed&quot;: true,
+  &quot;IsActive&quot;: true,
+  &quot;IsResolvable&quot;: true,
+  &quot;IsConfigurable&quot;: true,
+  &quot;Status&quot;: &quot;Status-value&quot;
+}
+</code></pre>
+
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+

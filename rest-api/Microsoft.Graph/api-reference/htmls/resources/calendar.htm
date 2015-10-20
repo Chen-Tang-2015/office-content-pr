@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Calendar resource type</title>
+  <meta name="description" content="Calendar resource">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,33 +22,28 @@
         <div class="col-md-9">
             <h1 id="calendar-resource-type">Calendar resource type</h1>
 <p>A calendar which is a container for events.</p>
-<h4 id="json-representation">JSON representation</h4>
+<h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
   &quot;CalendarView&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Event&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.event&quot;
     }
   ],
-  &quot;ChangeKey&quot;: &quot;String&quot;,
-  &quot;Color&quot;: &quot;String&quot;,
+  &quot;ChangeKey&quot;: &quot;String-value&quot;,
+  &quot;Color&quot;: &quot;String-value&quot;,
   &quot;Events&quot;: [
     {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Event&quot;
+      &quot;@odata.type&quot;: &quot;microsoft.graph.event&quot;
     }
   ],
-  &quot;Extensions&quot;: [
-    {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.Extension&quot;
-    }
-  ],
-  &quot;Id&quot;: &quot;String (identifier)&quot;,
-  &quot;Name&quot;: &quot;String&quot;
+  &quot;Id&quot;: &quot;String-value (identifier)&quot;,
+  &quot;Name&quot;: &quot;String-value&quot;
 }
 
 </code></pre>
 
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -79,7 +75,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="relationships">Relationships</h4>
+<h3 id="relationships">Relationships</h3>
 <table>
 <thead>
 <tr>
@@ -99,14 +95,9 @@
 	<td align="left"><a href="event.htm">Event</a> collection</td>
 	<td align="left">The events in the calendar. Navigation property. Read-only. Nullable.</td>
 </tr>
-<tr>
-	<td align="left">Extensions</td>
-	<td align="left"><a href="extension.htm">Extension</a> collection</td>
-	<td align="left">Read-only. Nullable.</td>
-</tr>
 </tbody>
 </table>
-<h4 id="tasks">Tasks</h4>
+<h3 id="tasks">Tasks</h3>
 <table>
 <thead>
 <tr>
@@ -122,19 +113,14 @@
 	<td align="left">Read properties and relationships of calendar object.</td>
 </tr>
 <tr>
-	<td align="left"><a href="../api/calendar_post_calendarview.htm">Create CalendarView</a></td>
+	<td align="left"><a href="../api/calendar_post_calendarview.htm">Create Event</a></td>
 	<td align="left"><a href="event.htm">Event</a></td>
-	<td align="left">Create a new CalendarView by posting to the CalendarView collection.</td>
+	<td align="left">Create a new Event by posting to the CalendarView collection.</td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/calendar_post_events.htm">Create Event</a></td>
 	<td align="left"><a href="event.htm">Event</a></td>
 	<td align="left">Create a new Event by posting to the Events collection.</td>
-</tr>
-<tr>
-	<td align="left"><a href="../api/calendar_post_extensions.htm">Create Extension</a></td>
-	<td align="left"><a href="extension.htm">Extension</a></td>
-	<td align="left">Create a new Extension by posting to the Extensions collection.</td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/calendar_update.htm">Update</a></td>
@@ -143,7 +129,7 @@
 </tr>
 <tr>
 	<td align="left"><a href="../api/calendar_delete.htm">Delete</a></td>
-	<td align="left">Void</td>
+	<td align="left">None</td>
 	<td align="left">Delete Calendar object.</td>
 </tr>
 </tbody>

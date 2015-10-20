@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Update AppRoleAssignment</title>
+  <title>Update the properties of approleassignment object.</title>
+  <meta name="description" content="Update the properties of approleassignment object.">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,13 +20,17 @@
 <div class="container wrapper" id="body">
     <div class="row">
         <div class="col-md-9">
-            <h1 id="update-approleassignment">Update AppRoleAssignment</h1>
+            <h1 id="update-the-properties-of-approleassignment-object">Update the properties of approleassignment object.</h1>
 <p>Update the properties of approleassignment object.</p>
-<h4 id="http-request">HTTP request</h4>
-<pre><code class="http">
+<h3 id="prerequisites">Prerequisites</h3>
+<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<h3 id="http-request">HTTP request</h3>
+<pre><code class="http">PATCH /users/&lt;objectId&gt;/appRoleAssignments/&lt;objectId&gt;
+PATCH /servicePrincipals/&lt;objectId&gt;/appRoleAssignedTo
+PATCH /groups/&lt;objectId&gt;/appRoleAssignments/&lt;objectId&gt;
 </code></pre>
 
-<h4 id="optional-request-headers">Optional request headers</h4>
+<h3 id="optional-request-headers">Optional request headers</h3>
 <table>
 <thead>
 <tr>
@@ -38,11 +43,11 @@
 <tr>
 	<td align="left">X-Sample-Header</td>
 	<td align="left">string</td>
-	<td align="left">Sample of how the HTTP headers used by the API could be displayed.</td>
+	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
 </tr>
 </tbody>
 </table>
-<h4 id="request-body">Request body</h4>
+<h3 id="request-body">Request body</h3>
 <p>In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.</p>
 <table>
 <thead>
@@ -56,7 +61,7 @@
 <tr>
 	<td align="left">creationTimestamp</td>
 	<td align="left">DateTimeOffset</td>
-	<td align="left"></td>
+	<td align="left">The time when the grant was created.</td>
 </tr>
 <tr>
 	<td align="left">deletionTimestamp</td>
@@ -66,42 +71,83 @@
 <tr>
 	<td align="left">id</td>
 	<td align="left">Guid</td>
-	<td align="left"></td>
+	<td align="left">The role id that was assigned to the principal.  This role must be declared by the target resource application <strong>resourceId</strong> in its <strong>appRoles</strong> property. Where the resource does not declare any permissions, a default id (zero GUID) must be specified.                            <strong>Notes</strong>: not nullable.</td>
 </tr>
 <tr>
 	<td align="left">objectType</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">A string that identifies the object type. For application role assignments the value is always ΓÇ£AppRoleAssignmentΓÇ¥. Inherited from [DirectoryObject].</td>
 </tr>
 <tr>
 	<td align="left">principalDisplayName</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The display name of the principal that was granted the access.</td>
 </tr>
 <tr>
 	<td align="left">principalId</td>
 	<td align="left">Guid</td>
-	<td align="left"></td>
+	<td align="left">The unique identifier (<strong>objectId</strong>) for the principal being granted the access.                            <strong>Notes</strong>: required.</td>
 </tr>
 <tr>
 	<td align="left">principalType</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The type of principal.  This can either be &quot;User&quot;, &quot;Group&quot; or &quot;ServicePrincipal&quot;.</td>
 </tr>
 <tr>
 	<td align="left">resourceDisplayName</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The display name of the resource to which the assignment was made.</td>
 </tr>
 <tr>
 	<td align="left">resourceId</td>
 	<td align="left">Guid</td>
-	<td align="left"></td>
+	<td align="left">The unique identifier (<strong>objectId</strong>) for the target resource (service principal) for which the assignment was made.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="response">Response</h4>
+<h3 id="response">Response</h3>
 <p>If successful, this method returns a <code>200 OK</code> response code and updated <a href="../resources/approleassignment.htm">AppRoleAssignment</a> object in the response body.</p>
+<h3 id="example">Example</h3>
+<h5 id="request">Request</h5>
+<p>Here is an example of the request.</p>
+<pre><code class="http">PUT /users/&lt;objectId&gt;/appRoleAssignments/&lt;objectId&gt;
+Content-type: application/json
+Content-length: 398
+
+{
+  &quot;creationTimestamp&quot;: &quot;datetime-value&quot;,
+  &quot;id&quot;: &quot;id-value&quot;,
+  &quot;principalDisplayName&quot;: &quot;principalDisplayName-value&quot;,
+  &quot;principalId&quot;: &quot;principalId-value&quot;,
+  &quot;principalType&quot;: &quot;principalType-value&quot;,
+  &quot;resourceDisplayName&quot;: &quot;resourceDisplayName-value&quot;,
+  &quot;resourceId&quot;: &quot;resourceId-value&quot;,
+  &quot;objectType&quot;: &quot;objectType-value&quot;,
+  &quot;objectId&quot;: &quot;objectId-value&quot;,
+  &quot;deletionTimestamp&quot;: &quot;datetime-value&quot;
+}
+</code></pre>
+
+<h5 id="response-1">Response</h5>
+<p>Here is an example of the response.</p>
+<pre><code class="http">HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 398
+
+{
+  &quot;creationTimestamp&quot;: &quot;datetime-value&quot;,
+  &quot;id&quot;: &quot;id-value&quot;,
+  &quot;principalDisplayName&quot;: &quot;principalDisplayName-value&quot;,
+  &quot;principalId&quot;: &quot;principalId-value&quot;,
+  &quot;principalType&quot;: &quot;principalType-value&quot;,
+  &quot;resourceDisplayName&quot;: &quot;resourceDisplayName-value&quot;,
+  &quot;resourceId&quot;: &quot;resourceId-value&quot;,
+  &quot;objectType&quot;: &quot;objectType-value&quot;,
+  &quot;objectId&quot;: &quot;objectId-value&quot;,
+  &quot;deletionTimestamp&quot;: &quot;datetime-value&quot;
+}
+</code></pre>
+
 
         </div>
         <div id="tocbar" class="col-md-3 visible-md visible-lg">

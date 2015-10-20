@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>drive resource type</title>
+  <meta name="description" content="drive resource">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,31 +21,44 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="drive-resource-type">drive resource type</h1>
-<p>The Drive resource represents a drive in OneDrive. It provides information about the owner of the drive, total and available storage space, and exposes a collection of all the [Items][item-resource] contained within the drive.  </p>
-<h4 id="json-representation">JSON representation</h4>
+<p>The Drive resource represents a drive in OneDrive.
+ It provides information about the owner of the drive, total and available
+ storage space, and exposes a collection of all the [Items][item-resource] contained
+ within the drive.</p>
+<h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
-  &quot;driveType&quot;: &quot;String&quot;,
-  &quot;id&quot;: &quot;String (identifier)&quot;,
+  &quot;driveType&quot;: &quot;String-value&quot;,
+  &quot;id&quot;: &quot;String-value (identifier)&quot;,
   &quot;items&quot;: [
     {
       &quot;@odata.type&quot;: &quot;microsoft.graph.item&quot;
     }
   ],
   &quot;owner&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.identitySet&quot;
+    &quot;@odata.type&quot;: &quot;microsoft.graph.identityset&quot;
   },
   &quot;quota&quot;: {
     &quot;@odata.type&quot;: &quot;microsoft.graph.quota&quot;
   },
   &quot;root&quot;: {
     &quot;@odata.type&quot;: &quot;microsoft.graph.item&quot;
-  }
+  },
+  &quot;shared&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.item&quot;
+    }
+  ],
+  &quot;special&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.item&quot;
+    }
+  ]
 }
 
 </code></pre>
 
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -76,7 +90,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="relationships">Relationships</h4>
+<h3 id="relationships">Relationships</h3>
 <table>
 <thead>
 <tr>
@@ -96,9 +110,19 @@
 	<td align="left"><a href="item.htm">item</a></td>
 	<td align="left">The root folder of the drive. Read-only.</td>
 </tr>
+<tr>
+	<td align="left">shared</td>
+	<td align="left"><a href="item.htm">item</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">special</td>
+	<td align="left"><a href="item.htm">item</a> collection</td>
+	<td align="left">Collection of common folders available in OneDrive. Read-only. Nullable.</td>
+</tr>
 </tbody>
 </table>
-<h4 id="tasks">Tasks</h4>
+<h3 id="tasks">Tasks</h3>
 <table>
 <thead>
 <tr>
@@ -119,14 +143,29 @@
 	<td align="left">Create a new item by posting to the items collection.</td>
 </tr>
 <tr>
+	<td align="left"><a href="../api/drive_post_shared.htm">Create shared</a></td>
+	<td align="left"><a href="item.htm">item</a></td>
+	<td align="left">Create a new shared by posting to the shared collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/drive_post_special.htm">Create special</a></td>
+	<td align="left"><a href="item.htm">item</a></td>
+	<td align="left">Create a new special by posting to the special collection.</td>
+</tr>
+<tr>
 	<td align="left"><a href="../api/drive_update.htm">Update</a></td>
 	<td align="left"><a href="drive.htm">drive</a></td>
 	<td align="left">Update drive object.</td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/drive_delete.htm">Delete</a></td>
-	<td align="left">Void</td>
+	<td align="left">None</td>
 	<td align="left">Delete drive object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/drive_allphotos.htm">Allphotos</a></td>
+	<td align="left"><a href="item.htm">item</a> collection</td>
+	<td align="left"></td>
 </tr>
 </tbody>
 </table>

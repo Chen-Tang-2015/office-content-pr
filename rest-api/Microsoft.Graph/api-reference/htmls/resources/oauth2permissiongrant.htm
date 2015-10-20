@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>OAuth2PermissionGrant resource type</title>
+  <meta name="description" content="OAuth2PermissionGrant resource">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,22 +21,23 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="oauth2permissiongrant-resource-type">OAuth2PermissionGrant resource type</h1>
-<h4 id="json-representation">JSON representation</h4>
+<p>Represents the OAuth 2.0 delegated permission scopes that have been granted to an application (represented by a service principal) as part of the user or admin consent process. </p>
+<h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
-  &quot;clientId&quot;: &quot;String&quot;,
-  &quot;consentType&quot;: &quot;String&quot;,
+  &quot;clientId&quot;: &quot;String-value&quot;,
+  &quot;consentType&quot;: &quot;String-value&quot;,
   &quot;expiryTime&quot;: &quot;String (timestamp)&quot;,
-  &quot;objectId&quot;: &quot;String (identifier)&quot;,
-  &quot;principalId&quot;: &quot;String&quot;,
-  &quot;resourceId&quot;: &quot;String&quot;,
-  &quot;scope&quot;: &quot;String&quot;,
+  &quot;objectId&quot;: &quot;String-value (identifier)&quot;,
+  &quot;principalId&quot;: &quot;String-value&quot;,
+  &quot;resourceId&quot;: &quot;String-value&quot;,
+  &quot;scope&quot;: &quot;String-value&quot;,
   &quot;startTime&quot;: &quot;String (timestamp)&quot;
 }
 
 </code></pre>
 
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -87,9 +89,9 @@
 </tr>
 </tbody>
 </table>
-<h4 id="relationships">Relationships</h4>
+<h3 id="relationships">Relationships</h3>
 <p>None</p>
-<h4 id="tasks">Tasks</h4>
+<h3 id="tasks">Tasks</h3>
 <table>
 <thead>
 <tr>
@@ -111,7 +113,7 @@
 </tr>
 <tr>
 	<td align="left"><a href="../api/oauth2permissiongrant_delete.htm">Delete</a></td>
-	<td align="left">Void</td>
+	<td align="left">None</td>
 	<td align="left">Delete OAuth2PermissionGrant object.</td>
 </tr>
 </tbody>

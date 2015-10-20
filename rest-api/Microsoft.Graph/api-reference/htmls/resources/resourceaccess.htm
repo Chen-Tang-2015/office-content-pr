@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>ResourceAccess resource type</title>
+  <meta name="description" content="ResourceAccess resource">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,16 +21,17 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="resourceaccess-resource-type">ResourceAccess resource type</h1>
-<h4 id="json-representation">JSON representation</h4>
+<p>Specifies an OAuth 2.0 permission scope or an app role that an application requires. The <strong>resourceAccess</strong> property of the [RequiredResourceAccess] type is a collection of <strong>ResourceAccess</strong>.</p>
+<h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
-  &quot;id&quot;: &quot;String&quot;,
-  &quot;type&quot;: &quot;String&quot;
+  &quot;id&quot;: &quot;Guid-value&quot;,
+  &quot;type&quot;: &quot;String-value&quot;
 }
 
 </code></pre>
 
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 <table>
 <thead>
 <tr>
@@ -42,12 +44,12 @@
 <tr>
 	<td align="left">id</td>
 	<td align="left">Guid</td>
-	<td align="left"></td>
+	<td align="left">The unique identifier for one of the [OAuth2Permission] or [AppRole] instances that the resource application exposes.</td>
 </tr>
 <tr>
 	<td align="left">type</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">Specifies whether the <strong>id</strong> property references an [OAuth2Permission] or an [AppRole]. Possible values are &quot;scope&quot; or &quot;role&quot;.</td>
 </tr>
 </tbody>
 </table>

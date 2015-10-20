@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Microsoft Graph API reference contributor's guide</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+  
+</head>
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="microsoft-graph-api-reference-contributors-guide">Microsoft Graph API reference contributor's guide</h1>
+<p>Getting API reference contribution from both engineering teams and content developers is essential to delivering high quality documentation to our customers this Fall at <strong>Connect()</strong> on <strong>November 18th</strong>. First of all, thank you for throwing your hat in the ring and providing assistance to make this documentation the best it can be! Please follow the guidelines on this page to make our workflow as painless as possible!</p>
+<p>If you have any questions or comments about these guidelines, or you have a question about something that isn't addressed here, please email <strong>MSGraphAPIRef@microsoft.com</strong>.</p>
+<h2 id="get-the-source-files">Get the source files</h2>
+<ol>
+<li>Clone this repository. </li>
+<li><strong>Fork</strong> the repository to your own GitHub account. <em>Do not push changes directly to the OfficeDev master branch!</em></li>
+<li>The files are in <em>office-content-pr\rest-api\Microsoft.Graph\api-reference\markdown</em>.</li>
+</ol>
+<h2 id="add-rich-content">Add rich content</h2>
+<p>Add rich descriptions to the generated documentation to help our customers make sense of this gigantic, unified endpoint. </p>
+<p>The process is simple and should be familiar to everyone at this point. Simply find the file you wish to edit (entity types are in the <em>resources/</em> folder and actions/functions are in the <em>api/</em> folder) and edit the Markdown. In an effort to keep our documentation uniform with the same look and feel across all of it, please adhere to the following guidelines:</p>
+<ul>
+<li>For subheadings, use <code>###</code> followed by a space and then your heading text.</li>
+<li>Don't add any new subheadings. If you would like to add one, please send an email to <strong>MSGraphAPIRef@microsoft.com</strong> and we'll talk about it.</li>
+<li>To bold text, use <code>**text**</code>.</li>
+<li>To italicize text, use <code>*text*</code>.</li>
+<li>To add code snippets, use fences (```) and specify a coding language.</li>
+<li>Don't use newlines in tables. It just doesn't work.</li>
+</ul>
+<p><strong>Key things to consider:</strong> </p>
+<ul>
+<li>Add object, property, method, and parameter descriptions. </li>
+<li>Note: Same descriptions can appear in many places. For example, the method descriptions appear in object Tasks table and also in the API file itself. Same object can appear as a relationship in many places. The descriptions that we add should be consistent across these locations.</li>
+<li>For APIs, add the <strong>scopes</strong> needed under the prerequisites section.</li>
+<li>For APIs, verify/edit HTTP request. There are hundreds of ways to reach the resource/methods through various resource paths. We have selected only a few for brevity. Add the ones that you wish to highlight. </li>
+<li>For APIs, add the HTTP header details (optional or required). The template has a placeholder. If no HTTP headers are used, remove the sub-section. </li>
+<li>Add any additional details required around HTTP request/response. </li>
+<li>Format the response payload (JSON) as you wish. If you want to only show few properties to brevity, set the <code>truncated</code> flag in the comments (which is right above the response) to true. </li>
+<li>Format the resource JSON representation as you wish. </li>
+<li>The generator makes assumption about the response codes. Verify HTTP response code is what is actually being returned in the API. </li>
+<li>Note that ComplexTypes are also shown as a resource. These files don't have Tasks section. </li>
+<li>
+If you need to add any new methods (such as PUT API), follow these steps:
+<ul>
+<li>Add an entry in the resource's Tasks table</li>
+<li>Add a new file: <code>resource_methodname.md</code> and include API details</li>
+<li>Ensure all the links work correctly</li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong>
+* Do not change the file name. 
+* Do not move the property, relationship, or tasks tables. 
+* Refrain from adding new columns to the table. </p>
+<h2 id="run-markdown-scanner-tool-if-you-editadd-code-or-samples">Run Markdown Scanner tool if you edit/add code or samples.</h2>
+<p>If you make any edits or additions to JSON structure, HTTP request/response sections, do run the <a href="https://github.com/OneDrive/markdown-scanner" target="_blank">markdown scanner</a> tool to ensure accurancy. </p>
+<p>At the time of creation of these markdown templates, all the files have been checked using the same tool. The known issues at this point are: </p>
+<ul>
+<li>Many APIs return string/boolean values (scalars). Looks like the scaler return types are not supported in markdown scanner tool yet. Ignore errors that say <code>Unable to locate a definition for resource type: &lt;type such as string or boolean&gt;</code> for the time being. </li>
+<li>Following resources don't have a URL path to reach them as per the EDMX/CSDL definitions: <em>directorylinkchange, entity, eventmessage, fileattachment, itemattachment, opentypeextension, outlookitem, referenceattachment</em>. APIs associated with these resources contains blank path (until they are manually corrected by the owner team). </li>
+</ul>
+<p>If you face any issues in running the tool, let us know.</p>
+<h2 id="submit-a-pull-request">Submit a pull request</h2>
+<p>After making some contributions to the API reference, please submit a pull request so we can feed it back into the pipeline!</p>
+<ol>
+<li>Push your changes to <strong>your</strong> fork of the repository. </li>
+<li>Open a pull request against <strong>OfficeDev</strong> organization's repository.</li>
+<li>Wait on us! We'll be looking out for pull requests and will get back to you as soon as possible. We will review your changes and, if they adhere to the guidelines, will merge them back into our master branch.</li>
+</ol>
+<p><strong>Thank you so much for your contributions!</strong></p>
+<h2 id="questions-or-concerns">Questions or concerns</h2>
+<p>Please send the above to <strong>MSGraphAPIRef@microsoft.com</strong> and someone will get back to you in a timely manner.</p>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="#">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+
