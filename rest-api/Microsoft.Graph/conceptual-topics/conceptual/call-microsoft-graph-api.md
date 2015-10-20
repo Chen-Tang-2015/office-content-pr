@@ -35,7 +35,7 @@ the beta namespace. That is, specify {version} as beta.
   - The tenant ID (GUID)
   - A domain name for the tenant, for example, contoso.onmicrosoft.com
   - The alias `me`, which resolves to the tenant of the signed-in user
-  - The alias `myOrganization`, which resolves to the tenant of the signed-in user
+  - The alias `myOrganization`, which resolves to the tenant of the organization signed-in user
 
 For example, if your tenant domain is `https://contoso.onmicrosoft.com`, and you are targeting the beta 
 version of the service, you can send requests to `https://graph.microsoft.com/beta/contoso.onmicrosoft.com`.
@@ -56,7 +56,7 @@ use of the REST API.
 
 A resource URL is determined by the Microsoft Graph API entity data model. The prescription is outlined in the entity metadata schema ($metadata). 
 
->  Note: To undertand how interpret the entity metadata schema ($metadata), see the _Understand Microsoft Graph API metadata_ topic.
+>  Note: To learn how interpret the entity metadata schema ($metadata), see [Understand Microsoft Graph API metadata](understand-microsoft-graph-metadata.md ).
 
 The path URL resource names and query parameters are case insensitive. However, values you assign, entity IDs, and 
 other base64 encoded values are case sensitive.
