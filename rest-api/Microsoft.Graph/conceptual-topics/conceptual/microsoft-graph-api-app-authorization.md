@@ -2,22 +2,25 @@
 # Microsoft Graph API app authorization
 ## Overview
 
-To call the Microsoft Graph API, you have to complete the following tasks.
+In this article, we'll discuss how to authenticate a user, get an access token and renew an access token using a refresh token.
+
+<!--To call the Microsoft Graph API, you have to complete the following tasks.
 
 1. Register the application in Azure Active Directory
 2. Authenticate a user and get an access token by calling methods on the Azure AD Authentication Library (ADAL)
 3. Use ADAL to get an access token
 4. Use the access token in a request to the Microsoft Graph API
-5. Disconnect session
+5. Disconnect the session
+
+-->
 
 The authentication flow can be broken down to two basic steps:
 
 1. Request an authorization code
-2. Use authorization code to request an access token. 
+2. Use authorization code to request an access token and refresh token. 
 
->  Note: You will also get a refresh token along with the access token. You can use the refresh token to acquire a new access token when the current access token expires.
+>  Note: You can use the refresh token to acquire a new access token when the current access token expires.
 
-In this article, we'll discuss how to authenticate a user, get an access token and renew an access token using a refresh token.
 
 In this article:
 
