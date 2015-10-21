@@ -46,6 +46,13 @@ Here, we outline the essential steps at the protocol level as applied to the uni
 At the protocol level, authorizing an app starts from submitting an HTTPS GET request against the following URL:
  
 ```GET https://login.microsoftonline.com/common/oauth2/authorize?response_type=code&redirect_uri=<uri>&client_id=<id>&resource=https%3A%2F%2Fgraph.microsoft.com%2F```
+
+#### Required query string parameters
+| Parameter name  | Value  | Description                                                                                            |
+|:----------------|:-------|:-------------------------------------------------------------------------------------------------------|
+| *client_id*     | string | The client ID created for your app.                                                                    |
+| *response_type* | string | Specifies the requested response type. In an authorization code grant request, the value must be code. |
+| *redirect_uri*  | string | The redirect URL that the browser is sent to when authentication is complete.                          |
  
 Here, the `redirect_uri` value (`<uri>`) should match the app's pre-configured **REPLY URI** value  
 and the `client_id value` (`<id>`) should be your app's **CLIENT ID** value set in the Azure tenant's application registry. 
