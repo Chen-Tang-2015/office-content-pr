@@ -1,6 +1,6 @@
 # DirectoryObject resource type
 
-
+Represents an Azure Active Directory object. The **DirectoryObject** type is the base type for most of the other directory entity types.
 
 ### JSON representation
 
@@ -25,9 +25,9 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|deletionTimestamp|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|objectId|String| Read-only.|
-|objectType|String||
+|deletionTimestamp|DateTimeOffset|The time at which the directory object was deleted. It only applies to those directory objects which can be restored. Currently it is only supported for deleted [Application] objects; all other entities return **null** for this property.                            **Notes**: Requires version 1.5 or newer.            The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|objectId|String|A Guid that is the unique identifier for the object; for example, 12345678-9abc-def0-1234-56789abcde.                            **Notes**: **key**, immutable, not nullable, unique.             Read-only.|
+|objectType|String|A string that identifies the object type. For example, for groups the value is always ΓÇ£GroupΓÇ¥.|
 
 ### Relationships
 None
@@ -44,8 +44,8 @@ None
 |[Get MemberGroups](../api/directoryobject_getmembergroups.md)|String collection||
 |[Get MemberObjects](../api/directoryobject_getmemberobjects.md)|String collection||
 
-<!-- uuid: cb1d4a4f-79ef-4fa9-bfe0-f94c47ab66c1
-2015-10-21 09:21:58 UTC -->
+<!-- uuid: 511c1be8-8327-4914-b22c-13ee75d38ef0
+2015-10-21 09:37:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "DirectoryObject resource",

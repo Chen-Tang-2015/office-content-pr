@@ -22,8 +22,8 @@ Here is a JSON representation of the resource
 ### Properties
 None
 
-<!-- uuid: c96845e4-c247-4d1c-8db3-39d1309403e9
-2015-10-21 09:22:01 UTC -->
+<!-- uuid: 3a86cb10-8bd7-499b-9b8c-95ec5c2daf6b
+2015-10-21 09:37:37 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "UserDataCollection resource",

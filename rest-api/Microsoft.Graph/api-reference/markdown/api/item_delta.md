@@ -198,8 +198,8 @@ Content-length: 3635
 }
 ```
 
-<!-- uuid: 418a678d-0a9d-4704-9e91-d645803a7246
-2015-10-21 09:21:59 UTC -->
+<!-- uuid: d6948b7a-afe7-483a-8a72-f2e6ac5e34f1
+2015-10-21 09:37:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "item: delta",

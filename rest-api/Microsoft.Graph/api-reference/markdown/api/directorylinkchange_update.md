@@ -18,15 +18,15 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|associationType|String||
+|associationType|String|A string that identifies the association type to which the change applies. The value is either ΓÇ£MemberΓÇ¥ or ΓÇ£ManagerΓÇ¥.|
 |deletionTimestamp|DateTimeOffset||
-|objectType|String||
-|sourceObjectId|String||
-|sourceObjectType|String||
-|sourceObjectUri|String||
-|targetObjectId|String||
-|targetObjectType|String||
-|targetObjectUri|String||
+|objectType|String|A string that identifies the object type. For **DirectoryLinkChange** objects, the value is always ΓÇ£DirectoryLinkChangeΓÇ¥. [DirectoryObject]|
+|sourceObjectId|String|The object ID for the source object; for example, ΓÇ¥7373b0af-d462-406e-ad26-f2bc96d823d8ΓÇ¥.|
+|sourceObjectType|String|A string that identifies the source object type; this will be one of the following: ΓÇ£GroupΓÇ¥, ΓÇ£UserΓÇ¥, or ΓÇ£ContactΓÇ¥.|
+|sourceObjectUri|String|The URI for the source object; for example, `ΓÇ£https://graph.windows.net/contoso.com/groups/7373b0af-d462-406e-ad26-f2bc96d823d8ΓÇ¥`.|
+|targetObjectId|String|The object ID for the target object; for example, ΓÇ£dca803ab-bf26-4753-bf20-e1c56a9c34e2ΓÇ¥.|
+|targetObjectType|String|A string that identifies the source object type; this will be one of the following: ΓÇ£GroupΓÇ¥, ΓÇ£UserΓÇ¥, or ΓÇ£ContactΓÇ¥.|
+|targetObjectUri|String|The URI for the target object; for example, `ΓÇ£https://graph.windows.net/contoso.com/users/dca803ab-bf26-4753-bf20-e1c56a9c34e2ΓÇ¥`.|
 
 ### Response
 If successful, this method returns a `200 OK` response code and updated [DirectoryLinkChange](../resources/directorylinkchange.md) object in the response body.
@@ -81,8 +81,8 @@ Content-length: 433
 }
 ```
 
-<!-- uuid: a3408ca8-a838-40c8-8245-5b41179cc666
-2015-10-21 09:21:58 UTC -->
+<!-- uuid: 5300375b-1552-4c8d-8e69-d7418ba20825
+2015-10-21 09:37:33 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of directorylinkchange object.",

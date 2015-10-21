@@ -193,8 +193,8 @@ Content-length: 3635
 }
 ```
 
-<!-- uuid: 8e2bbf6b-459d-455b-b9fe-2768b995397d
-2015-10-21 09:21:59 UTC -->
+<!-- uuid: 73b958ba-ef9a-459a-bc7b-1ff84f399e70
+2015-10-21 09:37:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "item: allPhotos",

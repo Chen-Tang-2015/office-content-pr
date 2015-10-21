@@ -44,22 +44,22 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|createdBy|String||
-|createdTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|id|String| Read-only.|
-|isDefault|Boolean||
-|lastModifiedBy|String||
-|lastModifiedTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|name|String||
-|pagesUrl|String||
-|self|String||
+|createdBy|String|The user who created the section. |
+|createdTime|DateTimeOffset|The date and time when the section was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|id|String|The unique identifier of the section.  Read-only.|
+|isDefault|Boolean|Indicates whether this is the user's default section.|
+|lastModifiedBy|String|The user who last modified the section. |
+|lastModifiedTime|DateTimeOffset|The date and time when the section was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|name|String|The name of the section. |
+|pagesUrl|String|The /pages endpoint where you can get details for all the pages in the section.|
+|self|String|The endpoint where you can get details about the section. |
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|pages|[Page](page.md) collection| Read-only. Nullable.|
-|parentNotebook|[Notebook](notebook.md)| Read-only.|
-|parentSectionGroup|[SectionGroup](sectiongroup.md)| Read-only.|
+|pages|[Page](page.md) collection|A section in a OneNote notebook  Read-only. Nullable.|
+|parentNotebook|[Notebook](notebook.md)|The notebook that contains the section, expanded by default with the id, name, and self properties selected.  Read-only.|
+|parentSectionGroup|[SectionGroup](sectiongroup.md)|The section group that contains the section, expanded by default with the id, name, and self properties selected.  Read-only.|
 
 ### Tasks
 
@@ -73,8 +73,8 @@ Here is a JSON representation of the resource
 |[Copytosectiongroup](../api/section_copytosectiongroup.md)|[CopySectionModel](copysectionmodel.md)||
 |[Thumbnail](../api/section_thumbnail.md)|Stream||
 
-<!-- uuid: cf3b9160-1ad0-48dc-801d-2f44cea6a6d0
-2015-10-21 09:22:01 UTC -->
+<!-- uuid: eff771e3-534b-4bc8-84bb-f12d0b787ef5
+2015-10-21 09:37:36 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Section resource",

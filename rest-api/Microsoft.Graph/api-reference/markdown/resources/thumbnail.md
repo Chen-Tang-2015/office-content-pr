@@ -1,6 +1,6 @@
 # thumbnail resource type
 
-
+The Thumbnail resource type represents a thumbnail for an image, video, document, or any file or folder on OneDrive that has a graphical representation.  
 
 ### JSON representation
 
@@ -26,13 +26,13 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|content|Stream||
-|height|Int32||
-|url|String||
-|width|Int32||
+|content|Stream|The content stream.|
+|height|Int32|The height of the thumbnail, in pixels.|
+|url|String|The URL used to fetch the thumbnail content.|
+|width|Int32|The width of the thumbnail, in pixels.|
 
-<!-- uuid: 0da149b4-9563-43d4-a0ce-1dc4cabded53
-2015-10-21 09:22:01 UTC -->
+<!-- uuid: 73fb42fe-9796-4e3a-9913-f24bbea82ae0
+2015-10-21 09:37:36 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "thumbnail resource",

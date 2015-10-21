@@ -1,6 +1,6 @@
 # DirectoryRoleTemplate resource type
 
-
+Represents a directory role template. A directory role template specifies the property values of a directory role ([DirectoryRole]). There is an associated directory role template object for each of the directory roles that may be activated in a tenant. 
 
 ### JSON representation
 
@@ -28,10 +28,10 @@ Here is a JSON representation of the resource
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |deletionTimestamp|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|description|String||
-|displayName|String||
-|objectId|String| Read-only.|
-|objectType|String||
+|description|String|The description to set for the directory role.|
+|displayName|String|The display name to set for the directory role.|
+|objectId|String|The unique identifier for the template. Inherited from [DirectoryObject]. In version 1.5 and later, you specify the **objectId** of the directory role template for the **roleTemplateId** property in the POST request activate a [DirectoryRole] in a tenant.                             **Notes**: **key**, immutable, not nullable, unique.             Read-only.|
+|objectType|String|A string that identifies the object type. For role templates the value is always ΓÇ£RoleTemplateΓÇ¥. Inherited from [DirectoryObject].|
 
 ### Relationships
 None
@@ -48,8 +48,8 @@ None
 |[Get MemberGroups](../api/directoryroletemplate_getmembergroups.md)|String collection||
 |[Get MemberObjects](../api/directoryroletemplate_getmemberobjects.md)|String collection||
 
-<!-- uuid: 732074cf-1afa-45f1-bb2d-03db8a30e473
-2015-10-21 09:21:58 UTC -->
+<!-- uuid: ba673fac-9914-47aa-8f34-e6a00d6cb30a
+2015-10-21 09:37:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "DirectoryRoleTemplate resource",

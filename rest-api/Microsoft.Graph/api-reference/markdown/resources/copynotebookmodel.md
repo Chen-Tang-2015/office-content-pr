@@ -51,8 +51,8 @@ Here is a JSON representation of the resource
 |self|String||
 |userRole|String| Possible values are: `Owner`, `Contributor`, `Reader`, `None`.|
 
-<!-- uuid: f4ceb581-6ccf-43df-b70f-3f0e6d65766a
-2015-10-21 09:21:58 UTC -->
+<!-- uuid: 49121851-84da-43aa-8c5d-4bd5ded9d7c6
+2015-10-21 09:37:33 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "CopyNotebookModel resource",

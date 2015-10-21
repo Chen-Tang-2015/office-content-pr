@@ -1,6 +1,6 @@
 # ContactFolder resource type
 
-
+A folder that contains contacts.
 
 ### JSON representation
 
@@ -36,15 +36,15 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|DisplayName|String||
-|Id|String| Read-only.|
-|ParentFolderId|String||
+|DisplayName|String|The folder's display name.|
+|Id|String|Unique identifier of the contact folder. Read-only.|
+|ParentFolderId|String|The ID of the folder's parent folder.|
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|ChildFolders|[ContactFolder](contactfolder.md) collection| Read-only. Nullable.|
-|Contacts|[Contact](contact.md) collection| Read-only. Nullable.|
+|ChildFolders|[ContactFolder](contactfolder.md) collection|The collection of child folders in the folder. Navigation property. Read-only. Nullable.|
+|Contacts|[Contact](contact.md) collection|The contacts in the folder. Navigation property. Read-only. Nullable.|
 
 ### Tasks
 
@@ -56,8 +56,8 @@ Here is a JSON representation of the resource
 |[Update](../api/contactfolder_update.md) | [ContactFolder](contactfolder.md)	|Update ContactFolder object. |
 |[Delete](../api/contactfolder_delete.md) | None |Delete ContactFolder object. |
 
-<!-- uuid: 6d763b8e-9f0e-4b91-816d-571e6ceba599
-2015-10-21 09:21:58 UTC -->
+<!-- uuid: 578338b4-c7ef-494e-890b-6cdc869626f2
+2015-10-21 09:37:33 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "ContactFolder resource",

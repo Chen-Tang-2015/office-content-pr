@@ -62,8 +62,8 @@ Here is an example of the response.
 HTTP/1.1 200 OK
 ```
 
-<!-- uuid: e5eb5820-cc5e-4820-9ce2-4c487a883254
-2015-10-21 09:22:00 UTC -->
+<!-- uuid: f7700087-63e5-424a-9053-84261380f09b
+2015-10-21 09:37:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Page: PatchContent",

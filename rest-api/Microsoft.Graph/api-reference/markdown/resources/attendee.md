@@ -1,6 +1,6 @@
 # Attendee resource type
 
-
+An event attendee.
 
 ### JSON representation
 
@@ -29,12 +29,12 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|EmailAddress|[EmailAddress](emailaddress.md)||
-|Status|[ResponseStatus](responsestatus.md)||
-|Type|String| Possible values are: `Required`, `Optional`, `Resource`.|
+|EmailAddress|[EmailAddress](emailaddress.md)|The name and email address of the attendee.|
+|Status|[ResponseStatus](responsestatus.md)|The response (none, accepted, declined, etc.) and time.|
+|Type|String|The attendee type: Required = 0, Optional = 1, Resource = 2. Possible values are: `Required`, `Optional`, `Resource`.|
 
-<!-- uuid: e793f7db-4a76-49fc-8fde-a9f0d537cdd6
-2015-10-21 09:21:57 UTC -->
+<!-- uuid: 30ac9aed-2668-4987-99f8-8de7ff880852
+2015-10-21 09:37:33 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Attendee resource",

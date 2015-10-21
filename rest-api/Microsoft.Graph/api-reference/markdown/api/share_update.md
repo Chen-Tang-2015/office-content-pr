@@ -86,8 +86,8 @@ Content-length: 330
 }
 ```
 
-<!-- uuid: 74be2cc6-7981-46ba-97d1-f05e5aca84f5
-2015-10-21 09:22:01 UTC -->
+<!-- uuid: 7169a1fc-95f7-49fe-b783-0b91342a6455
+2015-10-21 09:37:36 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of share object.",

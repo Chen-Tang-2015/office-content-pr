@@ -1,6 +1,6 @@
 # identity resource type
 
-
+The Identity type represents an identity of an _actor_. For example, and actor can be a user, device, or application.  
 
 ### JSON representation
 
@@ -24,11 +24,11 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|displayName|String||
-|id|String||
+|displayName|String|The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, OneDrive may show the new value in a future response, but the items associated with the user won't show up as having changed in `view.delta`|
+|id|String|Unique identifier for the identity.|
 
-<!-- uuid: 4bcc9f09-70ce-45f8-a21d-d11e5abf2ac1
-2015-10-21 09:21:59 UTC -->
+<!-- uuid: 92c42e8b-88a4-41df-bcf5-b5176dddefba
+2015-10-21 09:37:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "identity resource",

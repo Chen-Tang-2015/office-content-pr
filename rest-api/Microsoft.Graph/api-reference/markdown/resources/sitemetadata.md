@@ -27,8 +27,8 @@ Here is a JSON representation of the resource
 |siteCollectionId|String||
 |siteId|String||
 
-<!-- uuid: 55d2cb58-353b-4820-8f98-0574d46abaae
-2015-10-21 09:22:01 UTC -->
+<!-- uuid: 19b15bcd-a57e-4fae-a819-3cd65bb44f5f
+2015-10-21 09:37:36 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "SiteMetadata resource",

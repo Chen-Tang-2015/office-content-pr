@@ -59,8 +59,8 @@ Content-length: 179
 }
 ```
 
-<!-- uuid: 48fdbabd-a00d-489c-af27-6d847c51eb0b
-2015-10-21 09:21:57 UTC -->
+<!-- uuid: 2c5f9cc1-ac0b-49e1-8f7d-c6ec5e318935
+2015-10-21 09:37:33 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Bucket",

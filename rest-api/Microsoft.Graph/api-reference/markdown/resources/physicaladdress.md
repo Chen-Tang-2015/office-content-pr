@@ -1,6 +1,6 @@
 # PhysicalAddress resource type
 
-
+The physical address of a contact.
 
 ### JSON representation
 
@@ -27,14 +27,14 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|City|String||
-|CountryOrRegion|String||
-|PostalCode|String||
-|State|String||
-|Street|String||
+|City|String|The city.|
+|CountryOrRegion|String|The country or region.|
+|PostalCode|String|The postal code.|
+|State|String|The state.|
+|Street|String|The street.|
 
-<!-- uuid: fd943ef3-5f19-46f0-9ffe-d20f7db8108c
-2015-10-21 09:22:00 UTC -->
+<!-- uuid: fd4e92ab-0a31-46ba-aaa3-0ca21fcdfd6d
+2015-10-21 09:37:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PhysicalAddress resource",

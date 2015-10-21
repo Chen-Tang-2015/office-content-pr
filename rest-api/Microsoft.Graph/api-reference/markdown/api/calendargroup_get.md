@@ -56,8 +56,8 @@ Content-length: 110
 }
 ```
 
-<!-- uuid: 5b625684-1c34-4863-854c-a554f2e7d175
-2015-10-21 09:21:57 UTC -->
+<!-- uuid: cfa8be04-30ea-4d2c-8ed8-a562094c70a3
+2015-10-21 09:37:33 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get CalendarGroup",

@@ -1,6 +1,6 @@
 # drive resource type
 
-
+The Drive resource represents a drive in OneDrive. It provides information about the owner of the drive, total and available storage space, and exposes a collection of all the [Items][item-resource] contained within the drive.  
 
 ### JSON representation
 
@@ -51,18 +51,18 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|driveType|String||
-|id|String| Read-only.|
-|owner|[identitySet](identityset.md)||
-|quota|[quota](quota.md)||
+|driveType|String|Enumerated value that identifies the type of drive account. OneDrive drives will show as `personal`.|
+|id|String|The unique identifier of the drive. Read-only.|
+|owner|[identitySet](identityset.md)|The user account that owns the drive.|
+|quota|[quota](quota.md)|Information about the drive's storage space quota.|
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|items|[item](item.md) collection| Read-only. Nullable.|
-|root|[item](item.md)| Read-only.|
+|items|[item](item.md) collection|All items contained in the drive. Read-only. Nullable.|
+|root|[item](item.md)|The root folder of the drive. Read-only.|
 |shared|[item](item.md) collection| Read-only. Nullable.|
-|special|[item](item.md) collection| Read-only. Nullable.|
+|special|[item](item.md) collection|Collection of common folders available in OneDrive. Read-only. Nullable.|
 
 ### Tasks
 
@@ -76,8 +76,8 @@ Here is a JSON representation of the resource
 |[Delete](../api/drive_delete.md) | None |Delete drive object. |
 |[Allphotos](../api/drive_allphotos.md)|[item](item.md) collection||
 
-<!-- uuid: 93a6cc73-c916-4c3d-a26c-993e6ddff988
-2015-10-21 09:21:59 UTC -->
+<!-- uuid: 8f26f2e3-5d6a-4d38-ad46-6f557b1500c3
+2015-10-21 09:37:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "drive resource",

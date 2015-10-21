@@ -26,9 +26,9 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|content|Stream||
-|contentUrl|String||
-|id|String| Read-only.|
+|content|Stream|A stream of the content of this resource. |
+|contentUrl|String|A Url to which a GET request can be sent to retrieve this resource. |
+|id|String|The unique id of this resource.  Read-only.|
 |self|String||
 
 ### Relationships
@@ -43,8 +43,8 @@ None
 |[Update](../api/resource_update.md) | [Resource](resource.md)	|Update Resource object. |
 |[Delete](../api/resource_delete.md) | None |Delete Resource object. |
 
-<!-- uuid: 6459db62-3423-4265-8c03-42f232633f5f
-2015-10-21 09:22:00 UTC -->
+<!-- uuid: 63b50db7-33a6-4200-847f-56d2e1ed6cb0
+2015-10-21 09:37:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Resource resource",

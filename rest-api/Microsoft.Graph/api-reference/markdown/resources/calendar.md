@@ -1,6 +1,6 @@
 # Calendar resource type
 
-
+A calendar which is a container for events.
 
 ### JSON representation
 
@@ -37,16 +37,16 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|ChangeKey|String||
-|Color|String| Possible values are: `LightBlue`, `LightGreen`, `LightOrange`, `LightGray`, `LightYellow`, `LightTeal`, `LightPink`, `LightBrown`, `LightRed`, `MaxColor`, `Auto`.|
-|Id|String| Read-only.|
-|Name|String||
+|ChangeKey|String|Identifies the version of the calendar object. Every time the calendar is changed, ChangeKey  changes as well. This allows Exchange to apply changes to the correct version of the object.|
+|Color|String|Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: LightBlue=0, LightGreen=1, LightOrange=2, LightGray=3, LightYellow=4, LightTeal=5, LightPink=6, LightBrown=7, LightRed=8, MaxColor=9, Auto=-1  Possible values are: `LightBlue`, `LightGreen`, `LightOrange`, `LightGray`, `LightYellow`, `LightTeal`, `LightPink`, `LightBrown`, `LightRed`, `MaxColor`, `Auto`.|
+|Id|String|The group's unique identifier. Read-only.|
+|Name|String|The calendar name.|
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|CalendarView|[Event](event.md) collection| Read-only. Nullable.|
-|Events|[Event](event.md) collection| Read-only. Nullable.|
+|CalendarView|[Event](event.md) collection|The calendar view for the calendar. Navigation property. Read-only. Nullable.|
+|Events|[Event](event.md) collection|The events in the calendar. Navigation property. Read-only. Nullable.|
 
 ### Tasks
 
@@ -58,8 +58,8 @@ Here is a JSON representation of the resource
 |[Update](../api/calendar_update.md) | [Calendar](calendar.md)	|Update Calendar object. |
 |[Delete](../api/calendar_delete.md) | None |Delete Calendar object. |
 
-<!-- uuid: d0d91450-a3ee-463d-895e-630ef2f50c9d
-2015-10-21 09:21:57 UTC -->
+<!-- uuid: a5121a4f-0b82-467d-82a8-e647ff5c78e4
+2015-10-21 09:37:33 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Calendar resource",

@@ -130,8 +130,8 @@ Content-length: 1546
 }
 ```
 
-<!-- uuid: 39e5319c-1268-442e-82d0-6e9167e2bd15
-2015-10-21 09:21:59 UTC -->
+<!-- uuid: becbbfca-f4ff-4abc-a445-b451725a9663
+2015-10-21 09:37:34 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "EventMessage: Copy",

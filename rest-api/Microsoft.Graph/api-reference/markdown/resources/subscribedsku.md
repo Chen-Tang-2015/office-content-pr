@@ -1,6 +1,6 @@
 # SubscribedSku resource type
 
-
+Only the read operation is supported on subscribed SKUs; create, update, and delete are not supported. Query filter expressions are not supported. Inherits from [DirectoryObject].
 
 ### JSON representation
 
@@ -55,8 +55,8 @@ None
 |[Update](../api/subscribedsku_update.md) | [SubscribedSku](subscribedsku.md)	|Update SubscribedSku object. |
 |[Delete](../api/subscribedsku_delete.md) | None |Delete SubscribedSku object. |
 
-<!-- uuid: 9a331a19-3724-4f13-93e4-7adaba68a9d7
-2015-10-21 09:22:01 UTC -->
+<!-- uuid: c51e238f-1088-48ce-baae-76c21dfd995b
+2015-10-21 09:37:36 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "SubscribedSku resource",

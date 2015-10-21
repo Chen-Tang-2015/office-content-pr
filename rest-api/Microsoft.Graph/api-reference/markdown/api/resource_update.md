@@ -20,8 +20,8 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|content|Stream||
-|contentUrl|String||
+|content|Stream|A stream of the content of this resource. |
+|contentUrl|String|A Url to which a GET request can be sent to retrieve this resource. |
 |self|String||
 
 ### Response
@@ -65,8 +65,8 @@ Content-length: 112
 }
 ```
 
-<!-- uuid: 8abe6e2b-e473-4390-a55c-5e849cc3d25b
-2015-10-21 09:22:00 UTC -->
+<!-- uuid: 33a07e9d-770b-4150-b2e3-914560522ee6
+2015-10-21 09:37:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of resource object.",

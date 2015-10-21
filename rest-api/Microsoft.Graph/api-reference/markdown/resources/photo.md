@@ -41,8 +41,8 @@ None
 |[Update](../api/photo_update.md) | [Photo](photo.md)	|Update Photo object. |
 |[Delete](../api/photo_delete.md) | None |Delete Photo object. |
 
-<!-- uuid: caf65b04-22a5-4944-bb63-af59bb44d99f
-2015-10-21 09:22:00 UTC -->
+<!-- uuid: 0b95e360-05c9-479f-b0bf-c99c50a89f87
+2015-10-21 09:37:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Photo resource",

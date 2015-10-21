@@ -68,8 +68,8 @@ Content-length: 391
 }
 ```
 
-<!-- uuid: ca2f1984-9b17-42ae-86d9-728d08e148df
-2015-10-21 09:22:00 UTC -->
+<!-- uuid: 5b366692-7ee7-4902-ae99-8a22855679e7
+2015-10-21 09:37:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Page",

@@ -1,6 +1,6 @@
 # CalendarGroup resource type
 
-
+A group of calendars.
 
 ### JSON representation
 
@@ -31,15 +31,15 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|ChangeKey|String||
-|ClassId|Guid||
-|Id|String| Read-only.|
-|Name|String||
+|ChangeKey|String|Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object.|
+|ClassId|Guid|The class identifier.|
+|Id|String|The group's unique identifier. Read-only.|
+|Name|String|The group name.|
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|Calendars|[Calendar](calendar.md) collection| Read-only. Nullable.|
+|Calendars|[Calendar](calendar.md) collection|The calendars in the calendar group. Navigation property. Read-only. Nullable.|
 
 ### Tasks
 
@@ -50,8 +50,8 @@ Here is a JSON representation of the resource
 |[Update](../api/calendargroup_update.md) | [CalendarGroup](calendargroup.md)	|Update CalendarGroup object. |
 |[Delete](../api/calendargroup_delete.md) | None |Delete CalendarGroup object. |
 
-<!-- uuid: 6274cd5b-b03c-47d5-99c3-2303cd29f4de
-2015-10-21 09:21:57 UTC -->
+<!-- uuid: 01252a86-82a4-48f2-9539-365d7d8b1574
+2015-10-21 09:37:33 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "CalendarGroup resource",

@@ -59,8 +59,8 @@ Content-length: 48
 }
 ```
 
-<!-- uuid: 27215bd7-0e0a-4720-983c-433ea0119652
-2015-10-21 09:22:00 UTC -->
+<!-- uuid: a7c20e8e-c34a-48f7-b471-6e6585556458
+2015-10-21 09:37:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of opentypeextension object.",

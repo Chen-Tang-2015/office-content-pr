@@ -95,8 +95,8 @@ Here is a JSON representation of the resource
 |[Forward](../api/post_forward.md)|None||
 |[Reply](../api/post_reply.md)|None||
 
-<!-- uuid: 8e65c573-500a-484d-934e-b7162408fa91
-2015-10-21 09:22:00 UTC -->
+<!-- uuid: e316683d-99a0-4fcb-bd3a-c016d6e45856
+2015-10-21 09:37:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Post resource",

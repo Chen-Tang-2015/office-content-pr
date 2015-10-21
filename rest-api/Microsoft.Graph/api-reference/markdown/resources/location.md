@@ -1,6 +1,6 @@
 # location resource type
 
-
+The location of an event.
 
 ### JSON representation
 
@@ -29,8 +29,8 @@ Here is a JSON representation of the resource
 |latitude|Double||
 |longitude|Double||
 
-<!-- uuid: afa425ac-913a-443f-9d0a-d8e1298240ee
-2015-10-21 09:21:59 UTC -->
+<!-- uuid: 7d69feb1-1853-4adb-9143-620a1d81819a
+2015-10-21 09:37:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "location resource",

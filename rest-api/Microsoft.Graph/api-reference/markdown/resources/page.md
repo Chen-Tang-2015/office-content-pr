@@ -41,19 +41,19 @@ Here is a JSON representation of the resource
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |content|Stream||
-|contentUrl|String||
-|createdByAppId|String||
-|createdTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|id|String| Read-only.|
+|contentUrl|String|The URL for the page's HTML content |
+|createdByAppId|String|The unique identifier of the application that created the page |
+|createdTime|DateTimeOffset|The date and time when the page was created in UTC format The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|id|String|The unique identifier of the page  Read-only.|
 |lastModifiedTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|links|[PageLinks](pagelinks.md)||
+|links|[PageLinks](pagelinks.md)|The oneNoteClientURL link to open the page in the OneNote native client if it 's installed, and oneNoteWebUrl to open the page in OneNote Online|
 |self|String||
-|title|String||
+|title|String|The title of the page |
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|parentNotebook|[Notebook](notebook.md)| Read-only.|
+|parentNotebook|[Notebook](notebook.md)|A page in a OneNote section  Read-only.|
 |parentSection|[Section](section.md)| Read-only.|
 
 ### Tasks
@@ -67,8 +67,8 @@ Here is a JSON representation of the resource
 |[Patchcontent](../api/page_patchcontent.md)|None||
 |[Thumbnail](../api/page_thumbnail.md)|Stream||
 
-<!-- uuid: 456ebb5c-0f83-4337-b8a2-d8bbbac3f827
-2015-10-21 09:22:00 UTC -->
+<!-- uuid: 165030ab-3cc8-4143-bb6c-2bf693a64a99
+2015-10-21 09:37:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Page resource",

@@ -1,6 +1,6 @@
 # AssignedLicense resource type
 
-
+Represents a license assigned to a user. The **assignedLicenses** property of the [User] entity is a collection of **AssignedLicense**.
 
 ### JSON representation
 
@@ -26,11 +26,11 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|disabledPlans|Guid collection||
-|skuId|Guid||
+|disabledPlans|Guid collection|A collection of the unique identifiers for plans that have been disabled.|
+|skuId|Guid|The unique identifier for the SKU.|
 
-<!-- uuid: 54487a84-a762-4e66-bd2f-a72336ec365c
-2015-10-21 09:21:57 UTC -->
+<!-- uuid: e8d4e06a-22bf-4294-9f5c-a5e06b850d5d
+2015-10-21 09:37:33 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "AssignedLicense resource",

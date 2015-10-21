@@ -1,6 +1,6 @@
 # ItemBody resource type
 
-
+The body content of a message or event.
 
 ### JSON representation
 
@@ -24,11 +24,11 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|Content|String||
-|ContentType|String| Possible values are: `Text`, `HTML`.|
+|Content|String|The text or HTML content.|
+|ContentType|String|The content type: Text = 0, HTML = 1. Possible values are: `Text`, `HTML`.|
 
-<!-- uuid: bd093532-41c2-45f3-b9f3-6814727d7ff3
-2015-10-21 09:21:59 UTC -->
+<!-- uuid: 91624909-a0cf-4a01-873d-2d5190944513
+2015-10-21 09:37:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "ItemBody resource",

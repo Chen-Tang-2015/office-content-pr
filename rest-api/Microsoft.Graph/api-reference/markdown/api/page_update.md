@@ -21,13 +21,13 @@ In the request body, supply the values for relevant fields that should be update
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |content|Stream||
-|contentUrl|String||
-|createdByAppId|String||
-|createdTime|DateTimeOffset||
+|contentUrl|String|The URL for the page's HTML content |
+|createdByAppId|String|The unique identifier of the application that created the page |
+|createdTime|DateTimeOffset|The date and time when the page was created in UTC format |
 |lastModifiedTime|DateTimeOffset||
-|links|PageLinks||
+|links|PageLinks|The oneNoteClientURL link to open the page in the OneNote native client if it 's installed, and oneNoteWebUrl to open the page in OneNote Online|
 |self|String||
-|title|String||
+|title|String|The title of the page |
 
 ### Response
 If successful, this method returns a `200 OK` response code and updated [Page](../resources/page.md) object in the response body.
@@ -94,8 +94,8 @@ Content-length: 391
 }
 ```
 
-<!-- uuid: 6d5d3a94-2427-4315-94e8-733f100ddee8
-2015-10-21 09:22:00 UTC -->
+<!-- uuid: e3f1a4c0-3f88-4345-ad2a-62943543c631
+2015-10-21 09:37:35 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of page object.",
