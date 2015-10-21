@@ -59,8 +59,8 @@ Content-length: 341
 }
 ```
 
-<!-- uuid: 7716890e-9ca9-43da-bb39-f590c822d950
-2015-10-19 10:21:26 UTC -->
+<!-- uuid: d6b8c494-98ff-4705-96bd-57fc5382fbd6
+2015-10-21 09:21:58 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create DeviceConfiguration",

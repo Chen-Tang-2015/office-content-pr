@@ -50,7 +50,7 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 638
+Content-length: 754
 
 {
   "value": [
@@ -58,6 +58,7 @@ Content-length: 638
       "createdBy": "createdBy-value",
       "assignedTo": "assignedTo-value",
       "planId": "planId-value",
+      "bucketId": "bucketId-value",
       "title": "title-value",
       "orderHint": "orderHint-value",
       "assigneePriority": "assigneePriority-value",
@@ -68,8 +69,11 @@ Content-length: 638
       "assignedBy": "assignedBy-value",
       "dueDate": "datetime-value",
       "hasNotes": true,
+      "previewType": "previewType-value",
       "completedDate": "datetime-value",
       "numberOfReferences": 99,
+      "appliedCategories": {
+      },
       "id": "id-value",
       "version": "version-value"
     }
@@ -77,8 +81,8 @@ Content-length: 638
 }
 ```
 
-<!-- uuid: e592ba76-0ada-4134-8e98-565e2f47ca60
-2015-10-19 10:21:32 UTC -->
+<!-- uuid: 4b47066b-1e19-44b9-8eaf-355b42eaa272
+2015-10-21 09:22:01 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "List Task",

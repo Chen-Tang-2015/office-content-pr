@@ -46,10 +46,11 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 139
+Content-length: 177
 
 {
   "notes": "notes-value",
+  "previewType": "previewType-value",
   "completedBy": "completedBy-value",
   "references": {
   },
@@ -58,8 +59,8 @@ Content-length: 139
 }
 ```
 
-<!-- uuid: 64fafb9b-59ff-4dd8-90f0-5a8c933fa136
-2015-10-19 10:21:32 UTC -->
+<!-- uuid: 19aa46c7-cb09-4d5c-acfa-9236d2b835eb
+2015-10-21 09:22:01 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get TaskDetails",

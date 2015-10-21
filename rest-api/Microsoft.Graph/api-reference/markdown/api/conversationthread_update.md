@@ -21,9 +21,9 @@ In the request body, supply the values for relevant fields that should be update
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |CcRecipients|Recipient||
-|DateTimeLastDelivered|DateTimeOffset||
 |HasAttachments|Boolean||
 |IsLocked|Boolean||
+|LastDeliveredDateTime|DateTimeOffset||
 |Preview|String||
 |ToRecipients|Recipient||
 |Topic|String||
@@ -54,7 +54,7 @@ Content-length: 489
   ],
   "Topic": "Topic-value",
   "HasAttachments": true,
-  "DateTimeLastDelivered": "datetime-value",
+  "LastDeliveredDateTime": "datetime-value",
   "UniqueSenders": [
     "UniqueSenders-value"
   ],
@@ -94,7 +94,7 @@ Content-length: 489
   ],
   "Topic": "Topic-value",
   "HasAttachments": true,
-  "DateTimeLastDelivered": "datetime-value",
+  "LastDeliveredDateTime": "datetime-value",
   "UniqueSenders": [
     "UniqueSenders-value"
   ],
@@ -112,8 +112,8 @@ Content-length: 489
 }
 ```
 
-<!-- uuid: e97150bf-2ec0-4ebd-9144-a3e2da66a4cf
-2015-10-19 10:21:26 UTC -->
+<!-- uuid: 7618c9e4-3293-4706-bc8d-4f3bdbc18e6d
+2015-10-21 09:21:58 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of conversationthread object.",

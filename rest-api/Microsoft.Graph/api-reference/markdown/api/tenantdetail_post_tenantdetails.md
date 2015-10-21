@@ -107,8 +107,8 @@ Content-length: 1647
 }
 ```
 
-<!-- uuid: f25b4668-9303-4589-a461-9e2745333ec1
-2015-10-19 10:21:32 UTC -->
+<!-- uuid: aea40627-37f1-4a03-952f-405f8134bdf9
+2015-10-21 09:22:01 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create TenantDetail",

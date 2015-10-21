@@ -44,7 +44,7 @@ Here is an example of the response.
 ```http
 HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 2668
+Content-length: 2708
 
 {
   "accountEnabled": true,
@@ -117,6 +117,7 @@ Content-length: 2668
   "userPrincipalName": "userPrincipalName-value",
   "userType": "userType-value",
   "MailboxGuid": "MailboxGuid-value",
+  "EmailAddress": "EmailAddress-value",
   "aboutMe": "aboutMe-value",
   "alias": "alias-value",
   "birthday": "datetime-value",
@@ -148,8 +149,8 @@ Content-length: 2668
 }
 ```
 
-<!-- uuid: 21975434-2503-4acd-8eb1-9f8b598ebbe9
-2015-10-19 10:21:32 UTC -->
+<!-- uuid: ae4b767d-38ef-48c3-b42c-b8c17a375267
+2015-10-21 09:22:01 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create User",

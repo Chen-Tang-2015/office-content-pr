@@ -8,7 +8,7 @@ The following **scopes** are required to execute this API:
 ```http
 POST /users/<objectId>/Messages/<Id>/Attachments
 POST /drive/root/createdByUser/Messages/<Id>/Attachments
-POST /users/<objectId>/Folders/<Id>/Messages/<Id>/Attachments
+POST /drive/root/lastModifiedByUser/Messages/<Id>/Attachments
 
 ```
 ### Request headers
@@ -51,13 +51,13 @@ Content-length: 162
   "ContentType": "ContentType-value",
   "Size": 99,
   "IsInline": true,
-  "DateTimeLastModified": "datetime-value",
+  "LastModifiedDateTime": "datetime-value",
   "Id": "Id-value"
 }
 ```
 
-<!-- uuid: 5e3a3e8c-a203-4a69-94cd-263136796012
-2015-10-19 10:21:29 UTC -->
+<!-- uuid: 4ed7d6bf-f309-4597-8bfb-082ab348e091
+2015-10-21 09:21:59 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Attachment",

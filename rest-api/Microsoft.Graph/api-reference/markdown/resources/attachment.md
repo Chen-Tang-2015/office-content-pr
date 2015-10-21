@@ -17,9 +17,9 @@ Here is a JSON representation of the resource
 ```json
 {
   "ContentType": "String-value",
-  "DateTimeLastModified": "String (timestamp)",
   "Id": "String-value (identifier)",
   "IsInline": true,
+  "LastModifiedDateTime": "String (timestamp)",
   "Name": "String-value",
   "Size": 1024
 }
@@ -29,9 +29,9 @@ Here is a JSON representation of the resource
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |ContentType|String||
-|DateTimeLastModified|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |Id|String| Read-only.|
 |IsInline|Boolean||
+|LastModifiedDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |Name|String||
 |Size|Int32||
 
@@ -47,8 +47,8 @@ None
 |[Update](../api/attachment_update.md) | [Attachment](attachment.md)	|Update Attachment object. |
 |[Delete](../api/attachment_delete.md) | None |Delete Attachment object. |
 
-<!-- uuid: e0f6e401-f158-42e0-8999-afc4fa61806e
-2015-10-19 10:21:25 UTC -->
+<!-- uuid: 8c9912b1-32b1-48e8-99cf-01dd98056d64
+2015-10-21 09:21:57 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Attachment resource",

@@ -20,8 +20,8 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|deletionTimestamp|DateTimeOffset|The time at which the directory object was deleted. It only applies to those directory objects which can be restored. Currently it is only supported for deleted [Application] objects; all other entities return **null** for this property.                            **Notes**: Requires version 1.5 or newer.            |
-|objectType|String|A string that identifies the object type. For example, for groups the value is always ΓÇ£GroupΓÇ¥.|
+|deletionTimestamp|DateTimeOffset||
+|objectType|String||
 
 ### Response
 If successful, this method returns a `200 OK` response code and updated [DirectoryObject](../resources/directoryobject.md) object in the response body.
@@ -62,8 +62,8 @@ Content-length: 111
 }
 ```
 
-<!-- uuid: 00ed8ca4-54fd-4590-a2aa-fe25b3d3d4b7
-2015-10-19 10:21:26 UTC -->
+<!-- uuid: 7591506d-ba9f-456e-86a8-bdb1fa7f9bcb
+2015-10-21 09:21:58 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of directoryobject object.",

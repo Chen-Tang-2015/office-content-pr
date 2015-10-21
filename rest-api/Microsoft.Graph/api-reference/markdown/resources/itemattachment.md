@@ -1,6 +1,6 @@
 # ItemAttachment resource type
 
-A message or event that's attached to another message or event.
+
 
 ### JSON representation
 
@@ -17,12 +17,12 @@ Here is a JSON representation of the resource
 ```json
 {
   "ContentType": "String-value",
-  "DateTimeLastModified": "String (timestamp)",
   "Id": "String-value (identifier)",
   "IsInline": true,
   "Item": {
     "@odata.type": "microsoft.graph.outlookitem"
   },
+  "LastModifiedDateTime": "String (timestamp)",
   "Name": "String-value",
   "Size": 1024
 }
@@ -32,9 +32,9 @@ Here is a JSON representation of the resource
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |ContentType|String||
-|DateTimeLastModified|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |Id|String| Read-only.|
 |IsInline|Boolean||
+|LastModifiedDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |Name|String||
 |Size|Int32||
 
@@ -51,8 +51,8 @@ Here is a JSON representation of the resource
 |[Update](../api/itemattachment_update.md) | [ItemAttachment](itemattachment.md)	|Update ItemAttachment object. |
 |[Delete](../api/itemattachment_delete.md) | None |Delete ItemAttachment object. |
 
-<!-- uuid: 278ad4de-25da-4059-a0f9-941dbc6be812
-2015-10-19 10:21:29 UTC -->
+<!-- uuid: b206a3ea-72e9-459b-836b-82badf09337f
+2015-10-21 09:21:59 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "ItemAttachment resource",

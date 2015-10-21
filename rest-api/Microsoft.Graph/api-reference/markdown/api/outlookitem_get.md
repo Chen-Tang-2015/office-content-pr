@@ -51,14 +51,14 @@ Content-length: 185
   "Categories": [
     "Categories-value"
   ],
-  "DateTimeCreated": "datetime-value",
-  "DateTimeLastModified": "datetime-value",
+  "CreatedDateTime": "datetime-value",
+  "LastModifiedDateTime": "datetime-value",
   "Id": "Id-value"
 }
 ```
 
-<!-- uuid: 9e9e7b79-ec63-420f-821e-e1e121e64bd0
-2015-10-19 10:21:30 UTC -->
+<!-- uuid: 9552a31e-4fed-4a69-82d7-8c7c58a88e4b
+2015-10-21 09:22:00 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get OutlookItem",

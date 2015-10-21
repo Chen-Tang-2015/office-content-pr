@@ -8,7 +8,7 @@ The following **scopes** are required to execute this API:
 ```http
 POST /users/<objectId>/Messages/<Id>/CreateReply
 POST /drive/root/createdByUser/Messages/<Id>/CreateReply
-POST /users/<objectId>/Folders/<Id>/Messages/<Id>/CreateReply
+POST /drive/root/lastModifiedByUser/Messages/<Id>/CreateReply
 
 ```
 ### Request headers
@@ -104,8 +104,8 @@ Content-length: 1546
     "ContentType": "ContentType-value",
     "Content": "Content-value"
   },
-  "DateTimeReceived": "datetime-value",
-  "DateTimeSent": "datetime-value",
+  "ReceivedDateTime": "datetime-value",
+  "SentDateTime": "datetime-value",
   "IsDeliveryReceiptRequested": true,
   "IsReadReceiptRequested": true,
   "IsDraft": true,
@@ -115,14 +115,14 @@ Content-length: 1546
   "Categories": [
     "Categories-value"
   ],
-  "DateTimeCreated": "datetime-value",
-  "DateTimeLastModified": "datetime-value",
+  "CreatedDateTime": "datetime-value",
+  "LastModifiedDateTime": "datetime-value",
   "Id": "Id-value"
 }
 ```
 
-<!-- uuid: 529d3b7c-e7e6-4996-80e9-34b39171bb73
-2015-10-19 10:21:29 UTC -->
+<!-- uuid: 85325484-7231-4cb3-b5ad-28c4bbd329f3
+2015-10-21 09:22:00 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Message: CreateReply",

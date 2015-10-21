@@ -123,14 +123,14 @@ Content-length: 1812
   "Categories": [
     "Categories-value"
   ],
-  "DateTimeCreated": "datetime-value",
-  "DateTimeLastModified": "datetime-value",
+  "CreatedDateTime": "datetime-value",
+  "LastModifiedDateTime": "datetime-value",
   "Id": "Id-value"
 }
 ```
 
-<!-- uuid: c561b002-b761-48d9-9039-7f783b40a142
-2015-10-19 10:21:28 UTC -->
+<!-- uuid: b9b04e34-26ed-464b-82b1-e35f303469e5
+2015-10-21 09:21:59 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Event",

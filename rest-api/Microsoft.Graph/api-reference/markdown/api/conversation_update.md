@@ -20,11 +20,11 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|DateTimeLastDelivered|DateTimeOffset||
-|HasAttachments|Boolean|Indicates whether the Conversation has at least one attachment.|
+|HasAttachments|Boolean||
+|LastDeliveredDateTime|DateTimeOffset||
 |Preview|String||
-|Topic|String|The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.|
-|UniqueSenders|String|All the users that sent a message to this Conversation.|
+|Topic|String||
+|UniqueSenders|String||
 
 ### Response
 If successful, this method returns a `200 OK` response code and updated [Conversation](../resources/conversation.md) object in the response body.
@@ -43,7 +43,7 @@ Content-length: 201
 {
   "Topic": "Topic-value",
   "HasAttachments": true,
-  "DateTimeLastDelivered": "datetime-value",
+  "LastDeliveredDateTime": "datetime-value",
   "UniqueSenders": [
     "UniqueSenders-value"
   ],
@@ -66,7 +66,7 @@ Content-length: 201
 {
   "Topic": "Topic-value",
   "HasAttachments": true,
-  "DateTimeLastDelivered": "datetime-value",
+  "LastDeliveredDateTime": "datetime-value",
   "UniqueSenders": [
     "UniqueSenders-value"
   ],
@@ -75,8 +75,8 @@ Content-length: 201
 }
 ```
 
-<!-- uuid: 6fdc328c-1c18-47c0-a3c5-f80da19c0cb1
-2015-10-19 10:21:26 UTC -->
+<!-- uuid: 20f4e121-46a6-432c-acfd-f2816ca59b8e
+2015-10-21 09:21:58 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of conversation object.",

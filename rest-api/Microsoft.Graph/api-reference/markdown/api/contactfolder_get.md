@@ -55,8 +55,8 @@ Content-length: 104
 }
 ```
 
-<!-- uuid: a4fa948b-c5db-4087-ae86-8e6d39328876
-2015-10-19 10:21:26 UTC -->
+<!-- uuid: dcbee4a6-d932-4b49-a2f4-80f9c2e3fde1
+2015-10-21 09:21:58 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get ContactFolder",

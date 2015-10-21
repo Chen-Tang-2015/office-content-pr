@@ -1,6 +1,6 @@
 # PatternedRecurrence resource type
 
-The recurrence pattern and range.
+
 
 ### JSON representation
 
@@ -28,11 +28,11 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|Pattern|[RecurrencePattern](recurrencepattern.md)|The frequency of an event.|
-|Range|[RecurrenceRange](recurrencerange.md)|The duration of an event.|
+|Pattern|[RecurrencePattern](recurrencepattern.md)||
+|Range|[RecurrenceRange](recurrencerange.md)||
 
-<!-- uuid: a4fcb45a-79be-4507-8cd3-c58cf64f0f12
-2015-10-19 10:21:30 UTC -->
+<!-- uuid: d8c5cb6b-66bd-433d-b09d-b20f94819e44
+2015-10-21 09:22:00 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "PatternedRecurrence resource",

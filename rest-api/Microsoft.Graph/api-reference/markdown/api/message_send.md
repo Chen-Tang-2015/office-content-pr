@@ -8,7 +8,7 @@ The following **scopes** are required to execute this API:
 ```http
 POST /users/<objectId>/Messages/<Id>/Send
 POST /drive/root/createdByUser/Messages/<Id>/Send
-POST /users/<objectId>/Folders/<Id>/Messages/<Id>/Send
+POST /drive/root/lastModifiedByUser/Messages/<Id>/Send
 
 ```
 ### Request headers
@@ -44,8 +44,8 @@ Here is an example of the response.
 HTTP/1.1 200 OK
 ```
 
-<!-- uuid: 065b1b96-88b1-4760-a554-1acd6fd2fa86
-2015-10-19 10:21:29 UTC -->
+<!-- uuid: b9740493-1839-4e8b-8602-61423024a52d
+2015-10-21 09:22:00 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Message: Send",

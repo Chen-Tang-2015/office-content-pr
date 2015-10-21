@@ -100,8 +100,8 @@ Content-length: 1975
       "ContentType": "ContentType-value",
       "Content": "Content-value"
     },
-    "DateTimeReceived": "datetime-value",
-    "DateTimeSent": "datetime-value",
+    "ReceivedDateTime": "datetime-value",
+    "SentDateTime": "datetime-value",
     "IsDeliveryReceiptRequested": true,
     "IsReadReceiptRequested": true,
     "IsDraft": true,
@@ -111,8 +111,8 @@ Content-length: 1975
     "Categories": [
       "Categories-value"
     ],
-    "DateTimeCreated": "datetime-value",
-    "DateTimeLastModified": "datetime-value",
+    "CreatedDateTime": "datetime-value",
+    "LastModifiedDateTime": "datetime-value",
     "Id": "Id-value",
     "Attachments": [
       {
@@ -120,7 +120,7 @@ Content-length: 1975
         "ContentType": "ContentType-value",
         "Size": 99,
         "IsInline": true,
-        "DateTimeLastModified": "datetime-value",
+        "LastModifiedDateTime": "datetime-value",
         "Id": "Id-value"
       }
     ]
@@ -140,8 +140,8 @@ Here is an example of the response.
 HTTP/1.1 200 OK
 ```
 
-<!-- uuid: e4d4ab5b-666d-465c-b357-c34f6bad2631
-2015-10-19 10:21:32 UTC -->
+<!-- uuid: 645898d5-f550-47df-b379-28b170d4d380
+2015-10-21 09:22:01 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "User: SendMail",

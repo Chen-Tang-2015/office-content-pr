@@ -45,7 +45,7 @@ Content-length: 1141
       "ContentType": "ContentType-value",
       "Content": "Content-value"
     },
-    "DateTimeReceived": "datetime-value",
+    "ReceivedDateTime": "datetime-value",
     "HasAttachments": true,
     "From": {
       "EmailAddress": {
@@ -73,8 +73,8 @@ Content-length: 1141
     "Categories": [
       "Categories-value"
     ],
-    "DateTimeCreated": "datetime-value",
-    "DateTimeLastModified": "datetime-value",
+    "CreatedDateTime": "datetime-value",
+    "LastModifiedDateTime": "datetime-value",
     "Id": "Id-value",
     "Attachments": [
       {
@@ -82,7 +82,7 @@ Content-length: 1141
         "ContentType": "ContentType-value",
         "Size": 99,
         "IsInline": true,
-        "DateTimeLastModified": "datetime-value",
+        "LastModifiedDateTime": "datetime-value",
         "Id": "Id-value"
       }
     ],
@@ -103,8 +103,8 @@ Here is an example of the response.
 HTTP/1.1 200 OK
 ```
 
-<!-- uuid: 36cb6533-8973-489a-915b-6f07b7c8053c
-2015-10-19 10:21:31 UTC -->
+<!-- uuid: d3f787d9-d750-4a45-a5bf-76920a8fd55f
+2015-10-21 09:22:00 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Post: Reply",

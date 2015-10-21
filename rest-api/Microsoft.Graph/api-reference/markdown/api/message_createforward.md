@@ -8,7 +8,7 @@ The following **scopes** are required to execute this API:
 ```http
 POST /users/<objectId>/Messages/<Id>/CreateForward
 POST /drive/root/createdByUser/Messages/<Id>/CreateForward
-POST /users/<objectId>/Folders/<Id>/Messages/<Id>/CreateForward
+POST /drive/root/lastModifiedByUser/Messages/<Id>/CreateForward
 
 ```
 ### Request headers
@@ -104,8 +104,8 @@ Content-length: 1546
     "ContentType": "ContentType-value",
     "Content": "Content-value"
   },
-  "DateTimeReceived": "datetime-value",
-  "DateTimeSent": "datetime-value",
+  "ReceivedDateTime": "datetime-value",
+  "SentDateTime": "datetime-value",
   "IsDeliveryReceiptRequested": true,
   "IsReadReceiptRequested": true,
   "IsDraft": true,
@@ -115,14 +115,14 @@ Content-length: 1546
   "Categories": [
     "Categories-value"
   ],
-  "DateTimeCreated": "datetime-value",
-  "DateTimeLastModified": "datetime-value",
+  "CreatedDateTime": "datetime-value",
+  "LastModifiedDateTime": "datetime-value",
   "Id": "Id-value"
 }
 ```
 
-<!-- uuid: 6b6bfa45-3d70-496d-a054-fa2cff8be08a
-2015-10-19 10:21:29 UTC -->
+<!-- uuid: 5c18b351-bf6c-4166-8e0b-290651e24337
+2015-10-21 09:22:00 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Message: CreateForward",

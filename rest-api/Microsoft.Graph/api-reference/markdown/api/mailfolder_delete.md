@@ -6,9 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-DELETE /users/<objectId>/Folders/<Id>
-DELETE /drive/root/createdByUser/Folders/<Id>
-DELETE /drive/root/lastModifiedByUser/Folders/<Id>
+DELETE /users/<objectId>/MailFolders/<Id>
+DELETE /drive/root/createdByUser/MailFolders/<Id>
+DELETE /drive/root/lastModifiedByUser/MailFolders/<Id>
 
 ```
 ### Request headers
@@ -24,8 +24,8 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: f4d1a400-d35f-4c03-aa25-f816baa13ec6
-2015-10-19 10:21:29 UTC -->
+<!-- uuid: baf93482-06af-4967-b897-f6120c6b9296
+2015-10-21 09:21:59 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Delete",

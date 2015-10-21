@@ -20,6 +20,12 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
+|category0Description|String||
+|category1Description|String||
+|category2Description|String||
+|category3Description|String||
+|category4Description|String||
+|category5Description|String||
 |sharedWith|UserIdCollection||
 |version|String||
 
@@ -35,11 +41,17 @@ Here is an example of the request.
 ```http
 PUT /plans/<id>/details
 Content-type: application/json
-Content-length: 75
+Content-length: 411
 
 {
   "sharedWith": {
   },
+  "category0Description": "category0Description-value",
+  "category1Description": "category1Description-value",
+  "category2Description": "category2Description-value",
+  "category3Description": "category3Description-value",
+  "category4Description": "category4Description-value",
+  "category5Description": "category5Description-value",
   "id": "id-value",
   "version": "version-value"
 }
@@ -54,18 +66,24 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 75
+Content-length: 411
 
 {
   "sharedWith": {
   },
+  "category0Description": "category0Description-value",
+  "category1Description": "category1Description-value",
+  "category2Description": "category2Description-value",
+  "category3Description": "category3Description-value",
+  "category4Description": "category4Description-value",
+  "category5Description": "category5Description-value",
   "id": "id-value",
   "version": "version-value"
 }
 ```
 
-<!-- uuid: 2f9ea8aa-d212-44cd-89b3-c93de220d07c
-2015-10-19 10:21:31 UTC -->
+<!-- uuid: fed9dcf7-c5ce-4f2e-a55a-277c438ab391
+2015-10-21 09:22:00 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of plandetails object.",

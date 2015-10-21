@@ -6,9 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /users/<objectId>/Folders/<Id>/Messages
-POST /drive/root/createdByUser/Folders/<Id>/Messages
-POST /drive/root/lastModifiedByUser/Folders/<Id>/Messages
+POST /users/<objectId>/MailFolders/<Id>/Messages
+POST /drive/root/createdByUser/MailFolders/<Id>/Messages
+POST /drive/root/lastModifiedByUser/MailFolders/<Id>/Messages
 
 ```
 ### Request headers
@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_message_from_mailfolder"
 }-->
 ```http
-POST /users/<objectId>/Folders/<Id>
+POST /users/<objectId>/MailFolders/<Id>
 ```
 In the request body, supply a JSON representation of [Message](../resources/message.md) object.
 ##### Response
@@ -105,8 +105,8 @@ Content-length: 1546
     "ContentType": "ContentType-value",
     "Content": "Content-value"
   },
-  "DateTimeReceived": "datetime-value",
-  "DateTimeSent": "datetime-value",
+  "ReceivedDateTime": "datetime-value",
+  "SentDateTime": "datetime-value",
   "IsDeliveryReceiptRequested": true,
   "IsReadReceiptRequested": true,
   "IsDraft": true,
@@ -116,14 +116,14 @@ Content-length: 1546
   "Categories": [
     "Categories-value"
   ],
-  "DateTimeCreated": "datetime-value",
-  "DateTimeLastModified": "datetime-value",
+  "CreatedDateTime": "datetime-value",
+  "LastModifiedDateTime": "datetime-value",
   "Id": "Id-value"
 }
 ```
 
-<!-- uuid: 76a2b6bf-b937-469d-88c8-3bdf7034be89
-2015-10-19 10:21:29 UTC -->
+<!-- uuid: 74b9a947-c42e-4fca-b099-354bc126fbbb
+2015-10-21 09:21:59 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Message",

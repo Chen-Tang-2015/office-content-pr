@@ -1,6 +1,6 @@
 # OAuth2PermissionGrant resource type
 
-Represents the OAuth 2.0 delegated permission scopes that have been granted to an application (represented by a service principal) as part of the user or admin consent process. 
+
 
 ### JSON representation
 
@@ -51,8 +51,8 @@ None
 |[Update](../api/oauth2permissiongrant_update.md) | [OAuth2PermissionGrant](oauth2permissiongrant.md)	|Update OAuth2PermissionGrant object. |
 |[Delete](../api/oauth2permissiongrant_delete.md) | None |Delete OAuth2PermissionGrant object. |
 
-<!-- uuid: 777763ca-4868-4cdd-b561-26ab46985772
-2015-10-19 10:21:29 UTC -->
+<!-- uuid: 2e489023-dacd-4f6b-8189-c98412cec856
+2015-10-21 09:22:00 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "OAuth2PermissionGrant resource",

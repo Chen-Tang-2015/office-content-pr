@@ -1,6 +1,6 @@
 # AssignedPlan resource type
 
-The **assignedPlans** property of both the [User] entity and the [TenantDetail] entity is a collection of **AssignedPlan**.
+
 
 ### JSON representation
 
@@ -26,13 +26,13 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|assignedTimestamp|DateTimeOffset|The date and time at which the plan was assigned; for example: 2013-01-02T19:32:30Z.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|capabilityStatus|String|For example, ΓÇ£EnabledΓÇ¥.|
-|service|String|The name of the service; for example, ΓÇ£AccessControlServiceS2SΓÇ¥.|
-|servicePlanId|Guid|A GUID that identifies the service plan.|
+|assignedTimestamp|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|capabilityStatus|String||
+|service|String||
+|servicePlanId|Guid||
 
-<!-- uuid: 00747ffa-1d73-403d-a5ec-8cfe72305bb2
-2015-10-19 10:21:25 UTC -->
+<!-- uuid: 624ccc35-6aa0-46c4-8cd6-35be703e351c
+2015-10-21 09:21:57 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "AssignedPlan resource",

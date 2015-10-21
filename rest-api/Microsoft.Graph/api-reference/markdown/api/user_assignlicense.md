@@ -65,7 +65,7 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 2668
+Content-length: 2708
 
 {
   "accountEnabled": true,
@@ -138,6 +138,7 @@ Content-length: 2668
   "userPrincipalName": "userPrincipalName-value",
   "userType": "userType-value",
   "MailboxGuid": "MailboxGuid-value",
+  "EmailAddress": "EmailAddress-value",
   "aboutMe": "aboutMe-value",
   "alias": "alias-value",
   "birthday": "datetime-value",
@@ -169,8 +170,8 @@ Content-length: 2668
 }
 ```
 
-<!-- uuid: d0bcdb0f-d97f-4e4f-8e4e-9e5488c56f5a
-2015-10-19 10:21:32 UTC -->
+<!-- uuid: 15eedf22-6ccc-4145-9a06-8d443d691784
+2015-10-21 09:22:01 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "User: assignLicense",

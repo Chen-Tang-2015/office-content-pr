@@ -102,8 +102,8 @@ Content-length: 1546
     "ContentType": "ContentType-value",
     "Content": "Content-value"
   },
-  "DateTimeReceived": "datetime-value",
-  "DateTimeSent": "datetime-value",
+  "ReceivedDateTime": "datetime-value",
+  "SentDateTime": "datetime-value",
   "IsDeliveryReceiptRequested": true,
   "IsReadReceiptRequested": true,
   "IsDraft": true,
@@ -113,14 +113,14 @@ Content-length: 1546
   "Categories": [
     "Categories-value"
   ],
-  "DateTimeCreated": "datetime-value",
-  "DateTimeLastModified": "datetime-value",
+  "CreatedDateTime": "datetime-value",
+  "LastModifiedDateTime": "datetime-value",
   "Id": "Id-value"
 }
 ```
 
-<!-- uuid: e49f3d8a-558f-469a-b14e-1dfb4ea8cc33
-2015-10-19 10:21:28 UTC -->
+<!-- uuid: 48261e61-6830-4c74-a8a1-60ab486106f2
+2015-10-21 09:21:59 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "EventMessage: CreateForward",

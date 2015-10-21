@@ -27,8 +27,8 @@ Here is a JSON representation of the resource
 |createdDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |lastModifiedDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 
-<!-- uuid: d28c41b6-436d-4ab8-b6a9-1da6ae33647e
-2015-10-19 10:21:28 UTC -->
+<!-- uuid: 361cf3de-5c70-4c35-9e55-e4069b164579
+2015-10-21 09:21:59 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "fileSystemInfo resource",

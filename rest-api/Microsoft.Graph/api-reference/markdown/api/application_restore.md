@@ -140,8 +140,8 @@ Content-length: 2150
 }
 ```
 
-<!-- uuid: 89e9f297-1f4c-4bae-9e2d-a797f744c9b8
-2015-10-19 10:21:25 UTC -->
+<!-- uuid: 051cc5ce-db84-4fcf-acc1-f82d487e0348
+2015-10-21 09:21:57 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Application: restore",

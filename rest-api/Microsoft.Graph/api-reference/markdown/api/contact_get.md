@@ -117,14 +117,14 @@ Content-length: 1977
   "Categories": [
     "Categories-value"
   ],
-  "DateTimeCreated": "datetime-value",
-  "DateTimeLastModified": "datetime-value",
+  "CreatedDateTime": "datetime-value",
+  "LastModifiedDateTime": "datetime-value",
   "Id": "Id-value"
 }
 ```
 
-<!-- uuid: 2ea0e46a-b1fd-4e0e-b938-0a466514701e
-2015-10-19 10:21:26 UTC -->
+<!-- uuid: 4a26c0e3-b523-4668-9c31-7469ea1eaa7b
+2015-10-21 09:21:58 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Contact",

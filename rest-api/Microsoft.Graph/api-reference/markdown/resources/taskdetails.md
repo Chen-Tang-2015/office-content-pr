@@ -19,6 +19,7 @@ Here is a JSON representation of the resource
   "completedBy": "String-value",
   "id": "String-value (identifier)",
   "notes": "String-value",
+  "previewType": "String-value",
   "references": {
     "@odata.type": "microsoft.graph.externalreferencecollection"
   },
@@ -32,6 +33,7 @@ Here is a JSON representation of the resource
 |completedBy|String||
 |id|String| Read-only.|
 |notes|String||
+|previewType|String| Possible values are: `Automatic`, `NoPreview`, `CheckList`, `Notes`, `Reference`.|
 |references|[ExternalReferenceCollection](externalreferencecollection.md)||
 |version|String||
 
@@ -47,8 +49,8 @@ None
 |[Update](../api/taskdetails_update.md) | [TaskDetails](taskdetails.md)	|Update TaskDetails object. |
 |[Delete](../api/taskdetails_delete.md) | None |Delete TaskDetails object. |
 
-<!-- uuid: 90b440a3-5f2d-454b-be86-dce49d353a23
-2015-10-19 10:21:32 UTC -->
+<!-- uuid: dceea645-241a-45a9-afa8-f3e8cf3a2875
+2015-10-21 09:22:01 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "TaskDetails resource",

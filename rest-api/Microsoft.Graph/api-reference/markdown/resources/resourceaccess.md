@@ -1,6 +1,6 @@
 # ResourceAccess resource type
 
-Specifies an OAuth 2.0 permission scope or an app role that an application requires. The **resourceAccess** property of the [RequiredResourceAccess] type is a collection of **ResourceAccess**.
+
 
 ### JSON representation
 
@@ -24,11 +24,11 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|id|Guid|The unique identifier for one of the [OAuth2Permission] or [AppRole] instances that the resource application exposes.|
-|type|String|Specifies whether the **id** property references an [OAuth2Permission] or an [AppRole]. Possible values are "scope" or "role".|
+|id|Guid||
+|type|String||
 
-<!-- uuid: 536c4bc9-70b6-4717-9a3e-fcdd40887265
-2015-10-19 10:21:31 UTC -->
+<!-- uuid: 96048542-f2fe-4077-aa49-5b46c2488168
+2015-10-21 09:22:00 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "ResourceAccess resource",

@@ -54,13 +54,13 @@ Content-length: 282
   "ContentType": "ContentType-value",
   "Size": 99,
   "IsInline": true,
-  "DateTimeLastModified": "datetime-value",
+  "LastModifiedDateTime": "datetime-value",
   "Id": "Id-value"
 }
 ```
 
-<!-- uuid: 126a4e9d-d5a3-4317-af3e-55d8a018ad7c
-2015-10-19 10:21:28 UTC -->
+<!-- uuid: 9eaf0ff0-9f3a-4005-94c2-9baf1e1bdb23
+2015-10-21 09:21:59 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get FileAttachment",

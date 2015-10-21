@@ -8,7 +8,7 @@ The following **scopes** are required to execute this API:
 ```http
 GET /tasks/<id>
 GET /plans/<id>/tasks/<id>
-GET /users/<objectId>/tasks/<id>
+GET /buckets/<id>/tasks/<id>
 ```
 ### Optional query parameters
 |Name|Value|Description|
@@ -46,12 +46,13 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 541
+Content-length: 641
 
 {
   "createdBy": "createdBy-value",
   "assignedTo": "assignedTo-value",
   "planId": "planId-value",
+  "bucketId": "bucketId-value",
   "title": "title-value",
   "orderHint": "orderHint-value",
   "assigneePriority": "assigneePriority-value",
@@ -62,15 +63,18 @@ Content-length: 541
   "assignedBy": "assignedBy-value",
   "dueDate": "datetime-value",
   "hasNotes": true,
+  "previewType": "previewType-value",
   "completedDate": "datetime-value",
   "numberOfReferences": 99,
+  "appliedCategories": {
+  },
   "id": "id-value",
   "version": "version-value"
 }
 ```
 
-<!-- uuid: 7c03f375-f641-4bf7-beec-1c84e2b8b80c
-2015-10-19 10:21:32 UTC -->
+<!-- uuid: 6fd56f7b-3715-4d27-aeeb-4bd4ee9d7472
+2015-10-21 09:22:01 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Task",

@@ -20,9 +20,9 @@ Here is a JSON representation of the resource
     "String-value"
   ],
   "ChangeKey": "String-value",
-  "DateTimeCreated": "String (timestamp)",
-  "DateTimeLastModified": "String (timestamp)",
-  "Id": "String-value (identifier)"
+  "CreatedDateTime": "String (timestamp)",
+  "Id": "String-value (identifier)",
+  "LastModifiedDateTime": "String (timestamp)"
 }
 
 ```
@@ -31,9 +31,9 @@ Here is a JSON representation of the resource
 |:---------------|:--------|:----------|
 |Categories|String collection||
 |ChangeKey|String||
-|DateTimeCreated|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|DateTimeLastModified|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|CreatedDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |Id|String| Read-only.|
+|LastModifiedDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 
 ### Relationships
 None
@@ -47,8 +47,8 @@ None
 |[Update](../api/outlookitem_update.md) | [OutlookItem](outlookitem.md)	|Update OutlookItem object. |
 |[Delete](../api/outlookitem_delete.md) | None |Delete OutlookItem object. |
 
-<!-- uuid: 1796044e-c1d3-43a9-a780-32fac9a33a9e
-2015-10-19 10:21:30 UTC -->
+<!-- uuid: d4ceb067-87b8-4388-898f-4daee311d0b8
+2015-10-21 09:22:00 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "OutlookItem resource",

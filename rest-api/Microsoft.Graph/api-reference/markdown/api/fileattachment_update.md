@@ -22,8 +22,8 @@ In the request body, supply the values for relevant fields that should be update
 |ContentId|String||
 |ContentLocation|String||
 |ContentType|String||
-|DateTimeLastModified|DateTimeOffset||
 |IsInline|Boolean||
+|LastModifiedDateTime|DateTimeOffset||
 |Name|String||
 |Size|Int32||
 
@@ -49,7 +49,7 @@ Content-length: 282
   "ContentType": "ContentType-value",
   "Size": 99,
   "IsInline": true,
-  "DateTimeLastModified": "datetime-value",
+  "LastModifiedDateTime": "datetime-value",
   "Id": "Id-value"
 }
 ```
@@ -73,13 +73,13 @@ Content-length: 282
   "ContentType": "ContentType-value",
   "Size": 99,
   "IsInline": true,
-  "DateTimeLastModified": "datetime-value",
+  "LastModifiedDateTime": "datetime-value",
   "Id": "Id-value"
 }
 ```
 
-<!-- uuid: 453e7327-aae3-4687-9e05-977fee45205a
-2015-10-19 10:21:28 UTC -->
+<!-- uuid: b51620da-e80f-4762-9cd0-ae462afbc704
+2015-10-21 09:21:59 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of fileattachment object.",

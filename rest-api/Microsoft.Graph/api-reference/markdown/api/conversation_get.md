@@ -51,7 +51,7 @@ Content-length: 201
 {
   "Topic": "Topic-value",
   "HasAttachments": true,
-  "DateTimeLastDelivered": "datetime-value",
+  "LastDeliveredDateTime": "datetime-value",
   "UniqueSenders": [
     "UniqueSenders-value"
   ],
@@ -60,8 +60,8 @@ Content-length: 201
 }
 ```
 
-<!-- uuid: 4e16c533-718f-4ae5-a7c4-2a25bb0fd7d4
-2015-10-19 10:21:26 UTC -->
+<!-- uuid: 922a382b-1c9c-4a6f-b588-a2646541c82b
+2015-10-21 09:21:58 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Conversation",

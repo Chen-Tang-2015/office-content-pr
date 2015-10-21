@@ -1,6 +1,6 @@
 # LicenseUnitsDetail resource type
 
-The **prepaidUnits** property of the [SubscribedSku] entity is of type **LicenseUnitsDetail**.
+
 
 ### JSON representation
 
@@ -25,12 +25,12 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|enabled|Int32|            |
-|suspended|Int32|            |
-|warning|Int32|            |
+|enabled|Int32||
+|suspended|Int32||
+|warning|Int32||
 
-<!-- uuid: 7cf94435-c1e5-485d-bc56-f27a54b52564
-2015-10-19 10:21:29 UTC -->
+<!-- uuid: 3d3239ba-f823-4804-8a95-716b404bfa27
+2015-10-21 09:21:59 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "LicenseUnitsDetail resource",

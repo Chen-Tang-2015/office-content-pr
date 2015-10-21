@@ -113,8 +113,8 @@ Content-length: 1546
     "ContentType": "ContentType-value",
     "Content": "Content-value"
   },
-  "DateTimeReceived": "datetime-value",
-  "DateTimeSent": "datetime-value",
+  "ReceivedDateTime": "datetime-value",
+  "SentDateTime": "datetime-value",
   "IsDeliveryReceiptRequested": true,
   "IsReadReceiptRequested": true,
   "IsDraft": true,
@@ -124,14 +124,14 @@ Content-length: 1546
   "Categories": [
     "Categories-value"
   ],
-  "DateTimeCreated": "datetime-value",
-  "DateTimeLastModified": "datetime-value",
+  "CreatedDateTime": "datetime-value",
+  "LastModifiedDateTime": "datetime-value",
   "Id": "Id-value"
 }
 ```
 
-<!-- uuid: a33ed7da-8460-4494-88fd-16e4165d3ec6
-2015-10-19 10:21:28 UTC -->
+<!-- uuid: 5807dc1a-f52b-405d-8bce-8b20d2365e07
+2015-10-21 09:21:59 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "EventMessage: Move",

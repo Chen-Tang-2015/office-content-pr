@@ -8,7 +8,7 @@ The following **scopes** are required to execute this API:
 ```http
 PATCH /users/<objectId>/Messages/<Id>
 PATCH /drive/root/createdByUser/Messages/<Id>
-PATCH /users/<objectId>/Folders/<Id>/Messages/<Id>
+PATCH /drive/root/lastModifiedByUser/Messages/<Id>
 ```
 ### Optional request headers
 | Name       | Type | Description|
@@ -27,10 +27,7 @@ In the request body, supply the values for relevant fields that should be update
 |CcRecipients|Recipient||
 |ChangeKey|String||
 |ConversationId|String||
-|DateTimeCreated|DateTimeOffset||
-|DateTimeLastModified|DateTimeOffset||
-|DateTimeReceived|DateTimeOffset||
-|DateTimeSent|DateTimeOffset||
+|CreatedDateTime|DateTimeOffset||
 |From|Recipient||
 |HasAttachments|Boolean||
 |Importance|String| Possible values are: `Low`, `Normal`, `High`.|
@@ -38,9 +35,12 @@ In the request body, supply the values for relevant fields that should be update
 |IsDraft|Boolean||
 |IsRead|Boolean||
 |IsReadReceiptRequested|Boolean||
+|LastModifiedDateTime|DateTimeOffset||
 |ParentFolderId|String||
+|ReceivedDateTime|DateTimeOffset||
 |ReplyTo|Recipient||
 |Sender|Recipient||
+|SentDateTime|DateTimeOffset||
 |Subject|String||
 |ToRecipients|Recipient||
 |UniqueBody|ItemBody||
@@ -119,8 +119,8 @@ Content-length: 1546
     "ContentType": "ContentType-value",
     "Content": "Content-value"
   },
-  "DateTimeReceived": "datetime-value",
-  "DateTimeSent": "datetime-value",
+  "ReceivedDateTime": "datetime-value",
+  "SentDateTime": "datetime-value",
   "IsDeliveryReceiptRequested": true,
   "IsReadReceiptRequested": true,
   "IsDraft": true,
@@ -130,8 +130,8 @@ Content-length: 1546
   "Categories": [
     "Categories-value"
   ],
-  "DateTimeCreated": "datetime-value",
-  "DateTimeLastModified": "datetime-value",
+  "CreatedDateTime": "datetime-value",
+  "LastModifiedDateTime": "datetime-value",
   "Id": "Id-value"
 }
 ```
@@ -206,8 +206,8 @@ Content-length: 1546
     "ContentType": "ContentType-value",
     "Content": "Content-value"
   },
-  "DateTimeReceived": "datetime-value",
-  "DateTimeSent": "datetime-value",
+  "ReceivedDateTime": "datetime-value",
+  "SentDateTime": "datetime-value",
   "IsDeliveryReceiptRequested": true,
   "IsReadReceiptRequested": true,
   "IsDraft": true,
@@ -217,14 +217,14 @@ Content-length: 1546
   "Categories": [
     "Categories-value"
   ],
-  "DateTimeCreated": "datetime-value",
-  "DateTimeLastModified": "datetime-value",
+  "CreatedDateTime": "datetime-value",
+  "LastModifiedDateTime": "datetime-value",
   "Id": "Id-value"
 }
 ```
 
-<!-- uuid: 6b6aaed5-1424-4017-ab47-df8deff82e0d
-2015-10-19 10:21:29 UTC -->
+<!-- uuid: 03ee15fb-56f0-4c36-8a39-888a55773e3a
+2015-10-21 09:21:59 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of message object.",

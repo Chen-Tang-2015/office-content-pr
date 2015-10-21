@@ -115,14 +115,14 @@ Content-length: 1977
   "Categories": [
     "Categories-value"
   ],
-  "DateTimeCreated": "datetime-value",
-  "DateTimeLastModified": "datetime-value",
+  "CreatedDateTime": "datetime-value",
+  "LastModifiedDateTime": "datetime-value",
   "Id": "Id-value"
 }
 ```
 
-<!-- uuid: d8896de0-5029-40d7-a44f-aef1c474206c
-2015-10-19 10:21:32 UTC -->
+<!-- uuid: f0d39457-33bd-4d5f-ad25-685d36c5088f
+2015-10-21 09:22:01 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Contact",

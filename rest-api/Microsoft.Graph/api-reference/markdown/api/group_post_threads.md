@@ -57,7 +57,7 @@ Content-length: 489
   ],
   "Topic": "Topic-value",
   "HasAttachments": true,
-  "DateTimeLastDelivered": "datetime-value",
+  "LastDeliveredDateTime": "datetime-value",
   "UniqueSenders": [
     "UniqueSenders-value"
   ],
@@ -75,8 +75,8 @@ Content-length: 489
 }
 ```
 
-<!-- uuid: 44a3971c-6841-4078-8ff3-23a9554be141
-2015-10-19 10:21:28 UTC -->
+<!-- uuid: 7441e030-4a75-4d7e-b2f3-da7c77a85940
+2015-10-21 09:21:59 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Create Thread",

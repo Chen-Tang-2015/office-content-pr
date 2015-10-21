@@ -46,18 +46,24 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 75
+Content-length: 411
 
 {
   "sharedWith": {
   },
+  "category0Description": "category0Description-value",
+  "category1Description": "category1Description-value",
+  "category2Description": "category2Description-value",
+  "category3Description": "category3Description-value",
+  "category4Description": "category4Description-value",
+  "category5Description": "category5Description-value",
   "id": "id-value",
   "version": "version-value"
 }
 ```
 
-<!-- uuid: f9907e79-4fcb-49bf-bc57-c3271c193457
-2015-10-19 10:21:31 UTC -->
+<!-- uuid: 7e298aed-ac4e-4202-b6ef-6a504f30b73e
+2015-10-21 09:22:00 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get PlanDetails",

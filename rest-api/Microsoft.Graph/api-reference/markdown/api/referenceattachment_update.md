@@ -19,8 +19,8 @@ In the request body, supply the values for relevant fields that should be update
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |ContentType|String||
-|DateTimeLastModified|DateTimeOffset||
 |IsInline|Boolean||
+|LastModifiedDateTime|DateTimeOffset||
 |Name|String||
 |Size|Int32||
 
@@ -43,7 +43,7 @@ Content-length: 162
   "ContentType": "ContentType-value",
   "Size": 99,
   "IsInline": true,
-  "DateTimeLastModified": "datetime-value",
+  "LastModifiedDateTime": "datetime-value",
   "Id": "Id-value"
 }
 ```
@@ -64,13 +64,13 @@ Content-length: 162
   "ContentType": "ContentType-value",
   "Size": 99,
   "IsInline": true,
-  "DateTimeLastModified": "datetime-value",
+  "LastModifiedDateTime": "datetime-value",
   "Id": "Id-value"
 }
 ```
 
-<!-- uuid: 9e2386bf-2959-4326-bbef-2788d78c369f
-2015-10-19 10:21:31 UTC -->
+<!-- uuid: 00bdd106-cd4c-468c-ace3-88b71b01716d
+2015-10-21 09:22:00 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of referenceattachment object.",

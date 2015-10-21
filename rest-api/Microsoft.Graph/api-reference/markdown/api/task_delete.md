@@ -8,7 +8,7 @@ The following **scopes** are required to execute this API:
 ```http
 DELETE /tasks/<id>
 DELETE /plans/<id>/tasks/<id>
-DELETE /users/<objectId>/tasks/<id>
+DELETE /buckets/<id>/tasks/<id>
 
 ```
 ### Request headers
@@ -24,8 +24,8 @@ Do not supply a request body for this method.
 If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
 
 
-<!-- uuid: e9482dc5-ea80-4574-b286-6eb4a987cffc
-2015-10-19 10:21:32 UTC -->
+<!-- uuid: 6973aaed-83e6-4ab3-9ea3-46b84002ec5d
+2015-10-21 09:22:01 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Delete",

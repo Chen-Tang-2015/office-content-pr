@@ -20,32 +20,32 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|audio|audio|Audio metadata, if the item is an audio file. Read-only.|
-|cTag|String|An eTag for the content of the item. This eTag is not changed if only the metadata is changed. **Note** This property is not returned if the Item is a folder. Read-only.|
-|content|Stream|The content stream, if the Item represents a file.|
-|createdBy|identitySet|Identity of the user, device, and application which created the item. Read-only.|
-|createdDateTime|DateTimeOffset|Date and time of item creation. Read-only.|
-|deleted|deleted|Information about the deleted state of the item. Read-only.|
-|description|String|Provide a user-visible description of the item. Read-write.|
-|eTag|String|eTag for the entire item (metadata + content). Read-only.|
-|file|file|File metadata, if the item is a file. Read-only.|
-|fileSystemInfo|fileSystemInfo|File system information on client. Read-write.|
-|folder|folder|Folder metadata, if the item is a folder. Read-only.|
-|image|image|Image metadata, if the item is an image. Read-only.|
-|lastModifiedBy|identitySet|Identity of the user, device, and application which last modified the item. Read-only.|
-|lastModifiedDateTime|DateTimeOffset|Date and time the item was last modified. Read-only.|
-|location|location|Location metadata, if the item has location data. Read-only.|
-|name|String|The name of the item (filename and extension). Read-write.|
+|audio|audio||
+|cTag|String||
+|content|Stream||
+|createdBy|identitySet||
+|createdDateTime|DateTimeOffset||
+|deleted|deleted||
+|description|String||
+|eTag|String||
+|file|file||
+|fileSystemInfo|fileSystemInfo||
+|folder|folder||
+|image|image||
+|lastModifiedBy|identitySet||
+|lastModifiedDateTime|DateTimeOffset||
+|location|location||
+|name|String||
 |openWith|openWithSet||
-|parentReference|itemReference|Parent information, if the item has a parent. Read-write.|
-|photo|photo|Photo metadata, if the item is a photo. Read-only.|
-|searchResult|searchResult|Search metadata, if the item is from a search result.|
+|parentReference|itemReference||
+|photo|photo||
+|searchResult|searchResult||
 |shared|shared||
-|size|Int64|Size of the item in bytes. Read-only.|
+|size|Int64||
 |specialFolder|specialFolder||
-|video|video|Video metadata, if the item is a video. Read-only.|
+|video|video||
 |webDavUrl|String||
-|webUrl|String|URL that displays the resource in the browser. Read-only.|
+|webUrl|String||
 
 ### Response
 If successful, this method returns a `200 OK` response code and updated [item](../resources/item.md) object in the response body.
@@ -358,8 +358,8 @@ Content-length: 3050
 }
 ```
 
-<!-- uuid: 2f053540-99fb-4e0b-95e6-9681e535c247
-2015-10-19 10:21:29 UTC -->
+<!-- uuid: 984298c7-7f49-47f1-bbb3-0e3682156dc0
+2015-10-21 09:21:59 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of item object.",

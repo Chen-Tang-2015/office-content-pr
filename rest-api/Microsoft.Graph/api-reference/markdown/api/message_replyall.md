@@ -8,7 +8,7 @@ The following **scopes** are required to execute this API:
 ```http
 POST /users/<objectId>/Messages/<Id>/ReplyAll
 POST /drive/root/createdByUser/Messages/<Id>/ReplyAll
-POST /users/<objectId>/Folders/<Id>/Messages/<Id>/ReplyAll
+POST /drive/root/lastModifiedByUser/Messages/<Id>/ReplyAll
 
 ```
 ### Request headers
@@ -55,8 +55,8 @@ Here is an example of the response.
 HTTP/1.1 200 OK
 ```
 
-<!-- uuid: 6534fa9e-0275-4d14-8b6a-cf5d162457c0
-2015-10-19 10:21:29 UTC -->
+<!-- uuid: d1a448eb-ae79-492b-86a0-bc47791c2631
+2015-10-21 09:22:00 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Message: ReplyAll",

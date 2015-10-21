@@ -51,8 +51,8 @@ Content-length: 22
 }
 ```
 
-<!-- uuid: 04a15814-2aae-407a-9044-47db11454a7a
-2015-10-19 10:21:28 UTC -->
+<!-- uuid: a2bdd53d-f071-43b0-8987-39b6fb5b7703
+2015-10-21 09:21:59 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Entity",

@@ -1,6 +1,6 @@
 # EmailAddress resource type
 
-The name and email address of a contact or message recipient.
+
 
 ### JSON representation
 
@@ -24,11 +24,11 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|Address|String|The email address of the person or entity.|
-|Name|String|The display name of the person or entity.|
+|Address|String||
+|Name|String||
 
-<!-- uuid: 6f8f0c65-8b11-40bf-bd56-0d7c5415f6a8
-2015-10-19 10:21:28 UTC -->
+<!-- uuid: 52360a33-897a-44ca-9785-f80574d7bdff
+2015-10-21 09:21:59 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "EmailAddress resource",

@@ -25,10 +25,7 @@ In the request body, supply the values for relevant fields that should be update
 |CcRecipients|Recipient||
 |ChangeKey|String||
 |ConversationId|String||
-|DateTimeCreated|DateTimeOffset||
-|DateTimeLastModified|DateTimeOffset||
-|DateTimeReceived|DateTimeOffset||
-|DateTimeSent|DateTimeOffset||
+|CreatedDateTime|DateTimeOffset||
 |From|Recipient||
 |HasAttachments|Boolean||
 |Importance|String| Possible values are: `Low`, `Normal`, `High`.|
@@ -36,10 +33,13 @@ In the request body, supply the values for relevant fields that should be update
 |IsDraft|Boolean||
 |IsRead|Boolean||
 |IsReadReceiptRequested|Boolean||
-|MeetingMessageType|String| The type of event message: None = 0, MeetingRequest = 1, MeetingCancelled = 2, MeetingAccepted = 3, MeetingTentativelyAccepted = 4, MeetingDeclined = 5  Possible values are: `None`, `MeetingRequest`, `MeetingCancelled`, `MeetingAccepted`, `MeetingTenativelyAccepted`, `MeetingDeclined`.|
+|LastModifiedDateTime|DateTimeOffset||
+|MeetingMessageType|String| Possible values are: `None`, `MeetingRequest`, `MeetingCancelled`, `MeetingAccepted`, `MeetingTenativelyAccepted`, `MeetingDeclined`.|
 |ParentFolderId|String||
+|ReceivedDateTime|DateTimeOffset||
 |ReplyTo|Recipient||
 |Sender|Recipient||
+|SentDateTime|DateTimeOffset||
 |Subject|String||
 |ToRecipients|Recipient||
 |UniqueBody|ItemBody||
@@ -118,8 +118,8 @@ Content-length: 1598
     "ContentType": "ContentType-value",
     "Content": "Content-value"
   },
-  "DateTimeReceived": "datetime-value",
-  "DateTimeSent": "datetime-value",
+  "ReceivedDateTime": "datetime-value",
+  "SentDateTime": "datetime-value",
   "IsDeliveryReceiptRequested": true,
   "IsReadReceiptRequested": true,
   "IsDraft": true,
@@ -129,8 +129,8 @@ Content-length: 1598
   "Categories": [
     "Categories-value"
   ],
-  "DateTimeCreated": "datetime-value",
-  "DateTimeLastModified": "datetime-value",
+  "CreatedDateTime": "datetime-value",
+  "LastModifiedDateTime": "datetime-value",
   "Id": "Id-value",
   "MeetingMessageType": "MeetingMessageType-value"
 }
@@ -206,8 +206,8 @@ Content-length: 1598
     "ContentType": "ContentType-value",
     "Content": "Content-value"
   },
-  "DateTimeReceived": "datetime-value",
-  "DateTimeSent": "datetime-value",
+  "ReceivedDateTime": "datetime-value",
+  "SentDateTime": "datetime-value",
   "IsDeliveryReceiptRequested": true,
   "IsReadReceiptRequested": true,
   "IsDraft": true,
@@ -217,15 +217,15 @@ Content-length: 1598
   "Categories": [
     "Categories-value"
   ],
-  "DateTimeCreated": "datetime-value",
-  "DateTimeLastModified": "datetime-value",
+  "CreatedDateTime": "datetime-value",
+  "LastModifiedDateTime": "datetime-value",
   "Id": "Id-value",
   "MeetingMessageType": "MeetingMessageType-value"
 }
 ```
 
-<!-- uuid: 0dd2e1e1-6029-48f2-9a5d-62b03282bfd4
-2015-10-19 10:21:28 UTC -->
+<!-- uuid: b71c3009-5e73-4cbb-a84e-6bd3d1f99794
+2015-10-21 09:21:59 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of eventmessage object.",

@@ -1,6 +1,6 @@
 # folder resource type
 
-A folder in a user's mailbox, such as Inbox, Drafts, and Sent Items. Folders can contain messages and other folders.
+
 
 ### JSON representation
 
@@ -25,8 +25,8 @@ Here is a JSON representation of the resource
 |:---------------|:--------|:----------|
 |childCount|Int32||
 
-<!-- uuid: b6c7d315-e300-45ed-80c0-0f7bb501b585
-2015-10-19 10:21:28 UTC -->
+<!-- uuid: 0938aa23-653d-4a5a-8fe9-c34d02f9b8f9
+2015-10-21 09:21:59 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "folder resource",

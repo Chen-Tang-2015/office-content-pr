@@ -1,6 +1,6 @@
 # VerifiedDomain resource type
 
-Specifies a domain for a tenant. The **verifiedDomains** property of the [TenantDetail] entity is a collection of **VerifiedDomain**.
+
 
 ### JSON representation
 
@@ -28,15 +28,15 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|capabilities|String|For example, ΓÇ£EmailΓÇ¥, ΓÇ£OfficeCommunicationsOnlineΓÇ¥.|
-|default|Boolean|                **true** if this is the default domain associated with the tenant; otherwise, **false**.            |
-|id|String|For example, ΓÇ£00057FFE80187238ΓÇ¥.|
-|initial|Boolean|            |
-|name|String|The domain name; for example, ΓÇ£contoso.onmicrosoft.comΓÇ¥|
-|type|String|For example, ΓÇ£ManagedΓÇ¥.|
+|capabilities|String||
+|default|Boolean||
+|id|String||
+|initial|Boolean||
+|name|String||
+|type|String||
 
-<!-- uuid: c19452d4-84fd-40d4-96bd-203dd72ed85a
-2015-10-19 10:21:32 UTC -->
+<!-- uuid: 9bad5a84-acb1-4735-bf29-d2f78cf59eb5
+2015-10-21 09:22:01 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "VerifiedDomain resource",

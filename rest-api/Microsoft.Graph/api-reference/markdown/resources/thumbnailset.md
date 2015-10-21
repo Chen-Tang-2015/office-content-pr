@@ -1,6 +1,6 @@
 # thumbnailSet resource type
 
-The ThumbnailSet type is a keyed collection of [Thumbnail](thumbnail.md) objects. It is used to represent a set of thumbnails associated with a single file on OneDrive.  
+
 
 ### JSON representation
 
@@ -35,11 +35,11 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|id|String|The id within the item. Read-only.|
-|large|[thumbnail](thumbnail.md)|A 1920x1920 scaled thumbnail.|
-|medium|[thumbnail](thumbnail.md)|A 176x176 scaled thumbnail.|
-|small|[thumbnail](thumbnail.md)|A 48x48 cropped thumbnail.|
-|source|[thumbnail](thumbnail.md)|A custom thumbnail image or the original image used to generate other thumbnails.|
+|id|String| Read-only.|
+|large|[thumbnail](thumbnail.md)||
+|medium|[thumbnail](thumbnail.md)||
+|small|[thumbnail](thumbnail.md)||
+|source|[thumbnail](thumbnail.md)||
 
 ### Relationships
 None
@@ -53,8 +53,8 @@ None
 |[Update](../api/thumbnailset_update.md) | [thumbnailSet](thumbnailset.md)	|Update thumbnailSet object. |
 |[Delete](../api/thumbnailset_delete.md) | None |Delete thumbnailSet object. |
 
-<!-- uuid: c13d3da9-caf7-401f-8790-da6ca8887268
-2015-10-19 10:21:32 UTC -->
+<!-- uuid: 59c1a343-2c46-4c7c-b3d8-167fd6936fe2
+2015-10-21 09:22:01 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "thumbnailSet resource",

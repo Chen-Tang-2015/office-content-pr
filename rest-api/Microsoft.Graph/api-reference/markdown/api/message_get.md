@@ -8,7 +8,7 @@ The following **scopes** are required to execute this API:
 ```http
 GET /users/<objectId>/Messages/<Id>
 GET /drive/root/createdByUser/Messages/<Id>
-GET /users/<objectId>/Folders/<Id>/Messages/<Id>
+GET /drive/root/lastModifiedByUser/Messages/<Id>
 ```
 ### Optional query parameters
 |Name|Value|Description|
@@ -107,8 +107,8 @@ Content-length: 1546
     "ContentType": "ContentType-value",
     "Content": "Content-value"
   },
-  "DateTimeReceived": "datetime-value",
-  "DateTimeSent": "datetime-value",
+  "ReceivedDateTime": "datetime-value",
+  "SentDateTime": "datetime-value",
   "IsDeliveryReceiptRequested": true,
   "IsReadReceiptRequested": true,
   "IsDraft": true,
@@ -118,14 +118,14 @@ Content-length: 1546
   "Categories": [
     "Categories-value"
   ],
-  "DateTimeCreated": "datetime-value",
-  "DateTimeLastModified": "datetime-value",
+  "CreatedDateTime": "datetime-value",
+  "LastModifiedDateTime": "datetime-value",
   "Id": "Id-value"
 }
 ```
 
-<!-- uuid: ce6f806b-942c-4e8d-acb4-b06c5783bd65
-2015-10-19 10:21:29 UTC -->
+<!-- uuid: 4acfa96b-90f4-476d-aede-7e2fcb6e223f
+2015-10-21 09:21:59 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Message",

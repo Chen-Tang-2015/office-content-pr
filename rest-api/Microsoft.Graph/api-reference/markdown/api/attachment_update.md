@@ -21,8 +21,8 @@ In the request body, supply the values for relevant fields that should be update
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |ContentType|String||
-|DateTimeLastModified|DateTimeOffset||
 |IsInline|Boolean||
+|LastModifiedDateTime|DateTimeOffset||
 |Name|String||
 |Size|Int32||
 
@@ -45,7 +45,7 @@ Content-length: 162
   "ContentType": "ContentType-value",
   "Size": 99,
   "IsInline": true,
-  "DateTimeLastModified": "datetime-value",
+  "LastModifiedDateTime": "datetime-value",
   "Id": "Id-value"
 }
 ```
@@ -66,13 +66,13 @@ Content-length: 162
   "ContentType": "ContentType-value",
   "Size": 99,
   "IsInline": true,
-  "DateTimeLastModified": "datetime-value",
+  "LastModifiedDateTime": "datetime-value",
   "Id": "Id-value"
 }
 ```
 
-<!-- uuid: 712eb41d-f76f-4a01-b6c2-366649838e75
-2015-10-19 10:21:25 UTC -->
+<!-- uuid: 63afb183-2038-4f66-8ad4-95abb0699ed5
+2015-10-21 09:21:57 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of attachment object.",
