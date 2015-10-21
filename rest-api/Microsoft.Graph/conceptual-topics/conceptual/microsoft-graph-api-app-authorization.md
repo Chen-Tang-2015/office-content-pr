@@ -48,6 +48,7 @@ At the protocol level, authorizing an app starts from submitting an HTTPS GET re
 ```GET https://login.microsoftonline.com/common/oauth2/authorize?response_type=code&redirect_uri=<uri>&client_id=<id>&resource=https%3A%2F%2Fgraph.microsoft.com%2F```
 
 ** Required query string parameters**
+
 | Parameter name  | Value  | Description                                                                                            |
 |:----------------|:-------|:-------------------------------------------------------------------------------------------------------|
 | *client_id*     | string | The client ID created for your app.                                                                    |
