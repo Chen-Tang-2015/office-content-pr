@@ -47,7 +47,7 @@ At the protocol level, authorizing an app starts from submitting an HTTPS GET re
  
 ```GET https://login.microsoftonline.com/common/oauth2/authorize?response_type=code&redirect_uri=<uri>&client_id=<id>&resource=https%3A%2F%2Fgraph.microsoft.com%2F```
 
-** Required query string parameters**
+**Required query string parameters**
 
 | Parameter name  | Value  | Description                                                                                            |
 |:----------------|:-------|:-------------------------------------------------------------------------------------------------------|
@@ -63,6 +63,13 @@ The following shows an example of such a request as implemented in a running app
 
 ```GET https://login.microsoftonline.com/common/oauth2/authorize?response_type=code&redirect_uri=http%3a%2f%2flocalhost:1339/auth/azureoauth/callback&client_id=8b8539cd-7b75-427f-bef1-4a6264fd4940``` 
 
+**Required query string parameters**
+
+| Parameter name  | Value  | Description                                                                                            |
+|:----------------|:-------|:-------------------------------------------------------------------------------------------------------|
+| *client_id*     | string | The client ID created for your app.                                                                    |
+| *response_type* | string | Specifies the requested response type. In an authorization code grant request, the value must be code. |
+| *redirect_uri*  | string | The redirect URL that the browser is sent to when authentication is complete.                          |
 
 This request returns a `200 OK` response to bring up the Azure Active Directory account login page. After the user supplied his or her valid credentials 
 and consents to the permissions granted for the app, the login page sends a `POST` of the following format:
@@ -133,12 +140,21 @@ grant_type=authorization_code
 &code=<code>
 &resource=https%3A%2F%2Fgraph.microsoft.com%2F
 ```
- 
+
+**Required query string parameters**
+
+| Parameter name  | Value  | Description                                                                                            |
+|:----------------|:-------|:-------------------------------------------------------------------------------------------------------|
+| *client_id*     | string | The client ID created for your app.  |
+| *client_secret*  | string | The key created for your app.|
+| *redirect_uri*  | string | The redirect URL that the browser is sent to when authentication is complete.  |
+| *code*  | string | The authorization code.  |
+
 Here, `redirect_uri=<uri>` and `client_id=<id>` are of the same as in the authorization request. `<secret_key>` stands for 
 the secret key of the app shown under the **Keys** section of the app's configuration page on the Azure Management Portal. 
 `<code>` stands for the `code` query parameter value returned from the response to the authorization request, shown above 
  in the previous section. Finally, `resource` identifies a service that will use the returned access token to authenticate the 
-app. To use Office 365 unified API, set this parameter value to "https://graph.microsoft.com/". 
+app. To use the API, set this parameter value to "https://graph.microsoft.com/". 
 The payload must be URL encoded. Make sure to set the `content-type` header as shown. 
  
 The following snippet shows an example of the request payload used to acquire the initial OAuth 2.0 access token:
