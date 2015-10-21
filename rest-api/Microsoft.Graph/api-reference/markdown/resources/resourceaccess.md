@@ -27,8 +27,8 @@ Here is a JSON representation of the resource
 |id|Guid|The unique identifier for one of the [OAuth2Permission] or [AppRole] instances that the resource application exposes.|
 |type|String|Specifies whether the **id** property references an [OAuth2Permission] or an [AppRole]. Possible values are "scope" or "role".|
 
-<!-- uuid: 325cd370-bb9d-41c3-97ac-4f65ea8d4122
-2015-10-21 09:37:35 UTC -->
+<!-- uuid: 57e02da2-b862-4b2f-836a-c2a183fcf46b
+2015-10-21 09:49:44 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "ResourceAccess resource",

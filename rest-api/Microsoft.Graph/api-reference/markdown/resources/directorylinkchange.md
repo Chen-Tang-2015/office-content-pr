@@ -58,8 +58,8 @@ None
 |[Get MemberGroups](../api/directorylinkchange_getmembergroups.md)|String collection||
 |[Get MemberObjects](../api/directorylinkchange_getmemberobjects.md)|String collection||
 
-<!-- uuid: a55b31a6-757c-4ff5-bff6-a19d14e75d8c
-2015-10-21 09:37:33 UTC -->
+<!-- uuid: 57e02da2-b862-4b2f-836a-c2a183fcf46b
+2015-10-21 09:49:44 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "DirectoryLinkChange resource",

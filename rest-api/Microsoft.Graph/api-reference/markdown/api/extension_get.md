@@ -53,8 +53,8 @@ Content-length: 22
 }
 ```
 
-<!-- uuid: 732b442e-0b5a-46f2-afc8-bd8c0cbc574d
-2015-10-21 09:37:34 UTC -->
+<!-- uuid: 57e02da2-b862-4b2f-836a-c2a183fcf46b
+2015-10-21 09:49:44 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Get Extension",

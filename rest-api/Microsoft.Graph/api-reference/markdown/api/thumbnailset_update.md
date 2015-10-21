@@ -108,8 +108,8 @@ Content-length: 456
 }
 ```
 
-<!-- uuid: ea73f6b7-b48c-42ce-8908-a551f80aeea0
-2015-10-21 09:37:36 UTC -->
+<!-- uuid: 57e02da2-b862-4b2f-836a-c2a183fcf46b
+2015-10-21 09:49:44 UTC -->
 <!-- {
   "type": "#page.annotation",
   "description": "Update the properties of thumbnailset object.",
