@@ -149,6 +149,7 @@ grant_type=authorization_code
 | *client_secret*  | string | The key created for your app.|
 | *redirect_uri*  | string | The redirect URL that the browser is sent to when authentication is complete.  |
 | *code*  | string | The authorization code.  |
+| *resource*   | string | The resource you want to access. |
 
 Here, `redirect_uri=<uri>` and `client_id=<id>` are of the same as in the authorization request. `<secret_key>` stands for 
 the secret key of the app shown under the **Keys** section of the app's configuration page on the Azure Management Portal. 
@@ -239,14 +240,16 @@ grant_type=refresh_token
 &resource=https%3A%2F%2Fgraph.microsoft.com%2F
 ```
 
+**Required query string parameters**
+
 | Parameter name  | Value  | Description                                                                                                                                         |
 |:----------------|:-------|:----------------------------------------------------------------------------------------------------------------------------------------------------|
-| *client_id*     | string | The client ID created for your application.                                                                                                         |
+| *client_id*     | string | The client ID created for your application.  |
 | *redirect_uri*  | string | The redirect URL that the browser is sent to when authentication is complete. This should match the *redirect_uri* value used in the first request. |
 | *client_secret* | string | One of the Keys values created for your application.                                                                                                     |
-| *refresh_token* | string | The refresh token you received previously.                                                                                                          |
-| *resource_id*   | string | The resource you want to access. This should be the previously discovered **serviceResourceId** value. 
- 
+| *refresh_token* | string | The refresh token you received previously.    |
+| *resource*   | string | The resource you want to access. |
+
 Note that this request is almost identical to the initial token acquisition request. There are two differences in the request payload, 
 namely, the `grant_type` parameter now has the value of `refresh_token` (instead of `code`) and the `code` parameter is replaced by 
 the `refresh_token` parameter. The value of this `refresh_token` parameter is the currently valid (not expired) refresh token. 
