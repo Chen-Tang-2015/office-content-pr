@@ -238,6 +238,14 @@ grant_type=refresh_token
 &refresh_token=AAABAAAAvPM1KaPlrEqdFSBzjqfTGM74--...
 &resource=https%3A%2F%2Fgraph.microsoft.com%2F
 ```
+
+| Parameter name  | Value  | Description                                                                                                                                         |
+|:----------------|:-------|:----------------------------------------------------------------------------------------------------------------------------------------------------|
+| *client_id*     | string | The client ID created for your application.                                                                                                         |
+| *redirect_uri*  | string | The redirect URL that the browser is sent to when authentication is complete. This should match the *redirect_uri* value used in the first request. |
+| *client_secret* | string | One of the Keys values created for your application.                                                                                                     |
+| *refresh_token* | string | The refresh token you received previously.                                                                                                          |
+| *resource_id*   | string | The resource you want to access. This should be the previously discovered **serviceResourceId** value. 
  
 Note that this request is almost identical to the initial token acquisition request. There are two differences in the request payload, 
 namely, the `grant_type` parameter now has the value of `refresh_token` (instead of `code`) and the `code` parameter is replaced by 
