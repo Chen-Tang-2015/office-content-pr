@@ -4,7 +4,7 @@
  
 _**Applies to:** Office 365_
  
-Your feedback is important to us. Connect with us on [Stack Overflow](http://stackoverflow.com/questions/tagged/office365). Tag your questions with [office365].
+>  Your feedback is important to us. Connect with us on [Stack Overflow](http://stackoverflow.com/questions/tagged/office365). Tag your questions with [office365].
 
 **In this article**
   
@@ -13,14 +13,20 @@ Your feedback is important to us. Connect with us on [Stack Overflow](http://sta
 
 
 <a name="msg_what_is_unified_api"> </a>
-## Overview of Microsoft Graph API?
+## Overview of Microsoft Graph API
     
-The Microsoft Graph API exposes multiple APIs from Microsoft cloud services through a single REST API endpoint.  By using the Office 365 unified API, you can turn your formerly difficult or complex queries into simple navigations. The API exposes information about productivity entities and the relationships among them, to enable rich navigation in data through one REST URL namespace (https://graph.microsoft.com), using one authentication and authorization system, and using a consistent and unified metadata, payload format, error handling, library, and more.
+The Microsoft Graph API exposes multiple APIs from Microsoft cloud services through a single REST API endpoint.  
 
-<!--It takes information that is stored or inferred across multiple cloud services: 
+The API exposes information about productivity entities and the relationships among them, to enable rich navigation in data. By using the Microsoft Graph API, you can turn your formerly difficult or complex queries into simple navigations.  It takes information that is stored or inferred across multiple cloud services: 
 -	exposing them through one REST URL namespace. The unifying URL namespace is _https://_**graph.microsoft.com**
 -	using one authentication and authorization system
--	using a consistent and unified metadata, payload format, error handling, library, and more -->
+-	using a consistent and unified metadata, payload format, error handling, library, and more
+
+<!-- through one REST URL namespace (https://graph.microsoft.com), using one authentication and authorization system, and using a consistent and unified metadata, payload format, error handling, library, and more.  -->
+
+
+
+## Calling Office 365 APIs vs Microsoft Graph API
 
 For example, let's say you want to programmatically retrieve a user's files, profile picture, and find the manager of the person who last edited that file in your organization. Because the information is stored in  multiple services-Azure Active Directory, SharePoint, and Exchange-the task involves multiple steps using Office 365 APIs: 
 
