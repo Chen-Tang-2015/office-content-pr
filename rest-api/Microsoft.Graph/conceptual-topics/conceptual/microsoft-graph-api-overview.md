@@ -15,20 +15,28 @@ _**Applies to:** Office 365_
 <a name="msg_what_is_unified_api"> </a>
 ## Overview of Microsoft Graph API
     
-The Microsoft Graph API exposes multiple APIs from Microsoft cloud services through a single REST API endpoint.  
+The Microsoft Graph API exposes multiple APIs from Microsoft cloud services through a single REST API endpoint.  The unifying URL namespace is _https://_**graph.microsoft.com**
 
-The API exposes information about productivity entities and the relationships among them, to enable rich navigation in data. By using the Microsoft Graph API, you can turn your formerly difficult or complex queries into simple navigations.  It takes information that is stored or inferred across multiple cloud services: 
+The API exposes information about productivity entities and the relationships among them, to enable rich navigation in data using:
+-	one authentication and authorization system
+-	a consistent and unified metadata, payload format, error handling, library, and more
+
+You can turn your formerly difficult or complex queries into simple navigations.
+
+one authentication and authorization system, and a consistent and unified metadata, payload format, error handling, library, and more. By using the Microsoft Graph API, you can turn your formerly difficult or complex queries into simple navigations.  
+<!-- 
+It takes information that is stored or inferred across multiple cloud services: 
 -	exposing them through one REST URL namespace. The unifying URL namespace is _https://_**graph.microsoft.com**
 -	using one authentication and authorization system
 -	using a consistent and unified metadata, payload format, error handling, library, and more
 
-<!-- through one REST URL namespace (https://graph.microsoft.com), using one authentication and authorization system, and using a consistent and unified metadata, payload format, error handling, library, and more.  -->
+through one REST URL namespace (https://graph.microsoft.com), using one authentication and authorization system, and using a consistent and unified metadata, payload format, error handling, library, and more.  -->
 
 
 
 ## Calling Office 365 APIs vs Microsoft Graph API
 
-For example, let's say you want to programmatically retrieve a user's files, profile picture, and find the manager of the person who last edited that file in your organization. Because the information is stored in  multiple services-Azure Active Directory, SharePoint, and Exchange-the task involves multiple steps using Office 365 APIs: 
+Let's say you want to programmatically retrieve a user's files, profile picture, and find the manager of the person who last edited that file in your organization. Because the information is stored in  multiple services-Azure Active Directory, SharePoint, and Exchange-the task involves multiple steps using Office 365 APIs: 
 
 1. Use the Discovery Service to find the various service endpoints 
 2. Determine the URL of the services your Office 365 apps want to connect to
@@ -46,27 +54,32 @@ The following diagram shows the Microsoft Graph API developer stack and how it w
 
 
 <a name="msg_how_learn_unified_api"> </a>
-## Learn more about Office 365 unified API development
+## Learn more about Microsoft Graph API development
 
 The following resources can help you get started:
 
-**Develop an app using Office 365 unified API**
+**Develop an app using Microsoft Graph API**
 
+-  [Get started with the Microsoft Graph API](\microsoft-graph-api-FAQs.md) 
+-  [Microsoft Graph API FAQs](\microsoft-graph-api-FAQs.md) 
+-  [Authorization Code Grant Flow](https://msdn.microsoft.com/en-us/library/azure/dn645542.aspx)
+
+<!--
 -  [Get started with the Office 365 unified API (preview)](..\howto\get-started-with-office-365-unified-api.md) 
 -  [Office 365 unified API in depth (preview)](..\howto\office-365-unified-api-in-depth.md) 
 -  [Examples of Office 365 unified API calls (preview)](..\howto\examples-of-office-365-unified-api-calls.md) 
 -  [Develop with the Office graph](https://msdn.microsoft.com/office/office365/howto/develop-office-graph)
 -  [Cross-origin resource sharing (CORS) support](..\howto\create-web-apps-using-CORS-to-access-files-in-Office-365.md) 
--  [Authorization Code Grant Flow](https://msdn.microsoft.com/en-us/library/azure/dn645542.aspx)
+ -->
+ 
+**Try out and explore the Microsoft Graph API**
 
-**Try out and explore the Office 365 unified API**
-
--  [Office 365 unified API Explorer](https://graphexplorer2.azurewebsites.net/) 
+-  [Microsoft Graph API Explorer](https://graphexplorer2.azurewebsites.net/) 
 -  [API Sandbox](http://apisandbox.msdn.com)
 
 **Hands on lab**
 
--  [Deep dive into the Office 365 unified API](http://dev.office.com/hands-on-labs/4585)
+-  [Deep dive into the Microsoft Graph API](http://dev.office.com/hands-on-labs/4585)
 
 **Code samples**
 
@@ -78,7 +91,7 @@ The following resources can help you get started:
 
 **Release notes and known issues for Office 365 unified API**
 
--  [Office 365 REST API release notes for April 2015](..\howto\office-365-rest-api-release-notes.md)
+-  [Microsoft Graph API release notes for November 2015](\microsoft-graph-api-release-notes-known-issues.md)
 
 **Reference**
 
