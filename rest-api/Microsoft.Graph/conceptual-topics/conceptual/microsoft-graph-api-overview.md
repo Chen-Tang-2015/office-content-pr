@@ -11,10 +11,9 @@ _**Applies to:** Office 365_
 -	[Overview of Microsoft Graph API](#msg_what_is_unified_api) 
 -	[Learn more about  Microsoft Graph API development](#msg_how_learn_unified_api) 
 
-
 <a name="msg_what_is_unified_api"> </a>
 ## Overview of Microsoft Graph API
-    
+
 The Microsoft Graph API exposes multiple APIs from Microsoft cloud services through a single REST API endpoint.  The unifying URL namespace is _https://_**graph.microsoft.com**
 
 The API exposes information about productivity entities and the relationships among them, to enable rich navigation in data using:
