@@ -16,9 +16,7 @@ _**Applies to:** Office 365_
 
 The Microsoft Graph API exposes multiple APIs from Microsoft cloud services through a single REST API endpoint.  The unifying URL namespace is _https://_**graph.microsoft.com**
 
-The API exposes information about productivity entities and the relationships among them, to enable rich navigation in data using:
--	one authentication and authorization system
--	a consistent and unified metadata, payload format, error handling, library, and more
+The API exposes information about productivity entities and the relationships among them, to enable rich navigation in data using	one authentication and authorization system and a consistent and unified metadata, payload format, error handling, library, and more.
 
 You can turn your formerly difficult or complex queries into simple navigations.
 
