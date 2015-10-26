@@ -1,0 +1,248 @@
+# Update event
+
+Update the properties of event object.
+### Prerequisites
+The following **scopes** are required to execute this API: 
+### HTTP request
+<!-- { "blockType": "ignored" } -->
+```http
+PATCH /users/<objectId>/Events/<Id>
+PATCH /groups/<objectId>/Events/<Id>
+PATCH /users/<objectId>/CalendarView/<Id>
+```
+### Optional request headers
+| Name       | Type | Description|
+|:-----------|:------|:----------|
+| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+
+### Request body
+In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
+
+| Property	   | Type	|Description|
+|:---------------|:--------|:----------|
+|Attendees|Attendee||
+|Body|ItemBody||
+|BodyPreview|String||
+|Categories|String||
+|ChangeKey|String||
+|CreatedDateTime|DateTimeOffset||
+|End|DateTimeOffset||
+|EndTimeZone|String||
+|HasAttachments|Boolean||
+|Importance|String| Possible values are: `Low`, `Normal`, `High`.|
+|IsAllDay|Boolean||
+|IsCancelled|Boolean||
+|IsOrganizer|Boolean||
+|LastModifiedDateTime|DateTimeOffset||
+|Location|Location||
+|Organizer|Recipient||
+|OriginalStart|DateTimeOffset||
+|Recurrence|PatternedRecurrence||
+|Reminder|Int32||
+|ResponseRequested|Boolean||
+|ResponseStatus|ResponseStatus||
+|SeriesMasterId|String||
+|ShowAs|String| Possible values are: `Free`, `Tentative`, `Busy`, `Oof`, `WorkingElsewhere`, `Unknown`.|
+|Start|DateTimeOffset||
+|StartTimeZone|String||
+|Subject|String||
+|Type|String| Possible values are: `SingleInstance`, `Occurrence`, `Exception`, `SeriesMaster`.|
+|WebLink|String||
+|iCalUId|String||
+
+### Response
+If successful, this method returns a `200 OK` response code and updated [Event](../resources/event.md) object in the response body.
+### Example
+##### Request
+Here is an example of the request.
+<!-- {
+  "blockType": "request",
+  "name": "update_event"
+}-->
+```http
+PUT https://graph.microsoft.com/v1.0/users/<objectId>/Events/<Id>
+Content-type: application/json
+Content-length: 1812
+
+{
+  "Subject": "Subject-value",
+  "Body": {
+    "ContentType": "ContentType-value",
+    "Content": "Content-value"
+  },
+  "BodyPreview": "BodyPreview-value",
+  "Importance": "Importance-value",
+  "HasAttachments": true,
+  "Start": "datetime-value",
+  "StartTimeZone": "StartTimeZone-value",
+  "End": "datetime-value",
+  "EndTimeZone": "EndTimeZone-value",
+  "Reminder": 99,
+  "Location": {
+    "altitude": 99,
+    "latitude": 99,
+    "longitude": 99
+  },
+  "ShowAs": "ShowAs-value",
+  "ResponseStatus": {
+    "Response": "Response-value",
+    "Time": "datetime-value"
+  },
+  "IsAllDay": true,
+  "IsCancelled": true,
+  "IsOrganizer": true,
+  "ResponseRequested": true,
+  "Type": "Type-value",
+  "SeriesMasterId": "SeriesMasterId-value",
+  "Attendees": [
+    {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      },
+      "Status": {
+        "Response": "Response-value",
+        "Time": "datetime-value"
+      },
+      "Type": "Type-value"
+    }
+  ],
+  "Recurrence": {
+    "Pattern": {
+      "Type": "Type-value",
+      "Interval": 99,
+      "Month": 99,
+      "DayOfMonth": 99,
+      "DaysOfWeek": [
+        "DaysOfWeek-value"
+      ],
+      "FirstDayOfWeek": "FirstDayOfWeek-value",
+      "Index": "Index-value"
+    },
+    "Range": {
+      "Type": "Type-value",
+      "StartDate": "datetime-value",
+      "EndDate": "datetime-value",
+      "NumberOfOccurrences": 99
+    }
+  },
+  "Organizer": {
+    "EmailAddress": {
+      "Name": "Name-value",
+      "Address": "Address-value"
+    }
+  },
+  "iCalUId": "iCalUId-value",
+  "WebLink": "WebLink-value",
+  "OriginalStart": "datetime-value",
+  "ChangeKey": "ChangeKey-value",
+  "Categories": [
+    "Categories-value"
+  ],
+  "CreatedDateTime": "datetime-value",
+  "LastModifiedDateTime": "datetime-value",
+  "Id": "Id-value"
+}
+```
+##### Response
+Here is an example of the response.
+<!-- {
+  "blockType": "response",
+  "truncated": false,
+  "@odata.type": "microsoft.graph.event"
+} -->
+```http
+HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 1812
+
+{
+  "Subject": "Subject-value",
+  "Body": {
+    "ContentType": "ContentType-value",
+    "Content": "Content-value"
+  },
+  "BodyPreview": "BodyPreview-value",
+  "Importance": "Importance-value",
+  "HasAttachments": true,
+  "Start": "datetime-value",
+  "StartTimeZone": "StartTimeZone-value",
+  "End": "datetime-value",
+  "EndTimeZone": "EndTimeZone-value",
+  "Reminder": 99,
+  "Location": {
+    "altitude": 99,
+    "latitude": 99,
+    "longitude": 99
+  },
+  "ShowAs": "ShowAs-value",
+  "ResponseStatus": {
+    "Response": "Response-value",
+    "Time": "datetime-value"
+  },
+  "IsAllDay": true,
+  "IsCancelled": true,
+  "IsOrganizer": true,
+  "ResponseRequested": true,
+  "Type": "Type-value",
+  "SeriesMasterId": "SeriesMasterId-value",
+  "Attendees": [
+    {
+      "EmailAddress": {
+        "Name": "Name-value",
+        "Address": "Address-value"
+      },
+      "Status": {
+        "Response": "Response-value",
+        "Time": "datetime-value"
+      },
+      "Type": "Type-value"
+    }
+  ],
+  "Recurrence": {
+    "Pattern": {
+      "Type": "Type-value",
+      "Interval": 99,
+      "Month": 99,
+      "DayOfMonth": 99,
+      "DaysOfWeek": [
+        "DaysOfWeek-value"
+      ],
+      "FirstDayOfWeek": "FirstDayOfWeek-value",
+      "Index": "Index-value"
+    },
+    "Range": {
+      "Type": "Type-value",
+      "StartDate": "datetime-value",
+      "EndDate": "datetime-value",
+      "NumberOfOccurrences": 99
+    }
+  },
+  "Organizer": {
+    "EmailAddress": {
+      "Name": "Name-value",
+      "Address": "Address-value"
+    }
+  },
+  "iCalUId": "iCalUId-value",
+  "WebLink": "WebLink-value",
+  "OriginalStart": "datetime-value",
+  "ChangeKey": "ChangeKey-value",
+  "Categories": [
+    "Categories-value"
+  ],
+  "CreatedDateTime": "datetime-value",
+  "LastModifiedDateTime": "datetime-value",
+  "Id": "Id-value"
+}
+```
+
+<!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
+2015-10-25 14:57:30 UTC -->
+<!-- {
+  "type": "#page.annotation",
+  "description": "Update event",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}-->
