@@ -20,11 +20,11 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|HasAttachments|Boolean||
+|HasAttachments|Boolean|Indicates whether the Conversation has at least one attachment.|
 |LastDeliveredDateTime|DateTimeOffset||
 |Preview|String||
-|Topic|String||
-|UniqueSenders|String||
+|Topic|String|The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.|
+|UniqueSenders|String|All the users that sent a message to this Conversation.|
 
 ### Response
 If successful, this method returns a `200 OK` response code and updated [Conversation](../resources/conversation.md) object in the response body.

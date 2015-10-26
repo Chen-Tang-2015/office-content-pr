@@ -1,6 +1,6 @@
 # DirectoryRoleTemplate resource type
 
-
+Represents a directory role template. A directory role template specifies the property values of a directory role ([DirectoryRole]). There is an associated directory role template object for each of the directory roles that may be activated in a tenant. 
 
 ### JSON representation
 
@@ -28,10 +28,10 @@ Here is a JSON representation of the resource
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |deletionTimestamp|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|description|String||
-|displayName|String||
-|objectId|String| Read-only.|
-|objectType|String||
+|description|String|The description to set for the directory role.|
+|displayName|String|The display name to set for the directory role.|
+|objectId|String|The unique identifier for the template. Inherited from [DirectoryObject]. In version 1.5 and later, you specify the **objectId** of the directory role template for the **roleTemplateId** property in the POST request activate a [DirectoryRole] in a tenant.                             **Notes**: **key**, immutable, not nullable, unique.             Read-only.|
+|objectType|String|A string that identifies the object type. For role templates the value is always ΓÇ£RoleTemplateΓÇ¥. Inherited from [DirectoryObject].|
 
 ### Relationships
 None

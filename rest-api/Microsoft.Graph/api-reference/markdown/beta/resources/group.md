@@ -1,6 +1,6 @@
 # Group resource type
 
-
+Represents an Azure Active Directory Group. Inherited from **DirectoryObject**.
 
 ### JSON representation
 
@@ -156,21 +156,21 @@ Here is a JSON representation of the resource
 |UnseenCount|Int32||
 |creationOptions|String collection||
 |deletionTimestamp|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|description|String||
-|dirSyncEnabled|Boolean||
-|displayName|String||
+|description|String|An optional description for the group.|
+|dirSyncEnabled|Boolean|**true** if this object is synced from an on-premises directory; **false** if this object was originally synced from an on-premises directory but is no longer synced; **null** if this object has never been synced from an on-premises directory (default).|
+|displayName|String|The display name for the group. This property is required when a group is created and it cannot be cleared during updates. |
 |groupTypes|String collection||
 |isPublic|Boolean||
-|lastDirSyncTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|mail|String||
-|mailEnabled|Boolean||
-|mailNickname|String||
-|objectId|String| Read-only.|
-|objectType|String||
-|onPremisesSecurityIdentifier|String||
-|provisioningErrors|[ProvisioningError](provisioningerror.md) collection||
-|proxyAddresses|String collection||
-|securityEnabled|Boolean||
+|lastDirSyncTime|DateTimeOffset|Indicates the last time at which the object was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|mail|String|The SMTP address for the group, for example, "serviceadmins@contoso.onmicrosoft.com".|
+|mailEnabled|Boolean|Specifies whether the group is mail-enabled. If the **securityEnabled** property is also **true**, the group is a mail-enabled security group; otherwise, the group is a Microsoft Exchange distribution group. Only (pure) security groups can be created using Azure AD Graph. For this reason, the property must be set **false** when creating a group and it cannot be updated using Azure AD Graph.|
+|mailNickname|String|The mail alias for the group. This property must be specified when a group is created.|
+|objectId|String|The unique identifier for the group. Inherited from [DirectoryObject].                            **Notes**: **key**, immutable, not nullable, unique.             Read-only.|
+|objectType|String|A string that identifies the object type. For groups the value is always ΓÇ£GroupΓÇ¥. Inherited from [DirectoryObject].|
+|onPremisesSecurityIdentifier|String|Contains the on-premises security identifier (SID) for the group that was synchronized from on-premises to the cloud.                            **Notes**: Requires version 1.5 or newer.            |
+|provisioningErrors|[ProvisioningError](provisioningerror.md) collection|A collection of error details that are preventing this group from being provisioned successfully.                            **Notes**: not nullable.            |
+|proxyAddresses|String collection|                                        **Notes**: not nullable, the **any** operator is required for filter expressions on multi-valued properties; for more information, see [Supported Queries, Filters, and Paging Options](https://msdn.microsoft.com/library/azure/dn727074.aspx).            |
+|securityEnabled|Boolean|Specifies whether the group is a security group. If the mailEnabled property is also true, the group is a mail-enabled security group; otherwise it is a security group. Only (pure) security groups can be created using Azure AD Graph. For this reason, the property must be set **true** when creating a group.|
 
 ### Relationships
 | Relationship | Type	|Description|
@@ -183,13 +183,13 @@ Here is a JSON representation of the resource
 |GroupPhoto|[Photo](photo.md)| Read-only.|
 |RejectedSenders|[DirectoryObject](directoryobject.md) collection| Read-only. Nullable.|
 |Threads|[ConversationThread](conversationthread.md) collection| Read-only. Nullable.|
-|appRoleAssignments|[AppRoleAssignment](approleassignment.md) collection| Read-only. Nullable.|
+|appRoleAssignments|[AppRoleAssignment](approleassignment.md) collection|Contains the set of applications that a group is assigned to.                            **Notes**: Requires version 1.5 or newer.             Read-only. Nullable.|
 |createdOnBehalfOf|[DirectoryObject](directoryobject.md)| Read-only.|
 |details|[UserDetails](userdetails.md)| Read-only.|
 |drive|[drive](drive.md)| Read-only.|
-|memberOf|[DirectoryObject](directoryobject.md) collection| Read-only. Nullable.|
-|members|[DirectoryObject](directoryobject.md) collection| Read-only. Nullable.|
-|owners|[DirectoryObject](directoryobject.md) collection| Read-only. Nullable.|
+|memberOf|[DirectoryObject](directoryobject.md) collection|Groups that this group is a member of. Inherited from [DirectoryObject].            HTTP Methods: GET (supported for all groups)  Read-only. Nullable.|
+|members|[DirectoryObject](directoryobject.md) collection|Users, contacts, and groups that are members of this group. Inherited from [DirectoryObject].            HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) Read-only. Nullable.|
+|owners|[DirectoryObject](directoryobject.md) collection|The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Requires version 2013-11-08 or newer. Inherited from [DirectoryObject].            HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) Read-only. Nullable.|
 |plans|[Plan](plan.md) collection| Read-only. Nullable.|
 |tasks|[Task](task.md) collection| Read-only. Nullable.|
 

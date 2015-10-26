@@ -20,14 +20,14 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|createdBy|String||
-|createdTime|DateTimeOffset||
-|isDefault|Boolean||
-|lastModifiedBy|String||
-|lastModifiedTime|DateTimeOffset||
-|name|String||
-|pagesUrl|String||
-|self|String||
+|createdBy|String|The user who created the section. |
+|createdTime|DateTimeOffset|The date and time when the section was created. |
+|isDefault|Boolean|Indicates whether this is the user's default section.|
+|lastModifiedBy|String|The user who last modified the section. |
+|lastModifiedTime|DateTimeOffset|The date and time when the section was last modified. |
+|name|String|The name of the section. |
+|pagesUrl|String|The /pages endpoint where you can get details for all the pages in the section.|
+|self|String|The endpoint where you can get details about the section. |
 
 ### Response
 If successful, this method returns a `200 OK` response code and updated [Section](../resources/section.md) object in the response body.

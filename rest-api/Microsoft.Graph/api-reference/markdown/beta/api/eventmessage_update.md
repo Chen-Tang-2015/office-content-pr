@@ -34,7 +34,7 @@ In the request body, supply the values for relevant fields that should be update
 |IsRead|Boolean||
 |IsReadReceiptRequested|Boolean||
 |LastModifiedDateTime|DateTimeOffset||
-|MeetingMessageType|String| Possible values are: `None`, `MeetingRequest`, `MeetingCancelled`, `MeetingAccepted`, `MeetingTenativelyAccepted`, `MeetingDeclined`.|
+|MeetingMessageType|String| The type of event message: None = 0, MeetingRequest = 1, MeetingCancelled = 2, MeetingAccepted = 3, MeetingTentativelyAccepted = 4, MeetingDeclined = 5  Possible values are: `None`, `MeetingRequest`, `MeetingCancelled`, `MeetingAccepted`, `MeetingTenativelyAccepted`, `MeetingDeclined`.|
 |ParentFolderId|String||
 |ReceivedDateTime|DateTimeOffset||
 |ReplyTo|Recipient||

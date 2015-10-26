@@ -1,6 +1,6 @@
 # item resource type
 
-
+The Item resource type represents metadata for an item in OneDrive. All top-level filesystem objects in OneDrive are Item resources. If an item is a [Folder](../facets/folder_facet.md) or [File](../facets/file_facet.md) facet, the Item resource will contain a value for either the **folder** or **file** property, respectively.  
 
 ### JSON representation
 
@@ -112,42 +112,42 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|audio|[audio](audio.md)||
-|cTag|String||
-|content|Stream||
-|createdBy|[identitySet](identityset.md)||
-|createdDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|deleted|[deleted](deleted.md)||
-|description|String||
-|eTag|String||
-|file|[file](file.md)||
-|fileSystemInfo|[fileSystemInfo](filesysteminfo.md)||
-|folder|[folder](folder.md)||
-|id|String| Read-only.|
-|image|[image](image.md)||
-|lastModifiedBy|[identitySet](identityset.md)||
-|lastModifiedDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|location|[location](location.md)||
-|name|String||
+|audio|[audio](audio.md)|Audio metadata, if the item is an audio file. Read-only.|
+|cTag|String|An eTag for the content of the item. This eTag is not changed if only the metadata is changed. **Note** This property is not returned if the Item is a folder. Read-only.|
+|content|Stream|The content stream, if the Item represents a file.|
+|createdBy|[identitySet](identityset.md)|Identity of the user, device, and application which created the item. Read-only.|
+|createdDateTime|DateTimeOffset|Date and time of item creation. Read-only.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|deleted|[deleted](deleted.md)|Information about the deleted state of the item. Read-only.|
+|description|String|Provide a user-visible description of the item. Read-write.|
+|eTag|String|eTag for the entire item (metadata + content). Read-only.|
+|file|[file](file.md)|File metadata, if the item is a file. Read-only.|
+|fileSystemInfo|[fileSystemInfo](filesysteminfo.md)|File system information on client. Read-write.|
+|folder|[folder](folder.md)|Folder metadata, if the item is a folder. Read-only.|
+|id|String|The unique identifier of the item within the Drive. Read-only. Read-only.|
+|image|[image](image.md)|Image metadata, if the item is an image. Read-only.|
+|lastModifiedBy|[identitySet](identityset.md)|Identity of the user, device, and application which last modified the item. Read-only.|
+|lastModifiedDateTime|DateTimeOffset|Date and time the item was last modified. Read-only.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|location|[location](location.md)|Location metadata, if the item has location data. Read-only.|
+|name|String|The name of the item (filename and extension). Read-write.|
 |openWith|[openWithSet](openwithset.md)||
-|parentReference|[itemReference](itemreference.md)||
-|photo|[photo](photo.md)||
-|searchResult|[searchResult](searchresult.md)||
+|parentReference|[itemReference](itemreference.md)|Parent information, if the item has a parent. Read-write.|
+|photo|[photo](photo.md)|Photo metadata, if the item is a photo. Read-only.|
+|searchResult|[searchResult](searchresult.md)|Search metadata, if the item is from a search result.|
 |shared|[shared](shared.md)||
-|size|Int64||
+|size|Int64|Size of the item in bytes. Read-only.|
 |specialFolder|[specialFolder](specialfolder.md)||
-|video|[video](video.md)||
+|video|[video](video.md)|Video metadata, if the item is a video. Read-only.|
 |webDavUrl|String||
-|webUrl|String||
+|webUrl|String|URL that displays the resource in the browser. Read-only.|
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|children|[item](item.md) collection| Read-only. Nullable.|
+|children|[item](item.md) collection|Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.|
 |createdByUser|[User](user.md)| Read-only.|
 |lastModifiedByUser|[User](user.md)| Read-only.|
 |permissions|[permission](permission.md) collection| Read-only. Nullable.|
-|thumbnails|[thumbnailSet](thumbnailset.md) collection| Read-only. Nullable.|
+|thumbnails|[thumbnailSet](thumbnailset.md) collection|Collection containing [ThumbnailSet](thumbnailSet.md) objects associated with the item. For more info, see [getting thumbnails](../items/thumbnails.md). Read-only. Nullable.|
 |versions|[item](item.md) collection| Read-only. Nullable.|
 
 ### Methods

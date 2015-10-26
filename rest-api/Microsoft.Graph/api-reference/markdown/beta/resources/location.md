@@ -1,6 +1,6 @@
 # location resource type
 
-
+The location of an event.
 
 ### JSON representation
 

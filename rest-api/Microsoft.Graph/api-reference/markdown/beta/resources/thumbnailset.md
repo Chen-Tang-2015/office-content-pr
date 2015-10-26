@@ -1,6 +1,6 @@
 # thumbnailSet resource type
 
-
+The ThumbnailSet type is a keyed collection of [Thumbnail](thumbnail.md) objects. It is used to represent a set of thumbnails associated with a single file on OneDrive.  
 
 ### JSON representation
 
@@ -35,11 +35,11 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|id|String| Read-only.|
-|large|[thumbnail](thumbnail.md)||
-|medium|[thumbnail](thumbnail.md)||
-|small|[thumbnail](thumbnail.md)||
-|source|[thumbnail](thumbnail.md)||
+|id|String|The id within the item. Read-only.|
+|large|[thumbnail](thumbnail.md)|A 1920x1920 scaled thumbnail.|
+|medium|[thumbnail](thumbnail.md)|A 176x176 scaled thumbnail.|
+|small|[thumbnail](thumbnail.md)|A 48x48 cropped thumbnail.|
+|source|[thumbnail](thumbnail.md)|A custom thumbnail image or the original image used to generate other thumbnails.|
 
 ### Relationships
 None

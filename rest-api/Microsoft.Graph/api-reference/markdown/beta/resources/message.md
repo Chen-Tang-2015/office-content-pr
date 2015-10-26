@@ -1,6 +1,6 @@
 # Message resource type
 
-
+A message in a mailbox folder.
 
 ### JSON representation
 

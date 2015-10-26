@@ -20,15 +20,15 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|creationTimestamp|DateTimeOffset||
+|creationTimestamp|DateTimeOffset|The time when the grant was created.|
 |deletionTimestamp|DateTimeOffset||
-|id|Guid||
-|objectType|String||
-|principalDisplayName|String||
-|principalId|Guid||
-|principalType|String||
-|resourceDisplayName|String||
-|resourceId|Guid||
+|id|Guid|The role id that was assigned to the principal.  This role must be declared by the target resource application **resourceId** in its **appRoles** property. Where the resource does not declare any permissions, a default id (zero GUID) must be specified.                            **Notes**: not nullable.            |
+|objectType|String|A string that identifies the object type. For application role assignments the value is always ΓÇ£AppRoleAssignmentΓÇ¥. Inherited from [DirectoryObject].|
+|principalDisplayName|String|The display name of the principal that was granted the access.|
+|principalId|Guid|The unique identifier (**objectId**) for the principal being granted the access.                            **Notes**: required.            |
+|principalType|String|The type of principal.  This can either be "User", "Group" or "ServicePrincipal".|
+|resourceDisplayName|String|The display name of the resource to which the assignment was made.|
+|resourceId|Guid|The unique identifier (**objectId**) for the target resource (service principal) for which the assignment was made.|
 
 ### Response
 If successful, this method returns a `200 OK` response code and updated [AppRoleAssignment](../resources/approleassignment.md) object in the response body.

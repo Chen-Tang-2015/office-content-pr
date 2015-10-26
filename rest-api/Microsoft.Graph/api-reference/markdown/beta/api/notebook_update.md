@@ -20,18 +20,18 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|createdBy|String||
-|createdTime|DateTimeOffset||
-|isDefault|Boolean||
-|isShared|Boolean||
-|lastModifiedBy|String||
-|lastModifiedTime|DateTimeOffset||
-|links|NotebookLinks||
-|name|String||
-|sectionGroupsUrl|String||
-|sectionsUrl|String||
-|self|String||
-|userRole|String| Possible values are: `Owner`, `Contributor`, `Reader`, `None`.|
+|createdBy|String|The user who created the notebook.|
+|createdTime|DateTimeOffset|The date and time when the notebook was created.|
+|isDefault|Boolean|Indicates whether this is the user's default notebook.|
+|isShared|Boolean|Indicates whether the notebook is shared. If true, the contents of the notebook can be seen by people other than the owner.|
+|lastModifiedBy|String|The user who last modified the notebook.|
+|lastModifiedTime|DateTimeOffset|The date and time when the notebook was last modified.|
+|links|NotebookLinks|The value of oneNoteClientURL can be used to open the notebook using the OneNote native client app if it's installed. The value of oneNoteWebURL can be used to open the web-browser based OneNote Online client.|
+|name|String|The name of the notebook.|
+|sectionGroupsUrl|String|The URL for the sectionGroups navigation property, which returns all the section groups in the notebook.|
+|sectionsUrl|String|The URL for the sections navigation property, which returns all the sections in the notebook.|
+|self|String|The endpoint where you can get details about the notebook.|
+|userRole|String|One of three values: Owner, Contributor, or Reader. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Possible values are: `Owner`, `Contributor`, `Reader`, `None`.|
 
 ### Response
 If successful, this method returns a `200 OK` response code and updated [Notebook](../resources/notebook.md) object in the response body.

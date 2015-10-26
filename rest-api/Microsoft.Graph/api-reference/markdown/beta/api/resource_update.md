@@ -20,8 +20,8 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|content|Stream||
-|contentUrl|String||
+|content|Stream|A stream of the content of this resource. |
+|contentUrl|String|A Url to which a GET request can be sent to retrieve this resource. |
 |self|String||
 
 ### Response

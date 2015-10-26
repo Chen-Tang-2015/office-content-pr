@@ -20,14 +20,14 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|createdBy|String||
-|createdTime|DateTimeOffset||
-|lastModifiedBy|String||
-|lastModifiedTime|DateTimeOffset||
-|name|String||
-|sectionGroupsUrl|String||
-|sectionsUrl|String||
-|self|String||
+|createdBy|String|The user who created the section group.|
+|createdTime|DateTimeOffset|The date and time when the section group was created.|
+|lastModifiedBy|String|The user who last modified the section group.|
+|lastModifiedTime|DateTimeOffset|The date and time when the section group was last modified.|
+|name|String|The name of the section group.|
+|sectionGroupsUrl|String|The URL for the sectionGroups navigation property, which returns all the section groups in the section group.|
+|sectionsUrl|String|The URL for the sections navigation property, which returns all the sections in the section group.|
+|self|String|The endpoint where you can get details about the section group.|
 
 ### Response
 If successful, this method returns a `200 OK` response code and updated [SectionGroup](../resources/sectiongroup.md) object in the response body.

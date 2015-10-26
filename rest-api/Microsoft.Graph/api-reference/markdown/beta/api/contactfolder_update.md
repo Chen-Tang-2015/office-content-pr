@@ -20,8 +20,8 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|DisplayName|String||
-|ParentFolderId|String||
+|DisplayName|String|The folder's display name.|
+|ParentFolderId|String|The ID of the folder's parent folder.|
 
 ### Response
 If successful, this method returns a `200 OK` response code and updated [ContactFolder](../resources/contactfolder.md) object in the response body.

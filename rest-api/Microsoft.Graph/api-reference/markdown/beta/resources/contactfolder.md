@@ -1,6 +1,6 @@
 # ContactFolder resource type
 
-
+A folder that contains contacts.
 
 ### JSON representation
 
@@ -36,15 +36,15 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|DisplayName|String||
-|Id|String| Read-only.|
-|ParentFolderId|String||
+|DisplayName|String|The folder's display name.|
+|Id|String|Unique identifier of the contact folder. Read-only.|
+|ParentFolderId|String|The ID of the folder's parent folder.|
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|ChildFolders|[ContactFolder](contactfolder.md) collection| Read-only. Nullable.|
-|Contacts|[Contact](contact.md) collection| Read-only. Nullable.|
+|ChildFolders|[ContactFolder](contactfolder.md) collection|The collection of child folders in the folder. Navigation property. Read-only. Nullable.|
+|Contacts|[Contact](contact.md) collection|The contacts in the folder. Navigation property. Read-only. Nullable.|
 
 ### Methods
 

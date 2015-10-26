@@ -18,27 +18,27 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|assignedPlans|AssignedPlan||
-|city|String||
-|companyLastDirSyncTime|DateTimeOffset||
-|country|String||
-|countryLetterCode|String||
+|assignedPlans|AssignedPlan|The collection of service plans associated with the tenant.                            **Notes**: not nullable.            |
+|city|String|            |
+|companyLastDirSyncTime|DateTimeOffset|The time and date at which the tenant was last synced with the on-premise directory.|
+|country|String|            |
+|countryLetterCode|String|            |
 |deletionTimestamp|DateTimeOffset||
-|dirSyncEnabled|Boolean||
-|displayName|String||
-|marketingNotificationEmails|String||
-|objectType|String||
-|postalCode|String||
-|preferredLanguage|String||
-|provisionedPlans|ProvisionedPlan||
-|provisioningErrors|ProvisioningError||
+|dirSyncEnabled|Boolean|**true** if this object is synced from an on-premises directory; **false** if this object was originally synced from an on-premises directory but is no longer synced; **null** if this object has never been synced from an on-premises directory (default).|
+|displayName|String|The display name for the tenant.|
+|marketingNotificationEmails|String|                                        **Notes**: not nullable.            |
+|objectType|String|A string that identifies the object type. For tenants the value is always ΓÇ£CompanyΓÇ¥. Inherited from [DirectoryObject].|
+|postalCode|String|            |
+|preferredLanguage|String|            |
+|provisionedPlans|ProvisionedPlan|                                        **Notes**: not nullable.            |
+|provisioningErrors|ProvisioningError|                                        **Notes**: not nullable.            |
 |securityComplianceNotificationMails|String||
 |securityComplianceNotificationPhones|String||
-|state|String||
-|street|String||
-|technicalNotificationMails|String||
-|telephoneNumber|String||
-|verifiedDomains|VerifiedDomain||
+|state|String|            |
+|street|String|            |
+|technicalNotificationMails|String|                                        **Notes**: not nullable.            |
+|telephoneNumber|String|            |
+|verifiedDomains|VerifiedDomain|The collection of domains associated with this tenant.                            **Notes**: not nullable.            |
 
 ### Response
 If successful, this method returns a `200 OK` response code and updated [TenantDetail](../resources/tenantdetail.md) object in the response body.
