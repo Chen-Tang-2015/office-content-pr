@@ -63,14 +63,7 @@ A resource URL is determined by the Microsoft Graph API entity data model. The p
 The path URL resource names and query parameters are case insensitive. However, values you assign, entity IDs, and 
 other base64 encoded values are case sensitive.
 
-To showcase a few representative use cases of the API calls, we present the following basic programming patterns by means of 
-
-- [Navigation from a tenant-level entity set to a member](#msg_nav_from_set_to_member), 
-- [Projection from an entity to a subset of its properties](#msg_proj_from_entity_to_props), 
-- [Projection from an entity set to properties set](#msg_proj_from_entities_to_props),
-- [Traversal to another resource by the like-named relationship](#msg_traversal_via_relationship),
-- [Filtering with a query option](#msg_filter_query_option),
-- [Calling OData actions and functions](#msg_calling_actions). 
+A few API calls basic programming patterns are shown in the following section.
 
 <a name="msg_nav_from_set_to_member"> </a>
 ###Navigation from a set to a member
