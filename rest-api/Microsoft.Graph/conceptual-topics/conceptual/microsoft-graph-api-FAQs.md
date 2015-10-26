@@ -17,8 +17,8 @@ Your feedback is important to us. Connect with us on [Stack Overflow](http://sta
 
 
 <a name="msg_how_use_unified_api"> </a>
-## How to use Office 365 unified API?
-Apps can use the Office 365 unified API to perform create, read, update, and delete (CRUD) operations on data sources and entities, giving them seamless access to work data. 
+## How to use Microsoft Graph API?
+Apps can use the Microsoft Graph API to perform create, read, update, and delete (CRUD) operations on data sources and entities, giving them seamless access to work data. 
 
 **Ease of use--one endpoint, all Office 365 data under one roof**
 
@@ -47,7 +47,7 @@ You can:
 
 Then, using single sign-on with Azure AD to authenticate your users, enable them to access files, calendar, emails, user information, and the data stored in the cloud.  The API follows REST and OData 4.0 standards for data transport, and uses OpenID Connect and OAuth 2.0 protocols for authentication and authorization. 
 
-You also have the option to use cross-origin resource sharing (CORS) to send requests to the Office 365 unified API to access, modify, and create data.
+You also have the option to use cross-origin resource sharing (CORS) to send requests to the Microsoft Graph API to access, modify, and create data.
 
 <!--The Office 365 unified API gives you access to data from the following entities:
 -	**Users**, **groups** and **organizational contacts**
@@ -59,12 +59,11 @@ You also have the option to use cross-origin resource sharing (CORS) to send req
 
 
 
-To learn how to develop an Office 365 unified API app, see [Get started with the Office 365 unified API](..\howto\get-started-with-office-365-unified-api.md), [Office 365 unified API hands on lab](http://dev.office.com/hands-on-labs/4585) and [Examples of Office 365 unified API calls (preview)](..\howto\examples-of-office-365-unified-api-calls.md).  For code samples and additional resources, see [Learn more about Office 365 unified API development](#msg_how_learn_unified_api)     
 
 <a name="msg_why_use_unified_api"> </a>
-## Why use Office 365 unified API?
+## Why use Microsoft Graph API?
 
-The following example shows the current model for interacting with Office 365 API using disparate service endpoints and how much simpler this becomes with Office 365 unified API.
+The following example shows the current model for interacting with Office 365 API using disparate service endpoints and how much simpler this becomes with Microsoft Graph API.
 
 **Disparate service endpoints**
 
@@ -76,9 +75,9 @@ The following example shows the current model for interacting with Office 365 AP
 | Get Joe's files   |     `Office 365 API`  | _https://_**contoso-my.sharepoint.com**_/personal/joe_contoso_com/_api/v1.0/files_ |
 <!--| Get TrendingAround, for the current authenticated user           |     `Office graph`                     | _https://_**outlook.office365.com**_/api/beta/me/TrendingAround_   |-->
 
-Using the Office 365 unified API , you don't have to first discover service endpoints and then traverse different endpoints to get a user's files, mail and so on. You only need to interact with a single REST URL namespace, which is _**graph.microsoft.com**_.
+Using the Microsoft Graph API, you don't have to first discover service endpoints and then traverse different endpoints to get a user's files, mail and so on. You only need to interact with a single REST URL namespace, which is _**graph.microsoft.com**_.
 
-**Unified endpoint**
+**Microsoft Graph API**
 
 |   **Operation**                  |  **API**                          |  **Service endpoint** |
 |:-----------------------------|:-----------------------------------------|:-----------------|
@@ -88,7 +87,7 @@ Using the Office 365 unified API , you don't have to first discover service endp
 | Get Joe's files   |     `Office 365 unified API `  | _https://_**graph.microsoft.com**_/beta/me/files_ |
 <!--| Get TrendingAround, for the current authenticated user           |     `Office 365 unified API`                     | _https://_**graph.microsoft.com**_/beta/me/trendingaround_   |-->
 
-Some of the benefits of using Office 365 unified API  are as follows:
+Some of the benefits of using Microsoft Graph API  are as follows:
 
 **Consistent and streamlined developer experience for consuming Microsoft cloud services**
 
@@ -111,8 +110,8 @@ Some of the benefits of using Office 365 unified API  are as follows:
 
 
 <a name="msg_what_in_unified_api"> </a>
-## What's in Office 365 unified API?
-Currently, the unified API supports programmatic access to the following entities.
+## What's in Microsoft Graph API?
+Currently, the Microsoft Graph API supports programmatic access to the following entities.
 
 ![Office 365 unified API currently available entities.](./images/O365_unified_API_entities.png)
 
@@ -180,63 +179,10 @@ Some of the actions you can perform with **TrendingAround** and **WorkingWith**:
 -	Get files which are popular in the user's circle.
 
 
-<a name="msg_what_Next_in_unified_api"> </a>
-## What's coming next in Office 365 unified API?
-
-More entities will be added to Office 365 unified API in the future, for example, feeds, instant messaging, notes, tasks  and so forth.  Developers will be able to extend the API by adding: 
--	new properties to existing entities 
--	new relationships between existing entities 
--	new entity types 
-
-In time, Office 365 unified API will replace the need for the individual service APIs.
-
-<a name="msg_how_learn_unified_api"> </a>
-## Learn more about Office 365 unified API development
-
-The following resources can help you get started:
-
-**Develop an app using Office 365 unified API**
-
--  [Get started with the Office 365 unified API (preview)](..\howto\get-started-with-office-365-unified-api.md) 
--  [Office 365 unified API in depth (preview)](..\howto\office-365-unified-api-in-depth.md) 
--  [Examples of Office 365 unified API calls (preview)](..\howto\examples-of-office-365-unified-api-calls.md) 
--  [Develop with the Office graph](https://msdn.microsoft.com/office/office365/howto/develop-office-graph)
--  [Cross-origin resource sharing (CORS) support](..\howto\create-web-apps-using-CORS-to-access-files-in-Office-365.md) 
--  [Authorization Code Grant Flow](https://msdn.microsoft.com/en-us/library/azure/dn645542.aspx)
-
-**Try out and explore the Office 365 unified API**
-
--  [Office 365 unified API Explorer](https://graphexplorer2.azurewebsites.net/) 
--  [API Sandbox](http://apisandbox.msdn.com)
-
-**Hands on lab**
-
--  [Deep dive into the Office 365 unified API](http://dev.office.com/hands-on-labs/4585)
-
-**Code samples**
-
--  [Single page app sample](https://github.com/OfficeDev/O365-Angular-Profile)
--  [.NET app sample](http://aka.ms/o365-win-profile)
--  [Android app sample](http://aka.ms/o365-android-profile)
--  [iOS app sample](http://aka.ms/o365-iOS-profile)
 
 
-**Release notes and known issues for Office 365 unified API**
 
--  [Office 365 REST API release notes for April 2015](..\howto\office-365-rest-api-release-notes.md)
 
-**Reference**
-
-- [Examples of Office 365 unified API calls (preview)](..\howto\examples-of-office-365-unified-api-calls.md)
-- [Office 365 Groups REST API reference (preview)](..\howto\groups-rest-operations.md) 
-- [Office 365 unified API reference (preview)](..\howto\office-365-unified-api-reference.md)
-
-**Client libraries** 
-
--  [Android](https://github.com/OfficeDev/Office-365-SDK-for-Android)
--  [iOS](https://github.com/OfficeDev/Office-365-SDK-for-iOS)
--  [.NET library](https://www.nuget.org/packages/Microsoft.Graph)
-  
 
 
 
