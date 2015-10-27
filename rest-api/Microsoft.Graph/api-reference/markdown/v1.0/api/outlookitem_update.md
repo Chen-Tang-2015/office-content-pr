@@ -38,12 +38,12 @@ Content-type: application/json
 Content-length: 185
 
 {
+  "createdDateTime": "datetime-value",
+  "lastModifiedDateTime": "datetime-value",
   "changeKey": "changeKey-value",
   "categories": [
     "categories-value"
   ],
-  "createdDateTime": "datetime-value",
-  "lastModifiedDateTime": "datetime-value",
   "id": "id-value"
 }
 ```
@@ -60,12 +60,12 @@ Content-type: application/json
 Content-length: 185
 
 {
+  "createdDateTime": "datetime-value",
+  "lastModifiedDateTime": "datetime-value",
   "changeKey": "changeKey-value",
   "categories": [
     "categories-value"
   ],
-  "createdDateTime": "datetime-value",
-  "lastModifiedDateTime": "datetime-value",
   "id": "id-value"
 }
 ```

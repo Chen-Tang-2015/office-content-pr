@@ -7,7 +7,7 @@ The following **scopes** are required to execute this API:
 <!-- { "blockType": "ignored" } -->
 ```http
 PATCH /tasks/<id>/bucketTaskBoardFormat
-PATCH /tasks/<id>/statusTaskBoardFormat
+PATCH /tasks/<id>/progressTaskBoardFormat
 PATCH /tasks/<id>/assignedToTaskBoardFormat
 ```
 ### Optional request headers
@@ -21,7 +21,6 @@ In the request body, supply the values for relevant fields that should be update
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |orderHint|String||
-|version|String||
 
 ### Response
 If successful, this method returns a `200 OK` response code and updated [taskBoardTaskFormat](../resources/taskboardtaskformat.md) object in the response body.
@@ -35,13 +34,12 @@ Here is an example of the request.
 ```http
 PUT https://graph.microsoft.com/v1.0/tasks/<id>/bucketTaskBoardFormat
 Content-type: application/json
-Content-length: 110
+Content-length: 80
 
 {
   "type": "type-value",
   "orderHint": "orderHint-value",
-  "id": "id-value",
-  "version": "version-value"
+  "id": "id-value"
 }
 ```
 ##### Response
@@ -54,13 +52,12 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 110
+Content-length: 80
 
 {
   "type": "type-value",
   "orderHint": "orderHint-value",
-  "id": "id-value",
-  "version": "version-value"
+  "id": "id-value"
 }
 ```
 

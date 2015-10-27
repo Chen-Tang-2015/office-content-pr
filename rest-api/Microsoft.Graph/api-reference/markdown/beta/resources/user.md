@@ -17,10 +17,10 @@ Here is a JSON representation of the resource
     "contactFolders",
     "contacts",
     "createdObjects",
-    "details",
     "directReports",
     "drive",
     "events",
+    "inferenceClassification",
     "joinedGroups",
     "mailFolders",
     "manager",
@@ -30,11 +30,13 @@ Here is a JSON representation of the resource
     "oauth2PermissionGrants",
     "ownedDevices",
     "ownedObjects",
+    "people",
+    "photo",
+    "photos",
     "plans",
     "registeredDevices",
     "tasks",
     "trendingAround",
-    "userPhoto",
     "workingWith"
   ],
   "@odata.type": "microsoft.graph.user"
@@ -98,9 +100,6 @@ Here is a JSON representation of the resource
   ],
   "deletionTimestamp": "String (timestamp)",
   "department": "String-value",
-  "details": {
-    "@odata.type": "microsoft.graph.userdetails"
-  },
   "dirSyncEnabled": true,
   "directReports": [
     {
@@ -121,6 +120,9 @@ Here is a JSON representation of the resource
   "givenName": "String-value",
   "hireDate": "String (timestamp)",
   "immutableId": "String-value",
+  "inferenceClassification": {
+    "@odata.type": "microsoft.graph.inferenceclassification"
+  },
   "interests": [
     "String-value"
   ],
@@ -185,6 +187,19 @@ Here is a JSON representation of the resource
   "pastProjects": [
     "String-value"
   ],
+  "people": [
+    {
+      "@odata.type": "microsoft.graph.person"
+    }
+  ],
+  "photo": {
+    "@odata.type": "microsoft.graph.photo"
+  },
+  "photos": [
+    {
+      "@odata.type": "microsoft.graph.photo"
+    }
+  ],
   "physicalDeliveryOfficeName": "String-value",
   "plans": [
     {
@@ -238,13 +253,10 @@ Here is a JSON representation of the resource
   "thumbnailPhoto": "Stream-value",
   "trendingAround": [
     {
-      "@odata.type": "microsoft.graph.file"
+      "@odata.type": "microsoft.graph.item"
     }
   ],
   "usageLocation": "String-value",
-  "userPhoto": {
-    "@odata.type": "microsoft.graph.photo"
-  },
   "userPrincipalName": "String-value",
   "userType": "String-value",
   "workingWith": [
@@ -323,10 +335,10 @@ Here is a JSON representation of the resource
 |contactFolders|[ContactFolder](contactfolder.md) collection|The user's contacts folders. Navigation property. The user's contacts folders. Navigation property. Read-only. Nullable.|
 |contacts|[Contact](contact.md) collection|The user's contacts. Navigation property. The user's contacts. Navigation property. Read-only. Nullable.|
 |createdObjects|[DirectoryObject](directoryobject.md) collection|Directory objects that were created by the user. Requires version 2013-11-08 or newer. Directory objects that were created by the user. Requires version 2013-11-08 or newer. Read-only. Nullable.|
-|details|[UserDetails](userdetails.md)| Read-only.|
 |directReports|[DirectoryObject](directoryobject.md) collection|The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Inherited from [DirectoryObject].            HTTP Methods: GET The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Inherited from [DirectoryObject].            HTTP Methods: GET Read-only. Nullable.|
 |drive|[drive](drive.md)| Read-only.|
 |events|[Event](event.md) collection|The user's events. Default is to show Events under the Default Calendar. Navigation property. The user's events. Default is to show Events under the Default Calendar. Navigation property. Read-only. Nullable.|
+|inferenceClassification|[InferenceClassification](inferenceclassification.md)| Read-only.|
 |joinedGroups|[Group](group.md) collection| Read-only. Nullable.|
 |mailFolders|[MailFolder](mailfolder.md) collection| Read-only. Nullable.|
 |manager|[DirectoryObject](directoryobject.md)|The user or contact that is this user’s manager. Inherited from [DirectoryObject].            HTTP Methods: GET, PUT, DELETE The user or contact that is this user’s manager. Inherited from [DirectoryObject].            HTTP Methods: GET, PUT, DELETE Read-only.|
@@ -336,11 +348,13 @@ Here is a JSON representation of the resource
 |oauth2PermissionGrants|[OAuth2PermissionGrant](oauth2permissiongrant.md) collection|The set of applications that are granted consent to impersonate this user. Requires version 1.5 or newer.            HTTP Methods:  GET, POST, DELETE The set of applications that are granted consent to impersonate this user. Requires version 1.5 or newer.            HTTP Methods:  GET, POST, DELETE Read-only. Nullable.|
 |ownedDevices|[DirectoryObject](directoryobject.md) collection|Devices that are owned by the user. Devices that are owned by the user. Read-only. Nullable.|
 |ownedObjects|[DirectoryObject](directoryobject.md) collection|Directory objects that are owned by the user. Requires version 2013-11-08 or newer. Directory objects that are owned by the user. Requires version 2013-11-08 or newer. Read-only. Nullable.|
-|plans|[Plan](plan.md) collection| Read-only. Nullable.|
+|people|[Person](person.md) collection| Read-only. Nullable.|
+|photo|[Photo](photo.md)| Read-only.|
+|photos|[Photo](photo.md) collection| Read-only. Nullable.|
+|plans|[plan](plan.md) collection| Read-only. Nullable.|
 |registeredDevices|[DirectoryObject](directoryobject.md) collection|Devices that are registered for the user. Devices that are registered for the user. Read-only. Nullable.|
-|tasks|[Task](task.md) collection| Read-only. Nullable.|
-|trendingAround|[File](file.md) collection| Read-only. Nullable.|
-|userPhoto|[Photo](photo.md)| Read-only.|
+|tasks|[task](task.md) collection| Read-only. Nullable.|
+|trendingAround|[item](item.md) collection| Read-only. Nullable.|
 |workingWith|[User](user.md) collection| Read-only. Nullable.|
 
 ### Methods
@@ -380,14 +394,18 @@ Here is a JSON representation of the resource
 |[List ownedDevices](../api/user_list_owneddevices.md) |[DirectoryObject](directoryobject.md) collection| Get a ownedDevice object collection.|
 |[Create ownedObject](../api/user_post_ownedobjects.md) |[DirectoryObject](directoryobject.md)| Create a new ownedObject by posting to the ownedObjects collection.|
 |[List ownedObjects](../api/user_list_ownedobjects.md) |[DirectoryObject](directoryobject.md) collection| Get a ownedObject object collection.|
-|[Create Plan](../api/user_post_plans.md) |[Plan](plan.md)| Create a new Plan by posting to the plans collection.|
-|[List plans](../api/user_list_plans.md) |[Plan](plan.md) collection| Get a Plan object collection.|
+|[Create Person](../api/user_post_people.md) |[Person](person.md)| Create a new Person by posting to the people collection.|
+|[List people](../api/user_list_people.md) |[Person](person.md) collection| Get a Person object collection.|
+|[Create photo](../api/user_post_photos.md) |[Photo](photo.md)| Create a new photo by posting to the photos collection.|
+|[List photos](../api/user_list_photos.md) |[Photo](photo.md) collection| Get a photo object collection.|
+|[Create plan](../api/user_post_plans.md) |[plan](plan.md)| Create a new plan by posting to the plans collection.|
+|[List plans](../api/user_list_plans.md) |[plan](plan.md) collection| Get a plan object collection.|
 |[Create registeredDevice](../api/user_post_registereddevices.md) |[DirectoryObject](directoryobject.md)| Create a new registeredDevice by posting to the registeredDevices collection.|
 |[List registeredDevices](../api/user_list_registereddevices.md) |[DirectoryObject](directoryobject.md) collection| Get a registeredDevice object collection.|
-|[Create Task](../api/user_post_tasks.md) |[Task](task.md)| Create a new Task by posting to the tasks collection.|
-|[List tasks](../api/user_list_tasks.md) |[Task](task.md) collection| Get a Task object collection.|
-|[Create File](../api/user_post_trendingaround.md) |[File](file.md)| Create a new File by posting to the trendingAround collection.|
-|[List trendingAround](../api/user_list_trendingaround.md) |[File](file.md) collection| Get a File object collection.|
+|[Create task](../api/user_post_tasks.md) |[task](task.md)| Create a new task by posting to the tasks collection.|
+|[List tasks](../api/user_list_tasks.md) |[task](task.md) collection| Get a task object collection.|
+|[Create trendingAround](../api/user_post_trendingaround.md) |[item](item.md)| Create a new trendingAround by posting to the trendingAround collection.|
+|[List trendingAround](../api/user_list_trendingaround.md) |[item](item.md) collection| Get a trendingAround object collection.|
 |[Create User](../api/user_post_workingwith.md) |[User](user.md)| Create a new User by posting to the workingWith collection.|
 |[List workingWith](../api/user_list_workingwith.md) |[User](user.md) collection| Get a User object collection.|
 |[Update](../api/user_update.md) | [user](user.md)	|Update user object. |

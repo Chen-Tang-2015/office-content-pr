@@ -16,26 +16,28 @@ Here is a JSON representation of the resource
 
 ```json
 {
+  "checklist": {
+    "@odata.type": "microsoft.graph.checklistitemcollection"
+  },
   "completedBy": "String-value",
+  "description": "String-value",
   "id": "String-value (identifier)",
-  "notes": "String-value",
   "previewType": "String-value",
   "references": {
     "@odata.type": "microsoft.graph.externalreferencecollection"
-  },
-  "version": "String-value"
+  }
 }
 
 ```
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
+|checklist|[checklistItemCollection](checklistitemcollection.md)||
 |completedBy|String||
+|description|String||
 |id|String| Read-only.|
-|notes|String||
-|previewType|String| Possible values are: `Automatic`, `NoPreview`, `CheckList`, `Notes`, `Reference`.|
-|references|[ExternalReferenceCollection](externalreferencecollection.md)||
-|version|String||
+|previewType|String| Possible values are: `automatic`, `noPreview`, `checklist`, `description`, `reference`.|
+|references|[externalReferenceCollection](externalreferencecollection.md)||
 
 ### Relationships
 None

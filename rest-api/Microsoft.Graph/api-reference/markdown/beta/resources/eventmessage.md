@@ -57,6 +57,7 @@ Here is a JSON representation of the resource
   "hasAttachments": true,
   "id": "String-value (identifier)",
   "importance": "String-value",
+  "inferenceClassification": "String-value",
   "isDeliveryReceiptRequested": true,
   "isDraft": true,
   "isRead": true,
@@ -102,6 +103,7 @@ Here is a JSON representation of the resource
 |hasAttachments|Boolean||
 |id|String| Read-only.|
 |importance|String| Possible values are: `Low`, `Normal`, `High`.|
+|inferenceClassification|String| Possible values are: `Focused`, `Other`.|
 |isDeliveryReceiptRequested|Boolean||
 |isDraft|Boolean||
 |isRead|Boolean||

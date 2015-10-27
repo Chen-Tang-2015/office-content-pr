@@ -46,7 +46,7 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 641
+Content-length: 663
 
 {
   "createdBy": "createdBy-value",
@@ -57,19 +57,18 @@ Content-length: 641
   "orderHint": "orderHint-value",
   "assigneePriority": "assigneePriority-value",
   "percentComplete": 99,
-  "startDate": "datetime-value",
-  "assignedToDate": "datetime-value",
-  "createdDate": "datetime-value",
+  "startDateTime": "datetime-value",
+  "assignedDateTime": "datetime-value",
+  "createdDateTime": "datetime-value",
   "assignedBy": "assignedBy-value",
-  "dueDate": "datetime-value",
-  "hasNotes": true,
+  "dueDateTime": "datetime-value",
+  "hasDescription": true,
   "previewType": "previewType-value",
-  "completedDate": "datetime-value",
-  "numberOfReferences": 99,
+  "completedDateTime": "datetime-value",
   "appliedCategories": {
   },
-  "id": "id-value",
-  "version": "version-value"
+  "conversationThreadId": "conversationThreadId-value",
+  "id": "id-value"
 }
 ```
 

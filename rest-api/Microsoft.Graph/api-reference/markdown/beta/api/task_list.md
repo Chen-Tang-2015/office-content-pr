@@ -12,7 +12,7 @@ GET /tasks
 |Name|Value|Description|
 |:---------------|:--------|:-------|
 |$count|none|The count of related entities can be requested by specifying the $count query option.|
-|$expand|string|Comma-separated list of relationships to expand and include in the response. See relationships table of [Task](../resources/task.md) for supported names. |
+|$expand|string|Comma-separated list of relationships to expand and include in the response. See relationships table of [task](../resources/task.md) for supported names. |
 |$filter|string|Filter string that lets you filter the response based on a set of criteria.|
 |$orderby|string|Comma-separated list of properties that are used to sort the order of items in the response collection.|
 |$select|string|Comma-separated list of properties to include in the response.|
@@ -28,7 +28,7 @@ GET /tasks
 ### Request body
 Do not supply a request body for this method.
 ### Response
-If successful, this method returns a `200 OK` response code and collection of [Task](../resources/task.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and collection of [task](../resources/task.md) objects in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -50,7 +50,7 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 754
+Content-length: 772
 
 {
   "value": [
@@ -63,19 +63,18 @@ Content-length: 754
       "orderHint": "orderHint-value",
       "assigneePriority": "assigneePriority-value",
       "percentComplete": 99,
-      "startDate": "datetime-value",
-      "assignedToDate": "datetime-value",
-      "createdDate": "datetime-value",
+      "startDateTime": "datetime-value",
+      "assignedDateTime": "datetime-value",
+      "createdDateTime": "datetime-value",
       "assignedBy": "assignedBy-value",
-      "dueDate": "datetime-value",
-      "hasNotes": true,
+      "dueDateTime": "datetime-value",
+      "hasDescription": true,
       "previewType": "previewType-value",
-      "completedDate": "datetime-value",
-      "numberOfReferences": 99,
+      "completedDateTime": "datetime-value",
       "appliedCategories": {
       },
-      "id": "id-value",
-      "version": "version-value"
+      "conversationThreadId": "conversationThreadId-value",
+      "id": "id-value"
     }
   ]
 }

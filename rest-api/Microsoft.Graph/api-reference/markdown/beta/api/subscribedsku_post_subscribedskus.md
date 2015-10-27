@@ -6,7 +6,7 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /shares
+POST /siteCollections
 
 ```
 ### Request headers
@@ -26,10 +26,10 @@ If successful, this method returns `201, Created` response code and [SubscribedS
 Here is an example of the request.
 <!-- {
   "blockType": "request",
-  "name": "create_subscribedsku_from_shares"
+  "name": "create_subscribedsku_from_sitecollections"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/shares
+POST https://graph.microsoft.com/v1.0/siteCollections
 ```
 In the request body, supply a JSON representation of [SubscribedSku](../resources/subscribedsku.md) object.
 ##### Response

@@ -7,8 +7,8 @@
 |:---------------|:--------|:----------|
 |[Create Application](../api/application_post_applications.md) |[Application](application.md)| Create a new Application by posting to the applications collection.|
 |[List Application](../api/application_list.md) | [Application](application.md) collection |Get application object collection. |
-|[Create Bucket](../api/bucket_post_buckets.md) |[Bucket](bucket.md)| Create a new Bucket by posting to the buckets collection.|
-|[List Bucket](../api/bucket_list.md) | [Bucket](bucket.md) collection |Get bucket object collection. |
+|[Create bucket](../api/bucket_post_buckets.md) |[bucket](bucket.md)| Create a new bucket by posting to the buckets collection.|
+|[List bucket](../api/bucket_list.md) | [bucket](bucket.md) collection |Get bucket object collection. |
 |[Create OrgContact](../api/orgcontact_post_contacts.md) |[OrgContact](orgcontact.md)| Create a new OrgContact by posting to the contacts collection.|
 |[List OrgContact](../api/orgcontact_list.md) | [OrgContact](orgcontact.md) collection |Get orgContact object collection. |
 |[Create DeviceConfiguration](../api/deviceconfiguration_post_deviceconfiguration.md) |[DeviceConfiguration](deviceconfiguration.md)| Create a new DeviceConfiguration by posting to the deviceConfiguration collection.|
@@ -27,16 +27,18 @@
 |[List Group](../api/group_list.md) | [Group](group.md) collection |Get group object collection. |
 |[Create OAuth2PermissionGrant](../api/oauth2permissiongrant_post_oauth2permissiongrants.md) |[OAuth2PermissionGrant](oauth2permissiongrant.md)| Create a new OAuth2PermissionGrant by posting to the oauth2PermissionGrants collection.|
 |[List OAuth2PermissionGrant](../api/oauth2permissiongrant_list.md) | [OAuth2PermissionGrant](oauth2permissiongrant.md) collection |Get oAuth2PermissionGrant object collection. |
-|[Create Plan](../api/plan_post_plans.md) |[Plan](plan.md)| Create a new Plan by posting to the plans collection.|
-|[List Plan](../api/plan_list.md) | [Plan](plan.md) collection |Get plan object collection. |
+|[Create plan](../api/plan_post_plans.md) |[plan](plan.md)| Create a new plan by posting to the plans collection.|
+|[List plan](../api/plan_list.md) | [plan](plan.md) collection |Get plan object collection. |
 |[Create ServicePrincipal](../api/serviceprincipal_post_serviceprincipals.md) |[ServicePrincipal](serviceprincipal.md)| Create a new ServicePrincipal by posting to the servicePrincipals collection.|
 |[List ServicePrincipal](../api/serviceprincipal_list.md) | [ServicePrincipal](serviceprincipal.md) collection |Get servicePrincipal object collection. |
 |[Create share](../api/share_post_shares.md) |[share](share.md)| Create a new share by posting to the shares collection.|
 |[List share](../api/share_list.md) | [share](share.md) collection |Get share object collection. |
+|[Create SiteCollection](../api/sitecollection_post_sitecollections.md) |[SiteCollection](sitecollection.md)| Create a new SiteCollection by posting to the siteCollections collection.|
+|[List SiteCollection](../api/sitecollection_list.md) | [SiteCollection](sitecollection.md) collection |Get siteCollection object collection. |
 |[Create SubscribedSku](../api/subscribedsku_post_subscribedskus.md) |[SubscribedSku](subscribedsku.md)| Create a new SubscribedSku by posting to the subscribedSkus collection.|
 |[List SubscribedSku](../api/subscribedsku_list.md) | [SubscribedSku](subscribedsku.md) collection |Get subscribedSku object collection. |
-|[Create Task](../api/task_post_tasks.md) |[Task](task.md)| Create a new Task by posting to the tasks collection.|
-|[List Task](../api/task_list.md) | [Task](task.md) collection |Get task object collection. |
+|[Create task](../api/task_post_tasks.md) |[task](task.md)| Create a new task by posting to the tasks collection.|
+|[List task](../api/task_list.md) | [task](task.md) collection |Get task object collection. |
 |[Create TenantDetail](../api/tenantdetail_post_tenantdetails.md) |[TenantDetail](tenantdetail.md)| Create a new TenantDetail by posting to the tenantDetails collection.|
 |[List TenantDetail](../api/tenantdetail_list.md) | [TenantDetail](tenantdetail.md) collection |Get tenantDetail object collection. |
 |[Create User](../api/user_post_users.md) |[User](user.md)| Create a new User by posting to the users collection.|

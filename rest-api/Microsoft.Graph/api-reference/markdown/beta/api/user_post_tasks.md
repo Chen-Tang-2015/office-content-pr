@@ -1,6 +1,6 @@
-# Create Task
+# Create task
 
-Use this API to create a new Task.
+Use this API to create a new task.
 ### Prerequisites
 The following **scopes** are required to execute this API: 
 ### HTTP request
@@ -17,11 +17,11 @@ POST /drive/root/lastModifiedByUser/tasks
 | X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
-In the request body, supply a JSON representation of [Task](../resources/task.md) object.
+In the request body, supply a JSON representation of [task](../resources/task.md) object.
 
 
 ### Response
-If successful, this method returns `201, Created` response code and [Task](../resources/task.md) object in the response body.
+If successful, this method returns `201, Created` response code and [task](../resources/task.md) object in the response body.
 
 ### Example
 ##### Request
@@ -33,7 +33,7 @@ Here is an example of the request.
 ```http
 POST https://graph.microsoft.com/v1.0/users/<objectId>
 ```
-In the request body, supply a JSON representation of [Task](../resources/task.md) object.
+In the request body, supply a JSON representation of [task](../resources/task.md) object.
 ##### Response
 Here is an example of the response.
 <!-- {
@@ -44,7 +44,7 @@ Here is an example of the response.
 ```http
 HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 641
+Content-length: 663
 
 {
   "createdBy": "createdBy-value",
@@ -55,19 +55,18 @@ Content-length: 641
   "orderHint": "orderHint-value",
   "assigneePriority": "assigneePriority-value",
   "percentComplete": 99,
-  "startDate": "datetime-value",
-  "assignedToDate": "datetime-value",
-  "createdDate": "datetime-value",
+  "startDateTime": "datetime-value",
+  "assignedDateTime": "datetime-value",
+  "createdDateTime": "datetime-value",
   "assignedBy": "assignedBy-value",
-  "dueDate": "datetime-value",
-  "hasNotes": true,
+  "dueDateTime": "datetime-value",
+  "hasDescription": true,
   "previewType": "previewType-value",
-  "completedDate": "datetime-value",
-  "numberOfReferences": 99,
+  "completedDateTime": "datetime-value",
   "appliedCategories": {
   },
-  "id": "id-value",
-  "version": "version-value"
+  "conversationThreadId": "conversationThreadId-value",
+  "id": "id-value"
 }
 ```
 
@@ -75,7 +74,7 @@ Content-length: 641
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "Create Task",
+  "description": "Create task",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

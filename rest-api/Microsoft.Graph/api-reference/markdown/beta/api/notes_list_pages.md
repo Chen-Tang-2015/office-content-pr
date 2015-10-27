@@ -7,8 +7,8 @@ The following **scopes** are required to execute this API:
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /users/<objectId>/notes/pages
+GET /groups/<objectId>/notes/pages
 GET /drive/root/createdByUser/notes/pages
-GET /drive/root/lastModifiedByUser/notes/pages
 ```
 ### Optional query parameters
 |Name|Value|Description|

@@ -46,7 +46,7 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 411
+Content-length: 381
 
 {
   "sharedWith": {
@@ -57,8 +57,7 @@ Content-length: 411
   "category3Description": "category3Description-value",
   "category4Description": "category4Description-value",
   "category5Description": "category5Description-value",
-  "id": "id-value",
-  "version": "version-value"
+  "id": "id-value"
 }
 ```
 

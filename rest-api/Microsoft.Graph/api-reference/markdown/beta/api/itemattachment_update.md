@@ -39,11 +39,11 @@ Content-type: application/json
 Content-length: 162
 
 {
+  "lastModifiedDateTime": "datetime-value",
   "name": "name-value",
   "contentType": "contentType-value",
   "size": 99,
   "isInline": true,
-  "lastModifiedDateTime": "datetime-value",
   "id": "id-value"
 }
 ```
@@ -60,11 +60,11 @@ Content-type: application/json
 Content-length: 162
 
 {
+  "lastModifiedDateTime": "datetime-value",
   "name": "name-value",
   "contentType": "contentType-value",
   "size": 99,
   "isInline": true,
-  "lastModifiedDateTime": "datetime-value",
   "id": "id-value"
 }
 ```

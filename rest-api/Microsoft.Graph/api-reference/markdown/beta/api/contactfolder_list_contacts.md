@@ -67,6 +67,9 @@ Content-length: 2290
       "nickName": "nickName-value",
       "surname": "surname-value",
       "title": "title-value",
+      "yomiGivenName": "yomiGivenName-value",
+      "yomiSurname": "yomiSurname-value",
+      "yomiCompanyName": "yomiCompanyName-value",
       "generation": "generation-value",
       "emailAddresses": [
         {
@@ -88,10 +91,10 @@ Content-length: 2290
       "homePhones": [
         "homePhones-value"
       ],
+      "mobilePhone1": "mobilePhone1-value",
       "businessPhones": [
         "businessPhones-value"
       ],
-      "mobilePhone1": "mobilePhone1-value",
       "homeAddress": {
         "street": "street-value",
         "city": "city-value",
@@ -113,20 +116,17 @@ Content-length: 2290
         "countryOrRegion": "countryOrRegion-value",
         "postalCode": "postalCode-value"
       },
-      "yomiCompanyName": "yomiCompanyName-value",
-      "yomiGivenName": "yomiGivenName-value",
-      "yomiSurname": "yomiSurname-value",
       "spouseName": "spouseName-value",
       "personalNotes": "personalNotes-value",
       "children": [
         "children-value"
       ],
+      "createdDateTime": "datetime-value",
+      "lastModifiedDateTime": "datetime-value",
       "changeKey": "changeKey-value",
       "categories": [
         "categories-value"
       ],
-      "createdDateTime": "datetime-value",
-      "lastModifiedDateTime": "datetime-value",
       "id": "id-value"
     }
   ]

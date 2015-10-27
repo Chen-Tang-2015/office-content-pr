@@ -18,8 +18,7 @@ Here is a JSON representation of the resource
 {
   "id": "String-value (identifier)",
   "orderHint": "String-value",
-  "type": "String-value (identifier)",
-  "version": "String-value"
+  "type": "String-value (identifier)"
 }
 
 ```
@@ -28,8 +27,7 @@ Here is a JSON representation of the resource
 |:---------------|:--------|:----------|
 |id|String| Read-only.|
 |orderHint|String||
-|type|String| Possible values are: `Status`, `AssignedTo`, `Bucket`. Read-only.|
-|version|String||
+|type|String| Possible values are: `progress`, `assignedTo`, `bucket`. Read-only.|
 
 ### Relationships
 None

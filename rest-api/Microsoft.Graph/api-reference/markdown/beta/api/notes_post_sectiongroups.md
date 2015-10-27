@@ -7,8 +7,8 @@ The following **scopes** are required to execute this API:
 <!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/notes/sectionGroups
+POST /groups/<objectId>/notes/sectionGroups
 POST /drive/root/createdByUser/notes/sectionGroups
-POST /drive/root/lastModifiedByUser/notes/sectionGroups
 
 ```
 ### Request headers

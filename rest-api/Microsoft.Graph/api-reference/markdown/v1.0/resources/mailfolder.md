@@ -30,7 +30,9 @@ Here is a JSON representation of the resource
       "@odata.type": "microsoft.graph.message"
     }
   ],
-  "parentFolderId": "String-value"
+  "parentFolderId": "String-value",
+  "totalItemCount": 1024,
+  "unreadItemCount": 1024
 }
 
 ```
@@ -41,6 +43,8 @@ Here is a JSON representation of the resource
 |displayName|String||
 |id|String| Read-only.|
 |parentFolderId|String||
+|totalItemCount|Int32||
+|unreadItemCount|Int32||
 
 ### Relationships
 | Relationship | Type	|Description|

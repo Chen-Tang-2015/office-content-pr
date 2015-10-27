@@ -67,7 +67,6 @@ Content-length: 790
     }
   },
   "conversationThreadId": "conversationThreadId-value",
-  "conversationId": "conversationId-value",
   "newParticipants": [
     {
       "emailAddress": {
@@ -76,12 +75,13 @@ Content-length: 790
       }
     }
   ],
+  "conversationId": "conversationId-value",
+  "createdDateTime": "datetime-value",
+  "lastModifiedDateTime": "datetime-value",
   "changeKey": "changeKey-value",
   "categories": [
     "categories-value"
   ],
-  "createdDateTime": "datetime-value",
-  "lastModifiedDateTime": "datetime-value",
   "id": "id-value"
 }
 ```
@@ -117,7 +117,6 @@ Content-length: 790
     }
   },
   "conversationThreadId": "conversationThreadId-value",
-  "conversationId": "conversationId-value",
   "newParticipants": [
     {
       "emailAddress": {
@@ -126,12 +125,13 @@ Content-length: 790
       }
     }
   ],
+  "conversationId": "conversationId-value",
+  "createdDateTime": "datetime-value",
+  "lastModifiedDateTime": "datetime-value",
   "changeKey": "changeKey-value",
   "categories": [
     "categories-value"
   ],
-  "createdDateTime": "datetime-value",
-  "lastModifiedDateTime": "datetime-value",
   "id": "id-value"
 }
 ```

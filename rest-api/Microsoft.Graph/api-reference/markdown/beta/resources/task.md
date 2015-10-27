@@ -12,8 +12,7 @@ Here is a JSON representation of the resource
     "assignedToTaskBoardFormat",
     "bucketTaskBoardFormat",
     "details",
-    "statusTaskBoardFormat",
-    "timelineFormat"
+    "progressTaskBoardFormat"
   ],
   "@odata.type": "microsoft.graph.task"
 }-->
@@ -24,8 +23,8 @@ Here is a JSON representation of the resource
     "@odata.type": "microsoft.graph.appliedcategoriescollection"
   },
   "assignedBy": "String-value",
+  "assignedDateTime": "String (timestamp)",
   "assignedTo": "String-value",
-  "assignedToDate": "String (timestamp)",
   "assignedToTaskBoardFormat": {
     "@odata.type": "microsoft.graph.taskboardtaskformat"
   },
@@ -34,64 +33,58 @@ Here is a JSON representation of the resource
   "bucketTaskBoardFormat": {
     "@odata.type": "microsoft.graph.taskboardtaskformat"
   },
-  "completedDate": "String (timestamp)",
+  "completedDateTime": "String (timestamp)",
+  "conversationThreadId": "String-value",
   "createdBy": "String-value",
-  "createdDate": "String (timestamp)",
+  "createdDateTime": "String (timestamp)",
   "details": {
     "@odata.type": "microsoft.graph.taskdetails"
   },
-  "dueDate": "String (timestamp)",
-  "hasNotes": true,
+  "dueDateTime": "String (timestamp)",
+  "hasDescription": true,
   "id": "String-value (identifier)",
-  "numberOfReferences": 1024,
   "orderHint": "String-value",
   "percentComplete": 1024,
   "planId": "String-value",
   "previewType": "String-value",
-  "startDate": "String (timestamp)",
-  "statusTaskBoardFormat": {
+  "progressTaskBoardFormat": {
     "@odata.type": "microsoft.graph.taskboardtaskformat"
   },
-  "timelineFormat": {
-    "@odata.type": "microsoft.graph.timelinetaskformat"
-  },
-  "title": "String-value",
-  "version": "String-value"
+  "startDateTime": "String (timestamp)",
+  "title": "String-value"
 }
 
 ```
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|appliedCategories|[AppliedCategoriesCollection](appliedcategoriescollection.md)||
+|appliedCategories|[appliedCategoriesCollection](appliedcategoriescollection.md)||
 |assignedBy|String||
+|assignedDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |assignedTo|String||
-|assignedToDate|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |assigneePriority|String||
 |bucketId|String||
-|completedDate|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|completedDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|conversationThreadId|String||
 |createdBy|String||
-|createdDate|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|dueDate|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|hasNotes|Boolean||
+|createdDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|dueDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|hasDescription|Boolean||
 |id|String| Read-only.|
-|numberOfReferences|Int32||
 |orderHint|String||
 |percentComplete|Int32||
 |planId|String||
-|previewType|String| Possible values are: `Automatic`, `NoPreview`, `CheckList`, `Notes`, `Reference`.|
-|startDate|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|previewType|String| Possible values are: `automatic`, `noPreview`, `checklist`, `description`, `reference`.|
+|startDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |title|String||
-|version|String||
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|assignedToTaskBoardFormat|[TaskBoardTaskFormat](taskboardtaskformat.md)| Read-only.|
-|bucketTaskBoardFormat|[TaskBoardTaskFormat](taskboardtaskformat.md)| Read-only.|
-|details|[TaskDetails](taskdetails.md)| Read-only.|
-|statusTaskBoardFormat|[TaskBoardTaskFormat](taskboardtaskformat.md)| Read-only.|
-|timelineFormat|[TimelineTaskFormat](timelinetaskformat.md)| Read-only.|
+|assignedToTaskBoardFormat|[taskBoardTaskFormat](taskboardtaskformat.md)| Read-only.|
+|bucketTaskBoardFormat|[taskBoardTaskFormat](taskboardtaskformat.md)| Read-only.|
+|details|[taskDetails](taskdetails.md)| Read-only.|
+|progressTaskBoardFormat|[taskBoardTaskFormat](taskboardtaskformat.md)| Read-only.|
 
 ### Methods
 

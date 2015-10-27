@@ -46,16 +46,13 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 179
+Content-length: 108
 
 {
   "createdBy": "createdBy-value",
   "owner": "owner-value",
   "title": "title-value",
-  "totalTasks": 99,
-  "activeTasks": 99,
-  "id": "id-value",
-  "version": "version-value"
+  "id": "id-value"
 }
 ```
 

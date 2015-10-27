@@ -7,7 +7,7 @@ The following **scopes** are required to execute this API:
 <!-- { "blockType": "ignored" } -->
 ```http
 DELETE /tasks/<id>/bucketTaskBoardFormat
-DELETE /tasks/<id>/statusTaskBoardFormat
+DELETE /tasks/<id>/progressTaskBoardFormat
 DELETE /tasks/<id>/assignedToTaskBoardFormat
 
 ```

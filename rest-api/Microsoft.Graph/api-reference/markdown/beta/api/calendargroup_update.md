@@ -40,8 +40,8 @@ Content-length: 110
 
 {
   "name": "name-value",
-  "changeKey": "changeKey-value",
   "classId": "classId-value",
+  "changeKey": "changeKey-value",
   "id": "id-value"
 }
 ```
@@ -59,8 +59,8 @@ Content-length: 110
 
 {
   "name": "name-value",
-  "changeKey": "changeKey-value",
   "classId": "classId-value",
+  "changeKey": "changeKey-value",
   "id": "id-value"
 }
 ```

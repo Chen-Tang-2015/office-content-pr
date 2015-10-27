@@ -17,8 +17,7 @@ Here is a JSON representation of the resource
 ```json
 {
   "id": "String-value (identifier)",
-  "type": "String-value (identifier)",
-  "version": "String-value"
+  "type": "String-value (identifier)"
 }
 
 ```
@@ -26,8 +25,7 @@ Here is a JSON representation of the resource
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |id|String| Read-only.|
-|type|String| Possible values are: `Status`, `AssignedTo`, `Bucket`. Read-only.|
-|version|String||
+|type|String| Possible values are: `progress`, `assignedTo`, `bucket`. Read-only.|
 
 ### Relationships
 None
@@ -38,7 +36,6 @@ None
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get planTaskBoard](../api/plantaskboard_get.md) | [planTaskBoard](plantaskboard.md) |Read properties and relationships of planTaskBoard object.|
-|[Update](../api/plantaskboard_update.md) | [planTaskBoard](plantaskboard.md)	|Update planTaskBoard object. |
 |[Delete](../api/plantaskboard_delete.md) | None |Delete planTaskBoard object. |
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79

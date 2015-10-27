@@ -6,7 +6,7 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /tasks
+POST /subscribedSkus
 
 ```
 ### Request headers
@@ -26,10 +26,10 @@ If successful, this method returns `201, Created` response code and [TenantDetai
 Here is an example of the request.
 <!-- {
   "blockType": "request",
-  "name": "create_tenantdetail_from_tasks"
+  "name": "create_tenantdetail_from_subscribedskus"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/tasks
+POST https://graph.microsoft.com/v1.0/subscribedSkus
 ```
 In the request body, supply a JSON representation of [TenantDetail](../resources/tenantdetail.md) object.
 ##### Response

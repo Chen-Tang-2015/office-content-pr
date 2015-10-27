@@ -50,11 +50,11 @@ Content-length: 282
   "contentId": "contentId-value",
   "contentLocation": "contentLocation-value",
   "contentBytes": "contentBytes-value",
+  "lastModifiedDateTime": "datetime-value",
   "name": "name-value",
   "contentType": "contentType-value",
   "size": 99,
   "isInline": true,
-  "lastModifiedDateTime": "datetime-value",
   "id": "id-value"
 }
 ```
