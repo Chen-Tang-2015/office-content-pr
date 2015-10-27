@@ -8,7 +8,7 @@ The following **scopes** are required to execute this API:
 ```http
 DELETE /tasks/<id>/details
 DELETE /users/<objectId>/tasks/<id>/details
-DELETE /groups/<objectId>/tasks/<id>/details
+DELETE /users/<objectId>/plans/<id>/tasks/<id>/details
 
 ```
 ### Request headers

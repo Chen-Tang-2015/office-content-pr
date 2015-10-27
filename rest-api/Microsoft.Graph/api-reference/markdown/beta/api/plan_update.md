@@ -20,12 +20,9 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|activeTasks|Int32||
 |createdBy|String||
 |owner|String||
 |title|String||
-|totalTasks|Int32||
-|version|String||
 
 ### Response
 If successful, this method returns a `200 OK` response code and updated [plan](../resources/plan.md) object in the response body.
@@ -39,16 +36,13 @@ Here is an example of the request.
 ```http
 PUT https://graph.microsoft.com/v1.0/plans/<id>
 Content-type: application/json
-Content-length: 179
+Content-length: 108
 
 {
   "createdBy": "createdBy-value",
   "owner": "owner-value",
   "title": "title-value",
-  "totalTasks": 99,
-  "activeTasks": 99,
-  "id": "id-value",
-  "version": "version-value"
+  "id": "id-value"
 }
 ```
 ##### Response
@@ -61,16 +55,13 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 179
+Content-length: 108
 
 {
   "createdBy": "createdBy-value",
   "owner": "owner-value",
   "title": "title-value",
-  "totalTasks": 99,
-  "activeTasks": 99,
-  "id": "id-value",
-  "version": "version-value"
+  "id": "id-value"
 }
 ```
 

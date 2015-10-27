@@ -9,8 +9,8 @@ Here is a JSON representation of the resource
 <!-- {
   "blockType": "resource",
   "optionalProperties": [
-    "contactPhoto",
-    "extensions"
+    "extensions",
+    "photo"
   ],
   "@odata.type": "microsoft.graph.contact"
 }-->
@@ -34,9 +34,6 @@ Here is a JSON representation of the resource
     "String-value"
   ],
   "companyName": "String-value",
-  "contactPhoto": {
-    "@odata.type": "microsoft.graph.photo"
-  },
   "createdDateTime": "String (timestamp)",
   "department": "String-value",
   "displayName": "String-value",
@@ -76,6 +73,9 @@ Here is a JSON representation of the resource
   },
   "parentFolderId": "String-value",
   "personalNotes": "String-value",
+  "photo": {
+    "@odata.type": "microsoft.graph.photo"
+  },
   "profession": "String-value",
   "spouseName": "String-value",
   "surname": "String-value",
@@ -131,8 +131,8 @@ Here is a JSON representation of the resource
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|contactPhoto|[Photo](photo.md)| Read-only.|
 |extensions|[Extension](extension.md) collection| Read-only. Nullable.|
+|photo|[Photo](photo.md)| Read-only.|
 
 ### Methods
 

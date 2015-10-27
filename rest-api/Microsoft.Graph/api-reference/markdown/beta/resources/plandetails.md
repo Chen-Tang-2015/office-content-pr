@@ -25,8 +25,7 @@ Here is a JSON representation of the resource
   "id": "String-value (identifier)",
   "sharedWith": {
     "@odata.type": "microsoft.graph.useridcollection"
-  },
-  "version": "String-value"
+  }
 }
 
 ```
@@ -40,8 +39,7 @@ Here is a JSON representation of the resource
 |category4Description|String||
 |category5Description|String||
 |id|String| Read-only.|
-|sharedWith|[UserIdCollection](useridcollection.md)||
-|version|String||
+|sharedWith|[userIdCollection](useridcollection.md)||
 
 ### Relationships
 None

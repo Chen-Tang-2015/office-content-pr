@@ -15,16 +15,16 @@ Here is a JSON representation of the resource
     "calendarView",
     "conversations",
     "createdOnBehalfOf",
-    "details",
     "drive",
     "events",
-    "groupPhoto",
     "memberOf",
     "members",
+    "notes",
     "owners",
+    "photo",
+    "photos",
     "plans",
     "rejectedSenders",
-    "tasks",
     "threads"
   ],
   "@odata.type": "microsoft.graph.group"
@@ -66,9 +66,6 @@ Here is a JSON representation of the resource
   ],
   "deletionTimestamp": "String (timestamp)",
   "description": "String-value",
-  "details": {
-    "@odata.type": "microsoft.graph.userdetails"
-  },
   "dirSyncEnabled": true,
   "displayName": "String-value",
   "drive": {
@@ -80,9 +77,6 @@ Here is a JSON representation of the resource
       "@odata.type": "microsoft.graph.event"
     }
   ],
-  "groupPhoto": {
-    "@odata.type": "microsoft.graph.photo"
-  },
   "groupTypes": [
     "String-value"
   ],
@@ -103,12 +97,23 @@ Here is a JSON representation of the resource
       "@odata.type": "microsoft.graph.directoryobject"
     }
   ],
+  "notes": {
+    "@odata.type": "microsoft.graph.notes"
+  },
   "objectId": "String-value (identifier)",
   "objectType": "String-value",
   "onPremisesSecurityIdentifier": "String-value",
   "owners": [
     {
       "@odata.type": "microsoft.graph.directoryobject"
+    }
+  ],
+  "photo": {
+    "@odata.type": "microsoft.graph.photo"
+  },
+  "photos": [
+    {
+      "@odata.type": "microsoft.graph.photo"
     }
   ],
   "plans": [
@@ -130,11 +135,6 @@ Here is a JSON representation of the resource
     }
   ],
   "securityEnabled": true,
-  "tasks": [
-    {
-      "@odata.type": "microsoft.graph.task"
-    }
-  ],
   "threads": [
     {
       "@odata.type": "microsoft.graph.conversationthread"
@@ -181,16 +181,16 @@ Here is a JSON representation of the resource
 |calendarView|[Event](event.md) collection| Read-only. Nullable.|
 |conversations|[Conversation](conversation.md) collection| Read-only. Nullable.|
 |createdOnBehalfOf|[DirectoryObject](directoryobject.md)| Read-only.|
-|details|[UserDetails](userdetails.md)| Read-only.|
 |drive|[drive](drive.md)| Read-only.|
 |events|[Event](event.md) collection| Read-only. Nullable.|
-|groupPhoto|[Photo](photo.md)| Read-only.|
 |memberOf|[DirectoryObject](directoryobject.md) collection|Groups that this group is a member of. Inherited from [DirectoryObject].            HTTP Methods: GET (supported for all groups)  Groups that this group is a member of. Inherited from [DirectoryObject].            HTTP Methods: GET (supported for all groups)  Read-only. Nullable.|
 |members|[DirectoryObject](directoryobject.md) collection|Users, contacts, and groups that are members of this group. Inherited from [DirectoryObject].            HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) Users, contacts, and groups that are members of this group. Inherited from [DirectoryObject].            HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) Read-only. Nullable.|
+|notes|[Notes](notes.md)| Read-only.|
 |owners|[DirectoryObject](directoryobject.md) collection|The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Requires version 2013-11-08 or newer. Inherited from [DirectoryObject].            HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Requires version 2013-11-08 or newer. Inherited from [DirectoryObject].            HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) Read-only. Nullable.|
-|plans|[Plan](plan.md) collection| Read-only. Nullable.|
+|photo|[Photo](photo.md)| Read-only.|
+|photos|[Photo](photo.md) collection| Read-only. Nullable.|
+|plans|[plan](plan.md) collection| Read-only. Nullable.|
 |rejectedSenders|[DirectoryObject](directoryobject.md) collection| Read-only. Nullable.|
-|tasks|[Task](task.md) collection| Read-only. Nullable.|
 |threads|[ConversationThread](conversationthread.md) collection| Read-only. Nullable.|
 
 ### Methods
@@ -214,12 +214,12 @@ Here is a JSON representation of the resource
 |[List members](../api/group_list_members.md) |[DirectoryObject](directoryobject.md) collection| Get a member object collection.|
 |[Create owner](../api/group_post_owners.md) |[DirectoryObject](directoryobject.md)| Create a new owner by posting to the owners collection.|
 |[List owners](../api/group_list_owners.md) |[DirectoryObject](directoryobject.md) collection| Get a owner object collection.|
-|[Create Plan](../api/group_post_plans.md) |[Plan](plan.md)| Create a new Plan by posting to the plans collection.|
-|[List plans](../api/group_list_plans.md) |[Plan](plan.md) collection| Get a Plan object collection.|
+|[Create photo](../api/group_post_photos.md) |[Photo](photo.md)| Create a new photo by posting to the photos collection.|
+|[List photos](../api/group_list_photos.md) |[Photo](photo.md) collection| Get a photo object collection.|
+|[Create plan](../api/group_post_plans.md) |[plan](plan.md)| Create a new plan by posting to the plans collection.|
+|[List plans](../api/group_list_plans.md) |[plan](plan.md) collection| Get a plan object collection.|
 |[Create rejectedSender](../api/group_post_rejectedsenders.md) |[DirectoryObject](directoryobject.md)| Create a new rejectedSender by posting to the rejectedSenders collection.|
 |[List rejectedSenders](../api/group_list_rejectedsenders.md) |[DirectoryObject](directoryobject.md) collection| Get a rejectedSender object collection.|
-|[Create Task](../api/group_post_tasks.md) |[Task](task.md)| Create a new Task by posting to the tasks collection.|
-|[List tasks](../api/group_list_tasks.md) |[Task](task.md) collection| Get a Task object collection.|
 |[Create thread](../api/group_post_threads.md) |[ConversationThread](conversationthread.md)| Create a new thread by posting to the threads collection.|
 |[List threads](../api/group_list_threads.md) |[ConversationThread](conversationthread.md) collection| Get a thread object collection.|
 |[Update](../api/group_update.md) | [group](group.md)	|Update group object. |

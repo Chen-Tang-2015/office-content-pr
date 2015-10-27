@@ -8,7 +8,7 @@ The following **scopes** are required to execute this API:
 ```http
 PATCH /tasks/<id>/details
 PATCH /users/<objectId>/tasks/<id>/details
-PATCH /groups/<objectId>/tasks/<id>/details
+PATCH /users/<objectId>/plans/<id>/tasks/<id>/details
 ```
 ### Optional request headers
 | Name       | Type | Description|
@@ -20,11 +20,11 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
+|checklist|checklistItemCollection||
 |completedBy|String||
-|notes|String||
-|previewType|String| Possible values are: `Automatic`, `NoPreview`, `CheckList`, `Notes`, `Reference`.|
-|references|ExternalReferenceCollection||
-|version|String||
+|description|String||
+|previewType|String| Possible values are: `automatic`, `noPreview`, `checklist`, `description`, `reference`.|
+|references|externalReferenceCollection||
 
 ### Response
 If successful, this method returns a `200 OK` response code and updated [taskDetails](../resources/taskdetails.md) object in the response body.
@@ -38,16 +38,17 @@ Here is an example of the request.
 ```http
 PUT https://graph.microsoft.com/v1.0/tasks/<id>/details
 Content-type: application/json
-Content-length: 177
+Content-length: 181
 
 {
-  "notes": "notes-value",
+  "description": "description-value",
   "previewType": "previewType-value",
   "completedBy": "completedBy-value",
   "references": {
   },
-  "id": "id-value",
-  "version": "version-value"
+  "checklist": {
+  },
+  "id": "id-value"
 }
 ```
 ##### Response
@@ -60,16 +61,17 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 177
+Content-length: 181
 
 {
-  "notes": "notes-value",
+  "description": "description-value",
   "previewType": "previewType-value",
   "completedBy": "completedBy-value",
   "references": {
   },
-  "id": "id-value",
-  "version": "version-value"
+  "checklist": {
+  },
+  "id": "id-value"
 }
 ```
 

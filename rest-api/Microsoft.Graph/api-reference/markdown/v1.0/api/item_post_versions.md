@@ -44,7 +44,7 @@ Here is an example of the response.
 ```http
 HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 3050
+Content-length: 3179
 
 {
   "content": "content-value",
@@ -113,6 +113,11 @@ Content-length: 3050
     "state": "state-value"
   },
   "file": {
+    "hashes": {
+      "crc32Hash": "crc32Hash-value",
+      "sha1Hash": "sha1Hash-value"
+    },
+    "mimeType": "mimeType-value"
   },
   "fileSystemInfo": {
     "createdDateTime": "datetime-value",
@@ -153,8 +158,8 @@ Content-length: 3050
     }
   },
   "photo": {
-    "width": 99,
     "height": 99,
+    "width": 99,
     "id": "id-value"
   },
   "searchResult": {

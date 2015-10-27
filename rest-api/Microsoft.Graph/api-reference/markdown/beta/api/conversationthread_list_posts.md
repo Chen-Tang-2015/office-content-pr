@@ -76,7 +76,6 @@ Content-length: 959
         }
       },
       "conversationThreadId": "conversationThreadId-value",
-      "conversationId": "conversationId-value",
       "newParticipants": [
         {
           "emailAddress": {
@@ -85,12 +84,13 @@ Content-length: 959
           }
         }
       ],
+      "conversationId": "conversationId-value",
+      "createdDateTime": "datetime-value",
+      "lastModifiedDateTime": "datetime-value",
       "changeKey": "changeKey-value",
       "categories": [
         "categories-value"
       ],
-      "createdDateTime": "datetime-value",
-      "lastModifiedDateTime": "datetime-value",
       "id": "id-value"
     }
   ]

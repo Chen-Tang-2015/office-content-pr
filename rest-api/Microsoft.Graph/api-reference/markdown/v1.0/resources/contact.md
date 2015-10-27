@@ -9,8 +9,7 @@ Here is a JSON representation of the resource
 <!-- {
   "blockType": "resource",
   "optionalProperties": [
-    "contactPhoto",
-    "extensions"
+    "photo"
   ],
   "@odata.type": "microsoft.graph.contact"
 }-->
@@ -34,20 +33,12 @@ Here is a JSON representation of the resource
     "String-value"
   ],
   "companyName": "String-value",
-  "contactPhoto": {
-    "@odata.type": "microsoft.graph.photo"
-  },
   "createdDateTime": "String (timestamp)",
   "department": "String-value",
   "displayName": "String-value",
   "emailAddresses": [
     {
       "@odata.type": "microsoft.graph.emailaddress"
-    }
-  ],
-  "extensions": [
-    {
-      "@odata.type": "microsoft.graph.extension"
     }
   ],
   "fileAs": "String-value",
@@ -76,6 +67,9 @@ Here is a JSON representation of the resource
   },
   "parentFolderId": "String-value",
   "personalNotes": "String-value",
+  "photo": {
+    "@odata.type": "microsoft.graph.photo"
+  },
   "profession": "String-value",
   "spouseName": "String-value",
   "surname": "String-value",
@@ -131,16 +125,13 @@ Here is a JSON representation of the resource
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|contactPhoto|[Photo](photo.md)| Read-only.|
-|extensions|[Extension](extension.md) collection| Read-only. Nullable.|
+|photo|[Photo](photo.md)| Read-only.|
 
 ### Methods
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get contact](../api/contact_get.md) | [contact](contact.md) |Read properties and relationships of contact object.|
-|[Create Extension](../api/contact_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the extensions collection.|
-|[List extensions](../api/contact_list_extensions.md) |[Extension](extension.md) collection| Get a Extension object collection.|
 |[Update](../api/contact_update.md) | [contact](contact.md)	|Update contact object. |
 |[Delete](../api/contact_delete.md) | None |Delete contact object. |
 

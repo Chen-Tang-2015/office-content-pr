@@ -57,11 +57,11 @@ Content-length: 215
 {
   "value": [
     {
+      "lastModifiedDateTime": "datetime-value",
       "name": "name-value",
       "contentType": "contentType-value",
       "size": 99,
       "isInline": true,
-      "lastModifiedDateTime": "datetime-value",
       "id": "id-value"
     }
   ]

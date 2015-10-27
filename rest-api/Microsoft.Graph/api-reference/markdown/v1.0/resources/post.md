@@ -10,7 +10,6 @@ Here is a JSON representation of the resource
   "blockType": "resource",
   "optionalProperties": [
     "attachments",
-    "extensions",
     "inReplyTo"
   ],
   "@odata.type": "microsoft.graph.post"
@@ -33,11 +32,6 @@ Here is a JSON representation of the resource
   "conversationId": "String-value",
   "conversationThreadId": "String-value",
   "createdDateTime": "String (timestamp)",
-  "extensions": [
-    {
-      "@odata.type": "microsoft.graph.extension"
-    }
-  ],
   "from": {
     "@odata.type": "microsoft.graph.recipient"
   },
@@ -80,7 +74,6 @@ Here is a JSON representation of the resource
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |attachments|[Attachment](attachment.md) collection| Read-only. Nullable.|
-|extensions|[Extension](extension.md) collection| Read-only. Nullable.|
 |inReplyTo|[Post](post.md)| Read-only.|
 
 ### Methods
@@ -90,8 +83,6 @@ Here is a JSON representation of the resource
 |[Get post](../api/post_get.md) | [post](post.md) |Read properties and relationships of post object.|
 |[Create Attachment](../api/post_post_attachments.md) |[Attachment](attachment.md)| Create a new Attachment by posting to the attachments collection.|
 |[List attachments](../api/post_list_attachments.md) |[Attachment](attachment.md) collection| Get a Attachment object collection.|
-|[Create Extension](../api/post_post_extensions.md) |[Extension](extension.md)| Create a new Extension by posting to the extensions collection.|
-|[List extensions](../api/post_list_extensions.md) |[Extension](extension.md) collection| Get a Extension object collection.|
 |[Update](../api/post_update.md) | [post](post.md)	|Update post object. |
 |[Delete](../api/post_delete.md) | None |Delete post object. |
 

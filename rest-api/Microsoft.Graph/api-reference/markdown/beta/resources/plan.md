@@ -13,16 +13,14 @@ Here is a JSON representation of the resource
     "bucketTaskBoard",
     "buckets",
     "details",
-    "statusTaskBoard",
-    "tasks",
-    "timeline"
+    "progressTaskBoard",
+    "tasks"
   ],
   "@odata.type": "microsoft.graph.plan"
 }-->
 
 ```json
 {
-  "activeTasks": 1024,
   "assignedToTaskBoard": {
     "@odata.type": "microsoft.graph.plantaskboard"
   },
@@ -40,7 +38,7 @@ Here is a JSON representation of the resource
   },
   "id": "String-value (identifier)",
   "owner": "String-value",
-  "statusTaskBoard": {
+  "progressTaskBoard": {
     "@odata.type": "microsoft.graph.plantaskboard"
   },
   "tasks": [
@@ -48,46 +46,37 @@ Here is a JSON representation of the resource
       "@odata.type": "microsoft.graph.task"
     }
   ],
-  "timeline": {
-    "@odata.type": "microsoft.graph.plantimeline"
-  },
-  "title": "String-value",
-  "totalTasks": 1024,
-  "version": "String-value"
+  "title": "String-value"
 }
 
 ```
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|activeTasks|Int32||
 |createdBy|String||
 |id|String| Read-only.|
 |owner|String||
 |title|String||
-|totalTasks|Int32||
-|version|String||
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|assignedToTaskBoard|[PlanTaskBoard](plantaskboard.md)| Read-only.|
-|bucketTaskBoard|[PlanTaskBoard](plantaskboard.md)| Read-only.|
-|buckets|[Bucket](bucket.md) collection| Read-only. Nullable.|
-|details|[PlanDetails](plandetails.md)| Read-only.|
-|statusTaskBoard|[PlanTaskBoard](plantaskboard.md)| Read-only.|
-|tasks|[Task](task.md) collection| Read-only. Nullable.|
-|timeline|[PlanTimeline](plantimeline.md)| Read-only.|
+|assignedToTaskBoard|[planTaskBoard](plantaskboard.md)| Read-only.|
+|bucketTaskBoard|[planTaskBoard](plantaskboard.md)| Read-only.|
+|buckets|[bucket](bucket.md) collection| Read-only. Nullable.|
+|details|[planDetails](plandetails.md)| Read-only.|
+|progressTaskBoard|[planTaskBoard](plantaskboard.md)| Read-only.|
+|tasks|[task](task.md) collection| Read-only. Nullable.|
 
 ### Methods
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get plan](../api/plan_get.md) | [plan](plan.md) |Read properties and relationships of plan object.|
-|[Create Bucket](../api/plan_post_buckets.md) |[Bucket](bucket.md)| Create a new Bucket by posting to the buckets collection.|
-|[List buckets](../api/plan_list_buckets.md) |[Bucket](bucket.md) collection| Get a Bucket object collection.|
-|[Create Task](../api/plan_post_tasks.md) |[Task](task.md)| Create a new Task by posting to the tasks collection.|
-|[List tasks](../api/plan_list_tasks.md) |[Task](task.md) collection| Get a Task object collection.|
+|[Create bucket](../api/plan_post_buckets.md) |[bucket](bucket.md)| Create a new bucket by posting to the buckets collection.|
+|[List buckets](../api/plan_list_buckets.md) |[bucket](bucket.md) collection| Get a bucket object collection.|
+|[Create task](../api/plan_post_tasks.md) |[task](task.md)| Create a new task by posting to the tasks collection.|
+|[List tasks](../api/plan_list_tasks.md) |[task](task.md) collection| Get a task object collection.|
 |[Update](../api/plan_update.md) | [plan](plan.md)	|Update plan object. |
 |[Delete](../api/plan_delete.md) | None |Delete plan object. |
 

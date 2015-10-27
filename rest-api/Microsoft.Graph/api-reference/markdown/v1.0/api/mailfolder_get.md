@@ -46,12 +46,14 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 130
+Content-length: 179
 
 {
-  "parentFolderId": "parentFolderId-value",
   "displayName": "displayName-value",
+  "parentFolderId": "parentFolderId-value",
   "childFolderCount": 99,
+  "unreadItemCount": 99,
+  "totalItemCount": 99,
   "id": "id-value"
 }
 ```

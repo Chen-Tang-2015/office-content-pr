@@ -8,7 +8,7 @@ The following **scopes** are required to execute this API:
 ```http
 GET /users/<objectId>/calendar/events
 GET /groups/<objectId>/calendar/events
-GET /users/<objectId>/calendars/<id>/events
+GET /drive/root/createdByUser/calendar/events
 ```
 ### Optional query parameters
 |Name|Value|Description|
@@ -52,11 +52,21 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 2149
+Content-length: 2405
 
 {
   "value": [
     {
+      "originalStartTimeZone": "originalStartTimeZone-value",
+      "originalEndTimeZone": "originalEndTimeZone-value",
+      "responseStatus": {
+        "response": "response-value",
+        "time": "datetime-value"
+      },
+      "iCalUId": "iCalUId-value",
+      "reminderMinutesBeforeStart": 99,
+      "isReminderOn": true,
+      "hasAttachments": true,
       "subject": "subject-value",
       "body": {
         "contentType": "contentType-value",
@@ -64,41 +74,24 @@ Content-length: 2149
       },
       "bodyPreview": "bodyPreview-value",
       "importance": "importance-value",
-      "hasAttachments": true,
-      "start": "datetime-value",
-      "startTimeZone": "startTimeZone-value",
-      "end": "datetime-value",
-      "endTimeZone": "endTimeZone-value",
-      "reminder": 99,
+      "sensitivity": "sensitivity-value",
+      "start": {
+        "dateTime": "dateTime-value",
+        "timeZone": "timeZone-value"
+      },
+      "originalStart": "datetime-value",
+      "end": {
+        "dateTime": "dateTime-value",
+        "timeZone": "timeZone-value"
+      },
       "location": {
         "altitude": 99,
         "latitude": 99,
         "longitude": 99
       },
-      "showAs": "showAs-value",
-      "responseStatus": {
-        "response": "response-value",
-        "time": "datetime-value"
-      },
       "isAllDay": true,
       "isCancelled": true,
       "isOrganizer": true,
-      "responseRequested": true,
-      "type": "type-value",
-      "seriesMasterId": "seriesMasterId-value",
-      "attendees": [
-        {
-          "emailAddress": {
-            "name": "name-value",
-            "address": "address-value"
-          },
-          "status": {
-            "response": "response-value",
-            "time": "datetime-value"
-          },
-          "type": "type-value"
-        }
-      ],
       "recurrence": {
         "pattern": {
           "type": "type-value",
@@ -113,26 +106,41 @@ Content-length: 2149
         },
         "range": {
           "type": "type-value",
-          "startDate": "datetime-value",
-          "endDate": "datetime-value",
+          "startDate": "startDate-value",
+          "endDate": "endDate-value",
           "numberOfOccurrences": 99
         }
       },
+      "responseRequested": true,
+      "seriesMasterId": "seriesMasterId-value",
+      "showAs": "showAs-value",
+      "type": "type-value",
+      "attendees": [
+        {
+          "status": {
+            "response": "response-value",
+            "time": "datetime-value"
+          },
+          "type": "type-value",
+          "emailAddress": {
+            "name": "name-value",
+            "address": "address-value"
+          }
+        }
+      ],
       "organizer": {
         "emailAddress": {
           "name": "name-value",
           "address": "address-value"
         }
       },
-      "iCalUId": "iCalUId-value",
       "webLink": "webLink-value",
-      "originalStart": "datetime-value",
+      "createdDateTime": "datetime-value",
+      "lastModifiedDateTime": "datetime-value",
       "changeKey": "changeKey-value",
       "categories": [
         "categories-value"
       ],
-      "createdDateTime": "datetime-value",
-      "lastModifiedDateTime": "datetime-value",
       "id": "id-value"
     }
   ]

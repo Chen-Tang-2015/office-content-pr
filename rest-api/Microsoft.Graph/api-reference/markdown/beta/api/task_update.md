@@ -20,25 +20,24 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|appliedCategories|AppliedCategoriesCollection||
+|appliedCategories|appliedCategoriesCollection||
 |assignedBy|String||
+|assignedDateTime|DateTimeOffset||
 |assignedTo|String||
-|assignedToDate|DateTimeOffset||
 |assigneePriority|String||
 |bucketId|String||
-|completedDate|DateTimeOffset||
+|completedDateTime|DateTimeOffset||
+|conversationThreadId|String||
 |createdBy|String||
-|createdDate|DateTimeOffset||
-|dueDate|DateTimeOffset||
-|hasNotes|Boolean||
-|numberOfReferences|Int32||
+|createdDateTime|DateTimeOffset||
+|dueDateTime|DateTimeOffset||
+|hasDescription|Boolean||
 |orderHint|String||
 |percentComplete|Int32||
 |planId|String||
-|previewType|String| Possible values are: `Automatic`, `NoPreview`, `CheckList`, `Notes`, `Reference`.|
-|startDate|DateTimeOffset||
+|previewType|String| Possible values are: `automatic`, `noPreview`, `checklist`, `description`, `reference`.|
+|startDateTime|DateTimeOffset||
 |title|String||
-|version|String||
 
 ### Response
 If successful, this method returns a `200 OK` response code and updated [task](../resources/task.md) object in the response body.
@@ -52,7 +51,7 @@ Here is an example of the request.
 ```http
 PUT https://graph.microsoft.com/v1.0/tasks/<id>
 Content-type: application/json
-Content-length: 641
+Content-length: 663
 
 {
   "createdBy": "createdBy-value",
@@ -63,19 +62,18 @@ Content-length: 641
   "orderHint": "orderHint-value",
   "assigneePriority": "assigneePriority-value",
   "percentComplete": 99,
-  "startDate": "datetime-value",
-  "assignedToDate": "datetime-value",
-  "createdDate": "datetime-value",
+  "startDateTime": "datetime-value",
+  "assignedDateTime": "datetime-value",
+  "createdDateTime": "datetime-value",
   "assignedBy": "assignedBy-value",
-  "dueDate": "datetime-value",
-  "hasNotes": true,
+  "dueDateTime": "datetime-value",
+  "hasDescription": true,
   "previewType": "previewType-value",
-  "completedDate": "datetime-value",
-  "numberOfReferences": 99,
+  "completedDateTime": "datetime-value",
   "appliedCategories": {
   },
-  "id": "id-value",
-  "version": "version-value"
+  "conversationThreadId": "conversationThreadId-value",
+  "id": "id-value"
 }
 ```
 ##### Response
@@ -88,7 +86,7 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 641
+Content-length: 663
 
 {
   "createdBy": "createdBy-value",
@@ -99,19 +97,18 @@ Content-length: 641
   "orderHint": "orderHint-value",
   "assigneePriority": "assigneePriority-value",
   "percentComplete": 99,
-  "startDate": "datetime-value",
-  "assignedToDate": "datetime-value",
-  "createdDate": "datetime-value",
+  "startDateTime": "datetime-value",
+  "assignedDateTime": "datetime-value",
+  "createdDateTime": "datetime-value",
   "assignedBy": "assignedBy-value",
-  "dueDate": "datetime-value",
-  "hasNotes": true,
+  "dueDateTime": "datetime-value",
+  "hasDescription": true,
   "previewType": "previewType-value",
-  "completedDate": "datetime-value",
-  "numberOfReferences": 99,
+  "completedDateTime": "datetime-value",
   "appliedCategories": {
   },
-  "id": "id-value",
-  "version": "version-value"
+  "conversationThreadId": "conversationThreadId-value",
+  "id": "id-value"
 }
 ```
 

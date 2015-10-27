@@ -7,8 +7,8 @@ The following **scopes** are required to execute this API:
 <!-- { "blockType": "ignored" } -->
 ```http
 PATCH /users/<objectId>/notes/pages/<id>
+PATCH /groups/<objectId>/notes/pages/<id>
 PATCH /drive/root/createdByUser/notes/pages/<id>
-PATCH /drive/root/lastModifiedByUser/notes/pages/<id>
 ```
 ### Optional request headers
 | Name       | Type | Description|

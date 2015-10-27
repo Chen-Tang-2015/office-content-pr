@@ -52,7 +52,7 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 3635
+Content-length: 3784
 
 {
   "value": [
@@ -123,6 +123,11 @@ Content-length: 3635
         "state": "state-value"
       },
       "file": {
+        "hashes": {
+          "crc32Hash": "crc32Hash-value",
+          "sha1Hash": "sha1Hash-value"
+        },
+        "mimeType": "mimeType-value"
       },
       "fileSystemInfo": {
         "createdDateTime": "datetime-value",
@@ -163,8 +168,8 @@ Content-length: 3635
         }
       },
       "photo": {
-        "width": 99,
         "height": 99,
+        "width": 99,
         "id": "id-value"
       },
       "searchResult": {

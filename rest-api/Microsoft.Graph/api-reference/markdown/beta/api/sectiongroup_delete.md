@@ -7,8 +7,8 @@ The following **scopes** are required to execute this API:
 <!-- { "blockType": "ignored" } -->
 ```http
 DELETE /users/<objectId>/notes/sectionGroups/<id>
+DELETE /groups/<objectId>/notes/sectionGroups/<id>
 DELETE /drive/root/createdByUser/notes/sectionGroups/<id>
-DELETE /drive/root/lastModifiedByUser/notes/sectionGroups/<id>
 
 ```
 ### Request headers

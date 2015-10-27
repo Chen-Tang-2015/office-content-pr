@@ -29,6 +29,7 @@ In the request body, supply the values for relevant fields that should be update
 |from|Recipient||
 |hasAttachments|Boolean||
 |importance|String| Possible values are: `Low`, `Normal`, `High`.|
+|inferenceClassification|String| Possible values are: `Focused`, `Other`.|
 |isDeliveryReceiptRequested|Boolean||
 |isDraft|Boolean||
 |isRead|Boolean||
@@ -57,9 +58,12 @@ Here is an example of the request.
 ```http
 
 Content-type: application/json
-Content-length: 1598
+Content-length: 1660
 
 {
+  "receivedDateTime": "datetime-value",
+  "sentDateTime": "datetime-value",
+  "hasAttachments": true,
   "subject": "subject-value",
   "body": {
     "contentType": "contentType-value",
@@ -67,15 +71,14 @@ Content-length: 1598
   },
   "bodyPreview": "bodyPreview-value",
   "importance": "importance-value",
-  "hasAttachments": true,
   "parentFolderId": "parentFolderId-value",
-  "from": {
+  "sender": {
     "emailAddress": {
       "name": "name-value",
       "address": "address-value"
     }
   },
-  "sender": {
+  "from": {
     "emailAddress": {
       "name": "name-value",
       "address": "address-value"
@@ -118,19 +121,18 @@ Content-length: 1598
     "contentType": "contentType-value",
     "content": "content-value"
   },
-  "receivedDateTime": "datetime-value",
-  "sentDateTime": "datetime-value",
   "isDeliveryReceiptRequested": true,
   "isReadReceiptRequested": true,
-  "isDraft": true,
   "isRead": true,
+  "isDraft": true,
   "webLink": "webLink-value",
+  "inferenceClassification": "inferenceClassification-value",
+  "createdDateTime": "datetime-value",
+  "lastModifiedDateTime": "datetime-value",
   "changeKey": "changeKey-value",
   "categories": [
     "categories-value"
   ],
-  "createdDateTime": "datetime-value",
-  "lastModifiedDateTime": "datetime-value",
   "id": "id-value",
   "meetingMessageType": "meetingMessageType-value"
 }
@@ -145,9 +147,12 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 1598
+Content-length: 1660
 
 {
+  "receivedDateTime": "datetime-value",
+  "sentDateTime": "datetime-value",
+  "hasAttachments": true,
   "subject": "subject-value",
   "body": {
     "contentType": "contentType-value",
@@ -155,15 +160,14 @@ Content-length: 1598
   },
   "bodyPreview": "bodyPreview-value",
   "importance": "importance-value",
-  "hasAttachments": true,
   "parentFolderId": "parentFolderId-value",
-  "from": {
+  "sender": {
     "emailAddress": {
       "name": "name-value",
       "address": "address-value"
     }
   },
-  "sender": {
+  "from": {
     "emailAddress": {
       "name": "name-value",
       "address": "address-value"
@@ -206,19 +210,18 @@ Content-length: 1598
     "contentType": "contentType-value",
     "content": "content-value"
   },
-  "receivedDateTime": "datetime-value",
-  "sentDateTime": "datetime-value",
   "isDeliveryReceiptRequested": true,
   "isReadReceiptRequested": true,
-  "isDraft": true,
   "isRead": true,
+  "isDraft": true,
   "webLink": "webLink-value",
+  "inferenceClassification": "inferenceClassification-value",
+  "createdDateTime": "datetime-value",
+  "lastModifiedDateTime": "datetime-value",
   "changeKey": "changeKey-value",
   "categories": [
     "categories-value"
   ],
-  "createdDateTime": "datetime-value",
-  "lastModifiedDateTime": "datetime-value",
   "id": "id-value",
   "meetingMessageType": "meetingMessageType-value"
 }

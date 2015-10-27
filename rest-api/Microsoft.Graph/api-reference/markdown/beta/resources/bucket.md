@@ -16,7 +16,6 @@ Here is a JSON representation of the resource
 
 ```json
 {
-  "activeTasks": 1024,
   "id": "String-value (identifier)",
   "name": "String-value",
   "orderHint": "String-value",
@@ -25,35 +24,30 @@ Here is a JSON representation of the resource
     {
       "@odata.type": "microsoft.graph.task"
     }
-  ],
-  "totalTasks": 1024,
-  "version": "String-value"
+  ]
 }
 
 ```
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|activeTasks|Int32||
 |id|String| Read-only.|
 |name|String||
 |orderHint|String||
 |planId|String||
-|totalTasks|Int32||
-|version|String||
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|tasks|[Task](task.md) collection| Read-only. Nullable.|
+|tasks|[task](task.md) collection| Read-only. Nullable.|
 
 ### Methods
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get bucket](../api/bucket_get.md) | [bucket](bucket.md) |Read properties and relationships of bucket object.|
-|[Create Task](../api/bucket_post_tasks.md) |[Task](task.md)| Create a new Task by posting to the tasks collection.|
-|[List tasks](../api/bucket_list_tasks.md) |[Task](task.md) collection| Get a Task object collection.|
+|[Create task](../api/bucket_post_tasks.md) |[task](task.md)| Create a new task by posting to the tasks collection.|
+|[List tasks](../api/bucket_list_tasks.md) |[task](task.md) collection| Get a task object collection.|
 |[Update](../api/bucket_update.md) | [bucket](bucket.md)	|Update bucket object. |
 |[Delete](../api/bucket_delete.md) | None |Delete bucket object. |
 

@@ -8,7 +8,7 @@ The following **scopes** are required to execute this API:
 ```http
 PATCH /users/<objectId>/calendar
 PATCH /groups/<objectId>/calendar
-PATCH /users/<objectId>/calendars/<id>
+PATCH /drive/root/createdByUser/calendar
 ```
 ### Optional request headers
 | Name       | Type | Description|
@@ -40,8 +40,8 @@ Content-length: 106
 
 {
   "name": "name-value",
-  "changeKey": "changeKey-value",
   "color": "color-value",
+  "changeKey": "changeKey-value",
   "id": "id-value"
 }
 ```
@@ -59,8 +59,8 @@ Content-length: 106
 
 {
   "name": "name-value",
-  "changeKey": "changeKey-value",
   "color": "color-value",
+  "changeKey": "changeKey-value",
   "id": "id-value"
 }
 ```

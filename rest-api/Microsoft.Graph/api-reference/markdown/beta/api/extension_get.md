@@ -8,7 +8,7 @@ The following **scopes** are required to execute this API:
 ```http
 GET /users/<objectId>/events/<id>/extensions/<id>
 GET /groups/<objectId>/events/<id>/extensions/<id>
-GET /users/<objectId>/messages/<id>/extensions/<id>
+GET /users/<objectId>/contacts/<id>/extensions/<id>
 ```
 ### Optional query parameters
 |Name|Value|Description|

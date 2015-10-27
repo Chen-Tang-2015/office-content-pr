@@ -60,6 +60,9 @@ Content-type: application/json
 Content-length: 1598
 
 {
+  "receivedDateTime": "datetime-value",
+  "sentDateTime": "datetime-value",
+  "hasAttachments": true,
   "subject": "subject-value",
   "body": {
     "contentType": "contentType-value",
@@ -67,15 +70,14 @@ Content-length: 1598
   },
   "bodyPreview": "bodyPreview-value",
   "importance": "importance-value",
-  "hasAttachments": true,
   "parentFolderId": "parentFolderId-value",
-  "from": {
+  "sender": {
     "emailAddress": {
       "name": "name-value",
       "address": "address-value"
     }
   },
-  "sender": {
+  "from": {
     "emailAddress": {
       "name": "name-value",
       "address": "address-value"
@@ -118,19 +120,17 @@ Content-length: 1598
     "contentType": "contentType-value",
     "content": "content-value"
   },
-  "receivedDateTime": "datetime-value",
-  "sentDateTime": "datetime-value",
   "isDeliveryReceiptRequested": true,
   "isReadReceiptRequested": true,
-  "isDraft": true,
   "isRead": true,
+  "isDraft": true,
   "webLink": "webLink-value",
+  "createdDateTime": "datetime-value",
+  "lastModifiedDateTime": "datetime-value",
   "changeKey": "changeKey-value",
   "categories": [
     "categories-value"
   ],
-  "createdDateTime": "datetime-value",
-  "lastModifiedDateTime": "datetime-value",
   "id": "id-value",
   "meetingMessageType": "meetingMessageType-value"
 }
@@ -148,6 +148,9 @@ Content-type: application/json
 Content-length: 1598
 
 {
+  "receivedDateTime": "datetime-value",
+  "sentDateTime": "datetime-value",
+  "hasAttachments": true,
   "subject": "subject-value",
   "body": {
     "contentType": "contentType-value",
@@ -155,15 +158,14 @@ Content-length: 1598
   },
   "bodyPreview": "bodyPreview-value",
   "importance": "importance-value",
-  "hasAttachments": true,
   "parentFolderId": "parentFolderId-value",
-  "from": {
+  "sender": {
     "emailAddress": {
       "name": "name-value",
       "address": "address-value"
     }
   },
-  "sender": {
+  "from": {
     "emailAddress": {
       "name": "name-value",
       "address": "address-value"
@@ -206,19 +208,17 @@ Content-length: 1598
     "contentType": "contentType-value",
     "content": "content-value"
   },
-  "receivedDateTime": "datetime-value",
-  "sentDateTime": "datetime-value",
   "isDeliveryReceiptRequested": true,
   "isReadReceiptRequested": true,
-  "isDraft": true,
   "isRead": true,
+  "isDraft": true,
   "webLink": "webLink-value",
+  "createdDateTime": "datetime-value",
+  "lastModifiedDateTime": "datetime-value",
   "changeKey": "changeKey-value",
   "categories": [
     "categories-value"
   ],
-  "createdDateTime": "datetime-value",
-  "lastModifiedDateTime": "datetime-value",
   "id": "id-value",
   "meetingMessageType": "meetingMessageType-value"
 }

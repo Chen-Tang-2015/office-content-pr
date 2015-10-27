@@ -58,8 +58,8 @@ Content-length: 151
   "value": [
     {
       "name": "name-value",
-      "changeKey": "changeKey-value",
       "color": "color-value",
+      "changeKey": "changeKey-value",
       "id": "id-value"
     }
   ]

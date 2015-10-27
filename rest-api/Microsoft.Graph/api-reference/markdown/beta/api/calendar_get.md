@@ -8,7 +8,7 @@ The following **scopes** are required to execute this API:
 ```http
 GET /users/<objectId>/calendar
 GET /groups/<objectId>/calendar
-GET /users/<objectId>/calendars/<id>
+GET /drive/root/createdByUser/calendar
 ```
 ### Optional query parameters
 |Name|Value|Description|
@@ -50,8 +50,8 @@ Content-length: 106
 
 {
   "name": "name-value",
-  "changeKey": "changeKey-value",
   "color": "color-value",
+  "changeKey": "changeKey-value",
   "id": "id-value"
 }
 ```

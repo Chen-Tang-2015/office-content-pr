@@ -6,7 +6,7 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /plans
+POST /oauth2PermissionGrants
 
 ```
 ### Request headers
@@ -26,10 +26,10 @@ If successful, this method returns `201, Created` response code and [ServicePrin
 Here is an example of the request.
 <!-- {
   "blockType": "request",
-  "name": "create_serviceprincipal_from_plans"
+  "name": "create_serviceprincipal_from_oauth2permissiongrants"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/plans
+POST https://graph.microsoft.com/v1.0/oauth2PermissionGrants
 ```
 In the request body, supply a JSON representation of [ServicePrincipal](../resources/serviceprincipal.md) object.
 ##### Response

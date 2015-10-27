@@ -7,7 +7,7 @@ The following **scopes** are required to execute this API:
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /tasks/<id>/bucketTaskBoardFormat
-GET /tasks/<id>/statusTaskBoardFormat
+GET /tasks/<id>/progressTaskBoardFormat
 GET /tasks/<id>/assignedToTaskBoardFormat
 ```
 ### Optional query parameters
@@ -46,13 +46,12 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 110
+Content-length: 80
 
 {
   "type": "type-value",
   "orderHint": "orderHint-value",
-  "id": "id-value",
-  "version": "version-value"
+  "id": "id-value"
 }
 ```
 
