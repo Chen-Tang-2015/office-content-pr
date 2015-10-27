@@ -25,7 +25,9 @@ The process is simple and should be familiar to everyone at this point. Simply f
 
 **Key things to consider:** 
 
+* Edit markdows in either 1.0 or beta folder - not both. If your API is available in beta only, then update the beta folder. If your API is available in 1.0 and beta, finish the updates to 1.0 folder. We will then use some tools to identify delta and copy over as many descriptions as possible. 
 * Add object, property, method, and parameter descriptions. 
+* Review all methods available in the resource. If you don't support certain methods such as deletes, patch updates, etc. remove them from the resource file's methods table. 
 * Note: Same descriptions can appear in many places. For example, the method descriptions appear in object Tasks table and also in the API file itself. Same object can appear as a relationship in many places. The descriptions that we add should be consistent across these locations.
 * For APIs, add the **scopes** needed under the prerequisites section.
 * For APIs, verify/edit HTTP request. There are hundreds of ways to reach the resource/methods through various resource paths. We have selected only a few for brevity. Add the ones that you wish to highlight. 
