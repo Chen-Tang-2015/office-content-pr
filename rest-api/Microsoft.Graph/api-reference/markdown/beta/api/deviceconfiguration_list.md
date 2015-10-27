@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "get_deviceconfiguration"
 }-->
 ```http
-GET https://graph.microsoft.com/v1.0/deviceConfiguration
+GET https://graph.microsoft.com/beta/deviceConfiguration
 ```
 ##### Response
 Here is an example of the response.

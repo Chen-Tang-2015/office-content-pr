@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_directoryroletemplate_from_directoryroles"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/directoryRoles
+POST https://graph.microsoft.com/beta/directoryRoles
 ```
 In the request body, supply a JSON representation of [DirectoryRoleTemplate](../resources/directoryroletemplate.md) object.
 ##### Response

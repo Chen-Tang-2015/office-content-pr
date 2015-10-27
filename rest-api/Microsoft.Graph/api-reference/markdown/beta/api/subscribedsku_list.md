@@ -30,7 +30,7 @@ Here is an example of the request.
   "name": "get_subscribedskus"
 }-->
 ```http
-GET https://graph.microsoft.com/v1.0/subscribedSkus
+GET https://graph.microsoft.com/beta/subscribedSkus
 ```
 ##### Response
 Here is an example of the response.

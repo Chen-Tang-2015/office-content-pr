@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_task_from_bucket"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/buckets/<id>
+POST https://graph.microsoft.com/beta/buckets/<id>
 ```
 In the request body, supply a JSON representation of [task](../resources/task.md) object.
 ##### Response

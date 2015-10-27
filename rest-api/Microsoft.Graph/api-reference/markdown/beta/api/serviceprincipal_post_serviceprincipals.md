@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_serviceprincipal_from_plans"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/plans
+POST https://graph.microsoft.com/beta/plans
 ```
 In the request body, supply a JSON representation of [ServicePrincipal](../resources/serviceprincipal.md) object.
 ##### Response

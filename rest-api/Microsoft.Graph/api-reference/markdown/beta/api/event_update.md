@@ -62,7 +62,7 @@ Here is an example of the request.
   "name": "update_event"
 }-->
 ```http
-PUT https://graph.microsoft.com/v1.0/users/<objectId>/events/<id>
+PUT https://graph.microsoft.com/beta/users/<objectId>/events/<id>
 Content-type: application/json
 Content-length: 2036
 

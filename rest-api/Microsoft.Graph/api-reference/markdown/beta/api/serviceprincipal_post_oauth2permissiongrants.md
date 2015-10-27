@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_oauth2permissiongrant_from_serviceprincipal"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/servicePrincipals/<objectId>
+POST https://graph.microsoft.com/beta/servicePrincipals/<objectId>
 ```
 In the request body, supply a JSON representation of [OAuth2PermissionGrant](../resources/oauth2permissiongrant.md) object.
 ##### Response

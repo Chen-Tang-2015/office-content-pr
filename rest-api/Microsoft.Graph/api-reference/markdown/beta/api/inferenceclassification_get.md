@@ -34,7 +34,7 @@ Here is an example of the request.
   "name": "get_inferenceclassification"
 }-->
 ```http
-GET https://graph.microsoft.com/v1.0/users/<objectId>/inferenceClassification
+GET https://graph.microsoft.com/beta/users/<objectId>/inferenceClassification
 ```
 ##### Response
 Here is an example of the response.

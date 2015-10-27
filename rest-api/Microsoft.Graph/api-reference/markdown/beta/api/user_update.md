@@ -83,7 +83,7 @@ Here is an example of the request.
   "name": "update_user"
 }-->
 ```http
-PUT https://graph.microsoft.com/v1.0/users/<objectId>
+PUT https://graph.microsoft.com/beta/users/<objectId>
 Content-type: application/json
 Content-length: 2708
 

@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_tenantdetail_from_tasks"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/tasks
+POST https://graph.microsoft.com/beta/tasks
 ```
 In the request body, supply a JSON representation of [TenantDetail](../resources/tenantdetail.md) object.
 ##### Response

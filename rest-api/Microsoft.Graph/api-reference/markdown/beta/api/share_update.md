@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "update_share"
 }-->
 ```http
-PUT https://graph.microsoft.com/v1.0/shares/<id>
+PUT https://graph.microsoft.com/beta/shares/<id>
 Content-type: application/json
 Content-length: 330
 

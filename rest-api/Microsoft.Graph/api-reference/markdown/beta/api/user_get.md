@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "get_user"
 }-->
 ```http
-GET https://graph.microsoft.com/v1.0/users/<objectId>
+GET https://graph.microsoft.com/beta/users/<objectId>
 ```
 ##### Response
 Here is an example of the response.

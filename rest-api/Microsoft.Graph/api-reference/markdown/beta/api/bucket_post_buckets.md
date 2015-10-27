@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_bucket_from_applications"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/applications
+POST https://graph.microsoft.com/beta/applications
 ```
 In the request body, supply a JSON representation of [bucket](../resources/bucket.md) object.
 ##### Response

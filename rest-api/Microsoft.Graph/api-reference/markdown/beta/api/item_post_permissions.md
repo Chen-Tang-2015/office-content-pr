@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_permission_from_item"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/drive/root
+POST https://graph.microsoft.com/beta/drive/root
 ```
 In the request body, supply a JSON representation of [permission](../resources/permission.md) object.
 ##### Response

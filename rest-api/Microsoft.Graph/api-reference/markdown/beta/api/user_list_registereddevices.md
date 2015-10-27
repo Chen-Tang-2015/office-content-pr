@@ -33,7 +33,7 @@ Here is an example of the request.
   "name": "get_registereddevices"
 }-->
 ```http
-GET https://graph.microsoft.com/v1.0/users/<objectId>/registeredDevices
+GET https://graph.microsoft.com/beta/users/<objectId>/registeredDevices
 ```
 ##### Response
 Here is an example of the response.

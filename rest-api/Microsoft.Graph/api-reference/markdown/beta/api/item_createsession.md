@@ -35,7 +35,7 @@ Here is an example of the request.
   "name": "item_createsession"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/drive/root/createSession
+POST https://graph.microsoft.com/beta/drive/root/createSession
 Content-type: application/json
 Content-length: 44
 
