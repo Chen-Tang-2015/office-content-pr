@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_orgcontact_from_buckets"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/buckets
+POST https://graph.microsoft.com/beta/buckets
 ```
 In the request body, supply a JSON representation of [OrgContact](../resources/orgcontact.md) object.
 ##### Response

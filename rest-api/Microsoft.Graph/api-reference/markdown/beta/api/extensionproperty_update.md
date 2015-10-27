@@ -36,7 +36,7 @@ Here is an example of the request.
   "name": "update_extensionproperty"
 }-->
 ```http
-PUT https://graph.microsoft.com/v1.0/applications/<objectId>/extensionProperties/<objectId>
+PUT https://graph.microsoft.com/beta/applications/<objectId>/extensionProperties/<objectId>
 Content-type: application/json
 Content-length: 297
 

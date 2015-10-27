@@ -39,7 +39,7 @@ Here is an example of the request.
   "name": "get_trendingaround"
 }-->
 ```http
-GET https://graph.microsoft.com/v1.0/users/<objectId>/trendingAround
+GET https://graph.microsoft.com/beta/users/<objectId>/trendingAround
 ```
 ##### Response
 Here is an example of the response.

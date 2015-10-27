@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_section_from_notes"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/users/<objectId>/notes
+POST https://graph.microsoft.com/beta/users/<objectId>/notes
 ```
 In the request body, supply a JSON representation of [Section](../resources/section.md) object.
 ##### Response

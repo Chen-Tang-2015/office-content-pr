@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "get_registeredowners"
 }-->
 ```http
-GET https://graph.microsoft.com/v1.0/devices/<objectId>/registeredOwners
+GET https://graph.microsoft.com/beta/devices/<objectId>/registeredOwners
 ```
 ##### Response
 Here is an example of the response.

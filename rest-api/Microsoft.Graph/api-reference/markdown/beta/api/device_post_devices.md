@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_device_from_deviceconfiguration"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/deviceConfiguration
+POST https://graph.microsoft.com/beta/deviceConfiguration
 ```
 In the request body, supply a JSON representation of [Device](../resources/device.md) object.
 ##### Response

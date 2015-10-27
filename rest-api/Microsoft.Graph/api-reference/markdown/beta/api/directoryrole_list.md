@@ -30,7 +30,7 @@ Here is an example of the request.
   "name": "get_directoryroles"
 }-->
 ```http
-GET https://graph.microsoft.com/v1.0/directoryRoles
+GET https://graph.microsoft.com/beta/directoryRoles
 ```
 ##### Response
 Here is an example of the response.

@@ -34,7 +34,7 @@ Here is an example of the request.
   "name": "get_person"
 }-->
 ```http
-GET https://graph.microsoft.com/v1.0/users/<objectId>/people/<id>
+GET https://graph.microsoft.com/beta/users/<objectId>/people/<id>
 ```
 ##### Response
 Here is an example of the response.

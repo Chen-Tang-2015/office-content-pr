@@ -34,7 +34,7 @@ Here is an example of the request.
   "name": "get_inferenceclassificationoverride"
 }-->
 ```http
-GET https://graph.microsoft.com/v1.0/users/<objectId>/inferenceClassification/overrides/<id>
+GET https://graph.microsoft.com/beta/users/<objectId>/inferenceClassification/overrides/<id>
 ```
 ##### Response
 Here is an example of the response.

@@ -39,7 +39,7 @@ Here is an example of the request.
   "name": "item_invite"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/drive/root/invite
+POST https://graph.microsoft.com/beta/drive/root/invite
 Content-type: application/json
 Content-length: 313
 

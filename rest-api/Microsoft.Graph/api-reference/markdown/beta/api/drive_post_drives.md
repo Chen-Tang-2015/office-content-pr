@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_drive_from_directoryroletemplates"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/directoryRoleTemplates
+POST https://graph.microsoft.com/beta/directoryRoleTemplates
 ```
 In the request body, supply a JSON representation of [drive](../resources/drive.md) object.
 ##### Response

@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_subscribedsku_from_sitecollections"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/siteCollections
+POST https://graph.microsoft.com/beta/siteCollections
 ```
 In the request body, supply a JSON representation of [SubscribedSku](../resources/subscribedsku.md) object.
 ##### Response

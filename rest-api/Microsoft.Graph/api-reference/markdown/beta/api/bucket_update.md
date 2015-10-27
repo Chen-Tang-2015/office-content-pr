@@ -34,7 +34,7 @@ Here is an example of the request.
   "name": "update_bucket"
 }-->
 ```http
-PUT https://graph.microsoft.com/v1.0/buckets/<id>
+PUT https://graph.microsoft.com/beta/buckets/<id>
 Content-type: application/json
 Content-length: 108
 

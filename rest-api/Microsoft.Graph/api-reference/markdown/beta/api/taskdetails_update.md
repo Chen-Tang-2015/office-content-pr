@@ -36,7 +36,7 @@ Here is an example of the request.
   "name": "update_taskdetails"
 }-->
 ```http
-PUT https://graph.microsoft.com/v1.0/tasks/<id>/details
+PUT https://graph.microsoft.com/beta/tasks/<id>/details
 Content-type: application/json
 Content-length: 181
 
