@@ -20,6 +20,7 @@
 |[Create DirectoryRoleTemplate](../api/directoryroletemplate_post_directoryroletemplates.md) |[DirectoryRoleTemplate](directoryroletemplate.md)| Create a new DirectoryRoleTemplate by posting to the directoryRoleTemplates collection.|
 |[List DirectoryRoleTemplate](../api/directoryroletemplate_list.md) | [DirectoryRoleTemplate](directoryroletemplate.md) collection |Get directoryRoleTemplate object collection. |
 |[Create drive](../api/drive_post_drives.md) |[drive](drive.md)| Create a new drive by posting to the drives collection.|
+|[Get drive](../api/drive_get.md) | [drive](drive.md) collection |Get drive object. |
 |[List drive](../api/drive_list.md) | [drive](drive.md) collection |Get drive object collection. |
 |[Create Group](../api/group_post_groups.md) |[Group](group.md)| Create a new Group by posting to the groups collection.|
 |[List Group](../api/group_list.md) | [Group](group.md) collection |Get group object collection. |
