@@ -8,7 +8,7 @@ Learn more about [supported hosts and other requirements](https://msdn.microsoft
 
 Office Add-ins extend the Office experience by providing contextual functionality that users can access within Office clients. Add-ins empower users to get more done by enabling them to access third-party functionality within Office, without costly context switches. 
 
- Your add-in UX design must integrate seamlessly with Office to provide an efficient, natural interaction for your users. Take advantage of add-in commands (Office UI extensions) to provide access to your add-in and use the [UI elements](UIElements.md) and [best practices](BestPractices.md) that we recommend when you create custom HTML-based UI. 
+ Your add-in UX design must integrate seamlessly with Office to provide an efficient, natural interaction for your users. Take advantage of add-in commands (Office UI extensions) to provide access to your add-in and use the [UI elements](UIElements.md) and [best practices](https://msdn.microsoft.com/EN-US/library/mt590883.aspx) that we recommend when you create custom HTML-based UI. 
  
  
 ##Core Office Add-in design principles
@@ -22,7 +22,7 @@ Regardless of the underlying framework you use to create your custom UI, apply t
 
 - **Keep users in control**. Allow users to control their experience, understand any important decisions, and easily reverse actions the add-in performs. 
 
-- **Design for all platforms and input methods**. Add-ins are designed to work on all the platforms that Office supports, and your add-in UX should be optimized to work across platforms and form factors. Support mouse/keyboard and touch input devices, and ensure that your custom HTML UI is responsive to adapt to different form factors. For more information, see [Touch](BestPractices.md#Touch). 
+- **Design for all platforms and input methods**. Add-ins are designed to work on all the platforms that Office supports, and your add-in UX should be optimized to work across platforms and form factors. Support mouse/keyboard and touch input devices, and ensure that your custom HTML UI is responsive to adapt to different form factors. For more information, see [Touch](https://msdn.microsoft.com/EN-US/library/mt590883.aspx#bk_Touch). 
 
 
 ##Design language
