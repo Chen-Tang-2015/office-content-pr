@@ -3,7 +3,7 @@
 
 _**Applies to:** Office 365_
  
-In this article, we'll discuss how to authenticate a user, get an access token and renew an access token using a refresh token.
+This article discusses how to authenticate a user, get an access token and renew an access token using a refresh token.
 
 <!--To call the Microsoft Graph API, you have to complete the following tasks.
 
@@ -33,14 +33,14 @@ In this article:
  
 ###Get the app authorized
 To get your app authorized, you must get the user to sign in to Azure Active Directory. To do so, you need to send the user, along with your app 
-info, to the Azure Active Directory account login page to sign in to his or her Office 365 account. Once the user is signed in, and consents to 
-the access permissions granted for the app if the user has not done so already, the app will receive an authorization code required to acquire 
+information, to the Azure Active Directory account login page to sign in to his or her Office 365 account. Once the user is signed in, and consents to 
+the access permissions granted for the app (if the user has not done so already), the app will receive an authorization code required to acquire 
 an OAuth 2.0 access token.
 
 You can easily enable this procedure by 
 using one of the many [Azure AD Authentication Libraries (ADALs)](https://msdn.microsoft.com/en-us/library/azure/jj573266.aspx). 
 
-Here, we outline the essential steps at the protocol level as applied to the unified API. And we refer you to 
+Here, we outline the essential steps at the protocol level as applied to the Microsoft Graph API. And we refer you to 
 [Authorization Code Grant Flow](https://msdn.microsoft.com/en-us/library/azure/dn645542.aspx) for general discussions of the subject. 
 
 At the protocol level, authorizing an app starts from submitting an HTTPS GET request against the following URL:
