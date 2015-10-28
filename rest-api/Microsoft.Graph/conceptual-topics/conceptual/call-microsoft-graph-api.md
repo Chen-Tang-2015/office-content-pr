@@ -15,7 +15,7 @@ In this article:
 
 <a name="msg_call_api_service"> </a>
 ###Call Microsoft Graph API service
-To access and manipulate a Microsoft Graph API resource, you call the Microsoft Graph API service, specifying the resource URLs in one of the following operations permitted on the resource.   
+To access and manipulate a Microsoft Graph API resource, you call and specify the resource URLs in one of the following operations permitted on the resource.   
 
 - GET
 - POST
@@ -40,7 +40,7 @@ the beta namespace. That is, specify {version} as beta.
   - The alias `myOrganization`, which resolves to the tenant of the organization signed-in user
 
 For example, if your tenant domain is `https://contoso.onmicrosoft.com`, and you are targeting the beta 
-version of the service, you can send requests to `https://graph.microsoft.com/beta/contoso.onmicrosoft.com`.
+version of the service, you can send requests to `https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com`.
 
 The service document ($metadata) is published at the service root. For example, you can view the service document for the v1.0 and beta versions via the following URLs.
 
