@@ -25,25 +25,19 @@ The authentication flow can be broken down to two basic steps:
 
 In this article:
 
-- [Get app authorized](#msg_get_app_authorized)
+- [Authenticate a user and get app authorized](#msg_get_app_authorized)
 - [Acquire access token](#msg_get_app_authenticated)
 - [Renew access token using refresh token](#msg_renew_access_token)
 
  <a name="msg_get_app_authorized"> </a>
  
-###Get the app authorized
-To get your app authorized, you must get the user to sign in to Azure Active Directory. To do so, you need to send the user, along with your app 
-information, to the Azure Active Directory account login page to sign in to his or her Office 365 account. Once the user is signed in, and consents to 
-the access permissions granted for the app (if the user has not done so already), the app will receive an authorization code required to acquire 
-an OAuth 2.0 access token.
+###Authenticate a user and get app authorized
+To get your app authorized, you must get the user authenticated first. You do this by redirecting the user to the Azure Active Directory (Azure AD) authorization endpoint, along with your app information, to sign in to their Office 365 account. Once the user is signed in, and consents to 
+the permissions requested by your app (if the user has not done so already), your app will receive an authorization code required to acquire an OAuth access token.
 
-You can easily enable this procedure by 
-using one of the many [Azure AD Authentication Libraries (ADALs)](https://msdn.microsoft.com/en-us/library/azure/jj573266.aspx). 
+> Note:  You can do this by calling methods on the [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/en-us/library/azure/jj573266.aspx). For more information about authorization flow, see [Authorization Code Grant Flow](https://msdn.microsoft.com/en-us/library/azure/dn645542.aspx)
 
-Here, we outline the essential steps at the protocol level as applied to the Microsoft Graph API. And we refer you to 
-[Authorization Code Grant Flow](https://msdn.microsoft.com/en-us/library/azure/dn645542.aspx) for general discussions of the subject. 
-
-At the protocol level, authorizing an app starts from submitting an HTTPS GET request against the following URL:
+Authorizing an app starts with submitting an HTTPS GET request using the following URL:
  
 ```GET https://login.microsoftonline.com/common/oauth2/authorize?response_type=code&redirect_uri=<uri>&client_id=<id>&resource=https%3A%2F%2Fgraph.microsoft.com%2F```
 
@@ -56,7 +50,7 @@ At the protocol level, authorizing an app starts from submitting an HTTPS GET re
 | *redirect_uri*  | string | The redirect URL that the browser is sent to when authentication is complete.                          |
  
 Here, the `redirect_uri` value (`<uri>`) should match the app's pre-configured **REPLY URI** value  
-and the `client_id value` (`<id>`) should be your app's **CLIENT ID** value set in the Azure tenant's application registry. 
+and the `client_id` value (`<id>`) should be your app's **CLIENT ID** value set in the Azure tenant's application registry. 
 
 The following shows an example of such a request as implemented in a running application:
 
