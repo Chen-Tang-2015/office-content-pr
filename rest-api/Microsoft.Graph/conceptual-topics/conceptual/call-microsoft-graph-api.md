@@ -15,7 +15,7 @@ In this article:
 
 <a name="msg_call_api_service"> </a>
 ###Call Microsoft Graph API service
-To access and manipulate a Microsoft Graph API resource, you call and specify the resource URLs in one of the following operations permitted on the resource.   
+To access and manipulate a Microsoft Graph API resource, you call and specify the resource URLs using one of the following operations permitted on the resource.   
 
 - GET
 - POST
@@ -31,8 +31,7 @@ All Microsoft Graph API requests use the following root URL:
 
 In this URL:
 - `https://graph.microsoft.com` is the Microsoft Graph API endpoint
-- `{version}` is the target service version. Currently, the Microsoft Graph API is in preview status and is available in 
-the beta namespace. That is, specify {version} as beta.
+- `{version}` is the target service version, for example, `v1.0` or `beta`.
 - `{tenant}` is the Office 365 tenant specified in one of the following ways:
   - The tenant ID (GUID)
   - A domain name for the tenant, for example, contoso.onmicrosoft.com
@@ -68,10 +67,8 @@ A few API calls basic programming patterns are shown in the following section.
 <a name="msg_nav_from_set_to_member"> </a>
 ###Navigation from a set to a member
 
-To view the information about a user, we need to get the `User` entity from the `users` collection on the tenant. To do so, we can
-navigate from the tenant to users and then to the specific user identified by its identifier, using an HTTPS GET request. For a `User` 
-entity, either the `objectId` or `userPrincipalName` property may be used as the identifier. The following example request uses 
-the `userPrincipalName` value as the user's Id. 
+To view the information about a user, get the `User` entity from the `users` collection on the tenant. To do so, you can
+navigate from the tenant to users and then to the specific user identified by its identifier, using an HTTPS GET request. For a `User` entity, either the `objectId` or `userPrincipalName` property may be used as the identifier. The following example request uses the `userPrincipalName` value as the user's Id. 
 
 ```no-highlight 
 GET https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/users/john.doe@contoso.onmicrosoft.com HTTP/1.1
@@ -105,8 +102,7 @@ content-length: 982
 
 <a name="msg_proj_from_entity_to_props"> </a>
 ###Projection from an entity to properties
-To retrieve only the user's biographical data, such as the user's provided _About me_ description and his or her skill set, you can add the 
-$select query option to the previous request. For example,
+To retrieve only the user's biographical data, such as the user's provided _About me_ description and their skill set, you can add the $select query option to the previous request. For example,
 
 ```no-highlight 
 GET https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/users/john.doe@contoso.onmicrosoft.com?$select=AboutMe,Skills HTTP/1.1
@@ -137,8 +133,7 @@ Here, instead of the entire property sets on the `User` entity, only the `AboutM
 
 <a name="msg_traversal_via_relationship"> </a>
 ###Traversal to another resource via relationship
-A manager holds a `directReports` relatioinship with  the other users reporting to him or her. To query the list of the direct reports of a user,
-you can use the following HTTPS GET request to navigate to the intended target via relationship traversal. 
+A manager holds a `directReports` relatioinship with  the other users reporting to him or her. To query the list of the direct reports of a user, you can use the following HTTPS GET request to navigate to the intended target via relationship traversal. 
 
 ```no-highlight 
 GET https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/users/john.doe@contoso.onmicrosoft.com/directReports HTTP/1.1
@@ -159,11 +154,10 @@ content-length: 152
 }
 ```
 
-In this case, the user is not a manager or team lead and has no one reporting to him.
+In this case, the user is not a manager or team lead and has no direct reports.
 
 
-Similarly, you can follow a relationship to navigate to related resources provisioned from another service. For example, the `User => Messages` relationship 
-enables graph traversal from an Azure Active Directory node to an Exchange Online node. The below example show how to do this in a REST API call:
+Similarly, you can follow a relationship to navigate to related resources provisioned from another service. For example, the `User => Messages` relationship enables graph traversal from an Azure AD node to an Exchange Online node. The below example show how to do this in a REST API call:
 
 
 ```no-highlight 
@@ -189,9 +183,7 @@ content-length: 147
 
 <a name="msg_proj_from_entities_to_props" > </a> 
 ###Projection from entities to properties
-In addition to projection from a single entity to its properties, we can also apply the similar `$select` query option to an entity collection to project 
-them to a collection of some of their properties. For example, to query the name and type of the signed-in user's files, 
-you can submit the following HTTPS GET request:
+In addition to projection from a single entity to its properties, you can also apply the similar `$select` query option to an entity collection to project them to a collection of some of their properties. For example, to query the name and type of the signed-in user's files, you can submit the following HTTPS GET request:
 
 ```no-highlight 
 GET https://graph.microsoft.com/v1.0/me/files?$select=name,type HTTP/1.1
@@ -227,8 +219,7 @@ Users can add and share other files or folders. In this example, the user has no
 
 <a name="msg_filter_query_option"> </a>
 ###Query a subset of users with the filtering query option
-To find the employees of a specific job title within an organization, you can navigate from the organization's tenant to the users collection and then specify
-a $filter query option. An example is shown as follows:
+To find the employees of a specific job title within an organization, you can navigate from the organization's tenant to the users collection and then specify a $filter query option. An example is shown as follows:
 
     
 ```no-highlight 
@@ -281,9 +272,8 @@ It appears that the returned user has a unique job title in her organization.
 
 <a name="msg_calling_actions"> </a>
 ###Calling OData actions or functions
-The Microsoft Graph API also supports OData actions and functions for you to manipulate the resources. 
-For example, the following HTTPS POST request lets the signed-in user (`me`) copy a file ("test3.txt") from a folder (`"<id_1>"`) 
-to another folder (`"<id_2>"`). 
+The Microsoft Graph API also supports OData actions and functions to manipulate the resources. 
+For example, the following HTTPS POST request lets the signed-in user (`me`) copy a file ("test3.txt") from a folder (`"<id_1>"`) to another folder (`"<id_2>"`). 
 
 ```no-highlight 
 POST https://graph.microsoft.com/v1.0/me/files/<id_1>/Copy HTTP/1.1
@@ -299,10 +289,7 @@ content-length: 96
 
 The request payload contains the input to the `Microsoft.Graph.Copy` action, which is also defined in the $metadata.
 
-As you can see from the above examples of the REST API calls, with a single unified endpoint, the Microsoft Graph API simplifies 
-the application programming interface for all the Office 365 services as well and the Azure Active Directory service. As a result, the 
-boundaries of the otherwise silo-ed services disappear. As an app developer, you are no longer required to keep track of the 
-data sources and to implement custom interfaces between various data sources. 
+As you can see from the above examples of the REST API calls, with a single unified endpoint, the Microsoft Graph API simplifies the application programming interface for all the Office 365 services as well and the Azure Active Directory service. As a result, the boundaries of the otherwise silo-ed services disappear. As an app developer, you are no longer required to keep track of the data sources and to implement custom interfaces between various data sources. 
 
 
 <a name="msg_using_client_lib"> </a>
@@ -310,11 +297,10 @@ data sources and to implement custom interfaces between various data sources.
 A Microsoft Graph API native app uses the Microsoft Graph API client library to access and manipulate the API resources. 
 The client library exposes a .NET application object model that encapsulates the Microsoft Graph API data model ($metadata),
 mapping an OData resource type into a .NET class. 
+
 The CRUD operations in the REST API are translated as calls to the `ExecuteAsync`, `UpdateAsync`, and `DeleteAsync` methods 
-on the corresponding resource class. 
-The query options (e.g., $select, $filter, etc.) are turned into Linq clauses.  
-Once you understand how the ODatan entity type schema is mapped to the client library's object model, 
-you should see a strong similarity between calling the REST API and using the client library.
+on the corresponding resource class.  The query options (e.g., $select, $filter, etc.) are turned into Linq clauses.  
+Once you understand how the ODatan entity type schema is mapped to the client library's object model, you should see a strong similarity between calling the REST API and using the client library.
 
 **In this section:**
 
