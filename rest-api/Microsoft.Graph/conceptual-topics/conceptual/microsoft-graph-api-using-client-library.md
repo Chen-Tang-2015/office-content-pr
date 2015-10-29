@@ -5,10 +5,10 @@ _**Applies to:** Office 365_
 In this article:
   
 - [Using the .NET client library](#msg_using_client_lib)
-  - [Set up a Visual Studio project](#msg_set_up_visual_studio),
-  - [Initialize the Microsoft Graph API client](#msg_initialize_client),
-  - [Map client library object model to the entity schema](#msg_client_lib_object_model),
-  - [Access and manipulate resources with the client library](#msg_access_and_manipulate_resources_with_client_library),
+  - [Set up a Visual Studio project](#msg_set_up_visual_studio)
+  - [Initialize the Microsoft Graph API client](#msg_initialize_client)
+  - [Map client library object model to the entity schema](#msg_client_lib_object_model)
+  - [Access and manipulate resources with the client library](#msg_access_and_manipulate_resources_with_client_library)
   - [Use query options with the client library](#msg_query_options_with_client_library)
 
 <a name="msg_using_client_lib"> </a>
@@ -19,20 +19,18 @@ mapping an OData resource type into a .NET class.
 
 The CRUD operations in the REST API are translated as calls to the `ExecuteAsync`, `UpdateAsync`, and `DeleteAsync` methods 
 on the corresponding resource class.  The query options (e.g., $select, $filter, etc.) are turned into Linq clauses.  
-Once you understand how the ODatan entity type schema is mapped to the client library's object model, you should see a strong similarity between calling the REST API and using the client library.
+Once you understand how the OData entity type schema is mapped to the client library's object model, you'll see a strong similarity between calling the REST API and using the client library.
 
 
 <a name="msg_set_up_visual_studio"> </a>
 ###Set up a Visual Studio Project
-The Microsoft Graph API client library is available for download as a NuGet package. 
-You can download it using Visual Studio after you have created a Visual Studio solution/project. 
+The Microsoft Graph API client library is available for download as a NuGet package. You can download it using Visual Studio after you have created a Visual Studio solution/project. 
 
 >For more information on how to set up a Visual Studio project to call .NET client library, see this [Microsoft Graph API .NET client library sample app](http://aka.ms/o365-win-profile)
  
 <a name="msg_initialize_client"> </a> 
 ###Initialize the Microsoft Graph API client
-For every Microsoft Graph API app, the entry point to the client library is a 
-`Microsoft.Graph.GraphService` object. You obtain this object by instantiating the `GraphService` class before accessing any other Microsoft Graph API resources.
+For every Microsoft Graph API app, the entry point to the client library is a `Microsoft.Graph.GraphService` object. You obtain this object by instantiating the `GraphService` class before accessing any other Microsoft Graph API resources.
  
 ```no-highlight 
 Microsoft.Graph.GraphService client = new
@@ -60,17 +58,14 @@ AuthenticationResult userAuthnResult =
 var TokenForUser = userAuthnResult.AccessToken;
 ```
  
-In this code snippet, the `AuthenticationContext` class is exposed by the 
-[ADAL for .NET](https://msdn.microsoft.com/en-us/library/azure/jj573266.aspx). It handles the authorization and token acquisition 
-behind the scenes. We first create a `AuthenticationContext` object and bind it to the `Constants.LoginUrl` 
-(=`https://login.microsoftonline.com/common`), the base URL of the Azure user login portal. We then call 
-the `AcquireToken` method on the newly created `authenticationContext` object. This will bring up the Azure user sign-in
-page for the user to enter his or her Azure tenant account and password. When the user signs in to Azure successfully, the API
-proceeds to acquire the access token, returns it to the app in the `userAuthnResult` object, and uses it in the subsequent 
-calls to the Microsoft Graph API service. The `redirectUri` must match the **REPLY URL** configured for the app in Azure
- application registry. `Constants.ResourceUrl` is a named constant holding a string value of
+First create a `AuthenticationContext` object and bind it to the `Constants.LoginUrl` 
+(=`https://login.microsoftonline.com/common`), the base URL of the Azure user login portal. 
+
+> In this code snippet, the `AuthenticationContext` class is exposed by the [ADAL for .NET](https://msdn.microsoft.com/en-us/library/azure/jj573266.aspx). It handles the authorization and token acquisition.
+
+Then call the `AcquireToken` method on the newly created `authenticationContext` object. This will bring up the Azure user sign-in page for the user to enter their Azure tenant account and password. When the user signs in to Azure successfully, the API proceeds to acquire the access token, returns it to the app in the `userAuthnResult` object, and uses it in the subsequent calls to the Microsoft Graph API service. The `redirectUri` must match the **REPLY URL** configured for the app in Azure  application registry. `Constants.ResourceUrl` is a named constant holding a string value of
 `"https://graph.microsoft.com"` and `Constants.ClientIdForUserAuthn` is the **CLIENT ID** value of the app, 
-also configured in Azure. Unlike a web app, the client secret is not used for any native app.
+also configured in Azure. Unlike a web app, the client secret is not used for native app.
  
  
 <a name="msg_client_lib_object_model"> </a>
