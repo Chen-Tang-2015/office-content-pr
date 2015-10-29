@@ -45,28 +45,18 @@ Authorizing an app starts with submitting an HTTPS GET request using the followi
 
 | Parameter name  | Value  | Description                                                                                            |
 |:----------------|:-------|:-------------------------------------------------------------------------------------------------------|
-| *client_id*     | string | The client ID created for your app.                                                                    |
+| *client_id*     | string | The client ID created for your app. This is your app's **CLIENT ID** value set in the Azure tenant's application registry.                                                                  |
 | *response_type* | string | Specifies the requested response type. In an authorization code grant request, the value must be code. |
-| *redirect_uri*  | string | The redirect URL that the browser is sent to when authentication is complete.                          |
+| *redirect_uri*  | string | The redirect URL that the browser is sent to when authentication is complete.  This value must match the app's pre-configured **REPLY URL** value                        |
  
-Here, the `redirect_uri` value (`<uri>`) should match the app's pre-configured **REPLY URI** value  
-and the `client_id` value (`<id>`) should be your app's **CLIENT ID** value set in the Azure tenant's application registry. 
+
 
 The following shows an example of such a request as implemented in a running application:
 
 
 ```GET https://login.microsoftonline.com/common/oauth2/authorize?response_type=code&redirect_uri=http%3a%2f%2flocalhost:1339/auth/azureoauth/callback&client_id=8b8539cd-7b75-427f-bef1-4a6264fd4940``` 
 
-**Required query string parameters**
-
-| Parameter name  | Value  | Description                                                                                            |
-|:----------------|:-------|:-------------------------------------------------------------------------------------------------------|
-| *client_id*     | string | The client ID created for your app.                                                                    |
-| *response_type* | string | Specifies the requested response type. In an authorization code grant request, the value must be code. |
-| *redirect_uri*  | string | The redirect URL that the browser is sent to when authentication is complete.                          |
-
-This request returns a `200 OK` response to bring up the Azure Active Directory account login page. After the user supplied his or her valid credentials 
-and consents to the permissions granted for the app, the login page sends a `POST` of the following format:
+This request returns a `200 OK` response and presents the Azure AD account login page. After the user signs in with valid credentials and consents to the permissions granted for the app, the login page sends a `POST` of the following format:
 
 ```no-highlight
 POST https://login.microsoftonline.com/{tenantId}/login HTTP/1.1
@@ -88,8 +78,7 @@ login={user-account}&passwd={password}&ctx={ctx value returned from the previous
 ``` 
 
 If the above request succeeds, Azure responds with a `302 Found` message to forward the call to the app's 
-redirect URI for the app to receive the required access token. The forwarded URI, specified in the response's `Location` header, 
-corresponds to the app's REPLY URI, with two query parameters, `code=...` and `session_state=...` appended to it. 
+redirect URI for the app to receive the required access token. The forwarded URI, specified in the response's `Location` header, corresponds to the app's REPLY URL, with two query parameters, `code=...` and `session_state=...` appended to it. 
 The following example shows an excerpt of such a response: 
 
 ```no-highlight 
@@ -105,18 +94,16 @@ P3P: CP="DSP CUR OTPi IND OTRi ONL FIN"
 ..... 
 ```
 
-In this example, the app's REPLY URI is `http://localhost:1339/auth/azureoauth/callback`. In processing this response, 
-you must extract the `code` parameter value and use it to acquire the initial OAuth 2.0 access and refresh tokens. 
-We will show this step in the next section.
+In this example, the app's REPLY URL is `http://localhost:1339/auth/azureoauth/callback`. In processing this response, 
+you must extract the `code` parameter value and use it to acquire the initial OAuth 2.0 access and refresh tokens (see next section).
 
-**Note** The `302 Found` response above is different from the `302 Found` response you would get if you started the login process against 
+> The `302 Found` response above is different from the `302 Found` response you would get if you started the login process against 
 the `https://login.windows.net/<tenantId>/oauth2/authorize?...` URL. In the latter case, the `302 Found` response forwards your request to
 `login.microsoftonline.com`.
  
 <a name="msg_get_app_authenticated"> </a>
 ###Acquire an access token
-To get the app authenticated, the client must include a valid OAuth 2.0 access token in every HTTP request submitted to 
-Office 365 unified API. You can obtain the access token using the following POST request:
+To access Microsoft Graph API resources, your app must include a valid OAuth 2.0 access token in every HTTP request. You can obtain the access token using the following POST request:
 
 ```no-highlight 
 POST https://login.microsoftonline.com/common/oauth2/token HTTP/1.1
@@ -140,18 +127,11 @@ grant_type=authorization_code
 | Parameter name  | Value  | Description                                                                                            |
 |:----------------|:-------|:-------------------------------------------------------------------------------------------------------|
 | *client_id*     | string | The client ID created for your app.  |
-| *client_secret*  | string | The key created for your app.|
+| *client_secret*  | string | The key created for your app. This value is the same value in the **Keys** section of the app configuration page on the Azure Management Portal|
 | *redirect_uri*  | string | The redirect URL that the browser is sent to when authentication is complete.  |
-| *code*  | string | The authorization code.  |
-| *resource*   | string | The resource you want to access. |
+| *code*  | string | The authorization code. The `code` query parameter value returned from the response to the authorization request. |
+| *resource*   | string | The resource you want to access. To call the Microsoft Graph API, set this parameter value to "https://graph.microsoft.com/"|
 
-Here, `redirect_uri=<uri>` and `client_id=<id>` are of the same as in the authorization request. `<secret_key>` stands for 
-the secret key of the app shown under the **Keys** section of the app's configuration page on the Azure Management Portal. 
-`<code>` stands for the `code` query parameter value returned from the response to the authorization request, shown above 
- in the previous section. Finally, `resource` identifies a service that will use the returned access token to authenticate the 
-app. To use the API, set this parameter value to "https://graph.microsoft.com/". 
-The payload must be URL encoded. Make sure to set the `content-type` header as shown. 
- 
 The following snippet shows an example of the request payload used to acquire the initial OAuth 2.0 access token:
 
 ```no-highlight  
@@ -200,7 +180,7 @@ Access-Control-Allow-Origin: *
 
  
 The response body is a JSON-formatted string containing the access token (`access_token`). 
-You need to supply this token to any ensuing HTTP requests to access Office 365 unified API resources. 
+You need to supply this token to any ensuing HTTP requests to access Microsoft Graph API resources. 
 
 The `scope` property value should match the permissions granted for the app during the app's registration.
 
@@ -211,13 +191,12 @@ as specified by the `refresh_token_expires_in` property value. -->
 
 
 In any production code, your app needs to watch for the expiration 
-of these tokens and renew the expiring access token before the refresh token expires. In the next section, we will explain briefly how to renew an
-an expiring access token.
+of these tokens and renew the expiring access token before the refresh token expires. 
 
 
 <a name="msg_renew_access_token using refresh token"> </a>
-###Renew expiring access token
-To refresh an expired access token, use a POST request similar to the following example, provided that the refresh token has not expired:
+###Renew expiring access token using refresh token
+To refresh an expired access token, use a POST request similar to the following example (provided that the refresh token has not expired):
 
 ```no-highlight  
 POST https://login.microsoftonline.com/common/oauth2/token HTTP/1.1
@@ -242,11 +221,10 @@ grant_type=refresh_token
 | *redirect_uri*  | string | The redirect URL that the browser is sent to when authentication is complete. This should match the *redirect_uri* value used in the first request. |
 | *client_secret* | string | One of the Keys values created for your application.                                                                                                     |
 | *refresh_token* | string | The refresh token you received previously.    |
-| *resource*   | string | The resource you want to access. |
+| *resource*   | string | The resource you want to access. It must be valid (not expired). |
 
 Note that this request is almost identical to the initial token acquisition request. There are two differences in the request payload, 
-namely, the `grant_type` parameter now has the value of `refresh_token` (instead of `code`) and the `code` parameter is replaced by 
-the `refresh_token` parameter. The value of this `refresh_token` parameter is the currently valid (not expired) refresh token. 
+namely, the `grant_type` parameter now has the value of `refresh_token` (instead of `code`).
  
 The successful response returns the payload of an JSON string similar to the following output:
 
@@ -272,14 +250,9 @@ are extended. The new expiration times are the number of seconds, specified in t
 values, respectively, from the time when the token-refreshing request was submitted successfully. 
  
 When the refresh token expires, you cannot renew any expired access token using the just-described POST request. 
-In this case, you must restart the [app authorization and authentication](#msg_get_app_authorized) process.
+Instead, you must restart the [app authorization and authentication](#msg_get_app_authorized) process.
 
-To summarize, we have presented a brief protocol-level overview of app authorization and access token aquisition. In practice, you will
-find many authentication libraries or packages that will shield you away form such low-level details. For an example, you use one of the many [ADAL 
-libraires](https://msdn.microsoft.com/en-us/library/azure/dn151135.aspx). For a tutorial on how to use the ADAL JavaScript library, see 
-[Create web apps using CORS to access files in Office 365](../howto/create-web-apps-using-CORS-to-access-files-in-Office-365.md). To see how to use 
-the ADAL .NET library, see [Azure AD Authentication Library for .NET](https://msdn.microsoft.com/en-us/library/azure/jj573266.aspx)
- 
+
 ##Additional Resources##
 
 - [Hands on lab: Deep dive into the Office 365 unified API](http://dev.office.com/hands-on-labs/4585)
