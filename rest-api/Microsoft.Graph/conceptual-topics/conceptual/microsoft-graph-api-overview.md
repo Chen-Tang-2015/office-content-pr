@@ -20,6 +20,11 @@ The API exposes information about entities and the relationships among them thro
  
 The Microsoft Graph API exposes fixed entities like users, groups, mail, messages, calendars, tasks, notes coming from services like Outlook, OneDrive, Azure Active Directory, Planner, OneNote and others. It also exposes calculated relationships powered by the Office Graph (only for commercial users) like the list of users you are working with or the documents trending around you.
 
+Microsoft Graph API gives you:
+- A unified developer experience to access services across Office 365 and Microsoft data
+- Seamless navigation between entities
+- Aggregated data from multiple services in a single response
+
 <!-- 
 It takes information that is stored or inferred across multiple cloud services: 
 -	exposing them through one REST URL namespace. The unifying URL namespace is _https://_**graph.microsoft.com**
@@ -28,7 +33,7 @@ It takes information that is stored or inferred across multiple cloud services:
 
 through one REST URL namespace (https://graph.microsoft.com), using one authentication and authorization system, and using a consistent and unified metadata, payload format, error handling, library, and more.  -->
 
-
+<!-- 
 
 ## Calling Office 365 APIs vs Microsoft Graph API
 
@@ -38,7 +43,7 @@ Let's say you want to programmatically retrieve a user's files, profile picture,
 2. Determine the URL of the services your Office 365 apps want to connect to
 3. Then acquire and manage the access token for each service and make the request to the service directly
 
-Now, you can use the use Microsoft Graph API to perform the same complex operation via a single REST API endpoint. You don't have to discover and navigate a different endpoint for each service, acquire and manage separate access token for each service, deal with siloed services and varying data model.
+Now, you can use the use Microsoft Graph API to perform the same complex operation via a single REST API endpoint. You don't have to discover and navigate a different endpoint for each service, acquire and manage separate access token for each service, deal with siloed services and varying data model. -->
 
 <!--discover and navigate a different endpoint for each service
 -	acquire and manage separate access token for each service
