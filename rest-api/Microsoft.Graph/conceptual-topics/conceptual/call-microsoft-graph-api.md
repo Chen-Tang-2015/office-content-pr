@@ -291,7 +291,7 @@ content-length: 96
 
 The request payload contains the input to the `Microsoft.Graph.Copy` action, which is also defined in the $metadata.
 
-As you can see from the above examples of the REST API calls, with a single unified endpoint, the Microsoft Graph API simplifies the application programming interface for all the Office 365 services as well and the Azure Active Directory service. As a result, the boundaries of the otherwise silo-ed services disappear. As an app developer, you are no longer required to keep track of the data sources and to implement custom interfaces between various data sources. 
+With a single unified endpoint, the Microsoft Graph API simplifies the application programming interface for all the Office 365 services as well and the Azure AD service. As a result, the boundaries of the otherwise silo-ed services disappear. As an app developer, you are no longer required to keep track of the data sources and to implement custom interfaces between various data sources. 
 
 ##Additional Resources##
 
