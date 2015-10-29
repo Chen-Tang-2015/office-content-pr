@@ -186,7 +186,9 @@ The `scope` property value should match the permissions granted for the app duri
 
 The access token remains valid within the specified time interval (`3599` in the above example) seconds (or 1 hour) 
 from the time of issuance, as specified in the `expires_in` property. The result also contains a refresh token (`refresh_token`) 
-that must be used to renew an expiring or expired access token. <!-- The refresh token expires in 14 days (`1209600` seconds) 
+that must be used to renew an expiring or expired access token. 
+
+<!-- The refresh token expires in 14 days (`1209600` seconds) 
 as specified by the `refresh_token_expires_in` property value. -->
 
 
