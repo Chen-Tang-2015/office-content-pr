@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="update-page">Update page</h1>
+<p>Update the properties of page object.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<h3 id="http-request">HTTP request</h3>
+<pre><code class="http">PATCH /users/&lt;objectId&gt;/notes/pages/&lt;id&gt;
+PATCH /groups/&lt;objectId&gt;/notes/pages/&lt;id&gt;
+PATCH /drive/root/createdByUser/notes/pages/&lt;id&gt;
+</code></pre>
+
+<h3 id="optional-request-headers">Optional request headers</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Name</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">X-Sample-Header</td>
+	<td align="left">string</td>
+	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-body">Request body</h3>
+<p>In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.</p>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">content</td>
+	<td align="left">Stream</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">contentUrl</td>
+	<td align="left">String</td>
+	<td align="left">The URL for the page's HTML content  The URL for the page's HTML content</td>
+</tr>
+<tr>
+	<td align="left">createdByAppId</td>
+	<td align="left">String</td>
+	<td align="left">The unique identifier of the application that created the page  The unique identifier of the application that created the page</td>
+</tr>
+<tr>
+	<td align="left">createdTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The date and time when the page was created in UTC format  The date and time when the page was created in UTC format</td>
+</tr>
+<tr>
+	<td align="left">lastModifiedTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">links</td>
+	<td align="left">PageLinks</td>
+	<td align="left">The oneNoteClientURL link to open the page in the OneNote native client if it 's installed, and oneNoteWebUrl to open the page in OneNote Online The oneNoteClientURL link to open the page in the OneNote native client if it 's installed, and oneNoteWebUrl to open the page in OneNote Online</td>
+</tr>
+<tr>
+	<td align="left">self</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">title</td>
+	<td align="left">String</td>
+	<td align="left">The title of the page  The title of the page</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response">Response</h3>
+<p>If successful, this method returns a <code>200 OK</code> response code and updated <a href="../resources/page.htm">page</a> object in the response body.</p>
+<h3 id="example">Example</h3>
+<h5 id="request">Request</h5>
+<p>Here is an example of the request.</p>
+<pre><code class="http">PUT https://graph.microsoft.com/beta/users/&lt;objectId&gt;/notes/pages/&lt;id&gt;
+Content-type: application/json
+Content-length: 391
+
+{
+  &quot;title&quot;: &quot;title-value&quot;,
+  &quot;createdByAppId&quot;: &quot;createdByAppId-value&quot;,
+  &quot;links&quot;: {
+    &quot;oneNoteClientUrl&quot;: {
+      &quot;href&quot;: &quot;href-value&quot;
+    },
+    &quot;oneNoteWebUrl&quot;: {
+      &quot;href&quot;: &quot;href-value&quot;
+    }
+  },
+  &quot;contentUrl&quot;: &quot;contentUrl-value&quot;,
+  &quot;content&quot;: &quot;content-value&quot;,
+  &quot;lastModifiedTime&quot;: &quot;datetime-value&quot;,
+  &quot;id&quot;: &quot;id-value&quot;,
+  &quot;self&quot;: &quot;self-value&quot;,
+  &quot;createdTime&quot;: &quot;datetime-value&quot;
+}
+</code></pre>
+
+<h5 id="response-1">Response</h5>
+<p>Here is an example of the response.</p>
+<pre><code class="http">HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 391
+
+{
+  &quot;title&quot;: &quot;title-value&quot;,
+  &quot;createdByAppId&quot;: &quot;createdByAppId-value&quot;,
+  &quot;links&quot;: {
+    &quot;oneNoteClientUrl&quot;: {
+      &quot;href&quot;: &quot;href-value&quot;
+    },
+    &quot;oneNoteWebUrl&quot;: {
+      &quot;href&quot;: &quot;href-value&quot;
+    }
+  },
+  &quot;contentUrl&quot;: &quot;contentUrl-value&quot;,
+  &quot;content&quot;: &quot;content-value&quot;,
+  &quot;lastModifiedTime&quot;: &quot;datetime-value&quot;,
+  &quot;id&quot;: &quot;id-value&quot;,
+  &quot;self&quot;: &quot;self-value&quot;,
+  &quot;createdTime&quot;: &quot;datetime-value&quot;
+}
+</code></pre>
+
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+</body>
+
+
+
+

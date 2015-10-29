@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="microsoft-graph-api-release-notes-and-known-issues">Microsoft Graph API release notes and known issues</h1>
+<p><em><strong>Applies to:</strong> Office 365</em></p>
+<p>This article provides information about the new features for developers that are available in the November 2015 release of the Microsoft Graph API, and any known issues that you might want to be aware of. </p>
+<h2 id="ga-features-in-microsoft-graph-api">GA features in Microsoft Graph API</h2>
+<p>The following Microsoft Graph API are generally available:</p>
+<ul>
+<li>User entity</li>
+<li>Groups entity</li>
+<li>Files entity</li>
+<li>Mail entity</li>
+<li>Calendar entity</li>
+<li>Contacts entity (Organization Contacts)</li>
+<li>Cross-origin resource sharing (CORS) support.</li>
+</ul>
+<h2 id="preview-features-in-microsoft-graph-api">Preview features in Microsoft Graph API</h2>
+<p>The following new Microsoft Graph API preview features are available:</p>
+<ul>
+<li>Notes entity </li>
+<li>Tasks entity</li>
+<li>Excel entity</li>
+<li>People entity</li>
+<li>Insights and relationships: TrendingAround and WorkingWith</li>
+<li>v2.0 app authentication model </li>
+</ul>
+<h2 id="microsoft-graph-api-known-issues">Microsoft Graph API known issues</h2>
+<p>The following are known issues with the Microsoft Graph API.</p>
+<h3 id="group-entity-limitations">Group entity limitations</h3>
+<p><em>No instant access to content after creation</em></p>
+<p>Unified groups can be created immediately through a POST on the group entity. However, for a unified group that is created through the API, access to the associated content will not be readily available. Apps will be able to start adding content to the group (files, conversations, and events) after a set period of time, as follows: </p>
+<ul>
+<li>For conversations and events, up to 40 minutes after group creation </li>
+<li>For files, up to 24 hours after group creation </li>
+</ul>
+<p>Until that time, attempts to update the unified group with content will result in a 500 HTTP error response. For proof-of-concept applications that are using the Microsoft Graph API, we recommend that you use Outlook or Outlook Web App to create unified group if immediate access to the content is required. </p>
+<p><em>Policy</em></p>
+<p>Using the Microsoft Graph API to create and name a unified group bypasses any unified group policies that are configured through Outlook Web App. For proof-of-concept applications that use the Office 365 unified APIs, we recommend that you use Outlook or Outlook Web App to create unified groups. </p>
+<p><em>Permission scopes</em></p>
+<p>The Microsoft Graph API exposes two permission scopes for unified groups: 
+* Group.Read.All<br />
+* Group.ReadWrite.All </p>
+<p>These scopes provide access to group management functions (enumerating groups, enumerating group members) as well as access to content in the group (conversations and events). However, in order to access files in a unified group, you must also request the Sites.Read.All or Site.ReadWrite.All permission scope.  For more information about these permission scopes, see <a href="microsoft-graph-api-permission-scopes.htm">Microsoft Graph API permission scopes</a>.  </p>
+<h3 id="contacts">Contacts</h3>
+<p>Personal contacts are not currently supported. Only organizational contacts are supported.</p>
+<h3 id="odata-operations">OData operations</h3>
+<p>Cross-workload filtering/search is not available. Full-text search (using $search) is only available for users, groups, organization contacts, messages, and events.</p>
+<h3 id="performance-sla">Performance SLA</h3>
+<p>The request latency for 95th percentile might be high.</p>
+<h3 id="schema-inconsistencies">Schema inconsistencies</h3>
+<p>Canonical IDs for attendees and recipients are not available.</p>
+<h3 id="uploading-files-to-a-particular-folder">Uploading files to a particular folder</h3>
+<p>Uploading a file to a specific folder requires an application to perform three steps: </p>
+<ol>
+<li>
+<p>Create a new file in the root folder. </p>
+</li>
+<li>
+<p>Upload the file content.</p>
+</li>
+<li>
+<p>Move the file to the target folder. </p>
+</li>
+</ol>
+<p>Steps 2 and 3 are interchangeable. In addition, to create a folder under another folder, you must create the new folder under the root folder, and then you can move it to the applicable target folder. We will fix these issues so that these operations only require one call. </p>
+<h3 id="file-and-content-streaming">File and content streaming</h3>
+<p>Upload and download of files (files in unified groups, drives, or mail file attachments) is limited to 1 MB. </p>
+<h3 id="app-registration-compatibility">App registration compatibility</h3>
+<p>During the preview timeframe, you should register new apps to call the Office 365 unified API. Single- and multi-tenant apps are supported for web applications. Native client apps can only be used within the tenant that the application is registered in. </p>
+<h2 id="additional-resources">Additional resources</h2>
+<ul>
+<li><a href="http://aka.ms/odb-api-release-notes" target="_blank">OneDrive API (preview) release notes</a></li>
+</ul>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+</body>
+
+
+
+

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="calling-microsoft-graph-api">Calling Microsoft Graph API</h1>
+<p><em><strong>Applies to:</strong> Office 365</em></p>
+<p>In this article:</p>
+<ul>
+<li>
+<a href="#msg_calling_rest_api">Calling the REST API</a>
+<ul>
+<li><a href="#msg_nav_from_set_to_member">Navigation from a tenant-level entity set to a member</a> </li>
+<li><a href="#msg_proj_from_entity_to_props">Projection from an entity to a subset of its properties</a> </li>
+<li><a href="#msg_proj_from_entities_to_props">Projection from an entity set to properties set</a></li>
+<li><a href="#msg_traversal_via_relationship">Traversal to another resource by the like-named relationship</a></li>
+<li><a href="#msg_filter_query_option">Filtering with a query option</a></li>
+<li><a href="#msg_calling_actions">Calling OData actions and functions</a> </li>
+</ul>
+</li>
+<li><a href="#msg_using_client_lib">Using the .NET client library</a></li>
+</ul>
+<p>&lt;a name=&quot;msg_call_api_service&quot;&gt; </a></p>
+<h3 id="call-microsoft-graph-api-service">Call Microsoft Graph API service</h3>
+<p>To access and manipulate a Microsoft Graph API resource, you call and specify the resource URLs in one of the following operations permitted on the resource.   </p>
+<ul>
+<li>GET</li>
+<li>POST</li>
+<li>PATCH</li>
+<li>PUT</li>
+<li>DELETE </li>
+</ul>
+<p>All Microsoft Graph API requests use the following root URL:</p>
+<pre><code>    https://graph.microsoft.com/{version}/{tenant}
+</code></pre>
+
+<p>In this URL:
+- <code>https://graph.microsoft.com</code> is the Microsoft Graph API endpoint
+- <code>{version}</code> is the target service version. Currently, the Microsoft Graph API is in preview status and is available in 
+the beta namespace. That is, specify {version} as beta.
+- <code>{tenant}</code> is the Office 365 tenant specified in one of the following ways:
+  - The tenant ID (GUID)
+  - A domain name for the tenant, for example, contoso.onmicrosoft.com
+  - The alias <code>me</code>, which resolves to the tenant of the signed-in user
+  - The alias <code>myOrganization</code>, which resolves to the tenant of the organization signed-in user</p>
+<p>For example, if your tenant domain is <code>https://contoso.onmicrosoft.com</code>, and you are targeting the beta 
+version of the service, you can send requests to <code>https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com</code>.</p>
+<p>The service document ($metadata) is published at the service root. For example, you can view the service document for the v1.0 and beta versions via the following URLs.</p>
+<p>Microsoft Graph API v1.0 metadata.</p>
+<pre><code>    https://graph.microsoft.com/v1.0/$metadata
+</code></pre>
+
+<p>Microsoft Graph API beta metadata.</p>
+<pre><code>    https://graph.microsoft.com/beta/$metadata
+</code></pre>
+
+<p>The metadata allows you to see entities, entity types and sets, and enums of the Microsoft Graph REST API. Using the metadata and readily available third-party tools, you can create serialized objects and generate client libraries for simplified 
+use of the REST API.  </p>
+<p>A resource URL is determined by the Microsoft Graph API entity data model. The prescription is outlined in the entity metadata schema ($metadata). </p>
+<blockquote>
+<p>Note: To learn how interpret the entity metadata schema ($metadata), see <a href="understand-microsoft-graph-metadata.htm">Understand Microsoft Graph API metadata</a>.</p>
+</blockquote>
+<p>The path URL resource names and query parameters are case insensitive. However, values you assign, entity IDs, and 
+other base64 encoded values are case sensitive.</p>
+<p>A few API calls basic programming patterns are shown in the following section.</p>
+<p>&lt;a name=&quot;msg_nav_from_set_to_member&quot;&gt; </a></p>
+<h3 id="navigation-from-a-set-to-a-member">Navigation from a set to a member</h3>
+<p>To view the information about a user, we need to get the <code>User</code> entity from the <code>users</code> collection on the tenant. To do so, we can
+navigate from the tenant to users and then to the specific user identified by its identifier, using an HTTPS GET request. For a <code>User</code> 
+entity, either the <code>objectId</code> or <code>userPrincipalName</code> property may be used as the identifier. The following example request uses 
+the <code>userPrincipalName</code> value as the user's Id. </p>
+<pre><code class="no-highlight">GET https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/users/john.doe@contoso.onmicrosoft.com HTTP/1.1
+Authorization : Bearer &lt;access_token&gt;
+</code></pre>
+
+<p>If successful, you should get a 200 OK response containing the user resource representation in the payload, as shown as follows:</p>
+<pre><code class="no-highlight">HTTP/1.1 200 OK
+content-type: application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
+server: Microsoft-IIS/8.5
+content-length: 982
+
+{
+    &quot;@odata.context&quot;: &quot;https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/$metadata#users/$entity&quot;,
+    &quot;objectType&quot;: &quot;User&quot;,
+    &quot;objectId&quot;: &quot;c95e3b3a-c33b-48da-a6e9-eb101e8a4205&quot;,
+    &quot;city&quot;: &quot;Redmond&quot;,
+    &quot;country&quot;: &quot;USA&quot;,
+    &quot;department&quot;: &quot;Help Center&quot;,
+    &quot;dirSyncEnabled&quot;: null,
+    &quot;displayName&quot;: &quot;John Doe&quot;,
+    &quot;givenName&quot;: &quot;John&quot;,
+    &quot;userPrincipalName&quot;: &quot;Johndoe@contoso.onmicrosoft.com&quot;,
+
+    ... 
+}
+</code></pre>
+
+<p>&lt;a name=&quot;msg_proj_from_entity_to_props&quot;&gt; </a></p>
+<h3 id="projection-from-an-entity-to-properties">Projection from an entity to properties</h3>
+<p>To retrieve only the user's biographical data, such as the user's provided <em>About me</em> description and his or her skill set, you can add the 
+$select query option to the previous request. For example,</p>
+<pre><code class="no-highlight">GET https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/users/john.doe@contoso.onmicrosoft.com?$select=AboutMe,Skills HTTP/1.1
+Authorization : Bearer &lt;access_token&gt;
+</code></pre>
+
+<p>The successful response returns the 200 OK status and a payload of the following format:</p>
+<pre><code class="no-highlight">HTTP/1.1 200 OK
+content-type: application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
+odata-version: 4.0
+content-length: 169
+
+{
+    &quot;@odata.context&quot;: &quot;https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/$metadata#users/$entity&quot;,
+    &quot;AboutMe&quot;: &quot;A cool and nice guy.&quot;,
+    &quot;Skills&quot;: [
+        &quot;n-Lingual&quot;,
+        &quot;private speaking&quot;,
+        &quot;doodling&quot;
+    ]
+}
+</code></pre>
+
+<p>Here, instead of the entire property sets on the <code>User</code> entity, only the <code>AboutMe</code> and <code>Skills</code> properties, are returned.</p>
+<p>&lt;a name=&quot;msg_traversal_via_relationship&quot;&gt; </a></p>
+<h3 id="traversal-to-another-resource-via-relationship">Traversal to another resource via relationship</h3>
+<p>A manager holds a <code>directReports</code> relatioinship with  the other users reporting to him or her. To query the list of the direct reports of a user,
+you can use the following HTTPS GET request to navigate to the intended target via relationship traversal. </p>
+<pre><code class="no-highlight">GET https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/users/john.doe@contoso.onmicrosoft.com/directReports HTTP/1.1
+Authorization : Bearer &lt;access_token&gt;
+</code></pre>
+
+<p>The successful response returns the 200 OK status and a payload of the following format:</p>
+<pre><code class="no-highlight">HTTP/1.1 200 OK
+content-type: application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
+odata-version: 4.0
+content-length: 152
+    
+{
+    &quot;@odata.context&quot;: &quot;https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/$metadata#users('johndoe%40contoso.onmicrosoft.com')/directReports&quot;,
+    &quot;value&quot;: []
+}
+</code></pre>
+
+<p>In this case, the user is not a manager or team lead and has no one reporting to him.</p>
+<p>Similarly, you can follow a relationship to navigate to related resources provisioned from another service. For example, the <code>User =&gt; Messages</code> relationship 
+enables graph traversal from an Azure Active Directory node to an Exchange Online node. The below example show how to do this in a REST API call:</p>
+<pre><code class="no-highlight">GET https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/users/messages HTTP/1.1
+Authorization : Bearer &lt;access_token&gt;
+</code></pre>
+
+<p>The successful response returns the 200 OK status and a payload of the following format:</p>
+<pre><code class="no-highlight">HTTP/1.1 200 OK
+content-type: application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
+odata-version: 4.0
+content-length: 147
+    
+{
+    &quot;@odata.context&quot;: &quot;https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/$metadata#users('johndoe%40contoso.onmicrosoft.com')/messages&quot;,
+    &quot;value&quot;: []
+}
+</code></pre>
+
+<p>&lt;a name=&quot;msg_proj_from_entities_to_props&quot; &gt; </a> </p>
+<h3 id="projection-from-entities-to-properties">Projection from entities to properties</h3>
+<p>In addition to projection from a single entity to its properties, we can also apply the similar <code>$select</code> query option to an entity collection to project 
+them to a collection of some of their properties. For example, to query the name and type of the signed-in user's files, 
+you can submit the following HTTPS GET request:</p>
+<pre><code class="no-highlight">GET https://graph.microsoft.com/v1.0/me/files?$select=name,type HTTP/1.1
+Authorization : Bearer &lt;access_token&gt;
+</code></pre>
+
+<p>The successful response returns a 200 OK status code and a payload containing the names and types of the shared files, as shown in the following example:</p>
+<pre><code class="no-highlight">    {
+      &quot;@odata.context&quot;: &quot;https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/$metadata#users('johndoe@contoso.onmicrosoft.com')/files&quot;,
+      &quot;value&quot;: [
+        {
+          &quot;@odata.id&quot;: &quot;users/johndoe@contoso.onmicrosoft.com/files/01EKT655BZNCMKTXXVPREY7G2HYHLWC7R3&quot;,
+          &quot;id&quot;: &quot;01EKT655BZNCMKTXXVPREY7G2HYHLWC7R3&quot;,
+          &quot;name&quot;: &quot;Shared with Everyone&quot;,
+          &quot;type&quot;: &quot;Folder&quot;,
+          &quot;#Microsoft.Graph.copy&quot;: {
+            &quot;title&quot;: &quot;Microsoft.Graph.copy&quot;,
+            &quot;target&quot;: &quot;https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/users/johndoe@contoso.onmicrosoft.com/files/01EKT655BZNCMKTXXVPREY7G2HYHLWC7R3/Microsoft.Graph.Item/Microsoft.Graph.copy&quot;
+          },
+          &quot;#Microsoft.Graph.content&quot;: {
+            &quot;title&quot;: &quot;Microsoft.Graph.content&quot;,
+            &quot;target&quot;: &quot;https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/users/johndoe@contoso.onmicrosoft.com/files/01EKT655BZNCMKTXXVPREY7G2HYHLWC7R3/Microsoft.Graph.Item/Microsoft.Graph.content&quot;
+          }
+        }
+      ]
+    }
+</code></pre>
+
+<p>From the root folder, the <em>Shared with Everyone</em> folder is shared by default. 
+Users can add and share other files or folders. In this example, the user has not shared any other folders.</p>
+<p>&lt;a name=&quot;msg_filter_query_option&quot;&gt; </a></p>
+<h3 id="query-a-subset-of-users-with-the-filtering-query-option">Query a subset of users with the filtering query option</h3>
+<p>To find the employees of a specific job title within an organization, you can navigate from the organization's tenant to the users collection and then specify
+a $filter query option. An example is shown as follows:</p>
+<pre><code class="no-highlight">GET https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/users/?$filter=jobTitle+eq+%27Helper%27 HTTP/1.1
+Authorization : Bearer &lt;access_token&gt;
+</code></pre>
+
+<p>The successful response returns the 200 OK status code and a list of users with the specified job title (<code>'Helper'</code>), as shown in the following example:</p>
+<pre><code class="no-highlight">HTTP/1.1 200 OK
+content-type: application/json;odata.metadata=minimal;odata.streaming=true;IEEE754Compatible=false;charset=utf-8
+odata-version: 4.0
+content-length: 986
+
+{
+    &quot;@odata.context&quot;: &quot;https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/$metadata#users&quot;,
+    &quot;value&quot;: [
+        {
+            &quot;objectType&quot;: &quot;User&quot;,
+            &quot;objectId&quot;: &quot;c95e3b3a-c33b-48da-a6e9-eb101e8a4205&quot;,
+            &quot;city&quot;: &quot;Redmond&quot;,
+            &quot;country&quot;: &quot;USA&quot;,
+            &quot;department&quot;: &quot;Help Center&quot;,
+            &quot;dirSyncEnabled&quot;: null,
+            &quot;displayName&quot;: &quot;Helping hand&quot;,
+            &quot;facsimileTelephoneNumber&quot;: null,
+            &quot;givenName&quot;: &quot;help&quot;,
+            &quot;immutableId&quot;: null,
+            &quot;jobTitle&quot;: &quot;Helper&quot;,
+            ......
+            &quot;mailNickname&quot;: &quot;help&quot;,
+            &quot;mobile&quot;: null,
+            &quot;onPremisesSecurityIdentifier&quot;: null,
+            &quot;otherMails&quot;: [
+                &quot;janedoe@contoso.onmicrosoft.com&quot;
+            ],
+            ......
+            &quot;surname&quot;: &quot;hand&quot;,
+            &quot;usageLocation&quot;: &quot;US&quot;,
+            &quot;userPrincipalName&quot;: &quot;help@contoso.onmicrosoft.com&quot;,
+            &quot;userType&quot;: &quot;Member&quot;
+        }
+    ]
+}
+</code></pre>
+
+<p>It appears that the returned user has a unique job title in her organization. </p>
+<p>&lt;a name=&quot;msg_calling_actions&quot;&gt; </a></p>
+<h3 id="calling-odata-actions-or-functions">Calling OData actions or functions</h3>
+<p>The Microsoft Graph API also supports OData actions and functions for you to manipulate the resources. 
+For example, the following HTTPS POST request lets the signed-in user (<code>me</code>) copy a file (&quot;test3.txt&quot;) from a folder (<code>&quot;&lt;id_1&gt;&quot;</code>) 
+to another folder (<code>&quot;&lt;id_2&gt;&quot;</code>). </p>
+<pre><code class="no-highlight">POST https://graph.microsoft.com/v1.0/me/files/&lt;id_1&gt;/Copy HTTP/1.1
+authorization: bearer &lt;access_token&gt;
+content-type: application/json
+content-length: 96
+
+{
+    &quot;destFolderId&quot; : &quot;&lt;id_2&gt;&quot;,
+    &quot;newName&quot; : &quot;test3.txt&quot;
+}
+</code></pre>
+
+<p>The request payload contains the input to the <code>Microsoft.Graph.Copy</code> action, which is also defined in the $metadata.</p>
+<p>As you can see from the above examples of the REST API calls, with a single unified endpoint, the Microsoft Graph API simplifies 
+the application programming interface for all the Office 365 services as well and the Azure Active Directory service. As a result, the 
+boundaries of the otherwise silo-ed services disappear. As an app developer, you are no longer required to keep track of the 
+data sources and to implement custom interfaces between various data sources. </p>
+<p>&lt;a name=&quot;msg_using_client_lib&quot;&gt; </a></p>
+<h2 id="using-the-net-client-library">Using the .NET client library</h2>
+<p>A Microsoft Graph API native app uses the Microsoft Graph API client library to access and manipulate the API resources. 
+The client library exposes a .NET application object model that encapsulates the Microsoft Graph API data model ($metadata),
+mapping an OData resource type into a .NET class. 
+The CRUD operations in the REST API are translated as calls to the <code>ExecuteAsync</code>, <code>UpdateAsync</code>, and <code>DeleteAsync</code> methods 
+on the corresponding resource class. 
+The query options (e.g., $select, $filter, etc.) are turned into Linq clauses.<br />
+Once you understand how the ODatan entity type schema is mapped to the client library's object model, 
+you should see a strong similarity between calling the REST API and using the client library.</p>
+<p><strong>In this section:</strong></p>
+<ul>
+<li><a href="#msg_set_up_visual_studio">Set up a Visual Studio project</a>,</li>
+<li><a href="#msg_initialize_client">Initialize the Microsoft Graph API client</a>,</li>
+<li><a href="#msg_client_lib_object_model">Map client library object model to the entity schema</a>,</li>
+<li><a href="#msg_access_and_manipulate_resources_with_client_library">Access and manipulate resources with the client library</a>,</li>
+<li><a href="#msg_query_options_with_client_library">Use query options with the client library</a></li>
+</ul>
+<p>&lt;a name=&quot;msg_set_up_visual_studio&quot;&gt; </a></p>
+<h3 id="set-up-a-visual-studio-project">Set up a Visual Studio Project</h3>
+<p>The Microsoft Graph API client library is available for download as a NuGet package. 
+You can download it using Visual Studio after you have created a Visual Studio solution/project. 
+For more information on how to set up a Visual Studio project to call .NET client library, 
+see this <a href="http://aka.ms/o365-win-profile" target="_blank">Microsoft Graph API .NET client library sample app</a></p>
+<p>&lt;a name=&quot;msg_initialize_client&quot;&gt; </a> </p>
+<h3 id="initialize-the-microsoft-graph-api-client">Initialize the Microsoft Graph API client</h3>
+<p>For every Microsoft Graph API app, the entry point to the client library is a 
+<code>Microsoft.Graph.GraphService</code> object. You obtain this object by instantiating 
+the <code>GraphService</code> class before accessing any other Microsoft Graph API resources.</p>
+<pre><code class="no-highlight">Microsoft.Graph.GraphService client = new
+    Microsoft.Graph.GraphService(
+        serviceRoot, 
+        async () =&gt; await AcquireTokenAsyncForUser()
+); 
+</code></pre>
+
+<p>Here, <code>serviceRoot</code> is a <code>Uri</code> object and encapsulates the URL of <code>https://graph.microsoft.com/&lt;version&gt;/&lt;tenantId&gt;</code>. 
+The <code>AcquireTokenAsyncForUser</code> function passed to the client constructor performs the initial request to acquire the access 
+token for the app after prompting the user to sign in to Azure successfully. An implementation of this function call is shown as follows:</p>
+<pre><code class="no-highlight">var redirectUri = new Uri(&quot;http://localhost/MsGraphNativeApp&quot;);
+AuthenticationContext authenticationContext =  
+         new AuthenticationContext(Constants.LoginUrl, false);
+AuthenticationResult userAuthnResult = 
+         authenticationContext.AcquireToken(
+             Constants.ResourceUrl,
+             Constants.ClientIdForUserAuthn, 
+             redirectUri, 
+             PromptBehavior.Always
+         );
+var TokenForUser = userAuthnResult.AccessToken;
+</code></pre>
+
+<p>In this code snippet, the <code>AuthenticationContext</code> class is exposed by the 
+<a href="https://msdn.microsoft.com/en-us/library/azure/jj573266.aspx" target="_blank">ADAL for .NET</a>. It handles the authorization and token acquisition 
+behind the scenes. We first create a <code>AuthenticationContext</code> object and bind it to the <code>Constants.LoginUrl</code> 
+(=<code>https://login.microsoftonline.com/common</code>), the base URL of the Azure user login portal. We then call 
+the <code>AcquireToken</code> method on the newly created <code>authenticationContext</code> object. This will bring up the Azure user sign-in
+page for the user to enter his or her Azure tenant account and password. When the user signs in to Azure successfully, the API
+proceeds to acquire the access token, returns it to the app in the <code>userAuthnResult</code> object, and uses it in the subsequent 
+calls to the Microsoft Graph API service. The <code>redirectUri</code> must match the <strong>REPLY URI</strong> configured for the app in Azure
+ application registry. <code>Constants.ResourceUrl</code> is a named constant holding a string value of
+<code>&quot;https://graph.microsoft.com&quot;</code> and <code>Constants.ClientIdForUserAuthn</code> is the <strong>CLIENT ID</strong> value of the app, 
+also configured in Azure. Unlike a web app, the client secret is not used for any native app.</p>
+<p>&lt;a name=&quot;msg_client_lib_object_model&quot;&gt; </a></p>
+<h3 id="map-client-library-object-model-to-entity-schema">Map client library Object model to entity schema</h3>
+<p>The <code>Microsoft.Graph.GraphService</code> class serves as the root of the object hierarchy in the client library. 
+This class encapsulates the <code>&lt;EntityContainer Name=&quot;GraphService&quot;&gt;</code> element in the $metadata declaration. 
+As such, we expect that the contained <code>&lt;EntitySet&gt;</code> elements become the like-named properties on the client object. 
+Indeed, this is the case. For examples, the <code>&lt;EntitySet Name=&quot;users&quot; EntityType=&quot;Microsoft.Graph.User&gt;</code> element of $metadata 
+becomes the <code>GraphService.users</code> property in the client library to return a collection of the <code>Microsoft.Graph.User</code> objects, 
+which also implement the <code>IUsersCollection</code> interface. </p>
+<p>The same applies to entities and their properties, including navigation properties. Thus, the <code>&lt;EntityType name=&quot;User&quot;&gt;</code> element 
+and its child elements, for example, <code>&lt;Property name=&quot;userPrincipalName&quot;&gt;</code> and <code>&lt;NavigationProperty name=&quot;files&quot;&gt;</code>, 
+in metadata become the <code>User</code> class, the <code>User.userPrincipalName</code> property and the <code>User.files</code> property, respectively, in Microsoft.Graph.dll.</p>
+<p>The following table summarizes the mappings between the Microsoft Graph API entity schemas ($metadata) and its .NET client library.</p>
+<table>
+<thead>
+<tr>
+	<th align="left"><strong>Entity of $metadata</strong></th>
+	<th align="left"><strong>Type/members of Microsoft.Graph.Dll</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>&lt;EntityContainer Name=&quot;GraphService&quot;&gt;</code></td>
+	<td align="left">GraphService client;</td>
+</tr>
+<tr>
+	<td align="left"><code>&lt;EntitySet Name=&quot;users&quot; EntityType=&quot;Microsoft.Graph.User&quot;&gt;</code></td>
+	<td align="left"><code>IUserCollection client.users;</code></td>
+</tr>
+<tr>
+	<td align="left"><code>&lt;EntityType Name=&quot;User&quot; BaseType=&quot;Microsoft.Graph.DirectoryObject&quot;&gt;</code></td>
+	<td align="left"><code>Microsoft.Graph.User user;</code></td>
+</tr>
+<tr>
+	<td align="left"><code>&lt;Property Name=&quot;userPrincipalName&quot; Type=&quot;Edm.String&quot; Unicode=&quot;false&quot; /&gt;</code></td>
+	<td align="left"><code>string user.userPrincipalName;</code></td>
+</tr>
+<tr>
+	<td align="left"><code>&lt;NavigationProperty Name=&quot;files&quot; Type=&quot;Collection(Microsoft.Graph.Item)&quot; ContainsTarget=&quot;true&quot; /&gt;</code></td>
+	<td align="left"><code>IItemCollection user.files;</code></td>
+</tr>
+</tbody>
+</table>
+<p>In addition, the <code>me</code> shortcut in the REST API is mapped to the <code>Me</code> property on the <code>client</code> object as illustrated as follows:</p>
+<pre><code>User me = client.Me;
+</code></pre>
+
+<p>&lt;a name=&quot;msg_access_and_manipulate_resources_with_client_library&quot;&gt; </a> </p>
+<h3 id="access-and-manipulate-resources-with-the-client-library">Access and manipulate resources with the client library</h3>
+<p>With the client library, you can traverse the graph to access and manipulate the API resources by calling the<br />
+<code>ExecuteAsync</code>, <code>UpdateAsync</code> and <code>DeleteAsync</code> and other methods.  For example, fetching the <code>users</code> collection 
+off the tenant becomes calling the following statement: </p>
+<pre><code class="no-highlight">List&lt;IUser&gt; users = client.users.ExecuteAsync().Result.CurrentPage.ToList();
+</code></pre>
+
+<p>You can query a specific <code>User</code> resource from the tenant's <code>users</code> collection by calling the <code>GetById(uid)</code> method 
+on the <code>users</code> collection (<code>client.users</code>):</p>
+<pre><code>IUser user = client.users.GetById(uid).ExecuteAsync().Result;
+</code></pre>
+
+<p>where <code>uid</code> is either the <code>User</code> entity's <code>objectId</code> or <code>userPrincipalName</code> property value. For any other type of entities, 
+use the <code>objectId</code> property only to select a member from an entity collection on the server. Alternatively, you can use 
+the <code>Where</code> clause to select a specific instance from a resource collection predicated upon the <code>objectId</code> (also, <code>userPrincipalName</code>
+ for a <code>User</code> entity) properties. </p>
+<pre><code class="no-highlight">string upn = &quot;johndoe@contoso.onmicrosoft.com&quot;;
+IUser user = client.users.Where(u=&gt;u.userPrincipalName==upn).ExecuteSingleAsync().Result;
+</code></pre>
+
+<p>This has the same effect as using the <code>GetById(upn)</code>.</p>
+<p>Other properties may be used as predicates in a <code>Where</code> clause to filter out a subset of resources from a collection. 
+The following statement fetches the CEO of a company from the Azure tenant:</p>
+<pre><code class="no-highlight">IUser ceo = client.users.Where(u=&gt;u.jobTitle==&quot;CEO&quot;).ExecuteSingleAsync().Result;
+</code></pre>
+
+<p>And this one returns all the employees of the company other than the CEO:</p>
+<pre><code class="no-highlight">List&lt;IUser&gt; employees = client.users.Where(u=&gt;u.jobTitle!=&quot;CEO&quot;).ExecuteAsync().Result.CurrentPage.ToList();
+</code></pre>
+
+<p>The <code>Where</code> clause invoked before <code>ExecuteAsync</code> corresponds to using calling <code>$filter</code> query operation in the underlying REST call.
+For this to work, the filtering capabilities must be enabled for the properties used in the predicate. You can check the <code>&lt;annotations&gt;</code> tag
+in $metadata to find out if the option is supported for a given entity property. For more information about using <code>&lt;annotations&gt;</code> tag, 
+see <em>Understanding Microsoft Graph API metadata</em> article.</p>
+<p>To navigate along a relationship from a given resource , follow the corresponding navigation property on the source entity. 
+For example, the following snippet gets the list of files that a specific user (<code>user.objectId</code>) shared with the signed-in user. </p>
+<pre><code class="no-highlight">List&lt;Item&gt; userfiles= client.users.GetById(user.objectId).files.ExecuteAsync().Result.CurrentPage.ToList();
+</code></pre>
+
+<p>Continuing on, you can get a specified file (<code>fid</code>) shared out by that user (<code>user.objectId</code>) as well as the resultant file's most recent editor:</p>
+<pre><code class="no-highlight">IItem userFile= client.users.GetById(user.objectId)
+    .files.GetById(fid)      // navigation from a set to a member by the member's objectId
+    .ExecuteAsync().Result;
+  
+IUser userFileEditor = client.users.GetById(user.objectId)
+    .files.GetById(fid)    // navigation from a set to a member by objectId
+    .lastModifiedByUser    // traversal via relationship
+    .ExecuteAsync().Result;
+
+</code></pre>
+
+<p>Now, to get the files shared out by this editor (<code>userFileEditor</code>), start the traversal back from the tenant's user collection (<code>client.users</code>):</p>
+<pre><code class="no-highlight">List&lt;Item&gt; userFileEditorfiles= client.users.
+    GetById(userFileEditor.objectId)
+    .files
+    .ExecuteAsync().Result.CurrentPage.ToList();
+</code></pre>
+
+<p>&lt;a name=&quot;msg_query_options_with_client_library&quot;&gt; </a></p>
+<h3 id="use-query-options-with-the-client-library">Use query options with the client library</h3>
+<p>Common set operations are also supported for resource collections. For example, to fetch the first 5 users in a query, 
+use <code>Take(5)</code>. This corresponds to setting the query parameter <code>$top=5</code> in the underlying REST API call.</p>
+<pre><code class="no-highlight">List&lt;IUser&gt; users = client.users.Take(5).ExecuteAsync().Result.CurrentPage.ToList();
+</code></pre>
+
+<p>To filter a query predicated upon certain property values, use the <code>Where</code> clause:</p>
+<pre><code class="no-highlight">List&lt;IUser&gt; users = client
+    .users.Where(u=&gt;u.jobTitle==&quot;CEO&quot;)
+    .ExecuteAsync().Result.CurrentPage.ToList();
+</code></pre>
+
+<p>Similarly, to project an entity's properties to a subset of the properties, use the <code>Select</code> clause on either the server-side or client-side. 
+The server-side <code>Select</code> clause corresponds to setting the query parameter <code>$select=…</code>  in the underlying REST API call.<br />
+When the <code>$select</code> option is not supported in a particular REST API call, you can use the client-side <code>Select</code> clause when using the client library. 
+For example, to fetch a list of the users' <code>userPrincipalName</code> values:</p>
+<pre><code class="no-highlight">List&lt;string&gt; users = client.users
+    .ExecuteAsync().Result.CurrentPage
+    .Select(u=&gt;u.userPrincipalName).ToList();
+</code></pre>
+
+<p>However, the client-side filtering may not give you the performance you might get with the server-sider filtering.</p>
+<p>When calling an unsupported server-side query option, you will get an exception with a descriptive error message. You can use
+this to troubleshoot any programming issues. For example, when you try to invoke this statement </p>
+<pre><code class="no-highlight">List&lt;IUser&gt; users = client.users
+    .Where(u=&gt;u.userPrincipalName != &quot;johndoe@contoso.onmicrosoft.com&quot;)
+    .ExecuteAsync().Result.CurrentPage.ToList();
+</code></pre>
+
+<p>An exception will be thrown with an error message of <code>&quot;One or more errors occurred&quot;</code>. If you follow the inner exceptions, you will see
+the following error message in JSON format:</p>
+<pre><code class="no-highlight">{
+    &quot;odata.error&quot;: {
+        &quot;code&quot;:&quot;Request_UnsupportedQuery&quot;,
+        &quot;message&quot;: { 
+            &quot;lang&quot;:&quot;en&quot;,
+            &quot;value&quot;:&quot;Unsupported property filter clause operator 'NotEqualsMatch'.&quot;
+        }
+    }
+}
+</code></pre>
+
+<p>This is because the query option is not supported for selecting users other than the one of the specified <code>userPrincipalName</code>. </p>
+<p>In general, the client library offers a decent error information for you to troubleshoot any issues. Thus, if in doubt, 
+always catch exceptions and inspect error messages to learn what query options are not supported for a given operation. </p>
+<p>You can see more calling the .NET client library in action in this <a href="https://github.com/OfficeDev/O365-Win-Profile" target="_blank">sample app</a>. </p>
+<h2 id="additional-resources">Additional Resources</h2>
+<ul>
+<li><a href="http://dev.office.com/hands-on-labs/4585" target="_blank">Hands on lab: Deep dive into the Office 365 unified API</a></li>
+</ul>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+</body>
+
+
+
+

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="subscribedsku-resource-type">subscribedSku resource type</h1>
+<p>Only the read operation is supported on subscribed SKUs; create, update, and delete are not supported. Query filter expressions are not supported. Inherits from [DirectoryObject].</p>
+<h3 id="json-representation">JSON representation</h3>
+<p>Here is a JSON representation of the resource</p>
+<pre><code class="json">{
+  &quot;capabilityStatus&quot;: &quot;String-value&quot;,
+  &quot;consumedUnits&quot;: 1024,
+  &quot;objectId&quot;: &quot;String-value (identifier)&quot;,
+  &quot;prepaidUnits&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.licenseunitsdetail&quot;
+  },
+  &quot;servicePlans&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.serviceplaninfo&quot;
+    }
+  ],
+  &quot;skuId&quot;: &quot;Guid-value&quot;,
+  &quot;skuPartNumber&quot;: &quot;String-value&quot;
+}
+
+</code></pre>
+
+<h3 id="properties">Properties</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">capabilityStatus</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">consumedUnits</td>
+	<td align="left">Int32</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">objectId</td>
+	<td align="left">String</td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">prepaidUnits</td>
+	<td align="left"><a href="licenseunitsdetail.htm">LicenseUnitsDetail</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">servicePlans</td>
+	<td align="left"><a href="serviceplaninfo.htm">ServicePlanInfo</a> collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">skuId</td>
+	<td align="left">Guid</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">skuPartNumber</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationships">Relationships</h3>
+<p>None</p>
+<h3 id="methods">Methods</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Method</th>
+	<th align="left">Return Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><a href="../api/subscribedsku_get.htm">Get subscribedSku</a></td>
+	<td align="left"><a href="subscribedsku.htm">subscribedSku</a></td>
+	<td align="left">Read properties and relationships of subscribedSku object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/subscribedsku_update.htm">Update</a></td>
+	<td align="left"><a href="subscribedsku.htm">subscribedSku</a></td>
+	<td align="left">Update subscribedSku object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/subscribedsku_delete.htm">Delete</a></td>
+	<td align="left">None</td>
+	<td align="left">Delete subscribedSku object.</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+</body>
+
+
+
+

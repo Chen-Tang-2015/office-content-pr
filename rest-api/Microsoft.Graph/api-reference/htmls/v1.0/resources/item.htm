@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="item-resource-type">item resource type</h1>
+<p>The Item resource type represents metadata for an item in OneDrive.
+ All top-level filesystem objects in OneDrive are Item resources.
+ If an item is a <a href="../facets/folder_facet.htm">Folder</a> or <a href="../facets/file_facet.htm">File</a> facet, the Item resource will contain a value for either the <strong>folder</strong> or <strong>file</strong> property, respectively.</p>
+<h3 id="json-representation">JSON representation</h3>
+<p>Here is a JSON representation of the resource</p>
+<pre><code class="json">{
+  &quot;audio&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.audio&quot;
+  },
+  &quot;cTag&quot;: &quot;String-value&quot;,
+  &quot;children&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.item&quot;
+    }
+  ],
+  &quot;content&quot;: &quot;Stream-value&quot;,
+  &quot;createdBy&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.identityset&quot;
+  },
+  &quot;createdByUser&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.user&quot;
+  },
+  &quot;createdDateTime&quot;: &quot;String (timestamp)&quot;,
+  &quot;deleted&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.deleted&quot;
+  },
+  &quot;description&quot;: &quot;String-value&quot;,
+  &quot;eTag&quot;: &quot;String-value&quot;,
+  &quot;file&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.file&quot;
+  },
+  &quot;fileSystemInfo&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.filesysteminfo&quot;
+  },
+  &quot;folder&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.folder&quot;
+  },
+  &quot;id&quot;: &quot;String-value (identifier)&quot;,
+  &quot;image&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.image&quot;
+  },
+  &quot;lastModifiedBy&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.identityset&quot;
+  },
+  &quot;lastModifiedByUser&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.user&quot;
+  },
+  &quot;lastModifiedDateTime&quot;: &quot;String (timestamp)&quot;,
+  &quot;location&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.location&quot;
+  },
+  &quot;name&quot;: &quot;String-value&quot;,
+  &quot;openWith&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.openwithset&quot;
+  },
+  &quot;parentReference&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.itemreference&quot;
+  },
+  &quot;permissions&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.permission&quot;
+    }
+  ],
+  &quot;photo&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.photo&quot;
+  },
+  &quot;searchResult&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.searchresult&quot;
+  },
+  &quot;shared&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.shared&quot;
+  },
+  &quot;size&quot;: 1024,
+  &quot;specialFolder&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.specialfolder&quot;
+  },
+  &quot;thumbnails&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.thumbnailset&quot;
+    }
+  ],
+  &quot;versions&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.item&quot;
+    }
+  ],
+  &quot;video&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.video&quot;
+  },
+  &quot;webDavUrl&quot;: &quot;String-value&quot;,
+  &quot;webUrl&quot;: &quot;String-value&quot;
+}
+
+</code></pre>
+
+<h3 id="properties">Properties</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">audio</td>
+	<td align="left"><a href="audio.htm">audio</a></td>
+	<td align="left">Audio metadata, if the item is an audio file. Read-only. Audio metadata, if the item is an audio file. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">cTag</td>
+	<td align="left">String</td>
+	<td align="left">An eTag for the content of the item. This eTag is not changed if only the metadata is changed. <strong>Note</strong> This property is not returned if the Item is a folder. Read-only. An eTag for the content of the item. This eTag is not changed if only the metadata is changed. <strong>Note</strong> This property is not returned if the Item is a folder. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">content</td>
+	<td align="left">Stream</td>
+	<td align="left">The content stream, if the Item represents a file. The content stream, if the Item represents a file.</td>
+</tr>
+<tr>
+	<td align="left">createdBy</td>
+	<td align="left"><a href="identityset.htm">identitySet</a></td>
+	<td align="left">Identity of the user, device, and application which created the item. Read-only. Identity of the user, device, and application which created the item. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">createdDateTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">Date and time of item creation. Read-only. Date and time of item creation. Read-only.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">deleted</td>
+	<td align="left"><a href="deleted.htm">deleted</a></td>
+	<td align="left">Information about the deleted state of the item. Read-only. Information about the deleted state of the item. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">description</td>
+	<td align="left">String</td>
+	<td align="left">Provide a user-visible description of the item. Read-write. Provide a user-visible description of the item. Read-write.</td>
+</tr>
+<tr>
+	<td align="left">eTag</td>
+	<td align="left">String</td>
+	<td align="left">eTag for the entire item (metadata + content). Read-only. eTag for the entire item (metadata + content). Read-only.</td>
+</tr>
+<tr>
+	<td align="left">file</td>
+	<td align="left"><a href="file.htm">file</a></td>
+	<td align="left">File metadata, if the item is a file. Read-only. File metadata, if the item is a file. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">fileSystemInfo</td>
+	<td align="left"><a href="filesysteminfo.htm">fileSystemInfo</a></td>
+	<td align="left">File system information on client. Read-write. File system information on client. Read-write.</td>
+</tr>
+<tr>
+	<td align="left">folder</td>
+	<td align="left"><a href="folder.htm">folder</a></td>
+	<td align="left">Folder metadata, if the item is a folder. Read-only. Folder metadata, if the item is a folder. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">id</td>
+	<td align="left">String</td>
+	<td align="left">The unique identifier of the item within the Drive. Read-only. The unique identifier of the item within the Drive. Read-only. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">image</td>
+	<td align="left"><a href="image.htm">image</a></td>
+	<td align="left">Image metadata, if the item is an image. Read-only. Image metadata, if the item is an image. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">lastModifiedBy</td>
+	<td align="left"><a href="identityset.htm">identitySet</a></td>
+	<td align="left">Identity of the user, device, and application which last modified the item. Read-only. Identity of the user, device, and application which last modified the item. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">lastModifiedDateTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">Date and time the item was last modified. Read-only. Date and time the item was last modified. Read-only.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">location</td>
+	<td align="left"><a href="location.htm">location</a></td>
+	<td align="left">Location metadata, if the item has location data. Read-only. Location metadata, if the item has location data. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">name</td>
+	<td align="left">String</td>
+	<td align="left">The name of the item (filename and extension). Read-write. The name of the item (filename and extension). Read-write.</td>
+</tr>
+<tr>
+	<td align="left">openWith</td>
+	<td align="left"><a href="openwithset.htm">openWithSet</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">parentReference</td>
+	<td align="left"><a href="itemreference.htm">itemReference</a></td>
+	<td align="left">Parent information, if the item has a parent. Read-write. Parent information, if the item has a parent. Read-write.</td>
+</tr>
+<tr>
+	<td align="left">photo</td>
+	<td align="left"><a href="photo.htm">photo</a></td>
+	<td align="left">Photo metadata, if the item is a photo. Read-only. Photo metadata, if the item is a photo. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">searchResult</td>
+	<td align="left"><a href="searchresult.htm">searchResult</a></td>
+	<td align="left">Search metadata, if the item is from a search result. Search metadata, if the item is from a search result.</td>
+</tr>
+<tr>
+	<td align="left">shared</td>
+	<td align="left"><a href="shared.htm">shared</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">size</td>
+	<td align="left">Int64</td>
+	<td align="left">Size of the item in bytes. Read-only. Size of the item in bytes. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">specialFolder</td>
+	<td align="left"><a href="specialfolder.htm">specialFolder</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">video</td>
+	<td align="left"><a href="video.htm">video</a></td>
+	<td align="left">Video metadata, if the item is a video. Read-only. Video metadata, if the item is a video. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">webDavUrl</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">webUrl</td>
+	<td align="left">String</td>
+	<td align="left">URL that displays the resource in the browser. Read-only. URL that displays the resource in the browser. Read-only.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationships">Relationships</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Relationship</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">children</td>
+	<td align="left"><a href="item.htm">item</a> collection</td>
+	<td align="left">Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">createdByUser</td>
+	<td align="left"><a href="user.htm">User</a></td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">lastModifiedByUser</td>
+	<td align="left"><a href="user.htm">User</a></td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">permissions</td>
+	<td align="left"><a href="permission.htm">permission</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">thumbnails</td>
+	<td align="left"><a href="thumbnailset.htm">thumbnailSet</a> collection</td>
+	<td align="left">Collection containing <a href="thumbnailSet.htm">ThumbnailSet</a> objects associated with the item. For more info, see <a href="../items/thumbnails.htm">getting thumbnails</a>. Collection containing <a href="thumbnailSet.htm">ThumbnailSet</a> objects associated with the item. For more info, see <a href="../items/thumbnails.htm">getting thumbnails</a>. Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">versions</td>
+	<td align="left"><a href="item.htm">item</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="methods">Methods</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Method</th>
+	<th align="left">Return Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><a href="../api/item_get.htm">Get item</a></td>
+	<td align="left"><a href="item.htm">item</a></td>
+	<td align="left">Read properties and relationships of item object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_post_children.htm">Create children</a></td>
+	<td align="left"><a href="item.htm">item</a></td>
+	<td align="left">Create a new children by posting to the children collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_list_children.htm">List children</a></td>
+	<td align="left"><a href="item.htm">item</a> collection</td>
+	<td align="left">Get a children object collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_post_permissions.htm">Create permission</a></td>
+	<td align="left"><a href="permission.htm">permission</a></td>
+	<td align="left">Create a new permission by posting to the permissions collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_list_permissions.htm">List permissions</a></td>
+	<td align="left"><a href="permission.htm">permission</a> collection</td>
+	<td align="left">Get a permission object collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_post_thumbnails.htm">Create thumbnailSet</a></td>
+	<td align="left"><a href="thumbnailset.htm">thumbnailSet</a></td>
+	<td align="left">Create a new thumbnailSet by posting to the thumbnails collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_list_thumbnails.htm">List thumbnails</a></td>
+	<td align="left"><a href="thumbnailset.htm">thumbnailSet</a> collection</td>
+	<td align="left">Get a thumbnailSet object collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_post_versions.htm">Create version</a></td>
+	<td align="left"><a href="item.htm">item</a></td>
+	<td align="left">Create a new version by posting to the versions collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_list_versions.htm">List versions</a></td>
+	<td align="left"><a href="item.htm">item</a> collection</td>
+	<td align="left">Get a version object collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_update.htm">Update</a></td>
+	<td align="left"><a href="item.htm">item</a></td>
+	<td align="left">Update item object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_delete.htm">Delete</a></td>
+	<td align="left">None</td>
+	<td align="left">Delete item object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_allphotos.htm">Allphotos</a></td>
+	<td align="left"><a href="item.htm">item</a> collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_copy.htm">Copy</a></td>
+	<td align="left"><a href="item.htm">item</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_createlink.htm">Createlink</a></td>
+	<td align="left"><a href="permission.htm">permission</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_createsession.htm">Createsession</a></td>
+	<td align="left"><a href="uploadsession.htm">uploadSession</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_delta.htm">Delta</a></td>
+	<td align="left"><a href="item.htm">item</a> collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_invite.htm">Invite</a></td>
+	<td align="left"><a href="permission.htm">permission</a> collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/item_search.htm">Search</a></td>
+	<td align="left"><a href="item.htm">item</a> collection</td>
+	<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+</body>
+
+
+
+

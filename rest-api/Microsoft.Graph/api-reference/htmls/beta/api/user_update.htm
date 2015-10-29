@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="update-user">Update user</h1>
+<p>Update the properties of user object.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<h3 id="http-request">HTTP request</h3>
+<pre><code class="http">PATCH /users/&lt;objectId&gt;
+PATCH /drive/root/createdByUser
+PATCH /drive/root/lastModifiedByUser
+</code></pre>
+
+<h3 id="optional-request-headers">Optional request headers</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Name</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">X-Sample-Header</td>
+	<td align="left">string</td>
+	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-body">Request body</h3>
+<p>In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.</p>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">aboutMe</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">accountEnabled</td>
+	<td align="left">Boolean</td>
+	<td align="left"><strong>true</strong> if the account is enabled; otherwise, <strong>false</strong>. This property is required when a user is created.                             <strong>true</strong> if the account is enabled; otherwise, <strong>false</strong>. This property is required when a user is created.</td>
+</tr>
+<tr>
+	<td align="left">alias</td>
+	<td align="left">String</td>
+	<td align="left">The user's alias. Typically the SMTP address of the user. The user's alias. Typically the SMTP address of the user.</td>
+</tr>
+<tr>
+	<td align="left">assignedLicenses</td>
+	<td align="left">AssignedLicense</td>
+	<td align="left">The licenses that are assigned to the user.                            <strong>Notes</strong>: not nullable.             The licenses that are assigned to the user.                            <strong>Notes</strong>: not nullable.</td>
+</tr>
+<tr>
+	<td align="left">assignedPlans</td>
+	<td align="left">AssignedPlan</td>
+	<td align="left">The plans that are assigned to the user.                            <strong>Notes</strong>: not nullable.             The plans that are assigned to the user.                            <strong>Notes</strong>: not nullable.</td>
+</tr>
+<tr>
+	<td align="left">birthday</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">city</td>
+	<td align="left">String</td>
+	<td align="left">The city in which the user is located. The city in which the user is located.</td>
+</tr>
+<tr>
+	<td align="left">country</td>
+	<td align="left">String</td>
+	<td align="left">The country/region in which the user is located; for example, “US” or “UK”. The country/region in which the user is located; for example, “US” or “UK”.</td>
+</tr>
+<tr>
+	<td align="left">deletionTimestamp</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">This property is not valid for users and always returns <strong>null</strong>. Inherited from [DirectoryObject].                            <strong>Notes</strong>: Requires version 1.5 or newer.             This property is not valid for users and always returns <strong>null</strong>. Inherited from [DirectoryObject].                            <strong>Notes</strong>: Requires version 1.5 or newer.</td>
+</tr>
+<tr>
+	<td align="left">department</td>
+	<td align="left">String</td>
+	<td align="left">The name for the department in which the user works. The name for the department in which the user works.</td>
+</tr>
+<tr>
+	<td align="left">dirSyncEnabled</td>
+	<td align="left">Boolean</td>
+	<td align="left"><strong>true</strong> if this object is synced from an on-premises directory; <strong>false</strong> if this object was originally synced from an on-premises directory but is no longer synced; <strong>null</strong> if this object has never been synced from an on-premises directory (default).                             <strong>true</strong> if this object is synced from an on-premises directory; <strong>false</strong> if this object was originally synced from an on-premises directory but is no longer synced; <strong>null</strong> if this object has never been synced from an on-premises directory (default).</td>
+</tr>
+<tr>
+	<td align="left">displayName</td>
+	<td align="left">String</td>
+	<td align="left">The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial and last name. This property is required when a user is created and it cannot be cleared during updates. The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial and last name. This property is required when a user is created and it cannot be cleared during updates.</td>
+</tr>
+<tr>
+	<td align="left">emailAddress</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">facsimileTelephoneNumber</td>
+	<td align="left">String</td>
+	<td align="left">The telephone number of the user's business fax machine. The telephone number of the user's business fax machine.</td>
+</tr>
+<tr>
+	<td align="left">givenName</td>
+	<td align="left">String</td>
+	<td align="left">The given name (first name) of the user. The given name (first name) of the user.</td>
+</tr>
+<tr>
+	<td align="left">hireDate</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">immutableId</td>
+	<td align="left">String</td>
+	<td align="left">This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user’s <strong>userPrincipalName</strong> (UPN) property.                            <strong>Important:</strong> The <strong>$</strong> and **_** characters cannot be used when specifying this property.                                        <strong>Notes</strong>: Requires version 2013-11-08 or newer.             This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user’s <strong>userPrincipalName</strong> (UPN) property.                            <strong>Important:</strong> The <strong>$</strong> and **_** characters cannot be used when specifying this property.                                        <strong>Notes</strong>: Requires version 2013-11-08 or newer.</td>
+</tr>
+<tr>
+	<td align="left">interests</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">jobTitle</td>
+	<td align="left">String</td>
+	<td align="left">The user’s job title. The user’s job title.</td>
+</tr>
+<tr>
+	<td align="left">lastDirSyncTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">Indicates the last time at which the object was synced with the on-premises directory; for example: &quot;2013-02-16T03:04:54Z&quot;  Indicates the last time at which the object was synced with the on-premises directory; for example: &quot;2013-02-16T03:04:54Z&quot;</td>
+</tr>
+<tr>
+	<td align="left">mail</td>
+	<td align="left">String</td>
+	<td align="left">The SMTP address for the user, for example, &quot;jeff@contoso.onmicrosoft.com&quot;. The SMTP address for the user, for example, &quot;jeff@contoso.onmicrosoft.com&quot;.</td>
+</tr>
+<tr>
+	<td align="left">mailNickname</td>
+	<td align="left">String</td>
+	<td align="left">The mail alias for the user. This property must be specified when a user is created. The mail alias for the user. This property must be specified when a user is created.</td>
+</tr>
+<tr>
+	<td align="left">mailboxGuid</td>
+	<td align="left">Guid</td>
+	<td align="left">The GUID assigned to the user's mailbox. The GUID assigned to the user's mailbox.</td>
+</tr>
+<tr>
+	<td align="left">mobile</td>
+	<td align="left">String</td>
+	<td align="left">The primary cellular telephone number for the user. The primary cellular telephone number for the user.</td>
+</tr>
+<tr>
+	<td align="left">mySite</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">objectType</td>
+	<td align="left">String</td>
+	<td align="left">A string that identifies the object type. For users the value is always “User”. Inherited from [DirectoryObject]. A string that identifies the object type. For users the value is always “User”. Inherited from [DirectoryObject].</td>
+</tr>
+<tr>
+	<td align="left">onPremisesSecurityIdentifier</td>
+	<td align="left">String</td>
+	<td align="left">Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud.                            <strong>Notes</strong>: Requires version 1.5 or newer.             Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud.                            <strong>Notes</strong>: Requires version 1.5 or newer.</td>
+</tr>
+<tr>
+	<td align="left">otherMails</td>
+	<td align="left">String</td>
+	<td align="left">A list of additional email addresses for the user; for example: [&quot;bob@contoso.com&quot;, &quot;Robert@fabrikam.com&quot;].                            <strong>Notes</strong>: not nullable, the <strong>any</strong> operator is required for filter expressions on multi-valued properties; for more information, see <a href="https://msdn.microsoft.com/library/azure/dn727074.aspx" target="_blank">Supported Queries, Filters, and Paging Options</a>.             A list of additional email addresses for the user; for example: [&quot;bob@contoso.com&quot;, &quot;Robert@fabrikam.com&quot;].                            <strong>Notes</strong>: not nullable, the <strong>any</strong> operator is required for filter expressions on multi-valued properties; for more information, see <a href="https://msdn.microsoft.com/library/azure/dn727074.aspx" target="_blank">Supported Queries, Filters, and Paging Options</a>.</td>
+</tr>
+<tr>
+	<td align="left">passwordPolicies</td>
+	<td align="left">String</td>
+	<td align="left">Specifies password policies for the user. This value is an enumeration with one possible value being “DisableStrongPassword”, which allows weaker passwords than the default policy to be specified. “DisablePasswordExpiration” can also be specified. The two may be specified together; for example: &quot;DisablePasswordExpiration, DisableStrongPassword&quot;. Specifies password policies for the user. This value is an enumeration with one possible value being “DisableStrongPassword”, which allows weaker passwords than the default policy to be specified. “DisablePasswordExpiration” can also be specified. The two may be specified together; for example: &quot;DisablePasswordExpiration, DisableStrongPassword&quot;.</td>
+</tr>
+<tr>
+	<td align="left">passwordProfile</td>
+	<td align="left">PasswordProfile</td>
+	<td align="left">Specifies the password profile for the user. The profile contains the user’s password. This property is required when a user is created.            The password in the profile must satisfy minimum requirements as specified by the <strong>passwordPolicies</strong> property. By default, a strong password is required. For information about the constraints that must be satisfied for a strong password, see <strong>Password policy</strong> under <a href="http://onlinehelp.microsoft.com/office365-enterprises/ff637578.aspx" target="_blank">Change your password</a> in the Microsoft Office 365 help pages.  Specifies the password profile for the user. The profile contains the user’s password. This property is required when a user is created.            The password in the profile must satisfy minimum requirements as specified by the <strong>passwordPolicies</strong> property. By default, a strong password is required. For information about the constraints that must be satisfied for a strong password, see <strong>Password policy</strong> under <a href="http://onlinehelp.microsoft.com/office365-enterprises/ff637578.aspx" target="_blank">Change your password</a> in the Microsoft Office 365 help pages.</td>
+</tr>
+<tr>
+	<td align="left">pastProjects</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">physicalDeliveryOfficeName</td>
+	<td align="left">String</td>
+	<td align="left">The office location in the user's place of business. The office location in the user's place of business.</td>
+</tr>
+<tr>
+	<td align="left">postalCode</td>
+	<td align="left">String</td>
+	<td align="left">The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code. The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code.</td>
+</tr>
+<tr>
+	<td align="left">preferredLanguage</td>
+	<td align="left">String</td>
+	<td align="left">The preferred language for the user. Should follow ISO 639-1 Code; for example &quot;en-US&quot;. The preferred language for the user. Should follow ISO 639-1 Code; for example &quot;en-US&quot;.</td>
+</tr>
+<tr>
+	<td align="left">preferredName</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">principalName</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">provisionedPlans</td>
+	<td align="left">ProvisionedPlan</td>
+	<td align="left">The plans that are provisioned for the user.                            <strong>Notes</strong>: not nullable.             The plans that are provisioned for the user.                            <strong>Notes</strong>: not nullable.</td>
+</tr>
+<tr>
+	<td align="left">provisioningErrors</td>
+	<td align="left">ProvisioningError</td>
+	<td align="left">A collection of error details that are preventing this user from being provisioned successfully. A collection of error details that are preventing this user from being provisioned successfully.</td>
+</tr>
+<tr>
+	<td align="left">proxyAddresses</td>
+	<td align="left">String</td>
+	<td align="left">Fpr example: [&quot;SMTP: bob@contoso.com&quot;, &quot;smtp: bob@sales.contoso.com&quot;]                            <strong>Notes</strong>: unique, not nullable, the <strong>any</strong> operator is required for filter expressions on multi-valued properties; for more information, see <a href="https://msdn.microsoft.com/library/azure/dn727074.aspx" target="_blank">Supported Queries, Filters, and Paging Options</a>.             Fpr example: [&quot;SMTP: bob@contoso.com&quot;, &quot;smtp: bob@sales.contoso.com&quot;]                            <strong>Notes</strong>: unique, not nullable, the <strong>any</strong> operator is required for filter expressions on multi-valued properties; for more information, see <a href="https://msdn.microsoft.com/library/azure/dn727074.aspx" target="_blank">Supported Queries, Filters, and Paging Options</a>.</td>
+</tr>
+<tr>
+	<td align="left">responsibilities</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">schools</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">sipProxyAddress</td>
+	<td align="left">String</td>
+	<td align="left">Specifies the voice over IP (VOIP) session initiation protocol (SIP) address for the user.                            <strong>Notes</strong>: Requires version 1.5 or newer.             Specifies the voice over IP (VOIP) session initiation protocol (SIP) address for the user.                            <strong>Notes</strong>: Requires version 1.5 or newer.</td>
+</tr>
+<tr>
+	<td align="left">skills</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">state</td>
+	<td align="left">String</td>
+	<td align="left">The state or province in the user's address. The state or province in the user's address.</td>
+</tr>
+<tr>
+	<td align="left">streetAddress</td>
+	<td align="left">String</td>
+	<td align="left">The street address of the user's place of business. The street address of the user's place of business.</td>
+</tr>
+<tr>
+	<td align="left">surname</td>
+	<td align="left">String</td>
+	<td align="left">The user's surname (family name or last name).                            <strong>Notes</strong>: filterable.             The user's surname (family name or last name).                            <strong>Notes</strong>: filterable.</td>
+</tr>
+<tr>
+	<td align="left">tags</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">telephoneNumber</td>
+	<td align="left">String</td>
+	<td align="left">The primary telephone number of the user's place of business. The primary telephone number of the user's place of business.</td>
+</tr>
+<tr>
+	<td align="left">thumbnailPhoto</td>
+	<td align="left">Stream</td>
+	<td align="left">A thumbnail photo to be displayed for the user.                            <strong>Notes</strong>: not nullable.             A thumbnail photo to be displayed for the user.                            <strong>Notes</strong>: not nullable.</td>
+</tr>
+<tr>
+	<td align="left">usageLocation</td>
+	<td align="left">String</td>
+	<td align="left">A two letter country code (ISO standard 3166). Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries.  Examples include: &quot;US&quot;, &quot;JP&quot;, and &quot;GB&quot;.                            <strong>Notes</strong>: not nullable.             A two letter country code (ISO standard 3166). Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries.  Examples include: &quot;US&quot;, &quot;JP&quot;, and &quot;GB&quot;.                            <strong>Notes</strong>: not nullable.</td>
+</tr>
+<tr>
+	<td align="left">userPrincipalName</td>
+	<td align="left">String</td>
+	<td align="left">The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created.             The verified domains for the tenant can be accessed from the <strong>VerifiedDomains</strong> property of [TenantDetail]. For example, for contoso.onmicosoft.com, tenant detail can be read by performing a GET to the following URL: https://graph.windows.net/contoso.onmicrosoft.com/tenantDetails?api-version=1.5.                            <strong>Notes</strong>: <strong>key</strong>, unique.             The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created.             The verified domains for the tenant can be accessed from the <strong>VerifiedDomains</strong> property of [TenantDetail]. For example, for contoso.onmicosoft.com, tenant detail can be read by performing a GET to the following URL: https://graph.windows.net/contoso.onmicrosoft.com/tenantDetails?api-version=1.5.                            <strong>Notes</strong>: <strong>key</strong>, unique.</td>
+</tr>
+<tr>
+	<td align="left">userType</td>
+	<td align="left">String</td>
+	<td align="left">A string value that can be used to classify user types in your directory, such as “Member” and “Guest”.                            <strong>Notes</strong>: Requires version 2013-11-08 or newer.             A string value that can be used to classify user types in your directory, such as “Member” and “Guest”.                            <strong>Notes</strong>: Requires version 2013-11-08 or newer.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response">Response</h3>
+<p>If successful, this method returns a <code>200 OK</code> response code and updated <a href="../resources/user.htm">user</a> object in the response body.</p>
+<h3 id="example">Example</h3>
+<h5 id="request">Request</h5>
+<p>Here is an example of the request.</p>
+<pre><code class="http">PUT https://graph.microsoft.com/beta/users/&lt;objectId&gt;
+Content-type: application/json
+Content-length: 2708
+
+{
+  &quot;accountEnabled&quot;: true,
+  &quot;assignedLicenses&quot;: [
+    {
+      &quot;disabledPlans&quot;: [
+        &quot;disabledPlans-value&quot;
+      ],
+      &quot;skuId&quot;: &quot;skuId-value&quot;
+    }
+  ],
+  &quot;assignedPlans&quot;: [
+    {
+      &quot;assignedTimestamp&quot;: &quot;datetime-value&quot;,
+      &quot;capabilityStatus&quot;: &quot;capabilityStatus-value&quot;,
+      &quot;service&quot;: &quot;service-value&quot;,
+      &quot;servicePlanId&quot;: &quot;servicePlanId-value&quot;
+    }
+  ],
+  &quot;city&quot;: &quot;city-value&quot;,
+  &quot;country&quot;: &quot;country-value&quot;,
+  &quot;department&quot;: &quot;department-value&quot;,
+  &quot;dirSyncEnabled&quot;: true,
+  &quot;displayName&quot;: &quot;displayName-value&quot;,
+  &quot;facsimileTelephoneNumber&quot;: &quot;facsimileTelephoneNumber-value&quot;,
+  &quot;givenName&quot;: &quot;givenName-value&quot;,
+  &quot;immutableId&quot;: &quot;immutableId-value&quot;,
+  &quot;jobTitle&quot;: &quot;jobTitle-value&quot;,
+  &quot;lastDirSyncTime&quot;: &quot;datetime-value&quot;,
+  &quot;mail&quot;: &quot;mail-value&quot;,
+  &quot;mailNickname&quot;: &quot;mailNickname-value&quot;,
+  &quot;mobile&quot;: &quot;mobile-value&quot;,
+  &quot;onPremisesSecurityIdentifier&quot;: &quot;onPremisesSecurityIdentifier-value&quot;,
+  &quot;otherMails&quot;: [
+    &quot;otherMails-value&quot;
+  ],
+  &quot;passwordPolicies&quot;: &quot;passwordPolicies-value&quot;,
+  &quot;passwordProfile&quot;: {
+    &quot;password&quot;: &quot;password-value&quot;,
+    &quot;forceChangePasswordNextLogin&quot;: true
+  },
+  &quot;physicalDeliveryOfficeName&quot;: &quot;physicalDeliveryOfficeName-value&quot;,
+  &quot;postalCode&quot;: &quot;postalCode-value&quot;,
+  &quot;preferredLanguage&quot;: &quot;preferredLanguage-value&quot;,
+  &quot;provisionedPlans&quot;: [
+    {
+      &quot;capabilityStatus&quot;: &quot;capabilityStatus-value&quot;,
+      &quot;provisioningStatus&quot;: &quot;provisioningStatus-value&quot;,
+      &quot;service&quot;: &quot;service-value&quot;
+    }
+  ],
+  &quot;provisioningErrors&quot;: [
+    {
+      &quot;errorDetail&quot;: &quot;errorDetail-value&quot;,
+      &quot;resolved&quot;: true,
+      &quot;service&quot;: &quot;service-value&quot;,
+      &quot;timestamp&quot;: &quot;datetime-value&quot;
+    }
+  ],
+  &quot;proxyAddresses&quot;: [
+    &quot;proxyAddresses-value&quot;
+  ],
+  &quot;sipProxyAddress&quot;: &quot;sipProxyAddress-value&quot;,
+  &quot;state&quot;: &quot;state-value&quot;,
+  &quot;streetAddress&quot;: &quot;streetAddress-value&quot;,
+  &quot;surname&quot;: &quot;surname-value&quot;,
+  &quot;telephoneNumber&quot;: &quot;telephoneNumber-value&quot;,
+  &quot;thumbnailPhoto&quot;: &quot;thumbnailPhoto-value&quot;,
+  &quot;usageLocation&quot;: &quot;usageLocation-value&quot;,
+  &quot;userPrincipalName&quot;: &quot;userPrincipalName-value&quot;,
+  &quot;userType&quot;: &quot;userType-value&quot;,
+  &quot;emailAddress&quot;: &quot;emailAddress-value&quot;,
+  &quot;mailboxGuid&quot;: &quot;mailboxGuid-value&quot;,
+  &quot;aboutMe&quot;: &quot;aboutMe-value&quot;,
+  &quot;alias&quot;: &quot;alias-value&quot;,
+  &quot;birthday&quot;: &quot;datetime-value&quot;,
+  &quot;hireDate&quot;: &quot;datetime-value&quot;,
+  &quot;interests&quot;: [
+    &quot;interests-value&quot;
+  ],
+  &quot;mySite&quot;: &quot;mySite-value&quot;,
+  &quot;pastProjects&quot;: [
+    &quot;pastProjects-value&quot;
+  ],
+  &quot;preferredName&quot;: &quot;preferredName-value&quot;,
+  &quot;principalName&quot;: &quot;principalName-value&quot;,
+  &quot;responsibilities&quot;: [
+    &quot;responsibilities-value&quot;
+  ],
+  &quot;schools&quot;: [
+    &quot;schools-value&quot;
+  ],
+  &quot;skills&quot;: [
+    &quot;skills-value&quot;
+  ],
+  &quot;tags&quot;: [
+    &quot;tags-value&quot;
+  ],
+  &quot;objectType&quot;: &quot;objectType-value&quot;,
+  &quot;objectId&quot;: &quot;objectId-value&quot;,
+  &quot;deletionTimestamp&quot;: &quot;datetime-value&quot;
+}
+</code></pre>
+
+<h5 id="response-1">Response</h5>
+<p>Here is an example of the response.</p>
+<pre><code class="http">HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 2708
+
+{
+  &quot;accountEnabled&quot;: true,
+  &quot;assignedLicenses&quot;: [
+    {
+      &quot;disabledPlans&quot;: [
+        &quot;disabledPlans-value&quot;
+      ],
+      &quot;skuId&quot;: &quot;skuId-value&quot;
+    }
+  ],
+  &quot;assignedPlans&quot;: [
+    {
+      &quot;assignedTimestamp&quot;: &quot;datetime-value&quot;,
+      &quot;capabilityStatus&quot;: &quot;capabilityStatus-value&quot;,
+      &quot;service&quot;: &quot;service-value&quot;,
+      &quot;servicePlanId&quot;: &quot;servicePlanId-value&quot;
+    }
+  ],
+  &quot;city&quot;: &quot;city-value&quot;,
+  &quot;country&quot;: &quot;country-value&quot;,
+  &quot;department&quot;: &quot;department-value&quot;,
+  &quot;dirSyncEnabled&quot;: true,
+  &quot;displayName&quot;: &quot;displayName-value&quot;,
+  &quot;facsimileTelephoneNumber&quot;: &quot;facsimileTelephoneNumber-value&quot;,
+  &quot;givenName&quot;: &quot;givenName-value&quot;,
+  &quot;immutableId&quot;: &quot;immutableId-value&quot;,
+  &quot;jobTitle&quot;: &quot;jobTitle-value&quot;,
+  &quot;lastDirSyncTime&quot;: &quot;datetime-value&quot;,
+  &quot;mail&quot;: &quot;mail-value&quot;,
+  &quot;mailNickname&quot;: &quot;mailNickname-value&quot;,
+  &quot;mobile&quot;: &quot;mobile-value&quot;,
+  &quot;onPremisesSecurityIdentifier&quot;: &quot;onPremisesSecurityIdentifier-value&quot;,
+  &quot;otherMails&quot;: [
+    &quot;otherMails-value&quot;
+  ],
+  &quot;passwordPolicies&quot;: &quot;passwordPolicies-value&quot;,
+  &quot;passwordProfile&quot;: {
+    &quot;password&quot;: &quot;password-value&quot;,
+    &quot;forceChangePasswordNextLogin&quot;: true
+  },
+  &quot;physicalDeliveryOfficeName&quot;: &quot;physicalDeliveryOfficeName-value&quot;,
+  &quot;postalCode&quot;: &quot;postalCode-value&quot;,
+  &quot;preferredLanguage&quot;: &quot;preferredLanguage-value&quot;,
+  &quot;provisionedPlans&quot;: [
+    {
+      &quot;capabilityStatus&quot;: &quot;capabilityStatus-value&quot;,
+      &quot;provisioningStatus&quot;: &quot;provisioningStatus-value&quot;,
+      &quot;service&quot;: &quot;service-value&quot;
+    }
+  ],
+  &quot;provisioningErrors&quot;: [
+    {
+      &quot;errorDetail&quot;: &quot;errorDetail-value&quot;,
+      &quot;resolved&quot;: true,
+      &quot;service&quot;: &quot;service-value&quot;,
+      &quot;timestamp&quot;: &quot;datetime-value&quot;
+    }
+  ],
+  &quot;proxyAddresses&quot;: [
+    &quot;proxyAddresses-value&quot;
+  ],
+  &quot;sipProxyAddress&quot;: &quot;sipProxyAddress-value&quot;,
+  &quot;state&quot;: &quot;state-value&quot;,
+  &quot;streetAddress&quot;: &quot;streetAddress-value&quot;,
+  &quot;surname&quot;: &quot;surname-value&quot;,
+  &quot;telephoneNumber&quot;: &quot;telephoneNumber-value&quot;,
+  &quot;thumbnailPhoto&quot;: &quot;thumbnailPhoto-value&quot;,
+  &quot;usageLocation&quot;: &quot;usageLocation-value&quot;,
+  &quot;userPrincipalName&quot;: &quot;userPrincipalName-value&quot;,
+  &quot;userType&quot;: &quot;userType-value&quot;,
+  &quot;emailAddress&quot;: &quot;emailAddress-value&quot;,
+  &quot;mailboxGuid&quot;: &quot;mailboxGuid-value&quot;,
+  &quot;aboutMe&quot;: &quot;aboutMe-value&quot;,
+  &quot;alias&quot;: &quot;alias-value&quot;,
+  &quot;birthday&quot;: &quot;datetime-value&quot;,
+  &quot;hireDate&quot;: &quot;datetime-value&quot;,
+  &quot;interests&quot;: [
+    &quot;interests-value&quot;
+  ],
+  &quot;mySite&quot;: &quot;mySite-value&quot;,
+  &quot;pastProjects&quot;: [
+    &quot;pastProjects-value&quot;
+  ],
+  &quot;preferredName&quot;: &quot;preferredName-value&quot;,
+  &quot;principalName&quot;: &quot;principalName-value&quot;,
+  &quot;responsibilities&quot;: [
+    &quot;responsibilities-value&quot;
+  ],
+  &quot;schools&quot;: [
+    &quot;schools-value&quot;
+  ],
+  &quot;skills&quot;: [
+    &quot;skills-value&quot;
+  ],
+  &quot;tags&quot;: [
+    &quot;tags-value&quot;
+  ],
+  &quot;objectType&quot;: &quot;objectType-value&quot;,
+  &quot;objectId&quot;: &quot;objectId-value&quot;,
+  &quot;deletionTimestamp&quot;: &quot;datetime-value&quot;
+}
+</code></pre>
+
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+</body>
+
+
+
+

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="section-resource-type">section resource type</h1>
+<h3 id="json-representation">JSON representation</h3>
+<p>Here is a JSON representation of the resource</p>
+<pre><code class="json">{
+  &quot;createdBy&quot;: &quot;String-value&quot;,
+  &quot;createdTime&quot;: &quot;String (timestamp)&quot;,
+  &quot;id&quot;: &quot;String-value (identifier)&quot;,
+  &quot;isDefault&quot;: true,
+  &quot;lastModifiedBy&quot;: &quot;String-value&quot;,
+  &quot;lastModifiedTime&quot;: &quot;String (timestamp)&quot;,
+  &quot;name&quot;: &quot;String-value&quot;,
+  &quot;pages&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.page&quot;
+    }
+  ],
+  &quot;pagesUrl&quot;: &quot;String-value&quot;,
+  &quot;parentNotebook&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.notebook&quot;
+  },
+  &quot;parentSectionGroup&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.sectiongroup&quot;
+  },
+  &quot;self&quot;: &quot;String-value&quot;
+}
+
+</code></pre>
+
+<h3 id="properties">Properties</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">createdBy</td>
+	<td align="left">String</td>
+	<td align="left">The user who created the section.  The user who created the section.</td>
+</tr>
+<tr>
+	<td align="left">createdTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The date and time when the section was created.  The date and time when the section was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">id</td>
+	<td align="left">String</td>
+	<td align="left">The unique identifier of the section.  The unique identifier of the section.  Read-only.</td>
+</tr>
+<tr>
+	<td align="left">isDefault</td>
+	<td align="left">Boolean</td>
+	<td align="left">Indicates whether this is the user's default section. Indicates whether this is the user's default section.</td>
+</tr>
+<tr>
+	<td align="left">lastModifiedBy</td>
+	<td align="left">String</td>
+	<td align="left">The user who last modified the section.  The user who last modified the section.</td>
+</tr>
+<tr>
+	<td align="left">lastModifiedTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The date and time when the section was last modified.  The date and time when the section was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">name</td>
+	<td align="left">String</td>
+	<td align="left">The name of the section.  The name of the section.</td>
+</tr>
+<tr>
+	<td align="left">pagesUrl</td>
+	<td align="left">String</td>
+	<td align="left">The /pages endpoint where you can get details for all the pages in the section. The /pages endpoint where you can get details for all the pages in the section.</td>
+</tr>
+<tr>
+	<td align="left">self</td>
+	<td align="left">String</td>
+	<td align="left">The endpoint where you can get details about the section.  The endpoint where you can get details about the section.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationships">Relationships</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Relationship</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">pages</td>
+	<td align="left"><a href="page.htm">Page</a> collection</td>
+	<td align="left">A section in a OneNote notebook  A section in a OneNote notebook  Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">parentNotebook</td>
+	<td align="left"><a href="notebook.htm">Notebook</a></td>
+	<td align="left">The notebook that contains the section, expanded by default with the id, name, and self properties selected.  The notebook that contains the section, expanded by default with the id, name, and self properties selected.  Read-only.</td>
+</tr>
+<tr>
+	<td align="left">parentSectionGroup</td>
+	<td align="left"><a href="sectiongroup.htm">SectionGroup</a></td>
+	<td align="left">The section group that contains the section, expanded by default with the id, name, and self properties selected.  The section group that contains the section, expanded by default with the id, name, and self properties selected.  Read-only.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="methods">Methods</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Method</th>
+	<th align="left">Return Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><a href="../api/section_get.htm">Get section</a></td>
+	<td align="left"><a href="section.htm">section</a></td>
+	<td align="left">Read properties and relationships of section object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/section_post_pages.htm">Create Page</a></td>
+	<td align="left"><a href="page.htm">Page</a></td>
+	<td align="left">Create a new Page by posting to the pages collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/section_list_pages.htm">List pages</a></td>
+	<td align="left"><a href="page.htm">Page</a> collection</td>
+	<td align="left">Get a Page object collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/section_update.htm">Update</a></td>
+	<td align="left"><a href="section.htm">section</a></td>
+	<td align="left">Update section object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/section_delete.htm">Delete</a></td>
+	<td align="left">None</td>
+	<td align="left">Delete section object.</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+</body>
+
+
+
+

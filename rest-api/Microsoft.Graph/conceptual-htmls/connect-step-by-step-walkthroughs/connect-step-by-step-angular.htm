@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="call-the-microsoft-graph-api-in-an-angular-app">Call the Microsoft Graph API in an Angular app</h1>
+<p>In this article we look at the minimum tasks required to connect your application to Office 365 and call the Microsoft Graph API. We use code from the <a href="https://github.com/OfficeDev/O365-Angular-Unified-API-Connect" target="_blank">Office 365 Angular Connect sample using Microsoft Graph</a> to explain the main concepts that you have to implement in your app.</p>
+<p><img src="./images/web-screenshot.png" alt="Office 365 Angular Connect sample screenshot" /></p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This topic assumes the following.</p>
+<ul>
+<li>You are comfortable reading JavaScript and <a href="https://angularjs.org/" target="_blank">AngularJS</a> code.</li>
+</ul>
+<h2 id="overview">Overview</h2>
+<p>To call the Microsoft Graph API, you have to complete the following tasks.</p>
+<ol>
+<li><a href="#register">Register the application in Azure Active Directory</a></li>
+<li><a href="#adal">Configure Azure Active Directory Library for JavaScript (ADAL JS)</a></li>
+<li><a href="#accessToken">Use ADAL JS to get an access token</a></li>
+<li><a href="#request">Use the access token in a request to the Microsoft Graph API</a> </li>
+</ol>
+<p>&lt;a name=&quot;register&quot;&gt;</a></p>
+<h2 id="register-the-application-in-azure-active-directory">Register the application in Azure Active Directory</h2>
+<p>Before you can start working with Office 365, you need to register your application in Azure Active Directory and set permissions to use Microsoft Graph services.</p>
+<p>See <a href="https://msdn.microsoft.com/office/office365/HowTo/add-common-consent-manually#bk_RegisterWebApp" target="_blank">Register your brower-based web app with the Azure Management Portal</a> for instructions, and keep in mind the following details.</p>
+<ul>
+<li>Make sure to specify http://127.0.0.1:8080/ as the <strong>Sign-on URL</strong>.</li>
+<li>After you register the application, <a href="https://github.com/OfficeDev/O365-Angular-Unified-API-Connect/wiki/Grant-permissions-to-the-Connect-application-in-Azure" target="_blank">configure the <strong>Delegated permissions</strong></a> that your Angular app requires. The Connect sample requires the <strong>Send mail as signed-in user</strong> permission.</li>
+</ul>
+<p>Take note of the following values in the <strong>Configure</strong> page of your Azure application because you need these values to configure <a href="https://github.com/AzureAD/azure-activedirectory-library-for-js" target="_blank">ADAL JS</a> in your Angular app.</p>
+<ul>
+<li>Client ID (unique to your application)</li>
+<li>A reply URL (http://127.0.0.1:8080/)</li>
+</ul>
+<p>&lt;a name=&quot;adal&quot;&gt;</a></p>
+<h2 id="configure-azure-active-directory-library-for-javascript-adal-js">Configure Azure Active Directory Library for JavaScript (ADAL JS)</h2>
+<p><a href="https://github.com/AzureAD/azure-activedirectory-library-for-js" target="_blank">ADAL JS</a> is a JavaScript library which provides you with complete support for signing on Azure AD users in single-page applications (SPAs) like the Connect sample and token management, as well as other features. In order to leverage this library, your Angular app has to include and configure it.</p>
+<p>Simply include the library and its Angular-specific module using the Microsoft CDN.</p>
+<pre><code class="html">&lt;script src=&quot;https://secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/adal.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/adal-angular.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Next, you have to configure the ADAL JS service wherever you configure your Angular app's dependencies. The Connect sample does its configuration in <a href="https://github.com/OfficeDev/O365-Angular-Unified-API-Connect/blob/master/public/scripts/app.js" target="_blank"><em>public/app.js</em></a>. </p>
+<p>To configure ADAL JS, first include a reference to the ADAL module by adding <code>AdalAngular</code> to your module's require array and pass <code>adalAuthenticationServiceProvider</code> into your <code>config</code> function. Configure the library with the <code>init</code> function, passing it your application's client ID and an <code>endpoints</code> object that declares which APIs your Angular app needs to make CORS requests to.</p>
+<pre><code class="javascript">// Initialize the ADAL provider with your clientID (found in the Azure Management Portal) and 
+// the API URL (to enable CORS requests).
+adalAuthenticationServiceProvider.init(
+  {
+    clientId: clientId,
+    // The endpoints here are resources for cross origin requests.
+    endpoints: {
+      'https://graph.microsoft.com': 'https://graph.microsoft.com'
+    }
+  },
+  $httpProvider
+);
+</code></pre>
+
+<p>&lt;a name=&quot;accessToken&quot;&gt;</a></p>
+<h2 id="use-adal-js-to-get-an-access-token">Use ADAL JS to get an access token</h2>
+<p>Your app needs to redirect the browser to a sign in page so the user can sign in and grant your application access to their data. The Connect sample utilizes ADAL JS to handle this task. </p>
+<p>In one of your application's controllers, first add a reference to the ADAL service by injecting <code>adalAuthenticationService</code> into your controller and then define a function that uses the service's <code>login</code> function that your UI can call. The Connect sample does this in the <a href="https://github.com/OfficeDev/O365-Angular-Unified-API-Connect/blob/master/public/controllers/mainController.js" target="_blank"><em>controllers/mainController.js</em></a> file. </p>
+<pre><code class="javascript">/**
+  * Expose the login method from ADAL to the view.
+  */
+function connect() {
+  adalAuthenticationService.login();
+};
+</code></pre>
+
+<p>When this function is called, your application will redirect the user to a sign in page. After they sign in and authorize your app, they'll be returned to your app with the access token in the query string that ADAL JS will retrieve and store. </p>
+<p>&lt;a name=&quot;request&quot;&gt;</a></p>
+<h2 id="use-the-access-token-in-a-request-to-the-microsoft-graph-api">Use the access token in a request to the Microsoft Graph API</h2>
+<p>With an access token, your app can make authenticated requests to the Microsoft Graph API. ADAL JS automatically intercepts all HTTP requests and adds your access token to them so you don't have to manually set that header when using the library. </p>
+<p>The Connect sample sends an email using the <code>me/sendMail</code> endpoint in the Microsoft Graph API in the <a href="https://github.com/OfficeDev/O365-Angular-Unified-API-Connect/blob/master/public/controllers/mainController.js" target="_blank"><em>controllers/mainController.js</em></a> file. </p>
+<p>The Microsoft Graph is a very powerful, unifiying API that can be used to interact with all kinds of Microsoft data. Check out the <a href="">API reference</a> to explore what else you can accomplish with the Microsoft Graph API.</p>
+<h2 id="additional-resources">Additional resources</h2>
+<ul>
+<li><a href="https://github.com/OfficeDev/O365-Angular-Unified-API-Connect" target="_blank">Office 365 Angular Connect sample using Microsoft Graph</a></li>
+<li><a href="http://dev.office.com" target="_blank">Office Dev Center</a> </li>
+<li><a href="">Microsoft Graph API reference</a></li>
+</ul>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+</body>
+
+
+
+

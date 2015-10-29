@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="get-oauth2permissiongrant">Get oAuth2PermissionGrant</h1>
+<p>Retrieve the properties and relationships of oauth2permissiongrant object.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<h3 id="http-request">HTTP request</h3>
+<pre><code class="http">GET /oauth2PermissionGrants/&lt;objectId&gt;
+GET /users/&lt;objectId&gt;/oauth2PermissionGrants/&lt;objectId&gt;
+GET /drive/root/createdByUser/oauth2PermissionGrants/&lt;objectId&gt;
+</code></pre>
+
+<h3 id="optional-query-parameters">Optional query parameters</h3>
+<h3 id="request-headers">Request headers</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Name</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">X-Sample-Header</td>
+	<td align="left">string</td>
+	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-body">Request body</h3>
+<p>Do not supply a request body for this method.</p>
+<h3 id="response">Response</h3>
+<p>If successful, this method returns a <code>200 OK</code> response code and <a href="../resources/oauth2permissiongrant.htm">oAuth2PermissionGrant</a> object in the response body.</p>
+<h3 id="example">Example</h3>
+<h5 id="request">Request</h5>
+<p>Here is an example of the request.</p>
+<pre><code class="http">GET https://graph.microsoft.com/beta/oauth2PermissionGrants/&lt;objectId&gt;
+</code></pre>
+
+<h5 id="response-1">Response</h5>
+<p>Here is an example of the response.</p>
+<pre><code class="http">HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 271
+
+{
+  &quot;clientId&quot;: &quot;clientId-value&quot;,
+  &quot;consentType&quot;: &quot;consentType-value&quot;,
+  &quot;expiryTime&quot;: &quot;datetime-value&quot;,
+  &quot;objectId&quot;: &quot;objectId-value&quot;,
+  &quot;principalId&quot;: &quot;principalId-value&quot;,
+  &quot;resourceId&quot;: &quot;resourceId-value&quot;,
+  &quot;scope&quot;: &quot;scope-value&quot;,
+  &quot;startTime&quot;: &quot;datetime-value&quot;
+}
+</code></pre>
+
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+</body>
+
+
+
+

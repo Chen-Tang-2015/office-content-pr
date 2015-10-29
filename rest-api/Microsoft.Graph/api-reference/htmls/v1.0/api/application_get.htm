@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="get-application">Get application</h1>
+<p>Retrieve the properties and relationships of application object.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<h3 id="http-request">HTTP request</h3>
+<pre><code class="http">GET /applications/&lt;objectId&gt;
+</code></pre>
+
+<h3 id="optional-query-parameters">Optional query parameters</h3>
+<h3 id="request-headers">Request headers</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Name</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">X-Sample-Header</td>
+	<td align="left">string</td>
+	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-body">Request body</h3>
+<p>Do not supply a request body for this method.</p>
+<h3 id="response">Response</h3>
+<p>If successful, this method returns a <code>200 OK</code> response code and <a href="../resources/application.htm">application</a> object in the response body.</p>
+<h3 id="example">Example</h3>
+<h5 id="request">Request</h5>
+<p>Here is an example of the request.</p>
+<pre><code class="http">GET https://graph.microsoft.com/v1.0/applications/&lt;objectId&gt;
+</code></pre>
+
+<h5 id="response-1">Response</h5>
+<p>Here is an example of the response.</p>
+<pre><code class="http">HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 2150
+
+{
+  &quot;appId&quot;: &quot;appId-value&quot;,
+  &quot;appRoles&quot;: [
+    {
+      &quot;allowedMemberTypes&quot;: [
+        &quot;allowedMemberTypes-value&quot;
+      ],
+      &quot;description&quot;: &quot;description-value&quot;,
+      &quot;displayName&quot;: &quot;displayName-value&quot;,
+      &quot;id&quot;: &quot;id-value&quot;,
+      &quot;isEnabled&quot;: true,
+      &quot;value&quot;: &quot;value-value&quot;
+    }
+  ],
+  &quot;availableToOtherTenants&quot;: true,
+  &quot;displayName&quot;: &quot;displayName-value&quot;,
+  &quot;errorUrl&quot;: &quot;errorUrl-value&quot;,
+  &quot;groupMembershipClaims&quot;: &quot;groupMembershipClaims-value&quot;,
+  &quot;homepage&quot;: &quot;homepage-value&quot;,
+  &quot;identifierUris&quot;: [
+    &quot;identifierUris-value&quot;
+  ],
+  &quot;keyCredentials&quot;: [
+    {
+      &quot;customKeyIdentifier&quot;: &quot;customKeyIdentifier-value&quot;,
+      &quot;endDate&quot;: &quot;datetime-value&quot;,
+      &quot;keyId&quot;: &quot;keyId-value&quot;,
+      &quot;startDate&quot;: &quot;datetime-value&quot;,
+      &quot;type&quot;: &quot;type-value&quot;,
+      &quot;usage&quot;: &quot;usage-value&quot;,
+      &quot;value&quot;: &quot;value-value&quot;
+    }
+  ],
+  &quot;knownClientApplications&quot;: [
+    &quot;knownClientApplications-value&quot;
+  ],
+  &quot;mainLogo&quot;: &quot;mainLogo-value&quot;,
+  &quot;logoutUrl&quot;: &quot;logoutUrl-value&quot;,
+  &quot;oauth2AllowImplicitFlow&quot;: true,
+  &quot;oauth2AllowUrlPathMatching&quot;: true,
+  &quot;oauth2Permissions&quot;: [
+    {
+      &quot;adminConsentDescription&quot;: &quot;adminConsentDescription-value&quot;,
+      &quot;adminConsentDisplayName&quot;: &quot;adminConsentDisplayName-value&quot;,
+      &quot;id&quot;: &quot;id-value&quot;,
+      &quot;isEnabled&quot;: true,
+      &quot;type&quot;: &quot;type-value&quot;,
+      &quot;userConsentDescription&quot;: &quot;userConsentDescription-value&quot;,
+      &quot;userConsentDisplayName&quot;: &quot;userConsentDisplayName-value&quot;,
+      &quot;value&quot;: &quot;value-value&quot;
+    }
+  ],
+  &quot;oauth2RequirePostResponse&quot;: true,
+  &quot;passwordCredentials&quot;: [
+    {
+      &quot;customKeyIdentifier&quot;: &quot;customKeyIdentifier-value&quot;,
+      &quot;endDate&quot;: &quot;datetime-value&quot;,
+      &quot;keyId&quot;: &quot;keyId-value&quot;,
+      &quot;startDate&quot;: &quot;datetime-value&quot;,
+      &quot;value&quot;: &quot;value-value&quot;
+    }
+  ],
+  &quot;publicClient&quot;: true,
+  &quot;replyUrls&quot;: [
+    &quot;replyUrls-value&quot;
+  ],
+  &quot;requiredResourceAccess&quot;: [
+    {
+      &quot;resourceAppId&quot;: &quot;resourceAppId-value&quot;,
+      &quot;resourceAccess&quot;: [
+        {
+          &quot;id&quot;: &quot;id-value&quot;,
+          &quot;type&quot;: &quot;type-value&quot;
+        }
+      ]
+    }
+  ],
+  &quot;samlMetadataUrl&quot;: &quot;samlMetadataUrl-value&quot;,
+  &quot;objectType&quot;: &quot;objectType-value&quot;,
+  &quot;objectId&quot;: &quot;objectId-value&quot;,
+  &quot;deletionTimestamp&quot;: &quot;datetime-value&quot;
+}
+</code></pre>
+
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+</body>
+
+
+
+

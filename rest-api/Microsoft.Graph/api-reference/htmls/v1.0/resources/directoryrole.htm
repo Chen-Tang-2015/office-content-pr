@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="directoryrole-resource-type">directoryRole resource type</h1>
+<p>Represents an Azure AD directory role. Azure AD directory roles are also known as <em>administrator roles</em>. For more information about directory (administrator) roles, see <a href="http://azure.microsoft.com/documentation/articles/active-directory-assign-admin-roles/" target="_blank">Assigning administrator roles in Azure AD</a>.</p>
+<h3 id="json-representation">JSON representation</h3>
+<p>Here is a JSON representation of the resource</p>
+<pre><code class="json">{
+  &quot;deletionTimestamp&quot;: &quot;String (timestamp)&quot;,
+  &quot;description&quot;: &quot;String-value&quot;,
+  &quot;displayName&quot;: &quot;String-value&quot;,
+  &quot;isSystem&quot;: true,
+  &quot;memberOf&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.directoryobject&quot;
+    }
+  ],
+  &quot;members&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.directoryobject&quot;
+    }
+  ],
+  &quot;objectId&quot;: &quot;String-value (identifier)&quot;,
+  &quot;objectType&quot;: &quot;String-value&quot;,
+  &quot;ownedObjects&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.directoryobject&quot;
+    }
+  ],
+  &quot;owners&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.directoryobject&quot;
+    }
+  ],
+  &quot;roleDisabled&quot;: true,
+  &quot;roleTemplateId&quot;: &quot;String-value&quot;
+}
+
+</code></pre>
+
+<h3 id="properties">Properties</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">deletionTimestamp</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">description</td>
+	<td align="left">String</td>
+	<td align="left">The description for the directory role. The description for the directory role.</td>
+</tr>
+<tr>
+	<td align="left">displayName</td>
+	<td align="left">String</td>
+	<td align="left">The display name for the directory role.  The display name for the directory role.</td>
+</tr>
+<tr>
+	<td align="left">isSystem</td>
+	<td align="left">Boolean</td>
+	<td align="left"><strong>true</strong> if the role is a system role; otherwise, <strong>false</strong>.                             <strong>true</strong> if the role is a system role; otherwise, <strong>false</strong>.</td>
+</tr>
+<tr>
+	<td align="left">objectId</td>
+	<td align="left">String</td>
+	<td align="left">The unique identifier for the directory role. Inherited from [DirectoryObject].                            <strong>Notes</strong>: <strong>key</strong>, immutable, not nullable, unique.             The unique identifier for the directory role. Inherited from [DirectoryObject].                            <strong>Notes</strong>: <strong>key</strong>, immutable, not nullable, unique.             Read-only.</td>
+</tr>
+<tr>
+	<td align="left">objectType</td>
+	<td align="left">String</td>
+	<td align="left">A string that identifies the object type. For directory roles the value is always “DirectoryRole”. Inherited from [DirectoryObject].                            <strong>Note</strong>: In versions prior to 1.5, the value will be “Role”.             A string that identifies the object type. For directory roles the value is always “DirectoryRole”. Inherited from [DirectoryObject].                            <strong>Note</strong>: In versions prior to 1.5, the value will be “Role”.</td>
+</tr>
+<tr>
+	<td align="left">roleDisabled</td>
+	<td align="left">Boolean</td>
+	<td align="left"><strong>true</strong> if the directory role is disabled; otherwise, <strong>false</strong>.                             <strong>true</strong> if the directory role is disabled; otherwise, <strong>false</strong>.</td>
+</tr>
+<tr>
+	<td align="left">roleTemplateId</td>
+	<td align="left">String</td>
+	<td align="left">The <strong>objectId</strong> of the [DirectoryRoleTemplate] that this role is based on.                                        <strong>Notes</strong>: In versions prior to version 1.5, the property is read only. In version 1.5 and later, the property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read only.                             The <strong>objectId</strong> of the [DirectoryRoleTemplate] that this role is based on.                                        <strong>Notes</strong>: In versions prior to version 1.5, the property is read only. In version 1.5 and later, the property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read only.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationships">Relationships</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Relationship</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">memberOf</td>
+	<td align="left"><a href="directoryobject.htm">DirectoryObject</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">members</td>
+	<td align="left"><a href="directoryobject.htm">DirectoryObject</a> collection</td>
+	<td align="left">Users and service principals that are members of this directory role. Inherited from [DirectoryObject].            HTTP Methods: GET, POST, DELETE Users and service principals that are members of this directory role. Inherited from [DirectoryObject].            HTTP Methods: GET, POST, DELETE Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">ownedObjects</td>
+	<td align="left"><a href="directoryobject.htm">DirectoryObject</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">owners</td>
+	<td align="left"><a href="directoryobject.htm">DirectoryObject</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="methods">Methods</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Method</th>
+	<th align="left">Return Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><a href="../api/directoryrole_get.htm">Get directoryRole</a></td>
+	<td align="left"><a href="directoryrole.htm">directoryRole</a></td>
+	<td align="left">Read properties and relationships of directoryRole object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/directoryrole_post_memberof.htm">Create memberOf</a></td>
+	<td align="left"><a href="directoryobject.htm">DirectoryObject</a></td>
+	<td align="left">Create a new memberOf by posting to the memberOf collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/directoryrole_list_memberof.htm">List memberOf</a></td>
+	<td align="left"><a href="directoryobject.htm">DirectoryObject</a> collection</td>
+	<td align="left">Get a memberOf object collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/directoryrole_post_members.htm">Create member</a></td>
+	<td align="left"><a href="directoryobject.htm">DirectoryObject</a></td>
+	<td align="left">Create a new member by posting to the members collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/directoryrole_list_members.htm">List members</a></td>
+	<td align="left"><a href="directoryobject.htm">DirectoryObject</a> collection</td>
+	<td align="left">Get a member object collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/directoryrole_post_ownedobjects.htm">Create ownedObject</a></td>
+	<td align="left"><a href="directoryobject.htm">DirectoryObject</a></td>
+	<td align="left">Create a new ownedObject by posting to the ownedObjects collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/directoryrole_list_ownedobjects.htm">List ownedObjects</a></td>
+	<td align="left"><a href="directoryobject.htm">DirectoryObject</a> collection</td>
+	<td align="left">Get a ownedObject object collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/directoryrole_post_owners.htm">Create owner</a></td>
+	<td align="left"><a href="directoryobject.htm">DirectoryObject</a></td>
+	<td align="left">Create a new owner by posting to the owners collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/directoryrole_list_owners.htm">List owners</a></td>
+	<td align="left"><a href="directoryobject.htm">DirectoryObject</a> collection</td>
+	<td align="left">Get a owner object collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/directoryrole_update.htm">Update</a></td>
+	<td align="left"><a href="directoryrole.htm">directoryRole</a></td>
+	<td align="left">Update directoryRole object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/directoryrole_delete.htm">Delete</a></td>
+	<td align="left">None</td>
+	<td align="left">Delete directoryRole object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/directoryrole_checkmembergroups.htm">Checkmembergroups</a></td>
+	<td align="left">String collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/directoryrole_getmembergroups.htm">Get MemberGroups</a></td>
+	<td align="left">String collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/directoryrole_getmemberobjects.htm">Get MemberObjects</a></td>
+	<td align="left">String collection</td>
+	<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+</body>
+
+
+
+

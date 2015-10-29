@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="call-the-microsoft-graph-api-in-an-ios-app">Call the Microsoft Graph API in an iOS App</h1>
+<p>In this article we look at the minimum tasks required to connect your application to Office 365 and calling the Microsoft Graph API. We use code from the <a href="https://github.com/OfficeDev/O365-iOS-Unified-API-Connect" target="_blank">O365-iOS-Unified-API-Connect</a> to explain the main concepts that you have to implement in your app. This samples covers the core fundamentals for authenticating with Microsoft Azure Active Directory (AAD), and making a simple service call against the Office 365 mail service using the Microsoft Graph API (sending a mail). It's recommended that you clone or download the project from this repository to accompany this article. </p>
+<p>The following is the screenshot of the send mail page.</p>
+<p><img src="./images/iOSConnect.png" alt="Office 365 iOS Unified API Connect sample screenshot" /></p>
+<p>This article references the <a href="https://github.com/AzureAD/azure-activedirectory-library-for-objc" target="_blank">Microsoft Azure Active Directory Authentication Library (ADAL) for iOS and OSX</a>, and the <a href="https://github.com/OfficeDev/O365-iOS-Unified-API-Connect" target="_blank">O365-iOS-Unified-API-Connect</a> sample authenticates using this library. See this repository for more information on usage and implementation in your iOS project.</p>
+<h2 id="overview">Overview</h2>
+<p>To call the Microsoft Graph API, your iOS app must complete the following:</p>
+<ol>
+<li>Register the application from Microsoft Azure Active Directory (AD).</li>
+<li>Request and acquire an access token from Azure AD.</li>
+<li>Use the access token in a REST request to the Microsoft Graph API. </li>
+</ol>
+<h2 id="register-the-application-in-azure-active-directory">Register the application in Azure Active Directory</h2>
+<p>Before you can start working with Office 365, you'll need to register your application on Azure Active Directory and set permissions to use Microsoft Graph services.</p>
+<p>See the section <strong>Register your native app with the Azure Management Portal</strong> in the article <a href="https://msdn.microsoft.com/en-us/office/office365/howto/add-common-consent-manually" target="_blank">Manually register your app with Azure AD so it can access Office 365 APIs</a> for instructions on how to register the app, keep in mind the following details:</p>
+<ul>
+<li>For the registration you'll need to supply a redirect URI. This a required value that specifies where a user will be redirected after a successful authentication attempt. If you don't specify the correct redirect URI, the authentication request will fail.</li>
+<li>In the registration, the app must be granted the <strong>Send mail as signed-in user permission</strong> for the <strong>Office 365 unified API (preview)</strong>.  </li>
+</ul>
+<p>Take note of the following values in the <strong>Configure</strong> page of your Azure application.</p>
+<ul>
+<li>Client ID</li>
+<li>Redirect URI</li>
+</ul>
+<p>You need these values to configure the OAuth flow in your app. </p>
+<h2 id="request-and-acquire-an-access-token-from-azure-ad">Request and acquire an access token from Azure AD</h2>
+<p>To request and acquire an access token for calling the Microsoft Graph API, you can use <strong>acquireAuthTokenWithResource:clientId:redirectUri:completionBlock:</strong>  provided by the <a href="https://github.com/AzureAD/azure-activedirectory-library-for-objc" target="_blank">Microsoft Azure Active Directory Authentication Library (ADAL) for iOS and OSX</a>. This SDK gives your application the full functionality of Microsoft Azure AD, including industry standard protocol support for OAuth2, Web API integration with user level consent, and two factor authentication support.</p>
+<p>This method takes the following parameters:</p>
+<ol>
+<li><strong>resourceID</strong> - This is the required resource you want to access. For example, we want to access the Microsoft Graph API so this value would be &quot;https://graph.microsoft.com.&quot;</li>
+<li><strong>clientID</strong> - The value given to identify your app when you completed the AAD registration.</li>
+<li><strong>redirectURI</strong> - Again, this a required value that specifies where a user will be redirected after a successful authentication attempt.</li>
+</ol>
+<p>First you'll need to specify an authentication context. This simply defines the authority where you want to get your access token from. In our case it's from an AAD tenant and you'll need to declare it:</p>
+<pre><code>@property (strong,    nonatomic) ADAuthenticationContext *context;
+</code></pre>
+
+<p>Then initialize it with the location of the authority (&quot;https://login.microsoftonline.com/common&quot;):</p>
+<pre><code>self.context = [ADAuthenticationContext authenticationContextWithAuthority:self.authority]; 
+</code></pre>
+
+<p>In the <a href="https://github.com/OfficeDev/O365-iOS-Unified-API-Connect" target="_blank">O365-iOS-Unified-API-Connect</a> sample we created a singleton authentication class (<strong>AuthenticationManager</strong>) for demonstration purposes that is initialized with the authority and required parameters. Again, this class is merely an example on how to approach the authentication workflow. A code segment of interest: </p>
+<pre><code>- (void)acquireAuthTokenWithResource:(NSString *)resourceID
+                        clientID:(NSString*)clientID
+                     redirectURI:(NSURL*)redirectURI
+                      completion:(void (^)(ADAuthenticationError *error))completion {
+
+NSLog(@&quot;acquireAuthTokenWithResource&quot;);
+[self.context acquireTokenWithResource:resourceID
+                              clientId:clientID
+                           redirectUri:redirectURI
+                       completionBlock:^(ADAuthenticationResult *result) {
+                           NSLog(@&quot;Completion&quot;);
+
+                           if (result.status !=AD_SUCCEEDED){
+                               NSLog(@&quot;error&quot;);
+                               completion(result.error);
+                           }
+
+                           else{
+                               NSLog(@&quot;complete!&quot;);
+                               self.accessToken = result.accessToken;
+                               self.userID = result.tokenCacheStoreItem.userInformation.userId;
+                               completion(nil);
+                           }
+                       }];
+</code></pre>
+
+<p>The first time this app is run, the Authentication Manager will send a request to the authority which 
+will redirect you to a login page. You'll provide your credentials and the response will 
+contain the authentication result. If it's successful, it will also contain your refresh and access tokens. The second time this application is run, and assuming 
+you didn't clear your token cache and cookies, the Authentication Manager will use the access or refresh 
+token in the cache to authenticate client requests. This will result in a call to the service if you need to get an access token. </p>
+<h2 id="use-the-access-token-in-a-request-to-the-microsoft-graph-api">Use the access token in a request to the Microsoft Graph API</h2>
+<p>With an access token, your app can make authenticated requests to the Microsoft Graph API. Your app must append the access token to the HTTP request header under <strong>Authorization</strong>.</p>
+<p>The <a href="https://github.com/OfficeDev/O365-iOS-Unified-API-Connect" target="_blank">O365-iOS-Unified-API-Connect</a> sample sends an email using the sendMail endpoint in the Microsoft Graph API. Again, our in our sample we created a singleton authentication class (AuthenticationManager) that is initialized with the access token. We'll need the access token to construct our request.</p>
+<pre><code>- (void)sendMailREST {
+
+AuthenticationManager *authManager = [AuthenticationManager sharedInstance];
+
+//Helper method used to construct the email message
+NSData *postData = [self mailContent];
+
+//Microsoft Graph API endpoint for sending mail
+NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@&quot;https://graph.microsoft.com/beta/me/sendMail&quot;]];
+
+[request setHTTPMethod:@&quot;POST&quot;];
+[request setValue:@&quot;application/json&quot; forHTTPHeaderField:@&quot;Content-Type&quot;];
+[request setValue:@&quot;application/json, text/plain, */*&quot; forHTTPHeaderField:@&quot;Accept&quot;];
+
+// Access token required for request header
+NSString *authorization = [NSString stringWithFormat:@&quot;Bearer %@&quot;, authManager.accessToken];
+[request setValue:authorization forHTTPHeaderField:@&quot;Authorization&quot;];
+[request setHTTPBody:postData];
+
+NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+
+if(conn) {
+    NSLog(@&quot;Connection Successful&quot;);
+} else {
+    NSLog(@&quot;Connection could not be made&quot;);
+}
+
+[conn start];
+</code></pre>
+
+<p>As you can see, the response is handled with the NSURLConnection delegates, namely the NSURLConnectionDelegate and NSURLConnectionDataDelegate.</p>
+<h2 id="next-steps">Next Steps</h2>
+<p>If access token is expired, or about to expire, you can use ADAuthenticationContext’s <strong>acquireTokenSilentWithResource:clientId:redirectUri:completionBlock:</strong> to acquire a new access token. It's usage is covered in the <a href="https://github.com/OfficeDev/O365-iOS-Unified-API-Connect" target="_blank">O365-iOS-Unified-API-Connect</a> sample. Also, you can find the code to clear your token cache and stored cookies.  </p>
+<p>The Microsoft Graph API is a very powerful, unifiying API that can be used to interact with all kinds of Microsoft data. Check out the <a href="https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference" target="_blank">API reference</a> to explore what else you can accomplish with the Microsoft Graph API.</p>
+<h2 id="additional-resources">Additional resources</h2>
+<ul>
+<li><a href="https://github.com/OfficeDev/O365-iOS-Unified-API-Connect" target="_blank">O365-iOS-Unified-API-Connect</a></li>
+<li><a href="http://dev.office.com" target="_blank">Office Dev Center</a> </li>
+<li><a href="https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference" target="_blank">Microsoft Graph API reference</a></li>
+</ul>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+</body>
+
+
+
+

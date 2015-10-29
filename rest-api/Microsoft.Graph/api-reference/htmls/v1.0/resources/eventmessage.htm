@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="eventmessage-resource-type">eventMessage resource type</h1>
+<p>A message that represents a meeting request, meeting cancel message, meeting accept message, meeting tentatively accept message, or meeting declined message.</p>
+<h3 id="json-representation">JSON representation</h3>
+<p>Here is a JSON representation of the resource</p>
+<pre><code class="json">{
+  &quot;attachments&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.attachment&quot;
+    }
+  ],
+  &quot;bccRecipients&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.recipient&quot;
+    }
+  ],
+  &quot;body&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.itembody&quot;
+  },
+  &quot;bodyPreview&quot;: &quot;String-value&quot;,
+  &quot;categories&quot;: [
+    &quot;String-value&quot;
+  ],
+  &quot;ccRecipients&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.recipient&quot;
+    }
+  ],
+  &quot;changeKey&quot;: &quot;String-value&quot;,
+  &quot;conversationId&quot;: &quot;String-value&quot;,
+  &quot;createdDateTime&quot;: &quot;String (timestamp)&quot;,
+  &quot;event&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.event&quot;
+  },
+  &quot;from&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.recipient&quot;
+  },
+  &quot;hasAttachments&quot;: true,
+  &quot;id&quot;: &quot;String-value (identifier)&quot;,
+  &quot;importance&quot;: &quot;String-value&quot;,
+  &quot;isDeliveryReceiptRequested&quot;: true,
+  &quot;isDraft&quot;: true,
+  &quot;isRead&quot;: true,
+  &quot;isReadReceiptRequested&quot;: true,
+  &quot;lastModifiedDateTime&quot;: &quot;String (timestamp)&quot;,
+  &quot;meetingMessageType&quot;: &quot;String-value&quot;,
+  &quot;parentFolderId&quot;: &quot;String-value&quot;,
+  &quot;receivedDateTime&quot;: &quot;String (timestamp)&quot;,
+  &quot;replyTo&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.recipient&quot;
+    }
+  ],
+  &quot;sender&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.recipient&quot;
+  },
+  &quot;sentDateTime&quot;: &quot;String (timestamp)&quot;,
+  &quot;subject&quot;: &quot;String-value&quot;,
+  &quot;toRecipients&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.recipient&quot;
+    }
+  ],
+  &quot;uniqueBody&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.itembody&quot;
+  },
+  &quot;webLink&quot;: &quot;String-value&quot;
+}
+
+</code></pre>
+
+<h3 id="properties">Properties</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">bccRecipients</td>
+	<td align="left"><a href="recipient.htm">Recipient</a> collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">body</td>
+	<td align="left"><a href="itembody.htm">ItemBody</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">bodyPreview</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">categories</td>
+	<td align="left">String collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">ccRecipients</td>
+	<td align="left"><a href="recipient.htm">Recipient</a> collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">changeKey</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">conversationId</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">createdDateTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">from</td>
+	<td align="left"><a href="recipient.htm">Recipient</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">hasAttachments</td>
+	<td align="left">Boolean</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">id</td>
+	<td align="left">String</td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">importance</td>
+	<td align="left">String</td>
+	<td align="left">Possible values are: <code>Low</code>, <code>Normal</code>, <code>High</code>.</td>
+</tr>
+<tr>
+	<td align="left">isDeliveryReceiptRequested</td>
+	<td align="left">Boolean</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">isDraft</td>
+	<td align="left">Boolean</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">isRead</td>
+	<td align="left">Boolean</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">isReadReceiptRequested</td>
+	<td align="left">Boolean</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">lastModifiedDateTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">meetingMessageType</td>
+	<td align="left">String</td>
+	<td align="left">The type of event message: None = 0, MeetingRequest = 1, MeetingCancelled = 2, MeetingAccepted = 3, MeetingTentativelyAccepted = 4, MeetingDeclined = 5   The type of event message: None = 0, MeetingRequest = 1, MeetingCancelled = 2, MeetingAccepted = 3, MeetingTentativelyAccepted = 4, MeetingDeclined = 5  Possible values are: <code>None</code>, <code>MeetingRequest</code>, <code>MeetingCancelled</code>, <code>MeetingAccepted</code>, <code>MeetingTenativelyAccepted</code>, <code>MeetingDeclined</code>.</td>
+</tr>
+<tr>
+	<td align="left">parentFolderId</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">receivedDateTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">replyTo</td>
+	<td align="left"><a href="recipient.htm">Recipient</a> collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">sender</td>
+	<td align="left"><a href="recipient.htm">Recipient</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">sentDateTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">subject</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">toRecipients</td>
+	<td align="left"><a href="recipient.htm">Recipient</a> collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">uniqueBody</td>
+	<td align="left"><a href="itembody.htm">ItemBody</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">webLink</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationships">Relationships</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Relationship</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">attachments</td>
+	<td align="left"><a href="attachment.htm">Attachment</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+<tr>
+	<td align="left">event</td>
+	<td align="left"><a href="event.htm">Event</a></td>
+	<td align="left">The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property.   The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property.  Read-only.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="methods">Methods</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Method</th>
+	<th align="left">Return Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><a href="../api/eventmessage_get.htm">Get eventMessage</a></td>
+	<td align="left"><a href="eventmessage.htm">eventMessage</a></td>
+	<td align="left">Read properties and relationships of eventMessage object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/eventmessage_post_attachments.htm">Create Attachment</a></td>
+	<td align="left"><a href="attachment.htm">Attachment</a></td>
+	<td align="left">Create a new Attachment by posting to the attachments collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/eventmessage_list_attachments.htm">List attachments</a></td>
+	<td align="left"><a href="attachment.htm">Attachment</a> collection</td>
+	<td align="left">Get a Attachment object collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/eventmessage_update.htm">Update</a></td>
+	<td align="left"><a href="eventmessage.htm">eventMessage</a></td>
+	<td align="left">Update eventMessage object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/eventmessage_delete.htm">Delete</a></td>
+	<td align="left">None</td>
+	<td align="left">Delete eventMessage object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/eventmessage_copy.htm">Copy</a></td>
+	<td align="left"><a href="message.htm">Message</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/eventmessage_createforward.htm">Createforward</a></td>
+	<td align="left"><a href="message.htm">Message</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/eventmessage_createreply.htm">Createreply</a></td>
+	<td align="left"><a href="message.htm">Message</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/eventmessage_createreplyall.htm">Createreplyall</a></td>
+	<td align="left"><a href="message.htm">Message</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/eventmessage_forward.htm">Forward</a></td>
+	<td align="left">None</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/eventmessage_move.htm">Move</a></td>
+	<td align="left"><a href="message.htm">Message</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/eventmessage_reply.htm">Reply</a></td>
+	<td align="left">None</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/eventmessage_replyall.htm">Replyall</a></td>
+	<td align="left">None</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/eventmessage_send.htm">Send</a></td>
+	<td align="left">None</td>
+	<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+</body>
+
+
+
+

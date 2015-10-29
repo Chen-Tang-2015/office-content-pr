@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="contact-resource-type">contact resource type</h1>
+<p>Represents an organizational contact. Inherits from [DirectoryObject].</p>
+<h3 id="json-representation">JSON representation</h3>
+<p>Here is a JSON representation of the resource</p>
+<pre><code class="json">{
+  &quot;assistantName&quot;: &quot;String-value&quot;,
+  &quot;birthday&quot;: &quot;String (timestamp)&quot;,
+  &quot;businessAddress&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.physicaladdress&quot;
+  },
+  &quot;businessHomePage&quot;: &quot;String-value&quot;,
+  &quot;businessPhones&quot;: [
+    &quot;String-value&quot;
+  ],
+  &quot;categories&quot;: [
+    &quot;String-value&quot;
+  ],
+  &quot;changeKey&quot;: &quot;String-value&quot;,
+  &quot;children&quot;: [
+    &quot;String-value&quot;
+  ],
+  &quot;companyName&quot;: &quot;String-value&quot;,
+  &quot;createdDateTime&quot;: &quot;String (timestamp)&quot;,
+  &quot;department&quot;: &quot;String-value&quot;,
+  &quot;displayName&quot;: &quot;String-value&quot;,
+  &quot;emailAddresses&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.emailaddress&quot;
+    }
+  ],
+  &quot;fileAs&quot;: &quot;String-value&quot;,
+  &quot;generation&quot;: &quot;String-value&quot;,
+  &quot;givenName&quot;: &quot;String-value&quot;,
+  &quot;homeAddress&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.physicaladdress&quot;
+  },
+  &quot;homePhones&quot;: [
+    &quot;String-value&quot;
+  ],
+  &quot;id&quot;: &quot;String-value (identifier)&quot;,
+  &quot;imAddresses&quot;: [
+    &quot;String-value&quot;
+  ],
+  &quot;initials&quot;: &quot;String-value&quot;,
+  &quot;jobTitle&quot;: &quot;String-value&quot;,
+  &quot;lastModifiedDateTime&quot;: &quot;String (timestamp)&quot;,
+  &quot;manager&quot;: &quot;String-value&quot;,
+  &quot;middleName&quot;: &quot;String-value&quot;,
+  &quot;mobilePhone1&quot;: &quot;String-value&quot;,
+  &quot;nickName&quot;: &quot;String-value&quot;,
+  &quot;officeLocation&quot;: &quot;String-value&quot;,
+  &quot;otherAddress&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.physicaladdress&quot;
+  },
+  &quot;parentFolderId&quot;: &quot;String-value&quot;,
+  &quot;personalNotes&quot;: &quot;String-value&quot;,
+  &quot;photo&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.photo&quot;
+  },
+  &quot;profession&quot;: &quot;String-value&quot;,
+  &quot;spouseName&quot;: &quot;String-value&quot;,
+  &quot;surname&quot;: &quot;String-value&quot;,
+  &quot;title&quot;: &quot;String-value&quot;,
+  &quot;yomiCompanyName&quot;: &quot;String-value&quot;,
+  &quot;yomiGivenName&quot;: &quot;String-value&quot;,
+  &quot;yomiSurname&quot;: &quot;String-value&quot;
+}
+
+</code></pre>
+
+<h3 id="properties">Properties</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">assistantName</td>
+	<td align="left">String</td>
+	<td align="left">The name of the contact's assistant. The name of the contact's assistant.</td>
+</tr>
+<tr>
+	<td align="left">birthday</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The contact's birthday. The contact's birthday.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">businessAddress</td>
+	<td align="left"><a href="physicaladdress.htm">PhysicalAddress</a></td>
+	<td align="left">The contact's business address. The contact's business address.</td>
+</tr>
+<tr>
+	<td align="left">businessHomePage</td>
+	<td align="left">String</td>
+	<td align="left">The business home page of the contact. The business home page of the contact.</td>
+</tr>
+<tr>
+	<td align="left">businessPhones</td>
+	<td align="left">String collection</td>
+	<td align="left">The contact's business phone numbers. The contact's business phone numbers.</td>
+</tr>
+<tr>
+	<td align="left">categories</td>
+	<td align="left">String collection</td>
+	<td align="left">The categories associated with the contact. The categories associated with the contact.</td>
+</tr>
+<tr>
+	<td align="left">changeKey</td>
+	<td align="left">String</td>
+	<td align="left">Identifies the version of the contact. Every time the contact is changed, ChangeKey  changes as well. This allows Exchange to apply changes to the correct version of the object. Identifies the version of the contact. Every time the contact is changed, ChangeKey  changes as well. This allows Exchange to apply changes to the correct version of the object.</td>
+</tr>
+<tr>
+	<td align="left">children</td>
+	<td align="left">String collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">companyName</td>
+	<td align="left">String</td>
+	<td align="left">The name of the contact's company. The name of the contact's company.</td>
+</tr>
+<tr>
+	<td align="left">createdDateTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">department</td>
+	<td align="left">String</td>
+	<td align="left">The name for the department in which the contact works. The name for the department in which the contact works.</td>
+</tr>
+<tr>
+	<td align="left">displayName</td>
+	<td align="left">String</td>
+	<td align="left">The display name for the contact. The display name for the contact.</td>
+</tr>
+<tr>
+	<td align="left">emailAddresses</td>
+	<td align="left"><a href="emailaddress.htm">EmailAddress</a> collection</td>
+	<td align="left">The contact's email addresses. The contact's email addresses.</td>
+</tr>
+<tr>
+	<td align="left">fileAs</td>
+	<td align="left">String</td>
+	<td align="left">The name the contact is filed under. The name the contact is filed under.</td>
+</tr>
+<tr>
+	<td align="left">generation</td>
+	<td align="left">String</td>
+	<td align="left">The contact's generation. The contact's generation.</td>
+</tr>
+<tr>
+	<td align="left">givenName</td>
+	<td align="left">String</td>
+	<td align="left">The given name (first name) of the contact. The given name (first name) of the contact.</td>
+</tr>
+<tr>
+	<td align="left">homeAddress</td>
+	<td align="left"><a href="physicaladdress.htm">PhysicalAddress</a></td>
+	<td align="left">The contact's home address. The contact's home address.</td>
+</tr>
+<tr>
+	<td align="left">homePhones</td>
+	<td align="left">String collection</td>
+	<td align="left">The contact's home phone numbers. The contact's home phone numbers.</td>
+</tr>
+<tr>
+	<td align="left">id</td>
+	<td align="left">String</td>
+	<td align="left">The contact's unique identifier. The contact's unique identifier. Read-only.</td>
+</tr>
+<tr>
+	<td align="left">imAddresses</td>
+	<td align="left">String collection</td>
+	<td align="left">The contact's instant messaging (IM) addresses. The contact's instant messaging (IM) addresses.</td>
+</tr>
+<tr>
+	<td align="left">initials</td>
+	<td align="left">String</td>
+	<td align="left">The contact's initials. The contact's initials.</td>
+</tr>
+<tr>
+	<td align="left">jobTitle</td>
+	<td align="left">String</td>
+	<td align="left">The contact’s job title. The contact’s job title.</td>
+</tr>
+<tr>
+	<td align="left">lastModifiedDateTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">manager</td>
+	<td align="left">String</td>
+	<td align="left">The user or contact that is this contact’s manager. Inherited from [DirectoryObject].            HTTP Methods: GET, PUT, DELETE The user or contact that is this contact’s manager. Inherited from [DirectoryObject].            HTTP Methods: GET, PUT, DELETE</td>
+</tr>
+<tr>
+	<td align="left">middleName</td>
+	<td align="left">String</td>
+	<td align="left">The contact's middle name. The contact's middle name.</td>
+</tr>
+<tr>
+	<td align="left">mobilePhone1</td>
+	<td align="left">String</td>
+	<td align="left">The contact's mobile phone number. The contact's mobile phone number.</td>
+</tr>
+<tr>
+	<td align="left">nickName</td>
+	<td align="left">String</td>
+	<td align="left">The contact's nickname. The contact's nickname.</td>
+</tr>
+<tr>
+	<td align="left">officeLocation</td>
+	<td align="left">String</td>
+	<td align="left">The location of the contact's office. The location of the contact's office.</td>
+</tr>
+<tr>
+	<td align="left">otherAddress</td>
+	<td align="left"><a href="physicaladdress.htm">PhysicalAddress</a></td>
+	<td align="left">Other addresses for the contact. Other addresses for the contact.</td>
+</tr>
+<tr>
+	<td align="left">parentFolderId</td>
+	<td align="left">String</td>
+	<td align="left">The ID of the contact's parent folder. The ID of the contact's parent folder.</td>
+</tr>
+<tr>
+	<td align="left">personalNotes</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">profession</td>
+	<td align="left">String</td>
+	<td align="left">The contact's profession. The contact's profession.</td>
+</tr>
+<tr>
+	<td align="left">spouseName</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">surname</td>
+	<td align="left">String</td>
+	<td align="left">The contact's surname (family name or last name). The contact's surname (family name or last name).</td>
+</tr>
+<tr>
+	<td align="left">title</td>
+	<td align="left">String</td>
+	<td align="left">The contact's title. The contact's title.</td>
+</tr>
+<tr>
+	<td align="left">yomiCompanyName</td>
+	<td align="left">String</td>
+	<td align="left">The phonetic Japanese company name of the contact. This property is optional. The phonetic Japanese company name of the contact. This property is optional.</td>
+</tr>
+<tr>
+	<td align="left">yomiGivenName</td>
+	<td align="left">String</td>
+	<td align="left">The phonetic Japanese given name (first name) of the contact. This property is optional. The phonetic Japanese given name (first name) of the contact. This property is optional.</td>
+</tr>
+<tr>
+	<td align="left">yomiSurname</td>
+	<td align="left">String</td>
+	<td align="left">The phonetic Japanese surname (last name)  of the contact. This property is optional. The phonetic Japanese surname (last name)  of the contact. This property is optional.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationships">Relationships</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Relationship</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">photo</td>
+	<td align="left"><a href="photo.htm">Photo</a></td>
+	<td align="left">Read-only.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="methods">Methods</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Method</th>
+	<th align="left">Return Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><a href="../api/contact_get.htm">Get contact</a></td>
+	<td align="left"><a href="contact.htm">contact</a></td>
+	<td align="left">Read properties and relationships of contact object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/contact_update.htm">Update</a></td>
+	<td align="left"><a href="contact.htm">contact</a></td>
+	<td align="left">Update contact object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/contact_delete.htm">Delete</a></td>
+	<td align="left">None</td>
+	<td align="left">Delete contact object.</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+</body>
+
+
+
+

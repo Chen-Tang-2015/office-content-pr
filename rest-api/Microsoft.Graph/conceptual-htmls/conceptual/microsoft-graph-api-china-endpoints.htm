@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Microsoft Graph API endpoints for China</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+  
+</head>
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="microsoft-graph-api-endpoints-for-china">Microsoft Graph API endpoints for China</h1>
+<p><em><strong>Applies to:</strong>  Office 365 for China operated by 21Vianet</em></p>
+<p>Office 365 operated by <a href="http://www.en.21vianet.com/" target="_blank">21Vianet</a> is powered by the technology that Microsoft has licensed to 21Vianet. </p>
+<p>Microsoft does not operate the service itself; 21Vianet operates, provides and manages delivery of the service. 21Vianet is the largest carrier-neutral Internet data center services provider in China. It provides hosting, managed network services, and cloud computing infrastructure services. Microsoft licenses Office 365 to 21Vianet, who then use it to set up Office 365 data center for their users in China. 21Vianet operates local Office 365 data centers and provide Office 365 services to users in China while keeping their data within China. 21Vianet also provide user subscription and billing services, as well as support. </p>
+<p>The Microsoft Graph API resources and related services for Office 365 operated by 21Vianet have different URLs from those of Microsoft Graph API outside of China. These differences are documented as follows.</p>
+<h2 id="microsoft-azure">Microsoft Azure</h2>
+<table>
+<thead>
+<tr>
+	<th align="left"><strong>Office 365 for China</strong></th>
+	<th align="left"><strong>Office 365 outside of China</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>https://account.windowsazure.cn</code></td>
+	<td align="left"><code>https://account.windowsazure.com</code></td>
+</tr>
+</tbody>
+</table>
+<p>Go to <code>https://account.windowszaure.cn</code> to set up the development environment for Office 365 for China.   For more information, see <a href="..\howto\setup-development-environment.htm">Set up your Office 365 development environment</a>.</p>
+<h2 id="azure-openid-connect-and-oauth">Azure OpenId Connect and OAuth</h2>
+<table>
+<thead>
+<tr>
+	<th align="left"><strong>Office 365 for China</strong></th>
+	<th align="left"><strong>Office 365 outside of China</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>https://login.chinacloudapi.cn</code></td>
+	<td align="left"><code>https://login.microsoftonline.com</code></td>
+</tr>
+</tbody>
+</table>
+<p>Use <code>https://login.chinacloudapi.cn/common/oauth2/authorize</code> to authenticate the user and <code>login.chinacloudapi.cn/common/oauth2/token</code> to authorize your app on Office 365 for China.</p>
+<h2 id="office-365-developer-site">Office 365 developer site</h2>
+<p>In the following URLs, <code>{your-sub-domain}</code> is the name you specify when setting up your developer site.</p>
+<table>
+<thead>
+<tr>
+	<th align="left"><strong>Office 365 for China</strong></th>
+	<th align="left"><strong>Office 365 outside of China</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>https://{your-sub-domain}.partner.onmschina.cn</code></td>
+	<td align="left"><code>https://{your-sub-domain}.onmicrosoft.com</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="microsoft-graph-api">Microsoft Graph API</h2>
+<table>
+<thead>
+<tr>
+	<th align="left"><strong>Office 365 for China</strong></th>
+	<th align="left"><strong>Office 365 outside of China</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>http://microsoftgraph.chinacloudapi.cn</code></td>
+	<td align="left"><code>https://graph.microsoft.com/</code></td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+

@@ -1,15 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <title>Microsoft Graph API reference contributor's guide</title>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="stylesheet.css" />
-  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
-  
-</head>
 
 <body>
 
@@ -41,7 +31,9 @@
 </ul>
 <p><strong>Key things to consider:</strong> </p>
 <ul>
+<li>Edit markdows in either 1.0 or beta folder - not both. If your API is available in beta only, then update the beta folder. If your API is available in 1.0 and beta, finish the updates to 1.0 folder. We will then use some tools to identify delta and copy over as many descriptions as possible. </li>
 <li>Add object, property, method, and parameter descriptions. </li>
+<li>Review all methods available in the resource. If you don't support certain methods such as deletes, patch updates, etc. remove them from the resource file's methods table. </li>
 <li>Note: Same descriptions can appear in many places. For example, the method descriptions appear in object Tasks table and also in the API file itself. Same object can appear as a relationship in many places. The descriptions that we add should be consistent across these locations.</li>
 <li>For APIs, add the <strong>scopes</strong> needed under the prerequisites section.</li>
 <li>For APIs, verify/edit HTTP request. There are hundreds of ways to reach the resource/methods through various resource paths. We have selected only a few for brevity. Add the ones that you wish to highlight. </li>
@@ -96,15 +88,8 @@ If you need to add any new methods (such as PUT API), follow these steps:
 
 </div>
 
-
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
 </body>
-</html>
+
+
 
 

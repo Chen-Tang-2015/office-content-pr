@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="conversationthread-resource-type">conversationThread resource type</h1>
+<h3 id="json-representation">JSON representation</h3>
+<p>Here is a JSON representation of the resource</p>
+<pre><code class="json">{
+  &quot;ccRecipients&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.recipient&quot;
+    }
+  ],
+  &quot;hasAttachments&quot;: true,
+  &quot;id&quot;: &quot;String-value (identifier)&quot;,
+  &quot;isLocked&quot;: true,
+  &quot;lastDeliveredDateTime&quot;: &quot;String (timestamp)&quot;,
+  &quot;posts&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.post&quot;
+    }
+  ],
+  &quot;preview&quot;: &quot;String-value&quot;,
+  &quot;toRecipients&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.recipient&quot;
+    }
+  ],
+  &quot;topic&quot;: &quot;String-value&quot;,
+  &quot;uniqueSenders&quot;: [
+    &quot;String-value&quot;
+  ]
+}
+
+</code></pre>
+
+<h3 id="properties">Properties</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">ccRecipients</td>
+	<td align="left"><a href="recipient.htm">Recipient</a> collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">hasAttachments</td>
+	<td align="left">Boolean</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">id</td>
+	<td align="left">String</td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">isLocked</td>
+	<td align="left">Boolean</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">lastDeliveredDateTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">preview</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">toRecipients</td>
+	<td align="left"><a href="recipient.htm">Recipient</a> collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">topic</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">uniqueSenders</td>
+	<td align="left">String collection</td>
+	<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationships">Relationships</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Relationship</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">posts</td>
+	<td align="left"><a href="post.htm">Post</a> collection</td>
+	<td align="left">Read-only. Nullable.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="methods">Methods</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Method</th>
+	<th align="left">Return Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><a href="../api/conversationthread_get.htm">Get conversationThread</a></td>
+	<td align="left"><a href="conversationthread.htm">conversationThread</a></td>
+	<td align="left">Read properties and relationships of conversationThread object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/conversationthread_post_posts.htm">Create Post</a></td>
+	<td align="left"><a href="post.htm">Post</a></td>
+	<td align="left">Create a new Post by posting to the posts collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/conversationthread_list_posts.htm">List posts</a></td>
+	<td align="left"><a href="post.htm">Post</a> collection</td>
+	<td align="left">Get a Post object collection.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/conversationthread_update.htm">Update</a></td>
+	<td align="left"><a href="conversationthread.htm">conversationThread</a></td>
+	<td align="left">Update conversationThread object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/conversationthread_delete.htm">Delete</a></td>
+	<td align="left">None</td>
+	<td align="left">Delete conversationThread object.</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+</body>
+
+
+
+

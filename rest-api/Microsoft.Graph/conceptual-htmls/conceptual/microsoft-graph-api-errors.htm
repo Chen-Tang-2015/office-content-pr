@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="microsoft-graph-api-error--response-and-resource-type">Microsoft Graph API error  response and resource type</h1>
+<p>In this article:</p>
+<ul>
+<li><a href="#msg_status_code">Status code</a></li>
+<li><a href="#msg_error_resource_type">Error resource type</a></li>
+<li><a href="#msg_code_property">Code property</a></li>
+</ul>
+<p>&lt;a name=&quot;msg_error_response&quot;&gt; </a></p>
+<h2 id="status-code">Status code</h2>
+<p>Errors in the Microsoft Graph API service are returned using standard HTTP status codes, as well as a JSON error
+response object. The following HTTP status codes should be expected.</p>
+<table>
+<thead>
+<tr>
+	<th align="left">Status code</th>
+	<th align="left">Status message</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">400</td>
+	<td align="left">Bad Request</td>
+	<td align="left">Cannot process the request because it is malformed or incorrect.</td>
+</tr>
+<tr>
+	<td align="left">401</td>
+	<td align="left">Unauthorized</td>
+	<td align="left">Required authentication information is either missing or not valid for the resource.</td>
+</tr>
+<tr>
+	<td align="left">403</td>
+	<td align="left">Forbidden</td>
+	<td align="left">Access is denied to the requested resource. The user might not have enough permission.</td>
+</tr>
+<tr>
+	<td align="left">404</td>
+	<td align="left">Not Found</td>
+	<td align="left">The requested resource doesn’t exist.</td>
+</tr>
+<tr>
+	<td align="left">405</td>
+	<td align="left">Method Not Allowed</td>
+	<td align="left">The HTTP method in the request is not allowed on the resource.</td>
+</tr>
+<tr>
+	<td align="left">406</td>
+	<td align="left">Not Acceptable</td>
+	<td align="left">This service doesn’t support the format requested in the Accept header.</td>
+</tr>
+<tr>
+	<td align="left">409</td>
+	<td align="left">Conflict</td>
+	<td align="left">The current state conflicts with what the request expects. For example, the specified parent folder might not exist.</td>
+</tr>
+<tr>
+	<td align="left">410</td>
+	<td align="left">Gone</td>
+	<td align="left">The requested resource is no longer available at the server.</td>
+</tr>
+<tr>
+	<td align="left">411</td>
+	<td align="left">Length Required</td>
+	<td align="left">A Content-Length header is required on the request.</td>
+</tr>
+<tr>
+	<td align="left">412</td>
+	<td align="left">Precondition Failed</td>
+	<td align="left">A precondition provided in the request (such as an if-match header) does not match the resource's current state.</td>
+</tr>
+<tr>
+	<td align="left">413</td>
+	<td align="left">Request Entity Too Large</td>
+	<td align="left">The request size exceeds the maximum limit.</td>
+</tr>
+<tr>
+	<td align="left">415</td>
+	<td align="left">Unsupported Media Type</td>
+	<td align="left">The content type of the request is a format that is not supported by the service.</td>
+</tr>
+<tr>
+	<td align="left">416</td>
+	<td align="left">Requested Range Not Satisfiable</td>
+	<td align="left">The specified byte range is invalid or unavailable.</td>
+</tr>
+<tr>
+	<td align="left">422</td>
+	<td align="left">Unprocessable Entity</td>
+	<td align="left">Cannot process the request because it is semantically incorrect.</td>
+</tr>
+<tr>
+	<td align="left">429</td>
+	<td align="left">Too Many Requests</td>
+	<td align="left">Client application has been throttled and should not attempt to repeat the request until an amount of time has elapsed.</td>
+</tr>
+<tr>
+	<td align="left">500</td>
+	<td align="left">Internal Server Error</td>
+	<td align="left">There was an internal server error while processing the request.</td>
+</tr>
+<tr>
+	<td align="left">501</td>
+	<td align="left">Not Implemented</td>
+	<td align="left">The requested feature isn’t implemented.</td>
+</tr>
+<tr>
+	<td align="left">503</td>
+	<td align="left">Service Unavailable</td>
+	<td align="left">The service is temporarily unavailable. You may repeat the request after a delay. There may be a Retry-After header.</td>
+</tr>
+<tr>
+	<td align="left">507</td>
+	<td align="left">Insufficient Storage</td>
+	<td align="left">The maximum storage quota has been reached.</td>
+</tr>
+<tr>
+	<td align="left">509</td>
+	<td align="left">Bandwidth Limit Exceeded</td>
+	<td align="left">Your app has been throttled for exceeding the maximum bandwidth cap. Your app can retry the request again after more time has elapsed.</td>
+</tr>
+</tbody>
+</table>
+<p>The error response is a single JSON object that contains a single property
+named <strong>error</strong>. This object includes all of the details of the error. You may use the information returned here instead of, or in addition
+to the HTTP status code returned. Here is an example of a full JSON error body.</p>
+<pre><code class="json">{
+  &quot;error&quot;: {
+    &quot;code&quot;: &quot;invalidRange&quot;,
+    &quot;message&quot;: &quot;Uploaded fragment overlaps with existing data.&quot;,
+    &quot;innererror&quot;: {
+      &quot;code&quot;: &quot;fragmentOverlap&quot;
+    }
+  }
+}
+</code></pre>
+
+<p>&lt;a name=&quot;msg_error_resource_type&quot;&gt; </a></p>
+<h1 id="error-resource-type">Error resource type</h1>
+<p>The error resource is returned whenever an error occurs in the processing
+of a request.</p>
+<p>Error responses follow the definition in the
+<a href="http://docs.oasis-open.org/odata/odata-json-format/v4.0/os/odata-json-format-v4.0-os.html#_Toc372793091" target="_blank">OData v4</a>
+specification for error responses.</p>
+<h2 id="json-representation">JSON Representation</h2>
+<p>The error resource is composed of these resources:</p>
+<pre><code class="json">{
+  &quot;error&quot;: { &quot;@odata.type&quot;: &quot;odata.error&quot; }  
+}
+</code></pre>
+
+<h4 id="odataerror-resource-type">odata.error resource type</h4>
+<p>Inside the error response is an error resource that includes the following
+properties:</p>
+<pre><code class="json">{
+  &quot;code&quot;: &quot;string&quot;,
+  &quot;message&quot;: &quot;string&quot;,
+  &quot;innererror&quot;: { &quot;@odata.type&quot;: &quot;odata.error&quot; }
+}
+</code></pre>
+
+<table>
+<thead>
+<tr>
+	<th align="left">Property name</th>
+	<th align="left">Value</th>
+	<th align="left">Description\</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><strong>code</strong></td>
+	<td align="left">string</td>
+	<td align="left">An error code string for the error that occured</td>
+</tr>
+<tr>
+	<td align="left"><strong>message</strong></td>
+	<td align="left">string</td>
+	<td align="left">A developer ready message about the error that occured. This should not be displayed to the user directly.</td>
+</tr>
+<tr>
+	<td align="left"><strong>innererror</strong></td>
+	<td align="left">error object</td>
+	<td align="left">Optional. Additional error objects that may be more specific than the top level error.</td>
+</tr>
+</tbody>
+</table>
+<p>&lt;a name=&quot;msg_code_property&quot;&gt; </a></p>
+<h2 id="code-property">Code property</h2>
+<p>The <code>code</code> property contains one of the following possible values. Your apps should be
+prepared to handle any one of these errors.</p>
+<table>
+<thead>
+<tr>
+	<th align="left">Code</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><strong>accessDenied</strong></td>
+	<td align="left">The caller doesn't have permission to perform the action.</td>
+</tr>
+<tr>
+	<td align="left"><strong>activityLimitReached</strong></td>
+	<td align="left">The app or user has been throttled.</td>
+</tr>
+<tr>
+	<td align="left"><strong>generalException</strong></td>
+	<td align="left">An unspecified error has occurred.</td>
+</tr>
+<tr>
+	<td align="left"><strong>invalidRange</strong></td>
+	<td align="left">The specified byte range is invalid or unavailable.</td>
+</tr>
+<tr>
+	<td align="left"><strong>invalidRequest</strong></td>
+	<td align="left">The request is malformed or incorrect.</td>
+</tr>
+<tr>
+	<td align="left"><strong>itemNotFound</strong></td>
+	<td align="left">The resource could not be found.</td>
+</tr>
+<tr>
+	<td align="left"><strong>malwareDetected</strong></td>
+	<td align="left">Malware was detected in the requested resource.</td>
+</tr>
+<tr>
+	<td align="left"><strong>nameAlreadyExists</strong></td>
+	<td align="left">The specified item name already exists.</td>
+</tr>
+<tr>
+	<td align="left"><strong>notAllowed</strong></td>
+	<td align="left">The action is not allowed by the system.</td>
+</tr>
+<tr>
+	<td align="left"><strong>notSupported</strong></td>
+	<td align="left">The request is not supported by the system.</td>
+</tr>
+<tr>
+	<td align="left"><strong>resourceModified</strong></td>
+	<td align="left">The resource being updated has changed since the caller last read it, usually an eTag mismatch.</td>
+</tr>
+<tr>
+	<td align="left"><strong>resyncRequired</strong></td>
+	<td align="left">The delta token is no longer valid, and the app must reset the sync state.</td>
+</tr>
+<tr>
+	<td align="left"><strong>serviceNotAvailable</strong></td>
+	<td align="left">The service is not available. Try the request again after a delay. There may be a Retry-After header.</td>
+</tr>
+<tr>
+	<td align="left"><strong>quotaLimitReached</strong></td>
+	<td align="left">The user has reached their quota limit.</td>
+</tr>
+<tr>
+	<td align="left"><strong>unauthenticated</strong></td>
+	<td align="left">The caller is not authenticated.</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>innererror</code> object may recursively contain more <code>innererror</code> objects
+with additional, more specific error codes. When handling an error, apps
+should loop through all the error codes available and use the most detailed
+one that they understand. Some of the more detailed codes are listed at the
+bottom of this page.</p>
+<p>To verify that an error object is an error you are expecting, you must loop
+over the <code>innererror</code> objects, looking for the error codes you expect. For example:</p>
+<pre><code class="csharp">public bool IsError(string expectedErrorCode)
+{
+    OneDriveInnerError errorCode = this.Error;
+    while (null != errorCode)
+    {
+        if (errorCode.Code == expectedErrorCode)
+            return true;
+        errorCode = errorCode.InnerError;
+    }
+    return false;
+}
+</code></pre>
+
+<p>For a complete example for properly handling errors, take a look at
+<a href="https://gist.github.com/rgregg/a1866be15e685983b441" target="_blank">Error Code Handling</a>.</p>
+<p>The <code>message</code> property at the root contains an error message intended for the
+developer to read. Error messages are not localized and shouldn't be displayed
+directly to the user. When handling errors, your code should not key off of
+<code>message</code> values because they can change at any time, and they often contain
+dynamic information specific to the failed request. You should only code
+against error codes returned in <code>code</code> properties.</p>
+<h3 id="detailed-error-codes">Detailed error codes</h3>
+<p>Below are some additional errors that your app may encounter within the nested
+<code>innererror</code> objects. Apps are not required to handle these, but may if they
+choose. The service may add new error codes or stop returning old ones at any
+time, so it is important that all apps be able to handle the basic error codes in the preceding section](#code-property).</p>
+<table>
+<thead>
+<tr>
+	<th align="left">Code</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><strong>accessRestricted</strong></td>
+	<td align="left">Access restricted to the item's owner.</td>
+</tr>
+<tr>
+	<td align="left"><strong>cannotSnapshotTree</strong></td>
+	<td align="left">Failed to get a consistent delta snapshot. Try again later.</td>
+</tr>
+<tr>
+	<td align="left"><strong>childItemCountExceeded</strong></td>
+	<td align="left">Max limit on the number of child items was reached.</td>
+</tr>
+<tr>
+	<td align="left"><strong>entityTagDoesNotMatch</strong></td>
+	<td align="left">ETag does not match the current item's value.</td>
+</tr>
+<tr>
+	<td align="left"><strong>fragmentLengthMismatch</strong></td>
+	<td align="left">Declared total size for this fragment is different from that of the upload session.</td>
+</tr>
+<tr>
+	<td align="left"><strong>fragmentOutOfOrder</strong></td>
+	<td align="left">Uploaded fragment is out of order.</td>
+</tr>
+<tr>
+	<td align="left"><strong>fragmentOverlap</strong></td>
+	<td align="left">Uploaded fragment overlaps with existing data.</td>
+</tr>
+<tr>
+	<td align="left"><strong>invalidAcceptType</strong></td>
+	<td align="left">Invalid accept type.</td>
+</tr>
+<tr>
+	<td align="left"><strong>invalidParameterFormat</strong></td>
+	<td align="left">Invalid parameter format.</td>
+</tr>
+<tr>
+	<td align="left"><strong>invalidPath</strong></td>
+	<td align="left">Name contains invalid characters.</td>
+</tr>
+<tr>
+	<td align="left"><strong>invalidQueryOption</strong></td>
+	<td align="left">Invalid query option.</td>
+</tr>
+<tr>
+	<td align="left"><strong>invalidStartIndex</strong></td>
+	<td align="left">Invalid start index.</td>
+</tr>
+<tr>
+	<td align="left"><strong>lockMismatch</strong></td>
+	<td align="left">Lock token does not match existing lock.</td>
+</tr>
+<tr>
+	<td align="left"><strong>lockNotFoundOrAlreadyExpired</strong></td>
+	<td align="left">There is currently no unexpired lock on the item.</td>
+</tr>
+<tr>
+	<td align="left"><strong>lockOwnerMismatch</strong></td>
+	<td align="left">Lock Owner ID does not match provided ID.</td>
+</tr>
+<tr>
+	<td align="left"><strong>malformedEntityTag</strong></td>
+	<td align="left">ETag header is malformed. ETags must be quoted strings.</td>
+</tr>
+<tr>
+	<td align="left"><strong>maxDocumentCountExceeded</strong></td>
+	<td align="left">Max limit on number of Documents is reached.</td>
+</tr>
+<tr>
+	<td align="left"><strong>maxFileSizeExceeded</strong></td>
+	<td align="left">Max file size exceeded.</td>
+</tr>
+<tr>
+	<td align="left"><strong>maxFolderCountExceeded</strong></td>
+	<td align="left">Max limit on number of Folders is reached.</td>
+</tr>
+<tr>
+	<td align="left"><strong>maxFragmentLengthExceeded</strong></td>
+	<td align="left">Max file size exceeded.</td>
+</tr>
+<tr>
+	<td align="left"><strong>maxItemCountExceeded</strong></td>
+	<td align="left">Max limit on number of Items is reached.</td>
+</tr>
+<tr>
+	<td align="left"><strong>maxQueryLengthExceeded</strong></td>
+	<td align="left">Max query length exceeded.</td>
+</tr>
+<tr>
+	<td align="left"><strong>maxStreamSizeExceeded</strong></td>
+	<td align="left">Maximum stream size exceeded.</td>
+</tr>
+<tr>
+	<td align="left"><strong>parameterIsTooLong</strong></td>
+	<td align="left">Parameter Exceeds Maximum Length.</td>
+</tr>
+<tr>
+	<td align="left"><strong>parameterIsTooSmall</strong></td>
+	<td align="left">Parameter is smaller then minimum value.</td>
+</tr>
+<tr>
+	<td align="left"><strong>pathIsTooLong</strong></td>
+	<td align="left">Path exceeds maximum length.</td>
+</tr>
+<tr>
+	<td align="left"><strong>pathTooDeep</strong></td>
+	<td align="left">Folder hierarchy depth limit reached.</td>
+</tr>
+<tr>
+	<td align="left"><strong>propertyNotUpdateable</strong></td>
+	<td align="left">Property not updateable.</td>
+</tr>
+<tr>
+	<td align="left"><strong>resyncApplyDifferences</strong></td>
+	<td align="left">Resync required. Replace any local items with the server's version (including deletes) if you're sure that the service was up to date with your local changes when you last sync'd. Upload any local changes that the server doesn't know about.</td>
+</tr>
+<tr>
+	<td align="left"><strong>resyncRequired</strong></td>
+	<td align="left">Resync is required.</td>
+</tr>
+<tr>
+	<td align="left"><strong>resyncUploadDifferences</strong></td>
+	<td align="left">Resync required. Upload any local items that the service did not return, and upload any files that differ from the server's version (keeping both copies if you're not sure which one is more up-to-date).</td>
+</tr>
+<tr>
+	<td align="left"><strong>serviceNotAvailable</strong></td>
+	<td align="left">The server is unable to process the current request.</td>
+</tr>
+<tr>
+	<td align="left"><strong>serviceReadOnly</strong></td>
+	<td align="left">Resource is temporarily read-only.</td>
+</tr>
+<tr>
+	<td align="left"><strong>throttledRequest</strong></td>
+	<td align="left">Too many requests.</td>
+</tr>
+<tr>
+	<td align="left"><strong>tooManyResultsRequested</strong></td>
+	<td align="left">Too many results requested.</td>
+</tr>
+<tr>
+	<td align="left"><strong>tooManyTermsInQuery</strong></td>
+	<td align="left">Too many terms in the query.</td>
+</tr>
+<tr>
+	<td align="left"><strong>totalAffectedItemCountExceeded</strong></td>
+	<td align="left">Operation is not allowed because the number of affected items exceeds threshold.</td>
+</tr>
+<tr>
+	<td align="left"><strong>truncationNotAllowed</strong></td>
+	<td align="left">Data truncation is not allowed.</td>
+</tr>
+<tr>
+	<td align="left"><strong>uploadSessionFailed</strong></td>
+	<td align="left">Upload session failed.</td>
+</tr>
+<tr>
+	<td align="left"><strong>uploadSessionIncomplete</strong></td>
+	<td align="left">Upload session incomplete.</td>
+</tr>
+<tr>
+	<td align="left"><strong>uploadSessionNotFound</strong></td>
+	<td align="left">Upload session not found.</td>
+</tr>
+<tr>
+	<td align="left"><strong>virusSuspicious</strong></td>
+	<td align="left">This document is suspicious and may have a virus.</td>
+</tr>
+<tr>
+	<td align="left"><strong>zeroOrFewerResultsRequested</strong></td>
+	<td align="left">Zero or fewer results requested.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="additional-resources">Additional Resources</h2>
+<ul>
+<li><a href="http://dev.office.com/hands-on-labs/4585" target="_blank">Hands on lab: Deep dive into the Microsoft Graph API</a></li>
+</ul>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../README.htm">API Reference</a></p>
+        <ul>
+            
+            <li>Misc</li>
+            
+            <ul>
+                
+                <li><a href="microsoft-graph-api-errors.htm">Error Responses</a></li>
+                
+                
+            </ul>
+            
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+</body>
+
+
+
+

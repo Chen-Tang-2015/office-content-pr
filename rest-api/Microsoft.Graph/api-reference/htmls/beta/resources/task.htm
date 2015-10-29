@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="task-resource-type">task resource type</h1>
+<h3 id="json-representation">JSON representation</h3>
+<p>Here is a JSON representation of the resource</p>
+<pre><code class="json">{
+  &quot;appliedCategories&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.appliedcategoriescollection&quot;
+  },
+  &quot;assignedBy&quot;: &quot;String-value&quot;,
+  &quot;assignedDateTime&quot;: &quot;String (timestamp)&quot;,
+  &quot;assignedTo&quot;: &quot;String-value&quot;,
+  &quot;assignedToTaskBoardFormat&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.taskboardtaskformat&quot;
+  },
+  &quot;assigneePriority&quot;: &quot;String-value&quot;,
+  &quot;bucketId&quot;: &quot;String-value&quot;,
+  &quot;bucketTaskBoardFormat&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.taskboardtaskformat&quot;
+  },
+  &quot;completedDateTime&quot;: &quot;String (timestamp)&quot;,
+  &quot;conversationThreadId&quot;: &quot;String-value&quot;,
+  &quot;createdBy&quot;: &quot;String-value&quot;,
+  &quot;createdDateTime&quot;: &quot;String (timestamp)&quot;,
+  &quot;details&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.taskdetails&quot;
+  },
+  &quot;dueDateTime&quot;: &quot;String (timestamp)&quot;,
+  &quot;hasDescription&quot;: true,
+  &quot;id&quot;: &quot;String-value (identifier)&quot;,
+  &quot;orderHint&quot;: &quot;String-value&quot;,
+  &quot;percentComplete&quot;: 1024,
+  &quot;planId&quot;: &quot;String-value&quot;,
+  &quot;previewType&quot;: &quot;String-value&quot;,
+  &quot;progressTaskBoardFormat&quot;: {
+    &quot;@odata.type&quot;: &quot;microsoft.graph.taskboardtaskformat&quot;
+  },
+  &quot;startDateTime&quot;: &quot;String (timestamp)&quot;,
+  &quot;title&quot;: &quot;String-value&quot;
+}
+
+</code></pre>
+
+<h3 id="properties">Properties</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">appliedCategories</td>
+	<td align="left"><a href="appliedcategoriescollection.htm">appliedCategoriesCollection</a></td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">assignedBy</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">assignedDateTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">assignedTo</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">assigneePriority</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">bucketId</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">completedDateTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">conversationThreadId</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">createdBy</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">createdDateTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">dueDateTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">hasDescription</td>
+	<td align="left">Boolean</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">id</td>
+	<td align="left">String</td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">orderHint</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">percentComplete</td>
+	<td align="left">Int32</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">planId</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">previewType</td>
+	<td align="left">String</td>
+	<td align="left">Possible values are: <code>automatic</code>, <code>noPreview</code>, <code>checklist</code>, <code>description</code>, <code>reference</code>.</td>
+</tr>
+<tr>
+	<td align="left">startDateTime</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">title</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationships">Relationships</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Relationship</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">assignedToTaskBoardFormat</td>
+	<td align="left"><a href="taskboardtaskformat.htm">taskBoardTaskFormat</a></td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">bucketTaskBoardFormat</td>
+	<td align="left"><a href="taskboardtaskformat.htm">taskBoardTaskFormat</a></td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">details</td>
+	<td align="left"><a href="taskdetails.htm">taskDetails</a></td>
+	<td align="left">Read-only.</td>
+</tr>
+<tr>
+	<td align="left">progressTaskBoardFormat</td>
+	<td align="left"><a href="taskboardtaskformat.htm">taskBoardTaskFormat</a></td>
+	<td align="left">Read-only.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="methods">Methods</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Method</th>
+	<th align="left">Return Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><a href="../api/task_get.htm">Get task</a></td>
+	<td align="left"><a href="task.htm">task</a></td>
+	<td align="left">Read properties and relationships of task object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/task_update.htm">Update</a></td>
+	<td align="left"><a href="task.htm">task</a></td>
+	<td align="left">Update task object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/task_delete.htm">Delete</a></td>
+	<td align="left">None</td>
+	<td align="left">Delete task object.</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+</body>
+
+
+
+

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="update-thumbnailset">Update thumbnailset</h1>
+<p>Update the properties of thumbnailset object.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<h3 id="http-request">HTTP request</h3>
+<pre><code class="http">PATCH /drive/root/thumbnails/&lt;id&gt;
+PATCH /drive/items/&lt;id&gt;/thumbnails/&lt;id&gt;
+PATCH /drives/&lt;id&gt;/root/thumbnails/&lt;id&gt;
+</code></pre>
+
+<h3 id="optional-request-headers">Optional request headers</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Name</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">X-Sample-Header</td>
+	<td align="left">string</td>
+	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-body">Request body</h3>
+<p>In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.</p>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">large</td>
+	<td align="left">thumbnail</td>
+	<td align="left">A 1920x1920 scaled thumbnail. A 1920x1920 scaled thumbnail.</td>
+</tr>
+<tr>
+	<td align="left">medium</td>
+	<td align="left">thumbnail</td>
+	<td align="left">A 176x176 scaled thumbnail. A 176x176 scaled thumbnail.</td>
+</tr>
+<tr>
+	<td align="left">small</td>
+	<td align="left">thumbnail</td>
+	<td align="left">A 48x48 cropped thumbnail. A 48x48 cropped thumbnail.</td>
+</tr>
+<tr>
+	<td align="left">source</td>
+	<td align="left">thumbnail</td>
+	<td align="left">A custom thumbnail image or the original image used to generate other thumbnails. A custom thumbnail image or the original image used to generate other thumbnails.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response">Response</h3>
+<p>If successful, this method returns a <code>200 OK</code> response code and updated <a href="../resources/thumbnailset.htm">thumbnailSet</a> object in the response body.</p>
+<h3 id="example">Example</h3>
+<h5 id="request">Request</h5>
+<p>Here is an example of the request.</p>
+<pre><code class="http">PUT https://graph.microsoft.com/v1.0/drive/root/thumbnails/&lt;id&gt;
+Content-type: application/json
+Content-length: 456
+
+{
+  &quot;id&quot;: &quot;id-value&quot;,
+  &quot;large&quot;: {
+    &quot;content&quot;: &quot;content-value&quot;,
+    &quot;height&quot;: 99,
+    &quot;url&quot;: &quot;url-value&quot;,
+    &quot;width&quot;: 99
+  },
+  &quot;medium&quot;: {
+    &quot;content&quot;: &quot;content-value&quot;,
+    &quot;height&quot;: 99,
+    &quot;url&quot;: &quot;url-value&quot;,
+    &quot;width&quot;: 99
+  },
+  &quot;small&quot;: {
+    &quot;content&quot;: &quot;content-value&quot;,
+    &quot;height&quot;: 99,
+    &quot;url&quot;: &quot;url-value&quot;,
+    &quot;width&quot;: 99
+  },
+  &quot;source&quot;: {
+    &quot;content&quot;: &quot;content-value&quot;,
+    &quot;height&quot;: 99,
+    &quot;url&quot;: &quot;url-value&quot;,
+    &quot;width&quot;: 99
+  }
+}
+</code></pre>
+
+<h5 id="response-1">Response</h5>
+<p>Here is an example of the response.</p>
+<pre><code class="http">HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 456
+
+{
+  &quot;id&quot;: &quot;id-value&quot;,
+  &quot;large&quot;: {
+    &quot;content&quot;: &quot;content-value&quot;,
+    &quot;height&quot;: 99,
+    &quot;url&quot;: &quot;url-value&quot;,
+    &quot;width&quot;: 99
+  },
+  &quot;medium&quot;: {
+    &quot;content&quot;: &quot;content-value&quot;,
+    &quot;height&quot;: 99,
+    &quot;url&quot;: &quot;url-value&quot;,
+    &quot;width&quot;: 99
+  },
+  &quot;small&quot;: {
+    &quot;content&quot;: &quot;content-value&quot;,
+    &quot;height&quot;: 99,
+    &quot;url&quot;: &quot;url-value&quot;,
+    &quot;width&quot;: 99
+  },
+  &quot;source&quot;: {
+    &quot;content&quot;: &quot;content-value&quot;,
+    &quot;height&quot;: 99,
+    &quot;url&quot;: &quot;url-value&quot;,
+    &quot;width&quot;: 99
+  }
+}
+</code></pre>
+
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+</body>
+
+
+
+

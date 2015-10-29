@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="microsoft-graph-api-overview">Microsoft Graph API overview</h1>
+<p><em><strong>Applies to:</strong> Office 365</em></p>
+<blockquote>
+<p>Your feedback is important to us. Connect with us on <a href="http://stackoverflow.com/questions/tagged/office365" target="_blank">Stack Overflow</a>. Tag your questions with [office365].</p>
+</blockquote>
+<p><strong>In this article</strong></p>
+<ul>
+<li><a href="#msg_what_is_unified_api">Overview of Microsoft Graph API</a> </li>
+<li><a href="#msg_how_learn_unified_api">Learn more about  Microsoft Graph API development</a> </li>
+</ul>
+<p>&lt;a name=&quot;msg_what_is_unified_api&quot;&gt; </a></p>
+<h2 id="overview-of-microsoft-graph-api">Overview of Microsoft Graph API</h2>
+<p>The Microsoft Graph API (also called Office 365 unified API during the preview) exposes multiple APIs from Microsoft cloud services through a single REST API endpoint. Using the Microsoft Graph API, you can turn your formerly difficult or complex queries into simple navigations. </p>
+<p>The API exposes information about entities and the relationships among them through one REST URL namespace (_https://_<strong>graph.microsoft.com</strong>), using one authentication and authorization system, and using a consistent and unified metadata, payload format, error handling, library, and more.</p>
+<p>The Microsoft Graph API exposes fixed entities like users, groups, mail, messages, calendars, tasks, notes coming from services like Outlook, OneDrive, Azure Active Directory, Planner, OneNote and others. It also exposes calculated relationships powered by the Office Graph (only for commercial users) like the list of users you are working with or the documents trending around you.</p>
+<h2 id="calling-office-365-apis-vs-microsoft-graph-api">Calling Office 365 APIs vs Microsoft Graph API</h2>
+<p>Let's say you want to programmatically retrieve a user's files, profile picture, and find the manager of the person who last edited that file in your organization. Because the information is stored in  multiple services-Azure Active Directory, SharePoint, and Exchange-the task involves multiple steps using Office 365 APIs: </p>
+<ol>
+<li>Use the Discovery Service to find the various service endpoints </li>
+<li>Determine the URL of the services your Office 365 apps want to connect to</li>
+<li>Then acquire and manage the access token for each service and make the request to the service directly</li>
+</ol>
+<p>Now, you can use the use Microsoft Graph API to perform the same complex operation via a single REST API endpoint. You don't have to discover and navigate a different endpoint for each service, acquire and manage separate access token for each service, deal with siloed services and varying data model.</p>
+<p>The following diagram shows the Microsoft Graph API developer stack and how it works.</p>
+<p><img src="./images/O365_unified_API_DevStackFinal3.png" alt="Office 365 unified API developer stack." /></p>
+<p>&lt;a name=&quot;msg_how_learn_unified_api&quot;&gt; </a></p>
+<h2 id="learn-more-about-microsoft-graph-api-development">Learn more about Microsoft Graph API development</h2>
+<p>The following resources can help you get started:</p>
+<p><strong>Develop an app using Microsoft Graph API</strong></p>
+<ul>
+<li><a href="\microsoft-graph-api-FAQs.htm">Get started with the Microsoft Graph API</a> </li>
+<li><a href="\microsoft-graph-api-FAQs.htm">Microsoft Graph API FAQs</a> </li>
+<li><a href="https://msdn.microsoft.com/en-us/library/azure/dn645542.aspx" target="_blank">Authorization Code Grant Flow</a></li>
+</ul>
+<p><strong>Try out and explore the Microsoft Graph API</strong></p>
+<ul>
+<li><a href="https://graphexplorer2.azurewebsites.net/" target="_blank">Microsoft Graph API Explorer</a> </li>
+<li><a href="http://apisandbox.msdn.com" target="_blank">API Sandbox</a></li>
+</ul>
+<p><strong>Hands on lab</strong></p>
+<ul>
+<li><a href="http://dev.office.com/hands-on-labs/4585" target="_blank">Deep dive into the Microsoft Graph API</a></li>
+</ul>
+<p><strong>Code samples</strong></p>
+<ul>
+<li><a href="https://github.com/OfficeDev/O365-Angular-Profile" target="_blank">Single page app sample</a></li>
+<li><a href="http://aka.ms/o365-win-profile" target="_blank">.NET app sample</a></li>
+<li><a href="http://aka.ms/o365-android-profile" target="_blank">Android app sample</a></li>
+<li><a href="http://aka.ms/o365-iOS-profile" target="_blank">iOS app sample</a></li>
+</ul>
+<p><strong>Release notes and known issues for Office 365 unified API</strong></p>
+<ul>
+<li><a href="\microsoft-graph-api-release-notes-known-issues.htm">Microsoft Graph API release notes for November 2015</a></li>
+</ul>
+<p><strong>Reference</strong></p>
+<ul>
+<li><a href="..\howto\examples-of-office-365-unified-api-calls.htm">Examples of Office 365 unified API calls (preview)</a></li>
+<li><a href="..\howto\groups-rest-operations.htm">Office 365 Groups REST API reference (preview)</a> </li>
+<li><a href="..\howto\office-365-unified-api-reference.htm">Office 365 unified API reference (preview)</a></li>
+</ul>
+<p><strong>Client libraries</strong> </p>
+<ul>
+<li><a href="https://github.com/OfficeDev/Office-365-SDK-for-Android" target="_blank">Android</a></li>
+<li><a href="https://github.com/OfficeDev/Office-365-SDK-for-iOS" target="_blank">iOS</a></li>
+<li><a href="https://www.nuget.org/packages/Microsoft.Graph" target="_blank">.NET library</a></li>
+</ul>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+</body>
+
+
+
+

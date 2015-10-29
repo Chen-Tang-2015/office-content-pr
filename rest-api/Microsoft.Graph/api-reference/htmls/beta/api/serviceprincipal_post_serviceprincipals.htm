@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="create-serviceprincipal">Create ServicePrincipal</h1>
+<p>Use this API to create a new ServicePrincipal.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<h3 id="http-request">HTTP request</h3>
+<pre><code class="http">POST /plans
+
+</code></pre>
+
+<h3 id="request-headers">Request headers</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Name</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">X-Sample-Header</td>
+	<td align="left">string</td>
+	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-body">Request body</h3>
+<p>In the request body, supply a JSON representation of <a href="../resources/serviceprincipal.htm">ServicePrincipal</a> object.</p>
+<h3 id="response">Response</h3>
+<p>If successful, this method returns <code>201, Created</code> response code and <a href="../resources/serviceprincipal.htm">ServicePrincipal</a> object in the response body.</p>
+<h3 id="example">Example</h3>
+<h5 id="request">Request</h5>
+<p>Here is an example of the request.</p>
+<pre><code class="http">POST https://graph.microsoft.com/beta/plans
+</code></pre>
+
+<p>In the request body, supply a JSON representation of <a href="../resources/serviceprincipal.htm">ServicePrincipal</a> object.</p>
+<h5 id="response-1">Response</h5>
+<p>Here is an example of the response.</p>
+<pre><code class="http">HTTP/1.1 201 Created
+Content-type: application/json
+Content-length: 1942
+
+{
+  &quot;accountEnabled&quot;: true,
+  &quot;appDisplayName&quot;: &quot;appDisplayName-value&quot;,
+  &quot;appId&quot;: &quot;appId-value&quot;,
+  &quot;appOwnerTenantId&quot;: &quot;appOwnerTenantId-value&quot;,
+  &quot;appRoleAssignmentRequired&quot;: true,
+  &quot;appRoles&quot;: [
+    {
+      &quot;allowedMemberTypes&quot;: [
+        &quot;allowedMemberTypes-value&quot;
+      ],
+      &quot;description&quot;: &quot;description-value&quot;,
+      &quot;displayName&quot;: &quot;displayName-value&quot;,
+      &quot;id&quot;: &quot;id-value&quot;,
+      &quot;isEnabled&quot;: true,
+      &quot;value&quot;: &quot;value-value&quot;
+    }
+  ],
+  &quot;displayName&quot;: &quot;displayName-value&quot;,
+  &quot;errorUrl&quot;: &quot;errorUrl-value&quot;,
+  &quot;homepage&quot;: &quot;homepage-value&quot;,
+  &quot;keyCredentials&quot;: [
+    {
+      &quot;customKeyIdentifier&quot;: &quot;customKeyIdentifier-value&quot;,
+      &quot;endDate&quot;: &quot;datetime-value&quot;,
+      &quot;keyId&quot;: &quot;keyId-value&quot;,
+      &quot;startDate&quot;: &quot;datetime-value&quot;,
+      &quot;type&quot;: &quot;type-value&quot;,
+      &quot;usage&quot;: &quot;usage-value&quot;,
+      &quot;value&quot;: &quot;value-value&quot;
+    }
+  ],
+  &quot;logoutUrl&quot;: &quot;logoutUrl-value&quot;,
+  &quot;oauth2Permissions&quot;: [
+    {
+      &quot;adminConsentDescription&quot;: &quot;adminConsentDescription-value&quot;,
+      &quot;adminConsentDisplayName&quot;: &quot;adminConsentDisplayName-value&quot;,
+      &quot;id&quot;: &quot;id-value&quot;,
+      &quot;isEnabled&quot;: true,
+      &quot;type&quot;: &quot;type-value&quot;,
+      &quot;userConsentDescription&quot;: &quot;userConsentDescription-value&quot;,
+      &quot;userConsentDisplayName&quot;: &quot;userConsentDisplayName-value&quot;,
+      &quot;value&quot;: &quot;value-value&quot;
+    }
+  ],
+  &quot;passwordCredentials&quot;: [
+    {
+      &quot;customKeyIdentifier&quot;: &quot;customKeyIdentifier-value&quot;,
+      &quot;endDate&quot;: &quot;datetime-value&quot;,
+      &quot;keyId&quot;: &quot;keyId-value&quot;,
+      &quot;startDate&quot;: &quot;datetime-value&quot;,
+      &quot;value&quot;: &quot;value-value&quot;
+    }
+  ],
+  &quot;preferredTokenSigningKeyThumbprint&quot;: &quot;preferredTokenSigningKeyThumbprint-value&quot;,
+  &quot;publisherName&quot;: &quot;publisherName-value&quot;,
+  &quot;replyUrls&quot;: [
+    &quot;replyUrls-value&quot;
+  ],
+  &quot;samlMetadataUrl&quot;: &quot;samlMetadataUrl-value&quot;,
+  &quot;servicePrincipalNames&quot;: [
+    &quot;servicePrincipalNames-value&quot;
+  ],
+  &quot;tags&quot;: [
+    &quot;tags-value&quot;
+  ],
+  &quot;objectType&quot;: &quot;objectType-value&quot;,
+  &quot;objectId&quot;: &quot;objectId-value&quot;,
+  &quot;deletionTimestamp&quot;: &quot;datetime-value&quot;
+}
+</code></pre>
+
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+</body>
+
+
+
+

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="directorylinkchange-resource-type">directoryLinkChange resource type</h1>
+<p>A <strong>DirectoryLinkChange</strong> object is returned in the result set of a differential query to indicate that a property of a contact, a user, or a group that is represented by a link has changed since the last differential query. The <strong>DirectoryLinkChange</strong> object will represent a change to a user’s or contact’s <strong>manager</strong> property or a change to a group’s <strong>members</strong> property. For more information about differential queries, see <a href="https://msdn.microsoft.com/en-us/library/azure/jj836245.aspx" target="_blank">Azure AD Graph API Differential Query</a>. Inherits from [DirectoryObject].</p>
+<h3 id="json-representation">JSON representation</h3>
+<p>Here is a JSON representation of the resource</p>
+<pre><code class="json">{
+  &quot;associationType&quot;: &quot;String-value&quot;,
+  &quot;deletionTimestamp&quot;: &quot;String (timestamp)&quot;,
+  &quot;objectId&quot;: &quot;String-value (identifier)&quot;,
+  &quot;objectType&quot;: &quot;String-value&quot;,
+  &quot;sourceObjectId&quot;: &quot;String-value&quot;,
+  &quot;sourceObjectType&quot;: &quot;String-value&quot;,
+  &quot;sourceObjectUri&quot;: &quot;String-value&quot;,
+  &quot;targetObjectId&quot;: &quot;String-value&quot;,
+  &quot;targetObjectType&quot;: &quot;String-value&quot;,
+  &quot;targetObjectUri&quot;: &quot;String-value&quot;
+}
+
+</code></pre>
+
+<h3 id="properties">Properties</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">associationType</td>
+	<td align="left">String</td>
+	<td align="left">A string that identifies the association type to which the change applies. The value is either “Member” or “Manager”. A string that identifies the association type to which the change applies. The value is either “Member” or “Manager”.</td>
+</tr>
+<tr>
+	<td align="left">deletionTimestamp</td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+</tr>
+<tr>
+	<td align="left">objectId</td>
+	<td align="left">String</td>
+	<td align="left">The unique identifier for the directory link change object. For <strong>DirectoryLinkChange</strong> objects, the value is always 00000000-0000-0000-0000-000000000000. Inherited from [DirectoryObject].                            <strong>Note: key</strong> immutable, not nullable, unique             The unique identifier for the directory link change object. For <strong>DirectoryLinkChange</strong> objects, the value is always 00000000-0000-0000-0000-000000000000. Inherited from [DirectoryObject].                            <strong>Note: key</strong> immutable, not nullable, unique             Read-only.</td>
+</tr>
+<tr>
+	<td align="left">objectType</td>
+	<td align="left">String</td>
+	<td align="left">A string that identifies the object type. For <strong>DirectoryLinkChange</strong> objects, the value is always “DirectoryLinkChange”. [DirectoryObject] A string that identifies the object type. For <strong>DirectoryLinkChange</strong> objects, the value is always “DirectoryLinkChange”. [DirectoryObject]</td>
+</tr>
+<tr>
+	<td align="left">sourceObjectId</td>
+	<td align="left">String</td>
+	<td align="left">The object ID for the source object; for example, ”7373b0af-d462-406e-ad26-f2bc96d823d8”. The object ID for the source object; for example, ”7373b0af-d462-406e-ad26-f2bc96d823d8”.</td>
+</tr>
+<tr>
+	<td align="left">sourceObjectType</td>
+	<td align="left">String</td>
+	<td align="left">A string that identifies the source object type; this will be one of the following: “Group”, “User”, or “Contact”. A string that identifies the source object type; this will be one of the following: “Group”, “User”, or “Contact”.</td>
+</tr>
+<tr>
+	<td align="left">sourceObjectUri</td>
+	<td align="left">String</td>
+	<td align="left">The URI for the source object; for example, <code>“https://graph.windows.net/contoso.com/groups/7373b0af-d462-406e-ad26-f2bc96d823d8”</code>. The URI for the source object; for example, <code>“https://graph.windows.net/contoso.com/groups/7373b0af-d462-406e-ad26-f2bc96d823d8”</code>.</td>
+</tr>
+<tr>
+	<td align="left">targetObjectId</td>
+	<td align="left">String</td>
+	<td align="left">The object ID for the target object; for example, “dca803ab-bf26-4753-bf20-e1c56a9c34e2”. The object ID for the target object; for example, “dca803ab-bf26-4753-bf20-e1c56a9c34e2”.</td>
+</tr>
+<tr>
+	<td align="left">targetObjectType</td>
+	<td align="left">String</td>
+	<td align="left">A string that identifies the source object type; this will be one of the following: “Group”, “User”, or “Contact”. A string that identifies the source object type; this will be one of the following: “Group”, “User”, or “Contact”.</td>
+</tr>
+<tr>
+	<td align="left">targetObjectUri</td>
+	<td align="left">String</td>
+	<td align="left">The URI for the target object; for example, <code>“https://graph.windows.net/contoso.com/users/dca803ab-bf26-4753-bf20-e1c56a9c34e2”</code>. The URI for the target object; for example, <code>“https://graph.windows.net/contoso.com/users/dca803ab-bf26-4753-bf20-e1c56a9c34e2”</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationships">Relationships</h3>
+<p>None</p>
+<h3 id="methods">Methods</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Method</th>
+	<th align="left">Return Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><a href="../api/directorylinkchange_get.htm">Get directoryLinkChange</a></td>
+	<td align="left"><a href="directorylinkchange.htm">directoryLinkChange</a></td>
+	<td align="left">Read properties and relationships of directoryLinkChange object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/directorylinkchange_update.htm">Update</a></td>
+	<td align="left"><a href="directorylinkchange.htm">directoryLinkChange</a></td>
+	<td align="left">Update directoryLinkChange object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/directorylinkchange_delete.htm">Delete</a></td>
+	<td align="left">None</td>
+	<td align="left">Delete directoryLinkChange object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/directorylinkchange_checkmembergroups.htm">Checkmembergroups</a></td>
+	<td align="left">String collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/directorylinkchange_getmembergroups.htm">Get MemberGroups</a></td>
+	<td align="left">String collection</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/directorylinkchange_getmemberobjects.htm">Get MemberObjects</a></td>
+	<td align="left">String collection</td>
+	<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+</body>
+
+
+
+

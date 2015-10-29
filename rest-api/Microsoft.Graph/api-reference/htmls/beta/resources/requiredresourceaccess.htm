@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="requiredresourceaccess-resource-type">requiredResourceAccess resource type</h1>
+<p>Specifies the set of OAuth 2.0 permission scopes and app roles under the specified resource that an application requires access to. The specified OAuth 2.0 permission scopes may be requested by client applications (through the <strong>requiredResourceAccess</strong> collection) when calling a resource application. The <strong>requiredResourceAccess</strong> property of the [Application] entity is a collection of <strong>ReqiredResourceAccess</strong>.</p>
+<h3 id="json-representation">JSON representation</h3>
+<p>Here is a JSON representation of the resource</p>
+<pre><code class="json">{
+  &quot;resourceAccess&quot;: [
+    {
+      &quot;@odata.type&quot;: &quot;microsoft.graph.resourceaccess&quot;
+    }
+  ],
+  &quot;resourceAppId&quot;: &quot;String-value&quot;
+}
+
+</code></pre>
+
+<h3 id="properties">Properties</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">resourceAccess</td>
+	<td align="left"><a href="resourceaccess.htm">ResourceAccess</a> collection</td>
+	<td align="left">The list of OAuth2.0 permission scopes and app roles that the application requires from the specified resource. The list of OAuth2.0 permission scopes and app roles that the application requires from the specified resource.</td>
+</tr>
+<tr>
+	<td align="left">resourceAppId</td>
+	<td align="left">String</td>
+	<td align="left">The unique identifier for the resource that the application requires access to.  This should be equal to the <strong>appId</strong> declared on the target resource application. The unique identifier for the resource that the application requires access to.  This should be equal to the <strong>appId</strong> declared on the target resource application.</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+</body>
+
+
+
+

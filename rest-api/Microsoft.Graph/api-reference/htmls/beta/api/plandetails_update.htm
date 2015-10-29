@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<body>
+
+    <div id="holder">
+
+<!-- HTML Page Content Start -->
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="update-plandetails">Update plandetails</h1>
+<p>Update the properties of plandetails object.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<h3 id="http-request">HTTP request</h3>
+<pre><code class="http">PATCH /plans/&lt;id&gt;/details
+PATCH /users/&lt;objectId&gt;/plans/&lt;id&gt;/details
+PATCH /groups/&lt;objectId&gt;/plans/&lt;id&gt;/details
+</code></pre>
+
+<h3 id="optional-request-headers">Optional request headers</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Name</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">X-Sample-Header</td>
+	<td align="left">string</td>
+	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-body">Request body</h3>
+<p>In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.</p>
+<table>
+<thead>
+<tr>
+	<th align="left">Property</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">category0Description</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">category1Description</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">category2Description</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">category3Description</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">category4Description</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">category5Description</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">sharedWith</td>
+	<td align="left">userIdCollection</td>
+	<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response">Response</h3>
+<p>If successful, this method returns a <code>200 OK</code> response code and updated <a href="../resources/plandetails.htm">planDetails</a> object in the response body.</p>
+<h3 id="example">Example</h3>
+<h5 id="request">Request</h5>
+<p>Here is an example of the request.</p>
+<pre><code class="http">PUT https://graph.microsoft.com/beta/plans/&lt;id&gt;/details
+Content-type: application/json
+Content-length: 381
+
+{
+  &quot;sharedWith&quot;: {
+  },
+  &quot;category0Description&quot;: &quot;category0Description-value&quot;,
+  &quot;category1Description&quot;: &quot;category1Description-value&quot;,
+  &quot;category2Description&quot;: &quot;category2Description-value&quot;,
+  &quot;category3Description&quot;: &quot;category3Description-value&quot;,
+  &quot;category4Description&quot;: &quot;category4Description-value&quot;,
+  &quot;category5Description&quot;: &quot;category5Description-value&quot;,
+  &quot;id&quot;: &quot;id-value&quot;
+}
+</code></pre>
+
+<h5 id="response-1">Response</h5>
+<p>Here is an example of the response.</p>
+<pre><code class="http">HTTP/1.1 200 OK
+Content-type: application/json
+Content-length: 381
+
+{
+  &quot;sharedWith&quot;: {
+  },
+  &quot;category0Description&quot;: &quot;category0Description-value&quot;,
+  &quot;category1Description&quot;: &quot;category1Description-value&quot;,
+  &quot;category2Description&quot;: &quot;category2Description-value&quot;,
+  &quot;category3Description&quot;: &quot;category3Description-value&quot;,
+  &quot;category4Description&quot;: &quot;category4Description-value&quot;,
+  &quot;category5Description&quot;: &quot;category5Description-value&quot;,
+  &quot;id&quot;: &quot;id-value&quot;
+}
+</code></pre>
+
+
+        </div>
+        <div id="tocbar" class="col-md-3 visible-md visible-lg">
+            <p><a href="../../README.htm">API Reference</a></p>
+        <ul>
+            
+        </ul>
+        </div>
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+</body>
+
+
+
+
