@@ -151,7 +151,7 @@ For example, the following snippet gets the list of files that a specific user (
 List<Item> userfiles= client.users.GetById(user.objectId).files.ExecuteAsync().Result.CurrentPage.ToList();
 ```
  
-Continuing on, you can get a specified file (`fid`) shared out by that user (`user.objectId`) as well as the resultant file's most recent editor:
+You can next get a specified file (`fid`) shared out by that user (`user.objectId`) as well as the resultant file's most recent editor:
 
  
 ```no-highlight 
@@ -166,7 +166,7 @@ IUser userFileEditor = client.users.GetById(user.objectId)
 
 ```
  
-Now, to get the files shared out by this editor (`userFileEditor`), start the traversal back from the tenant's user collection (`client.users`):
+To get the files shared out by this editor (`userFileEditor`), start the traversal back from the tenant's user collection (`client.users`):
  
 ```no-highlight 
 List<Item> userFileEditorfiles= client.users.
@@ -196,6 +196,7 @@ List<IUser> users = client
  
 Similarly, to project an entity's properties to a subset of the properties, use the `Select` clause on either the server-side or client-side. 
 The server-side `Select` clause corresponds to setting the query parameter `$select=…`  in the underlying REST API call.  
+
 When the `$select` option is not supported in a particular REST API call, you can use the client-side `Select` clause when using the client library. 
 For example, to fetch a list of the users' `userPrincipalName` values:
  
