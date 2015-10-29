@@ -61,7 +61,7 @@ A resource URL is determined by the Microsoft Graph API entity data model. The p
 The path URL resource names and query parameters are case insensitive. However, values you assign, entity IDs, and 
 other base64 encoded values are case sensitive.
 
-A few API calls basic programming patterns are shown in the following section.
+A few basic programming patterns calls to the API are shown in the following section.
 
 <a name="msg_nav_from_set_to_member"> </a>
 ###Navigation from a set to a member
