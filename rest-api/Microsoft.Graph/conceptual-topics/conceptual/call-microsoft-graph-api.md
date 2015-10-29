@@ -5,6 +5,7 @@ _**Applies to:** Office 365_
 In this article:
   
 - [Call Microsoft Graph API service via REST](#msg_calling_rest_api)
+  - [Microsoft Graph API metadata](#msg_metadata)
   - [Navigation from a tenant-level entity set to a member](#msg_nav_from_set_to_member) 
   - [Projection from an entity to a subset of its properties](#msg_proj_from_entity_to_props) 
   - [Projection from an entity set to properties set](#msg_proj_from_entities_to_props)
@@ -40,6 +41,8 @@ In this URL:
 For example, if your tenant domain is `https://contoso.onmicrosoft.com`, and you are targeting the beta 
 version of the service, you can send requests to `https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com`.
 
+<a name="msg_metadata"> </a>
+###Microsoft Graph API metadata
 The service document ($metadata) is published at the service root. For example, you can view the service document for the v1.0 and beta versions via the following URLs.
 
 Microsoft Graph API v1.0 metadata.
