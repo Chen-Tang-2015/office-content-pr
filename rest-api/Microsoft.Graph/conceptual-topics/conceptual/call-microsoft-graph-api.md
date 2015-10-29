@@ -45,11 +45,11 @@ version of the service, you can send requests to `https://graph.microsoft.com/v1
 ###Microsoft Graph API metadata
 The service document ($metadata) is published at the service root. For example, you can view the service document for the v1.0 and beta versions via the following URLs.
 
-Microsoft Graph API v1.0 metadata.
+Microsoft Graph API `v1.0` metadata.
 ```
 	https://graph.microsoft.com/v1.0/$metadata
 ```
-Microsoft Graph API beta metadata.
+Microsoft Graph API `beta metadata.
 ```
 	https://graph.microsoft.com/beta/$metadata
 ```
