@@ -26,9 +26,9 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|content|Stream|A stream of the content of this resource.  A stream of the content of this resource. |
-|contentUrl|String|A Url to which a GET request can be sent to retrieve this resource.  A Url to which a GET request can be sent to retrieve this resource. |
-|id|String|The unique id of this resource.  The unique id of this resource.  Read-only.|
+|content|Stream|A stream of the content of this resource. |
+|contentUrl|String|A Url to which a GET request can be sent to retrieve this resource. |
+|id|String|The unique id of this resource.  Read-only.|
 |self|String||
 
 ### Relationships

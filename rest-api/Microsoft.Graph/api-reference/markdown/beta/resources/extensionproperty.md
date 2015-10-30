@@ -32,14 +32,14 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|appDisplayName|String|                         |
-|dataType|String|Specifies the type of the directory extension property being added.   Supported types are: Integer, LargeInteger, DateTime (must be specified in ISO 8601 - DateTime is stored in UTC), Binary, Boolean, and String. Specifies the type of the directory extension property being added.   Supported types are: Integer, LargeInteger, DateTime (must be specified in ISO 8601 - DateTime is stored in UTC), Binary, Boolean, and String.|
+|appDisplayName|String|            |
+|dataType|String|Specifies the type of the directory extension property being added.   Supported types are: Integer, LargeInteger, DateTime (must be specified in ISO 8601 - DateTime is stored in UTC), Binary, Boolean, and String.|
 |deletionTimestamp|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|isSyncedFromOnPremises|Boolean|Indicates whether the extension property is synced from the on premises directory.                            **Notes**: not nullable.             Indicates whether the extension property is synced from the on premises directory.                            **Notes**: not nullable.            |
-|name|String|Specifies the display name for the directory extension property.                            **Notes**: not nullable.             Specifies the display name for the directory extension property.                            **Notes**: not nullable.            |
-|objectId|String|The unique identifier for the permission scope. Inherited from [DirectoryObject].                            **Notes**: **key**, immutable, not nullable, unique.             The unique identifier for the permission scope. Inherited from [DirectoryObject].                            **Notes**: **key**, immutable, not nullable, unique.             Read-only.|
-|objectType|String|A string that identifies the object type. For extension properties the value is always “ExtensionProperty”. Inherited from [DirectoryObject]. A string that identifies the object type. For extension properties the value is always “ExtensionProperty”. Inherited from [DirectoryObject].|
-|targetObjects|String collection|The directory objects to which the directory extension property is being added.  Supported directory entities that can be extended are: “User”, “Group”, “TenantDetail”, “Device”, “Application” and “ServicePrincipal”                            **Notes**: not nullable.             The directory objects to which the directory extension property is being added.  Supported directory entities that can be extended are: “User”, “Group”, “TenantDetail”, “Device”, “Application” and “ServicePrincipal”                            **Notes**: not nullable.            |
+|isSyncedFromOnPremises|Boolean|Indicates whether the extension property is synced from the on premises directory.                            **Notes**: not nullable.            |
+|name|String|Specifies the display name for the directory extension property.                            **Notes**: not nullable.            |
+|objectId|String|The unique identifier for the permission scope. Inherited from [DirectoryObject].                            **Notes**: **key**, immutable, not nullable, unique.             Read-only.|
+|objectType|String|A string that identifies the object type. For extension properties the value is always “ExtensionProperty”. Inherited from [DirectoryObject].|
+|targetObjects|String collection|The directory objects to which the directory extension property is being added.  Supported directory entities that can be extended are: “User”, “Group”, “TenantDetail”, “Device”, “Application” and “ServicePrincipal”                            **Notes**: not nullable.            |
 
 ### Relationships
 None

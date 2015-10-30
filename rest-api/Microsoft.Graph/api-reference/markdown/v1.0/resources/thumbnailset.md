@@ -35,11 +35,11 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|id|String|The id within the item. The id within the item. Read-only.|
-|large|[thumbnail](thumbnail.md)|A 1920x1920 scaled thumbnail. A 1920x1920 scaled thumbnail.|
-|medium|[thumbnail](thumbnail.md)|A 176x176 scaled thumbnail. A 176x176 scaled thumbnail.|
-|small|[thumbnail](thumbnail.md)|A 48x48 cropped thumbnail. A 48x48 cropped thumbnail.|
-|source|[thumbnail](thumbnail.md)|A custom thumbnail image or the original image used to generate other thumbnails. A custom thumbnail image or the original image used to generate other thumbnails.|
+|id|String|The id within the item. Read-only.|
+|large|[thumbnail](thumbnail.md)|A 1920x1920 scaled thumbnail.|
+|medium|[thumbnail](thumbnail.md)|A 176x176 scaled thumbnail.|
+|small|[thumbnail](thumbnail.md)|A 48x48 cropped thumbnail.|
+|source|[thumbnail](thumbnail.md)|A custom thumbnail image or the original image used to generate other thumbnails.|
 
 ### Relationships
 None
