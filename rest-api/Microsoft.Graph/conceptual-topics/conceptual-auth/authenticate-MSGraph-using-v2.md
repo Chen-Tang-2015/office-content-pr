@@ -1,13 +1,12 @@
-﻿
+
 
 # Authenticate Microsoft Graph endpoints using the v2.0 app model preview
 
-<!-- Test -->
-<!-- Joe test -->
+
 
 |**Preview documentation** | 
 |:-----|   
-| There are features and functionality of the v2.0 app model that are not yet supported in the public preview period. You should be aware of them if you are building applications during the public preview. For more information, see [Limitations and restrictions of the V2.0 app model preview](../howto/authentication-v2-preview.md). |
+| There are features and functionality of the v2.0 app model that are not yet supported in the public preview period. You should be aware of them if you are building applications during the public preview. For more information, see [Limitations and restrictions of the V2.0 app model preview](https://azure.microsoft.com/en-us/documentation/articles/active-directory-v2-limitations/). |
 
 
 ##Signing in Microsoft account and Azure AD users with a single authentication model
@@ -44,7 +43,7 @@ Explore the following code sample to learn how to create apps that use the v2.0 
 
 ##Office API authentication scopes
 
-The table below lists the authentication scopes to use with the v2 app authentication model preview. For more information about using scopes with the v2.0 app model, and how it differs from using resources in Azure AD, see [Scopes, not resources](../howto/authentication-v2-whats-new.md#bk_scopes).
+The table below lists the authentication scopes to use with the v2 app authentication model preview. For more information about using scopes with the v2.0 app model, and how it differs from using resources in Azure AD, see [Scopes, not resources](https://azure.microsoft.com/en-us/documentation/articles/active-directory-v2-compare/#scopes-not-resources).
 
 <a name="bk_Outlookscopes"> </a>
 
@@ -63,13 +62,15 @@ The table below lists the authentication scopes to use with the v2 app authentic
 
 ##Next steps
 
-[Register an app to use the v2.0 app model](../howto/authentication-v2-register-app.md)
+[Register an app to use the v2.0 app model](https://azure.microsoft.com/en-us/documentation/articles/active-directory-v2-app-registration/)
 
 ##Learn more
 
-[Limitations and restrictions in the v2.0 app model preview](../howto/authentication-v2-preview.md)
+[What's new about the v2.0 app authentication model](https://azure.microsoft.com/en-us/documentation/articles/active-directory-v2-compare)
 
-[What's new about the v2.0 app authentication model](../howto/authentication-v2-whats-new.md)
+[Limitations and restrictions in the v2.0 app model preview](https://azure.microsoft.com/en-us/documentation/articles/active-directory-v2-limitations/)
+
+More [app model v2.0 preview documentation](https://azure.microsoft.com/en-us/documentation/articles/?service=active-directory&term=app+model+v2.0) on [azure.microsoft.com](https://azure.microsoft.com)
 
 
 
