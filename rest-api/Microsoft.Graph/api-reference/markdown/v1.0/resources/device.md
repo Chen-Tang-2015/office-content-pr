@@ -55,28 +55,28 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|accountEnabled|Boolean|                         |
-|alternativeSecurityIds|[AlternativeSecurityId](alternativesecurityid.md) collection|                **Notes:** not nullable, the **any** operator is required for filter expressions on multi-valued properties; for more information, see [Supported Queries, Filters, and Paging Options](https://msdn.microsoft.com/library/azure/dn727074.aspx).                             **Notes:** not nullable, the **any** operator is required for filter expressions on multi-valued properties; for more information, see [Supported Queries, Filters, and Paging Options](https://msdn.microsoft.com/library/azure/dn727074.aspx).            |
-|approximateLastLogonTimestamp|DateTimeOffset|                         The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|accountEnabled|Boolean|            |
+|alternativeSecurityIds|[AlternativeSecurityId](alternativesecurityid.md) collection|                **Notes:** not nullable, the **any** operator is required for filter expressions on multi-valued properties; for more information, see [Supported Queries, Filters, and Paging Options](https://msdn.microsoft.com/library/azure/dn727074.aspx).            |
+|approximateLastLogonTimestamp|DateTimeOffset|            The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |deletionTimestamp|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|deviceId|Guid|                         |
+|deviceId|Guid|            |
 |deviceMetadata|String||
-|deviceOSType|String|The type of operating system on the device. The type of operating system on the device.|
-|deviceOSVersion|String|The version of the operating system on the device The version of the operating system on the device|
-|deviceObjectVersion|Int32|                         |
-|devicePhysicalIds|String collection|                **Notes:** not nullable                             **Notes:** not nullable            |
+|deviceOSType|String|The type of operating system on the device.|
+|deviceOSVersion|String|The version of the operating system on the device|
+|deviceObjectVersion|Int32|            |
+|devicePhysicalIds|String collection|                **Notes:** not nullable            |
 |deviceTrustType|String||
-|dirSyncEnabled|Boolean|**true** if this object is synced from an on-premises directory; **false** if this object was originally synced from an on-premises directory but is no longer synced; **null** if this object has never been synced from an on-premises directory (default). **true** if this object is synced from an on-premises directory; **false** if this object was originally synced from an on-premises directory but is no longer synced; **null** if this object has never been synced from an on-premises directory (default).|
-|displayName|String|The display name for the device. The display name for the device.|
-|lastDirSyncTime|DateTimeOffset|The last time at which the object was synced with the on-premises directory. The last time at which the object was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|objectId|String|The unique identifier for the device. Inherited from [DirectoryObject].                            **Notes: key**, immutable, not nullable, unique             The unique identifier for the device. Inherited from [DirectoryObject].                            **Notes: key**, immutable, not nullable, unique             Read-only.|
-|objectType|String|A string that identifies the object type. For devices the value is always “Device”. Inherited from [DirectoryObject] A string that identifies the object type. For devices the value is always “Device”. Inherited from [DirectoryObject]|
+|dirSyncEnabled|Boolean|**true** if this object is synced from an on-premises directory; **false** if this object was originally synced from an on-premises directory but is no longer synced; **null** if this object has never been synced from an on-premises directory (default).|
+|displayName|String|The display name for the device.|
+|lastDirSyncTime|DateTimeOffset|The last time at which the object was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|objectId|String|The unique identifier for the device. Inherited from [DirectoryObject].                            **Notes: key**, immutable, not nullable, unique             Read-only.|
+|objectType|String|A string that identifies the object type. For devices the value is always “Device”. Inherited from [DirectoryObject]|
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|registeredOwners|[DirectoryObject](directoryobject.md) collection|Users that are registered owners of the device. Users that are registered owners of the device. Read-only. Nullable.|
-|registeredUsers|[DirectoryObject](directoryobject.md) collection|Users that are registered users of the device. Users that are registered users of the device. Read-only. Nullable.|
+|registeredOwners|[DirectoryObject](directoryobject.md) collection|Users that are registered owners of the device. Read-only. Nullable.|
+|registeredUsers|[DirectoryObject](directoryobject.md) collection|Users that are registered users of the device. Read-only. Nullable.|
 
 ### Methods
 

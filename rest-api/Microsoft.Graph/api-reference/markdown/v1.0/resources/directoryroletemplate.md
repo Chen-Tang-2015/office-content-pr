@@ -28,10 +28,10 @@ Here is a JSON representation of the resource
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |deletionTimestamp|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|description|String|The description to set for the directory role. The description to set for the directory role.|
-|displayName|String|The display name to set for the directory role. The display name to set for the directory role.|
-|objectId|String|The unique identifier for the template. Inherited from [DirectoryObject]. In version 1.5 and later, you specify the **objectId** of the directory role template for the **roleTemplateId** property in the POST request activate a [DirectoryRole] in a tenant.                             **Notes**: **key**, immutable, not nullable, unique.             The unique identifier for the template. Inherited from [DirectoryObject]. In version 1.5 and later, you specify the **objectId** of the directory role template for the **roleTemplateId** property in the POST request activate a [DirectoryRole] in a tenant.                             **Notes**: **key**, immutable, not nullable, unique.             Read-only.|
-|objectType|String|A string that identifies the object type. For role templates the value is always “RoleTemplate”. Inherited from [DirectoryObject]. A string that identifies the object type. For role templates the value is always “RoleTemplate”. Inherited from [DirectoryObject].|
+|description|String|The description to set for the directory role.|
+|displayName|String|The display name to set for the directory role.|
+|objectId|String|The unique identifier for the template. Inherited from [DirectoryObject]. In version 1.5 and later, you specify the **objectId** of the directory role template for the **roleTemplateId** property in the POST request activate a [DirectoryRole] in a tenant.                             **Notes**: **key**, immutable, not nullable, unique.             Read-only.|
+|objectType|String|A string that identifies the object type. For role templates the value is always “RoleTemplate”. Inherited from [DirectoryObject].|
 
 ### Relationships
 None

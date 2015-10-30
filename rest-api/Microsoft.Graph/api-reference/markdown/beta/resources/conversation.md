@@ -35,17 +35,17 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|hasAttachments|Boolean|Indicates whether the Conversation has at least one attachment. Indicates whether the Conversation has at least one attachment.|
-|id|String|The group's unique identifier. The group's unique identifier. Read-only.|
+|hasAttachments|Boolean|Indicates whether the Conversation has at least one attachment.|
+|id|String|The group's unique identifier. Read-only.|
 |lastDeliveredDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |preview|String||
-|topic|String|The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated. The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.|
-|uniqueSenders|String collection|All the users that sent a message to this Conversation. All the users that sent a message to this Conversation.|
+|topic|String|The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.|
+|uniqueSenders|String collection|All the users that sent a message to this Conversation.|
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|threads|[ConversationThread](conversationthread.md) collection|A collection of all the conversation threads in the conversation. A navigation property. A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.|
+|threads|[ConversationThread](conversationthread.md) collection|A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.|
 
 ### Methods
 
