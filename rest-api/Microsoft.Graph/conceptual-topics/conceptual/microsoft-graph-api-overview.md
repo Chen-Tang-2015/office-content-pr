@@ -14,16 +14,14 @@ _**Applies to:** Office 365_
 <a name="msg_what_is_unified_api"> </a>
 ## Overview of Microsoft Graph API
 
-The Microsoft Graph  API (previously called Office 365 unified API) exposes multiple APIs from Microsoft cloud services through a single REST API endpoint. Using the Microsoft Graph API, you can turn your formerly difficult or complex queries into simple navigations. 
-
-The API exposes information about entities and the relationships among them through one REST URL namespace (_https://_**graph.microsoft.com**), using one authentication and authorization system, and using a consistent and unified metadata, payload format, error handling, library, and more.
+Microsoft Graph (previously called Office 365 unified API) exposes multiple APIs from Microsoft cloud services through a single REST API endpoint (_https://_**graph.microsoft.com**). Using the Microsoft Graph API, you can turn your formerly difficult or complex queries into simple navigations. 
  
-The Microsoft Graph API exposes fixed entities like users, groups, mail, messages, calendars, tasks, notes coming from services like Outlook, OneDrive, Azure Active Directory, Planner, OneNote and others. It also exposes calculated relationships powered by the Office Graph (only for commercial users) like the list of users you are working with or the documents trending around you.
-
-Microsoft Graph API gives you:
+The API gives you:
 - A unified developer experience to access services across Office 365 and Microsoft data
-- Seamless navigation between entities
+- Seamless navigation between entities and and the relationships among them 
 - Aggregated data from multiple services in a single response
+
+You can use the API to access fixed entities like users, groups, mail, messages, calendars, tasks, notes coming from services like Outlook, OneDrive, Azure Active Directory, Planner, OneNote and others. You can also obtain calculated relationships powered by the Office Graph (only for commercial users) like the list of users you are working with or the documents trending around you.
 
 <!-- 
 It takes information that is stored or inferred across multiple cloud services: 
