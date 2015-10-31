@@ -34,7 +34,7 @@ Here is an example of the request.
   "name": "update_resource"
 }-->
 ```http
-PUT https://graph.microsoft.com/beta/users/<objectId>/notes/resources/<id>
+PATCH https://graph.microsoft.com/beta/users/<objectId>/notes/resources/<id>
 Content-type: application/json
 Content-length: 112
 

@@ -52,9 +52,9 @@ None
 |[Get extensionProperty](../api/extensionproperty_get.md) | [extensionProperty](extensionproperty.md) |Read properties and relationships of extensionProperty object.|
 |[Update](../api/extensionproperty_update.md) | [extensionProperty](extensionproperty.md)	|Update extensionProperty object. |
 |[Delete](../api/extensionproperty_delete.md) | None |Delete extensionProperty object. |
-|[Checkmembergroups](../api/extensionproperty_checkmembergroups.md)|String collection||
-|[Get MemberGroups](../api/extensionproperty_getmembergroups.md)|String collection||
-|[Get MemberObjects](../api/extensionproperty_getmemberobjects.md)|String collection||
+|[checkMemberGroups](../api/extensionproperty_checkmembergroups.md)|String collection||
+|[getMemberGroups](../api/extensionproperty_getmembergroups.md)|String collection||
+|[getMemberObjects](../api/extensionproperty_getmemberobjects.md)|String collection||
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

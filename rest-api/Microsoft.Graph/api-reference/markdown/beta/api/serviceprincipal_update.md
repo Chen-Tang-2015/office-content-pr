@@ -50,7 +50,7 @@ Here is an example of the request.
   "name": "update_serviceprincipal"
 }-->
 ```http
-PUT https://graph.microsoft.com/beta/servicePrincipals/<objectId>
+PATCH https://graph.microsoft.com/beta/servicePrincipals/<objectId>
 Content-type: application/json
 Content-length: 1942
 

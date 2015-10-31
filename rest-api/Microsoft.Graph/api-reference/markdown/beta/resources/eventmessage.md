@@ -138,15 +138,15 @@ Here is a JSON representation of the resource
 |[List extensions](../api/eventmessage_list_extensions.md) |[Extension](extension.md) collection| Get a Extension object collection.|
 |[Update](../api/eventmessage_update.md) | [eventMessage](eventmessage.md)	|Update eventMessage object. |
 |[Delete](../api/eventmessage_delete.md) | None |Delete eventMessage object. |
-|[Copy](../api/eventmessage_copy.md)|[Message](message.md)||
-|[Createforward](../api/eventmessage_createforward.md)|[Message](message.md)||
-|[Createreply](../api/eventmessage_createreply.md)|[Message](message.md)||
-|[Createreplyall](../api/eventmessage_createreplyall.md)|[Message](message.md)||
-|[Forward](../api/eventmessage_forward.md)|None||
-|[Move](../api/eventmessage_move.md)|[Message](message.md)||
-|[Reply](../api/eventmessage_reply.md)|None||
-|[Replyall](../api/eventmessage_replyall.md)|None||
-|[Send](../api/eventmessage_send.md)|None||
+|[copy](../api/eventmessage_copy.md)|[Message](message.md)||
+|[createForward](../api/eventmessage_createforward.md)|[Message](message.md)||
+|[createReply](../api/eventmessage_createreply.md)|[Message](message.md)||
+|[createReplyAll](../api/eventmessage_createreplyall.md)|[Message](message.md)||
+|[forward](../api/eventmessage_forward.md)|None||
+|[move](../api/eventmessage_move.md)|[Message](message.md)||
+|[reply](../api/eventmessage_reply.md)|None||
+|[replyAll](../api/eventmessage_replyall.md)|None||
+|[send](../api/eventmessage_send.md)|None||
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

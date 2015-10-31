@@ -89,9 +89,9 @@ Here is a JSON representation of the resource
 |[List registeredUsers](../api/device_list_registeredusers.md) |[DirectoryObject](directoryobject.md) collection| Get a registeredUser object collection.|
 |[Update](../api/device_update.md) | [device](device.md)	|Update device object. |
 |[Delete](../api/device_delete.md) | None |Delete device object. |
-|[Checkmembergroups](../api/device_checkmembergroups.md)|String collection||
-|[Get MemberGroups](../api/device_getmembergroups.md)|String collection||
-|[Get MemberObjects](../api/device_getmemberobjects.md)|String collection||
+|[checkMemberGroups](../api/device_checkmembergroups.md)|String collection||
+|[getMemberGroups](../api/device_getmembergroups.md)|String collection||
+|[getMemberObjects](../api/device_getmemberobjects.md)|String collection||
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

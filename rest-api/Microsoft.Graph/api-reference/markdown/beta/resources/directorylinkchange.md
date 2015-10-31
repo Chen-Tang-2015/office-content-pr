@@ -54,9 +54,9 @@ None
 |[Get directoryLinkChange](../api/directorylinkchange_get.md) | [directoryLinkChange](directorylinkchange.md) |Read properties and relationships of directoryLinkChange object.|
 |[Update](../api/directorylinkchange_update.md) | [directoryLinkChange](directorylinkchange.md)	|Update directoryLinkChange object. |
 |[Delete](../api/directorylinkchange_delete.md) | None |Delete directoryLinkChange object. |
-|[Checkmembergroups](../api/directorylinkchange_checkmembergroups.md)|String collection||
-|[Get MemberGroups](../api/directorylinkchange_getmembergroups.md)|String collection||
-|[Get MemberObjects](../api/directorylinkchange_getmemberobjects.md)|String collection||
+|[checkMemberGroups](../api/directorylinkchange_checkmembergroups.md)|String collection||
+|[getMemberGroups](../api/directorylinkchange_getmembergroups.md)|String collection||
+|[getMemberObjects](../api/directorylinkchange_getmemberobjects.md)|String collection||
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

@@ -44,9 +44,9 @@ None
 |[Get directoryRoleTemplate](../api/directoryroletemplate_get.md) | [directoryRoleTemplate](directoryroletemplate.md) |Read properties and relationships of directoryRoleTemplate object.|
 |[Update](../api/directoryroletemplate_update.md) | [directoryRoleTemplate](directoryroletemplate.md)	|Update directoryRoleTemplate object. |
 |[Delete](../api/directoryroletemplate_delete.md) | None |Delete directoryRoleTemplate object. |
-|[Checkmembergroups](../api/directoryroletemplate_checkmembergroups.md)|String collection||
-|[Get MemberGroups](../api/directoryroletemplate_getmembergroups.md)|String collection||
-|[Get MemberObjects](../api/directoryroletemplate_getmemberobjects.md)|String collection||
+|[checkMemberGroups](../api/directoryroletemplate_checkmembergroups.md)|String collection||
+|[getMemberGroups](../api/directoryroletemplate_getmembergroups.md)|String collection||
+|[getMemberObjects](../api/directoryroletemplate_getmemberobjects.md)|String collection||
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

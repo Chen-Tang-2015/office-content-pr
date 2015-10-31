@@ -112,9 +112,9 @@ Here is a JSON representation of the resource
 |[List memberOf](../api/orgcontact_list_memberof.md) |[DirectoryObject](directoryobject.md) collection| Get a memberOf object collection.|
 |[Update](../api/orgcontact_update.md) | [orgContact](orgcontact.md)	|Update orgContact object. |
 |[Delete](../api/orgcontact_delete.md) | None |Delete orgContact object. |
-|[Checkmembergroups](../api/orgcontact_checkmembergroups.md)|String collection||
-|[Get MemberGroups](../api/orgcontact_getmembergroups.md)|String collection||
-|[Get MemberObjects](../api/orgcontact_getmemberobjects.md)|String collection||
+|[checkMemberGroups](../api/orgcontact_checkmembergroups.md)|String collection||
+|[getMemberGroups](../api/orgcontact_getmembergroups.md)|String collection||
+|[getMemberObjects](../api/orgcontact_getmemberobjects.md)|String collection||
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->
