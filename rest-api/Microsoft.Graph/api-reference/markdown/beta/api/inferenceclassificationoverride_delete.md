@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "delete_inferenceclassificationoverride"
 }-->
 ```http
-DELETE https://graph.microsoft.com/beta/users/<objectId>/inferenceClassification/overrides/<id>
+DELETE https://graph.microsoft.com/v1.0/users/<objectId>/inferenceClassification/overrides/<id>
 ```
 ##### Response
 Here is an example of the response.

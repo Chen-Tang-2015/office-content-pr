@@ -34,7 +34,7 @@ Here is an example of the request.
   "name": "get_taskboardtaskformat"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/tasks/<id>/bucketTaskBoardFormat
+GET https://graph.microsoft.com/v1.0/tasks/<id>/bucketTaskBoardFormat
 ```
 ##### Response
 Here is an example of the response.

@@ -54,7 +54,7 @@ Here is an example of the request.
   "name": "update_group"
 }-->
 ```http
-PUT https://graph.microsoft.com/v1.0/groups/<objectId>
+PATCH https://graph.microsoft.com/v1.0/groups/<objectId>
 Content-type: application/json
 Content-length: 1009
 

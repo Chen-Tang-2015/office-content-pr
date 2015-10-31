@@ -35,7 +35,7 @@ Here is an example of the request.
   "name": "approleassignment_checkmembergroups"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/users/<objectId>/appRoleAssignments/<objectId>/checkMemberGroups
+POST https://graph.microsoft.com/v1.0/users/<objectId>/appRoleAssignments/<objectId>/checkMemberGroups
 Content-type: application/json
 Content-length: 44
 

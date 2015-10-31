@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "delete_mailfolder"
 }-->
 ```http
-DELETE https://graph.microsoft.com/beta/users/<objectId>/mailFolders/<id>
+DELETE https://graph.microsoft.com/v1.0/users/<objectId>/mailFolders/<id>
 ```
 ##### Response
 Here is an example of the response.

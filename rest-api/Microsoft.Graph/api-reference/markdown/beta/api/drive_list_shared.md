@@ -39,7 +39,7 @@ Here is an example of the request.
   "name": "get_shared"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/drive/shared
+GET https://graph.microsoft.com/v1.0/drive/shared
 ```
 ##### Response
 Here is an example of the response.

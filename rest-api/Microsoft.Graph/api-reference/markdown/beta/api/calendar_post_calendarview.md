@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_event_from_calendar"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/users/<objectId>/calendar
+POST https://graph.microsoft.com/v1.0/users/<objectId>/calendar
 ```
 In the request body, supply a JSON representation of [Event](../resources/event.md) object.
 ##### Response

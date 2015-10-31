@@ -27,7 +27,7 @@ Here is an example of the request.
   "name": "get_device"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/devices/<objectId>
+GET https://graph.microsoft.com/v1.0/devices/<objectId>
 ```
 ##### Response
 Here is an example of the response.

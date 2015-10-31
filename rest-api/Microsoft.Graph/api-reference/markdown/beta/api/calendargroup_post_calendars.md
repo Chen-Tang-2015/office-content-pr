@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_calendar_from_calendargroup"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/users/<objectId>/calendarGroups/<id>
+POST https://graph.microsoft.com/v1.0/users/<objectId>/calendarGroups/<id>
 ```
 In the request body, supply a JSON representation of [Calendar](../resources/calendar.md) object.
 ##### Response

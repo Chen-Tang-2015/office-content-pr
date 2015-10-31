@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_attachment_from_post"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/groups/<objectId>/threads/<id>/posts/<id>
+POST https://graph.microsoft.com/v1.0/groups/<objectId>/threads/<id>/posts/<id>
 ```
 In the request body, supply a JSON representation of [Attachment](../resources/attachment.md) object.
 ##### Response

@@ -40,7 +40,7 @@ Here is an example of the request.
   "name": "update_approleassignment"
 }-->
 ```http
-PUT https://graph.microsoft.com/beta/users/<objectId>/appRoleAssignments/<objectId>
+PATCH https://graph.microsoft.com/v1.0/users/<objectId>/appRoleAssignments/<objectId>
 Content-type: application/json
 Content-length: 398
 

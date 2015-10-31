@@ -57,7 +57,7 @@ Here is an example of the request.
   "name": "update_item"
 }-->
 ```http
-PUT https://graph.microsoft.com/beta/drive/root
+PATCH https://graph.microsoft.com/v1.0/drive/root
 Content-type: application/json
 Content-length: 3179
 

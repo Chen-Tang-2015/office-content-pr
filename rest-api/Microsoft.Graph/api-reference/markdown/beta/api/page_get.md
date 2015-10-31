@@ -34,7 +34,7 @@ Here is an example of the request.
   "name": "get_page"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/users/<objectId>/notes/pages/<id>
+GET https://graph.microsoft.com/v1.0/users/<objectId>/notes/pages/<id>
 ```
 ##### Response
 Here is an example of the response.

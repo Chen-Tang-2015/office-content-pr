@@ -34,7 +34,7 @@ Here is an example of the request.
   "name": "get_plantaskboard"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/plans/<id>/bucketTaskBoard
+GET https://graph.microsoft.com/v1.0/plans/<id>/bucketTaskBoard
 ```
 ##### Response
 Here is an example of the response.

@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "delete_directoryrole"
 }-->
 ```http
-DELETE https://graph.microsoft.com/beta/directoryRoles/<objectId>
+DELETE https://graph.microsoft.com/v1.0/directoryRoles/<objectId>
 ```
 ##### Response
 Here is an example of the response.

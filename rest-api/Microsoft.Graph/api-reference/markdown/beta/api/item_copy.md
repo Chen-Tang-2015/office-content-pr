@@ -36,7 +36,7 @@ Here is an example of the request.
   "name": "item_copy"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/drive/root/copy
+POST https://graph.microsoft.com/v1.0/drive/root/copy
 Content-type: application/json
 Content-length: 133
 

@@ -68,7 +68,7 @@ Here is an example of the request.
   "name": "update_contact"
 }-->
 ```http
-PUT https://graph.microsoft.com/beta/users/<objectId>/contacts/<id>
+PATCH https://graph.microsoft.com/v1.0/users/<objectId>/contacts/<id>
 Content-type: application/json
 Content-length: 1977
 

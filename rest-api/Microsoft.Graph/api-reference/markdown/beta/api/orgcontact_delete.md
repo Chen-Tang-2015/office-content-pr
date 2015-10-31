@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "delete_orgcontact"
 }-->
 ```http
-DELETE https://graph.microsoft.com/beta/contacts/<objectId>
+DELETE https://graph.microsoft.com/v1.0/contacts/<objectId>
 ```
 ##### Response
 Here is an example of the response.

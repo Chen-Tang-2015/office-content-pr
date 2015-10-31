@@ -39,7 +39,7 @@ Here is an example of the request.
   "name": "get_attachments"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/groups/<objectId>/threads/<id>/posts/<id>/attachments
+GET https://graph.microsoft.com/v1.0/groups/<objectId>/threads/<id>/posts/<id>/attachments
 ```
 ##### Response
 Here is an example of the response.

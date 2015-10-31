@@ -35,7 +35,7 @@ Here is an example of the request.
   "name": "update_thumbnailset"
 }-->
 ```http
-PUT https://graph.microsoft.com/beta/drive/root/thumbnails/<id>
+PATCH https://graph.microsoft.com/v1.0/drive/root/thumbnails/<id>
 Content-type: application/json
 Content-length: 456
 

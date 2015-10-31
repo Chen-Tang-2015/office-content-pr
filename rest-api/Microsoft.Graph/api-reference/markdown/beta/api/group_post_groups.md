@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_group_from_drives"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/drives
+POST https://graph.microsoft.com/v1.0/drives
 ```
 In the request body, supply a JSON representation of [Group](../resources/group.md) object.
 ##### Response

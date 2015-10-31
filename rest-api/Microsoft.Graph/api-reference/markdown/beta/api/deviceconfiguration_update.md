@@ -35,7 +35,7 @@ Here is an example of the request.
   "name": "update_deviceconfiguration"
 }-->
 ```http
-PUT https://graph.microsoft.com/beta/deviceConfiguration/<objectId>
+PATCH https://graph.microsoft.com/v1.0/deviceConfiguration/<objectId>
 Content-type: application/json
 Content-length: 341
 

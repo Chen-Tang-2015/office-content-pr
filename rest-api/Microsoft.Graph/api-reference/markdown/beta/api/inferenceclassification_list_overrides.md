@@ -39,7 +39,7 @@ Here is an example of the request.
   "name": "get_overrides"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/users/<objectId>/inferenceClassification/overrides
+GET https://graph.microsoft.com/v1.0/users/<objectId>/inferenceClassification/overrides
 ```
 ##### Response
 Here is an example of the response.

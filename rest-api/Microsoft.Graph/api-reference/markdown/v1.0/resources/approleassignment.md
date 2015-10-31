@@ -54,9 +54,9 @@ None
 |[Get appRoleAssignment](../api/approleassignment_get.md) | [appRoleAssignment](approleassignment.md) |Read properties and relationships of appRoleAssignment object.|
 |[Update](../api/approleassignment_update.md) | [appRoleAssignment](approleassignment.md)	|Update appRoleAssignment object. |
 |[Delete](../api/approleassignment_delete.md) | None |Delete appRoleAssignment object. |
-|[Checkmembergroups](../api/approleassignment_checkmembergroups.md)|String collection||
-|[Get MemberGroups](../api/approleassignment_getmembergroups.md)|String collection||
-|[Get MemberObjects](../api/approleassignment_getmemberobjects.md)|String collection||
+|[checkMemberGroups](../api/approleassignment_checkmembergroups.md)|String collection||
+|[getMemberGroups](../api/approleassignment_getmembergroups.md)|String collection||
+|[getMemberObjects](../api/approleassignment_getmemberobjects.md)|String collection||
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

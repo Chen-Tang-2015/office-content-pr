@@ -34,7 +34,7 @@ Here is an example of the request.
   "name": "get_sectiongroup"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/users/<objectId>/notes/sectionGroups/<id>
+GET https://graph.microsoft.com/v1.0/users/<objectId>/notes/sectionGroups/<id>
 ```
 ##### Response
 Here is an example of the response.

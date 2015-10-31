@@ -27,7 +27,7 @@ Here is an example of the request.
   "name": "get_orgcontact"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/contacts/<objectId>
+GET https://graph.microsoft.com/v1.0/contacts/<objectId>
 ```
 ##### Response
 Here is an example of the response.

@@ -33,7 +33,7 @@ Here is an example of the request.
   "name": "update_inferenceclassificationoverride"
 }-->
 ```http
-PUT https://graph.microsoft.com/beta/users/<objectId>/inferenceClassification/overrides/<id>
+PATCH https://graph.microsoft.com/v1.0/users/<objectId>/inferenceClassification/overrides/<id>
 Content-type: application/json
 Content-length: 146
 

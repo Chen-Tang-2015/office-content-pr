@@ -30,7 +30,7 @@ Here is an example of the request.
   "name": "item_allphotos"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/drive/root/allPhotos
+POST https://graph.microsoft.com/v1.0/drive/root/allPhotos
 ```
 
 ##### Response

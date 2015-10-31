@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "delete_taskboardtaskformat"
 }-->
 ```http
-DELETE https://graph.microsoft.com/beta/tasks/<id>/bucketTaskBoardFormat
+DELETE https://graph.microsoft.com/v1.0/tasks/<id>/bucketTaskBoardFormat
 ```
 ##### Response
 Here is an example of the response.

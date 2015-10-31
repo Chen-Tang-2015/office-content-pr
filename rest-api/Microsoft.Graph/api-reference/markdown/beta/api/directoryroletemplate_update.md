@@ -33,7 +33,7 @@ Here is an example of the request.
   "name": "update_directoryroletemplate"
 }-->
 ```http
-PUT https://graph.microsoft.com/beta/directoryRoleTemplates/<objectId>
+PATCH https://graph.microsoft.com/v1.0/directoryRoleTemplates/<objectId>
 Content-type: application/json
 Content-length: 187
 

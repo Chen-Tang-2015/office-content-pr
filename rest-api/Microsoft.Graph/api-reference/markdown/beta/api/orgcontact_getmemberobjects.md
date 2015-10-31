@@ -33,7 +33,7 @@ Here is an example of the request.
   "name": "orgcontact_getmemberobjects"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/contacts/<objectId>/getMemberObjects
+POST https://graph.microsoft.com/v1.0/contacts/<objectId>/getMemberObjects
 Content-type: application/json
 Content-length: 33
 

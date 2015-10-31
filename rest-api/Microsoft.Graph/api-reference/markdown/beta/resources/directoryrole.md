@@ -85,9 +85,9 @@ Here is a JSON representation of the resource
 |[List owners](../api/directoryrole_list_owners.md) |[DirectoryObject](directoryobject.md) collection| Get a owner object collection.|
 |[Update](../api/directoryrole_update.md) | [directoryRole](directoryrole.md)	|Update directoryRole object. |
 |[Delete](../api/directoryrole_delete.md) | None |Delete directoryRole object. |
-|[Checkmembergroups](../api/directoryrole_checkmembergroups.md)|String collection||
-|[Get MemberGroups](../api/directoryrole_getmembergroups.md)|String collection||
-|[Get MemberObjects](../api/directoryrole_getmemberobjects.md)|String collection||
+|[checkMemberGroups](../api/directoryrole_checkmembergroups.md)|String collection||
+|[getMemberGroups](../api/directoryrole_getmembergroups.md)|String collection||
+|[getMemberObjects](../api/directoryrole_getmemberobjects.md)|String collection||
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

@@ -34,7 +34,7 @@ Here is an example of the request.
   "name": "get_event"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/users/<objectId>/events/<id>
+GET https://graph.microsoft.com/v1.0/users/<objectId>/events/<id>
 ```
 ##### Response
 Here is an example of the response.

@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "get_oauth2permissiongrant"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/oauth2PermissionGrants/<objectId>
+GET https://graph.microsoft.com/v1.0/oauth2PermissionGrants/<objectId>
 ```
 ##### Response
 Here is an example of the response.

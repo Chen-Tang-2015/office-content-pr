@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_item_from_share"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/shares/<id>
+POST https://graph.microsoft.com/v1.0/shares/<id>
 ```
 In the request body, supply a JSON representation of [item](../resources/item.md) object.
 ##### Response

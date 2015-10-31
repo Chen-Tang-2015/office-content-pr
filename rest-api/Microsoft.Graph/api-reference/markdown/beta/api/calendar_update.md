@@ -34,7 +34,7 @@ Here is an example of the request.
   "name": "update_calendar"
 }-->
 ```http
-PUT https://graph.microsoft.com/beta/users/<objectId>/calendar
+PATCH https://graph.microsoft.com/v1.0/users/<objectId>/calendar
 Content-type: application/json
 Content-length: 106
 

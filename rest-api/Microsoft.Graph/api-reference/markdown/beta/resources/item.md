@@ -165,13 +165,13 @@ Here is a JSON representation of the resource
 |[List versions](../api/item_list_versions.md) |[item](item.md) collection| Get a version object collection.|
 |[Update](../api/item_update.md) | [item](item.md)	|Update item object. |
 |[Delete](../api/item_delete.md) | None |Delete item object. |
-|[Allphotos](../api/item_allphotos.md)|[item](item.md) collection||
-|[Copy](../api/item_copy.md)|[item](item.md)||
-|[Createlink](../api/item_createlink.md)|[permission](permission.md)||
-|[Createsession](../api/item_createsession.md)|[uploadSession](uploadsession.md)||
-|[Delta](../api/item_delta.md)|[item](item.md) collection||
-|[Invite](../api/item_invite.md)|[permission](permission.md) collection||
-|[Search](../api/item_search.md)|[item](item.md) collection||
+|[allPhotos](../api/item_allphotos.md)|[item](item.md) collection||
+|[copy](../api/item_copy.md)|[item](item.md)||
+|[createLink](../api/item_createlink.md)|[permission](permission.md)||
+|[createSession](../api/item_createsession.md)|[uploadSession](uploadsession.md)||
+|[delta](../api/item_delta.md)|[item](item.md) collection||
+|[invite](../api/item_invite.md)|[permission](permission.md) collection||
+|[search](../api/item_search.md)|[item](item.md) collection||
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

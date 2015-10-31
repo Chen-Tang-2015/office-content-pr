@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_extension_from_contact"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/users/<objectId>/contacts/<id>
+POST https://graph.microsoft.com/v1.0/users/<objectId>/contacts/<id>
 ```
 In the request body, supply a JSON representation of [Extension](../resources/extension.md) object.
 ##### Response

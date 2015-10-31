@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "delete_oauth2permissiongrant"
 }-->
 ```http
-DELETE https://graph.microsoft.com/beta/oauth2PermissionGrants/<objectId>
+DELETE https://graph.microsoft.com/v1.0/oauth2PermissionGrants/<objectId>
 ```
 ##### Response
 Here is an example of the response.

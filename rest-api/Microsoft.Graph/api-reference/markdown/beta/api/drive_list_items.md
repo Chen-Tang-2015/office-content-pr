@@ -39,7 +39,7 @@ Here is an example of the request.
   "name": "get_items"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/drive/items
+GET https://graph.microsoft.com/v1.0/drive/items
 ```
 ##### Response
 Here is an example of the response.

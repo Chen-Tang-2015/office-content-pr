@@ -34,7 +34,7 @@ Here is an example of the request.
   "name": "get_task"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/tasks/<id>
+GET https://graph.microsoft.com/v1.0/tasks/<id>
 ```
 ##### Response
 Here is an example of the response.

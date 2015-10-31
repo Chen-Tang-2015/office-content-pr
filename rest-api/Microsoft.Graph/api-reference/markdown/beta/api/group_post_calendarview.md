@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_event_from_group"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/groups/<objectId>
+POST https://graph.microsoft.com/v1.0/groups/<objectId>
 ```
 In the request body, supply a JSON representation of [Event](../resources/event.md) object.
 ##### Response

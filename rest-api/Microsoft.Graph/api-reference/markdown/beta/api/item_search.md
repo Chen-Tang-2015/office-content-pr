@@ -35,7 +35,7 @@ Here is an example of the request.
   "name": "item_search"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/drive/root/search
+POST https://graph.microsoft.com/v1.0/drive/root/search
 ```
 
 ##### Response

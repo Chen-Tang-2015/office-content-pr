@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "delete_calendargroup"
 }-->
 ```http
-DELETE https://graph.microsoft.com/beta/users/<objectId>/calendarGroups/<id>
+DELETE https://graph.microsoft.com/v1.0/users/<objectId>/calendarGroups/<id>
 ```
 ##### Response
 Here is an example of the response.

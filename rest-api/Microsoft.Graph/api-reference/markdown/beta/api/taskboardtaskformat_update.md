@@ -32,7 +32,7 @@ Here is an example of the request.
   "name": "update_taskboardtaskformat"
 }-->
 ```http
-PUT https://graph.microsoft.com/beta/tasks/<id>/bucketTaskBoardFormat
+PATCH https://graph.microsoft.com/v1.0/tasks/<id>/bucketTaskBoardFormat
 Content-type: application/json
 Content-length: 80
 

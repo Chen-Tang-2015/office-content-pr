@@ -27,7 +27,7 @@ Here is an example of the request.
   "name": "get_extensionproperty"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/applications/<objectId>/extensionProperties/<objectId>
+GET https://graph.microsoft.com/v1.0/applications/<objectId>/extensionProperties/<objectId>
 ```
 ##### Response
 Here is an example of the response.

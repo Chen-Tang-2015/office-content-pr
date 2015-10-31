@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_sitecollection_from_shares"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/shares
+POST https://graph.microsoft.com/v1.0/shares
 ```
 In the request body, supply a JSON representation of [SiteCollection](../resources/sitecollection.md) object.
 ##### Response

@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "delete_conversationthread"
 }-->
 ```http
-DELETE https://graph.microsoft.com/beta/groups/<objectId>/threads/<id>
+DELETE https://graph.microsoft.com/v1.0/groups/<objectId>/threads/<id>
 ```
 ##### Response
 Here is an example of the response.

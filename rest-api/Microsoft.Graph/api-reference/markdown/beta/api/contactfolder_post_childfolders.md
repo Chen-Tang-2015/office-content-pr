@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_contactfolder_from_contactfolder"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/users/<objectId>/contactFolders/<id>
+POST https://graph.microsoft.com/v1.0/users/<objectId>/contactFolders/<id>
 ```
 In the request body, supply a JSON representation of [ContactFolder](../resources/contactfolder.md) object.
 ##### Response

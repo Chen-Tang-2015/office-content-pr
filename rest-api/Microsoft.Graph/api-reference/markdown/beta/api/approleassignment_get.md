@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "get_approleassignment"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/users/<objectId>/appRoleAssignments/<objectId>
+GET https://graph.microsoft.com/v1.0/users/<objectId>/appRoleAssignments/<objectId>
 ```
 ##### Response
 Here is an example of the response.

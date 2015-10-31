@@ -34,7 +34,7 @@ Here is an example of the request.
   "name": "get_mailfolder"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/users/<objectId>/mailFolders/<id>
+GET https://graph.microsoft.com/v1.0/users/<objectId>/mailFolders/<id>
 ```
 ##### Response
 Here is an example of the response.

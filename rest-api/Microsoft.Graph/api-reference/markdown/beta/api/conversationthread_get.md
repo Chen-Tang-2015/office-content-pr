@@ -34,7 +34,7 @@ Here is an example of the request.
   "name": "get_conversationthread"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/groups/<objectId>/threads/<id>
+GET https://graph.microsoft.com/v1.0/groups/<objectId>/threads/<id>
 ```
 ##### Response
 Here is an example of the response.

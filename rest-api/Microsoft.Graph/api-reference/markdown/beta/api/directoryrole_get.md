@@ -27,7 +27,7 @@ Here is an example of the request.
   "name": "get_directoryrole"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/directoryRoles/<objectId>
+GET https://graph.microsoft.com/v1.0/directoryRoles/<objectId>
 ```
 ##### Response
 Here is an example of the response.

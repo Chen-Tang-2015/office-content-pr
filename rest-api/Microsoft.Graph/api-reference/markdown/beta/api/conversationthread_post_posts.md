@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_post_from_conversationthread"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/groups/<objectId>/threads/<id>
+POST https://graph.microsoft.com/v1.0/groups/<objectId>/threads/<id>
 ```
 In the request body, supply a JSON representation of [Post](../resources/post.md) object.
 ##### Response

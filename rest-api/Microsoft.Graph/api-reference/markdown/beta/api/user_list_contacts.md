@@ -39,7 +39,7 @@ Here is an example of the request.
   "name": "get_contacts"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/users/<objectId>/contacts
+GET https://graph.microsoft.com/v1.0/users/<objectId>/contacts
 ```
 ##### Response
 Here is an example of the response.

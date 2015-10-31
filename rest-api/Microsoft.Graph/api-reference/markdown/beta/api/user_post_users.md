@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_user_from_tenantdetails"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/tenantDetails
+POST https://graph.microsoft.com/v1.0/tenantDetails
 ```
 In the request body, supply a JSON representation of [User](../resources/user.md) object.
 ##### Response

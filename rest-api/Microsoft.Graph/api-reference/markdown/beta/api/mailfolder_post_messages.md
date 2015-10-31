@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_message_from_mailfolder"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/users/<objectId>/mailFolders/<id>
+POST https://graph.microsoft.com/v1.0/users/<objectId>/mailFolders/<id>
 ```
 In the request body, supply a JSON representation of [Message](../resources/message.md) object.
 ##### Response

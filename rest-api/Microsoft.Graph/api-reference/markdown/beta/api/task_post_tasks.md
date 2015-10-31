@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_task_from_subscribedskus"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/subscribedSkus
+POST https://graph.microsoft.com/v1.0/subscribedSkus
 ```
 In the request body, supply a JSON representation of [task](../resources/task.md) object.
 ##### Response

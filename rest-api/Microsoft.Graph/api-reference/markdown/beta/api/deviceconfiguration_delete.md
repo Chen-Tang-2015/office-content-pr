@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "delete_deviceconfiguration"
 }-->
 ```http
-DELETE https://graph.microsoft.com/beta/deviceConfiguration/<objectId>
+DELETE https://graph.microsoft.com/v1.0/deviceConfiguration/<objectId>
 ```
 ##### Response
 Here is an example of the response.

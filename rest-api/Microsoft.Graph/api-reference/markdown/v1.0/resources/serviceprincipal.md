@@ -163,9 +163,9 @@ Here is a JSON representation of the resource
 |[List owners](../api/serviceprincipal_list_owners.md) |[DirectoryObject](directoryobject.md) collection| Get a owner object collection.|
 |[Update](../api/serviceprincipal_update.md) | [servicePrincipal](serviceprincipal.md)	|Update servicePrincipal object. |
 |[Delete](../api/serviceprincipal_delete.md) | None |Delete servicePrincipal object. |
-|[Checkmembergroups](../api/serviceprincipal_checkmembergroups.md)|String collection||
-|[Get MemberGroups](../api/serviceprincipal_getmembergroups.md)|String collection||
-|[Get MemberObjects](../api/serviceprincipal_getmemberobjects.md)|String collection||
+|[checkMemberGroups](../api/serviceprincipal_checkmembergroups.md)|String collection||
+|[getMemberGroups](../api/serviceprincipal_getmembergroups.md)|String collection||
+|[getMemberObjects](../api/serviceprincipal_getmemberobjects.md)|String collection||
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

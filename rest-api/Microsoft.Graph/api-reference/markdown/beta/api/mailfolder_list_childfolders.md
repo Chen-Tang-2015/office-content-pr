@@ -39,7 +39,7 @@ Here is an example of the request.
   "name": "get_childfolders"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/users/<objectId>/mailFolders/<id>/childFolders
+GET https://graph.microsoft.com/v1.0/users/<objectId>/mailFolders/<id>/childFolders
 ```
 ##### Response
 Here is an example of the response.

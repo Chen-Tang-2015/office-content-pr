@@ -27,7 +27,7 @@ Here is an example of the request.
   "name": "get_subscribedsku"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/subscribedSkus/<objectId>
+GET https://graph.microsoft.com/v1.0/subscribedSkus/<objectId>
 ```
 ##### Response
 Here is an example of the response.

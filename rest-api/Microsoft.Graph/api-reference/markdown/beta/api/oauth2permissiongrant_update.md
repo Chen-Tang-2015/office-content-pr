@@ -38,7 +38,7 @@ Here is an example of the request.
   "name": "update_oauth2permissiongrant"
 }-->
 ```http
-PUT https://graph.microsoft.com/beta/oauth2PermissionGrants/<objectId>
+PATCH https://graph.microsoft.com/v1.0/oauth2PermissionGrants/<objectId>
 Content-type: application/json
 Content-length: 271
 

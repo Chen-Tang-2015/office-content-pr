@@ -33,7 +33,7 @@ Here is an example of the request.
   "name": "get_joinedgroups"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/users/<objectId>/joinedGroups
+GET https://graph.microsoft.com/v1.0/users/<objectId>/joinedGroups
 ```
 ##### Response
 Here is an example of the response.
