@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_task_from_plan"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/plans/<id>
+POST https://graph.microsoft.com/beta/plans/<id>
 ```
 In the request body, supply a JSON representation of [task](../resources/task.md) object.
 ##### Response

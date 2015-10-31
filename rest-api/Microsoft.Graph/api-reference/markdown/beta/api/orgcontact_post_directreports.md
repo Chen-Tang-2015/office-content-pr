@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_directoryobject_from_orgcontact"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/contacts/<objectId>
+POST https://graph.microsoft.com/beta/contacts/<objectId>
 ```
 In the request body, supply a JSON representation of [DirectoryObject](../resources/directoryobject.md) object.
 ##### Response

@@ -38,7 +38,7 @@ Here is an example of the request.
   "name": "update_plandetails"
 }-->
 ```http
-PATCH https://graph.microsoft.com/v1.0/plans/<id>/details
+PATCH https://graph.microsoft.com/beta/plans/<id>/details
 Content-type: application/json
 Content-length: 381
 

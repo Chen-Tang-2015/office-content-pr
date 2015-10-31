@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "create_share_from_serviceprincipals"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/servicePrincipals
+POST https://graph.microsoft.com/beta/servicePrincipals
 ```
 In the request body, supply a JSON representation of [share](../resources/share.md) object.
 ##### Response

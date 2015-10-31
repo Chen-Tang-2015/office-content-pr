@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "get_directoryobjects"
 }-->
 ```http
-GET https://graph.microsoft.com/v1.0/directoryObjects
+GET https://graph.microsoft.com/beta/directoryObjects
 ```
 ##### Response
 Here is an example of the response.

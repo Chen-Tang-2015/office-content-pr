@@ -44,7 +44,7 @@ Here is an example of the request.
   "name": "update_device"
 }-->
 ```http
-PATCH https://graph.microsoft.com/v1.0/devices/<objectId>
+PATCH https://graph.microsoft.com/beta/devices/<objectId>
 Content-type: application/json
 Content-length: 732
 

@@ -37,7 +37,7 @@ Here is an example of the request.
   "name": "get_sites"
 }-->
 ```http
-GET https://graph.microsoft.com/v1.0/siteCollections/<id>/sites
+GET https://graph.microsoft.com/beta/siteCollections/<id>/sites
 ```
 ##### Response
 Here is an example of the response.

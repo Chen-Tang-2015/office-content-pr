@@ -33,7 +33,7 @@ Here is an example of the request.
   "name": "update_contactfolder"
 }-->
 ```http
-PATCH https://graph.microsoft.com/v1.0/users/<objectId>/contactFolders/<id>
+PATCH https://graph.microsoft.com/beta/users/<objectId>/contactFolders/<id>
 Content-type: application/json
 Content-length: 104
 

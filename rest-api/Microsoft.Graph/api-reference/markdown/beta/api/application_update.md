@@ -52,7 +52,7 @@ Here is an example of the request.
   "name": "update_application"
 }-->
 ```http
-PATCH https://graph.microsoft.com/v1.0/applications/<objectId>
+PATCH https://graph.microsoft.com/beta/applications/<objectId>
 Content-type: application/json
 Content-length: 2150
 

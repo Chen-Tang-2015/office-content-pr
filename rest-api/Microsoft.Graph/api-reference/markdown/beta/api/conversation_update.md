@@ -36,7 +36,7 @@ Here is an example of the request.
   "name": "update_conversation"
 }-->
 ```http
-PATCH https://graph.microsoft.com/v1.0/groups/<objectId>/conversations/<id>
+PATCH https://graph.microsoft.com/beta/groups/<objectId>/conversations/<id>
 Content-type: application/json
 Content-length: 201
 

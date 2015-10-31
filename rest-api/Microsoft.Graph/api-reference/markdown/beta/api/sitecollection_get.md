@@ -32,7 +32,7 @@ Here is an example of the request.
   "name": "get_sitecollection"
 }-->
 ```http
-GET https://graph.microsoft.com/v1.0/siteCollections/<id>
+GET https://graph.microsoft.com/beta/siteCollections/<id>
 ```
 ##### Response
 Here is an example of the response.

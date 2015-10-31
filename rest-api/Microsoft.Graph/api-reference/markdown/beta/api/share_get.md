@@ -32,7 +32,7 @@ Here is an example of the request.
   "name": "get_share"
 }-->
 ```http
-GET https://graph.microsoft.com/v1.0/shares/<id>
+GET https://graph.microsoft.com/beta/shares/<id>
 ```
 ##### Response
 Here is an example of the response.

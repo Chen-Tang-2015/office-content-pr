@@ -31,7 +31,7 @@ Here is an example of the request.
   "name": "create_inferenceclassificationoverride_from_inferenceclassification"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/users/<objectId>/inferenceClassification
+POST https://graph.microsoft.com/beta/users/<objectId>/inferenceClassification
 ```
 In the request body, supply a JSON representation of [InferenceClassificationOverride](../resources/inferenceclassificationoverride.md) object.
 ##### Response
