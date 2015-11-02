@@ -69,7 +69,7 @@ A few basic programming patterns calls to the API are shown in the following sec
 <a name="msg_nav_from_set_to_member"> </a>
 ###Navigation from a set to a member
 
-To view the information about a user, get the `User` entity from the `users` collection on the tenant. To do so, you can
+To view the information about a user, you get the `User` entity from the `users` collection on the tenant. To do so, you can
 navigate from the tenant to users and then to the specific user identified by its identifier, using an HTTPS GET request. For a `User` entity, either the `objectId` or `userPrincipalName` property may be used as the identifier. The following example request uses the `userPrincipalName` value as the user's Id. 
 
 ```no-highlight 
