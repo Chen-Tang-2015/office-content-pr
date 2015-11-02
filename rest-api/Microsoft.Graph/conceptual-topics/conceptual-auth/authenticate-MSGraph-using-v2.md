@@ -41,23 +41,26 @@ Explore the following code sample to learn how to create apps that use the v2.0 
 
 <a name="bk_scopes"> </a>
 
-##Office API authentication scopes
+##Microsoft Graph API authentication scopes
 
-The table below lists the authentication scopes to use with the v2 app authentication model preview. For more information about using scopes with the v2.0 app model, and how it differs from using resources in Azure AD, see [Scopes, not resources](https://azure.microsoft.com/en-us/documentation/articles/active-directory-v2-compare/#scopes-not-resources).
+The table below lists the authentication scopes to use with the v2.0 app authentication model preview. For more information about using scopes with the v2.0 app model, and how it differs from using resources in Azure AD, see [Scopes, not resources](https://azure.microsoft.com/en-us/documentation/articles/active-directory-v2-compare/#scopes-not-resources).
 
-<a name="bk_Outlookscopes"> </a>
-
-###Outlook mail, calendar, and contacts scopes
 
 |**Scope** | **Permission** | **Description** | 
 |:-----|:-----|:-----|
-| `https://outlook.office.com/Mail.Read` |Read user mail|Allows this app to read messages in user mailboxes.| 
-| `https://outlook.office.com/Mail.ReadWrite` |Read and write access to user mail|Allows the app to read, update, create, and delete messages in user mailboxes.|
-| `https://outlook.office.com/Mail.Send`  |Send mail as a user|Allows the app to send messages as users in the organization.|
-| `https://outlook.office.com/Contacts.Read` |Read user contacts|Allows the app to read user contacts.|
-| `https://outlook.office.com/Contacts.ReadWrite` |Have full access to user contacts|Allows the app to read, update, create and delete user contacts.|
-| `https://outlook.office.com/Calendars.Read` |Read user calendars|Allows the app to read events in user calendars.|
-| `https://outlook.office.com/Calendars.ReadWrite` |Have full access to user calendars|Allows the app to read, update, create, and delete events in user calendars.|
+| `https://graph.microsoft.com/Mail.Read` |Read user mail|Allows this app to read messages in user mailboxes.| 
+| `https://graph.microsoft.com/Mail.ReadWrite` |Read and write access to user mail|Allows the app to read, update, create, and delete messages in user mailboxes.|
+| `https://graph.microsoft.com/Mail.Send`  |Send mail as a user|Allows the app to send messages as users in the organization.|
+| `https://graph.microsoft.com/Contacts.Read` |Read user contacts|Allows the app to read user contacts.|
+| `https://graph.microsoft.com/Contacts.ReadWrite` |Have full access to user contacts|Allows the app to read, update, create and delete user contacts.|
+| `https://graph.microsoft.com/Calendars.Read` |Read user calendars|Allows the app to read events in user calendars.|
+| `https://graph.microsoft.com/Calendars.ReadWrite` |Have full access to user calendars|Allows the app to read, update, create, and delete events in user calendars.|
+| `https://graph.microsoft.com/Files.Read` |Read users' files |Allows the application to read the current user's files. |
+| `https://graph.microsoft.com/Files.ReadWrite` |Edit or delete users' files |Allows the app to edit or delete the current user's files. |
+| `https://graph.microsoft.com/User.Read` |Enable sign-in and read user profile |Allows users to sign-in to the app, and allows the app to read the profile. It also allow the app to read basic company information of signed-in users. |
+| `https://graph.microsoft.com/User.ReadWrite` |Read and write access to user profile |Allows the app to read the profile of signed-in users, and to update profile information on behalf of signed-in users. |
+| `https://graph.microsoft.com/openid` |Sign users in |Allows users to sign in to the app and allows the app to see basic user profile information. |
+| `https://graph.microsoft.com/offline_access` |Read and write user's information |Allows the app to see and update user's data, even when the user is not actively using the app. |
 
 
 ##Next steps
