@@ -24,8 +24,8 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|content|String|The text or HTML content. The text or HTML content.|
-|contentType|String|The content type: Text = 0, HTML = 1. The content type: Text = 0, HTML = 1. Possible values are: `Text`, `HTML`.|
+|content|String|The text or HTML content.|
+|contentType|String|The content type: Text = 0, HTML = 1. Possible values are: `Text`, `HTML`.|
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

@@ -1,0 +1,99 @@
+<div id="holder">
+
+<!-- HTML Page Content Start -->
+
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <p>&lt;a name=&quot;bk_CreateAzureSubscription&quot;&gt; </a></p>
+<h1 id="associate-your-office-365-account-with-azure-ad-to-create-and-manage-apps">Associate your Office 365 account with Azure AD to create and manage apps</h1>
+<p>To authenticate your applications, you need to register them in Microsoft Azure Active Directory (Azure AD). This is where Office 365 user account and application information is stored. To manage Azure AD through the Azure Management Portal, you need a Microsoft Azure subscription. Using the management portal in Microsoft Azure enables you to manage users, roles, and apps. </p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p><strong>Office 365 for business account</strong></p>
+<p>If you don't have an existing Office 365 for business account, you can:</p>
+<ul>
+<li>Sign up for an <a href="http://products.office.com/en-us/business/compare-office-365-for-business-plans" target="_blank">Office 365 for business plans</a> listed above, or</li>
+<li>Start with a <a href="https://portal.microsoftonline.com/Signup/MainSignUp.aspx?OfferId=6881A1CB-F4EB-4db3-9F18-388898DAF510&amp;DL=DEVELOPERPACK" target="_blank">free 30-day trial of an Office 365 Developer account</a>.</li>
+</ul>
+<p><strong>Microsoft Azure subscription</strong> </p>
+<ul>
+<li>
+<p>If you can have an existing Microsoft Azure subscription, you can <a href="#bk_AssociateExistingAzureSubscription">associate your Office 365 for business subscription with it</a>. </p>
+</li>
+<li>
+<p>Otherwise, you'll need to <a href="#bk_AssociateNewAzureSubscription">create a new Azure subscription and associate it with your Office 365 account</a> in order to register and manage apps.</p>
+</li>
+</ul>
+<p>&lt;a name=&quot;bk_AssociateExistingAzureSubscription&quot;&gt; </a></p>
+<h2 id="to-associate-an-existing-azure-subscription-with-your-office-365-account">To associate an existing Azure subscription with your Office 365 account</h2>
+<ol>
+<li>
+<p>Log on to the  <a href="https://manage.windowsazure.com" target="_blank">Microsoft Azure Management portal</a> with your existing Azure credentials (for example, your Microsoft ID such as user@live.com).</p>
+</li>
+<li>
+<p>Select the  <strong>Active Directory</strong> node, then select the <strong>Directory</strong> tab and, at the bottom of the screen, select <strong>New</strong>. </p>
+</li>
+<li>
+<p>On the <strong>New</strong> menu, select <strong>Active Directory</strong> &gt; <strong>Directory</strong> &gt; <strong>Custom Create</strong>.</p>
+</li>
+<li>
+<p>In <strong>Add directory</strong>, in the <strong>Directory</strong> drop-down box, select  <strong>Use existing directory</strong>. Check <strong>I am ready to be signed out</strong>, and then select the check mark in the lower-right corner. </p>
+<p>This brings you back to the Azure Management Portal.</p>
+</li>
+<li>
+<p>Log in with your Office 365 account information. </p>
+<p>You will be prompted whether to use your directory with Azure. </p>
+<p><strong>Important</strong> To associate your Office 365 account with Azure AD, you'll need  an Office 365 business account with global administrator privileges. </p>
+</li>
+<li>
+<p>Select  <strong>continue</strong>, and then <strong>Sign out now</strong>.</p>
+</li>
+<li>
+<p>Close the browser and reopen the  <a href="https://manage.windowsazure.com" target="_blank">portal</a>. Otherwise, you will get an access denied error.</p>
+</li>
+<li>
+<p>Log on again with your existing Azure credentials (for example, your Microsoft ID such as user@live.com). Navigate to the  <strong>Active Directory</strong> node and, under <strong>Directory</strong>, you should now see your Office 365 account listed.</p>
+</li>
+</ol>
+<p>&lt;a name=&quot;bk_AssociateNewAzureSubscription&quot;&gt; </a></p>
+<h2 id="to-create-a-new-azure-subscription-and-associate-it-with-your-office-365-account">To create a new Azure subscription and associate it with your Office 365 account</h2>
+<ol>
+<li>Log on to Office 365. From the <strong>Home</strong> page, select the <strong>Admin</strong> icon to open the Office 365 admin center.</li>
+<li>
+<p>In the menu page along the left side of the page, scroll down to <strong>Admin</strong> and select <strong>Azure AD</strong>.</p>
+<p><strong>Important</strong> To open the Office 365 admin center, and access Azure AD, you'll need  an Office 365 business account with global administrator privileges. </p>
+</li>
+<li>
+<p>Create a new subscription.</p>
+<p>If you're using a trial version of Office 365, you'll see a message telling you that Azure AD is limited to customers with paid services. You can still create a trial 30-day Azure subscription at no charge, but you'll need to perform a few extra steps:</p>
+<ol>
+<li>Select your country or region, and then click <strong>Azure subscription</strong>.</li>
+<li>Enter your personal information. For verification purposes, enter a telephone number at which you can be reached, and specify whether you want to be sent a text message or called.</li>
+<li>Once you've received your verification code, enter it and click <strong>Verify code</strong>.</li>
+<li>
+<p>Enter payment information, check the agreement, and select <strong>Sign up</strong>.</p>
+<p>Your credit card will not be charged.</p>
+<p>Do not close or refresh your browser while your Azure subscription is being created.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Once your Azure subscription is created, choose  <strong>Portal</strong>.</p>
+</li>
+<li>
+<p>The Azure Tour appears. You can view it, or choose  <strong>X</strong> to close it.</p>
+<p>You should now see all items in your Azure subscription. It lists a directory with the name of your Office 365 tenant.</p>
+</li>
+</ol>
+
+        </div>        
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+
+
+
+

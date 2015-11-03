@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-
-<body>
-
-    <div id="holder">
+<div id="holder">
 
 <!-- HTML Page Content Start -->
+
 <div class="container wrapper" id="body">
     <div class="row">
         <div class="col-md-9">
@@ -111,17 +107,17 @@
 <tr>
 	<td align="left">accountEnabled</td>
 	<td align="left">Boolean</td>
-	<td align="left"><strong>true</strong> if the service principal account is enabled; otherwise, <strong>false</strong>.                             <strong>true</strong> if the service principal account is enabled; otherwise, <strong>false</strong>.</td>
+	<td align="left"><strong>true</strong> if the service principal account is enabled; otherwise, <strong>false</strong>.</td>
 </tr>
 <tr>
 	<td align="left">appDisplayName</td>
 	<td align="left">String</td>
-	<td align="left">The display name exposed by the associated application. The display name exposed by the associated application.</td>
+	<td align="left">The display name exposed by the associated application.</td>
 </tr>
 <tr>
 	<td align="left">appId</td>
 	<td align="left">String</td>
-	<td align="left">The unique identifier for the associated application (its <strong>appId</strong> property). The unique identifier for the associated application (its <strong>appId</strong> property).</td>
+	<td align="left">The unique identifier for the associated application (its <strong>appId</strong> property).</td>
 </tr>
 <tr>
 	<td align="left">appOwnerTenantId</td>
@@ -131,12 +127,12 @@
 <tr>
 	<td align="left">appRoleAssignmentRequired</td>
 	<td align="left">Boolean</td>
-	<td align="left">Specifies whether an <strong>AppRoleAssignment</strong> to a user or group is required before Azure AD will issue a user or access token to the application.                            <strong>Notes</strong>: Requires version 1.5 or newer, not nullable.             Specifies whether an <strong>AppRoleAssignment</strong> to a user or group is required before Azure AD will issue a user or access token to the application.                            <strong>Notes</strong>: Requires version 1.5 or newer, not nullable.</td>
+	<td align="left">Specifies whether an <strong>AppRoleAssignment</strong> to a user or group is required before Azure AD will issue a user or access token to the application.                            <strong>Notes</strong>: Requires version 1.5 or newer, not nullable.</td>
 </tr>
 <tr>
 	<td align="left">appRoles</td>
 	<td align="left"><a href="approle.htm">AppRole</a> collection</td>
-	<td align="left">The application roles exposed by the associated application. For more information see the <strong>appRoles</strong> property definition on the [Application] entity                            <strong>Notes</strong>: Requires version 1.5 or newer, not nullable.             The application roles exposed by the associated application. For more information see the <strong>appRoles</strong> property definition on the [Application] entity                            <strong>Notes</strong>: Requires version 1.5 or newer, not nullable.</td>
+	<td align="left">The application roles exposed by the associated application. For more information see the <strong>appRoles</strong> property definition on the [Application] entity                            <strong>Notes</strong>: Requires version 1.5 or newer, not nullable.</td>
 </tr>
 <tr>
 	<td align="left">deletionTimestamp</td>
@@ -146,7 +142,7 @@
 <tr>
 	<td align="left">displayName</td>
 	<td align="left">String</td>
-	<td align="left">The display name for the service principal. The display name for the service principal.</td>
+	<td align="left">The display name for the service principal.</td>
 </tr>
 <tr>
 	<td align="left">errorUrl</td>
@@ -156,12 +152,12 @@
 <tr>
 	<td align="left">homepage</td>
 	<td align="left">String</td>
-	<td align="left">The URL to the homepage of the associated   application. The URL to the homepage of the associated   application.</td>
+	<td align="left">The URL to the homepage of the associated   application.</td>
 </tr>
 <tr>
 	<td align="left">keyCredentials</td>
 	<td align="left"><a href="keycredential.htm">KeyCredential</a> collection</td>
-	<td align="left">The collection of key credentials associated with the service principal.                            <strong>Notes</strong>: not nullable.             The collection of key credentials associated with the service principal.                            <strong>Notes</strong>: not nullable.</td>
+	<td align="left">The collection of key credentials associated with the service principal.                            <strong>Notes</strong>: not nullable.</td>
 </tr>
 <tr>
 	<td align="left">logoutUrl</td>
@@ -171,37 +167,37 @@
 <tr>
 	<td align="left">oauth2Permissions</td>
 	<td align="left"><a href="oauth2permission.htm">OAuth2Permission</a> collection</td>
-	<td align="left">The OAuth 2.0 permissions exposed by the associated application. For more information see the <strong>oauth2Permissions</strong> property definition on the [Application] entity.                            <strong>Notes</strong>: Requires version 1.5 or newer, not nullable.             The OAuth 2.0 permissions exposed by the associated application. For more information see the <strong>oauth2Permissions</strong> property definition on the [Application] entity.                            <strong>Notes</strong>: Requires version 1.5 or newer, not nullable.</td>
+	<td align="left">The OAuth 2.0 permissions exposed by the associated application. For more information see the <strong>oauth2Permissions</strong> property definition on the [Application] entity.                            <strong>Notes</strong>: Requires version 1.5 or newer, not nullable.</td>
 </tr>
 <tr>
 	<td align="left">objectId</td>
 	<td align="left">String</td>
-	<td align="left">The unique identifier for the service principal. Inherited from [DirectoryObject].                            <strong>Notes</strong>: <strong>key</strong>, immutable, not nullable, unique.             The unique identifier for the service principal. Inherited from [DirectoryObject].                            <strong>Notes</strong>: <strong>key</strong>, immutable, not nullable, unique.             Read-only.</td>
+	<td align="left">The unique identifier for the service principal. Inherited from [DirectoryObject].                            <strong>Notes</strong>: <strong>key</strong>, immutable, not nullable, unique.             Read-only.</td>
 </tr>
 <tr>
 	<td align="left">objectType</td>
 	<td align="left">String</td>
-	<td align="left">A string that identifies the object type. For service principals the value is always “ServicePrincipal”. Inherited from [DirectoryObject]. A string that identifies the object type. For service principals the value is always “ServicePrincipal”. Inherited from [DirectoryObject].</td>
+	<td align="left">A string that identifies the object type. For service principals the value is always “ServicePrincipal”. Inherited from [DirectoryObject].</td>
 </tr>
 <tr>
 	<td align="left">passwordCredentials</td>
 	<td align="left"><a href="passwordcredential.htm">PasswordCredential</a> collection</td>
-	<td align="left">The collection of password credentials associated with the service principal.                            <strong>Notes</strong>: not nullable.             The collection of password credentials associated with the service principal.                            <strong>Notes</strong>: not nullable.</td>
+	<td align="left">The collection of password credentials associated with the service principal.                            <strong>Notes</strong>: not nullable.</td>
 </tr>
 <tr>
 	<td align="left">preferredTokenSigningKeyThumbprint</td>
 	<td align="left">String</td>
-	<td align="left">Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions.                            <strong>Notes</strong>: Requires version 1.5 or newer.             Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions.                            <strong>Notes</strong>: Requires version 1.5 or newer.</td>
+	<td align="left">Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions.                            <strong>Notes</strong>: Requires version 1.5 or newer.</td>
 </tr>
 <tr>
 	<td align="left">publisherName</td>
 	<td align="left">String</td>
-	<td align="left">The display name of the tenant in which the associated application is specified. The display name of the tenant in which the associated application is specified.</td>
+	<td align="left">The display name of the tenant in which the associated application is specified.</td>
 </tr>
 <tr>
 	<td align="left">replyUrls</td>
 	<td align="left">String collection</td>
-	<td align="left">The URLs that user tokens are sent to for sign in with the associated application, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to for the associated application.                            <strong>Notes</strong>: not nullable.             The URLs that user tokens are sent to for sign in with the associated application, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to for the associated application.                            <strong>Notes</strong>: not nullable.</td>
+	<td align="left">The URLs that user tokens are sent to for sign in with the associated application, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to for the associated application.                            <strong>Notes</strong>: not nullable.</td>
 </tr>
 <tr>
 	<td align="left">samlMetadataUrl</td>
@@ -211,12 +207,12 @@
 <tr>
 	<td align="left">servicePrincipalNames</td>
 	<td align="left">String collection</td>
-	<td align="left">The URIs that identify the associated application. For more information see, <a href="https://msdn.microsoft.com/en-us/library/azure/dn132633.aspx" target="_blank">Application Objects and Service Principal Objects</a>.                            <strong>Notes</strong>: not nullable, the <strong>any</strong> operator is required for filter expressions on multi-valued properties; for more information, see <a href="https://msdn.microsoft.com/library/azure/dn727074.aspx" target="_blank">Supported Queries, Filters, and Paging Options</a>.             The URIs that identify the associated application. For more information see, <a href="https://msdn.microsoft.com/en-us/library/azure/dn132633.aspx" target="_blank">Application Objects and Service Principal Objects</a>.                            <strong>Notes</strong>: not nullable, the <strong>any</strong> operator is required for filter expressions on multi-valued properties; for more information, see <a href="https://msdn.microsoft.com/library/azure/dn727074.aspx" target="_blank">Supported Queries, Filters, and Paging Options</a>.</td>
+	<td align="left">The URIs that identify the associated application. For more information see, <a href="https://msdn.microsoft.com/en-us/library/azure/dn132633.aspx" target="_blank">Application Objects and Service Principal Objects</a>.                            <strong>Notes</strong>: not nullable, the <strong>any</strong> operator is required for filter expressions on multi-valued properties; for more information, see <a href="https://msdn.microsoft.com/library/azure/dn727074.aspx" target="_blank">Supported Queries, Filters, and Paging Options</a>.</td>
 </tr>
 <tr>
 	<td align="left">tags</td>
 	<td align="left">String collection</td>
-	<td align="left"><strong>Notes</strong>: not nullable.                                                     <strong>Notes</strong>: not nullable.</td>
+	<td align="left"><strong>Notes</strong>: not nullable.</td>
 </tr>
 </tbody>
 </table>
@@ -233,17 +229,17 @@
 <tr>
 	<td align="left">appRoleAssignedTo</td>
 	<td align="left"><a href="approleassignment.htm">AppRoleAssignment</a></td>
-	<td align="left">Principals (users, groups, and service principals) that are assigned to this service principal. Requires version 1.5 or newer. Principals (users, groups, and service principals) that are assigned to this service principal. Requires version 1.5 or newer. Read-only.</td>
+	<td align="left">Principals (users, groups, and service principals) that are assigned to this service principal. Requires version 1.5 or newer. Read-only.</td>
 </tr>
 <tr>
 	<td align="left">appRoleAssignments</td>
 	<td align="left"><a href="approleassignment.htm">AppRoleAssignment</a> collection</td>
-	<td align="left">Applications that the service principal is assigned to. Requires version 1.5 or newer. Applications that the service principal is assigned to. Requires version 1.5 or newer. Read-only. Nullable.</td>
+	<td align="left">Applications that the service principal is assigned to. Requires version 1.5 or newer. Read-only. Nullable.</td>
 </tr>
 <tr>
 	<td align="left">createdObjects</td>
 	<td align="left"><a href="directoryobject.htm">DirectoryObject</a> collection</td>
-	<td align="left">Directory objects created by this service principal. Inherited from [DirectoryObject]. Requires version 2013-11-08 or newer. Directory objects created by this service principal. Inherited from [DirectoryObject]. Requires version 2013-11-08 or newer. Read-only. Nullable.</td>
+	<td align="left">Directory objects created by this service principal. Inherited from [DirectoryObject]. Requires version 2013-11-08 or newer. Read-only. Nullable.</td>
 </tr>
 <tr>
 	<td align="left">createdOnBehalfOf</td>
@@ -253,22 +249,22 @@
 <tr>
 	<td align="left">memberOf</td>
 	<td align="left"><a href="directoryobject.htm">DirectoryObject</a> collection</td>
-	<td align="left">Roles that this service principal is a member of. Inherited from [DirectoryObject].            HTTP Methods: GET Roles that this service principal is a member of. Inherited from [DirectoryObject].            HTTP Methods: GET Read-only. Nullable.</td>
+	<td align="left">Roles that this service principal is a member of. Inherited from [DirectoryObject].            HTTP Methods: GET Read-only. Nullable.</td>
 </tr>
 <tr>
 	<td align="left">oauth2PermissionGrants</td>
 	<td align="left"><a href="oauth2permissiongrant.htm">OAuth2PermissionGrant</a> collection</td>
-	<td align="left">User impersonation grants associated with this service principal. Requires version 1.5 or newer. User impersonation grants associated with this service principal. Requires version 1.5 or newer. Read-only. Nullable.</td>
+	<td align="left">User impersonation grants associated with this service principal. Requires version 1.5 or newer. Read-only. Nullable.</td>
 </tr>
 <tr>
 	<td align="left">ownedObjects</td>
 	<td align="left"><a href="directoryobject.htm">DirectoryObject</a> collection</td>
-	<td align="left">Directory objects that are owned by this service principal. Inherited from [DirectoryObject]. Requires version 2013-11-08 or newer. Directory objects that are owned by this service principal. Inherited from [DirectoryObject]. Requires version 2013-11-08 or newer. Read-only. Nullable.</td>
+	<td align="left">Directory objects that are owned by this service principal. Inherited from [DirectoryObject]. Requires version 2013-11-08 or newer. Read-only. Nullable.</td>
 </tr>
 <tr>
 	<td align="left">owners</td>
 	<td align="left"><a href="directoryobject.htm">DirectoryObject</a> collection</td>
-	<td align="left">Directory objects that are owners of this service principal. The owners are a set of non-admin users who are allowed to modify this object. Inherited from [DirectoryObject]. Requires version 2013-11-08 or newer. Directory objects that are owners of this service principal. The owners are a set of non-admin users who are allowed to modify this object. Inherited from [DirectoryObject]. Requires version 2013-11-08 or newer. Read-only. Nullable.</td>
+	<td align="left">Directory objects that are owners of this service principal. The owners are a set of non-admin users who are allowed to modify this object. Inherited from [DirectoryObject]. Requires version 2013-11-08 or newer. Read-only. Nullable.</td>
 </tr>
 </tbody>
 </table>
@@ -375,20 +371,13 @@
 </tbody>
 </table>
 
-        </div>
-        <div id="tocbar" class="col-md-3 visible-md visible-lg">
-            <p><a href="../../README.htm">API Reference</a></p>
-        <ul>
-            
-        </ul>
-        </div>
+        </div>        
     </div>
 </div>
 <!-- HTML Page Content End -->
 
 </div>
 
-</body>
 
 
 

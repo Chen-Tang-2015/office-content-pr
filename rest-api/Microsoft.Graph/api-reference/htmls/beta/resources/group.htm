@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-
-<body>
-
-    <div id="holder">
+<div id="holder">
 
 <!-- HTML Page Content Start -->
+
 <div class="container wrapper" id="body">
     <div class="row">
         <div class="col-md-9">
@@ -165,17 +161,17 @@
 <tr>
 	<td align="left">description</td>
 	<td align="left">String</td>
-	<td align="left">An optional description for the group. An optional description for the group.</td>
+	<td align="left">An optional description for the group.</td>
 </tr>
 <tr>
 	<td align="left">dirSyncEnabled</td>
 	<td align="left">Boolean</td>
-	<td align="left"><strong>true</strong> if this object is synced from an on-premises directory; <strong>false</strong> if this object was originally synced from an on-premises directory but is no longer synced; <strong>null</strong> if this object has never been synced from an on-premises directory (default). <strong>true</strong> if this object is synced from an on-premises directory; <strong>false</strong> if this object was originally synced from an on-premises directory but is no longer synced; <strong>null</strong> if this object has never been synced from an on-premises directory (default).</td>
+	<td align="left"><strong>true</strong> if this object is synced from an on-premises directory; <strong>false</strong> if this object was originally synced from an on-premises directory but is no longer synced; <strong>null</strong> if this object has never been synced from an on-premises directory (default).</td>
 </tr>
 <tr>
 	<td align="left">displayName</td>
 	<td align="left">String</td>
-	<td align="left">The display name for the group. This property is required when a group is created and it cannot be cleared during updates.  The display name for the group. This property is required when a group is created and it cannot be cleared during updates.</td>
+	<td align="left">The display name for the group. This property is required when a group is created and it cannot be cleared during updates.</td>
 </tr>
 <tr>
 	<td align="left">emailAddress</td>
@@ -205,52 +201,52 @@
 <tr>
 	<td align="left">lastDirSyncTime</td>
 	<td align="left">DateTimeOffset</td>
-	<td align="left">Indicates the last time at which the object was synced with the on-premises directory. Indicates the last time at which the object was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+	<td align="left">Indicates the last time at which the object was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
 </tr>
 <tr>
 	<td align="left">mail</td>
 	<td align="left">String</td>
-	<td align="left">The SMTP address for the group, for example, &quot;serviceadmins@contoso.onmicrosoft.com&quot;. The SMTP address for the group, for example, &quot;serviceadmins@contoso.onmicrosoft.com&quot;.</td>
+	<td align="left">The SMTP address for the group, for example, &quot;serviceadmins@contoso.onmicrosoft.com&quot;.</td>
 </tr>
 <tr>
 	<td align="left">mailEnabled</td>
 	<td align="left">Boolean</td>
-	<td align="left">Specifies whether the group is mail-enabled. If the <strong>securityEnabled</strong> property is also <strong>true</strong>, the group is a mail-enabled security group; otherwise, the group is a Microsoft Exchange distribution group. Only (pure) security groups can be created using Azure AD Graph. For this reason, the property must be set <strong>false</strong> when creating a group and it cannot be updated using Azure AD Graph. Specifies whether the group is mail-enabled. If the <strong>securityEnabled</strong> property is also <strong>true</strong>, the group is a mail-enabled security group; otherwise, the group is a Microsoft Exchange distribution group. Only (pure) security groups can be created using Azure AD Graph. For this reason, the property must be set <strong>false</strong> when creating a group and it cannot be updated using Azure AD Graph.</td>
+	<td align="left">Specifies whether the group is mail-enabled. If the <strong>securityEnabled</strong> property is also <strong>true</strong>, the group is a mail-enabled security group; otherwise, the group is a Microsoft Exchange distribution group. Only (pure) security groups can be created using Azure AD Graph. For this reason, the property must be set <strong>false</strong> when creating a group and it cannot be updated using Azure AD Graph.</td>
 </tr>
 <tr>
 	<td align="left">mailNickname</td>
 	<td align="left">String</td>
-	<td align="left">The mail alias for the group. This property must be specified when a group is created. The mail alias for the group. This property must be specified when a group is created.</td>
+	<td align="left">The mail alias for the group. This property must be specified when a group is created.</td>
 </tr>
 <tr>
 	<td align="left">objectId</td>
 	<td align="left">String</td>
-	<td align="left">The unique identifier for the group. Inherited from [DirectoryObject].                            <strong>Notes</strong>: <strong>key</strong>, immutable, not nullable, unique.             The unique identifier for the group. Inherited from [DirectoryObject].                            <strong>Notes</strong>: <strong>key</strong>, immutable, not nullable, unique.             Read-only.</td>
+	<td align="left">The unique identifier for the group. Inherited from [DirectoryObject].                            <strong>Notes</strong>: <strong>key</strong>, immutable, not nullable, unique.             Read-only.</td>
 </tr>
 <tr>
 	<td align="left">objectType</td>
 	<td align="left">String</td>
-	<td align="left">A string that identifies the object type. For groups the value is always “Group”. Inherited from [DirectoryObject]. A string that identifies the object type. For groups the value is always “Group”. Inherited from [DirectoryObject].</td>
+	<td align="left">A string that identifies the object type. For groups the value is always “Group”. Inherited from [DirectoryObject].</td>
 </tr>
 <tr>
 	<td align="left">onPremisesSecurityIdentifier</td>
 	<td align="left">String</td>
-	<td align="left">Contains the on-premises security identifier (SID) for the group that was synchronized from on-premises to the cloud.                            <strong>Notes</strong>: Requires version 1.5 or newer.             Contains the on-premises security identifier (SID) for the group that was synchronized from on-premises to the cloud.                            <strong>Notes</strong>: Requires version 1.5 or newer.</td>
+	<td align="left">Contains the on-premises security identifier (SID) for the group that was synchronized from on-premises to the cloud.                            <strong>Notes</strong>: Requires version 1.5 or newer.</td>
 </tr>
 <tr>
 	<td align="left">provisioningErrors</td>
 	<td align="left"><a href="provisioningerror.htm">ProvisioningError</a> collection</td>
-	<td align="left">A collection of error details that are preventing this group from being provisioned successfully.                            <strong>Notes</strong>: not nullable.             A collection of error details that are preventing this group from being provisioned successfully.                            <strong>Notes</strong>: not nullable.</td>
+	<td align="left">A collection of error details that are preventing this group from being provisioned successfully.                            <strong>Notes</strong>: not nullable.</td>
 </tr>
 <tr>
 	<td align="left">proxyAddresses</td>
 	<td align="left">String collection</td>
-	<td align="left"><strong>Notes</strong>: not nullable, the <strong>any</strong> operator is required for filter expressions on multi-valued properties; for more information, see <a href="https://msdn.microsoft.com/library/azure/dn727074.aspx" target="_blank">Supported Queries, Filters, and Paging Options</a>.                                                     <strong>Notes</strong>: not nullable, the <strong>any</strong> operator is required for filter expressions on multi-valued properties; for more information, see <a href="https://msdn.microsoft.com/library/azure/dn727074.aspx" target="_blank">Supported Queries, Filters, and Paging Options</a>.</td>
+	<td align="left"><strong>Notes</strong>: not nullable, the <strong>any</strong> operator is required for filter expressions on multi-valued properties; for more information, see <a href="https://msdn.microsoft.com/library/azure/dn727074.aspx" target="_blank">Supported Queries, Filters, and Paging Options</a>.</td>
 </tr>
 <tr>
 	<td align="left">securityEnabled</td>
 	<td align="left">Boolean</td>
-	<td align="left">Specifies whether the group is a security group. If the mailEnabled property is also true, the group is a mail-enabled security group; otherwise it is a security group. Only (pure) security groups can be created using Azure AD Graph. For this reason, the property must be set <strong>true</strong> when creating a group. Specifies whether the group is a security group. If the mailEnabled property is also true, the group is a mail-enabled security group; otherwise it is a security group. Only (pure) security groups can be created using Azure AD Graph. For this reason, the property must be set <strong>true</strong> when creating a group.</td>
+	<td align="left">Specifies whether the group is a security group. If the mailEnabled property is also true, the group is a mail-enabled security group; otherwise it is a security group. Only (pure) security groups can be created using Azure AD Graph. For this reason, the property must be set <strong>true</strong> when creating a group.</td>
 </tr>
 <tr>
 	<td align="left">unseenCount</td>
@@ -277,7 +273,7 @@
 <tr>
 	<td align="left">appRoleAssignments</td>
 	<td align="left"><a href="approleassignment.htm">AppRoleAssignment</a> collection</td>
-	<td align="left">Contains the set of applications that a group is assigned to.                            <strong>Notes</strong>: Requires version 1.5 or newer.             Contains the set of applications that a group is assigned to.                            <strong>Notes</strong>: Requires version 1.5 or newer.             Read-only. Nullable.</td>
+	<td align="left">Contains the set of applications that a group is assigned to.                            <strong>Notes</strong>: Requires version 1.5 or newer.             Read-only. Nullable.</td>
 </tr>
 <tr>
 	<td align="left">calendar</td>
@@ -312,12 +308,12 @@
 <tr>
 	<td align="left">memberOf</td>
 	<td align="left"><a href="directoryobject.htm">DirectoryObject</a> collection</td>
-	<td align="left">Groups that this group is a member of. Inherited from [DirectoryObject].            HTTP Methods: GET (supported for all groups)  Groups that this group is a member of. Inherited from [DirectoryObject].            HTTP Methods: GET (supported for all groups)  Read-only. Nullable.</td>
+	<td align="left">Groups that this group is a member of. Inherited from [DirectoryObject].            HTTP Methods: GET (supported for all groups)  Read-only. Nullable.</td>
 </tr>
 <tr>
 	<td align="left">members</td>
 	<td align="left"><a href="directoryobject.htm">DirectoryObject</a> collection</td>
-	<td align="left">Users, contacts, and groups that are members of this group. Inherited from [DirectoryObject].            HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) Users, contacts, and groups that are members of this group. Inherited from [DirectoryObject].            HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) Read-only. Nullable.</td>
+	<td align="left">Users, contacts, and groups that are members of this group. Inherited from [DirectoryObject].            HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) Read-only. Nullable.</td>
 </tr>
 <tr>
 	<td align="left">notes</td>
@@ -327,7 +323,7 @@
 <tr>
 	<td align="left">owners</td>
 	<td align="left"><a href="directoryobject.htm">DirectoryObject</a> collection</td>
-	<td align="left">The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Requires version 2013-11-08 or newer. Inherited from [DirectoryObject].            HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Requires version 2013-11-08 or newer. Inherited from [DirectoryObject].            HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) Read-only. Nullable.</td>
+	<td align="left">The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Requires version 2013-11-08 or newer. Inherited from [DirectoryObject].            HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) Read-only. Nullable.</td>
 </tr>
 <tr>
 	<td align="left">photo</td>
@@ -519,20 +515,13 @@
 </tbody>
 </table>
 
-        </div>
-        <div id="tocbar" class="col-md-3 visible-md visible-lg">
-            <p><a href="../../README.htm">API Reference</a></p>
-        <ul>
-            
-        </ul>
-        </div>
+        </div>        
     </div>
 </div>
 <!-- HTML Page Content End -->
 
 </div>
 
-</body>
 
 
 

@@ -31,15 +31,15 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|changeKey|String|Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object.|
-|classId|Guid|The class identifier. The class identifier.|
-|id|String|The group's unique identifier. The group's unique identifier. Read-only.|
-|name|String|The group name. The group name.|
+|changeKey|String|Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object.|
+|classId|Guid|The class identifier.|
+|id|String|The group's unique identifier. Read-only.|
+|name|String|The group name.|
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|calendars|[Calendar](calendar.md) collection|The calendars in the calendar group. Navigation property. The calendars in the calendar group. Navigation property. Read-only. Nullable.|
+|calendars|[Calendar](calendar.md) collection|The calendars in the calendar group. Navigation property. Read-only. Nullable.|
 
 ### Methods
 

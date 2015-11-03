@@ -32,16 +32,16 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|associationType|String|A string that identifies the association type to which the change applies. The value is either “Member” or “Manager”. A string that identifies the association type to which the change applies. The value is either “Member” or “Manager”.|
+|associationType|String|A string that identifies the association type to which the change applies. The value is either “Member” or “Manager”.|
 |deletionTimestamp|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|objectId|String|The unique identifier for the directory link change object. For **DirectoryLinkChange** objects, the value is always 00000000-0000-0000-0000-000000000000. Inherited from [DirectoryObject].                            **Note: key** immutable, not nullable, unique             The unique identifier for the directory link change object. For **DirectoryLinkChange** objects, the value is always 00000000-0000-0000-0000-000000000000. Inherited from [DirectoryObject].                            **Note: key** immutable, not nullable, unique             Read-only.|
-|objectType|String|A string that identifies the object type. For **DirectoryLinkChange** objects, the value is always “DirectoryLinkChange”. [DirectoryObject] A string that identifies the object type. For **DirectoryLinkChange** objects, the value is always “DirectoryLinkChange”. [DirectoryObject]|
-|sourceObjectId|String|The object ID for the source object; for example, ”7373b0af-d462-406e-ad26-f2bc96d823d8”. The object ID for the source object; for example, ”7373b0af-d462-406e-ad26-f2bc96d823d8”.|
-|sourceObjectType|String|A string that identifies the source object type; this will be one of the following: “Group”, “User”, or “Contact”. A string that identifies the source object type; this will be one of the following: “Group”, “User”, or “Contact”.|
-|sourceObjectUri|String|The URI for the source object; for example, `“https://graph.windows.net/contoso.com/groups/7373b0af-d462-406e-ad26-f2bc96d823d8”`. The URI for the source object; for example, `“https://graph.windows.net/contoso.com/groups/7373b0af-d462-406e-ad26-f2bc96d823d8”`.|
-|targetObjectId|String|The object ID for the target object; for example, “dca803ab-bf26-4753-bf20-e1c56a9c34e2”. The object ID for the target object; for example, “dca803ab-bf26-4753-bf20-e1c56a9c34e2”.|
-|targetObjectType|String|A string that identifies the source object type; this will be one of the following: “Group”, “User”, or “Contact”. A string that identifies the source object type; this will be one of the following: “Group”, “User”, or “Contact”.|
-|targetObjectUri|String|The URI for the target object; for example, `“https://graph.windows.net/contoso.com/users/dca803ab-bf26-4753-bf20-e1c56a9c34e2”`. The URI for the target object; for example, `“https://graph.windows.net/contoso.com/users/dca803ab-bf26-4753-bf20-e1c56a9c34e2”`.|
+|objectId|String|The unique identifier for the directory link change object. For **DirectoryLinkChange** objects, the value is always 00000000-0000-0000-0000-000000000000. Inherited from [DirectoryObject].                            **Note: key** immutable, not nullable, unique             Read-only.|
+|objectType|String|A string that identifies the object type. For **DirectoryLinkChange** objects, the value is always “DirectoryLinkChange”. [DirectoryObject]|
+|sourceObjectId|String|The object ID for the source object; for example, ”7373b0af-d462-406e-ad26-f2bc96d823d8”.|
+|sourceObjectType|String|A string that identifies the source object type; this will be one of the following: “Group”, “User”, or “Contact”.|
+|sourceObjectUri|String|The URI for the source object; for example, `“https://graph.windows.net/contoso.com/groups/7373b0af-d462-406e-ad26-f2bc96d823d8”`.|
+|targetObjectId|String|The object ID for the target object; for example, “dca803ab-bf26-4753-bf20-e1c56a9c34e2”.|
+|targetObjectType|String|A string that identifies the source object type; this will be one of the following: “Group”, “User”, or “Contact”.|
+|targetObjectUri|String|The URI for the target object; for example, `“https://graph.windows.net/contoso.com/users/dca803ab-bf26-4753-bf20-e1c56a9c34e2”`.|
 
 ### Relationships
 None
@@ -54,9 +54,9 @@ None
 |[Get directoryLinkChange](../api/directorylinkchange_get.md) | [directoryLinkChange](directorylinkchange.md) |Read properties and relationships of directoryLinkChange object.|
 |[Update](../api/directorylinkchange_update.md) | [directoryLinkChange](directorylinkchange.md)	|Update directoryLinkChange object. |
 |[Delete](../api/directorylinkchange_delete.md) | None |Delete directoryLinkChange object. |
-|[Checkmembergroups](../api/directorylinkchange_checkmembergroups.md)|String collection||
-|[Get MemberGroups](../api/directorylinkchange_getmembergroups.md)|String collection||
-|[Get MemberObjects](../api/directorylinkchange_getmemberobjects.md)|String collection||
+|[checkMemberGroups](../api/directorylinkchange_checkmembergroups.md)|String collection||
+|[getMemberGroups](../api/directorylinkchange_getmembergroups.md)|String collection||
+|[getMemberObjects](../api/directorylinkchange_getmemberobjects.md)|String collection||
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

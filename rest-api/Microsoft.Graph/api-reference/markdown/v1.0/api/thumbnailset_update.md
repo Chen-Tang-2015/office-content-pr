@@ -20,10 +20,10 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|large|thumbnail|A 1920x1920 scaled thumbnail. A 1920x1920 scaled thumbnail.|
-|medium|thumbnail|A 176x176 scaled thumbnail. A 176x176 scaled thumbnail.|
-|small|thumbnail|A 48x48 cropped thumbnail. A 48x48 cropped thumbnail.|
-|source|thumbnail|A custom thumbnail image or the original image used to generate other thumbnails. A custom thumbnail image or the original image used to generate other thumbnails.|
+|large|thumbnail|A 1920x1920 scaled thumbnail.|
+|medium|thumbnail|A 176x176 scaled thumbnail.|
+|small|thumbnail|A 48x48 cropped thumbnail.|
+|source|thumbnail|A custom thumbnail image or the original image used to generate other thumbnails.|
 
 ### Response
 If successful, this method returns a `200 OK` response code and updated [thumbnailSet](../resources/thumbnailset.md) object in the response body.
@@ -35,7 +35,7 @@ Here is an example of the request.
   "name": "update_thumbnailset"
 }-->
 ```http
-PUT https://graph.microsoft.com/v1.0/drive/root/thumbnails/<id>
+PATCH https://graph.microsoft.com/v1.0/drive/root/thumbnails/<id>
 Content-type: application/json
 Content-length: 456
 

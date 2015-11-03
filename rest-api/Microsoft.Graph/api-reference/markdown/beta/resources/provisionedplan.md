@@ -25,9 +25,9 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|capabilityStatus|String|For example, “Enabled”. For example, “Enabled”.|
-|provisioningStatus|String|For example, “Success”. For example, “Success”.|
-|service|String|The name of the service; for example, “AccessControlS2S” The name of the service; for example, “AccessControlS2S”|
+|capabilityStatus|String|For example, “Enabled”.|
+|provisioningStatus|String|For example, “Success”.|
+|service|String|The name of the service; for example, “AccessControlS2S”|
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

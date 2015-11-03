@@ -20,9 +20,9 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|driveType|String|Enumerated value that identifies the type of drive account. OneDrive drives will show as `personal`. Enumerated value that identifies the type of drive account. OneDrive drives will show as `personal`.|
-|owner|identitySet|The user account that owns the drive. The user account that owns the drive.|
-|quota|quota|Information about the drive's storage space quota. Information about the drive's storage space quota.|
+|driveType|String|Enumerated value that identifies the type of drive account. OneDrive drives will show as `personal`.|
+|owner|identitySet|The user account that owns the drive.|
+|quota|quota|Information about the drive's storage space quota.|
 
 ### Response
 If successful, this method returns a `200 OK` response code and updated [drive](../resources/drive.md) object in the response body.
@@ -34,7 +34,7 @@ Here is an example of the request.
   "name": "update_drive"
 }-->
 ```http
-PUT https://graph.microsoft.com/v1.0/drive
+PATCH https://graph.microsoft.com/v1.0/drive
 Content-type: application/json
 Content-length: 458
 

@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-
-<body>
-
-    <div id="holder">
+<div id="holder">
 
 <!-- HTML Page Content Start -->
+
 <div class="container wrapper" id="body">
     <div class="row">
         <div class="col-md-9">
@@ -50,82 +46,82 @@ PATCH /drives/&lt;id&gt;/root
 <tr>
 	<td align="left">audio</td>
 	<td align="left">audio</td>
-	<td align="left">Audio metadata, if the item is an audio file. Read-only. Audio metadata, if the item is an audio file. Read-only.</td>
+	<td align="left">Audio metadata, if the item is an audio file. Read-only.</td>
 </tr>
 <tr>
 	<td align="left">cTag</td>
 	<td align="left">String</td>
-	<td align="left">An eTag for the content of the item. This eTag is not changed if only the metadata is changed. <strong>Note</strong> This property is not returned if the Item is a folder. Read-only. An eTag for the content of the item. This eTag is not changed if only the metadata is changed. <strong>Note</strong> This property is not returned if the Item is a folder. Read-only.</td>
+	<td align="left">An eTag for the content of the item. This eTag is not changed if only the metadata is changed. <strong>Note</strong> This property is not returned if the Item is a folder. Read-only.</td>
 </tr>
 <tr>
 	<td align="left">content</td>
 	<td align="left">Stream</td>
-	<td align="left">The content stream, if the Item represents a file. The content stream, if the Item represents a file.</td>
+	<td align="left">The content stream, if the Item represents a file.</td>
 </tr>
 <tr>
 	<td align="left">createdBy</td>
 	<td align="left">identitySet</td>
-	<td align="left">Identity of the user, device, and application which created the item. Read-only. Identity of the user, device, and application which created the item. Read-only.</td>
+	<td align="left">Identity of the user, device, and application which created the item. Read-only.</td>
 </tr>
 <tr>
 	<td align="left">createdDateTime</td>
 	<td align="left">DateTimeOffset</td>
-	<td align="left">Date and time of item creation. Read-only. Date and time of item creation. Read-only.</td>
+	<td align="left">Date and time of item creation. Read-only.</td>
 </tr>
 <tr>
 	<td align="left">deleted</td>
 	<td align="left">deleted</td>
-	<td align="left">Information about the deleted state of the item. Read-only. Information about the deleted state of the item. Read-only.</td>
+	<td align="left">Information about the deleted state of the item. Read-only.</td>
 </tr>
 <tr>
 	<td align="left">description</td>
 	<td align="left">String</td>
-	<td align="left">Provide a user-visible description of the item. Read-write. Provide a user-visible description of the item. Read-write.</td>
+	<td align="left">Provide a user-visible description of the item. Read-write.</td>
 </tr>
 <tr>
 	<td align="left">eTag</td>
 	<td align="left">String</td>
-	<td align="left">eTag for the entire item (metadata + content). Read-only. eTag for the entire item (metadata + content). Read-only.</td>
+	<td align="left">eTag for the entire item (metadata + content). Read-only.</td>
 </tr>
 <tr>
 	<td align="left">file</td>
 	<td align="left">file</td>
-	<td align="left">File metadata, if the item is a file. Read-only. File metadata, if the item is a file. Read-only.</td>
+	<td align="left">File metadata, if the item is a file. Read-only.</td>
 </tr>
 <tr>
 	<td align="left">fileSystemInfo</td>
 	<td align="left">fileSystemInfo</td>
-	<td align="left">File system information on client. Read-write. File system information on client. Read-write.</td>
+	<td align="left">File system information on client. Read-write.</td>
 </tr>
 <tr>
 	<td align="left">folder</td>
 	<td align="left">folder</td>
-	<td align="left">Folder metadata, if the item is a folder. Read-only. Folder metadata, if the item is a folder. Read-only.</td>
+	<td align="left">Folder metadata, if the item is a folder. Read-only.</td>
 </tr>
 <tr>
 	<td align="left">image</td>
 	<td align="left">image</td>
-	<td align="left">Image metadata, if the item is an image. Read-only. Image metadata, if the item is an image. Read-only.</td>
+	<td align="left">Image metadata, if the item is an image. Read-only.</td>
 </tr>
 <tr>
 	<td align="left">lastModifiedBy</td>
 	<td align="left">identitySet</td>
-	<td align="left">Identity of the user, device, and application which last modified the item. Read-only. Identity of the user, device, and application which last modified the item. Read-only.</td>
+	<td align="left">Identity of the user, device, and application which last modified the item. Read-only.</td>
 </tr>
 <tr>
 	<td align="left">lastModifiedDateTime</td>
 	<td align="left">DateTimeOffset</td>
-	<td align="left">Date and time the item was last modified. Read-only. Date and time the item was last modified. Read-only.</td>
+	<td align="left">Date and time the item was last modified. Read-only.</td>
 </tr>
 <tr>
 	<td align="left">location</td>
 	<td align="left">location</td>
-	<td align="left">Location metadata, if the item has location data. Read-only. Location metadata, if the item has location data. Read-only.</td>
+	<td align="left">Location metadata, if the item has location data. Read-only.</td>
 </tr>
 <tr>
 	<td align="left">name</td>
 	<td align="left">String</td>
-	<td align="left">The name of the item (filename and extension). Read-write. The name of the item (filename and extension). Read-write.</td>
+	<td align="left">The name of the item (filename and extension). Read-write.</td>
 </tr>
 <tr>
 	<td align="left">openWith</td>
@@ -135,17 +131,17 @@ PATCH /drives/&lt;id&gt;/root
 <tr>
 	<td align="left">parentReference</td>
 	<td align="left">itemReference</td>
-	<td align="left">Parent information, if the item has a parent. Read-write. Parent information, if the item has a parent. Read-write.</td>
+	<td align="left">Parent information, if the item has a parent. Read-write.</td>
 </tr>
 <tr>
 	<td align="left">photo</td>
 	<td align="left">photo</td>
-	<td align="left">Photo metadata, if the item is a photo. Read-only. Photo metadata, if the item is a photo. Read-only.</td>
+	<td align="left">Photo metadata, if the item is a photo. Read-only.</td>
 </tr>
 <tr>
 	<td align="left">searchResult</td>
 	<td align="left">searchResult</td>
-	<td align="left">Search metadata, if the item is from a search result. Search metadata, if the item is from a search result.</td>
+	<td align="left">Search metadata, if the item is from a search result.</td>
 </tr>
 <tr>
 	<td align="left">shared</td>
@@ -155,7 +151,7 @@ PATCH /drives/&lt;id&gt;/root
 <tr>
 	<td align="left">size</td>
 	<td align="left">Int64</td>
-	<td align="left">Size of the item in bytes. Read-only. Size of the item in bytes. Read-only.</td>
+	<td align="left">Size of the item in bytes. Read-only.</td>
 </tr>
 <tr>
 	<td align="left">specialFolder</td>
@@ -165,7 +161,7 @@ PATCH /drives/&lt;id&gt;/root
 <tr>
 	<td align="left">video</td>
 	<td align="left">video</td>
-	<td align="left">Video metadata, if the item is a video. Read-only. Video metadata, if the item is a video. Read-only.</td>
+	<td align="left">Video metadata, if the item is a video. Read-only.</td>
 </tr>
 <tr>
 	<td align="left">webDavUrl</td>
@@ -175,7 +171,7 @@ PATCH /drives/&lt;id&gt;/root
 <tr>
 	<td align="left">webUrl</td>
 	<td align="left">String</td>
-	<td align="left">URL that displays the resource in the browser. Read-only. URL that displays the resource in the browser. Read-only.</td>
+	<td align="left">URL that displays the resource in the browser. Read-only.</td>
 </tr>
 </tbody>
 </table>
@@ -491,20 +487,13 @@ Content-length: 3179
 </code></pre>
 
 
-        </div>
-        <div id="tocbar" class="col-md-3 visible-md visible-lg">
-            <p><a href="../../README.htm">API Reference</a></p>
-        <ul>
-            
-        </ul>
-        </div>
+        </div>        
     </div>
 </div>
 <!-- HTML Page Content End -->
 
 </div>
 
-</body>
 
 
 

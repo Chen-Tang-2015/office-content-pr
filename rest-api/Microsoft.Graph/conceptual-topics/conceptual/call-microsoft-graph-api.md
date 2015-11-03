@@ -5,6 +5,7 @@ _**Applies to:** Office 365_
 In this article:
   
 - [Call Microsoft Graph API service via REST](#msg_calling_rest_api)
+  - [Microsoft Graph API metadata](#msg_metadata)
   - [Navigation from a tenant-level entity set to a member](#msg_nav_from_set_to_member) 
   - [Projection from an entity to a subset of its properties](#msg_proj_from_entity_to_props) 
   - [Projection from an entity set to properties set](#msg_proj_from_entities_to_props)
@@ -40,13 +41,15 @@ In this URL:
 For example, if your tenant domain is `https://contoso.onmicrosoft.com`, and you are targeting the beta 
 version of the service, you can send requests to `https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com`.
 
+<a name="msg_metadata"> </a>
+###Microsoft Graph API metadata
 The service document ($metadata) is published at the service root. For example, you can view the service document for the v1.0 and beta versions via the following URLs.
 
-Microsoft Graph API v1.0 metadata.
+Microsoft Graph API `v1.0` metadata.
 ```
 	https://graph.microsoft.com/v1.0/$metadata
 ```
-Microsoft Graph API beta metadata.
+Microsoft Graph API `beta metadata.
 ```
 	https://graph.microsoft.com/beta/$metadata
 ```
@@ -61,12 +64,12 @@ A resource URL is determined by the Microsoft Graph API entity data model. The p
 The path URL resource names and query parameters are case insensitive. However, values you assign, entity IDs, and 
 other base64 encoded values are case sensitive.
 
-A few API calls basic programming patterns are shown in the following section.
+A few basic programming patterns calls to the API are shown in the following section.
 
 <a name="msg_nav_from_set_to_member"> </a>
 ###Navigation from a set to a member
 
-To view the information about a user, get the `User` entity from the `users` collection on the tenant. To do so, you can
+To view the information about a user, you get the `User` entity from the `users` collection on the tenant. To do so, you can
 navigate from the tenant to users and then to the specific user identified by its identifier, using an HTTPS GET request. For a `User` entity, either the `objectId` or `userPrincipalName` property may be used as the identifier. The following example request uses the `userPrincipalName` value as the user's Id. 
 
 ```no-highlight 
@@ -288,7 +291,7 @@ content-length: 96
 
 The request payload contains the input to the `Microsoft.Graph.Copy` action, which is also defined in the $metadata.
 
-As you can see from the above examples of the REST API calls, with a single unified endpoint, the Microsoft Graph API simplifies the application programming interface for all the Office 365 services as well and the Azure Active Directory service. As a result, the boundaries of the otherwise silo-ed services disappear. As an app developer, you are no longer required to keep track of the data sources and to implement custom interfaces between various data sources. 
+With a single unified endpoint, the Microsoft Graph API simplifies the application programming interface for all the Office 365 services as well and the Azure AD service. As a result, the boundaries of the otherwise silo-ed services disappear. As an app developer, you are no longer required to keep track of the data sources and to implement custom interfaces between various data sources. 
 
 ##Additional Resources##
 

@@ -51,18 +51,18 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|driveType|String|Enumerated value that identifies the type of drive account. OneDrive drives will show as `personal`. Enumerated value that identifies the type of drive account. OneDrive drives will show as `personal`.|
-|id|String|The unique identifier of the drive. The unique identifier of the drive. Read-only.|
-|owner|[identitySet](identityset.md)|The user account that owns the drive. The user account that owns the drive.|
-|quota|[quota](quota.md)|Information about the drive's storage space quota. Information about the drive's storage space quota.|
+|driveType|String|Enumerated value that identifies the type of drive account. OneDrive drives will show as `personal`.|
+|id|String|The unique identifier of the drive. Read-only.|
+|owner|[identitySet](identityset.md)|The user account that owns the drive.|
+|quota|[quota](quota.md)|Information about the drive's storage space quota.|
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|items|[item](item.md) collection|All items contained in the drive. All items contained in the drive. Read-only. Nullable.|
-|root|[item](item.md)|The root folder of the drive. The root folder of the drive. Read-only.|
+|items|[item](item.md) collection|All items contained in the drive. Read-only. Nullable.|
+|root|[item](item.md)|The root folder of the drive. Read-only.|
 |shared|[item](item.md) collection| Read-only. Nullable.|
-|special|[item](item.md) collection|Collection of common folders available in OneDrive. Collection of common folders available in OneDrive. Read-only. Nullable.|
+|special|[item](item.md) collection|Collection of common folders available in OneDrive. Read-only. Nullable.|
 
 ### Methods
 
@@ -77,7 +77,7 @@ Here is a JSON representation of the resource
 |[List special](../api/drive_list_special.md) |[item](item.md) collection| Get a special object collection.|
 |[Update](../api/drive_update.md) | [drive](drive.md)	|Update drive object. |
 |[Delete](../api/drive_delete.md) | None |Delete drive object. |
-|[Allphotos](../api/drive_allphotos.md)|[item](item.md) collection||
+|[allPhotos](../api/drive_allphotos.md)|[item](item.md) collection||
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->
