@@ -242,4 +242,5 @@ You can see more calling the .NET client library in action in this [sample app](
 
 ##Additional Resources##
 
+- [Call Microsoft Graph API service via REST](call-microsoft-graph-api.md)
 - [Hands on lab: Deep dive into the Office 365 unified API](http://dev.office.com/hands-on-labs/4585)
