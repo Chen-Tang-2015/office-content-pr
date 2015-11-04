@@ -59,8 +59,6 @@ use of the REST API.
 
 A resource URL is determined by the Microsoft Graph API entity data model. The prescription is outlined in the entity metadata schema ($metadata). 
 
->  Note: To learn how interpret the entity metadata schema ($metadata), see [Understand Microsoft Graph API metadata](understand-microsoft-graph-metadata.md ).
-
 The path URL resource names and query parameters are case insensitive. However, values you assign, entity IDs, and 
 other base64 encoded values are case sensitive.
 
