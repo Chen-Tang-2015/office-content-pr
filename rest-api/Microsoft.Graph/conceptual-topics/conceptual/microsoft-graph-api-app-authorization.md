@@ -35,7 +35,7 @@ In this article:
 To get your app authorized, you must get the user authenticated first. You do this by redirecting the user to the Azure Active Directory (Azure AD) authorization endpoint, along with your app information, to sign in to their Office 365 account. Once the user is signed in, and consents to 
 the permissions requested by your app (if the user has not done so already), your app will receive an authorization code required to acquire an OAuth access token.
 
-> Note:  You can do this by calling methods on the [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/en-us/library/azure/jj573266.aspx). For more information about authorization flow, see [Authorization Code Grant Flow](https://msdn.microsoft.com/en-us/library/azure/dn645542.aspx)
+> Note:  You can do this by calling methods on the [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/en-us/library/azure/jj573266.aspx). For more information about authorization flow, see [Authorization Code Grant Flow](https://msdn.microsoft.com/en-us/library/azure/dn645542.aspx).
 
 Authorizing an app starts with submitting an HTTPS GET request using the following URL:
  
