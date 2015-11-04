@@ -113,7 +113,7 @@ Some of the benefits of using Microsoft Graph API  are as follows:
 ## What's in Microsoft Graph API?
 Currently, the Microsoft Graph API supports programmatic access to the following entities.
 
-![Office 365 unified API currently available entities.](./images/O365_unified_API_entities.png)
+![Office 365 unified API currently available entities.](./images/entities.png)
 
 **Users**
 
