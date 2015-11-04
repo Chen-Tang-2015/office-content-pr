@@ -1,5 +1,5 @@
 
-# Microsoft Graph API Frequently Asked Questions (FAQs)
+# Microsoft Graph Frequently Asked Questions (FAQs)
 
 _**Applies to:** Office 365_
  
@@ -81,11 +81,11 @@ Using the Microsoft Graph API, you don't have to first discover service endpoint
 
 |   **Operation**                  |  **API**                          |  **Service endpoint** |
 |:-----------------------------|:-----------------------------------------|:-----------------|
-| Discover service endpoints for Office 365 API                |     `Office 365 unified API`           | Not needed <!-- notes -->|
+| Discover service endpoints for Office 365 API                |     `Microsoft Graph API`           | Not needed <!-- notes -->|
 | Get users           |     `Office 365 unified API` | _https://_**graph.microsoft.com**_/beta/contoso.onmicrosoft.com/users_ |
-| Get message collection from the Inbox       |     `Office 365 unified API`           | _https://_**graph.microsoft.com**_/beta/me/messages_  |
-| Get Joe's files   |     `Office 365 unified API `  | _https://_**graph.microsoft.com**_/beta/me/files_ |
-<!--| Get TrendingAround, for the current authenticated user           |     `Office 365 unified API`                     | _https://_**graph.microsoft.com**_/beta/me/trendingaround_   |-->
+| Get message collection from the Inbox       |     `Microsoft Graph API`           | _https://_**graph.microsoft.com**_/beta/me/messages_  |
+| Get Joe's files   |     `Microsoft Graph API `  | _https://_**graph.microsoft.com**_/beta/me/files_ |
+<!--| Get TrendingAround, for the current authenticated user           |     `Microsoft Graph API`                     | _https://_**graph.microsoft.com**_/beta/me/trendingaround_   |-->
 
 Some of the benefits of using Microsoft Graph API  are as follows:
 
