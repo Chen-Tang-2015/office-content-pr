@@ -211,4 +211,5 @@ time, so it is important that all apps be able to handle the basic error codes i
 
 ##Additional Resources##
 
+- [Microsoft Graph API release notes and known issues](microsoft-graph-api-release-notes-known-issues.md )
 - [Hands on lab: Deep dive into the Microsoft Graph API](http://dev.office.com/hands-on-labs/4585)
