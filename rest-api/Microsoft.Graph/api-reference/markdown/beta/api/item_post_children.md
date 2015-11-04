@@ -1,39 +1,53 @@
-# Create children
+# driveItem: post to children
 
-Use this API to create a new children.
+Your app can upload an item to OneDrive by providing a URL. OneDrive will
+download the file directly from a remote server so your app doesn't have to
+upload the file's bytes. This is especially useful for mobile clients or browser
+add-ins, where the file contents aren't available, or are expensive to transfer.
+
 ### Prerequisites
 The following **scopes** are required to execute this API: 
+
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /drive/root/children
-POST /drive/items/<id>/children
-POST /drives/<id>/root/children
+POST /drive/items/{item-id}/children
+POST /drive/root:/{item-path}:/children
 
 ```
 ### Request headers
-| Name       | Type | Description|
-|:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Name | Type  | Description                                                                                    |
+|:------------|:-------|:-----------------------------------------------------------------------------------------------|
+| Prefer    | string | Set to `respond-async` to enable asynchronous item transfer. Otherwise the request is aborted. |
 
 ### Request body
-In the request body, supply a JSON representation of [item](../resources/item.md) object.
-
+The contents of the request body should be the JSON representation of the item
+to create from the remote URL. Note that when the OneDrive server downloads the file
+from the remote URL, it will not authenticate as the user, so the URL must be
+publicly accessible.
 
 ### Response
-If successful, this method returns `201, Created` response code and [item](../resources/item.md) object in the response body.
+If successful, this method returns `201 Created` response code and [item](../resources/item.md) object in the response body.
 
 ### Example
 ##### Request
-Here is an example of the request.
+
 <!-- {
   "blockType": "request",
   "name": "create_item_from_item"
 }-->
-```http
-POST https://graph.microsoft.com/beta/drive/root
 ```
-In the request body, supply a JSON representation of [item](../resources/item.md) object.
+POST /drive/items/{item-id}/children
+Content-Type: application/json
+Prefer: respond-async
+
+{
+  "@content.sourceUrl": "http://wscont2.apps.microsoft.com/winstore/1x/e33e38d9-d138-42a1-b252-27da1924ca87/Screenshot.225037.100000.jpg",
+  "name": "halo-screenshot.jpg",
+  "file": { }
+}
+```
+
 ##### Response
 Here is an example of the response.
 <!-- {
@@ -42,157 +56,27 @@ Here is an example of the response.
   "@odata.type": "microsoft.graph.item"
 } -->
 ```http
-HTTP/1.1 201 Created
-Content-type: application/json
-Content-length: 3179
-
-{
-  "content": "content-value",
-  "createdBy": {
-    "application": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    },
-    "device": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    },
-    "user": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    }
-  },
-  "createdDateTime": "datetime-value",
-  "cTag": "cTag-value",
-  "description": "description-value",
-  "eTag": "eTag-value",
-  "id": "id-value",
-  "lastModifiedBy": {
-    "application": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    },
-    "device": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    },
-    "user": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    }
-  },
-  "lastModifiedDateTime": "datetime-value",
-  "name": "name-value",
-  "parentReference": {
-    "driveId": "driveId-value",
-    "id": "id-value",
-    "path": "path-value"
-  },
-  "size": 99,
-  "webDavUrl": "webDavUrl-value",
-  "webUrl": "webUrl-value",
-  "audio": {
-    "album": "album-value",
-    "albumArtist": "albumArtist-value",
-    "artist": "artist-value",
-    "bitrate": 99,
-    "composers": "composers-value",
-    "copyright": "copyright-value",
-    "disc": 99,
-    "discCount": 99,
-    "duration": 99,
-    "genre": "genre-value",
-    "hasDrm": true,
-    "isVariableBitrate": true,
-    "title": "title-value",
-    "track": 99,
-    "trackCount": 99,
-    "year": 99
-  },
-  "deleted": {
-    "state": "state-value"
-  },
-  "file": {
-    "hashes": {
-      "crc32Hash": "crc32Hash-value",
-      "sha1Hash": "sha1Hash-value"
-    },
-    "mimeType": "mimeType-value"
-  },
-  "fileSystemInfo": {
-    "createdDateTime": "datetime-value",
-    "lastModifiedDateTime": "datetime-value"
-  },
-  "folder": {
-    "childCount": 99
-  },
-  "image": {
-    "height": 99,
-    "width": 99
-  },
-  "location": {
-    "altitude": 99,
-    "latitude": 99,
-    "longitude": 99
-  },
-  "openWith": {
-    "web": {
-      "app": {
-        "displayName": "displayName-value",
-        "id": "id-value"
-      },
-      "viewUrl": "viewUrl-value",
-      "editUrl": "editUrl-value",
-      "viewPostParameters": "viewPostParameters-value",
-      "editPostParameters": "editPostParameters-value"
-    },
-    "webEmbedded": {
-      "app": {
-        "displayName": "displayName-value",
-        "id": "id-value"
-      },
-      "viewUrl": "viewUrl-value",
-      "editUrl": "editUrl-value",
-      "viewPostParameters": "viewPostParameters-value",
-      "editPostParameters": "editPostParameters-value"
-    }
-  },
-  "photo": {
-    "height": 99,
-    "width": 99,
-    "id": "id-value"
-  },
-  "searchResult": {
-    "onClickTelemetryUrl": "onClickTelemetryUrl-value"
-  },
-  "shared": {
-    "owner": {
-      "application": {
-        "displayName": "displayName-value",
-        "id": "id-value"
-      },
-      "device": {
-        "displayName": "displayName-value",
-        "id": "id-value"
-      },
-      "user": {
-        "displayName": "displayName-value",
-        "id": "id-value"
-      }
-    },
-    "scope": "scope-value"
-  },
-  "specialFolder": {
-    "name": "name-value"
-  },
-  "video": {
-    "bitrate": 99,
-    "duration": 99,
-    "height": 99,
-    "width": 99
-  }
-}
+HTTP/1.1 202 Accepted
+Location: https://onedrive.com/monitor/113jlkjlkjasd1212abcascaf
 ```
+
+The value of the `Location` header provides a URL that can be used to get
+the current state of the operation and let you know when the upload has finished.
+
+### Upload session response
+To retrieve the current status of the upload, issue a GET request to the URL
+in the `Location` header. If the response returns an `HTTP 202` then the
+body of the response is an [AsyncJobStatus](../resources/asyncJobStatus.md)
+resource that defines the current status of the job.
+
+If the upload has completed, the GET request will return an `HTTP 303 See Other`
+response with a new `Location` header that will take you to the item resource for
+the uploaded item.
+
+
+## Notes
+
+Uploading an item to OneDrive for Business using a URL is not yet supported. However, uploading an item to OneDrive for Business using data URI's is supported.
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

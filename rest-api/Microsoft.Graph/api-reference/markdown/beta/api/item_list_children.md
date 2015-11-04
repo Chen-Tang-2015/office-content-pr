@@ -1,47 +1,52 @@
 # List children
 
-Retrieve a list of item objects.
+Items with the folder facet may contain one or more child items. This API
+lists the contents of the item's `children` collection using either the item ID
+or path to the item.
+
 ### Prerequisites
 The following **scopes** are required to execute this API: 
+
 ### HTTP request
-<!-- { "blockType": "ignored" } -->
 ```http
-GET /drive/root/children
-GET /drive/items/<id>/children
-GET /drives/<id>/root/children
+GET /drive/items/{item-id}/children
+GET /drive/root:/{item-path}:/children
 ```
+
 ### Optional query parameters
 |Name|Value|Description|
 |:---------------|:--------|:-------|
-|$count|none|The count of related entities can be requested by specifying the $count query option.|
 |$expand|string|Comma-separated list of relationships to expand and include in the response. See relationships table of [item](../resources/item.md) for supported names. |
 |$filter|string|Filter string that lets you filter the response based on a set of criteria.|
 |$orderby|string|Comma-separated list of properties that are used to sort the order of items in the response collection.|
 |$select|string|Comma-separated list of properties to include in the response.|
-|$skip|int|The number of items to skip in a result set.|
-|$skipToken|string|Paging token that is used to get the next set of results.|
 |$top|int|The number of items to return in a result set.|
 
 ### Request headers
-| Name       | Type | Description|
-|:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+
+| Name     | Type | Description                                                                                                                                              |
+|:----------------|:------|:---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| if-none-match | String  | If this request header is included and the eTag (or cTag) provided matches the current tag on the file, an `HTTP 304 Not Modified` response is returned. |
+
 
 ### Request body
 Do not supply a request body for this method.
-### Response
-If successful, this method returns a `200 OK` response code and collection of [item](../resources/item.md) objects in the response body.
+
 ### Example
+Here is an example of how to call this API.
 ##### Request
 Here is an example of the request.
+
 <!-- {
   "blockType": "request",
   "name": "get_children"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/drive/root/children
+GET /drive/root/children
 ```
-##### Response
+
+### Response
+
 Here is an example of the response.
 <!-- {
   "blockType": "response",
@@ -52,166 +57,29 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 3784
 
 {
   "value": [
-    {
-      "content": "content-value",
-      "createdBy": {
-        "application": {
-          "displayName": "displayName-value",
-          "id": "id-value"
-        },
-        "device": {
-          "displayName": "displayName-value",
-          "id": "id-value"
-        },
-        "user": {
-          "displayName": "displayName-value",
-          "id": "id-value"
-        }
-      },
-      "createdDateTime": "datetime-value",
-      "cTag": "cTag-value",
-      "description": "description-value",
-      "eTag": "eTag-value",
-      "id": "id-value",
-      "lastModifiedBy": {
-        "application": {
-          "displayName": "displayName-value",
-          "id": "id-value"
-        },
-        "device": {
-          "displayName": "displayName-value",
-          "id": "id-value"
-        },
-        "user": {
-          "displayName": "displayName-value",
-          "id": "id-value"
-        }
-      },
-      "lastModifiedDateTime": "datetime-value",
-      "name": "name-value",
-      "parentReference": {
-        "driveId": "driveId-value",
-        "id": "id-value",
-        "path": "path-value"
-      },
-      "size": 99,
-      "webDavUrl": "webDavUrl-value",
-      "webUrl": "webUrl-value",
-      "audio": {
-        "album": "album-value",
-        "albumArtist": "albumArtist-value",
-        "artist": "artist-value",
-        "bitrate": 99,
-        "composers": "composers-value",
-        "copyright": "copyright-value",
-        "disc": 99,
-        "discCount": 99,
-        "duration": 99,
-        "genre": "genre-value",
-        "hasDrm": true,
-        "isVariableBitrate": true,
-        "title": "title-value",
-        "track": 99,
-        "trackCount": 99,
-        "year": 99
-      },
-      "deleted": {
-        "state": "state-value"
-      },
-      "file": {
-        "hashes": {
-          "crc32Hash": "crc32Hash-value",
-          "sha1Hash": "sha1Hash-value"
-        },
-        "mimeType": "mimeType-value"
-      },
-      "fileSystemInfo": {
-        "createdDateTime": "datetime-value",
-        "lastModifiedDateTime": "datetime-value"
-      },
-      "folder": {
-        "childCount": 99
-      },
-      "image": {
-        "height": 99,
-        "width": 99
-      },
-      "location": {
-        "altitude": 99,
-        "latitude": 99,
-        "longitude": 99
-      },
-      "openWith": {
-        "web": {
-          "app": {
-            "displayName": "displayName-value",
-            "id": "id-value"
-          },
-          "viewUrl": "viewUrl-value",
-          "editUrl": "editUrl-value",
-          "viewPostParameters": "viewPostParameters-value",
-          "editPostParameters": "editPostParameters-value"
-        },
-        "webEmbedded": {
-          "app": {
-            "displayName": "displayName-value",
-            "id": "id-value"
-          },
-          "viewUrl": "viewUrl-value",
-          "editUrl": "editUrl-value",
-          "viewPostParameters": "viewPostParameters-value",
-          "editPostParameters": "editPostParameters-value"
-        }
-      },
-      "photo": {
-        "height": 99,
-        "width": 99,
-        "id": "id-value"
-      },
-      "searchResult": {
-        "onClickTelemetryUrl": "onClickTelemetryUrl-value"
-      },
-      "shared": {
-        "owner": {
-          "application": {
-            "displayName": "displayName-value",
-            "id": "id-value"
-          },
-          "device": {
-            "displayName": "displayName-value",
-            "id": "id-value"
-          },
-          "user": {
-            "displayName": "displayName-value",
-            "id": "id-value"
-          }
-        },
-        "scope": "scope-value"
-      },
-      "specialFolder": {
-        "name": "name-value"
-      },
-      "video": {
-        "bitrate": 99,
-        "duration": 99,
-        "height": 99,
-        "width": 99
-      }
-    }
-  ]
+    {"name": "myfile.jpg", "size": 2048, "file": {} },
+    {"name": "Documents", "folder": { "childCount": 4} },
+    {"name": "Photos", "folder": { "childCount": 203} },
+    {"name": "my sheet(1).xlsx", "size": 197 }
+  ],
+  "@odata.nextLink": "https://..."
 }
 ```
+
+**Note:** If a collection exceeds the default page size (200 items), the **@odata.nextLink**
+property is returned in the response to indicate more items are available and
+provide the request URL for the next page of items. You can control the page size through
+[optional query string parameters](../odata/optional-query-parameters.md).
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "List children",
-  "keywords": "",
+  "description": "List the children of an item.",
+  "keywords": "list,children,collection",
   "section": "documentation",
-  "tocPath": ""
-}-->
+  "tocPath": "Items/List Children"
+} -->
