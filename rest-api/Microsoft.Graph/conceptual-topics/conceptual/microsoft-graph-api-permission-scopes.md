@@ -112,5 +112,6 @@ The following are some app scenarios using the `User` and `Group` resources and 
 ##Additional Resources##
 
 
+- [Authenticate Microsoft Graph endpoints using the v2.0 app model preview](authenticate-MSGraph-using-v2.md )
 - [Hands on lab: Deep dive into the Office 365 unified API](http://dev.office.com/hands-on-labs/4585)
 
