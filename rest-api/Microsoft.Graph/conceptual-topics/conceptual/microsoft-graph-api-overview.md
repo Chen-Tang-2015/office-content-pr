@@ -49,7 +49,7 @@ Now, you can use the use Microsoft Graph API to perform the same complex operati
 
 The following diagram shows the Microsoft Graph API developer stack and how it works.
 
-![Office 365 unified API developer stack.](./images/O365_unified_API_DevStackFinal3.png)
+![Office 365 unified API developer stack.](./images/MicrosoftGraph_DevStack.png)
 
 
 <a name="msg_how_learn_unified_api"> </a>
