@@ -80,7 +80,7 @@ The same applies to entities and their properties, including navigation properti
 in metadata become the `User` class, the `User.userPrincipalName` property and the `User.files` property, respectively, in Microsoft.Graph.dll.
 
 <a name="msg_mapping"> </a> 
-##Mappings between entity schemas ($metadata) and .NET client library
+###Table mapping entity schemas ($metadata) and .NET client library
 The following table summarizes the mappings between the Microsoft Graph API entity schemas ($metadata) and its .NET client library.
 
 
