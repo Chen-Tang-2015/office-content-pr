@@ -8,8 +8,9 @@ Your feedback is important to us. Connect with us on [Stack Overflow](http://sta
 **In this article**
   
 -	[What platforms are supported by Microsoft Graph API?](#msg_how_use__unified_api)
--	[Why use Microsoft Graph API?](#msg_why_use_unified_api)
 -	[Does Microsoft Graph API support v2.0 app authentication model?](#msg_v2auth) 
+-	[Why use Microsoft Graph API?](#msg_why_use_unified_api)
+
 
 <!---	[What's currently available in Microsoft Graph API](#msg_what_in_unified_api)
 -	[What's coming next in Microsoft Graph API?](#msg_what_next_in_unified_api) 
