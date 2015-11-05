@@ -1,214 +1,53 @@
-# Update item
+# Update an item
 
-Update the properties of item object.
+Update the metadata for an item by ID or path. You can also use update to move
+an item to another parent by updating the item's **parentReference** property.
+
+
 ### Prerequisites
 The following **scopes** are required to execute this API: 
-### HTTP request
+
+  * onedrive.readwrite
+
+## HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-PATCH /drive/root
-PATCH /drive/items/<id>
-PATCH /drives/<id>/root
+PATCH /drive/items/{item-id}
+PATCH /drive/root:/{item-path}
 ```
+
 ### Optional request headers
-| Name       | Type | Description|
-|:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+
+| Name       | Type | Description                                                                                                                                                         |
+|:-----------|:------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| if-match | String  | If this request header is included and the eTag (or cTag) provided does not match the current eTag on the folder, a `412 Precondition Failed` response is returned. |
 
 ### Request body
-In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
-
-| Property	   | Type	|Description|
-|:---------------|:--------|:----------|
-|audio|audio|Audio metadata, if the item is an audio file. Read-only.|
-|cTag|String|An eTag for the content of the item. This eTag is not changed if only the metadata is changed. **Note** This property is not returned if the Item is a folder. Read-only.|
-|content|Stream|The content stream, if the Item represents a file.|
-|createdBy|identitySet|Identity of the user, device, and application which created the item. Read-only.|
-|createdDateTime|DateTimeOffset|Date and time of item creation. Read-only.|
-|deleted|deleted|Information about the deleted state of the item. Read-only.|
-|description|String|Provide a user-visible description of the item. Read-write.|
-|eTag|String|eTag for the entire item (metadata + content). Read-only.|
-|file|file|File metadata, if the item is a file. Read-only.|
-|fileSystemInfo|fileSystemInfo|File system information on client. Read-write.|
-|folder|folder|Folder metadata, if the item is a folder. Read-only.|
-|image|image|Image metadata, if the item is an image. Read-only.|
-|lastModifiedBy|identitySet|Identity of the user, device, and application which last modified the item. Read-only.|
-|lastModifiedDateTime|DateTimeOffset|Date and time the item was last modified. Read-only.|
-|location|location|Location metadata, if the item has location data. Read-only.|
-|name|String|The name of the item (filename and extension). Read-write.|
-|openWith|openWithSet||
-|parentReference|itemReference|Parent information, if the item has a parent. Read-write.|
-|photo|photo|Photo metadata, if the item is a photo. Read-only.|
-|searchResult|searchResult|Search metadata, if the item is from a search result.|
-|shared|shared||
-|size|Int64|Size of the item in bytes. Read-only.|
-|specialFolder|specialFolder||
-|video|video|Video metadata, if the item is a video. Read-only.|
-|webDavUrl|String||
-|webUrl|String|URL that displays the resource in the browser. Read-only.|
+In the request body, supply the values for relevant fields that should be
+updated. Existing properties that are not included in the request body
+will maintain their previous values or be recalculated based on changes to other
+property values. For best performance you shouldn't include existing values
+that haven't changed.
 
 ### Response
 If successful, this method returns a `200 OK` response code and updated [item](../resources/item.md) object in the response body.
 ### Example
-##### Request
-Here is an example of the request.
+This example renames and moves a folder to a new parent path.
 <!-- {
   "blockType": "request",
   "name": "update_item"
 }-->
 ```http
-PATCH https://graph.microsoft.com/beta/drive/root
+PATCH /drive/items/{item-id}
 Content-type: application/json
-Content-length: 3179
 
 {
-  "content": "content-value",
-  "createdBy": {
-    "application": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    },
-    "device": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    },
-    "user": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    }
-  },
-  "createdDateTime": "datetime-value",
-  "cTag": "cTag-value",
-  "description": "description-value",
-  "eTag": "eTag-value",
-  "id": "id-value",
-  "lastModifiedBy": {
-    "application": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    },
-    "device": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    },
-    "user": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    }
-  },
-  "lastModifiedDateTime": "datetime-value",
-  "name": "name-value",
-  "parentReference": {
-    "driveId": "driveId-value",
-    "id": "id-value",
-    "path": "path-value"
-  },
-  "size": 99,
-  "webDavUrl": "webDavUrl-value",
-  "webUrl": "webUrl-value",
-  "audio": {
-    "album": "album-value",
-    "albumArtist": "albumArtist-value",
-    "artist": "artist-value",
-    "bitrate": 99,
-    "composers": "composers-value",
-    "copyright": "copyright-value",
-    "disc": 99,
-    "discCount": 99,
-    "duration": 99,
-    "genre": "genre-value",
-    "hasDrm": true,
-    "isVariableBitrate": true,
-    "title": "title-value",
-    "track": 99,
-    "trackCount": 99,
-    "year": 99
-  },
-  "deleted": {
-    "state": "state-value"
-  },
-  "file": {
-    "hashes": {
-      "crc32Hash": "crc32Hash-value",
-      "sha1Hash": "sha1Hash-value"
-    },
-    "mimeType": "mimeType-value"
-  },
-  "fileSystemInfo": {
-    "createdDateTime": "datetime-value",
-    "lastModifiedDateTime": "datetime-value"
-  },
-  "folder": {
-    "childCount": 99
-  },
-  "image": {
-    "height": 99,
-    "width": 99
-  },
-  "location": {
-    "altitude": 99,
-    "latitude": 99,
-    "longitude": 99
-  },
-  "openWith": {
-    "web": {
-      "app": {
-        "displayName": "displayName-value",
-        "id": "id-value"
-      },
-      "viewUrl": "viewUrl-value",
-      "editUrl": "editUrl-value",
-      "viewPostParameters": "viewPostParameters-value",
-      "editPostParameters": "editPostParameters-value"
-    },
-    "webEmbedded": {
-      "app": {
-        "displayName": "displayName-value",
-        "id": "id-value"
-      },
-      "viewUrl": "viewUrl-value",
-      "editUrl": "editUrl-value",
-      "viewPostParameters": "viewPostParameters-value",
-      "editPostParameters": "editPostParameters-value"
-    }
-  },
-  "photo": {
-    "height": 99,
-    "width": 99,
-    "id": "id-value"
-  },
-  "searchResult": {
-    "onClickTelemetryUrl": "onClickTelemetryUrl-value"
-  },
-  "shared": {
-    "owner": {
-      "application": {
-        "displayName": "displayName-value",
-        "id": "id-value"
-      },
-      "device": {
-        "displayName": "displayName-value",
-        "id": "id-value"
-      },
-      "user": {
-        "displayName": "displayName-value",
-        "id": "id-value"
-      }
-    },
-    "scope": "scope-value"
-  },
-  "specialFolder": {
-    "name": "name-value"
-  },
-  "video": {
-    "bitrate": 99,
-    "duration": 99,
-    "height": 99,
-    "width": 99
-  }
+	"name": "new-item-name",
+	"parentReference" : {"path": "/drive/root:/Documents"}
 }
 ```
-##### Response
+
+### Response
 Here is an example of the response.
 <!-- {
   "blockType": "response",
@@ -218,153 +57,11 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 3179
 
 {
-  "content": "content-value",
-  "createdBy": {
-    "application": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    },
-    "device": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    },
-    "user": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    }
-  },
-  "createdDateTime": "datetime-value",
-  "cTag": "cTag-value",
-  "description": "description-value",
-  "eTag": "eTag-value",
-  "id": "id-value",
-  "lastModifiedBy": {
-    "application": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    },
-    "device": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    },
-    "user": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    }
-  },
-  "lastModifiedDateTime": "datetime-value",
-  "name": "name-value",
-  "parentReference": {
-    "driveId": "driveId-value",
-    "id": "id-value",
-    "path": "path-value"
-  },
-  "size": 99,
-  "webDavUrl": "webDavUrl-value",
-  "webUrl": "webUrl-value",
-  "audio": {
-    "album": "album-value",
-    "albumArtist": "albumArtist-value",
-    "artist": "artist-value",
-    "bitrate": 99,
-    "composers": "composers-value",
-    "copyright": "copyright-value",
-    "disc": 99,
-    "discCount": 99,
-    "duration": 99,
-    "genre": "genre-value",
-    "hasDrm": true,
-    "isVariableBitrate": true,
-    "title": "title-value",
-    "track": 99,
-    "trackCount": 99,
-    "year": 99
-  },
-  "deleted": {
-    "state": "state-value"
-  },
-  "file": {
-    "hashes": {
-      "crc32Hash": "crc32Hash-value",
-      "sha1Hash": "sha1Hash-value"
-    },
-    "mimeType": "mimeType-value"
-  },
-  "fileSystemInfo": {
-    "createdDateTime": "datetime-value",
-    "lastModifiedDateTime": "datetime-value"
-  },
-  "folder": {
-    "childCount": 99
-  },
-  "image": {
-    "height": 99,
-    "width": 99
-  },
-  "location": {
-    "altitude": 99,
-    "latitude": 99,
-    "longitude": 99
-  },
-  "openWith": {
-    "web": {
-      "app": {
-        "displayName": "displayName-value",
-        "id": "id-value"
-      },
-      "viewUrl": "viewUrl-value",
-      "editUrl": "editUrl-value",
-      "viewPostParameters": "viewPostParameters-value",
-      "editPostParameters": "editPostParameters-value"
-    },
-    "webEmbedded": {
-      "app": {
-        "displayName": "displayName-value",
-        "id": "id-value"
-      },
-      "viewUrl": "viewUrl-value",
-      "editUrl": "editUrl-value",
-      "viewPostParameters": "viewPostParameters-value",
-      "editPostParameters": "editPostParameters-value"
-    }
-  },
-  "photo": {
-    "height": 99,
-    "width": 99,
-    "id": "id-value"
-  },
-  "searchResult": {
-    "onClickTelemetryUrl": "onClickTelemetryUrl-value"
-  },
-  "shared": {
-    "owner": {
-      "application": {
-        "displayName": "displayName-value",
-        "id": "id-value"
-      },
-      "device": {
-        "displayName": "displayName-value",
-        "id": "id-value"
-      },
-      "user": {
-        "displayName": "displayName-value",
-        "id": "id-value"
-      }
-    },
-    "scope": "scope-value"
-  },
-  "specialFolder": {
-    "name": "name-value"
-  },
-  "video": {
-    "bitrate": 99,
-    "duration": 99,
-    "height": 99,
-    "width": 99
-  }
+	"id": "0123456789abc",
+	"name": "BFolder",
+	"folder": { "childCount": 3 }
 }
 ```
 
