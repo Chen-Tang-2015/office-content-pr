@@ -79,7 +79,7 @@ Here is a JSON representation of the resource
 |[List sectionGroups](../api/notebook_list_sectiongroups.md) |[SectionGroup](sectiongroup.md) collection| Get a collection of sectionGroup objects.|
 |[Create Section](../api/notebook_post_sections.md) |[Section](section.md)| Create a new section by posting to the sections collection.|
 |[List sections](../api/notebook_list_sections.md) |[Section](section.md) collection| Get a collection of section objects.|
-|[copyNotebook](../api/notebook_copynotebook.md)|[CopyNotebookModel](copynotebookmodel.md)||
+|[copyNotebook](../api/notebook_copynotebook.md)|[CopyNotebookModel](copynotebookmodel.md)| This copies a notebook.|
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->
