@@ -346,9 +346,12 @@ Here is a JSON representation of the resource
 |[List registeredDevices](../api/user_list_registereddevices.md) |[DirectoryObject](directoryobject.md) collection| Get a registeredDevice object collection.|
 |[Update](../api/user_update.md) | [user](user.md)	|Update user object. |
 |[Delete](../api/user_delete.md) | None |Delete user object. |
+|[assignLicense](../api/user_assignlicense.md)|[User](user.md)||
 |[checkMemberGroups](../api/user_checkmembergroups.md)|String collection||
 |[getMemberGroups](../api/user_getmembergroups.md)|String collection||
 |[getMemberObjects](../api/user_getmemberobjects.md)|String collection||
+|[reminderView](../api/user_reminderview.md)|[Reminder](reminder.md) collection||
+|[sendMail](../api/user_sendmail.md)|None||
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

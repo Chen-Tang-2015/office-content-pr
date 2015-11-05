@@ -201,9 +201,14 @@ Here is a JSON representation of the resource
 |[List threads](../api/group_list_threads.md) |[ConversationThread](conversationthread.md) collection| Get a thread object collection.|
 |[Update](../api/group_update.md) | [group](group.md)	|Update group object. |
 |[Delete](../api/group_delete.md) | None |Delete group object. |
+|[addFavorite](../api/group_addfavorite.md)|None||
 |[checkMemberGroups](../api/group_checkmembergroups.md)|String collection||
 |[getMemberGroups](../api/group_getmembergroups.md)|String collection||
 |[getMemberObjects](../api/group_getmemberobjects.md)|String collection||
+|[removeFavorite](../api/group_removefavorite.md)|None||
+|[resetUnseenCount](../api/group_resetunseencount.md)|None||
+|[subscribeByMail](../api/group_subscribebymail.md)|None||
+|[unsubscribeByMail](../api/group_unsubscribebymail.md)|None||
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->
