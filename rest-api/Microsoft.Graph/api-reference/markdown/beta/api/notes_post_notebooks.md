@@ -1,39 +1,50 @@
-# Create Notebook
+# Create notebook
 
-Use this API to create a new Notebook.
+Create a new OneNote [notebook](../resources/notebook.md).
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API:   
+Notes.Create, Notes.ReadWrite.CreatedByApp, Notes.ReadWrite, or Notes.ReadWrite.All
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
+POST /me/notes/notebooks
+POST /users/<mail>/notes/notebooks
 POST /users/<objectId>/notes/notebooks
 POST /groups/<objectId>/notes/notebooks
-POST /drive/root/createdByUser/notes/notebooks
-
+POST /siteCollections/<id>/sites/<id>/notes/notebooks
 ```
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Authorization  | string  | `Bearer <token>` A valid OAuth token provided to the app based on the user credentials and the user having authorized access. |
+| Content-Type | string | `application/json` |
 
 ### Request body
-In the request body, supply a JSON representation of [Notebook](../resources/notebook.md) object.
+In the request body, supply a name for the notebook. 
+
+Notebook names must be unique. The name cannot contain more than 128 characters or contain the following characters:  ?*\/:<>|'"
 
 
 ### Response
-If successful, this method returns `201, Created` response code and [Notebook](../resources/notebook.md) object in the response body.
+If successful, this method returns `201, Created` response code and the new [notebook](../resources/notebook.md) object in the response body.
 
 ### Example
 ##### Request
-Here is an example of the request.
+Here is an example of the request. 
 <!-- {
   "blockType": "request",
   "name": "create_notebook_from_notes"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/users/<objectId>/notes
+POST https://graph.microsoft.com/beta/users/<objectId>/notes/notebooks
+Authorization: Bearer <token>
+Content-Type: application/json
+
+{
+  "name": "Notebook name"
+}
 ```
-In the request body, supply a JSON representation of [Notebook](../resources/notebook.md) object.
+
 ##### Response
 Here is an example of the response.
 <!-- {
@@ -43,8 +54,9 @@ Here is an example of the response.
 } -->
 ```http
 HTTP/1.1 201 Created
-Content-type: application/json
-Content-length: 516
+Content-Type: application/json
+Content-Length: 516
+...
 
 {
   "isDefault": true,

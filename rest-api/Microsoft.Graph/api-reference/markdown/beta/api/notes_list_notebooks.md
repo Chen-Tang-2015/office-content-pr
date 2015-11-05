@@ -1,36 +1,39 @@
 # List notebooks
 
-Retrieve a list of notebook objects.
+Retrieve a list of [notebook](../resources/notebook.md) objects.
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API:  
+Notes.Read, Notes.ReadWrite.CreatedByApp, Notes.ReadWrite, Notes.Read.All, or Notes.ReadWrite.All 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
+GET /me/notes/notebooks
+GET /users/<mail>/notes/notebooks
 GET /users/<objectId>/notes/notebooks
 GET /groups/<objectId>/notes/notebooks
-GET /drive/root/createdByUser/notes/notebooks
+GET /siteCollections/<id>/sites/<id>/notes/notebooks
 ```
 ### Optional query parameters
 |Name|Value|Description|
 |:---------------|:--------|:-------|
 |$count|none|The count of related entities can be requested by specifying the $count query option.|
-|$expand|string|Comma-separated list of relationships to expand and include in the response. See relationships table of [Notebook](../resources/notebook.md) for supported names. |
+|$expand|string|Comma-separated list of relationships to expand and include in the response. Valid values for notebooks are sections and sectionGroups. |
 |$filter|string|Filter string that lets you filter the response based on a set of criteria.|
-|$orderby|string|Comma-separated list of properties that are used to sort the order of items in the response collection.|
+|$orderby|string|Comma-separated list of properties that are used to sort the order of items in the response collection. The default is name asc.|
 |$select|string|Comma-separated list of properties to include in the response.|
 |$skip|int|The number of items to skip in a result set.|
-|$skipToken|string|Paging token that is used to get the next set of results.|
 |$top|int|The number of items to return in a result set.|
 
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Authorization  | string  | `Bearer <token>` A valid OAuth token provided to the app based on the user credentials and the user having authorized access. |
+| Accept | string | `application/json` |  
 
 ### Request body
 Do not supply a request body for this method.
 ### Response
-If successful, this method returns a `200 OK` response code and collection of [Notebook](../resources/notebook.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and collection of [notebook](../resources/notebook.md) objects in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -40,6 +43,8 @@ Here is an example of the request.
 }-->
 ```http
 GET https://graph.microsoft.com/beta/users/<objectId>/notes/notebooks
+Authorization: Bearer <token>
+Accept: application/json
 ```
 ##### Response
 Here is an example of the response.
@@ -51,8 +56,9 @@ Here is an example of the response.
 } -->
 ```http
 HTTP/1.1 200 OK
-Content-type: application/json
-Content-length: 625
+Content-Type: application/json
+Content-Length: 625
+...
 
 {
   "value": [

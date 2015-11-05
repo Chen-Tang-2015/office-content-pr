@@ -1,6 +1,6 @@
 # page resource type
 
-
+A page in a OneNote notebook.
 
 ### JSON representation
 
@@ -40,32 +40,34 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|content|Stream||
-|contentUrl|String|The URL for the page's HTML content |
-|createdByAppId|String|The unique identifier of the application that created the page |
-|createdTime|DateTimeOffset|The date and time when the page was created in UTC format The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|id|String|The unique identifier of the page  Read-only.|
-|lastModifiedTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|links|[PageLinks](pagelinks.md)|The oneNoteClientURL link to open the page in the OneNote native client if it 's installed, and oneNoteWebUrl to open the page in OneNote Online|
-|self|String||
-|title|String|The title of the page |
+|content|Stream|The page's HTML content.|
+|contentUrl|String|The URL for the page's HTML content. |
+|createdByAppId|String|The unique identifier of the application that created the page. Read-only.|
+|createdTime|DateTimeOffset|The date and time when the page was created. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|id|String|The unique identifier of the page.  Read-only.|
+|lastModifiedTime|DateTimeOffset|The date and time when the page was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|links|[PageLinks](pagelinks.md)|Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote Online.|
+|self|String|The endpoint where you can get details about the page. Read-only.|
+|title|String|The title of the page. |
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|parentNotebook|[Notebook](notebook.md)|A page in a OneNote section  Read-only.|
-|parentSection|[Section](section.md)| Read-only.|
+|parentNotebook|[Notebook](notebook.md)|The notebook that contains the page.  Read-only.|
+|parentSection|[Section](section.md)|The section that contains the page. Read-only.|
 
 ### Methods
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
-|[Get page](../api/page_get.md) | [page](page.md) |Read properties and relationships of page object.|
-|[Update](../api/page_update.md) | [page](page.md)	|Update page object. |
-|[Delete](../api/page_delete.md) | None |Delete page object. |
+|[Get page](../api/page_get.md) | [page](page.md) |Read the properties and relationships of the page object.|
+|[Update](../api/page_update.md) | [page](page.md)	|Update the page content. |
+|[Delete](../api/page_delete.md) | None |Delete the page object. |
 |[copyToSection](../api/page_copytosection.md)|[CopyPageModel](copypagemodel.md)||
 |[patchContent](../api/page_patchcontent.md)|None||
-|[thumbnail](../api/page_thumbnail.md)|Stream||
+
+<!--I'm assuming for now that we can repurpose the Update page assets-->
+<!--content props shows stream, but it's returned as a string (or text/html)?-->
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

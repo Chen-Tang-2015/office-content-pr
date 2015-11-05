@@ -1,6 +1,6 @@
-# siteMetadata resource type
+# siteMetadata complex type
 
-
+The site collection ID and site ID of the specified site URL. Returned by the FromUrl method.
 
 ### JSON representation
 
@@ -24,8 +24,8 @@ Here is a JSON representation of the resource
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|siteCollectionId|String||
-|siteId|String||
+|siteCollectionId|String|The id of the site collection.|
+|siteId|String|The id of the site.|
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->
