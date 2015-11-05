@@ -1,4 +1,4 @@
-# item: search
+# Search for an Item
 
 Search the hierarchy of items in OneDrive for items matching a query. You can
 search and/or filter results to find the items your app is looking for.
@@ -8,8 +8,12 @@ children of that item. Filtering works on the collection of items returned,
 which can be either all children when using search, or just the immediate
 children when using a collection.
 
+For more info, see [Searching and filtering Items in OneDrive](https://dev.onedrive.com/items/search.htm).
+
 ### Prerequisites
 The following **scopes** are required to execute this API:
+
+  * onedrive.readonly
 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
@@ -49,7 +53,7 @@ POST /drive/root/search?q={search=text}
 ```
 
 ##### Response
-This method returns an object containing an array of [Items][item-resource] that
+This method returns an object containing an array of [items](../resources/item.md) that
 match the search criteria. If no items were found, an empty array is returned.
 
 If there are too many matches the response will be paged and an
@@ -92,9 +96,7 @@ Content-type: application/json
 }
 ```
 
-### Notes
-
-In OneDrive for Business, this method will not return the following Item properties:
+**Note:** This method will not return the following Item properties:
 
 * `createdBy`
 * `modifiedBy`

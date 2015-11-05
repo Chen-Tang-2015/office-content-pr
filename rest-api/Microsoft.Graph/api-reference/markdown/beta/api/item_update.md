@@ -1,10 +1,13 @@
-# Update item
+# Update an item
 
 Update the metadata for an item by ID or path. You can also use update to move
-an item to another parent by updating the item's **parentReference** facet.
+an item to another parent by updating the item's **parentReference** property.
+
 
 ### Prerequisites
 The following **scopes** are required to execute this API: 
+
+  * onedrive.readwrite
 
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
