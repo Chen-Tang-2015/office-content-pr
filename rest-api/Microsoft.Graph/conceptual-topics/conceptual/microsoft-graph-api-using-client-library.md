@@ -61,7 +61,7 @@ var TokenForUser = userAuthnResult.AccessToken;
 1. First create a `AuthenticationContext` object and bind it to the `Constants.LoginUrl` 
 (=`https://login.microsoftonline.com/common`), the base URL of the Azure user login portal. 
 
-> The `AuthenticationContext` class is exposed by the [ADAL for .NET](https://msdn.microsoft.com/en-us/library/azure/jj573266.aspx). It handles the authorization and token acquisition.
+    > The `AuthenticationContext` class is exposed by the [ADAL for .NET](https://msdn.microsoft.com/en-us/library/azure/jj573266.aspx). It handles the authorization and token acquisition.
 
 2. Then call the `AcquireToken` method on the newly created `authenticationContext` object. This will bring up the sign-in page for the user to enter their credentials. 
 
