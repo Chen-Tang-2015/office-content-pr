@@ -14,6 +14,7 @@ The following Microsoft Graph API are generally available:
 * Mail entity
 * Calendar entity
 * Personal Contacts entity 
+* Create, read, update, and delete (CRUD) operations
 * Cross-origin resource sharing (CORS) support.
 
 	
