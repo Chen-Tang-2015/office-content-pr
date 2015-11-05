@@ -4,12 +4,13 @@
     <Item text="Call the API" url="overview/call-microsoft-graph-api" SEOKeyword="Call the API, Microsoft Graph API, Overview" SEODescription="" />
     <Item text="Authorization" url="overview/microsoft-graph-api-app-authorization" SEOKeyword="Authorization, Microsoft Graph API, Overview" SEODescription="" />
     <Item text="Permission Scopes" url="overview/microsoft-graph-api-permission-scopes" SEOKeyword="Permission Scopes, Microsoft Graph API, Overview" SEODescription="" />
+    <Item text="Client Library" url="overview/microsoft-graph-api-using-client-library" SEOKeyword="Client Library, Microsoft Graph API, Overview" SEODescription="" />
     <Item text="Errors" url="overview/microsoft-graph-api-errors" SEOKeyword="Errors, Microsoft Graph API, Overview" SEODescription="" />
     <Item text="Release Notes" url="overview/microsoft-graph-api-release-notes-known-issues" SEOKeyword="Release Notes, Microsoft Graph API, Overview" SEODescription="" />
     <Item text="FAQs" url="overview/microsoft-graph-api-faqs" SEOKeyword="FAQs, Microsoft Graph API, Overview" SEODescription="" />
   </Item>
   <Item text="How tos" url="platform">
-    <Item text=".NET" url="platform/connect-step-by-step-aspnetmvc" SEOKeyword=".NET, Microsoft Graph API, How tos" SEODescription="" />
+    <Item text=".NET" url="platform/connect-step-by-step-aspnetmvc" SEOKeyword=".NET, ASP.NET MVC, Microsoft Graph API, How tos" SEODescription="" />
     <Item text="UWP" url="platform/connect-step-by-step-uwp" SEOKeyword="UWP, Microsoft Graph API, How tos" SEODescription="" />
     <Item text="IOS" url="platform/connect-step-by-step-ios" SEOKeyword="IOS, Microsoft Graph API, How tos" SEODescription="" />
     <Item text="Android" url="platform/connect-step-by-step-android" SEOKeyword="Android, Microsoft Graph API, How tos" SEODescription="" />

@@ -19,7 +19,7 @@ mapping an OData resource type into a .NET class.
 
 The CRUD operations in the REST API are translated as calls to the `ExecuteAsync`, `UpdateAsync`, and `DeleteAsync` methods 
 on the corresponding resource class.  The query options (e.g., $select, $filter, etc.) are turned into Linq clauses.  
-Once you understand how the OData entity type schema is mapped to the client library's object model, you'll see a strong similarity between calling the REST API and using the client library.
+There is a strong similarity between calling the REST API and using the client library. The client library's object model is closely mapped to the OData entity type schema. 
 
 
 <a name="msg_set_up_visual_studio"> </a>
@@ -42,7 +42,7 @@ Microsoft.Graph.GraphService client = new
  
 Here, `serviceRoot` is a `Uri` object and encapsulates the URL of `https://graph.microsoft.com/<version>/<tenantId>`. 
 The `AcquireTokenAsyncForUser` function passed to the client constructor performs the initial request to acquire the access 
-token for the app after prompting the user to sign in to Azure successfully. An implementation of this function call is shown as follows:
+token for the app after prompting the user to sign in to Azure successfully. An implementation of this function call is as follows:
  
 ```no-highlight 
 var redirectUri = new Uri("http://localhost/MsGraphNativeApp");
@@ -58,27 +58,29 @@ AuthenticationResult userAuthnResult =
 var TokenForUser = userAuthnResult.AccessToken;
 ```
  
-First create a `AuthenticationContext` object and bind it to the `Constants.LoginUrl` 
+1. First create a `AuthenticationContext` object and bind it to the `Constants.LoginUrl` 
 (=`https://login.microsoftonline.com/common`), the base URL of the Azure user login portal. 
 
-> The `AuthenticationContext` class is exposed by the [ADAL for .NET](https://msdn.microsoft.com/en-us/library/azure/jj573266.aspx). It handles the authorization and token acquisition.
+    > The `AuthenticationContext` class is exposed by the [ADAL for .NET](https://msdn.microsoft.com/en-us/library/azure/jj573266.aspx). It handles the authorization and token acquisition.
 
-Then call the `AcquireToken` method on the newly created `authenticationContext` object. This will bring up the Azure user sign-in page for the user to enter their Azure tenant account and password. When the user signs in to Azure successfully, the API proceeds to acquire the access token, returns it to the app in the `userAuthnResult` object, and uses it in the subsequent calls to the Microsoft Graph API service. 
+2. Then call the `AcquireToken` method on the newly created `authenticationContext` object. This will bring up the sign-in page for the user to enter their credentials. 
 
-The `redirectUri` must match the **REPLY URL** configured for the app in Azure  application registry. `Constants.ResourceUrl` is a named constant holding a string value of
-`"https://graph.microsoft.com"` and `Constants.ClientIdForUserAuthn` is the **CLIENT ID** value of the app, 
-also configured in Azure. Unlike a web app, the client secret is not used for native app.
+When the user signs in to successfully, the API proceeds to acquire the access token, returns it to the app in the `userAuthnResult` object, and uses it in the subsequent calls to the Microsoft Graph API service. 
+
+The `redirectUri` must match the **REPLY URL** configured for the app in Azure  application registry. `Constants.ResourceUrl` is a named constant holding a string value of `"https://graph.microsoft.com"` and `Constants.ClientIdForUserAuthn` is the **CLIENT ID** value of the app, also configured in Azure. Unlike a web app, the client secret is not used for native app.
  
  
 <a name="msg_client_lib_object_model"> </a>
 ###Map client library Object model to entity schema
-The `Microsoft.Graph.GraphService` class serves as the root of the object hierarchy in the client library. 
-This class encapsulates the ```<EntityContainer Name="GraphService">``` element in the $metadata declaration. 
+The `Microsoft.Graph.GraphService` class serves as the root of the object hierarchy in the client library. This class encapsulates the ```<EntityContainer Name="GraphService">``` element in the $metadata declaration. 
+
 The contained ```<EntitySet>``` elements become the like-named properties on the client object. For examples, the `<EntitySet Name="users" EntityType="Microsoft.Graph.User>` element of $metadata becomes the `GraphService.users` property in the client library to return a collection of the `Microsoft.Graph.User` objects, which also implement the `IUsersCollection` interface. 
  
 The same applies to entities and their properties, including navigation properties. Thus, the `<EntityType name="User">` element and its child elements, for example, `<Property name="userPrincipalName">` and `<NavigationProperty name="files">`, 
 in metadata become the `User` class, the `User.userPrincipalName` property and the `User.files` property, respectively, in Microsoft.Graph.dll.
- 
+
+<a name="msg_mapping"> </a> 
+###Table mapping entity schemas ($metadata) and .NET client library
 The following table summarizes the mappings between the Microsoft Graph API entity schemas ($metadata) and its .NET client library.
 
 

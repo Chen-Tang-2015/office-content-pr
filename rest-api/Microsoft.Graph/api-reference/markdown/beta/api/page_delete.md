@@ -1,8 +1,9 @@
 # Delete page
 
-Delete page.
+Delete a OneNote page.
 ### Prerequisites
 The following **scopes** are required to execute this API: 
+
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
@@ -15,9 +16,6 @@ DELETE /drive/root/createdByUser/notes/pages/<id>
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
 | X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
-
-### Request body
-Do not supply a request body for this method.
 
 
 ### Response

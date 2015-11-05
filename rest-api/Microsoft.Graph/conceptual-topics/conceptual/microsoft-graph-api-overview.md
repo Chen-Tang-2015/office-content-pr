@@ -9,6 +9,7 @@ _**Applies to:** Office 365_
 **In this article**
   
 -	[Overview of Microsoft Graph API](#msg_what_is_unified_api) 
+-	[All Office 365 data under one roof](#msg_eoof) 
 -	[Learn more about  Microsoft Graph API development](#msg_how_learn_unified_api) 
 
 <a name="msg_what_is_unified_api"> </a>
@@ -22,6 +23,9 @@ The API gives you:
 - Aggregated data from multiple services in a single response
 
 You can use the API to access fixed entities like users, groups, mail, messages, calendars, tasks, notes coming from services like Outlook, OneDrive, Azure Active Directory, Planner, OneNote and others. You can also obtain calculated relationships powered by the Office Graph (only for commercial users) like the list of users you are working with or the documents trending around you.
+
+<a name="msg_roof"> </a>
+## All Office 365 data under one roof
 
 <!-- 
 It takes information that is stored or inferred across multiple cloud services: 

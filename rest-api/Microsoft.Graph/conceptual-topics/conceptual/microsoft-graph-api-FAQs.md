@@ -3,21 +3,22 @@
 
 _**Applies to:** Office 365_
  
-Your feedback is important to us. Connect with us on [Stack Overflow](http://stackoverflow.com/questions/tagged/office365). Tag your questions with [office365].
+Your feedback is important to us. Connect with us on [Stack Overflow](http://stackoverflow.com/questions/tagged/office365). Tag your questions with [MicrosoftGraph] and [office365].
 
 **In this article**
   
 -	[What platforms are supported by Microsoft Graph API?](#msg_how_use__unified_api)
+-	[Does Microsoft Graph API support v2.0 app authentication model?](#msg_v2auth) 
 -	[Why use Microsoft Graph API?](#msg_why_use_unified_api)
--	[What's currently available in Microsoft Graph API](#msg_what_in_unified_api)
+
+
+<!---	[What's currently available in Microsoft Graph API](#msg_what_in_unified_api)
 -	[What's coming next in Microsoft Graph API?](#msg_what_next_in_unified_api) 
--	[Where can I learn more about Microsoft Graph API development?](#msg_how_learn_unified_api) 
--	[Does Microsoft Graph API support v2.0 app authentication model?](#msg_how_learn_unified_api) 
-
-
+-	[Where can I learn more about Microsoft Graph API development?](#msg_how_learn_unified_api) -->
 
 <a name="msg_how_use_unified_api"> </a>
-## How to use Microsoft Graph API?
+## What platforms are supported by Microsoft Graph API?
+<!--
 Apps can use the Microsoft Graph API to perform create, read, update, and delete (CRUD) operations on data sources and entities, giving them seamless access to work data. 
 
 **Ease of use--one endpoint, all Office 365 data under one roof**
@@ -28,26 +29,26 @@ You can use the API in four steps:
 3.	Optionally, host your app in Microsoft Azure or any cloud platform you choose.
 4.	Authenticate your users by using single sign-on with Azure AD.
 
-As a developer you can use the API to create custom apps that access and interact with all the richness of enterprise and productivity data--users, groups, organizational contacts, files, folders, mail, calendar, insights and relationships--and build apps across all mobile, web, and desktop platforms. No matter your development platform or tools. Using a single service endpoint to access those entities and data. And a single authentication flow.  
+As a developer you can use the API to create custom apps that access and interact with all the richness of enterprise and productivity data--users, groups, organizational contacts, files, folders, mail, calendar, insights and relationships--and build apps across all mobile, web, and desktop platforms. No matter your development platform or tools. Using a single service endpoint to access those entities and data. And a single authentication flow.  -->
 
 You can:
 
 <!--Just like in Office 365 APIs, Office 365 unified endpoint API  allows you to build apps using any development environment of your choice:  -->
 
-- Use the development environment you're familiar with, like .NET, PHP, Java, Python, or Ruby
+- Use any development environment you're familiar with, like .NET, PHP, Java, Python, or Ruby
 - Use any  programming language, development platform, and hosting environment
 - Build an  app that accesses the unified API using any web language, including JavaScript, HTML5, Python, Ruby, PHP, and ASP.NET  
 - Use the IDE of your choice, whether that's Visual Studio, Eclipse, Android Studio, Xcode or something else you choose
 - Host your apps in Microsoft Azure or any cloud platform
 - Develop apps for Windows Universal, iOS, Android, or on another device platform
-- Call the unified API from Office Add-ins (formerly apps for Office) or SharePoint Add-ins (formerly apps for SharePoint)
+- Call the API from Office Add-ins (formerly apps for Office) or SharePoint Add-ins (formerly apps for SharePoint)
  
+<!--Authentication and authorization
+-->
 
-**Authentication and authorization**
+<!--Then, using single sign-on with Azure AD to authenticate your users, enable them to access files, calendar, emails, user information, and the data stored in the cloud.  The API follows REST and OData 4.0 standards for data transport, and uses OpenID Connect and OAuth 2.0 protocols for authentication and authorization. 
 
-Then, using single sign-on with Azure AD to authenticate your users, enable them to access files, calendar, emails, user information, and the data stored in the cloud.  The API follows REST and OData 4.0 standards for data transport, and uses OpenID Connect and OAuth 2.0 protocols for authentication and authorization. 
-
-You also have the option to use cross-origin resource sharing (CORS) to send requests to the Microsoft Graph API to access, modify, and create data.
+You also have the option to use cross-origin resource sharing (CORS) to send requests to the Microsoft Graph API to access, modify, and create data. -->
 
 <!--The Office 365 unified API gives you access to data from the following entities:
 -	**Users**, **groups** and **organizational contacts**
@@ -85,6 +86,7 @@ Using the Microsoft Graph API, you don't have to first discover service endpoint
 | Get users           |     `Office 365 unified API` | _https://_**graph.microsoft.com**_/beta/contoso.onmicrosoft.com/users_ |
 | Get message collection from the Inbox       |     `Microsoft Graph API`           | _https://_**graph.microsoft.com**_/beta/me/messages_  |
 | Get Joe's files   |     `Microsoft Graph API `  | _https://_**graph.microsoft.com**_/beta/me/files_ |
+
 <!--| Get TrendingAround, for the current authenticated user           |     `Microsoft Graph API`                     | _https://_**graph.microsoft.com**_/beta/me/trendingaround_   |-->
 
 Some of the benefits of using Microsoft Graph API  are as follows:
@@ -106,10 +108,15 @@ Some of the benefits of using Microsoft Graph API  are as follows:
 
 -	Development tooling and resources for all developers. You can develop using any platform and language 
 -	Mobile development for all platforms using open technologies  
--	No need for any specialized Exchange, SharePoint, or Azure AD knowledge to access Office 365 unified API entities
+-	No need for any specialized Exchange, SharePoint, or Azure AD knowledge to access Microsoft Graph API entities
 
 
-<a name="msg_what_in_unified_api"> </a>
+<a name="msg_v2auth"> </a>
+## Does Microsoft Graph API support v2.0 app authentication model?
+
+Yes, in preview. For more information see [Authenticate Microsoft Graph endpoints using the v2.0 app model preview](authenticate-MSGraph-using-v2.md)
+
+<!--<a name="msg_what_in_unified_api"> </a>
 ## What's in Microsoft Graph API?
 Currently, the Microsoft Graph API supports programmatic access to the following entities.
 
@@ -161,8 +168,6 @@ The **Contact** entity provides access to contact data and contact folders. For 
 -	Add a contact 
 -	Get a contact thumb nail photo
 
-**Note**:  Currently only contact data for organization is available. Personal contact data will be available soon.
-
 **Insights and relationships:  TrendingAround and WorkingWith**
  
 Currently there are two relationships that you can query for: **TrendingAround** and **WorkingWith**. Both these relationships work with the **Files** and **User** entities. 
@@ -176,7 +181,7 @@ Some of the actions you can perform with **TrendingAround** and **WorkingWith**:
 -	Get people relationships and association information based on user's activity 
 -	Get files closely related to a user
 -	Find people you're meeting with today through your calendar events, and discover the files they're working on
--	Get files which are popular in the user's circle.
+-	Get files which are popular in the user's circle.-->
 
 
 

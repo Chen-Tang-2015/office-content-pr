@@ -1,36 +1,40 @@
 # List pages
 
-Retrieve a list of page objects.
+Retrieve a list of [page](../resources/page.md) objects.
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API:  
+Notes.Read, Notes.ReadWrite.CreatedByApp, Notes.ReadWrite, Notes.Read.All, or Notes.ReadWrite.All
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
+GET /me/notes/pages
+GET /users/<mail>/notes/pages
 GET /users/<objectId>/notes/pages
 GET /groups/<objectId>/notes/pages
-GET /drive/root/createdByUser/notes/pages
+GET /siteCollections/<id>/sites/<id>/notes/pages
 ```
 ### Optional query parameters
 |Name|Value|Description|
 |:---------------|:--------|:-------|
+|$search|string|The term or phrase to search for in the page title, page body, image alt text, and image OCR text. Search queries return results sorted by relevance.|
 |$count|none|The count of related entities can be requested by specifying the $count query option.|
-|$expand|string|Comma-separated list of relationships to expand and include in the response. See relationships table of [Page](../resources/page.md) for supported names. |
 |$filter|string|Filter string that lets you filter the response based on a set of criteria.|
 |$orderby|string|Comma-separated list of properties that are used to sort the order of items in the response collection.|
 |$select|string|Comma-separated list of properties to include in the response.|
 |$skip|int|The number of items to skip in a result set.|
-|$skipToken|string|Paging token that is used to get the next set of results.|
 |$top|int|The number of items to return in a result set.|
+
+<!--default is lastModifiedTime desc (most recently modified page first). bug default order isn't lmt desc-->
 
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Authorization  | string  | `Bearer <token>` A valid OAuth token provided to the app based on the user credentials and the user having authorized access. |
 
 ### Request body
 Do not supply a request body for this method.
 ### Response
-If successful, this method returns a `200 OK` response code and collection of [Page](../resources/page.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and collection of [page](../resources/page.md) objects in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -40,6 +44,8 @@ Here is an example of the request.
 }-->
 ```http
 GET https://graph.microsoft.com/beta/users/<objectId>/notes/pages
+Authorization: Bearer <token>
+Accept: application/json
 ```
 ##### Response
 Here is an example of the response.

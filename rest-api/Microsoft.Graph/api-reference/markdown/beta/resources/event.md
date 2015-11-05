@@ -149,6 +149,11 @@ Here is a JSON representation of the resource
 |[List instances](../api/event_list_instances.md) |[Event](event.md) collection| Get a Event object collection.|
 |[Update](../api/event_update.md) | [event](event.md)	|Update event object. |
 |[Delete](../api/event_delete.md) | None |Delete event object. |
+|[accept](../api/event_accept.md)|None||
+|[decline](../api/event_decline.md)|None||
+|[dismissReminder](../api/event_dismissreminder.md)|None||
+|[snoozeReminder](../api/event_snoozereminder.md)|None||
+|[tentativelyAccept](../api/event_tentativelyaccept.md)|None||
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

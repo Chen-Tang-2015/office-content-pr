@@ -94,6 +94,8 @@ Here is a JSON representation of the resource
 |[List extensions](../api/post_list_extensions.md) |[Extension](extension.md) collection| Get a Extension object collection.|
 |[Update](../api/post_update.md) | [post](post.md)	|Update post object. |
 |[Delete](../api/post_delete.md) | None |Delete post object. |
+|[forward](../api/post_forward.md)|None||
+|[reply](../api/post_reply.md)|None||
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->
