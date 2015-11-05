@@ -7,8 +7,8 @@
     <Item text="Client Library" url="overview/microsoft-graph-api-using-client-library" SEOKeyword="Client Library, Microsoft Graph API, Overview" SEODescription="" />
     <Item text="Errors" url="overview/microsoft-graph-api-errors" SEOKeyword="Errors, Microsoft Graph API, Overview" SEODescription="" />
     <Item text="Release Notes" url="overview/microsoft-graph-api-release-notes-known-issues" SEOKeyword="Release Notes, Microsoft Graph API, Overview" SEODescription="" />
-    <Item text="Associate Office 365 account" url="overview/associate-office365-with-azure-ad.md" SEOKeyword="Release Notes, Microsoft Graph API, Overview" SEODescription="" />
-    <Item text="v2.0 app model (preview)" url="overview/authenticate-MSGraph-using-v2.md" SEOKeyword="Release Notes, Microsoft Graph API, Overview" SEODescription="" />
+    <Item text="Associate Office 365 account" url="overview/associate-office365-with-azure-ad.md" SEOKeyword="Associate Office 365 account, Microsoft Graph API, Overview" SEODescription="" />
+    <Item text="v2.0 app model (preview)" url="overview/authenticate-MSGraph-using-v2.md" SEOKeyword="v2.0 app model, Microsoft Graph API, Overview" SEODescription="" />
     <Item text="FAQs" url="overview/microsoft-graph-api-faqs" SEOKeyword="FAQs, Microsoft Graph API, Overview" SEODescription="" />
   </Item>
   <Item text="How tos" url="platform">
