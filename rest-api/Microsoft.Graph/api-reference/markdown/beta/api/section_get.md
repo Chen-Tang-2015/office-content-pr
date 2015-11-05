@@ -1,31 +1,35 @@
 # Get section
 
-Retrieve the properties and relationships of section object.
+Retrieve the properties and relationships of a [section](../resources/section.md) object.
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API:  
+Notes.Read, Notes.ReadWrite.CreatedByApp, Notes.ReadWrite, Notes.Read.All, or Notes.ReadWrite.All 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-GET /users/<objectId>/notes/sections/<id>
-GET /groups/<objectId>/notes/sections/<id>
-GET /drive/root/createdByUser/notes/sections/<id>
+GET /me/notes/sectionGroups/<id>/sections/<id>
+GET /users/<mail>/notes/sectionGroups/<id>/sections/<id>
+GET /users/<objectId>/notes/sectionGroups/<id>/sections/<id>
+GET /groups/<objectId>/notes/sectionGroups/<id>/sections/<id>
+GET /siteCollections/<id>/sites/<id>/notes/sectionGroups/<id>/sections/<id>
 ```
 ### Optional query parameters
 |Name|Value|Description|
 |:---------------|:--------|:-------|
 |$count|none|The count of related entities can be requested by specifying the $count query option.|
-|$expand|string|Comma-separated list of relationships to expand and include in the response. See relationships table of [section](../resources/section.md) object for supported names. |
+|$expand|string|Comma-separated list of relationships to expand and include in the response. The default response expands parentNotebook and parentSectionGroup and selects their id, name, and self properties. Valid values for sections are parentNotebook and parentSectionGroup. |
 |$select|string|Comma-separated list of properties to include in the response.|
 
 ### Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Authorization  | string  | `Bearer <token>` A valid OAuth token provided to the app based on the user credentials and the user having authorized access. |
+| Accept | string | `application/json` | 
 
 ### Request body
 Do not supply a request body for this method.
 ### Response
-If successful, this method returns a `200 OK` response code and [section](../resources/section.md) object in the response body.
+If successful, this method returns a `200 OK` response code and a [section](../resources/section.md) object in the response body.
 ### Example
 ##### Request
 Here is an example of the request.
@@ -45,8 +49,9 @@ Here is an example of the response.
 } -->
 ```http
 HTTP/1.1 200 OK
-Content-type: application/json
-Content-length: 276
+Content-Type: application/json
+Content-Length: 276
+...
 
 {
   "isDefault": true,
@@ -57,7 +62,17 @@ Content-length: 276
   "lastModifiedTime": "datetime-value",
   "id": "id-value",
   "self": "self-value",
-  "createdTime": "datetime-value"
+  "createdTime": "datetime-value",
+  "parentSectionGroup": {
+    "id": "parentSectionGroup-id-value",
+    "name": "parentSectionGroup-name-value",
+    "self": "parentSectionGroup-self-value"
+  },
+  "parentNotebook": {
+    "id": "parentNotebook-id-value",
+    "name": "nparentNotebook-name-value",
+    "self": "parentNotebook-self-value"
+  }
 }
 ```
 

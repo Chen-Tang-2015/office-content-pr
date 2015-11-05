@@ -1,27 +1,31 @@
-# Create Section
+# Create section
 
-Use this API to create a new Section.
+Create a new [section](../resources/section.md) in the specified notebook.
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API:   
+Notes.Create, Notes.ReadWrite.CreatedByApp, Notes.ReadWrite, or Notes.ReadWrite.All 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
+POST /me/notes/notebooks/<id>/sections
+POST /users/<mail>/notes/notebooks/<id>/sections
 POST /users/<objectId>/notes/notebooks/<id>/sections
 POST /groups/<objectId>/notes/notebooks/<id>/sections
-POST /drive/root/createdByUser/notes/notebooks/<id>/sections
-
+POST /siteCollections/<id>/sites/<id>/notes/notebooks/<id>/sections
 ```
 ### Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Authorization  | string  | `Bearer <token>` A valid OAuth token provided to the app based on the user credentials and the user having authorized access. |
+| Content-Type | string | `application/json` |
 
 ### Request body
-In the request body, supply a JSON representation of [Section](../resources/section.md) object.
+In the request body, supply a name for the section.
 
+Within the same hierarchy level, section names must be unique. The name cannot contain more than 50 characters or contain the following characters:  ?*\/:<>|&#''%~
 
 ### Response
-If successful, this method returns `201, Created` response code and [Section](../resources/section.md) object in the response body.
+If successful, this method returns `201, Created` response code and [section](../resources/section.md) object in the response body.
 
 ### Example
 ##### Request
@@ -31,9 +35,15 @@ Here is an example of the request.
   "name": "create_section_from_notebook"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/users/<objectId>/notes/notebooks/<id>
+POST https://graph.microsoft.com/beta/users/<objectId>/notes/notebooks/<id>/sections
+Authorization: Bearer <token>
+Content-Type: application/json
+
+{
+  "name": "Section name"
+}
 ```
-In the request body, supply a JSON representation of [Section](../resources/section.md) object.
+
 ##### Response
 Here is an example of the response.
 <!-- {
@@ -43,8 +53,9 @@ Here is an example of the response.
 } -->
 ```http
 HTTP/1.1 201 Created
-Content-type: application/json
-Content-length: 276
+Content-Type: application/json
+Content-Length: 276
+... 
 
 {
   "isDefault": true,
