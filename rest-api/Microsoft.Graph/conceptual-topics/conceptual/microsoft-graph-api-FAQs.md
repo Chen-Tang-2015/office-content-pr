@@ -9,12 +9,11 @@ Your feedback is important to us. Connect with us on [Stack Overflow](http://sta
   
 -	[What platforms are supported by Microsoft Graph API?](#msg_how_use__unified_api)
 -	[Why use Microsoft Graph API?](#msg_why_use_unified_api)
--	[What's currently available in Microsoft Graph API](#msg_what_in_unified_api)
+-	[Does Microsoft Graph API support v2.0 app authentication model?](#msg_v2auth) 
+
+<!---	[What's currently available in Microsoft Graph API](#msg_what_in_unified_api)
 -	[What's coming next in Microsoft Graph API?](#msg_what_next_in_unified_api) 
--	[Where can I learn more about Microsoft Graph API development?](#msg_how_learn_unified_api) 
--	[Does Microsoft Graph API support v2.0 app authentication model?](#msg_how_learn_unified_api) 
-
-
+-	[Where can I learn more about Microsoft Graph API development?](#msg_how_learn_unified_api) -->
 
 <a name="msg_how_use_unified_api"> </a>
 ## What platforms are supported by Microsoft Graph API?
@@ -86,6 +85,7 @@ Using the Microsoft Graph API, you don't have to first discover service endpoint
 | Get users           |     `Office 365 unified API` | _https://_**graph.microsoft.com**_/beta/contoso.onmicrosoft.com/users_ |
 | Get message collection from the Inbox       |     `Microsoft Graph API`           | _https://_**graph.microsoft.com**_/beta/me/messages_  |
 | Get Joe's files   |     `Microsoft Graph API `  | _https://_**graph.microsoft.com**_/beta/me/files_ |
+
 <!--| Get TrendingAround, for the current authenticated user           |     `Microsoft Graph API`                     | _https://_**graph.microsoft.com**_/beta/me/trendingaround_   |-->
 
 Some of the benefits of using Microsoft Graph API  are as follows:
@@ -107,10 +107,15 @@ Some of the benefits of using Microsoft Graph API  are as follows:
 
 -	Development tooling and resources for all developers. You can develop using any platform and language 
 -	Mobile development for all platforms using open technologies  
--	No need for any specialized Exchange, SharePoint, or Azure AD knowledge to access Office 365 unified API entities
+-	No need for any specialized Exchange, SharePoint, or Azure AD knowledge to access Microsoft Graph API entities
 
 
-<a name="msg_what_in_unified_api"> </a>
+<a name="msg_v2auth"> </a>
+## Does Microsoft Graph API support v2.0 app authentication model?
+
+Yes, in preview. For more information see [Authenticate Microsoft Graph endpoints using the v2.0 app model preview](authenticate-MSGraph-using-v2.md)
+
+<!--<a name="msg_what_in_unified_api"> </a>
 ## What's in Microsoft Graph API?
 Currently, the Microsoft Graph API supports programmatic access to the following entities.
 
@@ -162,8 +167,6 @@ The **Contact** entity provides access to contact data and contact folders. For 
 -	Add a contact 
 -	Get a contact thumb nail photo
 
-**Note**:  Currently only contact data for organization is available. Personal contact data will be available soon.
-
 **Insights and relationships:  TrendingAround and WorkingWith**
  
 Currently there are two relationships that you can query for: **TrendingAround** and **WorkingWith**. Both these relationships work with the **Files** and **User** entities. 
@@ -177,7 +180,7 @@ Some of the actions you can perform with **TrendingAround** and **WorkingWith**:
 -	Get people relationships and association information based on user's activity 
 -	Get files closely related to a user
 -	Find people you're meeting with today through your calendar events, and discover the files they're working on
--	Get files which are popular in the user's circle.
+-	Get files which are popular in the user's circle.-->
 
 
 
