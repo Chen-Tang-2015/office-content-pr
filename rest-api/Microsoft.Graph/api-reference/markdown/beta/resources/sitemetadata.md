@@ -1,6 +1,6 @@
 # siteMetadata complex type
 
-The site collection ID and site ID of the specified site URL. Returned by the FromUrl method.
+The site collection id and site id of the specified site URL. Returned by the [fromUrl](../api/sitecollection_fromurl.md) method.
 
 ### JSON representation
 

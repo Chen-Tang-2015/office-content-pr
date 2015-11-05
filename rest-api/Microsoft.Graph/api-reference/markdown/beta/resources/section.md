@@ -57,19 +57,21 @@ Here is a JSON representation of the resource
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|pages|[Page](page.md) collection|The collection of pages in the section.  Read-only. Nullable.|
-|parentNotebook|[Notebook](notebook.md)|The notebook that contains the section.  Read-only.|
-|parentSectionGroup|[SectionGroup](sectiongroup.md)|The section group that contains the section.  Read-only.|
+|pages|[page](page.md) collection|The collection of pages in the section.  Read-only. Nullable.|
+|parentNotebook|[notebook](notebook.md)|The notebook that contains the section.  Read-only.|
+|parentSectionGroup|[sectionGroup](sectiongroup.md)|The section group that contains the section.  Read-only.|
 
 ### Methods
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get section](../api/section_get.md) | [section](section.md) |Read the properties and relationships of the section object.|
-|[Create Page](../api/section_post_pages.md) |[Page](page.md)| Create a new page by posting to the pages collection.|
-|[List pages](../api/section_list_pages.md) |[Page](page.md) collection| Get a collection of page objects.|
-|[copyToNotebook](../api/section_copytonotebook.md)|[CopySectionModel](copysectionmodel.md)||
-|[copyToSectionGroup](../api/section_copytosectiongroup.md)|[CopySectionModel](copysectionmodel.md)||
+|[Create Page](../api/section_post_pages.md) |[page](page.md)| Create a new page by posting to the pages collection.|
+|[List pages](../api/section_list_pages.md) |[page](page.md) collection| Get a collection of page objects.|
+|[copyToNotebook](../api/section_copytonotebook.md)|[copySectionModel](copysectionmodel.md)|Copy the section to a specific notebook.|
+|[copyToSectionGroup](../api/section_copytosectiongroup.md)|[copySectionModel](copysectionmodel.md)|Copy the section to a specific section group.|
+
+<!--will test copy*Model-->
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

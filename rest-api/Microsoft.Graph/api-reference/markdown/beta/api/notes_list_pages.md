@@ -22,7 +22,7 @@ GET /siteCollections/<id>/sites/<id>/notes/pages
 |$orderby|string|Comma-separated list of properties that are used to sort the order of items in the response collection.|
 |$select|string|Comma-separated list of properties to include in the response.|
 |$skip|int|The number of items to skip in a result set.|
-|$top|int|The number of items to return in a result set.|
+|$top|int|The number of items to return in a result set. The default value for pages is 20 and the maximum is 100. The default query returns an @odata.nextLink that you can use to page through the result set. |
 
 <!--default is lastModifiedTime desc (most recently modified page first). bug default order isn't lmt desc-->
 
@@ -30,6 +30,7 @@ GET /siteCollections/<id>/sites/<id>/notes/pages
 | Name       | Type | Description|
 |:-----------|:------|:----------|
 | Authorization  | string  | `Bearer <token>` A valid OAuth token provided to the app based on the user credentials and the user having authorized access. |
+| Accept | string | `application/json` |
 
 ### Request body
 Do not supply a request body for this method.
@@ -57,8 +58,9 @@ Here is an example of the response.
 } -->
 ```http
 HTTP/1.1 200 OK
-Content-type: application/json
-Content-length: 484
+Content-Type: application/json
+Content-Length: 484
+...
 
 {
   "value": [
