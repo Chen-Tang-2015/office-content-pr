@@ -1,10 +1,6 @@
 # siteCollection resource type
 
-
-
-### JSON representation
-
-Here is a JSON representation of the resource
+The id of a SharePoint site collection, used for operations on OneNote notebooks.
 
 <!-- {
   "blockType": "resource",
@@ -14,36 +10,16 @@ Here is a JSON representation of the resource
   "@odata.type": "microsoft.graph.sitecollection"
 }-->
 
-```json
-{
-  "id": "String-value (identifier)",
-  "sites": [
-    {
-      "@odata.type": "microsoft.graph.site"
-    }
-  ]
-}
-
-```
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|id|String| Read-only.|
-
-### Relationships
-| Relationship | Type	|Description|
-|:---------------|:--------|:----------|
-|sites|[Site](site.md) collection| Read-only. Nullable.|
+|id|String|The site collection id. Read-only.|
 
 ### Methods
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
-|[Get siteCollection](../api/sitecollection_get.md) | [siteCollection](sitecollection.md) |Read properties and relationships of siteCollection object.|
-|[Create Site](../api/sitecollection_post_sites.md) |[Site](site.md)| Create a new Site by posting to the sites collection.|
-|[List sites](../api/sitecollection_list_sites.md) |[Site](site.md) collection| Get a Site object collection.|
-|[Delete](../api/sitecollection_delete.md) | None |Delete siteCollection object. |
-|[fromUrl](../api/sitecollection_fromurl.md)|[SiteMetadata](sitemetadata.md)||
+|[fromUrl](../api/sitecollection_fromurl.md)|[siteMetadata](sitemetadata.md)|Get the site collection id and the site id for a specified site url.|
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

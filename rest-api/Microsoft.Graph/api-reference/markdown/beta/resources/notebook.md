@@ -2,8 +2,6 @@
 
 A OneNote notebook.
 
-<!--sections and sectionGroups aren't returned by default-->
-
 ### JSON representation
 
 Here is a JSON representation of the resource
@@ -67,19 +65,21 @@ Here is a JSON representation of the resource
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|sectionGroups|[SectionGroup](sectiongroup.md) collection|The section groups in the notebook. Read-only. Nullable.|
-|sections|[Section](section.md) collection|The sections in the notebook. Read-only. Nullable.|
+|sectionGroups|[sectionGroup](sectiongroup.md) collection|The section groups in the notebook. Read-only. Nullable.|
+|sections|[section](section.md) collection|The sections in the notebook. Read-only. Nullable.|
 
 ### Methods
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get notebook](../api/notebook_get.md) | [notebook](notebook.md) |Read the properties and relationships of the notebook object.|
-|[Create SectionGroup](../api/notebook_post_sectiongroups.md) |[SectionGroup](sectiongroup.md)| Create a new section group by posting to the sectionGroups collection.|
-|[List sectionGroups](../api/notebook_list_sectiongroups.md) |[SectionGroup](sectiongroup.md) collection| Get a collection of sectionGroup objects.|
-|[Create Section](../api/notebook_post_sections.md) |[Section](section.md)| Create a new section by posting to the sections collection.|
-|[List sections](../api/notebook_list_sections.md) |[Section](section.md) collection| Get a collection of section objects.|
-|[copyNotebook](../api/notebook_copynotebook.md)|[CopyNotebookModel](copynotebookmodel.md)| This copies a notebook.|
+|[Create sectionGroup](../api/notebook_post_sectiongroups.md) |[sectionGroup](sectiongroup.md)| Create a new section group by posting to the sectionGroups collection.|
+|[List sectionGroups](../api/notebook_list_sectiongroups.md) |[sectionGroup](sectiongroup.md) collection| Get a collection of sectionGroup objects.|
+|[Create section](../api/notebook_post_sections.md) |[section](section.md)| Create a new section by posting to the sections collection.|
+|[List sections](../api/notebook_list_sections.md) |[section](section.md) collection| Get a collection of section objects.|
+|[copyNotebook](../api/notebook_copynotebook.md)|[copyNotebookModel](copynotebookmodel.md)| Copies a notebook.|
+
+<!--TODO: Not sure how CopyNotebookModel fits in. Will test-->
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->
