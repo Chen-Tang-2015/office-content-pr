@@ -1,9 +1,6 @@
-# driveItem: post to children
+# Create children
 
-Your app can upload an item to OneDrive by providing a URL. OneDrive will
-download the file directly from a remote server so your app doesn't have to
-upload the file's bytes. This is especially useful for mobile clients or browser
-add-ins, where the file contents aren't available, or are expensive to transfer.
+Use this API to create a new children.
 
 ### Prerequisites
 The following **scopes** are required to execute this API: 
@@ -16,15 +13,22 @@ POST /drive/root:/{item-path}:/children
 
 ```
 ### Request headers
-| Name | Type  | Description                                                                                    |
-|:------------|:-------|:-----------------------------------------------------------------------------------------------|
-| Prefer    | string | Set to `respond-async` to enable asynchronous item transfer. Otherwise the request is aborted. |
+The multipart body sets metadata for the file along
+with the contents of the file at the same time. OneDrive detects this scenario
+when the `Content-Type: multipart/related` header is included in the request.
 
 ### Request body
-The contents of the request body should be the JSON representation of the item
-to create from the remote URL. Note that when the OneDrive server downloads the file
-from the remote URL, it will not authenticate as the user, so the URL must be
-publicly accessible.
+The uploaded document must contain exactly two parts:
+
+| Part name    | Type             | Description                                        |
+|:-------------|:-----------------|:---------------------------------------------------|
+| **metadata** | application/json | The metadata values to use when creating the item. |
+| **content**  | various          | The binary content of the item being created.      |
+
+The request will be rejected if more than two parts are included. Each part must
+specify a **name** value in the `Content-Disposition` header that indicates which
+part it is. Parts can be in either order, but should specify the metadata part
+first.
 
 ### Response
 If successful, this method returns `201 Created` response code and [item](../resources/item.md) object in the response body.

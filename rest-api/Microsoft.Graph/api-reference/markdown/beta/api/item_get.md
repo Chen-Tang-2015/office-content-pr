@@ -2,8 +2,12 @@
 
 Retrieve the metadata for an Item on OneDrive by path or ID.
 
+For more info, see [Get metadata for a OneDrive item](https://dev.onedrive.com/items/get.htm).
+
 ## Prerequisites
 The following **scopes** are required to execute this API:
+
+  * onedrive.readonly
 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
@@ -36,7 +40,7 @@ If successful, this method returns a `200 OK` response code and [item](../resour
 ### Example
 Here is an example of how to call this API.
 ##### Request
-Here is an example of the request
+Here is an example of the request.
 <!-- {
   "blockType": "request",
   "name": "get_item"
@@ -74,7 +78,7 @@ Content-type: application/json
 
 ### Notes
 
-You can use the [`expand`](../odata/optional-query-parameters.md) query string
+You can use the [`expand`](https://dev.onedrive.com/odata/optional-query-parameters.htm#expanding-collections) query string
 parameter to include the children of an item in the same call as retrieving the
 metadata of an item.
 
@@ -86,7 +90,7 @@ couple differences:
 1. HEAD requests will only return the corresponding GET request's headers. This is
 standard practice for a HEAD response.
 2. HEAD requests will not automatically provision a
-[special folder][special-folder]. Instead, if a special folder is not present,
+[special folder](resources/specialfolder.md). Instead, if a special folder is not present,
 a `404` error will be returned.
 
 In this example, you can see that requesting the root of your OneDrive will respond with

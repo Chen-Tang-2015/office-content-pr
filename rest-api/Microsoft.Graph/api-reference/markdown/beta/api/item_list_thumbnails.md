@@ -1,9 +1,9 @@
 # List thumbnails
 
-Retrieve a list of thumbnailset resources.
+Retrieve a list of ThumbnailSet resources.
 
-An item in a drive can be represented by zero or more **ThumbnailSet** objects.
-Each **ThumbnailSet** can have one or more **Thumbnail** objects, which are images that represent the item.   For example, a **ThumbnailSet** may include **Thumbnail** objects, such as common ones including `small`, `medium`, or `large` and custom defined ones such as `c300x400_Crop`.   Items have **ThumbnailSet** objects that are either generated automatically by OneDrive based off the item or that are defined by a custom uploaded image.
+An item in a drive can be represented by zero or more [ThumbnailSet](resources/thumbnailset.md) objects.
+Each **ThumbnailSet** can have one or more **Thumbnail** objects, which are images that represent the item. For example, a **ThumbnailSet** may include **Thumbnail** objects, such as common ones including `small`, `medium`, or `large` and custom defined ones such as `c300x400_Crop`. Items have **ThumbnailSet** objects that are either generated automatically by OneDrive based off the item or that are defined by a custom uploaded image.
 
 There are many ways to work with thumbnails on OneDrive.
 Here are the most common ones:
@@ -15,6 +15,8 @@ Here are the most common ones:
 * Retrieve custom thumbnail sizes
 * Upload a custom thumbnail for an item
 * Determine if a custom uploaded thumbnail exists
+
+For more info about thumbnails, see [Thumbnails for an item on OneDrive](https://dev.onedrive.com/items/thumbnails.htm).
 
 ### HTTP request
 
@@ -105,7 +107,7 @@ Content-Type: application/json
 
 ## Retrieve thumbnail content
 
-You can directly retrieve the content of the thumbnail directly by requesting the
+You can directly retrieve the content of the thumbnail by requesting the
 **content** property of the thumbnail.
 
 ### HTTP request
@@ -117,7 +119,7 @@ GET /drive/items/{item-id}/thumbnails/{thumb-id}/{size}/content
 
 ### Response
 
-The service responds with a redirect to thumbnail URL.
+The service responds with a redirect to the thumbnail URL.
 
 <!-- { "blockType": "response" } -->
 ```http
@@ -300,19 +302,7 @@ HTTP/1.1 200 OK
    ]
 }
 ```
-**Note:** The response object is truncated for clarity. All default properties will be returned from the actual call.
-
-
-### Error responses
-
-See [Error Responses][error-response] for more info about
-how errors are returned.
-
-[error-response]: ../misc/errors.md
-
-## Remarks
-
-In OneDrive for Business:
+**Note:** 
 
 * Custom thumbnails are not available.
 * Using these calls to expand the thumbnails collection will not work:

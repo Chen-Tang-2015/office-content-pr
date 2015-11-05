@@ -1,14 +1,18 @@
-# driveItem: createLink
+# Create a sharing link for an Item
 
-You can use **createLink** action to share an existing item via a link. This is
+You can use the **createLink** action to share an existing item via a link. This is
 a friendly shortcut for creating common sharing links.
 
 The **createLink** method will create a new sharing link if the specified
 link type doesn't already exist. If a sharing link of the specified type already
 exists for the app, the existing sharing link will be returned.
 
+For more info about sharing links, see [Create a sharing link for an item in OneDrive](https://dev.onedrive.com/items/sharing_createLink.htm).
+
 ### Prerequisites
 The following **scopes** are required to execute this API: 
+
+  * onedrive.readwrite
 
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
@@ -18,7 +22,7 @@ POST /drive/root:/{item-path}:/action.createLink
 ```
 
 ### Request body
-In the request body, provide a JSON object with the following parameters.
+In the request body, you define the type of sharing link. A `view` link allows the user to view the item, and an `edit` link allows the user to edit the item. 
 
 | Name   | Type   | Description                                                          |
 |:-------|:-------|:---------------------------------------------------------------------|
@@ -26,7 +30,7 @@ In the request body, provide a JSON object with the following parameters.
 
 ### Response
 
-If successful, this method returns a single [Permission](../facets/permission_facet.md)
+If successful, this method returns a single [Permission](.resources/permission.md)
 resource in the response body that represents the requested sharing link permission.
 
 The service will first look at the current permissions and check

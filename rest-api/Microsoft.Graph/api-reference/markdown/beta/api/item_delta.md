@@ -1,12 +1,16 @@
-# driveItem: delta
+# View changes for an Item
 
 This method allows your app to enumerate the changes under a OneDrive folder
 from an earlier state, represented by a delta token. This enables your app to
 maintain a local representation of the contents of a drive and update the local
 state efficiently.
 
+For more info about viewing changes, see [View changes for a OneDrive Item and its children](https://dev.onedrive.com/items/view_delta.htm).
+
 ### Prerequisites
 The following **scopes** are required to execute this API: 
+
+  * onedrive.readonly
 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
@@ -27,6 +31,15 @@ Do not supply a request body for this method.
 
 ### Response
 If successful, this method returns `200 OK` response code and [item](../resources/item.md) collection object in the response body.
+The following item properties are returned:
+
+* createdBy
+* lastModifiedBy
+* cTag
+* eTag
+* parentReference
+* size
+* fileSystemInfo
 
 ### Example
 Here is an example of how to call this API.
@@ -76,6 +89,7 @@ Content-type: application/json
 ```
 
 ### Notes
+
 * The Response object is truncated for clarity. All default properties will be returned from the actual call.
 * The delta feed shows the latest state for each item, not each change. If an item were renamed twice, it would only show up once, with its latest name.
 * The same item may appear more than once in a delta feed, for various reasons. You should use the last occurrence you see.
@@ -85,7 +99,7 @@ There may be cases when the service can't provide a list of changes for a given
 token (for example, if a client tries to reuse an old token after being
 disconnected for a long time, or if server state has changed and a new token is
 required). In these cases the service will return an `HTTP 410 Gone` error with
-an [error response][error-response] containing one of the error codes below,
+an [error response](https://dev.onedrive.com/misc/errors.htm) containing one of the error codes below,
 and a `Location` header containing a new nextLink that starts a fresh delta
 enumeration from scratch. After finishing the full enumeration, compare the
 returned items with your local state and follow these instructions.

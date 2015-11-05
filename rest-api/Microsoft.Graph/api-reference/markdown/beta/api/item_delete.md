@@ -1,10 +1,15 @@
-# driveItem: delete item
+# Delete an Item
 
-Deletes a driveItem by using its ID or path. Note that deleting items using this method
+Deletes an Item by using its ID or path. Note that deleting items using this method
 will move the items to the Recycle Bin, instead of permanently deleting them.
+
+For more info about deleting items in OneDrive, see [Delete an Item in OneDrive](https://dev.onedrive.com/items/delete.htm).
 
 ### Prerequisites
 The following **scopes** are required to execute this API: 
+
+  * onedrive.readwrite
+  
 ### HTTP request
 
 ## HTTP request

@@ -3,6 +3,7 @@
 Retrieve a list of permission objects.
 ### Prerequisites
 The following **scopes** are required to execute this API: 
+ 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
@@ -21,11 +22,6 @@ GET /drives/<id>/root/permissions
 |$skip|int|The number of items to skip in a result set.|
 |$skipToken|string|Paging token that is used to get the next set of results.|
 |$top|int|The number of items to return in a result set.|
-
-### Request headers
-| Name       | Type | Description|
-|:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.

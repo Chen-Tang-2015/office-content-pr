@@ -1,9 +1,13 @@
-# item: copy
+# Copy an Item
 
-Creates a copy of an [Item][item-resource] (including any children) on OneDrive, under a new parent.
+Creates a copy of an [Item](resources/item.md) (including any children) on OneDrive, under a new parent.
+
+For more info about how to copy an item on OneDrive, see [Copy an Item on OneDrive](https://dev.onedrive.com/items/copy.htm).
 
 ## Prerequisites
 The following **scopes** are required to execute this API:
+
+  * onedrive.readwrite
 
 ## HTTP request
 
@@ -19,7 +23,7 @@ In the request body, provide a JSON object with the following parameters.
 
 | Name              | Value                                            | Description                                                                                        |
 |:------------------|:-------------------------------------------------|:---------------------------------------------------------------------------------------------------|
-| parentReference | [ItemReference](../resources/itemReference.md) | Reference to the parent item the copy will be created in.                                          |
+| parentReference | [ItemReference](resources/itemreference.md) | Reference to the parent item the copy will be created in.                                          |
 | name            | String                                         | **Optional** The new name for the copy. If this isn't provided, the same name will be used as the original. |
 
 **Note:** The _parentReference_ should include either an `id` or `path` but not
