@@ -63,6 +63,9 @@ Here is a JSON representation of the resource
 |[Get page](../api/page_get.md) | [page](page.md) |Read properties and relationships of page object.|
 |[Update](../api/page_update.md) | [page](page.md)	|Update page object. |
 |[Delete](../api/page_delete.md) | None |Delete page object. |
+|[copyToSection](../api/page_copytosection.md)|[CopyPageModel](copypagemodel.md)||
+|[patchContent](../api/page_patchcontent.md)|None||
+|[thumbnail](../api/page_thumbnail.md)|Stream||
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

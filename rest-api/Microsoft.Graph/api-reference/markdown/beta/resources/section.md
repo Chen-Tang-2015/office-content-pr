@@ -70,6 +70,9 @@ Here is a JSON representation of the resource
 |[List pages](../api/section_list_pages.md) |[Page](page.md) collection| Get a Page object collection.|
 |[Update](../api/section_update.md) | [section](section.md)	|Update section object. |
 |[Delete](../api/section_delete.md) | None |Delete section object. |
+|[copyToNotebook](../api/section_copytonotebook.md)|[CopySectionModel](copysectionmodel.md)||
+|[copyToSectionGroup](../api/section_copytosectiongroup.md)|[CopySectionModel](copysectionmodel.md)||
+|[thumbnail](../api/section_thumbnail.md)|Stream||
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

@@ -133,6 +133,7 @@ Here is a JSON representation of the resource
 |[checkMemberGroups](../api/application_checkmembergroups.md)|String collection||
 |[getMemberGroups](../api/application_getmembergroups.md)|String collection||
 |[getMemberObjects](../api/application_getmemberobjects.md)|String collection||
+|[restore](../api/application_restore.md)|[Application](application.md)||
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

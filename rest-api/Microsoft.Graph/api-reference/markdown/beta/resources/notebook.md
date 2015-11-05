@@ -79,6 +79,7 @@ Here is a JSON representation of the resource
 |[List sections](../api/notebook_list_sections.md) |[Section](section.md) collection| Get a Section object collection.|
 |[Update](../api/notebook_update.md) | [notebook](notebook.md)	|Update notebook object. |
 |[Delete](../api/notebook_delete.md) | None |Delete notebook object. |
+|[copyNotebook](../api/notebook_copynotebook.md)|[CopyNotebookModel](copynotebookmodel.md)||
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

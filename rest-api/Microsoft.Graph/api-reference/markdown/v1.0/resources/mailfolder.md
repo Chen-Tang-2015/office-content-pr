@@ -63,6 +63,8 @@ Here is a JSON representation of the resource
 |[List messages](../api/mailfolder_list_messages.md) |[Message](message.md) collection| Get a Message object collection.|
 |[Update](../api/mailfolder_update.md) | [mailFolder](mailfolder.md)	|Update mailFolder object. |
 |[Delete](../api/mailfolder_delete.md) | None |Delete mailFolder object. |
+|[copy](../api/mailfolder_copy.md)|[MailFolder](mailfolder.md)||
+|[move](../api/mailfolder_move.md)|[MailFolder](mailfolder.md)||
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

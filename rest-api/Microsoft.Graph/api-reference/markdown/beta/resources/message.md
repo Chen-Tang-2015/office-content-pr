@@ -131,6 +131,15 @@ Here is a JSON representation of the resource
 |[List extensions](../api/message_list_extensions.md) |[Extension](extension.md) collection| Get a Extension object collection.|
 |[Update](../api/message_update.md) | [message](message.md)	|Update message object. |
 |[Delete](../api/message_delete.md) | None |Delete message object. |
+|[copy](../api/message_copy.md)|[Message](message.md)||
+|[createForward](../api/message_createforward.md)|[Message](message.md)||
+|[createReply](../api/message_createreply.md)|[Message](message.md)||
+|[createReplyAll](../api/message_createreplyall.md)|[Message](message.md)||
+|[forward](../api/message_forward.md)|None||
+|[move](../api/message_move.md)|[Message](message.md)||
+|[reply](../api/message_reply.md)|None||
+|[replyAll](../api/message_replyall.md)|None||
+|[send](../api/message_send.md)|None||
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

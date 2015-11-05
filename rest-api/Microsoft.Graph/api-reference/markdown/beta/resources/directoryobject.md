@@ -40,6 +40,9 @@ None
 |[Get directoryObject](../api/directoryobject_get.md) | [directoryObject](directoryobject.md) |Read properties and relationships of directoryObject object.|
 |[Update](../api/directoryobject_update.md) | [directoryObject](directoryobject.md)	|Update directoryObject object. |
 |[Delete](../api/directoryobject_delete.md) | None |Delete directoryObject object. |
+|[checkMemberGroups](../api/directoryobject_checkmembergroups.md)|String collection||
+|[getMemberGroups](../api/directoryobject_getmembergroups.md)|String collection||
+|[getMemberObjects](../api/directoryobject_getmemberobjects.md)|String collection||
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->
