@@ -17,7 +17,8 @@ Your feedback is important to us. Connect with us on [Stack Overflow](http://sta
 
 
 <a name="msg_how_use_unified_api"> </a>
-## How to use Microsoft Graph API?
+## What platforms are supported by Microsoft Graph API?
+<!--
 Apps can use the Microsoft Graph API to perform create, read, update, and delete (CRUD) operations on data sources and entities, giving them seamless access to work data. 
 
 **Ease of use--one endpoint, all Office 365 data under one roof**
@@ -28,26 +29,26 @@ You can use the API in four steps:
 3.	Optionally, host your app in Microsoft Azure or any cloud platform you choose.
 4.	Authenticate your users by using single sign-on with Azure AD.
 
-As a developer you can use the API to create custom apps that access and interact with all the richness of enterprise and productivity data--users, groups, organizational contacts, files, folders, mail, calendar, insights and relationships--and build apps across all mobile, web, and desktop platforms. No matter your development platform or tools. Using a single service endpoint to access those entities and data. And a single authentication flow.  
+As a developer you can use the API to create custom apps that access and interact with all the richness of enterprise and productivity data--users, groups, organizational contacts, files, folders, mail, calendar, insights and relationships--and build apps across all mobile, web, and desktop platforms. No matter your development platform or tools. Using a single service endpoint to access those entities and data. And a single authentication flow.  -->
 
 You can:
 
 <!--Just like in Office 365 APIs, Office 365 unified endpoint API  allows you to build apps using any development environment of your choice:  -->
 
-- Use the development environment you're familiar with, like .NET, PHP, Java, Python, or Ruby
+- Use any development environment you're familiar with, like .NET, PHP, Java, Python, or Ruby
 - Use any  programming language, development platform, and hosting environment
 - Build an  app that accesses the unified API using any web language, including JavaScript, HTML5, Python, Ruby, PHP, and ASP.NET  
 - Use the IDE of your choice, whether that's Visual Studio, Eclipse, Android Studio, Xcode or something else you choose
 - Host your apps in Microsoft Azure or any cloud platform
 - Develop apps for Windows Universal, iOS, Android, or on another device platform
-- Call the unified API from Office Add-ins (formerly apps for Office) or SharePoint Add-ins (formerly apps for SharePoint)
+- Call the API from Office Add-ins (formerly apps for Office) or SharePoint Add-ins (formerly apps for SharePoint)
  
+<!--Authentication and authorization
+-->
 
-**Authentication and authorization**
+<!--Then, using single sign-on with Azure AD to authenticate your users, enable them to access files, calendar, emails, user information, and the data stored in the cloud.  The API follows REST and OData 4.0 standards for data transport, and uses OpenID Connect and OAuth 2.0 protocols for authentication and authorization. 
 
-Then, using single sign-on with Azure AD to authenticate your users, enable them to access files, calendar, emails, user information, and the data stored in the cloud.  The API follows REST and OData 4.0 standards for data transport, and uses OpenID Connect and OAuth 2.0 protocols for authentication and authorization. 
-
-You also have the option to use cross-origin resource sharing (CORS) to send requests to the Microsoft Graph API to access, modify, and create data.
+You also have the option to use cross-origin resource sharing (CORS) to send requests to the Microsoft Graph API to access, modify, and create data. -->
 
 <!--The Office 365 unified API gives you access to data from the following entities:
 -	**Users**, **groups** and **organizational contacts**
