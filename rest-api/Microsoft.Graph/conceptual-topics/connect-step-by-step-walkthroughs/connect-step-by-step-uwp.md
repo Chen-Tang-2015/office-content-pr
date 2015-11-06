@@ -1,6 +1,6 @@
-# Call the Office 365 unified API in a universal Windows 10 app
+# Call Microsoft Graph in a universal Windows 10 app
 
-This article describes the process of creating a simple universal Windows 10 app that connects a user to Office 365 and sends an email by making a REST call to the [Office 365 unified API](https://msdn.microsoft.com/en-us/office/office365/howto/office-365-unified-api-overview). The [O365-UWP-Unified-API-Connect](https://github.com/OfficeDev/O365-UWP-Unified-API-Connect) sample implements the concepts outlined in this article.
+This article describes the process of creating a simple universal Windows 10 app that connects a user to Office 365 and sends an email by making a REST call to the Microsoft Graph API. The [O365-UWP-Microsoft-Graph-Connect](https://github.com/OfficeDev/O365-UWP-Unified-API-Connect) sample implements the concepts outlined in this article.
 
 ## Sample user interface
 
@@ -35,7 +35,7 @@ Follow the steps in the [Register and configure the app](https://github.com/Offi
 
 You'll need the client ID value from the **Configure** page of your Azure application when you configure your app for authentication.
 
-## Connect to the Office 365 unified API
+## Connect to Microsoft Graph
 
 The sample uses the native Windows 10 WebAccountManager API to authenticate users. It follows a pattern similar to the one described in the [Develop Windows Universal Apps with Azure AD and the Windows 10 Identity API](http://blogs.technet.com/b/ad/archive/2015/08/03/develop-windows-universal-apps-with-azure-ad-and-the-windows-10-identity-api.aspx) blog post and demonstrated in the [AzureAD-NativeClient-UWP-WAM](https://github.com/Azure-Samples/AzureAD-NativeClient-UWP-WAM) sample.
 
@@ -55,7 +55,7 @@ Add the client ID value that you got when you registered your app as the value f
 
 The AuthenticationHelper.cs file contains all of the authentication code, along with additional logic that stores user information and forces authentication only when the user has disconnected from the app.
 
-The ``GetTokenHelperAsync`` method defined in this file runs when the user authenticates and subsequently every time the app makes a call to the Office 365 unified API. Its first task is to find an Azure AD account provider:
+The ``GetTokenHelperAsync`` method defined in this file runs when the user authenticates and subsequently every time the app makes a call to Microsoft Graph. Its first task is to find an Azure AD account provider:
 
 ```c#
            aadAccountProvider = await WebAuthenticationCoreManager.FindAccountProviderAsync("https://login.microsoft.com", authority);
@@ -98,7 +98,7 @@ After the user authenticates, the app stores the user ID value in ``ApplicationD
             }
 ```
 
-The app uses the Office 365 unified API endpoint --  **https://graph.microsoft.com/** -- as the resource value. When it constructs the ``WebTokenRequest`` it uses the client ID value that you added to the App.xaml file. Since the app knows the user ID and the user hasn't disconnected, the WebAccountManager API can find the user account and pass it to the token request. The ``WebAuthenticationCoreManager.RequestTokenAsync`` method returns an access token with the appropriate permissions assigned to it.
+The app uses the Microsoft Graph endpoint --  **https://graph.microsoft.com/** -- as the resource value. When it constructs the ``WebTokenRequest`` it uses the client ID value that you added to the App.xaml file. Since the app knows the user ID and the user hasn't disconnected, the WebAccountManager API can find the user account and pass it to the token request. The ``WebAuthenticationCoreManager.RequestTokenAsync`` method returns an access token with the appropriate permissions assigned to it.
 
 If the app finds no value for ``userID`` in the roaming settings, it constructs a ``WebTokenRequest`` that forces the user to authenticate through the UI:
 
@@ -144,7 +144,7 @@ If either attempt to retrieve a token is successful, the ``GetTokenHelperAsync``
             }
 ```
 
-## Send an email with the Office 365 unified API
+## Send an email with Microsoft Graph
 
 The MailHelper.cs file contains the code that constructs and sends an email. It consists of a single method -- ``ComposeAndSendMailAsync`` -- that constructs and sends a POST request to the **https://graph.microsoft.com/beta/me/SendMail** endpoint. 
 
@@ -199,13 +199,11 @@ The second task is to construct a valid JSON Message object and send it to the *
                 }
 ```
 
-Once you've made a successful REST request, you've performed the three steps required for interacting with the Office 365 unified API: app registration, user authentication, and making a REST request.
+Once you've made a successful REST request, you've performed the three steps required for interacting with Microsoft Graph: app registration, user authentication, and making a REST request.
 
 
 ## Additional resources
 
-* [Office 365 unified API overview (preview)](https://msdn.microsoft.com/en-us/office/office365/howto/office-365-unified-api-overview)
-* [Office 365 unified API reference (preview)](https://msdn.microsoft.com/en-us/office/office365/howto/office-365-unified-api-reference)
 * [Develop Windows Universal Apps with Azure AD and the Windows 10 Identity API](http://blogs.technet.com/b/ad/archive/2015/08/03/develop-windows-universal-apps-with-azure-ad-and-the-windows-10-identity-api.aspx)
 * [AzureAD-NativeClient-UWP-WAM](https://github.com/Azure-Samples/AzureAD-NativeClient-UWP-WAM)
 * [Office Dev Center](http://dev.office.com)
