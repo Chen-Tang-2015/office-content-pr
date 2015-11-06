@@ -1,3 +1,14 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/GraphStyles/stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+</head>
+<body>
+
 <div id="holder">
 
 <!-- HTML Page Content Start -->
@@ -6,19 +17,7 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="sitecollection-resource-type">siteCollection resource type</h1>
-<h3 id="json-representation">JSON representation</h3>
-<p>Here is a JSON representation of the resource</p>
-<pre><code class="json">{
-  &quot;id&quot;: &quot;String-value (identifier)&quot;,
-  &quot;sites&quot;: [
-    {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.site&quot;
-    }
-  ]
-}
-
-</code></pre>
-
+<p>The id of a SharePoint site collection, used for operations on OneNote notebooks.</p>
 <h3 id="properties">Properties</h3>
 <table>
 <thead>
@@ -32,24 +31,7 @@
 <tr>
 	<td align="left">id</td>
 	<td align="left">String</td>
-	<td align="left">Read-only.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="relationships">Relationships</h3>
-<table>
-<thead>
-<tr>
-	<th align="left">Relationship</th>
-	<th align="left">Type</th>
-	<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-	<td align="left">sites</td>
-	<td align="left"><a href="site.htm">Site</a> collection</td>
-	<td align="left">Read-only. Nullable.</td>
+	<td align="left">The site collection id. Read-only.</td>
 </tr>
 </tbody>
 </table>
@@ -64,24 +46,9 @@
 </thead>
 <tbody>
 <tr>
-	<td align="left"><a href="../api/sitecollection_get.htm">Get siteCollection</a></td>
-	<td align="left"><a href="sitecollection.htm">siteCollection</a></td>
-	<td align="left">Read properties and relationships of siteCollection object.</td>
-</tr>
-<tr>
-	<td align="left"><a href="../api/sitecollection_post_sites.htm">Create Site</a></td>
-	<td align="left"><a href="site.htm">Site</a></td>
-	<td align="left">Create a new Site by posting to the sites collection.</td>
-</tr>
-<tr>
-	<td align="left"><a href="../api/sitecollection_list_sites.htm">List sites</a></td>
-	<td align="left"><a href="site.htm">Site</a> collection</td>
-	<td align="left">Get a Site object collection.</td>
-</tr>
-<tr>
-	<td align="left"><a href="../api/sitecollection_delete.htm">Delete</a></td>
-	<td align="left">None</td>
-	<td align="left">Delete siteCollection object.</td>
+	<td align="left"><a href="../api/sitecollection_fromurl.htm">fromUrl</a></td>
+	<td align="left"><a href="sitemetadata.htm">siteMetadata</a></td>
+	<td align="left">Get the site collection id and the site id for a specified site url.</td>
 </tr>
 </tbody>
 </table>
@@ -93,6 +60,11 @@
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
+   
+</body>  
+</html>  
 
 
 

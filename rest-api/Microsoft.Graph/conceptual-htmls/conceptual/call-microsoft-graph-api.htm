@@ -1,3 +1,14 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/GraphStyles/stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+</head>
+<body>
+
 <div id="holder">
 
 <!-- HTML Page Content Start -->
@@ -60,15 +71,12 @@ version of the service, you can send requests to <code>https://graph.microsoft.c
 <p>The metadata allows you to see entities, entity types and sets, and enums of the Microsoft Graph REST API. Using the metadata and readily available third-party tools, you can create serialized objects and generate client libraries for simplified 
 use of the REST API.  </p>
 <p>A resource URL is determined by the Microsoft Graph API entity data model. The prescription is outlined in the entity metadata schema ($metadata). </p>
-<blockquote>
-<p>Note: To learn how interpret the entity metadata schema ($metadata), see <a href="understand-microsoft-graph-metadata.htm">Understand Microsoft Graph API metadata</a>.</p>
-</blockquote>
 <p>The path URL resource names and query parameters are case insensitive. However, values you assign, entity IDs, and 
 other base64 encoded values are case sensitive.</p>
 <p>A few basic programming patterns calls to the API are shown in the following section.</p>
 <p>&lt;a name=&quot;msg_nav_from_set_to_member&quot;&gt; </a></p>
 <h3 id="navigation-from-a-set-to-a-member">Navigation from a set to a member</h3>
-<p>To view the information about a user, get the <code>User</code> entity from the <code>users</code> collection on the tenant. To do so, you can
+<p>To view the information about a user, you get the <code>User</code> entity from the <code>users</code> collection on the tenant. To do so, you can
 navigate from the tenant to users and then to the specific user identified by its identifier, using an HTTPS GET request. For a <code>User</code> entity, either the <code>objectId</code> or <code>userPrincipalName</code> property may be used as the identifier. The following example request uses the <code>userPrincipalName</code> value as the user's Id. </p>
 <pre><code class="no-highlight">GET https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com/users/john.doe@contoso.onmicrosoft.com HTTP/1.1
 Authorization : Bearer &lt;access_token&gt;
@@ -264,6 +272,11 @@ content-length: 96
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
+   
+</body>  
+</html>  
 
 
 

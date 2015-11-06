@@ -1,3 +1,14 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/GraphStyles/stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+</head>
+<body>
+
 <div id="holder">
 
 <!-- HTML Page Content Start -->
@@ -5,35 +16,23 @@
 <div class="container wrapper" id="body">
     <div class="row">
         <div class="col-md-9">
-            <h1 id="item-delta">item: delta</h1>
+            <h1 id="view-changes-for-an-item">View changes for an Item</h1>
+<p>This method allows your app to enumerate the changes under a OneDrive folder
+from an earlier state, represented by a delta token. This enables your app to
+maintain a local representation of the contents of a drive and update the local
+state efficiently.</p>
+<p>For more info about viewing changes, see <a href="https://dev.onedrive.com/items/view_delta.htm" target="_blank">View changes for a OneDrive Item and its children</a>.</p>
 <h3 id="prerequisites">Prerequisites</h3>
 <p>The following <strong>scopes</strong> are required to execute this API: </p>
+<ul>
+<li>onedrive.readonly</li>
+</ul>
 <h3 id="http-request">HTTP request</h3>
-<pre><code class="http">POST /drive/root/delta(token=token-value)
-POST /drive/items/&lt;id&gt;/delta(token=token-value)
-POST /drives/&lt;id&gt;/root/delta(token=token-value)
-
+<pre><code class="http">GET /drive/items/{item-id}/view.delta
+GET /drive/root:/{item-path}:/view.delta
 </code></pre>
 
-<h3 id="request-headers">Request headers</h3>
-<table>
-<thead>
-<tr>
-	<th align="left">Name</th>
-	<th align="left">Type</th>
-	<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-	<td align="left">X-Sample-Header</td>
-	<td align="left">string</td>
-	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
-</tr>
-</tbody>
-</table>
-<h3 id="request-body">Request body</h3>
-<p>In the request URL, provide following query parameters with values.</p>
+<h3 id="query-string-parameters">Query string parameters</h3>
 <table>
 <thead>
 <tr>
@@ -46,174 +45,121 @@ POST /drives/&lt;id&gt;/root/delta(token=token-value)
 <tr>
 	<td align="left">token</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The last token returned from the previous call to <code>view.delta</code>. If omitted, <code>view.delta</code> returns the current state of the hierarchy.</td>
+</tr>
+<tr>
+	<td align="left">top</td>
+	<td align="left">Int32</td>
+	<td align="left">The desired number of items to return in the next page. Note: <code>view.delta</code> may end up returning more or fewer.</td>
 </tr>
 </tbody>
 </table>
+<h3 id="request-body">Request body</h3>
+<p>Do not supply a request body for this method.</p>
 <h3 id="response">Response</h3>
-<p>If successful, this method returns <code>200, OK</code> response code and <a href="../resources/item.htm">item</a> collection object in the response body.</p>
+<p>If successful, this method returns <code>200 OK</code> response code and <a href="../resources/item.htm">item</a> collection object in the response body.
+The following item properties are returned:</p>
+<ul>
+<li>createdBy</li>
+<li>lastModifiedBy</li>
+<li>cTag</li>
+<li>eTag</li>
+<li>parentReference</li>
+<li>size</li>
+<li>fileSystemInfo</li>
+</ul>
 <h3 id="example">Example</h3>
 <p>Here is an example of how to call this API.</p>
 <h5 id="request">Request</h5>
-<p>Here is an example of the request.</p>
-<pre><code class="http">POST https://graph.microsoft.com/v1.0/drive/root/delta
+<p>Here is an example of the request</p>
+<pre><code class="http">GET /drive/root/view.delta
 </code></pre>
 
 <h5 id="response-1">Response</h5>
 <p>Here is an example of the response.</p>
 <pre><code class="http">HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 3784
 
 {
   &quot;value&quot;: [
     {
-      &quot;content&quot;: &quot;content-value&quot;,
-      &quot;createdBy&quot;: {
-        &quot;application&quot;: {
-          &quot;displayName&quot;: &quot;displayName-value&quot;,
-          &quot;id&quot;: &quot;id-value&quot;
-        },
-        &quot;device&quot;: {
-          &quot;displayName&quot;: &quot;displayName-value&quot;,
-          &quot;id&quot;: &quot;id-value&quot;
-        },
-        &quot;user&quot;: {
-          &quot;displayName&quot;: &quot;displayName-value&quot;,
-          &quot;id&quot;: &quot;id-value&quot;
-        }
+      &quot;id&quot;: &quot;0123456789abc&quot;,
+      &quot;name&quot;: &quot;folder2&quot;,
+      &quot;folder&quot;: { }
       },
-      &quot;createdDateTime&quot;: &quot;datetime-value&quot;,
-      &quot;cTag&quot;: &quot;cTag-value&quot;,
-      &quot;description&quot;: &quot;description-value&quot;,
-      &quot;eTag&quot;: &quot;eTag-value&quot;,
-      &quot;id&quot;: &quot;id-value&quot;,
-      &quot;lastModifiedBy&quot;: {
-        &quot;application&quot;: {
-          &quot;displayName&quot;: &quot;displayName-value&quot;,
-          &quot;id&quot;: &quot;id-value&quot;
-        },
-        &quot;device&quot;: {
-          &quot;displayName&quot;: &quot;displayName-value&quot;,
-          &quot;id&quot;: &quot;id-value&quot;
-        },
-        &quot;user&quot;: {
-          &quot;displayName&quot;: &quot;displayName-value&quot;,
-          &quot;id&quot;: &quot;id-value&quot;
-        }
+      {
+        &quot;id&quot;: &quot;123010204abac&quot;,
+        &quot;name&quot;: &quot;file.txt&quot;,
+        &quot;file&quot;: { }
       },
-      &quot;lastModifiedDateTime&quot;: &quot;datetime-value&quot;,
-      &quot;name&quot;: &quot;name-value&quot;,
-      &quot;parentReference&quot;: {
-        &quot;driveId&quot;: &quot;driveId-value&quot;,
-        &quot;id&quot;: &quot;id-value&quot;,
-        &quot;path&quot;: &quot;path-value&quot;
-      },
-      &quot;size&quot;: 99,
-      &quot;webDavUrl&quot;: &quot;webDavUrl-value&quot;,
-      &quot;webUrl&quot;: &quot;webUrl-value&quot;,
-      &quot;audio&quot;: {
-        &quot;album&quot;: &quot;album-value&quot;,
-        &quot;albumArtist&quot;: &quot;albumArtist-value&quot;,
-        &quot;artist&quot;: &quot;artist-value&quot;,
-        &quot;bitrate&quot;: 99,
-        &quot;composers&quot;: &quot;composers-value&quot;,
-        &quot;copyright&quot;: &quot;copyright-value&quot;,
-        &quot;disc&quot;: 99,
-        &quot;discCount&quot;: 99,
-        &quot;duration&quot;: 99,
-        &quot;genre&quot;: &quot;genre-value&quot;,
-        &quot;hasDrm&quot;: true,
-        &quot;isVariableBitrate&quot;: true,
-        &quot;title&quot;: &quot;title-value&quot;,
-        &quot;track&quot;: 99,
-        &quot;trackCount&quot;: 99,
-        &quot;year&quot;: 99
-      },
-      &quot;deleted&quot;: {
-        &quot;state&quot;: &quot;state-value&quot;
-      },
-      &quot;file&quot;: {
-        &quot;hashes&quot;: {
-          &quot;crc32Hash&quot;: &quot;crc32Hash-value&quot;,
-          &quot;sha1Hash&quot;: &quot;sha1Hash-value&quot;
-        },
-        &quot;mimeType&quot;: &quot;mimeType-value&quot;
-      },
-      &quot;fileSystemInfo&quot;: {
-        &quot;createdDateTime&quot;: &quot;datetime-value&quot;,
-        &quot;lastModifiedDateTime&quot;: &quot;datetime-value&quot;
-      },
-      &quot;folder&quot;: {
-        &quot;childCount&quot;: 99
-      },
-      &quot;image&quot;: {
-        &quot;height&quot;: 99,
-        &quot;width&quot;: 99
-      },
-      &quot;location&quot;: {
-        &quot;altitude&quot;: 99,
-        &quot;latitude&quot;: 99,
-        &quot;longitude&quot;: 99
-      },
-      &quot;openWith&quot;: {
-        &quot;web&quot;: {
-          &quot;app&quot;: {
-            &quot;displayName&quot;: &quot;displayName-value&quot;,
-            &quot;id&quot;: &quot;id-value&quot;
-          },
-          &quot;viewUrl&quot;: &quot;viewUrl-value&quot;,
-          &quot;editUrl&quot;: &quot;editUrl-value&quot;,
-          &quot;viewPostParameters&quot;: &quot;viewPostParameters-value&quot;,
-          &quot;editPostParameters&quot;: &quot;editPostParameters-value&quot;
-        },
-        &quot;webEmbedded&quot;: {
-          &quot;app&quot;: {
-            &quot;displayName&quot;: &quot;displayName-value&quot;,
-            &quot;id&quot;: &quot;id-value&quot;
-          },
-          &quot;viewUrl&quot;: &quot;viewUrl-value&quot;,
-          &quot;editUrl&quot;: &quot;editUrl-value&quot;,
-          &quot;viewPostParameters&quot;: &quot;viewPostParameters-value&quot;,
-          &quot;editPostParameters&quot;: &quot;editPostParameters-value&quot;
-        }
-      },
-      &quot;photo&quot;: {
-        &quot;height&quot;: 99,
-        &quot;width&quot;: 99,
-        &quot;id&quot;: &quot;id-value&quot;
-      },
-      &quot;searchResult&quot;: {
-        &quot;onClickTelemetryUrl&quot;: &quot;onClickTelemetryUrl-value&quot;
-      },
-      &quot;shared&quot;: {
-        &quot;owner&quot;: {
-          &quot;application&quot;: {
-            &quot;displayName&quot;: &quot;displayName-value&quot;,
-            &quot;id&quot;: &quot;id-value&quot;
-          },
-          &quot;device&quot;: {
-            &quot;displayName&quot;: &quot;displayName-value&quot;,
-            &quot;id&quot;: &quot;id-value&quot;
-          },
-          &quot;user&quot;: {
-            &quot;displayName&quot;: &quot;displayName-value&quot;,
-            &quot;id&quot;: &quot;id-value&quot;
-          }
-        },
-        &quot;scope&quot;: &quot;scope-value&quot;
-      },
-      &quot;specialFolder&quot;: {
-        &quot;name&quot;: &quot;name-value&quot;
-      },
-      &quot;video&quot;: {
-        &quot;bitrate&quot;: 99,
-        &quot;duration&quot;: 99,
-        &quot;height&quot;: 99,
-        &quot;width&quot;: 99
+      {
+        &quot;id&quot;: &quot;2353010204ddgg&quot;,
+        &quot;name&quot;: &quot;file5.txt&quot;,
+        &quot;deleted&quot;: { }
       }
-    }
-  ]
+    ],
+    &quot;@odata.nextLink&quot;: &quot;https://graph.microsoft.com/beta/drive/root/view.delta?token=1230919asd190410jlka&quot;,
+    &quot;@delta.token&quot;: &quot;1230919asd190410jlka&quot;
+}
+</code></pre>
+
+<h3 id="notes">Notes</h3>
+<ul>
+<li>The Response object is truncated for clarity. All default properties will be returned from the actual call.</li>
+<li>The delta feed shows the latest state for each item, not each change. If an item were renamed twice, it would only show up once, with its latest name.</li>
+<li>The same item may appear more than once in a delta feed, for various reasons. You should use the last occurrence you see.</li>
+<li>The <code>parentReference</code> property on items will not include a value for <code>path</code>. This occurs because renaming a folder does not result in any descendants of the folder being returned from view.delta. When using view.delta you should always track items by id.</li>
+</ul>
+<p>There may be cases when the service can't provide a list of changes for a given
+token (for example, if a client tries to reuse an old token after being
+disconnected for a long time, or if server state has changed and a new token is
+required). In these cases the service will return an <code>HTTP 410 Gone</code> error with
+an <a href="https://dev.onedrive.com/misc/errors.htm" target="_blank">error response</a> containing one of the error codes below,
+and a <code>Location</code> header containing a new nextLink that starts a fresh delta
+enumeration from scratch. After finishing the full enumeration, compare the
+returned items with your local state and follow these instructions.</p>
+<table>
+<thead>
+<tr>
+	<th align="left">Error Type</th>
+	<th align="left">Instructions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>ResyncChangesApplyDifferences</code></td>
+	<td align="left">Replace any local items with the server's version (including deletes) if you're sure that the service was up to date with your local changes when you last sync'd. Upload any local changes that the server doesn't know about.</td>
+</tr>
+<tr>
+	<td align="left"><code>ResyncChangesUploadDifferences</code></td>
+	<td align="left">Upload any local items that the service did not return, and upload any files that differ from the server's version (keeping both copies if you're not sure which one is more up-to-date).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retrieving-just-the-latest-delta-token">Retrieving just the latest delta token</h3>
+<p>It is possible to retrieve just the latest delta token, without first
+enumerating all of the items. This can be useful if your app only wants to know
+about changes, and doesn't care about any existing items. To retrieve just the
+latest token, call <code>view.delta</code> with the string <code>latest</code> as the value for the
+<code>token</code> query parameter.</p>
+<p><strong>Note: If you are trying to maintain a full local representation of the items
+in a folder or a drive, you must use <code>view.delta</code> for the initial enumeration.
+Other approaches, such as paging through the <code>children</code> collection of a folder,
+are not guaranteed to return every single item if any writes take place during
+the enumeration. <code>view.delta</code> is the only way to guarantee that you've read all
+of the data you need to.</strong></p>
+<h4 id="example-1">Example</h4>
+<pre><code>GET /drive/root/view.delta?token=latest
+Accept: application/json
+</code></pre>
+
+<pre><code class="http">HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+    &quot;value&quot;: [ ],
+    &quot;@odata.deltaLink&quot;: &quot;https://api.onedrive.com/drive/root/view.delta?token=1230919asd190410jlka&quot;,
+    &quot;@delta.token&quot;: &quot;1230919asd190410jlka&quot;
 }
 </code></pre>
 
@@ -225,6 +171,11 @@ Content-length: 3784
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
+   
+</body>  
+</html>  
 
 
 

@@ -1,3 +1,14 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/GraphStyles/stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+</head>
+<body>
+
 <div id="holder">
 
 <!-- HTML Page Content Start -->
@@ -6,15 +17,14 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="itemreference-resource-type">itemReference resource type</h1>
-<p>The itemReference type groups data needed to reference a OneDrive item across the service into a single structure.</p>
+<p>The itemReference type groups data needed to reference an item into a single resource.</p>
 <h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
-  &quot;driveId&quot;: &quot;String-value&quot;,
-  &quot;id&quot;: &quot;String-value&quot;,
-  &quot;path&quot;: &quot;String-value&quot;
+  &quot;driveId&quot;: &quot;string (identifier)&quot;,
+  &quot;id&quot;: &quot;string (identifier)&quot;,
+  &quot;path&quot;: &quot;string (path)&quot;
 }
-
 </code></pre>
 
 <h3 id="properties">Properties</h3>
@@ -44,6 +54,9 @@
 </tr>
 </tbody>
 </table>
+<p><strong>Note:</strong> The <strong>path</strong> value is a OneDrive API path, for example: <code>/drive/root:/Documents/myfile.docx</code>.
+To retrieve the human-readable path for a breadcrumb, you can safely ignore
+everything up to the first <code>:</code> in the path string.</p>
 
         </div>        
     </div>
@@ -52,6 +65,11 @@
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
+   
+</body>  
+</html>  
 
 
 

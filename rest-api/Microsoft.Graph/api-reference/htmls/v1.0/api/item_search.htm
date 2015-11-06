@@ -1,3 +1,14 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/GraphStyles/stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+</head>
+<body>
+
 <div id="holder">
 
 <!-- HTML Page Content Start -->
@@ -5,218 +16,129 @@
 <div class="container wrapper" id="body">
     <div class="row">
         <div class="col-md-9">
-            <h1 id="item-search">item: search</h1>
+            <h1 id="search-for-an-item">Search for an Item</h1>
+<p>Search the hierarchy of items in OneDrive for items matching a query. You can
+search and/or filter results to find the items your app is looking for.</p>
+<p>Search returns matching results from the item specified in the URL and all
+children of that item. Filtering works on the collection of items returned,
+which can be either all children when using search, or just the immediate
+children when using a collection.</p>
+<p>For more info, see <a href="https://dev.onedrive.com/items/search.htm" target="_blank">Searching and filtering Items in OneDrive</a>.</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<p>The following <strong>scopes</strong> are required to execute this API:</p>
+<ul>
+<li>onedrive.readonly</li>
+</ul>
 <h3 id="http-request">HTTP request</h3>
-<pre><code class="http">POST /drive/root/search(q=q-value)
-POST /drive/items/&lt;id&gt;/search(q=q-value)
-POST /drives/&lt;id&gt;/root/search(q=q-value)
-
+<pre><code>GET /drive/root/search?q=vacation
+GET /drive/items/{item-id}/search?q=vacation
+GET /drive/root:/{item-path}:/search?q=vacation
 </code></pre>
 
-<h3 id="request-headers">Request headers</h3>
+<h3 id="optional-query-parameters">Optional query parameters</h3>
 <table>
 <thead>
 <tr>
 	<th align="left">Name</th>
-	<th align="left">Type</th>
+	<th align="left">Value</th>
 	<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-	<td align="left">X-Sample-Header</td>
+	<td align="left">$expand</td>
 	<td align="left">string</td>
-	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
+	<td align="left">Comma-separated list of relationships to expand and include in the response. See relationships table of <a href="../resources/item.htm">item</a> for supported names.</td>
+</tr>
+<tr>
+	<td align="left">$filter</td>
+	<td align="left">string</td>
+	<td align="left">Filter string that lets you filter the response based on a set of criteria.</td>
+</tr>
+<tr>
+	<td align="left">$orderby</td>
+	<td align="left">string</td>
+	<td align="left">Comma-separated list of properties that are used to sort the order of items in the response collection.</td>
+</tr>
+<tr>
+	<td align="left">$select</td>
+	<td align="left">string</td>
+	<td align="left">Comma-separated list of properties to include in the response.</td>
+</tr>
+<tr>
+	<td align="left">$top</td>
+	<td align="left">int</td>
+	<td align="left">The number of items to return in a result set.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="request-body">Request body</h3>
-<p>In the request URL, provide following query parameters with values.</p>
+<p>Do not supply a request body for this method.</p>
+<h4 id="query-string-parameters">Query string parameters</h4>
 <table>
 <thead>
 <tr>
-	<th align="left">Parameter</th>
-	<th align="left">Type</th>
+	<th align="left">Name</th>
+	<th align="left">Value</th>
 	<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-	<td align="left">q</td>
-	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left"><code>q</code></td>
+	<td align="left">string</td>
+	<td align="left">The query text used to search for items. Values may be matched across several fields including filename, metadata, and file content.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="response">Response</h3>
-<p>If successful, this method returns <code>200, OK</code> response code and <a href="../resources/item.htm">item</a> collection object in the response body.</p>
 <h3 id="example">Example</h3>
 <p>Here is an example of how to call this API.</p>
 <h5 id="request">Request</h5>
 <p>Here is an example of the request.</p>
-<pre><code class="http">POST https://graph.microsoft.com/v1.0/drive/root/search
+<pre><code class="http">POST /drive/root/search?q={search=text}
 </code></pre>
 
-<h5 id="response-1">Response</h5>
-<p>Here is an example of the response.</p>
+<h5 id="response">Response</h5>
+<p>This method returns an object containing an array of <a href="../resources/item.htm">items</a> that
+match the search criteria. If no items were found, an empty array is returned.</p>
+<p>If there are too many matches the response will be paged and an
+<strong>@odata.nextLink</strong> property will contain a URL to the next page of results. You
+can use the <code>top</code> query parameter to specify the number of items in the page.</p>
 <pre><code class="http">HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 3784
 
 {
-  &quot;value&quot;: [
-    {
-      &quot;content&quot;: &quot;content-value&quot;,
-      &quot;createdBy&quot;: {
-        &quot;application&quot;: {
-          &quot;displayName&quot;: &quot;displayName-value&quot;,
-          &quot;id&quot;: &quot;id-value&quot;
-        },
-        &quot;device&quot;: {
-          &quot;displayName&quot;: &quot;displayName-value&quot;,
-          &quot;id&quot;: &quot;id-value&quot;
-        },
-        &quot;user&quot;: {
-          &quot;displayName&quot;: &quot;displayName-value&quot;,
-          &quot;id&quot;: &quot;id-value&quot;
+    &quot;value&quot;: [
+      {
+        &quot;id&quot;: &quot;0123456789abc!123&quot;,
+        &quot;name&quot;: &quot;Vacation photos&quot;,
+        &quot;folder&quot;: {},
+        &quot;searchResult&quot;:
+        {
+          &quot;onClickTelemetryUrl&quot;: &quot;https://bing.com/0123456789abc!123&quot;
         }
       },
-      &quot;createdDateTime&quot;: &quot;datetime-value&quot;,
-      &quot;cTag&quot;: &quot;cTag-value&quot;,
-      &quot;description&quot;: &quot;description-value&quot;,
-      &quot;eTag&quot;: &quot;eTag-value&quot;,
-      &quot;id&quot;: &quot;id-value&quot;,
-      &quot;lastModifiedBy&quot;: {
-        &quot;application&quot;: {
-          &quot;displayName&quot;: &quot;displayName-value&quot;,
-          &quot;id&quot;: &quot;id-value&quot;
-        },
-        &quot;device&quot;: {
-          &quot;displayName&quot;: &quot;displayName-value&quot;,
-          &quot;id&quot;: &quot;id-value&quot;
-        },
-        &quot;user&quot;: {
-          &quot;displayName&quot;: &quot;displayName-value&quot;,
-          &quot;id&quot;: &quot;id-value&quot;
+      {
+        &quot;id&quot;: &quot;0123456789abc!456&quot;,
+        &quot;name&quot;: &quot;Summer Vacation Rentals.docx&quot;,
+        &quot;file&quot;: {},
+        &quot;searchResult&quot;:
+        {
+          &quot;onClickTelemetryUrl&quot;: &quot;https://bing.com/0123456789abc!456&quot;
         }
-      },
-      &quot;lastModifiedDateTime&quot;: &quot;datetime-value&quot;,
-      &quot;name&quot;: &quot;name-value&quot;,
-      &quot;parentReference&quot;: {
-        &quot;driveId&quot;: &quot;driveId-value&quot;,
-        &quot;id&quot;: &quot;id-value&quot;,
-        &quot;path&quot;: &quot;path-value&quot;
-      },
-      &quot;size&quot;: 99,
-      &quot;webDavUrl&quot;: &quot;webDavUrl-value&quot;,
-      &quot;webUrl&quot;: &quot;webUrl-value&quot;,
-      &quot;audio&quot;: {
-        &quot;album&quot;: &quot;album-value&quot;,
-        &quot;albumArtist&quot;: &quot;albumArtist-value&quot;,
-        &quot;artist&quot;: &quot;artist-value&quot;,
-        &quot;bitrate&quot;: 99,
-        &quot;composers&quot;: &quot;composers-value&quot;,
-        &quot;copyright&quot;: &quot;copyright-value&quot;,
-        &quot;disc&quot;: 99,
-        &quot;discCount&quot;: 99,
-        &quot;duration&quot;: 99,
-        &quot;genre&quot;: &quot;genre-value&quot;,
-        &quot;hasDrm&quot;: true,
-        &quot;isVariableBitrate&quot;: true,
-        &quot;title&quot;: &quot;title-value&quot;,
-        &quot;track&quot;: 99,
-        &quot;trackCount&quot;: 99,
-        &quot;year&quot;: 99
-      },
-      &quot;deleted&quot;: {
-        &quot;state&quot;: &quot;state-value&quot;
-      },
-      &quot;file&quot;: {
-        &quot;hashes&quot;: {
-          &quot;crc32Hash&quot;: &quot;crc32Hash-value&quot;,
-          &quot;sha1Hash&quot;: &quot;sha1Hash-value&quot;
-        },
-        &quot;mimeType&quot;: &quot;mimeType-value&quot;
-      },
-      &quot;fileSystemInfo&quot;: {
-        &quot;createdDateTime&quot;: &quot;datetime-value&quot;,
-        &quot;lastModifiedDateTime&quot;: &quot;datetime-value&quot;
-      },
-      &quot;folder&quot;: {
-        &quot;childCount&quot;: 99
-      },
-      &quot;image&quot;: {
-        &quot;height&quot;: 99,
-        &quot;width&quot;: 99
-      },
-      &quot;location&quot;: {
-        &quot;altitude&quot;: 99,
-        &quot;latitude&quot;: 99,
-        &quot;longitude&quot;: 99
-      },
-      &quot;openWith&quot;: {
-        &quot;web&quot;: {
-          &quot;app&quot;: {
-            &quot;displayName&quot;: &quot;displayName-value&quot;,
-            &quot;id&quot;: &quot;id-value&quot;
-          },
-          &quot;viewUrl&quot;: &quot;viewUrl-value&quot;,
-          &quot;editUrl&quot;: &quot;editUrl-value&quot;,
-          &quot;viewPostParameters&quot;: &quot;viewPostParameters-value&quot;,
-          &quot;editPostParameters&quot;: &quot;editPostParameters-value&quot;
-        },
-        &quot;webEmbedded&quot;: {
-          &quot;app&quot;: {
-            &quot;displayName&quot;: &quot;displayName-value&quot;,
-            &quot;id&quot;: &quot;id-value&quot;
-          },
-          &quot;viewUrl&quot;: &quot;viewUrl-value&quot;,
-          &quot;editUrl&quot;: &quot;editUrl-value&quot;,
-          &quot;viewPostParameters&quot;: &quot;viewPostParameters-value&quot;,
-          &quot;editPostParameters&quot;: &quot;editPostParameters-value&quot;
-        }
-      },
-      &quot;photo&quot;: {
-        &quot;height&quot;: 99,
-        &quot;width&quot;: 99,
-        &quot;id&quot;: &quot;id-value&quot;
-      },
-      &quot;searchResult&quot;: {
-        &quot;onClickTelemetryUrl&quot;: &quot;onClickTelemetryUrl-value&quot;
-      },
-      &quot;shared&quot;: {
-        &quot;owner&quot;: {
-          &quot;application&quot;: {
-            &quot;displayName&quot;: &quot;displayName-value&quot;,
-            &quot;id&quot;: &quot;id-value&quot;
-          },
-          &quot;device&quot;: {
-            &quot;displayName&quot;: &quot;displayName-value&quot;,
-            &quot;id&quot;: &quot;id-value&quot;
-          },
-          &quot;user&quot;: {
-            &quot;displayName&quot;: &quot;displayName-value&quot;,
-            &quot;id&quot;: &quot;id-value&quot;
-          }
-        },
-        &quot;scope&quot;: &quot;scope-value&quot;
-      },
-      &quot;specialFolder&quot;: {
-        &quot;name&quot;: &quot;name-value&quot;
-      },
-      &quot;video&quot;: {
-        &quot;bitrate&quot;: 99,
-        &quot;duration&quot;: 99,
-        &quot;height&quot;: 99,
-        &quot;width&quot;: 99
       }
-    }
-  ]
+    ],
+    &quot;@search.approximateCount&quot;: 12,
+    &quot;@odata.nextLink&quot;: &quot;https://api.onedrive.com/drive/root/view.search?query=vacation&amp;skipToken=1asdlnjnkj1nalkm!asd&quot;
 }
 </code></pre>
 
+<p><strong>Note:</strong> This method will not return the following Item properties:</p>
+<ul>
+<li><code>createdBy</code></li>
+<li><code>modifiedBy</code></li>
+<li><code>parentReference</code></li>
+</ul>
 
         </div>        
     </div>
@@ -225,6 +147,11 @@ Content-length: 3784
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
+   
+</body>  
+</html>  
 
 
 

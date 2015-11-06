@@ -1,3 +1,14 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/GraphStyles/stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+</head>
+<body>
+
 <div id="holder">
 
 <!-- HTML Page Content Start -->
@@ -36,10 +47,8 @@
 <li><a href="https://dev.outlook.com/RestGettingStarted/Tutorial/dotnet" target="_blank">.NET MVC web app</a></li>
 </ul>
 <p>&lt;a name=&quot;bk_scopes&quot;&gt; </a></p>
-<h2 id="office-api-authentication-scopes">Office API authentication scopes</h2>
-<p>The table below lists the authentication scopes to use with the v2 app authentication model preview. For more information about using scopes with the v2.0 app model, and how it differs from using resources in Azure AD, see <a href="https://azure.microsoft.com/en-us/documentation/articles/active-directory-v2-compare/#scopes-not-resources" target="_blank">Scopes, not resources</a>.</p>
-<p>&lt;a name=&quot;bk_Outlookscopes&quot;&gt; </a></p>
-<h3 id="outlook-mail-calendar-and-contacts-scopes">Outlook mail, calendar, and contacts scopes</h3>
+<h2 id="microsoft-graph-api-authentication-scopes">Microsoft Graph API authentication scopes</h2>
+<p>The table below lists the authentication scopes to use with the v2.0 app authentication model preview. For more information about using scopes with the v2.0 app model, and how it differs from using resources in Azure AD, see <a href="https://azure.microsoft.com/en-us/documentation/articles/active-directory-v2-compare/#scopes-not-resources" target="_blank">Scopes, not resources</a>.</p>
 <table>
 <thead>
 <tr>
@@ -51,40 +60,70 @@
 </thead>
 <tbody>
 <tr>
-	<td align="left"><code>https://outlook.office.com/Mail.Read</code></td>
+	<td align="left"><code>https://graph.microsoft.com/Mail.Read</code></td>
 	<td align="left">Read user mail</td>
 	<td align="left">Allows this app to read messages in user mailboxes.</td>
 	<td></td>
 </tr>
 <tr>
-	<td align="left"><code>https://outlook.office.com/Mail.ReadWrite</code></td>
+	<td align="left"><code>https://graph.microsoft.com/Mail.ReadWrite</code></td>
 	<td align="left">Read and write access to user mail</td>
 	<td align="left">Allows the app to read, update, create, and delete messages in user mailboxes.</td>
 </tr>
 <tr>
-	<td align="left"><code>https://outlook.office.com/Mail.Send</code></td>
+	<td align="left"><code>https://graph.microsoft.com/Mail.Send</code></td>
 	<td align="left">Send mail as a user</td>
 	<td align="left">Allows the app to send messages as users in the organization.</td>
 </tr>
 <tr>
-	<td align="left"><code>https://outlook.office.com/Contacts.Read</code></td>
+	<td align="left"><code>https://graph.microsoft.com/Contacts.Read</code></td>
 	<td align="left">Read user contacts</td>
 	<td align="left">Allows the app to read user contacts.</td>
 </tr>
 <tr>
-	<td align="left"><code>https://outlook.office.com/Contacts.ReadWrite</code></td>
+	<td align="left"><code>https://graph.microsoft.com/Contacts.ReadWrite</code></td>
 	<td align="left">Have full access to user contacts</td>
 	<td align="left">Allows the app to read, update, create and delete user contacts.</td>
 </tr>
 <tr>
-	<td align="left"><code>https://outlook.office.com/Calendars.Read</code></td>
+	<td align="left"><code>https://graph.microsoft.com/Calendars.Read</code></td>
 	<td align="left">Read user calendars</td>
 	<td align="left">Allows the app to read events in user calendars.</td>
 </tr>
 <tr>
-	<td align="left"><code>https://outlook.office.com/Calendars.ReadWrite</code></td>
+	<td align="left"><code>https://graph.microsoft.com/Calendars.ReadWrite</code></td>
 	<td align="left">Have full access to user calendars</td>
 	<td align="left">Allows the app to read, update, create, and delete events in user calendars.</td>
+</tr>
+<tr>
+	<td align="left"><code>https://graph.microsoft.com/Files.Read</code></td>
+	<td align="left">Read users' files</td>
+	<td align="left">Allows the application to read the current user's files.</td>
+</tr>
+<tr>
+	<td align="left"><code>https://graph.microsoft.com/Files.ReadWrite</code></td>
+	<td align="left">Edit or delete users' files</td>
+	<td align="left">Allows the app to edit or delete the current user's files.</td>
+</tr>
+<tr>
+	<td align="left"><code>https://graph.microsoft.com/User.Read</code></td>
+	<td align="left">Enable sign-in and read user profile</td>
+	<td align="left">Allows users to sign-in to the app, and allows the app to read the profile. It also allow the app to read basic company information of signed-in users.</td>
+</tr>
+<tr>
+	<td align="left"><code>https://graph.microsoft.com/User.ReadWrite</code></td>
+	<td align="left">Read and write access to user profile</td>
+	<td align="left">Allows the app to read the profile of signed-in users, and to update profile information on behalf of signed-in users.</td>
+</tr>
+<tr>
+	<td align="left"><code>https://graph.microsoft.com/openid</code></td>
+	<td align="left">Sign users in</td>
+	<td align="left">Allows users to sign in to the app and allows the app to see basic user profile information.</td>
+</tr>
+<tr>
+	<td align="left"><code>https://graph.microsoft.com/offline_access</code></td>
+	<td align="left">Read and write user's information</td>
+	<td align="left">Allows the app to see and update user's data, even when the user is not actively using the app.</td>
 </tr>
 </tbody>
 </table>
@@ -102,6 +141,11 @@
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
+   
+</body>  
+</html>  
 
 
 

@@ -1,3 +1,14 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/GraphStyles/stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+</head>
+<body>
+
 <div id="holder">
 
 <!-- HTML Page Content Start -->
@@ -5,15 +16,19 @@
 <div class="container wrapper" id="body">
     <div class="row">
         <div class="col-md-9">
-            <h1 id="delete-item">Delete item</h1>
-<p>Delete item.</p>
+            <h1 id="delete-an-item">Delete an Item</h1>
+<p>Deletes an Item by using its ID or path. Note that deleting items using this method
+will move the items to the Recycle Bin, instead of permanently deleting them.</p>
+<p>For more info about deleting items in OneDrive, see <a href="https://dev.onedrive.com/items/delete.htm" target="_blank">Delete an Item in OneDrive</a>.</p>
 <h3 id="prerequisites">Prerequisites</h3>
 <p>The following <strong>scopes</strong> are required to execute this API: </p>
+<ul>
+<li>onedrive.readwrite</li>
+</ul>
 <h3 id="http-request">HTTP request</h3>
-<pre><code class="http">DELETE /drive/root
-DELETE /drive/items/&lt;id&gt;
-DELETE /drives/&lt;id&gt;/root
-
+<h2 id="http-request-1">HTTP request</h2>
+<pre><code>DELETE /drive/items/{item-id}
+DELETE /drive/root:/{item-path}
 </code></pre>
 
 <h3 id="request-headers">Request headers</h3>
@@ -27,24 +42,21 @@ DELETE /drives/&lt;id&gt;/root
 </thead>
 <tbody>
 <tr>
-	<td align="left">X-Sample-Header</td>
-	<td align="left">string</td>
-	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
+	<td align="left">if-match</td>
+	<td align="left">String</td>
+	<td align="left">If this request header is included and the eTag (or cTag) provided does not match the current tag on the item, a <code>412 Precondition Failed</code> response is returned and the item will not be deleted.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="request-body">Request body</h3>
 <p>Do not supply a request body for this method.</p>
-<h3 id="response">Response</h3>
-<p>If successful, this method returns <code>204, No Content</code> response code. It does not return anything in the response body.</p>
 <h3 id="example">Example</h3>
-<h5 id="request">Request</h5>
-<p>Here is an example of the request.</p>
-<pre><code class="http">DELETE https://graph.microsoft.com/v1.0/drive/root
+<pre><code>DELETE /drive/items/{item-id}
 </code></pre>
 
-<h5 id="response-1">Response</h5>
-<p>Here is an example of the response.</p>
+<h5 id="response">Response</h5>
+<p>If successful, this call returns a <code>204 No Content</code> response to indicate that
+resource was deleted and there was nothing to return.</p>
 <pre><code class="http">HTTP/1.1 204 No Content
 </code></pre>
 
@@ -56,6 +68,11 @@ DELETE /drives/&lt;id&gt;/root
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
+   
+</body>  
+</html>  
 
 
 

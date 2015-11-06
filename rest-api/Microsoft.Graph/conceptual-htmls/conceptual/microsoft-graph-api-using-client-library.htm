@@ -1,3 +1,14 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/GraphStyles/stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+</head>
+<body>
+
 <div id="holder">
 
 <!-- HTML Page Content Start -->
@@ -27,7 +38,7 @@ The client library exposes a .NET application object model that encapsulates the
 mapping an OData resource type into a .NET class. </p>
 <p>The CRUD operations in the REST API are translated as calls to the <code>ExecuteAsync</code>, <code>UpdateAsync</code>, and <code>DeleteAsync</code> methods 
 on the corresponding resource class.  The query options (e.g., $select, $filter, etc.) are turned into Linq clauses.<br />
-Once you understand how the OData entity type schema is mapped to the client library's object model, you'll see a strong similarity between calling the REST API and using the client library.</p>
+There is a strong similarity between calling the REST API and using the client library. The client library's object model is closely mapped to the OData entity type schema. </p>
 <p>&lt;a name=&quot;msg_set_up_visual_studio&quot;&gt; </a></p>
 <h3 id="set-up-a-visual-studio-project">Set up a Visual Studio Project</h3>
 <p>The Microsoft Graph API client library is available for download as a NuGet package. You can download it using Visual Studio after you have created a Visual Studio solution/project. </p>
@@ -46,7 +57,7 @@ Once you understand how the OData entity type schema is mapped to the client lib
 
 <p>Here, <code>serviceRoot</code> is a <code>Uri</code> object and encapsulates the URL of <code>https://graph.microsoft.com/&lt;version&gt;/&lt;tenantId&gt;</code>. 
 The <code>AcquireTokenAsyncForUser</code> function passed to the client constructor performs the initial request to acquire the access 
-token for the app after prompting the user to sign in to Azure successfully. An implementation of this function call is shown as follows:</p>
+token for the app after prompting the user to sign in to Azure successfully. An implementation of this function call is as follows:</p>
 <pre><code class="no-highlight">var redirectUri = new Uri(&quot;http://localhost/MsGraphNativeApp&quot;);
 AuthenticationContext authenticationContext =  
          new AuthenticationContext(Constants.LoginUrl, false);
@@ -60,22 +71,28 @@ AuthenticationResult userAuthnResult =
 var TokenForUser = userAuthnResult.AccessToken;
 </code></pre>
 
+<ol>
+<li>
 <p>First create a <code>AuthenticationContext</code> object and bind it to the <code>Constants.LoginUrl</code> 
 (=<code>https://login.microsoftonline.com/common</code>), the base URL of the Azure user login portal. </p>
 <blockquote>
 <p>The <code>AuthenticationContext</code> class is exposed by the <a href="https://msdn.microsoft.com/en-us/library/azure/jj573266.aspx" target="_blank">ADAL for .NET</a>. It handles the authorization and token acquisition.</p>
 </blockquote>
-<p>Then call the <code>AcquireToken</code> method on the newly created <code>authenticationContext</code> object. This will bring up the Azure user sign-in page for the user to enter their Azure tenant account and password. When the user signs in to Azure successfully, the API proceeds to acquire the access token, returns it to the app in the <code>userAuthnResult</code> object, and uses it in the subsequent calls to the Microsoft Graph API service. </p>
-<p>The <code>redirectUri</code> must match the <strong>REPLY URL</strong> configured for the app in Azure  application registry. <code>Constants.ResourceUrl</code> is a named constant holding a string value of
-<code>&quot;https://graph.microsoft.com&quot;</code> and <code>Constants.ClientIdForUserAuthn</code> is the <strong>CLIENT ID</strong> value of the app, 
-also configured in Azure. Unlike a web app, the client secret is not used for native app.</p>
+</li>
+<li>
+<p>Then call the <code>AcquireToken</code> method on the newly created <code>authenticationContext</code> object. This will bring up the sign-in page for the user to enter their credentials. </p>
+</li>
+</ol>
+<p>When the user signs in to successfully, the API proceeds to acquire the access token, returns it to the app in the <code>userAuthnResult</code> object, and uses it in the subsequent calls to the Microsoft Graph API service. </p>
+<p>The <code>redirectUri</code> must match the <strong>REPLY URL</strong> configured for the app in Azure  application registry. <code>Constants.ResourceUrl</code> is a named constant holding a string value of <code>&quot;https://graph.microsoft.com&quot;</code> and <code>Constants.ClientIdForUserAuthn</code> is the <strong>CLIENT ID</strong> value of the app, also configured in Azure. Unlike a web app, the client secret is not used for native app.</p>
 <p>&lt;a name=&quot;msg_client_lib_object_model&quot;&gt; </a></p>
 <h3 id="map-client-library-object-model-to-entity-schema">Map client library Object model to entity schema</h3>
-<p>The <code>Microsoft.Graph.GraphService</code> class serves as the root of the object hierarchy in the client library. 
-This class encapsulates the <code>&lt;EntityContainer Name=&quot;GraphService&quot;&gt;</code> element in the $metadata declaration. 
-The contained <code>&lt;EntitySet&gt;</code> elements become the like-named properties on the client object. For examples, the <code>&lt;EntitySet Name=&quot;users&quot; EntityType=&quot;Microsoft.Graph.User&gt;</code> element of $metadata becomes the <code>GraphService.users</code> property in the client library to return a collection of the <code>Microsoft.Graph.User</code> objects, which also implement the <code>IUsersCollection</code> interface. </p>
+<p>The <code>Microsoft.Graph.GraphService</code> class serves as the root of the object hierarchy in the client library. This class encapsulates the <code>&lt;EntityContainer Name=&quot;GraphService&quot;&gt;</code> element in the $metadata declaration. </p>
+<p>The contained <code>&lt;EntitySet&gt;</code> elements become the like-named properties on the client object. For examples, the <code>&lt;EntitySet Name=&quot;users&quot; EntityType=&quot;Microsoft.Graph.User&gt;</code> element of $metadata becomes the <code>GraphService.users</code> property in the client library to return a collection of the <code>Microsoft.Graph.User</code> objects, which also implement the <code>IUsersCollection</code> interface. </p>
 <p>The same applies to entities and their properties, including navigation properties. Thus, the <code>&lt;EntityType name=&quot;User&quot;&gt;</code> element and its child elements, for example, <code>&lt;Property name=&quot;userPrincipalName&quot;&gt;</code> and <code>&lt;NavigationProperty name=&quot;files&quot;&gt;</code>, 
 in metadata become the <code>User</code> class, the <code>User.userPrincipalName</code> property and the <code>User.files</code> property, respectively, in Microsoft.Graph.dll.</p>
+<p>&lt;a name=&quot;msg_mapping&quot;&gt; </a> </p>
+<h3 id="table-mapping-entity-schemas-metadata-and-net-client-library">Table mapping entity schemas ($metadata) and .NET client library</h3>
 <p>The following table summarizes the mappings between the Microsoft Graph API entity schemas ($metadata) and its .NET client library.</p>
 <table>
 <thead>
@@ -219,6 +236,7 @@ always catch exceptions and inspect error messages to learn what query options a
 <p>You can see more calling the .NET client library in action in this <a href="https://github.com/OfficeDev/O365-Win-Profile" target="_blank">sample app</a>. </p>
 <h2 id="additional-resources">Additional Resources</h2>
 <ul>
+<li><a href="call-microsoft-graph-api.htm">Call Microsoft Graph API service via REST</a></li>
 <li><a href="http://dev.office.com/hands-on-labs/4585" target="_blank">Hands on lab: Deep dive into the Office 365 unified API</a></li>
 </ul>
 
@@ -229,6 +247,11 @@ always catch exceptions and inspect error messages to learn what query options a
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
+   
+</body>  
+</html>  
 
 
 

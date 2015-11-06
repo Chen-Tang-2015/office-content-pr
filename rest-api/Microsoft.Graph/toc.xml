@@ -7,8 +7,8 @@
     <Item text="Client Library" url="overview/microsoft-graph-api-using-client-library" SEOKeyword="Client Library, Microsoft Graph API, Overview" SEODescription="" />
     <Item text="Errors" url="overview/microsoft-graph-api-errors" SEOKeyword="Errors, Microsoft Graph API, Overview" SEODescription="" />
     <Item text="Release Notes" url="overview/microsoft-graph-api-release-notes-known-issues" SEOKeyword="Release Notes, Microsoft Graph API, Overview" SEODescription="" />
-    <Item text="Associate Office 365 account" url="overview/associate-office365-with-azure-ad.md" SEOKeyword="Associate Office 365 account, Microsoft Graph API, Overview" SEODescription="" />
-    <Item text="v2.0 app model (preview)" url="overview/authenticate-MSGraph-using-v2.md" SEOKeyword="v2.0 app model, Microsoft Graph API, Overview" SEODescription="" />
+    <Item text="Associate Office 365 account" url="overview/associate-office365-with-azure-ad" SEOKeyword="Associate Office 365 account, Microsoft Graph API, Overview" SEODescription="" />
+    <Item text="v2.0 app model (preview)" url="overview/authenticate-MSGraph-using-v2" SEOKeyword="v2.0 app model, Microsoft Graph API, Overview" SEODescription="" />
     <Item text="FAQs" url="overview/microsoft-graph-api-faqs" SEOKeyword="FAQs, Microsoft Graph API, Overview" SEODescription="" />
   </Item>
   <Item text="How tos" url="platform">
@@ -22,7 +22,7 @@
     <Item text="Python" url="platform/connect-step-by-step-python" SEOKeyword="Python, Microsoft Graph API, How tos" SEODescription="" />
     <Item text="Ruby" url="platform/connect-step-by-step-ruby" SEOKeyword="Ruby, Microsoft Graph API, How tos" SEODescription="" />
   </Item>
-  <Item text="API Reference (/v1.0)" url="api-reference/v1.0">
+  <Item text="API Reference (/v1.0)" url="api-reference/v1.0/service_root">
     <Item text="Users API" url="api-reference/v1.0/resources/user" SEOKeyword="Users API, Microsoft Graph API, Users API" SEODescription="Represents an Azure AD user account. Inherits from DirectoryObject.">
       <Item text="User" url="api-reference/v1.0/resources/user" SEOKeyword="User, Microsoft Graph API, Users API" SEODescription="Represents an Azure AD user account. Inherits from DirectoryObject."></Item>
       <Item text="Create User" url="api-reference/v1.0/api/user_post_users" SEOKeyword="Create User, Microsoft Graph API, Users API" SEODescription="Use this API to create a new User."></Item>
@@ -68,7 +68,7 @@
       <Item text="user: getMemberGroups" url="api-reference/v1.0/api/user_getmembergroups" SEOKeyword="user: getMemberGroups, Microsoft Graph API, Users API" SEODescription=""></Item>
       <Item text="user: getMemberObjects" url="api-reference/v1.0/api/user_getmemberobjects" SEOKeyword="user: getMemberObjects, Microsoft Graph API, Users API" SEODescription=""></Item>
     </Item>
-    <Item text="OneDrive Drive API" url="api-reference/v1.0/resources/drive" SEOKeyword="OneDrive Drive API, Microsoft Graph API, OneDrive Drive API" SEODescription="The Drive resource represents a drive in OneDrive. It provides information about the owner of the drive, total and available storage space, and exposes a collection of all the Itemsitem-resource contained within the drive.">
+    <Item text="OneDrive API" url="api-reference/v1.0/resources/drive" SEOKeyword="OneDrive Drive API, Microsoft Graph API, OneDrive Drive API" SEODescription="The Drive resource represents a drive in OneDrive. It provides information about the owner of the drive, total and available storage space, and exposes a collection of all the Itemsitem-resource contained within the drive.">
       <Item text="Drive" url="api-reference/v1.0/resources/drive" SEOKeyword="Drive, Microsoft Graph API, OneDrive Drive API" SEODescription="The Drive resource represents a drive in OneDrive."></Item>
       <Item text="Create drive" url="api-reference/v1.0/api/drive_post_drives" SEOKeyword="Create drive, Microsoft Graph API, OneDrive Drive API" SEODescription="Use this API to create a new drive."></Item>
       <Item text="Get drive" url="api-reference/v1.0/api/drive_get" SEOKeyword="Get drive, Microsoft Graph API, OneDrive Drive API" SEODescription="Retrieve the properties and relationships of drive object."></Item>
@@ -114,6 +114,8 @@
       <Item text="Get thumbnailSet" url="api-reference/v1.0/api/thumbnailset_get" SEOKeyword="Get thumbnailSet, Microsoft Graph API, OneDrive Drive API" SEODescription="Retrieve the properties and relationships of thumbnailset object."></Item>
       <Item text="Update thumbnailset" url="api-reference/v1.0/api/thumbnailset_update" SEOKeyword="Update thumbnailset, Microsoft Graph API, OneDrive Drive API" SEODescription="Update the properties of thumbnailset object."></Item>
       <Item text="Delete thumbnailSet" url="api-reference/v1.0/api/thumbnailset_delete" SEOKeyword="Delete thumbnailSet, Microsoft Graph API, OneDrive Drive API" SEODescription="Delete thumbnailSet."></Item>
+      <Item text="Audio" url="api-reference/v1.0/resources/audio" SEOKeyword="Audio Microsoft Graph API, OneDrive Drive API" SEODescription="Audio"></Item>
+      <Item text="Video" url="api-reference/v1.0/resources/video" SEOKeyword="Video, Microsoft Graph API, OneDrive Drive API" SEODescription="Video"></Item>
     </Item>
     <Item text="Outlook Mail API" url="api-reference/v1.0/resources/message" SEOKeyword="Outlook Mail API, Microsoft Graph API, Outlook Mail API" SEODescription="A message in a mailbox folder.">
       <Item text="Message" url="api-reference/v1.0/resources/message" SEOKeyword="Message, Microsoft Graph API, Outlook Mail API" SEODescription="A message in a mailbox folder."></Item>
@@ -153,7 +155,7 @@
       <Item text="List childFolders" url="api-reference/v1.0/api/mailfolder_list_childfolders" SEOKeyword="List childFolders, Microsoft Graph API, Outlook Mail API" SEODescription="Retrieve a list of mailfolder objects."></Item>
     </Item>
     <Item text="Outlook Calendar API" url="api-reference/v1.0/resources/calendar" SEOKeyword="Outlook Calendar API, Microsoft Graph API, Outlook Calendar API" SEODescription="A calendar which is a container for events.">
-      <Item text="Event" url="api-reference/v1.0/resources/event" SEOKeyword="Event, Microsoft Graph API, Outlook Calendar API" SEODescription="An event in a calendar.">      </Item>
+      <Item text="Event" url="api-reference/v1.0/resources/event" SEOKeyword="Event, Microsoft Graph API, Outlook Calendar API" SEODescription="An event in a calendar."></Item>
       <Item text="Create Event" url="api-reference/v1.0/api/event_post_instances" SEOKeyword="Create Event, Microsoft Graph API, Outlook Calendar API" SEODescription="Use this API to create a new Event."></Item>
       <Item text="Get event" url="api-reference/v1.0/api/event_get" SEOKeyword="Get event, Microsoft Graph API, Outlook Calendar API" SEODescription="Retrieve the properties and relationships of event object."></Item>
       <Item text="Update event" url="api-reference/v1.0/api/event_update" SEOKeyword="Update event, Microsoft Graph API, Outlook Calendar API" SEODescription="Update the properties of event object."></Item>
@@ -191,19 +193,21 @@
       <Item text="Update calendar group" url="api-reference/v1.0/api/calendargroup_update" SEOKeyword="Update calendar group, Microsoft Graph API, Outlook Calendar API" SEODescription="Update the properties of calendargroup object."></Item>
       <Item text="Delete calendarGroup" url="api-reference/v1.0/api/calendargroup_delete" SEOKeyword="Delete calendarGroup, Microsoft Graph API, Outlook Calendar API" SEODescription="Delete calendarGroup."></Item>
       <Item text="List calendars" url="api-reference/v1.0/api/calendargroup_list_calendars" SEOKeyword="List calendars, Microsoft Graph API, Outlook Calendar API" SEODescription="Retrieve a list of calendar objects."></Item>
+      <Item text="Attendee" url="api-reference/v1.0/resources/attendee" SEOKeyword="Attendee, Microsoft Graph API, Outlook Calendar API" SEODescription=""></Item>
     </Item>
-    <Item text="Personal contact API" url="api-reference/v1.0/resources/contact" SEOKeyword="Personal contact API, Microsoft Graph API, Personal contact API" SEODescription="Represents an organizational contact. Inherits from DirectoryObject.">
-      <Item text="Delete contact" url="api-reference/v1.0/api/contact_delete" SEOKeyword="Delete contact, Microsoft Graph API, Personal contact API" SEODescription="Delete contact."></Item>
+    <Item text="Personal contact API" url="api-reference/v1.0/resources/contact" SEOKeyword="Personal contact API, Microsoft Graph API, Personal contact API" SEODescription="Represents a personal contact">
+      <Item text="Contact" url="api-reference/v1.0/resources/contact" SEOKeyword="Personal contact, Microsoft Graph API, OneDrive Drive API" SEODescription="Represents a personal contact"></Item>
+      <Item text="Create Contact" url="api-reference/v1.0/api/contactfolder_post_contacts" SEOKeyword="Create Contact, Microsoft Graph API, Personal contact API" SEODescription="Use this API to create a new Contact."></Item>
       <Item text="Get contact" url="api-reference/v1.0/api/contact_get" SEOKeyword="Get contact, Microsoft Graph API, Personal contact API" SEODescription="Retrieve the properties and relationships of contact object."></Item>
       <Item text="Update contact" url="api-reference/v1.0/api/contact_update" SEOKeyword="Update contact, Microsoft Graph API, Personal contact API" SEODescription="Update the properties of contact object."></Item>
-      <Item text="Contact folder" url="api-reference/v1.0/resources/contactfolder" SEOKeyword="Contact folder, Microsoft Graph API, Personal contact API" SEODescription="A folder that contains contacts."></Item>
-      <Item text="Delete contactFolder" url="api-reference/v1.0/api/contactfolder_delete" SEOKeyword="Delete contactFolder, Microsoft Graph API, Personal contact API" SEODescription="Delete contactFolder."></Item>
-      <Item text="Get contactFolder" url="api-reference/v1.0/api/contactfolder_get" SEOKeyword="Get contactFolder, Microsoft Graph API, Personal contact API" SEODescription="Retrieve the properties and relationships of contactfolder object."></Item>
-      <Item text="List childFolders" url="api-reference/v1.0/api/contactfolder_list_childfolders" SEOKeyword="List childFolders, Microsoft Graph API, Personal contact API" SEODescription="Retrieve a list of contactfolder objects."></Item>
+      <Item text="Delete contact" url="api-reference/v1.0/api/contact_delete" SEOKeyword="Delete contact, Microsoft Graph API, Personal contact API" SEODescription="Delete contact."></Item>
       <Item text="List contacts" url="api-reference/v1.0/api/contactfolder_list_contacts" SEOKeyword="List contacts, Microsoft Graph API, Personal contact API" SEODescription="Retrieve a list of contact objects."></Item>
+      <Item text="Contact folder" url="api-reference/v1.0/resources/contactfolder" SEOKeyword="Contact folder, Microsoft Graph API, Personal contact API" SEODescription="A folder that contains contacts."></Item>
       <Item text="Create ContactFolder" url="api-reference/v1.0/api/contactfolder_post_childfolders" SEOKeyword="Create ContactFolder, Microsoft Graph API, Personal contact API" SEODescription="Use this API to create a new ContactFolder."></Item>
-      <Item text="Create Contact" url="api-reference/v1.0/api/contactfolder_post_contacts" SEOKeyword="Create Contact, Microsoft Graph API, Personal contact API" SEODescription="Use this API to create a new Contact."></Item>
+      <Item text="Get contactFolder" url="api-reference/v1.0/api/contactfolder_get" SEOKeyword="Get contactFolder, Microsoft Graph API, Personal contact API" SEODescription="Retrieve the properties and relationships of contactfolder object."></Item>
       <Item text="Update contactfolder" url="api-reference/v1.0/api/contactfolder_update" SEOKeyword="Update contactfolder, Microsoft Graph API, Personal contact API" SEODescription="Update the properties of contactfolder object."></Item>
+      <Item text="Delete contactFolder" url="api-reference/v1.0/api/contactfolder_delete" SEOKeyword="Delete contactFolder, Microsoft Graph API, Personal contact API" SEODescription="Delete contactFolder."></Item>
+      <Item text="List childFolders" url="api-reference/v1.0/api/contactfolder_list_childfolders" SEOKeyword="List childFolders, Microsoft Graph API, Personal contact API" SEODescription="Retrieve a list of contactfolder objects."></Item>
     </Item>
     <Item text="Groups API" url="api-reference/v1.0/resources/group" SEOKeyword="Groups API, Microsoft Graph API, Groups API" SEODescription="Represents an Azure Active Directory Group. Inherited from DirectoryObject.">
       <Item text="Group" url="api-reference/v1.0/resources/group" SEOKeyword="Group, Microsoft Graph API, Groups API" SEODescription="Represents an Azure Active Directory Group. Inherited from DirectoryObject."></Item>
@@ -313,7 +317,7 @@
       <Item text="List items" url="api-reference/v1.0/api/share_list_items" SEOKeyword="List items, Microsoft Graph API, Share API" SEODescription="Retrieve a list of item objects."></Item>
     </Item>
     <Item text="Directory API" url="api-reference/v1.0/resources/directoryobject" SEOKeyword="Directory API, Microsoft Graph API, Directory API" SEODescription="Represents an Azure Active Directory object. The DirectoryObject type is the base type for most of the other directory entity types.">
-      <Item text="directoryobject API" url="api-reference/v1.0/resources/directoryobject" SEOKeyword="directoryobject API, Microsoft Graph API, Directory API" SEODescription="Represents an Azure Active Directory object. The DirectoryObject type is the base type for most of the other directory entity types."></Item>
+      <Item text="Directory object" url="api-reference/v1.0/resources/directoryobject" SEOKeyword="directoryobject API, Microsoft Graph API, Directory API" SEODescription="Represents an Azure Active Directory object. The DirectoryObject type is the base type for most of the other directory entity types."></Item>
       <Item text="Create DirectoryObject" url="api-reference/v1.0/api/directoryobject_post_directoryobjects" SEOKeyword="Create DirectoryObject, Microsoft Graph API, Directory API" SEODescription="Use this API to create a new DirectoryObject."></Item>
       <Item text="Get directoryObject" url="api-reference/v1.0/api/directoryobject_get" SEOKeyword="Get directoryObject, Microsoft Graph API, Directory API" SEODescription="Retrieve the properties and relationships of directoryobject object."></Item>
       <Item text="Update directoryobject" url="api-reference/v1.0/api/directoryobject_update" SEOKeyword="Update directoryobject, Microsoft Graph API, Directory API" SEODescription="Update the properties of directoryobject object."></Item>
@@ -400,10 +404,78 @@
       <Item text="tenantDetail: checkMemberGroups" url="api-reference/v1.0/api/tenantdetail_checkmembergroups" SEOKeyword="tenantDetail: checkMemberGroups, Microsoft Graph API, Directory API" SEODescription=""></Item>
       <Item text="tenantDetail: getMemberGroups" url="api-reference/v1.0/api/tenantdetail_getmembergroups" SEOKeyword="tenantDetail: getMemberGroups, Microsoft Graph API, Directory API" SEODescription=""></Item>
       <Item text="tenantDetail: getMemberObjects" url="api-reference/v1.0/api/tenantdetail_getmemberobjects" SEOKeyword="tenantDetail: getMemberObjects, Microsoft Graph API, Directory API" SEODescription=""></Item>
+      <Item text="alternativeSecurityId" url="api-reference/v1.0/resources/alternativeSecurityId" SEOKeyword="alternativeSecurityId, Microsoft Graph API, Directory API" SEODescription=""></Item>
+      <Item text="Assigned License" url="api-reference/v1.0/resources/assignedLicense" SEOKeyword="assignedLicense, Microsoft Graph API, Directory API" SEODescription=""></Item>
+      <Item text="Assigned Plan" url="api-reference/v1.0/resources/assignedPlan" SEOKeyword="assignedPlan, Microsoft Graph API, Directory API" SEODescription=""></Item>
+      <Item text="Device" url="api-reference/v1.0/resources/device" SEOKeyword="device, Microsoft Graph API, Directory API" SEODescription="device"></Item>
     </Item>
   </Item>
-  <Item text="Preview API reference (/beta)" url="api-reference/beta">
-    <Item text="Applications" url="api-reference/beta/resources/application" SEOKeyword="Applications, Microsoft Graph API, Applications" SEODescription="">
+  <Item text="Preview API reference (/beta)" url="api-reference/beta/service_root">
+    <Item text="Tasks API" url="api-reference/beta/resources/task" SEOKeyword="Tasks API, Microsoft Graph API" SEODescription="">
+      <Item text="Task" url="api-reference/beta/resources/task" SEOKeyword="Tasks API, Microsoft Graph API" SEODescription=""></Item>
+      <Item text="Create tasks" url="api-reference/beta/api/task_post_tasks" SEOKeyword="Create task, Microsoft Graph API, tasks" SEODescription=""></Item>
+      <Item text="Get task" url="api-reference/beta/api/task_get" SEOKeyword="Get task, Microsoft Graph API, tasks" SEODescription=""></Item>
+      <Item text="Update task" url="api-reference/beta/api/task_update" SEOKeyword="Update task, Microsoft Graph API, tasks" SEODescription=""></Item>
+      <Item text="Delete task" url="api-reference/beta/api/task_delete" SEOKeyword="Delete task, Microsoft Graph API, tasks" SEODescription=""></Item>
+      <Item text="List task" url="api-reference/beta/api/task_list" SEOKeyword="List task, Microsoft Graph API, tasks" SEODescription=""></Item>
+      <Item text="Task details" url="api-reference/beta/resources/taskdetails" SEOKeyword="Task details, Microsoft Graph API" SEODescription=""></Item>
+      <Item text="Taskboard task format" url="api-reference/beta/resources/taskboardtaskformat" SEOKeyword="Tasks API, Microsoft Graph API" SEODescription=""></Item>
+      <Item text="Get taskboard task format" url="api-reference/beta/api/taskboardtaskformat_get" SEOKeyword="Get taskboard, Microsoft Graph API, tasks" SEODescription=""></Item>
+      <Item text="Update taskboard task format" url="api-reference/beta/api/taskboardtaskformat_update" SEOKeyword="Update taskboard, Microsoft Graph API, tasks" SEODescription=""></Item>
+      <Item text="Delete taskboard task format" url="api-reference/beta/api/taskboardtaskformat_delete" SEOKeyword="Delete taskboard, Microsoft Graph API, tasks" SEODescription=""></Item>
+      <Item text="Plan" url="api-reference/beta/resources/plan" SEOKeyword="Plans API, Microsoft Graph API" SEODescription=""></Item>
+      <Item text="Create plan" url="api-reference/beta/api/plan_post_plans" SEOKeyword="Create plan, Microsoft Graph API, plans" SEODescription=""></Item>
+      <Item text="Get plan" url="api-reference/beta/api/plan_get" SEOKeyword="Get plan, Microsoft Graph API, plans" SEODescription=""></Item>
+      <Item text="Update plan" url="api-reference/beta/api/plan_update" SEOKeyword="Update plan, Microsoft Graph API, plans" SEODescription=""></Item>
+      <Item text="Delete plan" url="api-reference/beta/api/plan_delete" SEOKeyword="Delete plan, Microsoft Graph API, plans" SEODescription=""></Item>
+      <Item text="List plan" url="api-reference/beta/api/plan_list" SEOKeyword="List plan, Microsoft Graph API, plans" SEODescription=""></Item>
+      <Item text="Create plan tasks" url="api-reference/beta/api/plan_post_plans" SEOKeyword="Create plan taks, Microsoft Graph API, plans" SEODescription=""></Item>
+      <Item text="Create plan buckets" url="api-reference/beta/api/plan_post_plans" SEOKeyword="Create plan bucket, Microsoft Graph API, plans" SEODescription=""></Item>
+      <Item text="Plan details" url="api-reference/beta/resources/plandetails" SEOKeyword="Plan details, Microsoft Graph API" SEODescription=""></Item>
+      <Item text="Get plan details" url="api-reference/beta/api/plandetails_get" SEOKeyword="Get plan details, Microsoft Graph API, tasks" SEODescription=""></Item>
+      <Item text="Update plan details" url="api-reference/beta/api/plandetails_update" SEOKeyword="Update plan details, Microsoft Graph API, tasks" SEODescription=""></Item>
+      <Item text="Delete plan details" url="api-reference/beta/api/plandetails_delete" SEOKeyword="Delete plan details, Microsoft Graph API, tasks" SEODescription=""></Item>
+      <Item text="Plan taskboard" url="api-reference/beta/resources/plantaskboard" SEOKeyword="Plan taskboard, Microsoft Graph API" SEODescription=""></Item>
+      <Item text="Get plan taskboard" url="api-reference/beta/api/plantaskboard_get" SEOKeyword="Get plan taskboard, Microsoft Graph API, tasks" SEODescription=""></Item>
+      <Item text="Update plan taskboard" url="api-reference/beta/api/plantaskboard_update" SEOKeyword="Update plan taskboard, Microsoft Graph API, tasks" SEODescription=""></Item>
+      <Item text="Delete plan taskboard" url="api-reference/beta/api/plantaskboard_delete" SEOKeyword="Delete plan taskboard, Microsoft Graph API, tasks" SEODescription=""></Item>
+      <Item text="Bucket" url="api-reference/beta/resources/task" SEOKeyword="Tasks API, Microsoft Graph API" SEODescription=""></Item>
+      <Item text="Create buckets" url="api-reference/beta/api/bucket_post_buckets" SEOKeyword="Create bucket, Microsoft Graph API, buckets" SEODescription=""></Item>
+      <Item text="Get bucket" url="api-reference/beta/api/bucket_get" SEOKeyword="Get bucket, Microsoft Graph API, buckets" SEODescription=""></Item>
+      <Item text="Update bucket" url="api-reference/beta/api/bucket_update" SEOKeyword="Update bucket, Microsoft Graph API, buckets" SEODescription=""></Item>
+      <Item text="Delete bucket" url="api-reference/beta/api/bucket_delete" SEOKeyword="Delete bucket, Microsoft Graph API, buckets" SEODescription=""></Item>
+      <Item text="List bucket" url="api-reference/beta/api/bucket_list" SEOKeyword="List bucket, Microsoft Graph API, buckets" SEODescription=""></Item>
+      <Item text="Create bucket tasks" url="api-reference/beta/api/bucket_post_tasks" SEOKeyword="Create bucket tasks, Microsoft Graph API, buckets" SEODescription=""></Item>
+      <Item text="List bucket tasks" url="api-reference/beta/api/bucket_list_tasks" SEOKeyword="List bucket tasks, Microsoft Graph API, buckets" SEODescription=""></Item>
+    </Item>
+    <Item text="OneNote API" url="api-reference/beta/resources/note" SEOKeyword="OneNote API, Microsoft Graph API" SEODescription="">
+      <Item text="Notes" url="api-reference/beta/resources/notes" SEOKeyword="OneNote API, Microsoft Graph API" SEODescription=""></Item>
+      <Item text="Get notes" url="api-reference/beta/api/notes_get" SEOKeyword="Get notes, Microsoft Graph API, notess" SEODescription=""></Item>
+      <Item text="Update notes" url="api-reference/beta/api/notes_update" SEOKeyword="Update notes, Microsoft Graph API, notes" SEODescription=""></Item>
+      <Item text="Delete notes" url="api-reference/beta/api/notes_delete" SEOKeyword="Delete notes, Microsoft Graph API, notes" SEODescription=""></Item>
+      <Item text="List notes" url="api-reference/beta/api/notes_list" SEOKeyword="List notes, Microsoft Graph API, notes" SEODescription=""></Item>
+      <Item text="Create notebooks" url="api-reference/beta/api/notes_post_notebooks" SEOKeyword="Create notebooks, Microsoft Graph API, notes" SEODescription=""></Item>
+      <Item text="Page" url="api-reference/beta/resources/page" SEOKeyword="Page, Microsoft Graph API" SEODescription=""></Item>
+      <Item text="Page links" url="api-reference/beta/resources/pagelinks" SEOKeyword="Page links, Microsoft Graph API" SEODescription=""></Item>
+      <Item text="Create pages" url="api-reference/beta/api/notes_post_pages" SEOKeyword="Create pages, Microsoft Graph API, notes" SEODescription=""></Item>
+      <Item text="List pages" url="api-reference/beta/api/notes_list_pages" SEOKeyword="List pages, Microsoft Graph API, notes" SEODescription=""></Item>
+      <Item text="Create resources" url="api-reference/beta/api/notes_post_resources" SEOKeyword="Create resources, Microsoft Graph API, notes" SEODescription=""></Item>
+      <Item text="List resources" url="api-reference/beta/api/notes_list_resources" SEOKeyword="List resources, Microsoft Graph API, notes" SEODescription=""></Item>
+      <Item text="Section" url="api-reference/beta/resources/section" SEOKeyword="OneNote API, Microsoft Graph API" SEODescription=""></Item>
+      <Item text="Create sections" url="api-reference/beta/api/notes_post_sections" SEOKeyword="Create sections, Microsoft Graph API, notes" SEODescription=""></Item>
+      <Item text="List sections" url="api-reference/beta/api/notes_list_sections" SEOKeyword="List sections, Microsoft Graph API, notes" SEODescription=""></Item>
+      <Item text="Section groups" url="api-reference/beta/resources/sectiongroups" SEOKeyword="OneNote API, Microsoft Graph API" SEODescription=""></Item>
+      <Item text="Create section groups" url="api-reference/beta/api/notes_post_sectiongroups" SEOKeyword="Create section groups, Microsoft Graph API, notes" SEODescription=""></Item>
+      <Item text="List section groups" url="api-reference/beta/api/notes_list_sectiongroups" SEOKeyword="List section groups, Microsoft Graph API, notes" SEODescription=""></Item>
+      <Item text="Notebook" url="api-reference/beta/resources/notebook" SEOKeyword="OneNote API, Microsoft Graph API" SEODescription=""></Item>
+      <Item text="Update notebook" url="api-reference/beta/api/notebook_update" SEOKeyword="Update notebook, Microsoft Graph API, notes" SEODescription=""></Item>
+      <Item text="Create notebook sections" url="api-reference/beta/api/notebook_post_sections" SEOKeyword="Create notebook sections, Microsoft Graph API, notebook" SEODescription=""></Item>
+      <Item text="List notebook sections" url="api-reference/beta/api/notebook_list_sections" SEOKeyword="List notebook sections, Microsoft Graph API, notebook" SEODescription=""></Item>
+      <Item text="Create notebook section groups" url="api-reference/beta/api/notebook_post_sectiongroups" SEOKeyword="Create notebook section groups, Microsoft Graph API, notebook" SEODescription=""></Item>
+      <Item text="List notebook section groups" url="api-reference/beta/api/notebook_list_sectiongroups" SEOKeyword="List notebook section groups, Microsoft Graph API, notebook" SEODescription=""></Item>
+      <Item text="Notebook links" url="api-reference/beta/resources/notebooklinks" SEOKeyword="OneNote API, Microsoft Graph API" SEODescription=""></Item>
+    </Item>
+    <Item text="Applications API" url="api-reference/beta/resources/application" SEOKeyword="Applications, Microsoft Graph API, Applications" SEODescription="">
       <Item text="Create application" url="api-reference/beta/api/application_post_application" SEOKeyword="Create application, Microsoft Graph API, Applications" SEODescription=""></Item>
       <Item text="Get application" url="api-reference/beta/api/application_get" SEOKeyword="Get application, Microsoft Graph API, Applications" SEODescription=""></Item>
       <Item text="Update application" url="api-reference/beta/api/application_update" SEOKeyword="Update application, Microsoft Graph API, Applications" SEODescription=""></Item>

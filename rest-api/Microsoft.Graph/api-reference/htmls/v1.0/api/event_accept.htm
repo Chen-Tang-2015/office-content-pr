@@ -1,0 +1,106 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/GraphStyles/stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+</head>
+<body>
+
+<div id="holder">
+
+<!-- HTML Page Content Start -->
+
+<div class="container wrapper" id="body">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 id="event-accept">event: accept</h1>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<h3 id="http-request">HTTP request</h3>
+<pre><code class="http">POST /users/&lt;objectId&gt;/events/&lt;id&gt;/accept
+POST /groups/&lt;objectId&gt;/events/&lt;id&gt;/accept
+POST /users/&lt;objectId&gt;/calendarView/&lt;id&gt;/accept
+
+</code></pre>
+
+<h3 id="request-headers">Request headers</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Name</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">X-Sample-Header</td>
+	<td align="left">string</td>
+	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-body">Request body</h3>
+<p>In the request body, provide a JSON object with the following parameters.</p>
+<table>
+<thead>
+<tr>
+	<th align="left">Parameter</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">comment</td>
+	<td align="left">String</td>
+	<td align="left"></td>
+</tr>
+<tr>
+	<td align="left">sendResponse</td>
+	<td align="left">Boolean</td>
+	<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response">Response</h3>
+<p>If successful, this method returns <code>200, OK</code> response code. It does not return anything in the response body.</p>
+<h3 id="example">Example</h3>
+<p>Here is an example of how to call this API.</p>
+<h5 id="request">Request</h5>
+<p>Here is an example of the request.</p>
+<pre><code class="http">POST https://graph.microsoft.com/v1.0/users/&lt;objectId&gt;/events/&lt;id&gt;/accept
+Content-type: application/json
+Content-length: 56
+
+{
+  &quot;comment&quot;: &quot;comment-value&quot;,
+  &quot;sendResponse&quot;: true
+}
+</code></pre>
+
+<h5 id="response-1">Response</h5>
+<p>Here is an example of the response.</p>
+<pre><code class="http">HTTP/1.1 200 OK
+</code></pre>
+
+
+        </div>        
+    </div>
+</div>
+<!-- HTML Page Content End -->
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
+   
+</body>  
+</html>  
+
+
+
+

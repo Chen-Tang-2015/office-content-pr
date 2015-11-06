@@ -1,3 +1,14 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/GraphStyles/stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+</head>
+<body>
+
 <div id="holder">
 
 <!-- HTML Page Content Start -->
@@ -6,14 +17,18 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="photo-resource-type">photo resource type</h1>
+<p>The photo resource provides information about images captured with a camera.</p>
 <h3 id="json-representation">JSON representation</h3>
-<p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
-  &quot;height&quot;: 1024,
-  &quot;id&quot;: &quot;String-value (identifier)&quot;,
-  &quot;width&quot;: 1024
+  &quot;takenDateTime&quot;: &quot;timestamp&quot;,
+  &quot;cameraMake&quot;: &quot;string&quot;,
+  &quot;cameraModel&quot;: &quot;string&quot;,
+  &quot;fNumber&quot;: 1.8,
+  &quot;exposureDenominator&quot;: 1000,
+  &quot;exposureNumerator&quot;: 1,
+  &quot;focalLength&quot;: 22.5,
+  &quot;iso&quot;: 100
 }
-
 </code></pre>
 
 <h3 id="properties">Properties</h3>
@@ -27,19 +42,44 @@
 </thead>
 <tbody>
 <tr>
-	<td align="left">height</td>
-	<td align="left">Int32</td>
-	<td align="left"></td>
+	<td align="left"><strong>takenDateTime</strong></td>
+	<td align="left">DateTimeOffset</td>
+	<td align="left">Represents the date and time the photo was taken.</td>
 </tr>
 <tr>
-	<td align="left">id</td>
+	<td align="left"><strong>cameraMake</strong></td>
 	<td align="left">String</td>
-	<td align="left">Read-only.</td>
+	<td align="left">Camera manufacturer.</td>
 </tr>
 <tr>
-	<td align="left">width</td>
+	<td align="left"><strong>cameraModel</strong></td>
+	<td align="left">String</td>
+	<td align="left">Camera model.</td>
+</tr>
+<tr>
+	<td align="left"><strong>fNumber</strong></td>
+	<td align="left">Double</td>
+	<td align="left">The F-stop value from the camera.</td>
+</tr>
+<tr>
+	<td align="left"><strong>exposureDenominator</strong></td>
 	<td align="left">Int32</td>
-	<td align="left"></td>
+	<td align="left">The denominator for the exposure time fraction from the camera.</td>
+</tr>
+<tr>
+	<td align="left"><strong>exposureNumerator</strong></td>
+	<td align="left">Int32</td>
+	<td align="left">The numerator for the exposure time fraction from the camera.</td>
+</tr>
+<tr>
+	<td align="left"><strong>focalLength</strong></td>
+	<td align="left">Double</td>
+	<td align="left">The focal length from the camera.</td>
+</tr>
+<tr>
+	<td align="left"><strong>iso</strong></td>
+	<td align="left">Int32</td>
+	<td align="left">The ISO value from the camera.</td>
 </tr>
 </tbody>
 </table>
@@ -72,6 +112,8 @@
 </tr>
 </tbody>
 </table>
+<h3 id="notes">Notes</h3>
+<p>In OneDrive for Business, this facet is returned if it includes the <strong>takenDateTime</strong> property.</p>
 
         </div>        
     </div>
@@ -80,6 +122,11 @@
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
+   
+</body>  
+</html>  
 
 
 

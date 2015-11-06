@@ -1,3 +1,14 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/GraphStyles/stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+</head>
+<body>
+
 <div id="holder">
 
 <!-- HTML Page Content Start -->
@@ -5,41 +16,27 @@
 <div class="container wrapper" id="body">
     <div class="row">
         <div class="col-md-9">
-            <h1 id="microsoft-graph-api-frequently-asked-questions-faqs">Microsoft Graph API Frequently Asked Questions (FAQs)</h1>
+            <h1 id="microsoft-graph-frequently-asked-questions-faqs">Microsoft Graph Frequently Asked Questions (FAQs)</h1>
 <p><em><strong>Applies to:</strong> Office 365</em></p>
-<p>Your feedback is important to us. Connect with us on <a href="http://stackoverflow.com/questions/tagged/office365" target="_blank">Stack Overflow</a>. Tag your questions with [office365].</p>
+<p>Your feedback is important to us. Connect with us on <a href="http://stackoverflow.com/questions/tagged/office365" target="_blank">Stack Overflow</a>. Tag your questions with [MicrosoftGraph] and [office365].</p>
 <p><strong>In this article</strong></p>
 <ul>
 <li><a href="#msg_how_use__unified_api">What platforms are supported by Microsoft Graph API?</a></li>
+<li><a href="#msg_v2auth">Does Microsoft Graph API support v2.0 app authentication model?</a> </li>
 <li><a href="#msg_why_use_unified_api">Why use Microsoft Graph API?</a></li>
-<li><a href="#msg_what_in_unified_api">What's currently available in Microsoft Graph API</a></li>
-<li><a href="#msg_what_next_in_unified_api">What's coming next in Microsoft Graph API?</a> </li>
-<li><a href="#msg_how_learn_unified_api">Where can I learn more about Microsoft Graph API development?</a> </li>
-<li><a href="#msg_how_learn_unified_api">Does Microsoft Graph API support v2.0 app authentication model?</a> </li>
 </ul>
 <p>&lt;a name=&quot;msg_how_use_unified_api&quot;&gt; </a></p>
-<h2 id="how-to-use-microsoft-graph-api">How to use Microsoft Graph API?</h2>
-<p>Apps can use the Microsoft Graph API to perform create, read, update, and delete (CRUD) operations on data sources and entities, giving them seamless access to work data. </p>
-<p><strong>Ease of use--one endpoint, all Office 365 data under one roof</strong></p>
-<p>You can use the API in four steps:
-1.	Select your programming language and development environment.
-2.	Build your app.
-3.	Optionally, host your app in Microsoft Azure or any cloud platform you choose.
-4.	Authenticate your users by using single sign-on with Azure AD.</p>
-<p>As a developer you can use the API to create custom apps that access and interact with all the richness of enterprise and productivity data--users, groups, organizational contacts, files, folders, mail, calendar, insights and relationships--and build apps across all mobile, web, and desktop platforms. No matter your development platform or tools. Using a single service endpoint to access those entities and data. And a single authentication flow.  </p>
+<h2 id="what-platforms-are-supported-by-microsoft-graph-api">What platforms are supported by Microsoft Graph API?</h2>
 <p>You can:</p>
 <ul>
-<li>Use the development environment you're familiar with, like .NET, PHP, Java, Python, or Ruby</li>
+<li>Use any development environment you're familiar with, like .NET, PHP, Java, Python, or Ruby</li>
 <li>Use any  programming language, development platform, and hosting environment</li>
 <li>Build an  app that accesses the unified API using any web language, including JavaScript, HTML5, Python, Ruby, PHP, and ASP.NET  </li>
 <li>Use the IDE of your choice, whether that's Visual Studio, Eclipse, Android Studio, Xcode or something else you choose</li>
 <li>Host your apps in Microsoft Azure or any cloud platform</li>
 <li>Develop apps for Windows Universal, iOS, Android, or on another device platform</li>
-<li>Call the unified API from Office Add-ins (formerly apps for Office) or SharePoint Add-ins (formerly apps for SharePoint)</li>
+<li>Call the API from Office Add-ins (formerly apps for Office) or SharePoint Add-ins (formerly apps for SharePoint)</li>
 </ul>
-<p><strong>Authentication and authorization</strong></p>
-<p>Then, using single sign-on with Azure AD to authenticate your users, enable them to access files, calendar, emails, user information, and the data stored in the cloud.  The API follows REST and OData 4.0 standards for data transport, and uses OpenID Connect and OAuth 2.0 protocols for authentication and authorization. </p>
-<p>You also have the option to use cross-origin resource sharing (CORS) to send requests to the Microsoft Graph API to access, modify, and create data.</p>
 <p>&lt;a name=&quot;msg_why_use_unified_api&quot;&gt; </a></p>
 <h2 id="why-use-microsoft-graph-api">Why use Microsoft Graph API?</h2>
 <p>The following example shows the current model for interacting with Office 365 API using disparate service endpoints and how much simpler this becomes with Microsoft Graph API.</p>
@@ -88,7 +85,7 @@
 <tbody>
 <tr>
 	<td align="left">Discover service endpoints for Office 365 API</td>
-	<td align="left"><code>Office 365 unified API</code></td>
+	<td align="left"><code>Microsoft Graph API</code></td>
 	<td align="left">Not needed &lt;!-- notes --&gt;</td>
 </tr>
 <tr>
@@ -98,12 +95,12 @@
 </tr>
 <tr>
 	<td align="left">Get message collection from the Inbox</td>
-	<td align="left"><code>Office 365 unified API</code></td>
+	<td align="left"><code>Microsoft Graph API</code></td>
 	<td align="left"><em>https://</em><strong>graph.microsoft.com</strong><em>/beta/me/messages</em></td>
 </tr>
 <tr>
 	<td align="left">Get Joe's files</td>
-	<td align="left"><code>Office 365 unified API</code></td>
+	<td align="left"><code>Microsoft Graph API</code></td>
 	<td align="left"><em>https://</em><strong>graph.microsoft.com</strong><em>/beta/me/files</em></td>
 </tr>
 </tbody>
@@ -126,59 +123,11 @@
 <ul>
 <li>Development tooling and resources for all developers. You can develop using any platform and language </li>
 <li>Mobile development for all platforms using open technologies  </li>
-<li>No need for any specialized Exchange, SharePoint, or Azure AD knowledge to access Office 365 unified API entities</li>
+<li>No need for any specialized Exchange, SharePoint, or Azure AD knowledge to access Microsoft Graph API entities</li>
 </ul>
-<p>&lt;a name=&quot;msg_what_in_unified_api&quot;&gt; </a></p>
-<h2 id="whats-in-microsoft-graph-api">What's in Microsoft Graph API?</h2>
-<p>Currently, the Microsoft Graph API supports programmatic access to the following entities.</p>
-<p><img src="./images/O365_unified_API_entities.png" alt="Office 365 unified API currently available entities." /></p>
-<p><strong>Users</strong></p>
-<p>The <strong>User</strong> entity provides you access to user information, such as display name, job title, profile photo, and so on. Some of the actions you can perform with the <strong>User</strong> entity:</p>
-<ul>
-<li>Get user's expertise, interest and skills</li>
-<li>Update a user's properties, such as their location and phone number</li>
-<li>Disable a user's account or manage user's account </li>
-</ul>
-<p><strong>Groups</strong> </p>
-<p>The <a href="..\howto\groups-rest-operations.htm#GroupResource">Group</a> entity provides you access to groups that a user belongs to, management of groups and group data. In addition you can get access to group's content. Some of the actions you can perform with the <strong>Group</strong> entity:
--	Check a user's group membership for role-based access
--	Manage group memberships
--	Get a list of all the groups a user belongs to
--	Get the group's conversations
--	Get the group's calendar
--	Get the group's files</p>
-<p><strong>Files</strong></p>
-<p>The <strong>File</strong> entity represents file storage and management. These are OneDrive for Business files for the user. The <strong>Files</strong> entity gives you access to a user's files, and folders and allows you to interact with file data. You can use it to access and manipulate contents and documents (for example: files, presentations, and spreadsheets). Some of the actions you can perform with the <strong>File</strong> entity:
--	Get properties for a file, folder or drive
--	Create a file or folder, or update a file's content.
--	Move a file or folder</p>
-<p><strong>Mail</strong> </p>
-<p>Use the <strong>Mail</strong> entity to read compose and send messages and attachments, view and respond to event messages, and manage folders in a user's mailbox. You can use query parameters to filter messages and folders in the user's mailbox. Some of the actions you can perform with the <strong>Mail</strong> entity: 
--	Forward messages 
--	Delete attachments
--	Move or copy a  folder and its contents to another folder </p>
-<p><strong>Calendar</strong> </p>
-<p>The <strong>Calendar</strong> entity provides access to events, calendars, and calendar groups.  You use it to interact with calendar data. Some of the actions you can perform using the <strong>Calander</strong> entity:
--	Create a calendar 
--	Change the name of a calendar group
--	Get the calendars from a specific calendar group</p>
-<p><strong>Contacts</strong></p>
-<p>The <strong>Contact</strong> entity provides access to contact data and contact folders. For example, some of the actions you can perform using the <strong>Contact</strong> entity:
--	Change a contact's properties
--	Add a contact 
--	Get a contact thumb nail photo</p>
-<p><strong>Note</strong>:  Currently only contact data for organization is available. Personal contact data will be available soon.</p>
-<p><strong>Insights and relationships:  TrendingAround and WorkingWith</strong></p>
-<p>Currently there are two relationships that you can query for: <strong>TrendingAround</strong> and <strong>WorkingWith</strong>. Both these relationships work with the <strong>Files</strong> and <strong>User</strong> entities. </p>
-<p>The <strong>TrendingAround</strong> relationship returns a collection of files that are popular (trending) around you (the current authenticated user). Alternatively, you can also query for files trending around a specific person on your tenant, such as your colleague.</p>
-<p>The <strong>WorkingWith</strong> relationship returns the most relevant people you're working with. These people may not necessarily be people in your immediate group or team, but also people within your organization whom you have been in contact with. </p>
-<p>Some of the actions you can perform with <strong>TrendingAround</strong> and <strong>WorkingWith</strong>:</p>
-<ul>
-<li>Get people relationships and association information based on user's activity </li>
-<li>Get files closely related to a user</li>
-<li>Find people you're meeting with today through your calendar events, and discover the files they're working on</li>
-<li>Get files which are popular in the user's circle.</li>
-</ul>
+<p>&lt;a name=&quot;msg_v2auth&quot;&gt; </a></p>
+<h2 id="does-microsoft-graph-api-support-v20-app-authentication-model">Does Microsoft Graph API support v2.0 app authentication model?</h2>
+<p>Yes, in preview. For more information see <a href="authenticate-MSGraph-using-v2.htm">Authenticate Microsoft Graph endpoints using the v2.0 app model preview</a></p>
 
         </div>        
     </div>
@@ -187,6 +136,11 @@
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
+   
+</body>  
+</html>  
 
 
 

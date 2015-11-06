@@ -1,3 +1,14 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/GraphStyles/stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+</head>
+<body>
+
 <div id="holder">
 
 <!-- HTML Page Content Start -->
@@ -6,15 +17,13 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="file-resource-type">file resource type</h1>
+<p>The <strong>File</strong> resource groups file-related data items into a single structure.</p>
 <h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
-  &quot;hashes&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.hashes&quot;
-  },
-  &quot;mimeType&quot;: &quot;String-value&quot;
+  &quot;hashes&quot;: { &quot;@odata.type&quot;: &quot;microsoft.graph.hashes&quot; },
+  &quot;mimeType&quot;: &quot;string&quot;
 }
-
 </code></pre>
 
 <h3 id="properties">Properties</h3>
@@ -29,13 +38,13 @@
 <tbody>
 <tr>
 	<td align="left">hashes</td>
-	<td align="left"><a href="hashes.htm">hashes</a></td>
-	<td align="left"></td>
+	<td align="left"><a href="hashes_facet.htm">HashesType</a></td>
+	<td align="left">Hashes of the file's binary content, if available.</td>
 </tr>
 <tr>
 	<td align="left">mimeType</td>
-	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">string</td>
+	<td align="left">The MIME type for the file. This is determined by logic on the server and might not be the value provided when the file was uploaded.</td>
 </tr>
 </tbody>
 </table>
@@ -47,6 +56,11 @@
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
+   
+</body>  
+</html>  
 
 
 

@@ -1,3 +1,14 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/GraphStyles/stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+</head>
+<body>
+
 <div id="holder">
 
 <!-- HTML Page Content Start -->
@@ -6,56 +17,7 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="notes-resource-type">notes resource type</h1>
-<h3 id="json-representation">JSON representation</h3>
-<p>Here is a JSON representation of the resource</p>
-<pre><code class="json">{
-  &quot;id&quot;: &quot;String-value (identifier)&quot;,
-  &quot;notebooks&quot;: [
-    {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.notebook&quot;
-    }
-  ],
-  &quot;pages&quot;: [
-    {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.page&quot;
-    }
-  ],
-  &quot;resources&quot;: [
-    {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.resource&quot;
-    }
-  ],
-  &quot;sectionGroups&quot;: [
-    {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.sectiongroup&quot;
-    }
-  ],
-  &quot;sections&quot;: [
-    {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.section&quot;
-    }
-  ]
-}
-
-</code></pre>
-
-<h3 id="properties">Properties</h3>
-<table>
-<thead>
-<tr>
-	<th align="left">Property</th>
-	<th align="left">Type</th>
-	<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-	<td align="left">id</td>
-	<td align="left">String</td>
-	<td align="left">Read-only.</td>
-</tr>
-</tbody>
-</table>
+<p>The entry point to access OneNote resources.</p>
 <h3 id="relationships">Relationships</h3>
 <table>
 <thead>
@@ -68,28 +30,28 @@
 <tbody>
 <tr>
 	<td align="left">notebooks</td>
-	<td align="left"><a href="notebook.htm">Notebook</a> collection</td>
-	<td align="left">Read-only. Nullable.</td>
+	<td align="left"><a href="notebook.htm">notebook</a> collection</td>
+	<td align="left">The OneNote notebooks that are owned by the user, site, or group. Read-only. Nullable.</td>
 </tr>
 <tr>
 	<td align="left">pages</td>
-	<td align="left"><a href="page.htm">Page</a> collection</td>
-	<td align="left">Read-only. Nullable.</td>
+	<td align="left"><a href="page.htm">page</a> collection</td>
+	<td align="left">The pages in all OneNote notebooks that are owned by the user, site, or group.  Read-only. Nullable.</td>
 </tr>
 <tr>
 	<td align="left">resources</td>
-	<td align="left"><a href="resource.htm">Resource</a> collection</td>
-	<td align="left">Read-only. Nullable.</td>
+	<td align="left"><a href="resource.htm">resource</a> collection</td>
+	<td align="left">The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can <a href="resource.htm#properties">get a specific resource by id</a>. Read-only. Nullable.</td>
 </tr>
 <tr>
 	<td align="left">sectionGroups</td>
-	<td align="left"><a href="sectiongroup.htm">SectionGroup</a> collection</td>
-	<td align="left">Read-only. Nullable.</td>
+	<td align="left"><a href="sectiongroup.htm">sectionGroup</a> collection</td>
+	<td align="left">The section groups in all OneNote notebooks that are owned by the user, site, or group.  Read-only. Nullable.</td>
 </tr>
 <tr>
 	<td align="left">sections</td>
-	<td align="left"><a href="section.htm">Section</a> collection</td>
-	<td align="left">Read-only. Nullable.</td>
+	<td align="left"><a href="section.htm">section</a> collection</td>
+	<td align="left">The sections in all OneNote notebooks that are owned by the user, site, or group.  Read-only. Nullable.</td>
 </tr>
 </tbody>
 </table>
@@ -104,64 +66,34 @@
 </thead>
 <tbody>
 <tr>
-	<td align="left"><a href="../api/notes_get.htm">Get notes</a></td>
-	<td align="left"><a href="notes.htm">notes</a></td>
-	<td align="left">Read properties and relationships of notes object.</td>
-</tr>
-<tr>
-	<td align="left"><a href="../api/notes_post_notebooks.htm">Create Notebook</a></td>
-	<td align="left"><a href="notebook.htm">Notebook</a></td>
-	<td align="left">Create a new Notebook by posting to the notebooks collection.</td>
+	<td align="left"><a href="../api/notes_post_notebooks.htm">Create notebook</a></td>
+	<td align="left"><a href="notebook.htm">notebook</a></td>
+	<td align="left">Create a new notebook by posting to the notebooks collection.</td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/notes_list_notebooks.htm">List notebooks</a></td>
-	<td align="left"><a href="notebook.htm">Notebook</a> collection</td>
-	<td align="left">Get a Notebook object collection.</td>
+	<td align="left"><a href="notebook.htm">notebook</a> collection</td>
+	<td align="left">Get a collection of notebook objects.</td>
 </tr>
 <tr>
-	<td align="left"><a href="../api/notes_post_pages.htm">Create Page</a></td>
-	<td align="left"><a href="page.htm">Page</a></td>
-	<td align="left">Create a new Page by posting to the pages collection.</td>
+	<td align="left"><a href="../api/notes_post_pages.htm">Create page</a></td>
+	<td align="left"><a href="page.htm">page</a></td>
+	<td align="left">Create a new page by posting to the pages collection.</td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/notes_list_pages.htm">List pages</a></td>
-	<td align="left"><a href="page.htm">Page</a> collection</td>
-	<td align="left">Get a Page object collection.</td>
-</tr>
-<tr>
-	<td align="left"><a href="../api/notes_post_resources.htm">Create Resource</a></td>
-	<td align="left"><a href="resource.htm">Resource</a></td>
-	<td align="left">Create a new Resource by posting to the resources collection.</td>
-</tr>
-<tr>
-	<td align="left"><a href="../api/notes_list_resources.htm">List resources</a></td>
-	<td align="left"><a href="resource.htm">Resource</a> collection</td>
-	<td align="left">Get a Resource object collection.</td>
-</tr>
-<tr>
-	<td align="left"><a href="../api/notes_post_sectiongroups.htm">Create SectionGroup</a></td>
-	<td align="left"><a href="sectiongroup.htm">SectionGroup</a></td>
-	<td align="left">Create a new SectionGroup by posting to the sectionGroups collection.</td>
+	<td align="left"><a href="page.htm">page</a> collection</td>
+	<td align="left">Get a collection of page objects.</td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/notes_list_sectiongroups.htm">List sectionGroups</a></td>
-	<td align="left"><a href="sectiongroup.htm">SectionGroup</a> collection</td>
-	<td align="left">Get a SectionGroup object collection.</td>
-</tr>
-<tr>
-	<td align="left"><a href="../api/notes_post_sections.htm">Create Section</a></td>
-	<td align="left"><a href="section.htm">Section</a></td>
-	<td align="left">Create a new Section by posting to the sections collection.</td>
+	<td align="left"><a href="sectiongroup.htm">sectionGroup</a> collection</td>
+	<td align="left">Get a collection of sectionGroup objects.</td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/notes_list_sections.htm">List sections</a></td>
-	<td align="left"><a href="section.htm">Section</a> collection</td>
-	<td align="left">Get a Section object collection.</td>
-</tr>
-<tr>
-	<td align="left"><a href="../api/notes_delete.htm">Delete</a></td>
-	<td align="left">None</td>
-	<td align="left">Delete notes object.</td>
+	<td align="left"><a href="section.htm">section</a> collection</td>
+	<td align="left">Get a collection of section objects.</td>
 </tr>
 </tbody>
 </table>
@@ -173,6 +105,11 @@
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
+   
+</body>  
+</html>  
 
 
 

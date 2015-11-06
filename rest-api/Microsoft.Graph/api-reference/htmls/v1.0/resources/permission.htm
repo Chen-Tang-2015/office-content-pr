@@ -1,3 +1,14 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/GraphStyles/stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+</head>
+<body>
+
 <div id="holder">
 
 <!-- HTML Page Content Start -->
@@ -6,28 +17,18 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="permission-resource-type">permission resource type</h1>
+<p>Provides information about permissions granted for an item.</p>
 <h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
-  &quot;grantedTo&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.identityset&quot;
-  },
-  &quot;id&quot;: &quot;String-value (identifier)&quot;,
-  &quot;inheritedFrom&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.itemreference&quot;
-  },
-  &quot;invitation&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.sharinginvitation&quot;
-  },
-  &quot;link&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.sharinglink&quot;
-  },
-  &quot;roles&quot;: [
-    &quot;String-value&quot;
-  ],
-  &quot;shareId&quot;: &quot;String-value&quot;
+  &quot;grantedTo&quot;: { &quot;@odata.type&quot;: &quot;microsoft.graph.identityset&quot; },
+  &quot;id&quot;: &quot;string&quot;,
+  &quot;inheritedFrom&quot;: { &quot;@odata.type&quot;: &quot;microsoft.graph.itemreference&quot; },
+  &quot;invitation&quot;: { &quot;@odata.type&quot;: &quot;microsoft.graph.sharinginvitation&quot; },
+  &quot;link&quot;: { &quot;@odata.type&quot;: &quot;microsoft.graph.sharinglink&quot; },
+  &quot;roles&quot;: [&quot;read|write&quot;],
+  &quot;shareId&quot;: &quot;string&quot;
 }
-
 </code></pre>
 
 <h3 id="properties">Properties</h3>
@@ -48,27 +49,27 @@
 <tr>
 	<td align="left">id</td>
 	<td align="left">String</td>
-	<td align="left">Read-only.</td>
+	<td align="left"><strong>Read Only</strong> The unique identifier of the permission among all permissions on the item.</td>
 </tr>
 <tr>
 	<td align="left">inheritedFrom</td>
-	<td align="left"><a href="itemreference.htm">itemReference</a></td>
-	<td align="left"></td>
+	<td align="left"><a href="../resources/itemReference.htm"><code>ItemReference</code></a></td>
+	<td align="left"><strong>Read Only</strong> Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor.</td>
 </tr>
 <tr>
 	<td align="left">invitation</td>
-	<td align="left"><a href="sharinginvitation.htm">sharingInvitation</a></td>
+	<td align="left"><a href="../resource/sharinginvitation.htm">sharingInvitation</a></td>
 	<td align="left"></td>
 </tr>
 <tr>
 	<td align="left">link</td>
-	<td align="left"><a href="sharinglink.htm">sharingLink</a></td>
-	<td align="left"></td>
+	<td align="left"><a href="sharinglink_facet.htm">SharingLink</a></td>
+	<td align="left"><strong>Read Only</strong> Provides the link details of the current permission, if it is a link type permissions.</td>
 </tr>
 <tr>
-	<td align="left">roles</td>
-	<td align="left">String collection</td>
-	<td align="left"></td>
+	<td align="left">role</td>
+	<td align="left">Array of strings</td>
+	<td align="left">The type of permission, e.g. <code>read</code>. See below for the full list of roles.</td>
 </tr>
 <tr>
 	<td align="left">shareId</td>
@@ -77,8 +78,6 @@
 </tr>
 </tbody>
 </table>
-<h3 id="relationships">Relationships</h3>
-<p>None</p>
 <h3 id="methods">Methods</h3>
 <table>
 <thead>
@@ -114,6 +113,11 @@
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
+   
+</body>  
+</html>  
 
 
 

@@ -1,3 +1,14 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/GraphStyles/stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+</head>
+<body>
+
 <div id="holder">
 
 <!-- HTML Page Content Start -->
@@ -6,6 +17,7 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="page-resource-type">page resource type</h1>
+<p>A page in a OneNote notebook.</p>
 <h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
@@ -43,47 +55,47 @@
 <tr>
 	<td align="left">content</td>
 	<td align="left">Stream</td>
-	<td align="left"></td>
+	<td align="left">The page's HTML content.</td>
 </tr>
 <tr>
 	<td align="left">contentUrl</td>
 	<td align="left">String</td>
-	<td align="left">The URL for the page's HTML content</td>
+	<td align="left">The URL for the page's HTML content.</td>
 </tr>
 <tr>
 	<td align="left">createdByAppId</td>
 	<td align="left">String</td>
-	<td align="left">The unique identifier of the application that created the page</td>
+	<td align="left">The unique identifier of the application that created the page. Read-only.</td>
 </tr>
 <tr>
 	<td align="left">createdTime</td>
 	<td align="left">DateTimeOffset</td>
-	<td align="left">The date and time when the page was created in UTC format The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+	<td align="left">The date and time when the page was created. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
 </tr>
 <tr>
 	<td align="left">id</td>
 	<td align="left">String</td>
-	<td align="left">The unique identifier of the page  Read-only.</td>
+	<td align="left">The unique identifier of the page.  Read-only.</td>
 </tr>
 <tr>
 	<td align="left">lastModifiedTime</td>
 	<td align="left">DateTimeOffset</td>
-	<td align="left">The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
+	<td align="left">The date and time when the page was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: <code>'2014-01-01T00:00:00Z'</code></td>
 </tr>
 <tr>
 	<td align="left">links</td>
-	<td align="left"><a href="pagelinks.htm">PageLinks</a></td>
-	<td align="left">The oneNoteClientURL link to open the page in the OneNote native client if it 's installed, and oneNoteWebUrl to open the page in OneNote Online</td>
+	<td align="left"><a href="pagelinks.htm">pageLinks</a></td>
+	<td align="left">Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote Online.</td>
 </tr>
 <tr>
 	<td align="left">self</td>
 	<td align="left">String</td>
-	<td align="left"></td>
+	<td align="left">The endpoint where you can get details about the page. Read-only.</td>
 </tr>
 <tr>
 	<td align="left">title</td>
 	<td align="left">String</td>
-	<td align="left">The title of the page</td>
+	<td align="left">The title of the page.</td>
 </tr>
 </tbody>
 </table>
@@ -99,13 +111,13 @@
 <tbody>
 <tr>
 	<td align="left">parentNotebook</td>
-	<td align="left"><a href="notebook.htm">Notebook</a></td>
-	<td align="left">A page in a OneNote section  Read-only.</td>
+	<td align="left"><a href="notebook.htm">notebook</a></td>
+	<td align="left">The notebook that contains the page.  Read-only.</td>
 </tr>
 <tr>
 	<td align="left">parentSection</td>
-	<td align="left"><a href="section.htm">Section</a></td>
-	<td align="left">Read-only.</td>
+	<td align="left"><a href="section.htm">section</a></td>
+	<td align="left">The section that contains the page. Read-only.</td>
 </tr>
 </tbody>
 </table>
@@ -122,17 +134,22 @@
 <tr>
 	<td align="left"><a href="../api/page_get.htm">Get page</a></td>
 	<td align="left"><a href="page.htm">page</a></td>
-	<td align="left">Read properties and relationships of page object.</td>
+	<td align="left">Read the properties and relationships of the page object.</td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/page_update.htm">Update</a></td>
 	<td align="left"><a href="page.htm">page</a></td>
-	<td align="left">Update page object.</td>
+	<td align="left">Update the content of a page.</td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/page_delete.htm">Delete</a></td>
 	<td align="left">None</td>
-	<td align="left">Delete page object.</td>
+	<td align="left">Delete the page object.</td>
+</tr>
+<tr>
+	<td align="left"><a href="../api/page_copytosection.htm">copyToSection</a></td>
+	<td align="left"><a href="copypagemodel.htm">copyPageModel</a></td>
+	<td align="left">Copies a page to a specific section.</td>
 </tr>
 </tbody>
 </table>
@@ -144,6 +161,11 @@
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
+   
+</body>  
+</html>  
 
 
 

@@ -1,3 +1,14 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/GraphStyles/stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+</head>
+<body>
+
 <div id="holder">
 
 <!-- HTML Page Content Start -->
@@ -6,9 +17,13 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="get-thumbnailset">Get thumbnailSet</h1>
-<p>Retrieve the properties and relationships of thumbnailset object.</p>
+<p>Retrieve the properties and relationships of a <a href="../resources/thumbnailset.htm">ThumbnailSet</a> object.</p>
+<p>For more info, see <a href="item_list_thumbnails.htm">List thumbnails</a>.</p>
 <h3 id="prerequisites">Prerequisites</h3>
 <p>The following <strong>scopes</strong> are required to execute this API: </p>
+<ul>
+<li>onedrive.readonly</li>
+</ul>
 <h3 id="http-request">HTTP request</h3>
 <pre><code class="http">GET /drive/root/thumbnails/&lt;id&gt;
 GET /drive/items/&lt;id&gt;/thumbnails/&lt;id&gt;
@@ -39,23 +54,6 @@ GET /drives/&lt;id&gt;/root/thumbnails/&lt;id&gt;
 	<td align="left">$select</td>
 	<td align="left">string</td>
 	<td align="left">Comma-separated list of properties to include in the response.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="request-headers">Request headers</h3>
-<table>
-<thead>
-<tr>
-	<th align="left">Name</th>
-	<th align="left">Type</th>
-	<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-	<td align="left">X-Sample-Header</td>
-	<td align="left">string</td>
-	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
 </tr>
 </tbody>
 </table>
@@ -112,6 +110,11 @@ Content-length: 456
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
+   
+</body>  
+</html>  
 
 
 

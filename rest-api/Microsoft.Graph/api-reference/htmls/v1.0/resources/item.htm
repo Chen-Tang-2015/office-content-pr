@@ -1,3 +1,14 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/GraphStyles/stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+</head>
+<body>
+
 <div id="holder">
 
 <!-- HTML Page Content Start -->
@@ -6,99 +17,44 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="item-resource-type">item resource type</h1>
-<p>The Item resource type represents metadata for an item in OneDrive.
- All top-level filesystem objects in OneDrive are Item resources.
- If an item is a <a href="../facets/folder_facet.htm">Folder</a> or <a href="../facets/file_facet.htm">File</a> facet, the Item resource will contain a value for either the <strong>folder</strong> or <strong>file</strong> property, respectively.</p>
+<p>The item resource represents an item contained in a drive, like a file or
+folder. The properties of the item provide information about the type of item
+represented.</p>
+<p>For example, if an item behaves as a <a href="folder.htm">Folder</a>, it will have the
+<code>Folder</code> property set to an instance of the Folder facet that contains details
+about the folder.</p>
 <h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
-  &quot;audio&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.audio&quot;
-  },
-  &quot;cTag&quot;: &quot;String-value&quot;,
-  &quot;children&quot;: [
-    {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.item&quot;
-    }
-  ],
-  &quot;content&quot;: &quot;Stream-value&quot;,
-  &quot;createdBy&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.identityset&quot;
-  },
-  &quot;createdByUser&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.user&quot;
-  },
-  &quot;createdDateTime&quot;: &quot;String (timestamp)&quot;,
-  &quot;deleted&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.deleted&quot;
-  },
-  &quot;description&quot;: &quot;String-value&quot;,
-  &quot;eTag&quot;: &quot;String-value&quot;,
-  &quot;file&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.file&quot;
-  },
-  &quot;fileSystemInfo&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.filesysteminfo&quot;
-  },
-  &quot;folder&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.folder&quot;
-  },
-  &quot;id&quot;: &quot;String-value (identifier)&quot;,
-  &quot;image&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.image&quot;
-  },
-  &quot;lastModifiedBy&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.identityset&quot;
-  },
-  &quot;lastModifiedByUser&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.user&quot;
-  },
-  &quot;lastModifiedDateTime&quot;: &quot;String (timestamp)&quot;,
-  &quot;location&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.location&quot;
-  },
-  &quot;name&quot;: &quot;String-value&quot;,
-  &quot;openWith&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.openwithset&quot;
-  },
-  &quot;parentReference&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.itemreference&quot;
-  },
-  &quot;permissions&quot;: [
-    {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.permission&quot;
-    }
-  ],
-  &quot;photo&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.photo&quot;
-  },
-  &quot;searchResult&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.searchresult&quot;
-  },
-  &quot;shared&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.shared&quot;
-  },
+  &quot;audio&quot;: { &quot;@odata.type&quot;: &quot;microsoft.graph.audio&quot; },
+  &quot;cTag&quot;: &quot;string&quot;,
+  &quot;children&quot;: [ { &quot;@odata.type&quot;: &quot;microsoft.graph.item&quot; } ],
+  &quot;content&quot;: &quot;binary-stream&quot;,
+  &quot;createdBy&quot;: { &quot;@odata.type&quot;: &quot;microsoft.graph.identityset&quot; },
+  &quot;createdDateTime&quot;: &quot;datetime&quot;,
+  &quot;deleted&quot;: { &quot;@odata.type&quot;: &quot;microsoft.graph.deleted&quot; },
+  &quot;description&quot;: &quot;string&quot;,
+  &quot;eTag&quot;: &quot;string&quot;,
+  &quot;file&quot;: { &quot;@odata.type&quot;: &quot;microsoft.graph.file&quot; },
+  &quot;fileSystemInfo&quot;: { &quot;@odata.type&quot;: &quot;microsoft.graph.filesysteminfo&quot; },
+  &quot;folder&quot;: { &quot;@odata.type&quot;: &quot;microsoft.graph.folder&quot; },
+  &quot;id&quot;: &quot;string (identifier)&quot;,
+  &quot;image&quot;: { &quot;@odata.type&quot;: &quot;microsoft.graph.image&quot; },
+  &quot;lastModifiedBy&quot;: { &quot;@odata.type&quot;: &quot;microsoft.graph.identityset&quot; },
+  &quot;lastModifiedDateTime&quot;: &quot;datetime&quot;,
+  &quot;location&quot;: { &quot;@odata.type&quot;: &quot;microsoft.graph.location&quot; },
+  &quot;name&quot;: &quot;string&quot;,
+  &quot;parentReference&quot;: { &quot;@odata.type&quot;: &quot;microsoft.graph.itemreference&quot; },
+  &quot;permissions&quot;: [ { &quot;@odata.type&quot;: &quot;microsoft.graph.permission&quot; } ],
+  &quot;photo&quot;: { &quot;@odata.type&quot;: &quot;microsoft.graph.photo&quot; },
+  &quot;searchResult&quot;: { &quot;@odata.type&quot;: &quot;microsoft.graph.searchresult&quot; },
+  &quot;shared&quot;: { &quot;@odata.type&quot;: &quot;microsoft.graph.shared&quot; },
   &quot;size&quot;: 1024,
-  &quot;specialFolder&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.specialfolder&quot;
-  },
-  &quot;thumbnails&quot;: [
-    {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.thumbnailset&quot;
-    }
-  ],
-  &quot;versions&quot;: [
-    {
-      &quot;@odata.type&quot;: &quot;microsoft.graph.item&quot;
-    }
-  ],
-  &quot;video&quot;: {
-    &quot;@odata.type&quot;: &quot;microsoft.graph.video&quot;
-  },
-  &quot;webDavUrl&quot;: &quot;String-value&quot;,
-  &quot;webUrl&quot;: &quot;String-value&quot;
+  &quot;specialFolder&quot;: { &quot;@odata.type&quot;: &quot;microsoft.graph.specialfolder&quot; },
+  &quot;thumbnails&quot;: [ { &quot;@odata.type&quot;: &quot;microsoft.graph.thumbnailset&quot; } ],
+  &quot;video&quot;: { &quot;@odata.type&quot;: &quot;microsoft.graph.video&quot; },
+  &quot;webUrl&quot;: &quot;url&quot;
 }
-
 </code></pre>
 
 <h3 id="properties">Properties</h3>
@@ -124,7 +80,7 @@
 <tr>
 	<td align="left">content</td>
 	<td align="left">Stream</td>
-	<td align="left">The content stream, if the Item represents a file.</td>
+	<td align="left">The content stream, if the item has a stream.</td>
 </tr>
 <tr>
 	<td align="left">createdBy</td>
@@ -197,11 +153,6 @@
 	<td align="left">The name of the item (filename and extension). Read-write.</td>
 </tr>
 <tr>
-	<td align="left">openWith</td>
-	<td align="left"><a href="openwithset.htm">openWithSet</a></td>
-	<td align="left"></td>
-</tr>
-<tr>
 	<td align="left">parentReference</td>
 	<td align="left"><a href="itemreference.htm">itemReference</a></td>
 	<td align="left">Parent information, if the item has a parent. Read-write.</td>
@@ -237,14 +188,9 @@
 	<td align="left">Video metadata, if the item is a video. Read-only.</td>
 </tr>
 <tr>
-	<td align="left">webDavUrl</td>
-	<td align="left">String</td>
-	<td align="left"></td>
-</tr>
-<tr>
 	<td align="left">webUrl</td>
 	<td align="left">String</td>
-	<td align="left">URL that displays the resource in the browser. Read-only.</td>
+	<td align="left">URL for the item that can be opened in a web browser. Read-only.</td>
 </tr>
 </tbody>
 </table>
@@ -283,11 +229,6 @@
 	<td align="left"><a href="thumbnailset.htm">thumbnailSet</a> collection</td>
 	<td align="left">Collection containing <a href="thumbnailSet.htm">ThumbnailSet</a> objects associated with the item. For more info, see <a href="../items/thumbnails.htm">getting thumbnails</a>. Read-only. Nullable.</td>
 </tr>
-<tr>
-	<td align="left">versions</td>
-	<td align="left"><a href="item.htm">item</a> collection</td>
-	<td align="left">Read-only. Nullable.</td>
-</tr>
 </tbody>
 </table>
 <h3 id="methods">Methods</h3>
@@ -306,9 +247,9 @@
 	<td align="left">Read properties and relationships of item object.</td>
 </tr>
 <tr>
-	<td align="left"><a href="../api/item_post_children.htm">Create children</a></td>
+	<td align="left"><a href="../api/item_post_children.htm">Create item</a></td>
 	<td align="left"><a href="item.htm">item</a></td>
-	<td align="left">Create a new children by posting to the children collection.</td>
+	<td align="left">Create a new item by posting to the children collection.</td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/item_list_children.htm">List children</a></td>
@@ -326,19 +267,9 @@
 	<td align="left">Get a permission object collection.</td>
 </tr>
 <tr>
-	<td align="left"><a href="../api/item_post_thumbnails.htm">Create thumbnailSet</a></td>
-	<td align="left"><a href="thumbnailset.htm">thumbnailSet</a></td>
-	<td align="left">Create a new thumbnailSet by posting to the thumbnails collection.</td>
-</tr>
-<tr>
 	<td align="left"><a href="../api/item_list_thumbnails.htm">List thumbnails</a></td>
 	<td align="left"><a href="thumbnailset.htm">thumbnailSet</a> collection</td>
 	<td align="left">Get a thumbnailSet object collection.</td>
-</tr>
-<tr>
-	<td align="left"><a href="../api/item_post_versions.htm">Create version</a></td>
-	<td align="left"><a href="item.htm">item</a></td>
-	<td align="left">Create a new version by posting to the versions collection.</td>
 </tr>
 <tr>
 	<td align="left"><a href="../api/item_list_versions.htm">List versions</a></td>
@@ -356,39 +287,39 @@
 	<td align="left">Delete item object.</td>
 </tr>
 <tr>
-	<td align="left"><a href="../api/item_allphotos.htm">Allphotos</a></td>
+	<td align="left"><a href="../api/item_allphotos.htm">allPhotos</a></td>
 	<td align="left"><a href="item.htm">item</a> collection</td>
 	<td align="left"></td>
 </tr>
 <tr>
-	<td align="left"><a href="../api/item_copy.htm">Copy</a></td>
+	<td align="left"><a href="../api/item_copy.htm">copy</a></td>
 	<td align="left"><a href="item.htm">item</a></td>
-	<td align="left"></td>
+	<td align="left">Copy an item to another location in the drive.</td>
 </tr>
 <tr>
-	<td align="left"><a href="../api/item_createlink.htm">Createlink</a></td>
+	<td align="left"><a href="../api/item_createlink.htm">createLink</a></td>
 	<td align="left"><a href="permission.htm">permission</a></td>
-	<td align="left"></td>
+	<td align="left">Create a sharing link to allow users to access the content without signing in.</td>
 </tr>
 <tr>
-	<td align="left"><a href="../api/item_createsession.htm">Createsession</a></td>
+	<td align="left"><a href="../api/item_createsession.htm">createSession</a></td>
 	<td align="left"><a href="uploadsession.htm">uploadSession</a></td>
-	<td align="left"></td>
+	<td align="left">Upload a new file using the resumable uploading method.</td>
 </tr>
 <tr>
-	<td align="left"><a href="../api/item_delta.htm">Delta</a></td>
+	<td align="left"><a href="../api/item_delta.htm">delta</a></td>
 	<td align="left"><a href="item.htm">item</a> collection</td>
-	<td align="left"></td>
+	<td align="left">Enumerate changes made to a hierarchy of items.</td>
 </tr>
 <tr>
-	<td align="left"><a href="../api/item_invite.htm">Invite</a></td>
+	<td align="left"><a href="../api/item_invite.htm">invite</a></td>
 	<td align="left"><a href="permission.htm">permission</a> collection</td>
-	<td align="left"></td>
+	<td align="left">Invite users to access the item by adding permissions and sending them a notification.</td>
 </tr>
 <tr>
-	<td align="left"><a href="../api/item_search.htm">Search</a></td>
+	<td align="left"><a href="../api/item_search.htm">search</a></td>
 	<td align="left"><a href="item.htm">item</a> collection</td>
-	<td align="left"></td>
+	<td align="left">Search for items matching a query.</td>
 </tr>
 </tbody>
 </table>
@@ -400,6 +331,11 @@
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
+   
+</body>  
+</html>  
 
 
 

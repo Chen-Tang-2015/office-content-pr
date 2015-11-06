@@ -1,3 +1,14 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/GraphStyles/stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+</head>
+<body>
+
 <div id="holder">
 
 <!-- HTML Page Content Start -->
@@ -6,13 +17,13 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="image-resource-type">image resource type</h1>
+<p>The <strong>Image</strong> resource is available on items that represent a bitmap or image.</p>
 <h3 id="json-representation">JSON representation</h3>
 <p>Here is a JSON representation of the resource</p>
 <pre><code class="json">{
   &quot;height&quot;: 1024,
   &quot;width&quot;: 1024
 }
-
 </code></pre>
 
 <h3 id="properties">Properties</h3>
@@ -26,17 +37,20 @@
 </thead>
 <tbody>
 <tr>
-	<td align="left">height</td>
+	<td align="left"><strong>height</strong></td>
 	<td align="left">Int32</td>
-	<td align="left"></td>
+	<td align="left">Height of the image, in pixels.</td>
 </tr>
 <tr>
-	<td align="left">width</td>
+	<td align="left"><strong>width</strong></td>
 	<td align="left">Int32</td>
-	<td align="left"></td>
+	<td align="left">Width of the image, in pixels.</td>
 </tr>
 </tbody>
 </table>
+<h2 id="notes">Notes</h2>
+<p>In OneDrive for Business, this resource is returned on items that are expected to be images based on
+file extension. This resource returns no properties in OneDrive for Business.</p>
 
         </div>        
     </div>
@@ -45,6 +59,11 @@
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
+   
+</body>  
+</html>  
 
 
 

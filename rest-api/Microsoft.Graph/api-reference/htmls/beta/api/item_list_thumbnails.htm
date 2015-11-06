@@ -1,3 +1,14 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/GraphStyles/stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+</head>
+<body>
+
 <div id="holder">
 
 <!-- HTML Page Content Start -->
@@ -6,13 +17,24 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="list-thumbnails">List thumbnails</h1>
-<p>Retrieve a list of thumbnailset objects.</p>
-<h3 id="prerequisites">Prerequisites</h3>
-<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<p>Retrieve a list of ThumbnailSet resources.</p>
+<p>An item in a drive can be represented by zero or more <a href="resources/thumbnailset.htm">ThumbnailSet</a> objects.
+Each <strong>ThumbnailSet</strong> can have one or more <strong>Thumbnail</strong> objects, which are images that represent the item. For example, a <strong>ThumbnailSet</strong> may include <strong>Thumbnail</strong> objects, such as common ones including <code>small</code>, <code>medium</code>, or <code>large</code> and custom defined ones such as <code>c300x400_Crop</code>. Items have <strong>ThumbnailSet</strong> objects that are either generated automatically by OneDrive based off the item or that are defined by a custom uploaded image.</p>
+<p>There are many ways to work with thumbnails on OneDrive.
+Here are the most common ones:</p>
+<ul>
+<li>Enumerate available thumbnails for an item</li>
+<li>Retrieve a single thumbnail for an item</li>
+<li>Retrieve thumbnail content</li>
+<li>Retrieve thumbnails for multiple items in a single request</li>
+<li>Retrieve custom thumbnail sizes</li>
+<li>Upload a custom thumbnail for an item</li>
+<li>Determine if a custom uploaded thumbnail exists</li>
+</ul>
+<p>For more info about thumbnails, see <a href="https://dev.onedrive.com/items/thumbnails.htm" target="_blank">Thumbnails for an item on OneDrive</a>.</p>
 <h3 id="http-request">HTTP request</h3>
-<pre><code class="http">GET /drive/root/thumbnails
-GET /drive/items/&lt;id&gt;/thumbnails
-GET /drives/&lt;id&gt;/root/thumbnails
+<pre><code class="http">GET /drive/root:/{item-path}:/thumbnails
+GET /drive/items/{item-id}/thumbnails
 </code></pre>
 
 <h3 id="optional-query-parameters">Optional query parameters</h3>
@@ -26,61 +48,9 @@ GET /drives/&lt;id&gt;/root/thumbnails
 </thead>
 <tbody>
 <tr>
-	<td align="left">$count</td>
-	<td align="left">none</td>
-	<td align="left">The count of related entities can be requested by specifying the $count query option.</td>
-</tr>
-<tr>
-	<td align="left">$expand</td>
-	<td align="left">string</td>
-	<td align="left">Comma-separated list of relationships to expand and include in the response. See relationships table of <a href="../resources/thumbnailset.htm">thumbnailSet</a> for supported names.</td>
-</tr>
-<tr>
-	<td align="left">$filter</td>
-	<td align="left">string</td>
-	<td align="left">Filter string that lets you filter the response based on a set of criteria.</td>
-</tr>
-<tr>
-	<td align="left">$orderby</td>
-	<td align="left">string</td>
-	<td align="left">Comma-separated list of properties that are used to sort the order of items in the response collection.</td>
-</tr>
-<tr>
 	<td align="left">$select</td>
 	<td align="left">string</td>
 	<td align="left">Comma-separated list of properties to include in the response.</td>
-</tr>
-<tr>
-	<td align="left">$skip</td>
-	<td align="left">int</td>
-	<td align="left">The number of items to skip in a result set.</td>
-</tr>
-<tr>
-	<td align="left">$skipToken</td>
-	<td align="left">string</td>
-	<td align="left">Paging token that is used to get the next set of results.</td>
-</tr>
-<tr>
-	<td align="left">$top</td>
-	<td align="left">int</td>
-	<td align="left">The number of items to return in a result set.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="request-headers">Request headers</h3>
-<table>
-<thead>
-<tr>
-	<th align="left">Name</th>
-	<th align="left">Type</th>
-	<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-	<td align="left">X-Sample-Header</td>
-	<td align="left">string</td>
-	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
 </tr>
 </tbody>
 </table>
@@ -91,48 +61,289 @@ GET /drives/&lt;id&gt;/root/thumbnails
 <h3 id="example">Example</h3>
 <h5 id="request">Request</h5>
 <p>Here is an example of the request.</p>
-<pre><code class="http">GET https://graph.microsoft.com/beta/drive/root/thumbnails
+<pre><code class="http">GET /drive/root:/{item-path}:/thumbnails
 </code></pre>
 
 <h5 id="response-1">Response</h5>
 <p>Here is an example of the response.</p>
 <pre><code class="http">HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 585
 
 {
   &quot;value&quot;: [
     {
-      &quot;id&quot;: &quot;id-value&quot;,
-      &quot;large&quot;: {
-        &quot;content&quot;: &quot;content-value&quot;,
-        &quot;height&quot;: 99,
-        &quot;url&quot;: &quot;url-value&quot;,
-        &quot;width&quot;: 99
-      },
-      &quot;medium&quot;: {
-        &quot;content&quot;: &quot;content-value&quot;,
-        &quot;height&quot;: 99,
-        &quot;url&quot;: &quot;url-value&quot;,
-        &quot;width&quot;: 99
-      },
-      &quot;small&quot;: {
-        &quot;content&quot;: &quot;content-value&quot;,
-        &quot;height&quot;: 99,
-        &quot;url&quot;: &quot;url-value&quot;,
-        &quot;width&quot;: 99
-      },
-      &quot;source&quot;: {
-        &quot;content&quot;: &quot;content-value&quot;,
-        &quot;height&quot;: 99,
-        &quot;url&quot;: &quot;url-value&quot;,
-        &quot;width&quot;: 99
-      }
+      &quot;id&quot;: &quot;0&quot;,
+      &quot;small&quot;: { &quot;height&quot;: 64, &quot;width&quot;: 96, &quot;url&quot;: &quot;https://sn3302files...&quot;},
+      &quot;medium&quot;: { &quot;height&quot;: 117, &quot;width&quot;: 176, &quot;url&quot;: &quot;https://sn3302files...&quot;},
+      &quot;large&quot;: { &quot;height&quot;: 533, &quot;width&quot;: 800, &quot;url&quot;: &quot;https://sn3302files...&quot;}
     }
   ]
 }
 </code></pre>
 
+<h2 id="retrieve-a-single-thumbnail">Retrieve a single thumbnail</h2>
+<p>Retrieve the metadata for a single thumbnail and size by addressing
+it directly in a request.</p>
+<h3 id="http-request-1">HTTP request</h3>
+<pre><code class="http">GET /drive/items/{item-id}/thumbnails/{thumb-id}/{size}
+</code></pre>
+
+<h3 id="path-parameters">Path parameters</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Name</th>
+	<th align="left">Type</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><em>item-id</em></td>
+	<td align="left">string</td>
+	<td align="left">The unique identifier for the item referenced.</td>
+</tr>
+<tr>
+	<td align="left"><em>thumb-id</em></td>
+	<td align="left">number</td>
+	<td align="left">The index of the thumbnail, usually 0-4. If there is a custom thumbnail, its index is 0.</td>
+</tr>
+<tr>
+	<td align="left"><em>size</em></td>
+	<td align="left">string</td>
+	<td align="left">The size of the thumbnail requested. This can be one of the standard sizes listed below.</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="http">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  &quot;width&quot;: 100,
+  &quot;height&quot;: 100,
+  &quot;url&quot;: &quot;http://onedrive.com/asd123a/asdjlkasjdkasdjlk.jpg&quot;
+}
+</code></pre>
+
+<h2 id="retrieve-thumbnail-content">Retrieve thumbnail content</h2>
+<p>You can directly retrieve the content of the thumbnail by requesting the
+<strong>content</strong> property of the thumbnail.</p>
+<h3 id="http-request-2">HTTP request</h3>
+<pre><code class="http">GET /drive/items/{item-id}/thumbnails/{thumb-id}/{size}/content
+</code></pre>
+
+<h3 id="response-2">Response</h3>
+<p>The service responds with a redirect to the thumbnail URL.</p>
+<pre><code class="http">HTTP/1.1 302 Found
+Location: https://b0mpua-by3301.files.1drv.com/y23vmagahszhxzlcvhasdhasghasodfi
+</code></pre>
+
+<p>Thumbnail URLs are cache-safe. The URL will change, if the item
+changes in a way that requires a new thumbnail to be generated.</p>
+<h2 id="getting-multiple-thumbnails">Getting multiple thumbnails</h2>
+<p>To display multiple thumbnails, such as rendering
+photo thumbnails for a collection of images, you can optimize your API calls
+by requesting those thumbnail URLs in one request. This will optimize the performance
+of your application and reduce the number of API calls your app makes.</p>
+<p>When retrieving a collection of items, expand the thumbnails collection to also
+get the thumbnail URLs for those items.</p>
+<h3 id="http-request-3">HTTP request</h3>
+<p>This request returns the <strong>id</strong> and <strong>name</strong> property for each item, along with a
+the <strong>large</strong> thumbnail size for any item that has a thumbnail available.</p>
+<pre><code class="http">GET /drive/items/{item-id}/children?select=id,name&amp;expand=thumbnails(select=large)
+</code></pre>
+
+<h3 id="response-3">Response</h3>
+<p>In addition to the normal enumeration of an item's children, this request also
+returns thumbnail metadata for the large thumbnails on all items where a thumbnail
+is available.</p>
+<pre><code class="http">HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  &quot;value&quot;: [
+    {
+      &quot;id&quot;: &quot;12903019809a!109bac&quot;,
+      &quot;name&quot;: &quot;DSCN1234.JPG&quot;,
+      &quot;thumbnails&quot;: [
+        {
+          &quot;id&quot;: &quot;0&quot;,
+          &quot;large&quot;: {
+            &quot;width&quot;: 800,
+            &quot;height&quot;: 533,
+            &quot;url&quot;: &quot;https://bn2_0095.livefilestore.com/ASpofswjras9uflkhg/image.jpg&quot;
+          }
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;12903019809a!109bae&quot;,
+      &quot;name&quot;: &quot;DSCN1235.JPG&quot;,
+      &quot;thumbnails&quot;: [
+        {
+          &quot;id&quot;: &quot;0&quot;,
+          &quot;large&quot;: {
+            &quot;width&quot;: 800,
+            &quot;height&quot;: 533,
+            &quot;url&quot;: &quot;https://bn2_0095.livefilestore.com/ASpofswjras9uflkhg/image.jpg&quot;
+          }
+        }
+      ]
+    }
+  ]
+}
+</code></pre>
+
+<h3 id="size-values">Size values</h3>
+<p>This table defines the possible thumbnail sizes. While you can
+request any arbitrary thumbnail size, the defined values are likely to exist and
+return a value quickly:</p>
+<table>
+<thead>
+<tr>
+	<th align="left">Name</th>
+	<th align="left">Resolution</th>
+	<th align="left">Aspect Ratio</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left"><code>small</code></td>
+	<td align="left">96 longest</td>
+	<td align="left">Original</td>
+	<td align="left">Small, highly compressed thumbnail cropped to a square aspect ratio.</td>
+</tr>
+<tr>
+	<td align="left"><code>medium</code></td>
+	<td align="left">176 longest</td>
+	<td align="left">Original</td>
+	<td align="left">Cropped to the standard item size for the OneDrive web view.</td>
+</tr>
+<tr>
+	<td align="left"><code>large</code></td>
+	<td align="left">800 longest</td>
+	<td align="left">Original</td>
+	<td align="left">Thumbnail with the longest edge resized to 800 pixels.</td>
+</tr>
+<tr>
+	<td align="left"><code>smallSquare</code></td>
+	<td align="left">96x96</td>
+	<td align="left">Square Crop</td>
+	<td align="left">Small square thumbnail</td>
+</tr>
+<tr>
+	<td align="left"><code>mediumSquare</code></td>
+	<td align="left">176x176</td>
+	<td align="left">Square Crop</td>
+	<td align="left">Small square thumbnail</td>
+</tr>
+<tr>
+	<td align="left"><code>largeSquare</code></td>
+	<td align="left">800x800</td>
+	<td align="left">Square Crop</td>
+	<td align="left">Large square thumbnail</td>
+</tr>
+</tbody>
+</table>
+<h2 id="custom-thumbnail-sizes">Custom thumbnail sizes</h2>
+<p>In addition to the defined sizes, your app can request a custom thumbnail size
+by specifying the dimensions of the thumbnail prefixed with <code>c</code>. For example
+if you need thumbnails that are 300x400, you can request that size like this:</p>
+<pre><code class="http">GET /drive/items/{item-id}/thumbnails?select=c300x400_Crop
+</code></pre>
+
+<p>You can specify the following options after the size of the thumbnail requested:</p>
+<h4 id="examples-of-custom-identifiers">Examples of custom identifiers</h4>
+<table>
+<thead>
+<tr>
+	<th align="left">Thumbnail identifier</th>
+	<th align="left">Resolution</th>
+	<th align="left">Aspect ratio</th>
+	<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">c300x400</td>
+	<td align="left">Bounded by 300x400 box</td>
+	<td align="left">Original</td>
+	<td align="left">Generate a thumbnail that fits inside a 300x400 pixel box, maintaining aspect ratio</td>
+</tr>
+<tr>
+	<td align="left">c300x400_Crop</td>
+	<td align="left">300x400</td>
+	<td align="left">Cropped</td>
+	<td align="left">Generate a thumbnail that is 300x400 pixels. This works by resizing the image to fill the 300x400 box and cropping whatever spills outside the box.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="upload-a-custom-thumbnail-on-an-item">Upload a custom thumbnail on an item</h2>
+<p>This request allows your app to upload a custom thumbnail, which persists with the file
+even if the file's contents is updated, to any item that has the <code>file</code> facet.   If a
+custom uploaded thumbnail is already set, then this request will overwrite that existing
+custom uploaded thumbnail.</p>
+<h3 id="http-request-4">HTTP request</h3>
+<pre><code>PUT /drive/items/{item-id}/thumbnails/0/source/content
+Content-Type: image/jpeg
+
+The contents of the image goes here.
+</code></pre>
+
+<h3 id="response-4">Response</h3>
+<pre><code class="http">HTTP/1.1 200 OK
+</code></pre>
+
+<p>If successful, this call returns a <code>200 OK</code> response to indicate that custom thumbnail was
+upload successfully. In the response, the <code>Content-Location</code> and the <code>Location</code> response
+header will return the URL to that custom thumbnail.</p>
+<h2 id="determine-if-a-custom-uploaded-thumbnail-exists">Determine if a custom uploaded thumbnail exists</h2>
+<p>To determine if a custom uploaded thumbnail exists on a file, look for the <code>source</code> property
+on the thumbnail set. If it has a value, then the value represents the custom uploaded
+thumbnail. If it is not present, then no custom uploaded thumbnail exists.</p>
+<pre><code>GET /drive/items/{item-id}/?expand=thumbnails(select=id,large,medium,small,source)
+</code></pre>
+
+<h3 id="response-5">Response</h3>
+<pre><code class="http">HTTP/1.1 200 OK
+
+{
+   &quot;thumbnails&quot;:[
+      {
+         &quot;id&quot;:&quot;0&quot;,
+         &quot;large&quot;:{
+            &quot;height&quot;:800,
+            &quot;url&quot;:&quot;https://dhbkba-sn3302.files.1drv.com/y2mfq7dB...IlE9xeFMPb0jZMt7SI&quot;,
+            &quot;width&quot;:753
+         },
+         &quot;medium&quot;:{
+            &quot;height&quot;:176,
+            &quot;url&quot;:&quot;https://dhbkba-sn3302.files.1drv.com/y2m...Gx3-VnOqMmoW4l15cjX9ADw&quot;,
+            &quot;width&quot;:166
+         },
+         &quot;small&quot;:{
+            &quot;height&quot;:96,
+            &quot;url&quot;:&quot;https://dhbkba-sn3302.files.1drv.com/y2m2T1...SLCIKpScctlzybSdNXxE&quot;,
+            &quot;width&quot;:90
+         },
+         &quot;source&quot;:{
+            &quot;height&quot;:500,
+            &quot;url&quot;:&quot;https://dhbkba-sn3302.files.1drv.com/y2m2T1...89mxla9x7OeLhMdbIteg&quot;,
+            &quot;width&quot;:500
+         }
+      }
+   ]
+}
+</code></pre>
+
+<p><strong>Note:</strong> </p>
+<ul>
+<li>Custom thumbnails are not available.</li>
+<li>Using these calls to expand the thumbnails collection will not work:</li>
+</ul>
+<p><code>GET /drive/root:/{item-path}?expand=children(expand=thumbnails)</code></p>
+<p><code>GET /drive/items/{item-id}/children?expand=thumbnails</code></p>
 
         </div>        
     </div>
@@ -141,6 +352,11 @@ Content-length: 585
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
+   
+</body>  
+</html>  
 
 
 

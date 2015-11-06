@@ -1,3 +1,14 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/GraphStyles/stylesheet.css" />
+  <link rel="shortcut icon" href="https://p.sfx.ms/about/v20/non-localizable/img/chrome/favicon.ico" />
+</head>
+<body>
+
 <div id="holder">
 
 <!-- HTML Page Content Start -->
@@ -27,7 +38,7 @@
 <p>To get your app authorized, you must get the user authenticated first. You do this by redirecting the user to the Azure Active Directory (Azure AD) authorization endpoint, along with your app information, to sign in to their Office 365 account. Once the user is signed in, and consents to 
 the permissions requested by your app (if the user has not done so already), your app will receive an authorization code required to acquire an OAuth access token.</p>
 <blockquote>
-<p>Note:  You can do this by calling methods on the <a href="https://msdn.microsoft.com/en-us/library/azure/jj573266.aspx" target="_blank">Azure AD Authentication Library (ADAL)</a>. For more information about authorization flow, see <a href="https://msdn.microsoft.com/en-us/library/azure/dn645542.aspx" target="_blank">Authorization Code Grant Flow</a></p>
+<p>Note:  You can do this by calling methods on the <a href="https://msdn.microsoft.com/en-us/library/azure/jj573266.aspx" target="_blank">Azure AD Authentication Library (ADAL)</a>. For more information about authorization flow, see <a href="https://msdn.microsoft.com/en-us/library/azure/dn645542.aspx" target="_blank">Authorization Code Grant Flow</a>.</p>
 </blockquote>
 <p>Authorizing an app starts with submitting an HTTPS GET request using the following URL:</p>
 <p><code>GET https://login.microsoftonline.com/common/oauth2/authorize?response_type=code&amp;redirect_uri=&lt;uri&gt;&amp;client_id=&lt;id&gt;&amp;resource=https%3A%2F%2Fgraph.microsoft.com%2F</code></p>
@@ -295,6 +306,11 @@ Instead, you must restart the <a href="#msg_get_app_authorized">app authorizatio
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>  
+   
+</body>  
+</html>  
 
 
 
