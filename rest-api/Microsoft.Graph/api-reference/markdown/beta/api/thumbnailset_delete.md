@@ -1,8 +1,14 @@
-# Delete thumbnailSet
+# Delete a thumbnail
 
-Delete thumbnailSet.
+Delete a thumbnailSet.
+
+For more info, see [ThumbnailSet](thumbnailset.md).
+
 ### Prerequisites
 The following **scopes** are required to execute this API: 
+
+  * onedrive.readwrite
+ 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
@@ -11,10 +17,6 @@ DELETE /drive/items/<id>/thumbnails/<id>
 DELETE /drives/<id>/root/thumbnails/<id>
 
 ```
-### Request headers
-| Name       | Type | Description|
-|:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 Do not supply a request body for this method.

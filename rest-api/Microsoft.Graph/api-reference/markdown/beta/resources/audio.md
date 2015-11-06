@@ -1,6 +1,6 @@
-# audio resource type
+# Audio resource type
 
-The **audio** resource groups audio-related data on an item into a single structure.
+The **Audio** resource groups audio-related data on an item into a single structure.
 
 ### JSON representation
 
