@@ -1,6 +1,6 @@
 # quota resource type
 
-
+The quota resource provides details about drive quota.
 
 ### JSON representation
 
@@ -18,20 +18,20 @@ Here is a JSON representation of the resource
 {
   "deleted": 1024,
   "remaining": 1024,
-  "state": "String-value",
+  "state": "normal | nearing | critical | exceeded",
   "total": 1024,
   "used": 1024
 }
-
 ```
+
 ### Properties
-| Property	   | Type	|Description|
-|:---------------|:--------|:----------|
-|deleted|Int64||
-|remaining|Int64||
-|state|String||
-|total|Int64||
-|used|Int64||
+| Property  | Type   | Description                                                      |
+|:----------|:-------|:-----------------------------------------------------------------|
+| deleted   | Int64  | Total space consumed by files in the recycle bin, in bytes.      |
+| remaining | Int64  | Total space remaining before reaching the quota limit, in bytes. |
+| state     | String | Enumeration value that indicates the state of the storage space. |
+| total     | Int64  | Total allowed storage space, in bytes.                           |
+| used      | Int64  | Total space used, in bytes.                                      |
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

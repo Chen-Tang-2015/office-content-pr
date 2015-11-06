@@ -1,43 +1,58 @@
-# item: createLink
+# Create a sharing link for an Item
 
+You can use the **createLink** action to share an existing item via a link. This is
+a friendly shortcut for creating common sharing links.
+
+The **createLink** method will create a new sharing link if the specified
+link type doesn't already exist. If a sharing link of the specified type already
+exists for the app, the existing sharing link will be returned.
+
+For more info about sharing links, see [Create a sharing link for an item in OneDrive](https://dev.onedrive.com/items/sharing_createLink.htm).
 
 ### Prerequisites
 The following **scopes** are required to execute this API: 
-### HTTP request
+
+  * onedrive.readwrite
+
+## HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /drive/root/createLink
-POST /drive/items/<id>/createLink
-POST /drives/<id>/root/createLink
-
+POST /drive/items/{item-id}/action.createLink
+POST /drive/root:/{item-path}:/action.createLink
 ```
-### Request headers
-| Name       | Type | Description|
-|:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
-In the request body, provide a JSON object with the following parameters.
+In the request body, you define the type of sharing link. A `view` link allows the user to view the item, and an `edit` link allows the user to edit the item. 
 
-| Parameter	   | Type	|Description|
-|:---------------|:--------|:----------|
-|type|String||
+| Name   | Type   | Description                                                          |
+|:-------|:-------|:---------------------------------------------------------------------|
+| _type_ | String | The type of link to create. Possible values are `view` or `edit`. |
 
 ### Response
-If successful, this method returns `200, OK` response code and [permission](../resources/permission.md) object in the response body.
+
+If successful, this method returns a single [Permission](.resources/permission.md)
+resource in the response body that represents the requested sharing link permission.
+
+The service will first look at the current permissions and check
+if one already exists that has the same _type_ for the
+calling application.
+
+The response will be `201 Created` if a new sharing link is created for the
+item or  `200 OK` if an existing link is returned.
 
 ### Example
 Here is an example of how to call this API.
+
 ##### Request
 Here is an example of the request.
+
 <!-- {
   "blockType": "request",
   "name": "item_createlink"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/drive/root/createLink
+POST /drive/root:/{item-path}:/createLink
 Content-type: application/json
-Content-length: 26
 
 {
   "type": "type-value"
@@ -46,56 +61,36 @@ Content-length: 26
 
 ##### Response
 Here is an example of the response.
+
 <!-- {
   "blockType": "response",
   "truncated": false,
   "@odata.type": "microsoft.graph.permission"
 } -->
 ```http
-HTTP/1.1 200 OK
-Content-type: application/json
-Content-length: 762
+HTTP/1.1 201 Created
+Content-Type: application/json
 
 {
-  "grantedTo": {
-    "application": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    },
-    "device": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    },
-    "user": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    }
-  },
-  "id": "id-value",
-  "invitation": {
-    "email": "email-value",
-    "redeemedBy": "redeemedBy-value",
-    "signInRequired": true
-  },
-  "inheritedFrom": {
-    "driveId": "driveId-value",
-    "id": "id-value",
-    "path": "path-value"
-  },
+  "id": "123ABC",
+  "roles": ["write"],
   "link": {
+    "type": "view",
+    "webUrl": "https://onedrive.live.com/redir?resid=5D33DD65C6932946!70859&authkey=!AL7N1QAfSWcjNU8&ithint=folder%2cgif",
     "application": {
-      "displayName": "displayName-value",
-      "id": "id-value"
-    },
-    "type": "type-value",
-    "webUrl": "webUrl-value"
-  },
-  "roles": [
-    "roles-value"
-  ],
-  "shareId": "shareId-value"
+      "id": "1234",
+      "displayName": "Sample Application"
+    }
+  }
 }
+
 ```
+
+### Notes
+Sharing links created using this action do not expire. They are visible in the
+sharing permissions for the item on the OneDrive website and can be removed by
+an owner of the item. Sharing links always point to the "current" version of a
+item.
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->
@@ -105,4 +100,4 @@ Content-length: 762
   "keywords": "",
   "section": "documentation",
   "tocPath": ""
-}-->
+} -->

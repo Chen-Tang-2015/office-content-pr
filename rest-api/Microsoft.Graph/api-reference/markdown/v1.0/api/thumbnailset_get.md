@@ -1,8 +1,14 @@
 # Get thumbnailSet
 
-Retrieve the properties and relationships of thumbnailset object.
+Retrieve the properties and relationships of a [ThumbnailSet](../resources/thumbnailset.md) object.
+
+For more info, see [List thumbnails](item_list_thumbnails.md).
+
 ### Prerequisites
 The following **scopes** are required to execute this API: 
+
+  * onedrive.readonly
+ 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
@@ -17,11 +23,6 @@ GET /drives/<id>/root/thumbnails/<id>
 |$expand|string|Comma-separated list of relationships to expand and include in the response. See relationships table of [thumbnailSet](../resources/thumbnailset.md) object for supported names. |
 |$select|string|Comma-separated list of properties to include in the response.|
 
-### Request headers
-| Name       | Type | Description|
-|:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
-
 ### Request body
 Do not supply a request body for this method.
 ### Response
@@ -34,7 +35,7 @@ Here is an example of the request.
   "name": "get_thumbnailset"
 }-->
 ```http
-GET https://graph.microsoft.com/v1.0/drive/root/thumbnails/<id>
+GET https://graph.microsoft.com/beta/drive/root/thumbnails/<id>
 ```
 ##### Response
 Here is an example of the response.

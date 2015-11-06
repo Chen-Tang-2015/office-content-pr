@@ -1,8 +1,13 @@
 # Update thumbnailset
 
 Update the properties of thumbnailset object.
+
+For more info, see [ThumbnailSet](thumbnailset.md).
 ### Prerequisites
 The following **scopes** are required to execute this API: 
+
+  * onedrive.readwrite
+ 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
@@ -10,10 +15,6 @@ PATCH /drive/root/thumbnails/<id>
 PATCH /drive/items/<id>/thumbnails/<id>
 PATCH /drives/<id>/root/thumbnails/<id>
 ```
-### Optional request headers
-| Name       | Type | Description|
-|:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
 
 ### Request body
 In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance you shouldn't include existing values that haven't changed.
@@ -35,7 +36,7 @@ Here is an example of the request.
   "name": "update_thumbnailset"
 }-->
 ```http
-PATCH https://graph.microsoft.com/v1.0/drive/root/thumbnails/<id>
+PATCH https://graph.microsoft.com/beta/drive/root/thumbnails/<id>
 Content-type: application/json
 Content-length: 456
 

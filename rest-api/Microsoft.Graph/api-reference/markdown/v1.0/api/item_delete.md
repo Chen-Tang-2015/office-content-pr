@@ -1,44 +1,50 @@
-# Delete item
+# Delete an Item
 
-Delete item.
+Deletes an Item by using its ID or path. Note that deleting items using this method
+will move the items to the Recycle Bin, instead of permanently deleting them.
+
+For more info about deleting items in OneDrive, see [Delete an Item in OneDrive](https://dev.onedrive.com/items/delete.htm).
+
 ### Prerequisites
 The following **scopes** are required to execute this API: 
-### HTTP request
-<!-- { "blockType": "ignored" } -->
-```http
-DELETE /drive/root
-DELETE /drive/items/<id>
-DELETE /drives/<id>/root
 
+  * onedrive.readwrite
+  
+### HTTP request
+
+## HTTP request
+
+<!-- { "blockType": "ignored" } -->
 ```
+DELETE /drive/items/{item-id}
+DELETE /drive/root:/{item-path}
+```
+
 ### Request headers
-| Name       | Type | Description|
-|:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+
+| Name       | Type  | Description                                                                                                                                                                                       |
+|:-----------|:------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| if-match | String  | If this request header is included and the eTag (or cTag) provided does not match the current tag on the item, a `412 Precondition Failed` response is returned and the item will not be deleted. |
 
 ### Request body
 Do not supply a request body for this method.
 
 
-### Response
-If successful, this method returns `204, No Content` response code. It does not return anything in the response body.
-
 ### Example
-##### Request
-Here is an example of the request.
 <!-- {
   "blockType": "request",
-  "name": "delete_item"
+  "name": "delete-item"
 }-->
-```http
-DELETE https://graph.microsoft.com/v1.0/drive/root
 ```
+DELETE /drive/items/{item-id}
+```
+
 ##### Response
-Here is an example of the response.
-<!-- {
-  "blockType": "response",
-  "truncated": false
-} -->
+
+If successful, this call returns a `204 No Content` response to indicate that
+resource was deleted and there was nothing to return.
+
+<!-- { "blockType": "response" } -->
 ```http
 HTTP/1.1 204 No Content
 ```

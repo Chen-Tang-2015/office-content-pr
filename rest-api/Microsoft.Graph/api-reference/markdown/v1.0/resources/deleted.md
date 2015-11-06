@@ -1,6 +1,8 @@
-# deleted resource type
+# Deleted resource type
 
-
+The **Deleted** resource indicates that the item has been deleted. In this version
+of the API, the presence (non-null) of the facet value indicates that the file was
+deleted. A null (or missing) value indicates that the file is not deleted.
 
 ### JSON representation
 
@@ -9,14 +11,13 @@ Here is a JSON representation of the resource
 <!-- {
   "blockType": "resource",
   "optionalProperties": [
-
+	"state"
   ],
   "@odata.type": "microsoft.graph.deleted"
 }-->
-
 ```json
 {
-  "state": "String-value"
+  "state": "string"
 }
 
 ```
