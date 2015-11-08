@@ -153,7 +153,10 @@
 		<Item text="Create DirectoryRoleTemplate" url="api-reference/beta/api/directoryroletemplate_post_directoryroletemplates" SEOKeyword="Create DirectoryRoleTemplate, Microsoft Graph API, directoryroletemplate API" SEODescritpion="Use this API to create a new DirectoryRoleTemplate."></Item>
 		<Item text="Update directoryroletemplate" url="api-reference/beta/api/directoryroletemplate_update" SEOKeyword="Update directoryroletemplate, Microsoft Graph API, directoryroletemplate API" SEODescritpion="Update the properties of directoryroletemplate object."></Item>
 	</Item>
-	<Item text="drive API" url="api-reference/beta/resources/drive" SEOKeyword="drive API, Microsoft Graph API, drive API" SEODescritpion="The drive resource represents a OneDrive or a Document Library in SharePoint.It provides information about the owner of the drive, total and availablestorage space, and exposes a collection of all the items contained within the drive.">
+	<Item text="drive API" url="api-reference/beta/resources/drive" SEOKeyword="drive API, Microsoft Graph API, drive API" SEODescritpion="The drive resource represents a OneDrive or a Document Library in SharePoint.
+
+It provides information about the owner of the drive, total and available
+storage space, and exposes a collection of all the items contained within the drive.">
 		<Item text="drive: allPhotos" url="api-reference/beta/api/drive_allphotos" SEOKeyword="drive: allPhotos, Microsoft Graph API, drive API" SEODescritpion=""></Item>
 		<Item text="Get drive" url="api-reference/beta/api/drive_get" SEOKeyword="Get drive, Microsoft Graph API, drive API" SEODescritpion="Retrieve the properties and relationships of drive object."></Item>
 		<Item text="List drives" url="api-reference/beta/api/drive_list" SEOKeyword="List drives, Microsoft Graph API, drive API" SEODescritpion="Retrieve a list of drive objects."></Item>
@@ -270,7 +273,13 @@
 		<Item text="Get inferenceClassificationOverride" url="api-reference/beta/api/inferenceclassificationoverride_get" SEOKeyword="Get inferenceClassificationOverride, Microsoft Graph API, inferenceclassificationoverride API" SEODescritpion="Retrieve the properties and relationships of inferenceclassificationoverride object."></Item>
 		<Item text="Update inferenceclassificationoverride" url="api-reference/beta/api/inferenceclassificationoverride_update" SEOKeyword="Update inferenceclassificationoverride, Microsoft Graph API, inferenceclassificationoverride API" SEODescritpion="Update the properties of inferenceclassificationoverride object."></Item>
 	</Item>
-	<Item text="item API" url="api-reference/beta/resources/item" SEOKeyword="item API, Microsoft Graph API, item API" SEODescritpion="The item resource represents an item contained in a drive, like a file orfolder. The properties of the item provide information about the type of itemrepresented.For example, if an item behaves as a Folder(folder.md), it will have the`Folder` property set to an instance of the Folder facet that contains detailsabout the folder.">
+	<Item text="item API" url="api-reference/beta/resources/item" SEOKeyword="item API, Microsoft Graph API, item API" SEODescritpion="The item resource represents an item contained in a drive, like a file or
+folder. The properties of the item provide information about the type of item
+represented.
+
+For example, if an item behaves as a Folder(folder.md), it will have the
+`Folder` property set to an instance of the Folder facet that contains details
+about the folder.">
 		<Item text="HTTP request" url="api-reference/beta/api/item_copy" SEOKeyword="HTTP request, Microsoft Graph API, item API" SEODescritpion=""></Item>
 		<Item text="Create a sharing link for an Item" url="api-reference/beta/api/item_createlink" SEOKeyword="Create a sharing link for an Item, Microsoft Graph API, item API" SEODescritpion=""></Item>
 		<Item text="item: createSession" url="api-reference/beta/api/item_createsession" SEOKeyword="item: createSession, Microsoft Graph API, item API" SEODescritpion=""></Item>
@@ -330,7 +339,7 @@
 		<Item text="Create section" url="api-reference/beta/api/notebook_post_sections" SEOKeyword="Create section, Microsoft Graph API, notebook API" SEODescritpion="Create a new section(../resources/section.md) in the specified notebook."></Item>
 		<Item text="Update notebook" url="api-reference/beta/api/notebook_update" SEOKeyword="Update notebook, Microsoft Graph API, notebook API" SEODescritpion="Update the properties of notebook object."></Item>
 	</Item>
-	<Item text="notes API" url="api-reference/beta/resources/notes" SEOKeyword="notes API, Microsoft Graph API, notes API" SEODescritpion="<!--">
+	<Item text="notes API" url="api-reference/beta/resources/notes" SEOKeyword="notes API, Microsoft Graph API, notes API" SEODescritpion="">
 		<Item text="Delete notes" url="api-reference/beta/api/notes_delete" SEOKeyword="Delete notes, Microsoft Graph API, notes API" SEODescritpion="Delete notes."></Item>
 		<Item text="Get notes" url="api-reference/beta/api/notes_get" SEOKeyword="Get notes, Microsoft Graph API, notes API" SEODescritpion="Retrieve the properties and relationships of notes object."></Item>
 		<Item text="List notebooks" url="api-reference/beta/api/notes_list_notebooks" SEOKeyword="List notebooks, Microsoft Graph API, notes API" SEODescritpion="Retrieve a list of notebook(../resources/notebook.md) objects."></Item>
@@ -536,7 +545,8 @@
 		<Item text="Create TenantDetail" url="api-reference/beta/api/tenantdetail_post_tenantdetails" SEOKeyword="Create TenantDetail, Microsoft Graph API, tenantdetail API" SEODescritpion="Use this API to create a new TenantDetail."></Item>
 		<Item text="Update tenantdetail" url="api-reference/beta/api/tenantdetail_update" SEOKeyword="Update tenantdetail, Microsoft Graph API, tenantdetail API" SEODescritpion="Update the properties of tenantdetail object."></Item>
 	</Item>
-	<Item text="thumbnailset API" url="api-reference/beta/resources/thumbnailset" SEOKeyword="thumbnailset API, Microsoft Graph API, thumbnailset API" SEODescritpion="The ThumbnailSet type is a keyed collection of Thumbnail(thumbnail.md) objects. It is used to represent a set of thumbnails associated with a single file on OneDrive.">
+	<Item text="thumbnailset API" url="api-reference/beta/resources/thumbnailset" SEOKeyword="thumbnailset API, Microsoft Graph API, thumbnailset API" SEODescritpion="The ThumbnailSet type is a keyed collection of Thumbnail(thumbnail.md) objects.
+ It is used to represent a set of thumbnails associated with a single file on OneDrive.">
 		<Item text="Delete a thumbnail" url="api-reference/beta/api/thumbnailset_delete" SEOKeyword="Delete a thumbnail, Microsoft Graph API, thumbnailset API" SEODescritpion=""></Item>
 		<Item text="Get thumbnailSet" url="api-reference/beta/api/thumbnailset_get" SEOKeyword="Get thumbnailSet, Microsoft Graph API, thumbnailset API" SEODescritpion=""></Item>
 		<Item text="Update thumbnailset" url="api-reference/beta/api/thumbnailset_update" SEOKeyword="Update thumbnailset, Microsoft Graph API, thumbnailset API" SEODescritpion="For more info, see ThumbnailSet(thumbnailset.md)."></Item>
@@ -602,3 +612,5 @@
 		<Item text="Update user" url="api-reference/beta/api/user_update" SEOKeyword="Update user, Microsoft Graph API, user API" SEODescritpion="Update the properties of user object."></Item>
 	</Item>
 </Item>
+
+
