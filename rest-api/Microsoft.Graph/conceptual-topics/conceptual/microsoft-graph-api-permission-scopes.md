@@ -52,8 +52,8 @@ The following tables list the Microsoft Graph API permission scopes and explains
 | _Mail.Read_ |    `Read user mail` | Allows the app to read email in user mailboxes. |
 | _Mail.ReadWrite_ |    `Read and write access to user mail` | Allows the app to create, read, update, and delete email in user mailboxes. Does not include permission to send mail. |
 | _Mail.Send_ |    `Send mail as a user` | Allows the app to send mail as users in the organization. |
-| _Calendar.Read_ |    `Read user calendars`  | Allows the app to read events in user calendars . |
-| _Calendar.ReadWrite_ |    `Have full access to user calendars`  | Allows the app to create, read, update, and delete events in user calendars. 
+| _Calendars.Read_ |    `Read user calendars`  | Allows the app to read events in user calendars . |
+| _Calendars.ReadWrite_ |    `Have full access to user calendars`  | Allows the app to create, read, update, and delete events in user calendars. 
 | _Files.Read_ |    `Read users' files` | Allows the application to read the current user's files
 | _Files.ReadWrite_ |   `Edit or delete users' files`             | Allows the app to edit or delete the current user's files. |
 | _Sites.Read.All_ |    `Read items in all site collections` | Allows the application to read documents and list  items in all site collections on behalf of the signed-in user |
