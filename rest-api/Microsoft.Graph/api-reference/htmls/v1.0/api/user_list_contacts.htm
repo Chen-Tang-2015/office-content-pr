@@ -20,7 +20,7 @@
 <p>Get the user's personal contacts</p>
 <h3 id="prerequisites">Prerequisites</h3>
 <p>One of the following <strong>scopes</strong> is required to execute this API: 
-Contacts.Read; Contacts.ReadWrite</p>
+<em>Contacts.Read; Contacts.ReadWrite</em></p>
 <h3 id="http-request">HTTP request</h3>
 <pre><code class="http">GET /users/&lt;objectId&gt;/contacts
 
@@ -82,16 +82,14 @@ Contacts.Read; Contacts.ReadWrite</p>
 <table>
 <thead>
 <tr>
-	<th align="left">Name</th>
-	<th align="left">Type</th>
-	<th align="left">Description</th>
+	<th align="left">Header</th>
+	<th align="left">Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-	<td align="left">X-Sample-Header</td>
-	<td align="left">string</td>
-	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
+	<td align="left">Authorization</td>
+	<td align="left">Bearer %token%</td>
 </tr>
 </tbody>
 </table>
@@ -109,7 +107,6 @@ Contacts.Read; Contacts.ReadWrite</p>
 <p>Here is an example of the response.</p>
 <pre><code class="http">HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 2290
 
 {
   &quot;value&quot;: [

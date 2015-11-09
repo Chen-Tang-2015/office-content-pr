@@ -20,10 +20,9 @@
 <p>Use this API to create a draft of a new message. Drafts can be created in any folder and optionally updated before sending. To save to the Drafts folder, use the /messages shortcut.</p>
 <h3 id="prerequisites">Prerequisites</h3>
 <p>One of the following <strong>scopes</strong> is required to execute this API: 
-Mail.ReadWrite</p>
+<em>Mail.ReadWrite</em></p>
 <h3 id="http-request">HTTP request</h3>
 <pre><code class="http">POST /users/&lt;objectId&gt;/messages
-
 </code></pre>
 
 <h3 id="request-headers">Request headers</h3>
@@ -77,7 +76,6 @@ Content-type: application/json
 <p>Here is an example of the response.</p>
 <pre><code class="http">HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 1546
 
 {
     &quot;id&quot;: &quot;id-value&quot;,

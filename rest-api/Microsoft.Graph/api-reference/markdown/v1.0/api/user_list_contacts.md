@@ -3,7 +3,7 @@
 Get the user's personal contacts
 ### Prerequisites
 One of the following **scopes** is required to execute this API: 
-Contacts.Read; Contacts.ReadWrite
+*Contacts.Read; Contacts.ReadWrite*
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
@@ -23,9 +23,9 @@ GET /users/<objectId>/contacts
 |$top|int|The number of items to return in a result set.|
 
 ### Request headers
-| Name       | Type | Description|
-|:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Header       | Value |
+|:---------------|:--------|
+| Authorization  | Bearer %token%  |
 
 ### Request body
 Do not supply a request body for this method.
@@ -52,7 +52,6 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 2290
 
 {
   "value": [

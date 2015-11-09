@@ -3,12 +3,11 @@
 Retrieve the properties and relationships of user object.
 ### Prerequisites
 One of the following **scopes** is required to execute this API: 
-User.Read.All; User.ReadWrite.All; Directory.Read.All; Directory.ReadWrite.All; Directory.AccessAsUser.All; User.Read; User.ReadWrite; User.ReadBasic.All
+*User.Read; User.ReadWrite; User.ReadBasic.All; User.Read.All; User.ReadWrite.All; Directory.Read.All; Directory.ReadWrite.All; Directory.AccessAsUser.All*
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /users/<objectId>
-
 ```
 ### Optional query parameters
 |Name|Value|Description|
@@ -17,8 +16,8 @@ GET /users/<objectId>
 
 ### Request headers
 | Header       | Value|
-|:-----------|:------|:----------|
-| Authorization  | Bearer %token%  |
+|:-----------|:------|
+| Authorization  | Bearer %token%|
 | Accept  | application/json|
 
 ### Request body
@@ -45,7 +44,6 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 2708
 
 {
   "objectType": "User",

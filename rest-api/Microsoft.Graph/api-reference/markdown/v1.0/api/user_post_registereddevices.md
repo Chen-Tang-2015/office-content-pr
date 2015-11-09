@@ -3,12 +3,11 @@
 Use this API to create a new registered device.
 ### Prerequisites
 One of the following **scopes** is required to execute this API: 
-User.ReadWrite; User.ReadWrite.All; Directory.ReadWrite.All
+*User.ReadWrite; User.ReadWrite.All; Directory.ReadWrite.All*
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/registeredDevices
-
 ```
 ### Request headers
 | Header       | Value |

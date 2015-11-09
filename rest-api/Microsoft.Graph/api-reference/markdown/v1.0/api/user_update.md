@@ -3,17 +3,16 @@
 Update the properties of user object.
 ### Prerequisites
 One of the following **scopes** is required to execute this API: 
-User.ReadWrite.All; Directory.ReadWrite.All; User.ReadWrite;
+*User.ReadWrite; User.ReadWrite.All; Directory.ReadWrite.All*
 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 PATCH /users/<objectId>
-
 ```
 ### Optional request headers
 | Header       | Value|
-|:-----------|:------|:----------|
+|:-----------|:------|
 | Authorization  | Bearer %token%  |
 | Content-Type  | application/json  |
 

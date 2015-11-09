@@ -3,12 +3,11 @@
 Use this API to create a new direct report.
 ### Prerequisites
 One of the following **scopes** is required to execute this API: 
-Users.ReadWrite.All; Directory.ReadWrite.All
+*Users.ReadWrite.All; Directory.ReadWrite.All*
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/directReports
-
 ```
 ### Request headers
 | Header       | Value |
@@ -44,7 +43,6 @@ Here is an example of the response.
 ```http
 HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 111
 
 {
   "id": "objectId-value",

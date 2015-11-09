@@ -1,14 +1,13 @@
-# user: assignLicense
+# assignLicense
 
 
 ### Prerequisites
 One of the following **scopes** is required to execute this API: 
-User.ReadWrite.All; Directory.ReadWrite.All
+*User.ReadWrite.All; Directory.ReadWrite.All*
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/assignLicense
-
 ```
 ### Request headers
 | Header       | Value |
@@ -65,7 +64,6 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 2708
 
 {
   "accountEnabled": true,

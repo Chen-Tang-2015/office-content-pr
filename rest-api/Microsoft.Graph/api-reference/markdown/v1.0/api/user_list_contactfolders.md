@@ -3,12 +3,11 @@
 Get the contact folder collection from the Contacts folder.
 ### Prerequisites
 One of the following **scopes** is required to execute this API: 
-Contacts.Read; Contacts.ReadWrite
+*Contacts.Read; Contacts.ReadWrite*
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /users/<objectId>/contactFolders
-
 ```
 ### Optional query parameters
 |Name|Value|Description|
@@ -52,7 +51,6 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 145
 
 {
   "value": [

@@ -3,12 +3,11 @@
 Use this API to create a new contact.
 ### Prerequisites
 One of the following **scopes** is required to execute this API: 
-Contacts.ReadWrite
+*Contacts.ReadWrite*
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/contacts
-
 ```
 ### Request headers
 | Header       | Value |
@@ -60,7 +59,6 @@ Here is an example of the response.
 ```http
 HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 1977
 
 {
   "id": "id-value"

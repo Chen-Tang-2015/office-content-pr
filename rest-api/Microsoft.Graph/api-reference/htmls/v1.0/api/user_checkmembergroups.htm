@@ -16,14 +16,13 @@
 <div class="container wrapper" id="body">
     <div class="row">
         <div class="col-md-9">
-            <h1 id="user-checkmembergroups">user: checkMemberGroups</h1>
+            <h1 id="checkmembergroups">checkMemberGroups</h1>
 <p>Call the checkMemberGroups function to check for membership in a list of groups. The check is transitive.</p>
 <h3 id="prerequisites">Prerequisites</h3>
 <p>One of the following <strong>scopes</strong> is required to execute this API: 
-User.Read.All; User.ReadWrite.All; Directory.Read.All; Directory.ReadWrite.All; Directory.AccessAsUser.All</p>
+<em>User.Read.All; User.ReadWrite.All; Directory.Read.All; Directory.ReadWrite.All; Directory.AccessAsUser.All</em></p>
 <h3 id="http-request">HTTP request</h3>
 <pre><code class="http">POST /users/&lt;objectId&gt;/checkMemberGroups
-
 </code></pre>
 
 <h3 id="request-headers">Request headers</h3>
@@ -83,7 +82,6 @@ Content-type: application/json
 <p>Here is an example of the response.</p>
 <pre><code class="http">HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 39
 
 {
   &quot;value&quot;: [

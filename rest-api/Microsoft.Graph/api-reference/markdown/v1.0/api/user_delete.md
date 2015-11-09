@@ -3,17 +3,16 @@
 Delete user.
 ### Prerequisites
 One of the following **scopes** is required to execute this API: 
-Users.ReadWrite.All; Directory.ReadWrite.All
+*Directory.ReadWrite.All*
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 DELETE /users/<objectId>
-
 ```
 
 ### Request headers
 | Header       | Value|
-|:-----------|:------|:----------|
+|:-----------|:------|
 | Authorization  | Bearer %token%  |
 
 ### Request body

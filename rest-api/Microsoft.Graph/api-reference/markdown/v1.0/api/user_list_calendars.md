@@ -3,12 +3,11 @@
 Get the user's calendars. To get the user's default calendar, use /calendar shortcut property. To get a different calendar, specify the calendar ID as the index of the calendars collection.
 ### Prerequisites
 One of the following **scopes** is required to execute this API: 
-Calendars.Read; Calendars.ReadWrite
+*Calendars.Read; Calendars.ReadWrite*
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /users/<objectId>/calendars
-
 ```
 ### Optional query parameters
 |Name|Value|Description|
@@ -53,7 +52,6 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 151
 
 {
     "value": [

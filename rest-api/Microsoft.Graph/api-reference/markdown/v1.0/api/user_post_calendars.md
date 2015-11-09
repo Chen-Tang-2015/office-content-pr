@@ -3,12 +3,11 @@
 Use this API to create a new Calendar.
 ### Prerequisites
 One of the following **scopes** is required to execute this API: 
-Calendars.ReadWrite
+*Calendars.ReadWrite*
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/calendars
-
 ```
 ### Request headers
 | Header       | Value |
@@ -50,7 +49,6 @@ Here is an example of the response.
 ```http
 HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 106
 
 {
   "id": "id-value"

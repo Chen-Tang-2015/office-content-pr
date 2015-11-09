@@ -3,12 +3,11 @@
 
 ### Prerequisites
 One of the following **scopes** is required to execute this API: 
-Mail.Read; Mail.ReadWrite
+*Mail.Read; Mail.ReadWrite*
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/reminderView(startDateTime=startDateTime-value, endDateTime=endDateTime-value)
-
 ```
 ### Request headers
 | Header       | Value|

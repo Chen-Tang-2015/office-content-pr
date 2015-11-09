@@ -3,12 +3,11 @@
 Retrieve a list of message objects.
 ### Prerequisites
 One of the following **scopes** is required to execute this API: 
-Mail.Read; Mail.ReadWrite
+*Mail.Read; Mail.ReadWrite*
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /users/<objectId>/messages
-
 ```
 ### Optional query parameters
 |Name|Value|Description|
@@ -53,7 +52,6 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 1863
 
 {
     "id": "id-value",

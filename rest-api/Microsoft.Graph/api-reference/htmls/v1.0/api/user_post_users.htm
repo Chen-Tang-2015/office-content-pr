@@ -21,10 +21,9 @@
 The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties.</p>
 <h3 id="prerequisites">Prerequisites</h3>
 <p>One of the following <strong>scopes</strong> is required to execute this API: 
-Directory.ReadWrite</p>
+<em>Directory.ReadWrite</em></p>
 <h3 id="http-request">HTTP request</h3>
 <pre><code class="http">POST /users
-
 </code></pre>
 
 <h3 id="request-headers">Request headers</h3>
@@ -47,7 +46,7 @@ Directory.ReadWrite</p>
 </tbody>
 </table>
 <h3 id="request-body">Request body</h3>
-<p>In the request body, supply a JSON representation of <a href="../resources/user.htm">User</a> object.</p>
+<p>In the request body, supply a JSON representation of <a href="../resources/user.htm">user</a> object.</p>
 <p>The following table shows the properties that are required when you create a user.</p>
 <table>
 <thead>
@@ -78,7 +77,7 @@ Directory.ReadWrite</p>
 <tr>
 	<td align="left">mailNickname</td>
 	<td align="left">string</td>
-	<td align="left">he mail alias for the user.</td>
+	<td align="left">The mail alias for the user.</td>
 </tr>
 <tr>
 	<td align="left">passwordProfile</td>
@@ -90,11 +89,12 @@ Directory.ReadWrite</p>
 	<td align="left">userPrincipalName</td>
 	<td align="left">string</td>
 	<td align="left">The user principal name (someuser@contoso.com).</td>
+	<td></td>
 </tr>
 </tbody>
 </table>
 <h3 id="response">Response</h3>
-<p>If successful, this method returns <code>201, Created</code> response code and <a href="../resources/user.htm">User</a> object in the response body.</p>
+<p>If successful, this method returns <code>201, Created</code> response code and <a href="../resources/user.htm">user</a> object in the response body.</p>
 <h3 id="example">Example</h3>
 <h5 id="request">Request</h5>
 <p>Here is an example of the request.</p>
@@ -118,16 +118,15 @@ Content-type: application/json
 <p>Here is an example of the response.</p>
 <pre><code class="http">HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 2708
 
 {
   &quot;objectType&quot;: &quot;User&quot;,
   &quot;id&quot;: &quot;3064b7b5-a8cb-4fe3-b7ea-696130f699a6&quot;,
-...
+  ...
   &quot;displayName&quot;: &quot;Alex Wu&quot;,
-...
+  ...
   &quot;mailNickname&quot;: &quot;AlexW&quot;,
-...
+  ...
   &quot;userPrincipalName&quot;: &quot;AlexW@imgeek.onmicrosoft.com&quot;,
   &quot;userType&quot;: &quot;Member&quot;
 }

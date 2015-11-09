@@ -3,13 +3,12 @@
 Get the list of user's owned devices.
 ### Prerequisites
 One of the following **scopes** is required to execute this API: 
-User.Read.All; User.ReadWrite.All; Directory.Read.All; Directory.ReadWrite.All; Directory.AccessAsUser.All; User.Read; User.ReadWrite;
+*User.Read; User.ReadWrite; User.Read.All; User.ReadWrite.All; Directory.Read.All; Directory.ReadWrite.All; Directory.AccessAsUser.All*
 
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /users/<objectId>/ownedDevices
-
 ```
 ### Optional query parameters
 |Name|Value|Description|
@@ -48,7 +47,6 @@ Here is an example of the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 152
 
 {
   "value": [
