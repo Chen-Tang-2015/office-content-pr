@@ -6,14 +6,14 @@ This article provides information about the new features for developers that are
 
 ## GA features in Microsoft Graph API
 
-The following Microsoft Graph API are generally available:
+The following Microsoft Graph API features are generally available:
 
-* User entity
-* Groups entity
-* Files entity
-* Mail entity
-* Calendar entity
-* Personal Contacts entity 
+* Users
+* Groups
+* Files
+* Mail
+* Calendar
+* Personal Contacts 
 * Create, read, update, and delete (CRUD) operations
 * Cross-origin resource sharing (CORS) support.
 
@@ -22,13 +22,13 @@ The following Microsoft Graph API are generally available:
 
 The following Microsoft Graph API preview features are available:
 
-* Notes entity 
-* Tasks entity
-* Excel entity
-* People entity
-* Organization Contacts entity
-* Webhooks entity
-* Insights and relationships: TrendingAround and WorkingWith
+* Notes 
+* Tasks
+* Excel
+* People
+* Organizational Contacts
+* Webhooks
+* Insights and relationships: Trending Around and Working With
 * Groups instant access to content after creation
 * v2.0 app authentication model 
 
