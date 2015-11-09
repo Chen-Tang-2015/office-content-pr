@@ -2,19 +2,19 @@
 
 
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API: 
+Mail.Read; Mail.ReadWrite
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/reminderView(startDateTime=startDateTime-value, endDateTime=endDateTime-value)
-POST /drive/root/createdByUser/reminderView(startDateTime=startDateTime-value, endDateTime=endDateTime-value)
-POST /drive/root/lastModifiedByUser/reminderView(startDateTime=startDateTime-value, endDateTime=endDateTime-value)
 
 ```
 ### Request headers
-| Name       | Type | Description|
-|:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Header       | Value|
+|:-----------|:------|:----------|
+| Authorization  | Bearer %token%  |
+| Content-Type  | application/json  |
 
 ### Request body
 In the request URL, provide following query parameters with values.
@@ -36,7 +36,7 @@ Here is an example of the request.
   "name": "user_reminderview"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/users/<objectId>/reminderView
+POST https://graph.microsoft.com/v1.0/users/<objectId>reminderView(startDateTime='2015-11-08T16:56:00',endDateTime='2015-11-12T00:56:00') 
 ```
 
 ##### Response

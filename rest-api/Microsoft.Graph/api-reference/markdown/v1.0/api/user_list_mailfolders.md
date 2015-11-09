@@ -1,14 +1,14 @@
 # List mailFolders
 
-Retrieve a list of mailfolder objects.
+Get user's mail folders
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API: 
+Mail.Read; Mail.ReadWrite
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /users/<objectId>/mailFolders
-GET /drive/root/createdByUser/mailFolders
-GET /drive/root/lastModifiedByUser/mailFolders
+
 ```
 ### Optional query parameters
 |Name|Value|Description|
@@ -23,9 +23,10 @@ GET /drive/root/lastModifiedByUser/mailFolders
 |$top|int|The number of items to return in a result set.|
 
 ### Request headers
-| Name       | Type | Description|
-|:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Header       | Value |
+|:---------------|:--------|
+| Authorization  | Bearer %token%  |
+| Accept  | application/json|
 
 ### Request body
 Do not supply a request body for this method.
@@ -57,12 +58,29 @@ Content-length: 232
 {
   "value": [
     {
-      "displayName": "displayName-value",
-      "parentFolderId": "parentFolderId-value",
-      "childFolderCount": 99,
-      "unreadItemCount": 99,
-      "totalItemCount": 99,
       "id": "id-value"
+      "DisplayName": "Deleted Items",
+      "ParentFolderId": "parentFolderId-value",
+      "ChildFolderCount": 0,
+      "UnreadItemCount": 2,
+      "TotalItemCount": 40
+    },
+    {
+      "id": "id-value"
+      "DisplayName": "Inbox",
+      "ParentFolderId": "parentFolderId-value",
+      "ChildFolderCount": 4,
+      "UnreadItemCount": 15,
+      "TotalItemCount": 15
+    },
+    ...
+    {
+      "id": "id-value"
+      "DisplayName": "Sent Items",
+      "ParentFolderId": "parentFolderId-value",
+      "ChildFolderCount": 0,
+      "UnreadItemCount": 1,
+      "TotalItemCount": 30
     }
   ]
 }

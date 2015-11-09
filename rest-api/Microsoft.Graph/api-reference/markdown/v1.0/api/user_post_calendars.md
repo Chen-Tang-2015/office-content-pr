@@ -2,19 +2,19 @@
 
 Use this API to create a new Calendar.
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API: 
+Calendars.ReadWrite
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/calendars
-POST /drive/root/createdByUser/calendars
-POST /drive/root/lastModifiedByUser/calendars
 
 ```
 ### Request headers
-| Name       | Type | Description|
-|:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Header       | Value |
+|:---------------|:--------|
+| Authorization  | Bearer %token%  |
+| Content-Type  | application/json  |
 
 ### Request body
 In the request body, supply a JSON representation of [Calendar](../resources/calendar.md) object.
@@ -32,8 +32,14 @@ Here is an example of the request.
 }-->
 ```http
 POST https://graph.microsoft.com/v1.0/users/<objectId>
+Content-type: application/json
+
+{
+  "name": "Social"
+}
 ```
 In the request body, supply a JSON representation of [Calendar](../resources/calendar.md) object.
+
 ##### Response
 Here is an example of the response.
 <!-- {
@@ -47,10 +53,10 @@ Content-type: application/json
 Content-length: 106
 
 {
-  "name": "name-value",
-  "color": "color-value",
-  "changeKey": "changeKey-value",
   "id": "id-value"
+  "name": "Birthdays",
+  "ClassId": "d6ead512-dc6e-4b10-9de0-0b1fe22c4dc6",
+  "ChangeKey": "TEeu8sNApk+MdJFYEFB/9wACR1MoSw=="
 }
 ```
 

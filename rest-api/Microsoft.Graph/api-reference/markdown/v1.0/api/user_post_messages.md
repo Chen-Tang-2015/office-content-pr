@@ -1,20 +1,20 @@
 # Create Message
 
-Use this API to create a new Message.
+Use this API to create a draft of a new message. Drafts can be created in any folder and optionally updated before sending. To save to the Drafts folder, use the /messages shortcut.
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API: 
+Mail.ReadWrite
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/messages
-POST /drive/root/createdByUser/messages
-POST /drive/root/lastModifiedByUser/messages
 
 ```
 ### Request headers
-| Name       | Type | Description|
-|:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Header       | Value |
+|:---------------|:--------|
+| Authorization  | Bearer %token%  |
+| Content-Type  | application/json  |
 
 ### Request body
 In the request body, supply a JSON representation of [Message](../resources/message.md) object.
@@ -31,9 +31,27 @@ Here is an example of the request.
   "name": "create_message_from_user"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/users/<objectId>
+POST https://graph.microsoft.com/v1.0/users/<objectId>/messages
+Content-type: application/json
+
+{
+  "subject": "Did you see last night's game?",
+  "importance": "Low",
+  "body": {
+    "contentType": "HTML",
+    "content": "They were <b>awesome</b>!"
+  },
+  "toRecipients": [
+    {
+      "emailAddress": {
+        "address": "katiej@fabrikam.onmicrosoft.com"
+      }
+    }
+  ]
+}
 ```
 In the request body, supply a JSON representation of [Message](../resources/message.md) object.
+
 ##### Response
 Here is an example of the response.
 <!-- {
@@ -47,78 +65,41 @@ Content-type: application/json
 Content-length: 1546
 
 {
-  "receivedDateTime": "datetime-value",
-  "sentDateTime": "datetime-value",
-  "hasAttachments": true,
-  "subject": "subject-value",
-  "body": {
-    "contentType": "contentType-value",
-    "content": "content-value"
-  },
-  "bodyPreview": "bodyPreview-value",
-  "importance": "importance-value",
-  "parentFolderId": "parentFolderId-value",
-  "sender": {
-    "emailAddress": {
-      "name": "name-value",
-      "address": "address-value"
-    }
-  },
-  "from": {
-    "emailAddress": {
-      "name": "name-value",
-      "address": "address-value"
-    }
-  },
-  "toRecipients": [
-    {
-      "emailAddress": {
-        "name": "name-value",
-        "address": "address-value"
-      }
-    }
-  ],
-  "ccRecipients": [
-    {
-      "emailAddress": {
-        "name": "name-value",
-        "address": "address-value"
-      }
-    }
-  ],
-  "bccRecipients": [
-    {
-      "emailAddress": {
-        "name": "name-value",
-        "address": "address-value"
-      }
-    }
-  ],
-  "replyTo": [
-    {
-      "emailAddress": {
-        "name": "name-value",
-        "address": "address-value"
-      }
-    }
-  ],
-  "conversationId": "conversationId-value",
-  "uniqueBody": {
-    "contentType": "contentType-value",
-    "content": "content-value"
-  },
-  "isDeliveryReceiptRequested": true,
-  "isReadReceiptRequested": true,
-  "isRead": true,
-  "isDraft": true,
-  "webLink": "webLink-value",
-  "createdDateTime": "datetime-value",
-  "lastModifiedDateTime": "datetime-value",
-  "changeKey": "changeKey-value",
-  "categories": [
-    "categories-value"
-  ],
-  "id": "id-value"
+    "id": "id-value",
+    "createdDateTime": "2015-11-09T03:13:01Z",
+    "lastModifiedDateTime": "2015-11-09T03:13:01Z",
+    "changeKey": "CQAAABYAAABMR67yw0CmT4x0kVgQUH/3AAJHUwEE",
+    "categories": [],
+    "receivedDateTime": "2015-11-09T03:13:01Z",
+    "sentDateTime": "2015-11-09T03:13:01Z",
+    "hasAttachments": false,
+    "subject": "Did you see last night's game?",
+    "body": {
+        "contentType": "HTML",
+        "content": "content-value"
+    },
+    "bodyPreview": "They were awesome!",
+    "importance": "Low",
+    "parentFolderId": "parentFolderId-value",
+    "sender": null,
+    "from": null,
+    "toRecipients": [
+        {
+            "emailAddress": {
+                "name": "katiej@fabrikam.onmicrosoft.com",
+                "address": "katiej@fabrikam.onmicrosoft.com"
+            }
+        }
+    ],
+    "ccRecipients": [],
+    "bccRecipients": [],
+    "replyTo": [],
+    "conversationId": "conversationId-value",
+    "isDeliveryReceiptRequested": false,
+    "isReadReceiptRequested": false,
+    "isRead": true,
+    "isDraft": true,
+    "webLink": "https://outlook.office365.com/owa/?ItemID=id-value&exvsurl=1&viewmodel=ReadMessageItem"
 }
 ```
 

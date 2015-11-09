@@ -2,19 +2,19 @@
 
 
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API: 
+Mail.ReadWrite; Mail.Send
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/sendMail
-POST /drive/root/createdByUser/sendMail
-POST /drive/root/lastModifiedByUser/sendMail
 
 ```
 ### Request headers
-| Name       | Type | Description|
-|:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Header       | Value |
+|:---------------|:--------|
+| Authorization  | Bearer %token%  |
+| Content-Type  | application/json  |
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -38,94 +38,23 @@ Here is an example of the request.
 ```http
 POST https://graph.microsoft.com/v1.0/users/<objectId>/sendMail
 Content-type: application/json
-Content-length: 1975
 
 {
   "message": {
-    "receivedDateTime": "datetime-value",
-    "sentDateTime": "datetime-value",
-    "hasAttachments": true,
-    "subject": "subject-value",
+    "subject": "Meet for lunch?",
     "body": {
-      "contentType": "contentType-value",
-      "content": "content-value"
-    },
-    "bodyPreview": "bodyPreview-value",
-    "importance": "importance-value",
-    "parentFolderId": "parentFolderId-value",
-    "sender": {
-      "emailAddress": {
-        "name": "name-value",
-        "address": "address-value"
-      }
-    },
-    "from": {
-      "emailAddress": {
-        "name": "name-value",
-        "address": "address-value"
-      }
+      "contentType": "Text",
+      "content": "The new cafeteria is open."
     },
     "toRecipients": [
       {
         "emailAddress": {
-          "name": "name-value",
-          "address": "address-value"
+          "address": "garthf@contoso.onmicrosoft.com"
         }
-      }
-    ],
-    "ccRecipients": [
-      {
-        "emailAddress": {
-          "name": "name-value",
-          "address": "address-value"
-        }
-      }
-    ],
-    "bccRecipients": [
-      {
-        "emailAddress": {
-          "name": "name-value",
-          "address": "address-value"
-        }
-      }
-    ],
-    "replyTo": [
-      {
-        "emailAddress": {
-          "name": "name-value",
-          "address": "address-value"
-        }
-      }
-    ],
-    "conversationId": "conversationId-value",
-    "uniqueBody": {
-      "contentType": "contentType-value",
-      "content": "content-value"
-    },
-    "isDeliveryReceiptRequested": true,
-    "isReadReceiptRequested": true,
-    "isRead": true,
-    "isDraft": true,
-    "webLink": "webLink-value",
-    "createdDateTime": "datetime-value",
-    "lastModifiedDateTime": "datetime-value",
-    "changeKey": "changeKey-value",
-    "categories": [
-      "categories-value"
-    ],
-    "id": "id-value",
-    "attachments": [
-      {
-        "lastModifiedDateTime": "datetime-value",
-        "name": "name-value",
-        "contentType": "contentType-value",
-        "size": 99,
-        "isInline": true,
-        "id": "id-value"
       }
     ]
   },
-  "saveToSentItems": true
+  "saveToSentItems": "false"
 }
 ```
 

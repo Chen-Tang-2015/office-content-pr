@@ -2,13 +2,13 @@
 
 Retrieve a list of message objects.
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API: 
+Mail.Read; Mail.ReadWrite
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /users/<objectId>/messages
-GET /drive/root/createdByUser/messages
-GET /drive/root/lastModifiedByUser/messages
+
 ```
 ### Optional query parameters
 |Name|Value|Description|
@@ -23,9 +23,10 @@ GET /drive/root/lastModifiedByUser/messages
 |$top|int|The number of items to return in a result set.|
 
 ### Request headers
-| Name       | Type | Description|
-|:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Header       | Value |
+|:---------------|:--------|
+| Authorization  | Bearer %token%  |
+| Accept  | application/json|
 
 ### Request body
 Do not supply a request body for this method.
@@ -55,83 +56,53 @@ Content-type: application/json
 Content-length: 1863
 
 {
-  "value": [
-    {
-      "receivedDateTime": "datetime-value",
-      "sentDateTime": "datetime-value",
-      "hasAttachments": true,
-      "subject": "subject-value",
-      "body": {
-        "contentType": "contentType-value",
-        "content": "content-value"
-      },
-      "bodyPreview": "bodyPreview-value",
-      "importance": "importance-value",
-      "parentFolderId": "parentFolderId-value",
-      "sender": {
+    "id": "id-value",
+    "createdDateTime": "2015-11-05T22:33:48Z",
+    "lastModifiedDateTime": "2015-11-05T22:33:48Z",
+    "bhangeKey": "CQAAABYAAABMR67yw0CmT4x0kVgQUH/3AAJHUywy",
+    "categories": [],
+    "receivedDateTime": "2015-11-05T22:33:48Z",
+    "sentDateTime": "2015-11-05T22:33:48Z",
+    "hasAttachments": false,
+    "subject": "What is Clutter?",
+    "body": {
+        "contentType": "HTML",
+        "content": "content"
+    },
+    "bodyPreview": "Stay on top of your email...",
+    "importance": "Normal",
+    "parentFolderId": "parentfoldeid-value",
+    "sender": {
         "emailAddress": {
-          "name": "name-value",
-          "address": "address-value"
+            "name": "Microsoft Outlook"
         }
-      },
-      "from": {
+    },
+    "from": {
         "emailAddress": {
-          "name": "name-value",
-          "address": "address-value"
+            "name": "Microsoft Outlook"
         }
-      },
-      "toRecipients": [
+    },
+    "toRecipients": [
         {
-          "emailAddress": {
-            "name": "name-value",
-            "address": "address-value"
-          }
+            "emailAddress": {
+                "name": "Sara Davis",
+                "address": "SaraD@contoso.onmicrosoft.com"
+            }
         }
-      ],
-      "ccRecipients": [
-        {
-          "emailAddress": {
-            "name": "name-value",
-            "address": "address-value"
-          }
-        }
-      ],
-      "bccRecipients": [
-        {
-          "emailAddress": {
-            "name": "name-value",
-            "address": "address-value"
-          }
-        }
-      ],
-      "replyTo": [
-        {
-          "emailAddress": {
-            "name": "name-value",
-            "address": "address-value"
-          }
-        }
-      ],
-      "conversationId": "conversationId-value",
-      "uniqueBody": {
-        "contentType": "contentType-value",
-        "content": "content-value"
-      },
-      "isDeliveryReceiptRequested": true,
-      "isReadReceiptRequested": true,
-      "isRead": true,
-      "isDraft": true,
-      "webLink": "webLink-value",
-      "createdDateTime": "datetime-value",
-      "lastModifiedDateTime": "datetime-value",
-      "changeKey": "changeKey-value",
-      "categories": [
-        "categories-value"
-      ],
-      "id": "id-value"
-    }
-  ]
+    ],
+    "ccRecipients": [],
+    "bccRecipients": [],
+    "replyTo": [],
+    "conversationId": "converstion-id-value",
+    "isDeliveryReceiptRequested": null,
+    "isReadReceiptRequested": false,
+    "isRead": false,
+    "isDraft": false,
+    "webLink": "https://outlook.office365.com/owa/?ItemID=id-value&viewmodel=ReadMessageItem",
+    "inferenceClassification": "Focused"
 }
+
+
 ```
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79

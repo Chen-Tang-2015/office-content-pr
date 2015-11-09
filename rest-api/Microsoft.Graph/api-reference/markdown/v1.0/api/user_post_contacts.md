@@ -1,20 +1,20 @@
 # Create Contact
 
-Use this API to create a new Contact.
+Use this API to create a new contact.
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API: 
+Contacts.ReadWrite
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/contacts
-POST /drive/root/createdByUser/contacts
-POST /drive/root/lastModifiedByUser/contacts
 
 ```
 ### Request headers
-| Name       | Type | Description|
-|:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Header       | Value |
+|:---------------|:--------|
+| Authorization  | Bearer %token%  |
+| Content-Type  | application/json  |
 
 ### Request body
 In the request body, supply a JSON representation of [Contact](../resources/contact.md) object.
@@ -32,8 +32,24 @@ Here is an example of the request.
 }-->
 ```http
 POST https://graph.microsoft.com/v1.0/users/<objectId>
+Content-type: application/json
+
+{
+  "givenName": "Pavel",
+  "surname": "Bansky",
+  "emailAddresses": [
+    {
+      "address": "pavelb@fabrikam.onmicrosoft.com",
+      "name": "Pavel Bansky"
+    }
+  ],
+  "businessPhones": [
+    "+1 732 555 0102"
+  ]
+}
 ```
 In the request body, supply a JSON representation of [Contact](../resources/contact.md) object.
+
 ##### Response
 Here is an example of the response.
 <!-- {
@@ -47,77 +63,12 @@ Content-type: application/json
 Content-length: 1977
 
 {
-  "parentFolderId": "parentFolderId-value",
-  "birthday": "datetime-value",
-  "fileAs": "fileAs-value",
-  "displayName": "displayName-value",
-  "givenName": "givenName-value",
-  "initials": "initials-value",
-  "middleName": "middleName-value",
-  "nickName": "nickName-value",
-  "surname": "surname-value",
-  "title": "title-value",
-  "yomiGivenName": "yomiGivenName-value",
-  "yomiSurname": "yomiSurname-value",
-  "yomiCompanyName": "yomiCompanyName-value",
-  "generation": "generation-value",
-  "emailAddresses": [
-    {
-      "name": "name-value",
-      "address": "address-value"
-    }
-  ],
-  "imAddresses": [
-    "imAddresses-value"
-  ],
-  "jobTitle": "jobTitle-value",
-  "companyName": "companyName-value",
-  "department": "department-value",
-  "officeLocation": "officeLocation-value",
-  "profession": "profession-value",
-  "businessHomePage": "businessHomePage-value",
-  "assistantName": "assistantName-value",
-  "manager": "manager-value",
-  "homePhones": [
-    "homePhones-value"
-  ],
-  "mobilePhone1": "mobilePhone1-value",
-  "businessPhones": [
-    "businessPhones-value"
-  ],
-  "homeAddress": {
-    "street": "street-value",
-    "city": "city-value",
-    "state": "state-value",
-    "countryOrRegion": "countryOrRegion-value",
-    "postalCode": "postalCode-value"
-  },
-  "businessAddress": {
-    "street": "street-value",
-    "city": "city-value",
-    "state": "state-value",
-    "countryOrRegion": "countryOrRegion-value",
-    "postalCode": "postalCode-value"
-  },
-  "otherAddress": {
-    "street": "street-value",
-    "city": "city-value",
-    "state": "state-value",
-    "countryOrRegion": "countryOrRegion-value",
-    "postalCode": "postalCode-value"
-  },
-  "spouseName": "spouseName-value",
-  "personalNotes": "personalNotes-value",
-  "children": [
-    "children-value"
-  ],
-  "createdDateTime": "datetime-value",
-  "lastModifiedDateTime": "datetime-value",
-  "changeKey": "changeKey-value",
-  "categories": [
-    "categories-value"
-  ],
   "id": "id-value"
+  "createdDateTime": "2015-11-09T02:14:32Z",
+  "lastModifiedDateTime": "2015-11-09T02:14:32Z",
+  ...
+   "displayName": "Pavel Bansky",
+  ...
 }
 ```
 

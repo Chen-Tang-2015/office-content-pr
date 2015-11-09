@@ -1,14 +1,14 @@
 # List calendarGroups
 
-Retrieve a list of calendargroup objects.
+Get the user's calendar groups.
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API: 
+Calendars.Read; Calendars.ReadWrite
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /users/<objectId>/calendarGroups
-GET /drive/root/createdByUser/calendarGroups
-GET /drive/root/lastModifiedByUser/calendarGroups
+
 ```
 ### Optional query parameters
 |Name|Value|Description|
@@ -23,9 +23,10 @@ GET /drive/root/lastModifiedByUser/calendarGroups
 |$top|int|The number of items to return in a result set.|
 
 ### Request headers
-| Name       | Type | Description|
-|:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Header       | Value |
+|:---------------|:--------|
+| Authorization  | Bearer %token%  |
+| Content-Type  | application/json  |
 
 ### Request body
 Do not supply a request body for this method.
@@ -57,10 +58,16 @@ Content-length: 155
 {
   "value": [
     {
-      "name": "name-value",
-      "classId": "classId-value",
-      "changeKey": "changeKey-value",
-      "id": "id-value"
+      "id": "id-value",
+      "name": "My Calendars",
+      "classId": "0006f0b7-0000-0000-c000-000000000046",
+      "changeKey": "TEeu8sNApk+MdJFYEFB/9wABwoTe4A=="
+    },
+    {
+      "id": "AAMkADA...PAAA=",
+      "name": "Other Calendars",
+      "classId": "0006f0b8-0000-0000-c000-000000000046",
+      "changeKey": "TEeu8sNApk+MdJFYEFB/9wABwoTe4g=="
     }
   ]
 }

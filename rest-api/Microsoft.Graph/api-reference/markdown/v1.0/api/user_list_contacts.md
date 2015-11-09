@@ -1,14 +1,14 @@
 # List contacts
 
-Retrieve a list of contact objects.
+Get the user's personal contacts
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API: 
+Contacts.Read; Contacts.ReadWrite
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /users/<objectId>/contacts
-GET /drive/root/createdByUser/contacts
-GET /drive/root/lastModifiedByUser/contacts
+
 ```
 ### Optional query parameters
 |Name|Value|Description|
@@ -57,77 +57,20 @@ Content-length: 2290
 {
   "value": [
     {
-      "parentFolderId": "parentFolderId-value",
-      "birthday": "datetime-value",
-      "fileAs": "fileAs-value",
-      "displayName": "displayName-value",
-      "givenName": "givenName-value",
-      "initials": "initials-value",
-      "middleName": "middleName-value",
-      "nickName": "nickName-value",
-      "surname": "surname-value",
-      "title": "title-value",
-      "yomiGivenName": "yomiGivenName-value",
-      "yomiSurname": "yomiSurname-value",
-      "yomiCompanyName": "yomiCompanyName-value",
-      "generation": "generation-value",
-      "emailAddresses": [
-        {
-          "name": "name-value",
-          "address": "address-value"
-        }
-      ],
-      "imAddresses": [
-        "imAddresses-value"
-      ],
-      "jobTitle": "jobTitle-value",
-      "companyName": "companyName-value",
-      "department": "department-value",
-      "officeLocation": "officeLocation-value",
-      "profession": "profession-value",
-      "businessHomePage": "businessHomePage-value",
-      "assistantName": "assistantName-value",
-      "manager": "manager-value",
-      "homePhones": [
-        "homePhones-value"
-      ],
-      "mobilePhone1": "mobilePhone1-value",
-      "businessPhones": [
-        "businessPhones-value"
-      ],
-      "homeAddress": {
-        "street": "street-value",
-        "city": "city-value",
-        "state": "state-value",
-        "countryOrRegion": "countryOrRegion-value",
-        "postalCode": "postalCode-value"
-      },
-      "businessAddress": {
-        "street": "street-value",
-        "city": "city-value",
-        "state": "state-value",
-        "countryOrRegion": "countryOrRegion-value",
-        "postalCode": "postalCode-value"
-      },
-      "otherAddress": {
-        "street": "street-value",
-        "city": "city-value",
-        "state": "state-value",
-        "countryOrRegion": "countryOrRegion-value",
-        "postalCode": "postalCode-value"
-      },
-      "spouseName": "spouseName-value",
-      "personalNotes": "personalNotes-value",
-      "children": [
-        "children-value"
-      ],
-      "createdDateTime": "datetime-value",
-      "lastModifiedDateTime": "datetime-value",
-      "changeKey": "changeKey-value",
-      "categories": [
-        "categories-value"
-      ],
       "id": "id-value"
+      "createdDateTime": "2013-06-01T17:20:53Z",
+      "lastModifiedDateTime": "2013-06-03T01:06:30Z",
+      ...
+      "displayName": "Aziz Hassouneh",
+      ...
+    },
+    {
+      "id": "id-value"
+      "createdDateTime": "2013-06-01T17:20:52Z",
+      "lastModifiedDateTime": "2013-06-03T01:06:30Z",
+      ...
+      "displayName": "Denis Dehenne",
+      ...
     }
   ]
 }

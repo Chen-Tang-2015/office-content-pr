@@ -1,14 +1,14 @@
 # List calendarView
 
-Retrieve a list of event objects.
+Get the occurrences, exceptions, and single instances of events in a calendar view defined by a time range, from the user's primary calendar or from a different calendar.
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API: 
+Calendars.Read; Calendars.ReadWrite
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /users/<objectId>/calendarView
-GET /drive/root/createdByUser/calendarView
-GET /drive/root/lastModifiedByUser/calendarView
+
 ```
 ### Optional query parameters
 |Name|Value|Description|
@@ -39,7 +39,7 @@ Here is an example of the request.
   "name": "get_calendarview"
 }-->
 ```http
-GET https://graph.microsoft.com/v1.0/users/<objectId>/calendarView
+GET https://graph.microsoft.com/v1.0/users/<objectId>/calendarView?startdatetime=2015-10-27t01:00:00z&enddatetime=2015-10-31t23:00:00z
 ```
 ##### Response
 Here is an example of the response.
@@ -57,91 +57,95 @@ Content-length: 2405
 {
   "value": [
     {
-      "originalStartTimeZone": "originalStartTimeZone-value",
-      "originalEndTimeZone": "originalEndTimeZone-value",
-      "responseStatus": {
-        "response": "response-value",
-        "time": "datetime-value"
+      "Id": "id-value",
+      "CreatedDateTime": "2013-06-01T17:35:07.4405388Z",
+      "LastModifiedDateTime": "2015-06-26T21:30:45.0120394Z",
+      "ChangeKey": "TEeu8sNApk+MdJFYEFB/9wAB8bgn5A==",
+      "Categories": [
+        "Blue Category"
+      ],
+      "OriginalStartTimeZone": "Pacific Standard Time",
+      "OriginalEndTimeZone": "Pacific Standard Time",
+      "ResponseStatus": {
+        "Response": "Organizer",
+        "Time": "0001-01-01T00:00:00Z"
       },
-      "iCalUId": "iCalUId-value",
-      "reminderMinutesBeforeStart": 99,
-      "isReminderOn": true,
-      "hasAttachments": true,
-      "subject": "subject-value",
-      "body": {
-        "contentType": "contentType-value",
-        "content": "content-value"
+      "iCalUId": "id-value",
+      "ReminderMinutesBeforeStart": 0,
+      "IsReminderOn": false,
+      "HasAttachments": false,
+      "Subject": "Legal and Executives Bi-Weekly",
+      "Body": {
+        "ContentType": "Text",
+        "Content": ""
       },
-      "bodyPreview": "bodyPreview-value",
-      "importance": "importance-value",
-      "sensitivity": "sensitivity-value",
-      "start": {
-        "dateTime": "dateTime-value",
-        "timeZone": "timeZone-value"
+      "BodyPreview": "",
+      "Importance": "Normal",
+      "Sensitivity": "Normal",
+      "Start": {
+        "DateTime": "2015-10-30T15:30:00.0000000",
+        "TimeZone": "UTC"
       },
-      "originalStart": "datetime-value",
-      "end": {
-        "dateTime": "dateTime-value",
-        "timeZone": "timeZone-value"
+      "End": {
+        "DateTime": "2015-10-30T16:30:00.0000000",
+        "TimeZone": "UTC"
       },
-      "location": {
-        "altitude": 99,
-        "latitude": 99,
-        "longitude": 99
-      },
-      "isAllDay": true,
-      "isCancelled": true,
-      "isOrganizer": true,
-      "recurrence": {
-        "pattern": {
-          "type": "type-value",
-          "interval": 99,
-          "month": 99,
-          "dayOfMonth": 99,
-          "daysOfWeek": [
-            "daysOfWeek-value"
-          ],
-          "firstDayOfWeek": "firstDayOfWeek-value",
-          "index": "index-value"
+      "Location": {
+        "DisplayName": "Conference Room - Crystal",
+        "Address": {
+          "Street": "",
+          "City": "",
+          "State": "",
+          "CountryOrRegion": "",
+          "PostalCode": ""
         },
-        "range": {
-          "type": "type-value",
-          "startDate": "startDate-value",
-          "endDate": "endDate-value",
-          "numberOfOccurrences": 99
+        "Coordinates": {
+          "Altitude": "NaN",
+          "Latitude": "NaN",
+          "Longitude": "NaN",
+          "Accuracy": "NaN",
+          "AltitudeAccuracy": "NaN"
         }
       },
-      "responseRequested": true,
-      "seriesMasterId": "seriesMasterId-value",
-      "showAs": "showAs-value",
-      "type": "type-value",
-      "attendees": [
+      "IsAllDay": false,
+      "IsCancelled": false,
+      "IsOrganizer": true,
+      "Recurrence": null,
+      "ResponseRequested": true,
+      "SeriesMasterId": "id-value",
+      "ShowAs": "Busy",
+      "Type": "Occurrence",
+      "Attendees": [
         {
-          "status": {
-            "response": "response-value",
-            "time": "datetime-value"
+          "Status": {
+            "Response": "None",
+            "Time": "0001-01-01T00:00:00Z"
           },
-          "type": "type-value",
-          "emailAddress": {
-            "name": "name-value",
-            "address": "address-value"
+          "Type": "Required",
+          "EmailAddress": {
+            "Name": "Julian Isla",
+            "Address": "JulianI@contoso.onmicrosoft.com"
+          }
+        },
+        {
+          "Status": {
+            "Response": "None",
+            "Time": "0001-01-01T00:00:00Z"
+          },
+          "Type": "Required",
+          "EmailAddress": {
+            "Name": "Denis Dehenne",
+            "Address": "DenisD@contoso.onmicrosoft.com"
           }
         }
       ],
-      "organizer": {
-        "emailAddress": {
-          "name": "name-value",
-          "address": "address-value"
+      "Organizer": {
+        "EmailAddress": {
+          "Name": "Sara Davis",
+          "Address": "SaraD@contoso.onmicrosoft.com"
         }
       },
-      "webLink": "webLink-value",
-      "createdDateTime": "datetime-value",
-      "lastModifiedDateTime": "datetime-value",
-      "changeKey": "changeKey-value",
-      "categories": [
-        "categories-value"
-      ],
-      "id": "id-value"
+      "WebLink": "https://outlook.office365.com/owa/?ItemID=id-value&viewmodel=ICalendarItemDetailsViewModelFactory"
     }
   ]
 }

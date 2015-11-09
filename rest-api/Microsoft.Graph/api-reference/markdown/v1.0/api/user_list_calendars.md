@@ -1,14 +1,14 @@
 # List calendars
 
-Retrieve a list of calendar objects.
+Get the user's calendars. To get the user's default calendar, use /calendar shortcut property. To get a different calendar, specify the calendar ID as the index of the calendars collection.
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API: 
+Calendars.Read; Calendars.ReadWrite
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /users/<objectId>/calendars
-GET /drive/root/createdByUser/calendars
-GET /drive/root/lastModifiedByUser/calendars
+
 ```
 ### Optional query parameters
 |Name|Value|Description|
@@ -23,9 +23,10 @@ GET /drive/root/lastModifiedByUser/calendars
 |$top|int|The number of items to return in a result set.|
 
 ### Request headers
-| Name       | Type | Description|
-|:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Header       | Value |
+|:---------------|:--------|
+| Authorization  | Bearer %token%  |
+| Accept  | application/json|
 
 ### Request body
 Do not supply a request body for this method.
@@ -55,12 +56,18 @@ Content-type: application/json
 Content-length: 151
 
 {
-  "value": [
+    "value": [
     {
-      "name": "name-value",
-      "color": "color-value",
-      "changeKey": "changeKey-value",
-      "id": "id-value"
+      "id": "id-value",
+      "name": "Calendar",
+      "color": "Auto",
+      "changeKey": "TEeu8sNApk+MdJFYEFB/9wABwoTe4Q=="
+    },
+    {
+      "id": "id-value",
+      "name": "Family Calendar",
+      "color": "Auto",
+      "changeKey": "TEeu8sNApk+MdJFYEFB/9wABwoTe4w=="
     }
   ]
 }

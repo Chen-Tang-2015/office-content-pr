@@ -1,20 +1,20 @@
 # user: getMemberGroups
-
+Call the getMemberGroups function to return all the groups that the user is a member of. The check is transitive, unlike reading the memberOf navigation property, which returns only the groups that the user is a direct member of.
 
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API: 
+User.Read.All; User.ReadWrite.All; Directory.Read.All; Directory.ReadWrite.All; Directory.AccessAsUser.All
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/getMemberGroups
-POST /drive/root/createdByUser/getMemberGroups
-POST /drive/root/lastModifiedByUser/getMemberGroups
 
 ```
 ### Request headers
-| Name       | Type | Description|
-|:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Header       | Value |
+|:---------------|:--------|
+| Authorization  | Bearer %token%  |
+| Content-Type  | application/json  |
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -40,7 +40,7 @@ Content-type: application/json
 Content-length: 33
 
 {
-  "securityEnabledOnly": true
+  "securityEnabledOnly": false
 }
 ```
 
@@ -59,7 +59,9 @@ Content-length: 39
 
 {
   "value": [
-    "String-value"
+    "f46e3e1f-17f3-4801-8a39-b2ccc58eb6be",
+    "63243e64-228a-433b-a98a-aa8c832af7fe",
+    "f5480dfd-7d77-4d0b-ba2e-3391953cc74a"
   ]
 }
 ```

@@ -2,19 +2,19 @@
 
 
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API: 
+User.ReadWrite.All; Directory.ReadWrite.All
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/assignLicense
-POST /drive/root/createdByUser/assignLicense
-POST /drive/root/lastModifiedByUser/assignLicense
 
 ```
 ### Request headers
-| Name       | Type | Description|
-|:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Header       | Value |
+|:---------------|:--------|
+| Authorization  | Bearer %token%  |
+| Content-Type  | application/json  |
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
@@ -38,9 +38,9 @@ Here is an example of the request.
 ```http
 POST https://graph.microsoft.com/v1.0/users/<objectId>/assignLicense
 Content-type: application/json
-Content-length: 185
 
 {
+  "id": "id-value",
   "addLicenses": [
     {
       "disabledPlans": [
@@ -85,88 +85,7 @@ Content-length: 2708
       "servicePlanId": "servicePlanId-value"
     }
   ],
-  "city": "city-value",
-  "country": "country-value",
-  "department": "department-value",
-  "dirSyncEnabled": true,
-  "displayName": "displayName-value",
-  "facsimileTelephoneNumber": "facsimileTelephoneNumber-value",
-  "givenName": "givenName-value",
-  "immutableId": "immutableId-value",
-  "jobTitle": "jobTitle-value",
-  "lastDirSyncTime": "datetime-value",
-  "mail": "mail-value",
-  "mailNickname": "mailNickname-value",
-  "mobile": "mobile-value",
-  "onPremisesSecurityIdentifier": "onPremisesSecurityIdentifier-value",
-  "otherMails": [
-    "otherMails-value"
-  ],
-  "passwordPolicies": "passwordPolicies-value",
-  "passwordProfile": {
-    "password": "password-value",
-    "forceChangePasswordNextLogin": true
-  },
-  "physicalDeliveryOfficeName": "physicalDeliveryOfficeName-value",
-  "postalCode": "postalCode-value",
-  "preferredLanguage": "preferredLanguage-value",
-  "provisionedPlans": [
-    {
-      "capabilityStatus": "capabilityStatus-value",
-      "provisioningStatus": "provisioningStatus-value",
-      "service": "service-value"
-    }
-  ],
-  "provisioningErrors": [
-    {
-      "errorDetail": "errorDetail-value",
-      "resolved": true,
-      "service": "service-value",
-      "timestamp": "datetime-value"
-    }
-  ],
-  "proxyAddresses": [
-    "proxyAddresses-value"
-  ],
-  "sipProxyAddress": "sipProxyAddress-value",
-  "state": "state-value",
-  "streetAddress": "streetAddress-value",
-  "surname": "surname-value",
-  "telephoneNumber": "telephoneNumber-value",
-  "thumbnailPhoto": "thumbnailPhoto-value",
-  "usageLocation": "usageLocation-value",
-  "userPrincipalName": "userPrincipalName-value",
-  "userType": "userType-value",
-  "emailAddress": "emailAddress-value",
-  "mailboxGuid": "mailboxGuid-value",
-  "aboutMe": "aboutMe-value",
-  "alias": "alias-value",
-  "birthday": "datetime-value",
-  "hireDate": "datetime-value",
-  "interests": [
-    "interests-value"
-  ],
-  "mySite": "mySite-value",
-  "pastProjects": [
-    "pastProjects-value"
-  ],
-  "preferredName": "preferredName-value",
-  "principalName": "principalName-value",
-  "responsibilities": [
-    "responsibilities-value"
-  ],
-  "schools": [
-    "schools-value"
-  ],
-  "skills": [
-    "skills-value"
-  ],
-  "tags": [
-    "tags-value"
-  ],
-  "objectType": "objectType-value",
-  "objectId": "objectId-value",
-  "deletionTimestamp": "datetime-value"
+  ...
 }
 ```
 

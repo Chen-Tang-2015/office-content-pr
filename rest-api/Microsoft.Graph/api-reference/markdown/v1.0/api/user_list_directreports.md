@@ -1,14 +1,15 @@
 # List directReports
 
-Retrieve a list of directoryobject objects.
+Get user's direct reports
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API: 
+User.Read.All; User.ReadWrite.All; Directory.Read.All; Directory.ReadWrite.All; Directory.AccessAsUser.All; User.Read; User.ReadWrite; User.ReadBasic.All
+
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /users/<objectId>/directReports
-GET /drive/root/createdByUser/directReports
-GET /drive/root/lastModifiedByUser/directReports
+
 ```
 ### Optional query parameters
 |Name|Value|Description|
@@ -17,9 +18,10 @@ GET /drive/root/lastModifiedByUser/directReports
 |$top|int|The number of items to return in a result set.|
 
 ### Request headers
-| Name       | Type | Description|
+| Header       | Value|
 |:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Authorization  | Bearer %token%  |
+| Accept  | application/json|
 
 ### Request body
 Do not supply a request body for this method.
@@ -51,9 +53,34 @@ Content-length: 152
 {
   "value": [
     {
-      "objectType": "objectType-value",
-      "objectId": "objectId-value",
-      "deletionTimestamp": "datetime-value"
+     "objectType": "User",
+     "id": "231048d2-2761-4347-b978-07354283363b",
+     "accountEnabled": true,
+     ...
+     "city": "San Diego",
+     "country": "United States",
+     "department": "Sales & Marketing",
+     "displayName": "Alex Darrow",
+     "givenName": "Alex",
+     "jobTitle": "Finance Assistant",
+     "mail": "AlexD@contoso.onmicrosoft.com",
+     "mailNickname": "AlexD",
+     ...
+    },
+    {
+     "objectType": "User",
+     "id": "266048d2-2761-4347-b978-073542833999",
+     "accountEnabled": true,
+     ...
+     "city": "Seattle",
+     "country": "United States",
+     "department": "Sales & Marketing",
+     "displayName": "Gareth Vargas",
+     "givenName": "Gareth",
+     "jobTitle": "Finance Associate",
+     "mail": "GarethV@contoso.onmicrosoft.com",
+     "mailNickname": "GarethV",
+     ...
     }
   ]
 }

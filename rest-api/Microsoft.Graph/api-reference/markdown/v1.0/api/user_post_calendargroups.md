@@ -2,19 +2,19 @@
 
 Use this API to create a new CalendarGroup.
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API: 
+Calendars.ReadWrite
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/calendarGroups
-POST /drive/root/createdByUser/calendarGroups
-POST /drive/root/lastModifiedByUser/calendarGroups
 
 ```
 ### Request headers
-| Name       | Type | Description|
-|:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Header       | Value |
+|:---------------|:--------|
+| Authorization  | Bearer %token%  |
+| Content-Type  | application/json  |
 
 ### Request body
 In the request body, supply a JSON representation of [CalendarGroup](../resources/calendargroup.md) object.
@@ -31,10 +31,15 @@ Here is an example of the request.
   "name": "create_calendargroup_from_user"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/users/<objectId>
+POST https://graph.microsoft.com/v1.0/users/<objectId>/calendarGroups
+Content-type: application/json
+
+{
+  "name": "Birthdays",
+}
 ```
-In the request body, supply a JSON representation of [CalendarGroup](../resources/calendargroup.md) object.
-##### Response
+In the request body, supply a JSON representation of [CalendarGroup](../resources/calendargroup.md) object. Property **name** is the only writable property for a calendar group.
+
 Here is an example of the response.
 <!-- {
   "blockType": "response",
@@ -47,10 +52,10 @@ Content-type: application/json
 Content-length: 110
 
 {
-  "name": "name-value",
-  "classId": "classId-value",
-  "changeKey": "changeKey-value",
   "id": "id-value"
+  "name": "Birthdays",
+  "classId": "4e9edf81-7094-4e68-9e3e-054c76eac9c3",
+  "changeKey": "TEeu8sNApk+MdJFYEFB/9wACR1MoSg=="
 }
 ```
 

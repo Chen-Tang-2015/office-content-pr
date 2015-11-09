@@ -1,20 +1,20 @@
 # Create MailFolder
 
-Use this API to create a new MailFolder.
+Use this API to create a new mail folder.
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API: 
+Mail.ReadWrite
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/mailFolders
-POST /drive/root/createdByUser/mailFolders
-POST /drive/root/lastModifiedByUser/mailFolders
 
 ```
 ### Request headers
-| Name       | Type | Description|
-|:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Header       | Value |
+|:---------------|:--------|
+| Authorization  | Bearer %token%  |
+| Content-Type  | application/json  |
 
 ### Request body
 In the request body, supply a JSON representation of [MailFolder](../resources/mailfolder.md) object.
@@ -31,9 +31,15 @@ Here is an example of the request.
   "name": "create_mailfolder_from_user"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/users/<objectId>
+POST https://graph.microsoft.com/v1.0/users/<objectId>/mailFolders
+Content-type: application/json
+
+{
+    "displayName": "Tailspin Pipeline"
+}
 ```
 In the request body, supply a JSON representation of [MailFolder](../resources/mailfolder.md) object.
+
 ##### Response
 Here is an example of the response.
 <!-- {
@@ -47,11 +53,11 @@ Content-type: application/json
 Content-length: 179
 
 {
-  "displayName": "displayName-value",
+  "displayName": "Tailspin Pipeline",
   "parentFolderId": "parentFolderId-value",
-  "childFolderCount": 99,
-  "unreadItemCount": 99,
-  "totalItemCount": 99,
+  "childFolderCount": 0,
+  "unreadItemCount": 0,
+  "totalItemCount": 0,
   "id": "id-value"
 }
 ```

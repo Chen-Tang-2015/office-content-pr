@@ -2,13 +2,13 @@
 
 Retrieve a list of event objects.
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API: 
+Calendars.Read; Calendars.ReadWrite
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /users/<objectId>/events
-GET /drive/root/createdByUser/events
-GET /drive/root/lastModifiedByUser/events
+
 ```
 ### Optional query parameters
 |Name|Value|Description|
@@ -23,9 +23,10 @@ GET /drive/root/lastModifiedByUser/events
 |$top|int|The number of items to return in a result set.|
 
 ### Request headers
-| Name       | Type | Description|
-|:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Header       | Value |
+|:---------------|:--------|
+| Authorization  | Bearer %token%  |
+| Accept  | application/json|
 
 ### Request body
 Do not supply a request body for this method.

@@ -1,27 +1,27 @@
 # user: checkMemberGroups
-
+Call the checkMemberGroups function to check for membership in a list of groups. The check is transitive.
 
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API: 
+User.Read.All; User.ReadWrite.All; Directory.Read.All; Directory.ReadWrite.All; Directory.AccessAsUser.All
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 POST /users/<objectId>/checkMemberGroups
-POST /drive/root/createdByUser/checkMemberGroups
-POST /drive/root/lastModifiedByUser/checkMemberGroups
 
 ```
 ### Request headers
-| Name       | Type | Description|
-|:---------------|:--------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Header       | Value |
+|:---------------|:--------|
+| Authorization  | Bearer %token%  |
+| Content-Type  | application/json  |
 
 ### Request body
 In the request body, provide a JSON object with the following parameters.
 
 | Parameter	   | Type	|Description|
 |:---------------|:--------|:----------|
-|groupIds|String||
+|groupIds|String|An array of group ids|
 
 ### Response
 If successful, this method returns `200, OK` response code and String collection object in the response body.
@@ -37,11 +37,10 @@ Here is an example of the request.
 ```http
 POST https://graph.microsoft.com/v1.0/users/<objectId>/checkMemberGroups
 Content-type: application/json
-Content-length: 44
 
 {
   "groupIds": [
-    "groupIds-value"
+    "876af760-a8cd-49f0-b22c-bcb872ee97a6", "12ce3e9a-c5c5-4062-8791-3929f4da6934"
   ]
 }
 ```
@@ -61,7 +60,7 @@ Content-length: 39
 
 {
   "value": [
-    "String-value"
+    "876af760-a8cd-49f0-b22c-bcb872ee97a6"
   ]
 }
 ```

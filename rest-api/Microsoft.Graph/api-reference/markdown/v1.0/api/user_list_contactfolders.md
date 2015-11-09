@@ -1,14 +1,14 @@
 # List contactFolders
 
-Retrieve a list of contactfolder objects.
+Get the contact folder collection from the Contacts folder.
 ### Prerequisites
-The following **scopes** are required to execute this API: 
+One of the following **scopes** is required to execute this API: 
+Contacts.Read; Contacts.ReadWrite
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /users/<objectId>/contactFolders
-GET /drive/root/createdByUser/contactFolders
-GET /drive/root/lastModifiedByUser/contactFolders
+
 ```
 ### Optional query parameters
 |Name|Value|Description|
@@ -23,9 +23,9 @@ GET /drive/root/lastModifiedByUser/contactFolders
 |$top|int|The number of items to return in a result set.|
 
 ### Request headers
-| Name       | Type | Description|
-|:-----------|:------|:----------|
-| X-Sample-Header  | string  | Sample HTTP header. Update accordingly or remove if not needed|
+| Header       | Value |
+|:---------------|:--------|
+| Authorization  | Bearer %token%  |
 
 ### Request body
 Do not supply a request body for this method.
@@ -58,7 +58,7 @@ Content-length: 145
   "value": [
     {
       "parentFolderId": "parentFolderId-value",
-      "displayName": "displayName-value",
+      "displayName": "Vendors",
       "id": "id-value"
     }
   ]
