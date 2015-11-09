@@ -17,13 +17,13 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="list-directreports">List directReports</h1>
-<p>Retrieve a list of directoryobject objects.</p>
+<p>Get user's direct reports</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<p>One of the following <strong>scopes</strong> is required to execute this API: 
+User.Read.All; User.ReadWrite.All; Directory.Read.All; Directory.ReadWrite.All; Directory.AccessAsUser.All; User.Read; User.ReadWrite; User.ReadBasic.All</p>
 <h3 id="http-request">HTTP request</h3>
 <pre><code class="http">GET /users/&lt;objectId&gt;/directReports
-GET /drive/root/createdByUser/directReports
-GET /drive/root/lastModifiedByUser/directReports
+
 </code></pre>
 
 <h3 id="optional-query-parameters">Optional query parameters</h3>
@@ -52,16 +52,21 @@ GET /drive/root/lastModifiedByUser/directReports
 <table>
 <thead>
 <tr>
-	<th align="left">Name</th>
-	<th align="left">Type</th>
-	<th align="left">Description</th>
+	<th align="left">Header</th>
+	<th align="left">Value</th>
+	<th align="left">&nbsp;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-	<td align="left">X-Sample-Header</td>
-	<td align="left">string</td>
-	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
+	<td align="left">Authorization</td>
+	<td align="left">Bearer %token%</td>
+	<td align="left">&nbsp;</td>
+</tr>
+<tr>
+	<td align="left">Accept</td>
+	<td align="left">application/json</td>
+	<td align="left">&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -84,9 +89,34 @@ Content-length: 152
 {
   &quot;value&quot;: [
     {
-      &quot;objectType&quot;: &quot;objectType-value&quot;,
-      &quot;objectId&quot;: &quot;objectId-value&quot;,
-      &quot;deletionTimestamp&quot;: &quot;datetime-value&quot;
+     &quot;objectType&quot;: &quot;User&quot;,
+     &quot;id&quot;: &quot;231048d2-2761-4347-b978-07354283363b&quot;,
+     &quot;accountEnabled&quot;: true,
+     ...
+     &quot;city&quot;: &quot;San Diego&quot;,
+     &quot;country&quot;: &quot;United States&quot;,
+     &quot;department&quot;: &quot;Sales &amp; Marketing&quot;,
+     &quot;displayName&quot;: &quot;Alex Darrow&quot;,
+     &quot;givenName&quot;: &quot;Alex&quot;,
+     &quot;jobTitle&quot;: &quot;Finance Assistant&quot;,
+     &quot;mail&quot;: &quot;AlexD@contoso.onmicrosoft.com&quot;,
+     &quot;mailNickname&quot;: &quot;AlexD&quot;,
+     ...
+    },
+    {
+     &quot;objectType&quot;: &quot;User&quot;,
+     &quot;id&quot;: &quot;266048d2-2761-4347-b978-073542833999&quot;,
+     &quot;accountEnabled&quot;: true,
+     ...
+     &quot;city&quot;: &quot;Seattle&quot;,
+     &quot;country&quot;: &quot;United States&quot;,
+     &quot;department&quot;: &quot;Sales &amp; Marketing&quot;,
+     &quot;displayName&quot;: &quot;Gareth Vargas&quot;,
+     &quot;givenName&quot;: &quot;Gareth&quot;,
+     &quot;jobTitle&quot;: &quot;Finance Associate&quot;,
+     &quot;mail&quot;: &quot;GarethV@contoso.onmicrosoft.com&quot;,
+     &quot;mailNickname&quot;: &quot;GarethV&quot;,
+     ...
     }
   ]
 }

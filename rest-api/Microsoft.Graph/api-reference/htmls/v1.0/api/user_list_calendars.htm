@@ -17,13 +17,13 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="list-calendars">List calendars</h1>
-<p>Retrieve a list of calendar objects.</p>
+<p>Get the user's calendars. To get the user's default calendar, use /calendar shortcut property. To get a different calendar, specify the calendar ID as the index of the calendars collection.</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<p>One of the following <strong>scopes</strong> is required to execute this API: 
+Calendars.Read; Calendars.ReadWrite</p>
 <h3 id="http-request">HTTP request</h3>
 <pre><code class="http">GET /users/&lt;objectId&gt;/calendars
-GET /drive/root/createdByUser/calendars
-GET /drive/root/lastModifiedByUser/calendars
+
 </code></pre>
 
 <h3 id="optional-query-parameters">Optional query parameters</h3>
@@ -82,16 +82,18 @@ GET /drive/root/lastModifiedByUser/calendars
 <table>
 <thead>
 <tr>
-	<th align="left">Name</th>
-	<th align="left">Type</th>
-	<th align="left">Description</th>
+	<th align="left">Header</th>
+	<th align="left">Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-	<td align="left">X-Sample-Header</td>
-	<td align="left">string</td>
-	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
+	<td align="left">Authorization</td>
+	<td align="left">Bearer %token%</td>
+</tr>
+<tr>
+	<td align="left">Accept</td>
+	<td align="left">application/json</td>
 </tr>
 </tbody>
 </table>
@@ -112,12 +114,18 @@ Content-type: application/json
 Content-length: 151
 
 {
-  &quot;value&quot;: [
+    &quot;value&quot;: [
     {
-      &quot;name&quot;: &quot;name-value&quot;,
-      &quot;color&quot;: &quot;color-value&quot;,
-      &quot;changeKey&quot;: &quot;changeKey-value&quot;,
-      &quot;id&quot;: &quot;id-value&quot;
+      &quot;id&quot;: &quot;id-value&quot;,
+      &quot;name&quot;: &quot;Calendar&quot;,
+      &quot;color&quot;: &quot;Auto&quot;,
+      &quot;changeKey&quot;: &quot;TEeu8sNApk+MdJFYEFB/9wABwoTe4Q==&quot;
+    },
+    {
+      &quot;id&quot;: &quot;id-value&quot;,
+      &quot;name&quot;: &quot;Family Calendar&quot;,
+      &quot;color&quot;: &quot;Auto&quot;,
+      &quot;changeKey&quot;: &quot;TEeu8sNApk+MdJFYEFB/9wABwoTe4w==&quot;
     }
   ]
 }

@@ -19,11 +19,10 @@
             <h1 id="create-calendargroup">Create CalendarGroup</h1>
 <p>Use this API to create a new CalendarGroup.</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<p>One of the following <strong>scopes</strong> is required to execute this API: 
+Calendars.ReadWrite</p>
 <h3 id="http-request">HTTP request</h3>
 <pre><code class="http">POST /users/&lt;objectId&gt;/calendarGroups
-POST /drive/root/createdByUser/calendarGroups
-POST /drive/root/lastModifiedByUser/calendarGroups
 
 </code></pre>
 
@@ -31,16 +30,18 @@ POST /drive/root/lastModifiedByUser/calendarGroups
 <table>
 <thead>
 <tr>
-	<th align="left">Name</th>
-	<th align="left">Type</th>
-	<th align="left">Description</th>
+	<th align="left">Header</th>
+	<th align="left">Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-	<td align="left">X-Sample-Header</td>
-	<td align="left">string</td>
-	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
+	<td align="left">Authorization</td>
+	<td align="left">Bearer %token%</td>
+</tr>
+<tr>
+	<td align="left">Content-Type</td>
+	<td align="left">application/json</td>
 </tr>
 </tbody>
 </table>
@@ -51,21 +52,25 @@ POST /drive/root/lastModifiedByUser/calendarGroups
 <h3 id="example">Example</h3>
 <h5 id="request">Request</h5>
 <p>Here is an example of the request.</p>
-<pre><code class="http">POST https://graph.microsoft.com/v1.0/users/&lt;objectId&gt;
+<pre><code class="http">POST https://graph.microsoft.com/v1.0/users/&lt;objectId&gt;/calendarGroups
+Content-type: application/json
+
+{
+  &quot;name&quot;: &quot;Birthdays&quot;,
+}
 </code></pre>
 
-<p>In the request body, supply a JSON representation of <a href="../resources/calendargroup.htm">CalendarGroup</a> object.</p>
-<h5 id="response-1">Response</h5>
+<p>In the request body, supply a JSON representation of <a href="../resources/calendargroup.htm">CalendarGroup</a> object. Property <strong>name</strong> is the only writable property for a calendar group.</p>
 <p>Here is an example of the response.</p>
 <pre><code class="http">HTTP/1.1 201 Created
 Content-type: application/json
 Content-length: 110
 
 {
-  &quot;name&quot;: &quot;name-value&quot;,
-  &quot;classId&quot;: &quot;classId-value&quot;,
-  &quot;changeKey&quot;: &quot;changeKey-value&quot;,
   &quot;id&quot;: &quot;id-value&quot;
+  &quot;name&quot;: &quot;Birthdays&quot;,
+  &quot;classId&quot;: &quot;4e9edf81-7094-4e68-9e3e-054c76eac9c3&quot;,
+  &quot;changeKey&quot;: &quot;TEeu8sNApk+MdJFYEFB/9wACR1MoSg==&quot;
 }
 </code></pre>
 

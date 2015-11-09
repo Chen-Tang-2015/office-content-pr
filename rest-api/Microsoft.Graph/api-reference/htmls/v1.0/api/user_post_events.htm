@@ -19,11 +19,10 @@
             <h1 id="create-event">Create Event</h1>
 <p>Use this API to create a new Event.</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<p>One of the following <strong>scopes</strong> is required to execute this API: 
+Calendars.ReadWrite</p>
 <h3 id="http-request">HTTP request</h3>
 <pre><code class="http">POST /users/&lt;objectId&gt;/events
-POST /drive/root/createdByUser/events
-POST /drive/root/lastModifiedByUser/events
 
 </code></pre>
 
@@ -31,16 +30,21 @@ POST /drive/root/lastModifiedByUser/events
 <table>
 <thead>
 <tr>
-	<th align="left">Name</th>
-	<th align="left">Type</th>
-	<th align="left">Description</th>
+	<th align="left">Header</th>
+	<th align="left">Value</th>
+	<th align="left">&nbsp;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-	<td align="left">X-Sample-Header</td>
-	<td align="left">string</td>
-	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
+	<td align="left">Authorization</td>
+	<td align="left">Bearer %token%</td>
+	<td align="left">&nbsp;</td>
+</tr>
+<tr>
+	<td align="left">Content-Type</td>
+	<td align="left">application/json</td>
+	<td align="left">&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -51,7 +55,7 @@ POST /drive/root/lastModifiedByUser/events
 <h3 id="example">Example</h3>
 <h5 id="request">Request</h5>
 <p>Here is an example of the request.</p>
-<pre><code class="http">POST https://graph.microsoft.com/v1.0/users/&lt;objectId&gt;
+<pre><code class="http">POST https://graph.microsoft.com/v1.0/users/&lt;objectId&gt;/events
 </code></pre>
 
 <p>In the request body, supply a JSON representation of <a href="../resources/event.htm">Event</a> object.</p>

@@ -19,28 +19,49 @@
             <h1 id="get-user">Get user</h1>
 <p>Retrieve the properties and relationships of user object.</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<p>One of the following <strong>scopes</strong> is required to execute this API: 
+User.Read.All; User.ReadWrite.All; Directory.Read.All; Directory.ReadWrite.All; Directory.AccessAsUser.All; User.Read; User.ReadWrite; User.ReadBasic.All</p>
 <h3 id="http-request">HTTP request</h3>
 <pre><code class="http">GET /users/&lt;objectId&gt;
-GET /drive/root/createdByUser
-GET /drive/root/lastModifiedByUser
+
 </code></pre>
 
 <h3 id="optional-query-parameters">Optional query parameters</h3>
-<h3 id="request-headers">Request headers</h3>
 <table>
 <thead>
 <tr>
 	<th align="left">Name</th>
-	<th align="left">Type</th>
+	<th align="left">Value</th>
 	<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-	<td align="left">X-Sample-Header</td>
+	<td align="left">$select</td>
 	<td align="left">string</td>
-	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
+	<td align="left">Comma-separated list of properties to include in the response.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-headers">Request headers</h3>
+<table>
+<thead>
+<tr>
+	<th align="left">Header</th>
+	<th align="left">Value</th>
+	<th align="left">&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">Authorization</td>
+	<td align="left">Bearer %token%</td>
+	<td align="left">&nbsp;</td>
+</tr>
+<tr>
+	<td align="left">Accept</td>
+	<td align="left">application/json</td>
+	<td align="left">&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -61,105 +82,25 @@ Content-type: application/json
 Content-length: 2708
 
 {
+  &quot;objectType&quot;: &quot;User&quot;,
+  &quot;id&quot;: &quot;231048d2-2761-4347-b978-07354283363b&quot;,
   &quot;accountEnabled&quot;: true,
-  &quot;assignedLicenses&quot;: [
-    {
-      &quot;disabledPlans&quot;: [
-        &quot;disabledPlans-value&quot;
-      ],
-      &quot;skuId&quot;: &quot;skuId-value&quot;
-    }
-  ],
-  &quot;assignedPlans&quot;: [
-    {
-      &quot;assignedTimestamp&quot;: &quot;datetime-value&quot;,
-      &quot;capabilityStatus&quot;: &quot;capabilityStatus-value&quot;,
-      &quot;service&quot;: &quot;service-value&quot;,
-      &quot;servicePlanId&quot;: &quot;servicePlanId-value&quot;
-    }
-  ],
-  &quot;city&quot;: &quot;city-value&quot;,
-  &quot;country&quot;: &quot;country-value&quot;,
-  &quot;department&quot;: &quot;department-value&quot;,
-  &quot;dirSyncEnabled&quot;: true,
-  &quot;displayName&quot;: &quot;displayName-value&quot;,
-  &quot;facsimileTelephoneNumber&quot;: &quot;facsimileTelephoneNumber-value&quot;,
-  &quot;givenName&quot;: &quot;givenName-value&quot;,
-  &quot;immutableId&quot;: &quot;immutableId-value&quot;,
-  &quot;jobTitle&quot;: &quot;jobTitle-value&quot;,
-  &quot;lastDirSyncTime&quot;: &quot;datetime-value&quot;,
-  &quot;mail&quot;: &quot;mail-value&quot;,
-  &quot;mailNickname&quot;: &quot;mailNickname-value&quot;,
-  &quot;mobile&quot;: &quot;mobile-value&quot;,
-  &quot;onPremisesSecurityIdentifier&quot;: &quot;onPremisesSecurityIdentifier-value&quot;,
-  &quot;otherMails&quot;: [
-    &quot;otherMails-value&quot;
-  ],
-  &quot;passwordPolicies&quot;: &quot;passwordPolicies-value&quot;,
-  &quot;passwordProfile&quot;: {
-    &quot;password&quot;: &quot;password-value&quot;,
-    &quot;forceChangePasswordNextLogin&quot;: true
-  },
-  &quot;physicalDeliveryOfficeName&quot;: &quot;physicalDeliveryOfficeName-value&quot;,
-  &quot;postalCode&quot;: &quot;postalCode-value&quot;,
-  &quot;preferredLanguage&quot;: &quot;preferredLanguage-value&quot;,
-  &quot;provisionedPlans&quot;: [
-    {
-      &quot;capabilityStatus&quot;: &quot;capabilityStatus-value&quot;,
-      &quot;provisioningStatus&quot;: &quot;provisioningStatus-value&quot;,
-      &quot;service&quot;: &quot;service-value&quot;
-    }
-  ],
-  &quot;provisioningErrors&quot;: [
-    {
-      &quot;errorDetail&quot;: &quot;errorDetail-value&quot;,
-      &quot;resolved&quot;: true,
-      &quot;service&quot;: &quot;service-value&quot;,
-      &quot;timestamp&quot;: &quot;datetime-value&quot;
-    }
-  ],
-  &quot;proxyAddresses&quot;: [
-    &quot;proxyAddresses-value&quot;
-  ],
-  &quot;sipProxyAddress&quot;: &quot;sipProxyAddress-value&quot;,
-  &quot;state&quot;: &quot;state-value&quot;,
-  &quot;streetAddress&quot;: &quot;streetAddress-value&quot;,
-  &quot;surname&quot;: &quot;surname-value&quot;,
-  &quot;telephoneNumber&quot;: &quot;telephoneNumber-value&quot;,
-  &quot;thumbnailPhoto&quot;: &quot;thumbnailPhoto-value&quot;,
-  &quot;usageLocation&quot;: &quot;usageLocation-value&quot;,
-  &quot;userPrincipalName&quot;: &quot;userPrincipalName-value&quot;,
-  &quot;userType&quot;: &quot;userType-value&quot;,
-  &quot;emailAddress&quot;: &quot;emailAddress-value&quot;,
-  &quot;mailboxGuid&quot;: &quot;mailboxGuid-value&quot;,
-  &quot;aboutMe&quot;: &quot;aboutMe-value&quot;,
-  &quot;alias&quot;: &quot;alias-value&quot;,
-  &quot;birthday&quot;: &quot;datetime-value&quot;,
-  &quot;hireDate&quot;: &quot;datetime-value&quot;,
-  &quot;interests&quot;: [
-    &quot;interests-value&quot;
-  ],
-  &quot;mySite&quot;: &quot;mySite-value&quot;,
-  &quot;pastProjects&quot;: [
-    &quot;pastProjects-value&quot;
-  ],
-  &quot;preferredName&quot;: &quot;preferredName-value&quot;,
-  &quot;principalName&quot;: &quot;principalName-value&quot;,
-  &quot;responsibilities&quot;: [
-    &quot;responsibilities-value&quot;
-  ],
-  &quot;schools&quot;: [
-    &quot;schools-value&quot;
-  ],
-  &quot;skills&quot;: [
-    &quot;skills-value&quot;
-  ],
-  &quot;tags&quot;: [
-    &quot;tags-value&quot;
-  ],
-  &quot;objectType&quot;: &quot;objectType-value&quot;,
-  &quot;objectId&quot;: &quot;objectId-value&quot;,
-  &quot;deletionTimestamp&quot;: &quot;datetime-value&quot;
+  ...
+  &quot;city&quot;: &quot;San Diego&quot;,
+  &quot;country&quot;: &quot;United States&quot;,
+  &quot;department&quot;: &quot;Sales &amp; Marketing&quot;,
+  &quot;displayName&quot;: &quot;Alex Darrow&quot;,
+  &quot;givenName&quot;: &quot;Alex&quot;,
+  &quot;jobTitle&quot;: &quot;Marketing Assistant&quot;,
+  &quot;mail&quot;: &quot;AlexD@contoso.onmicrosoft.com&quot;,
+  &quot;mailNickname&quot;: &quot;AlexD&quot;,
+  ...
+  &quot;state&quot;: &quot;CA&quot;,
+  &quot;streetAddress&quot;: &quot;9256 Towne Center Dr., Suite 400&quot;,
+  &quot;surname&quot;: &quot;Darrow&quot;,
+  &quot;usageLocation&quot;: &quot;US&quot;,
+  &quot;userPrincipalName&quot;: &quot;AlexD@contoso.onmicrosoft.com&quot;,
+  ...
 }
 </code></pre>
 

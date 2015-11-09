@@ -17,13 +17,13 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="list-mailfolders">List mailFolders</h1>
-<p>Retrieve a list of mailfolder objects.</p>
+<p>Get user's mail folders</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<p>One of the following <strong>scopes</strong> is required to execute this API: 
+Mail.Read; Mail.ReadWrite</p>
 <h3 id="http-request">HTTP request</h3>
 <pre><code class="http">GET /users/&lt;objectId&gt;/mailFolders
-GET /drive/root/createdByUser/mailFolders
-GET /drive/root/lastModifiedByUser/mailFolders
+
 </code></pre>
 
 <h3 id="optional-query-parameters">Optional query parameters</h3>
@@ -82,16 +82,18 @@ GET /drive/root/lastModifiedByUser/mailFolders
 <table>
 <thead>
 <tr>
-	<th align="left">Name</th>
-	<th align="left">Type</th>
-	<th align="left">Description</th>
+	<th align="left">Header</th>
+	<th align="left">Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-	<td align="left">X-Sample-Header</td>
-	<td align="left">string</td>
-	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
+	<td align="left">Authorization</td>
+	<td align="left">Bearer %token%</td>
+</tr>
+<tr>
+	<td align="left">Accept</td>
+	<td align="left">application/json</td>
 </tr>
 </tbody>
 </table>
@@ -114,12 +116,29 @@ Content-length: 232
 {
   &quot;value&quot;: [
     {
-      &quot;displayName&quot;: &quot;displayName-value&quot;,
-      &quot;parentFolderId&quot;: &quot;parentFolderId-value&quot;,
-      &quot;childFolderCount&quot;: 99,
-      &quot;unreadItemCount&quot;: 99,
-      &quot;totalItemCount&quot;: 99,
       &quot;id&quot;: &quot;id-value&quot;
+      &quot;DisplayName&quot;: &quot;Deleted Items&quot;,
+      &quot;ParentFolderId&quot;: &quot;parentFolderId-value&quot;,
+      &quot;ChildFolderCount&quot;: 0,
+      &quot;UnreadItemCount&quot;: 2,
+      &quot;TotalItemCount&quot;: 40
+    },
+    {
+      &quot;id&quot;: &quot;id-value&quot;
+      &quot;DisplayName&quot;: &quot;Inbox&quot;,
+      &quot;ParentFolderId&quot;: &quot;parentFolderId-value&quot;,
+      &quot;ChildFolderCount&quot;: 4,
+      &quot;UnreadItemCount&quot;: 15,
+      &quot;TotalItemCount&quot;: 15
+    },
+    ...
+    {
+      &quot;id&quot;: &quot;id-value&quot;
+      &quot;DisplayName&quot;: &quot;Sent Items&quot;,
+      &quot;ParentFolderId&quot;: &quot;parentFolderId-value&quot;,
+      &quot;ChildFolderCount&quot;: 0,
+      &quot;UnreadItemCount&quot;: 1,
+      &quot;TotalItemCount&quot;: 30
     }
   ]
 }

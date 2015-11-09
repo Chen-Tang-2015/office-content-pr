@@ -19,11 +19,10 @@
             <h1 id="delete-user">Delete user</h1>
 <p>Delete user.</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<p>One of the following <strong>scopes</strong> is required to execute this API: 
+Users.ReadWrite.All; Directory.ReadWrite.All</p>
 <h3 id="http-request">HTTP request</h3>
 <pre><code class="http">DELETE /users/&lt;objectId&gt;
-DELETE /drive/root/createdByUser
-DELETE /drive/root/lastModifiedByUser
 
 </code></pre>
 
@@ -31,16 +30,16 @@ DELETE /drive/root/lastModifiedByUser
 <table>
 <thead>
 <tr>
-	<th align="left">Name</th>
-	<th align="left">Type</th>
-	<th align="left">Description</th>
+	<th align="left">Header</th>
+	<th align="left">Value</th>
+	<th align="left">&nbsp;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-	<td align="left">X-Sample-Header</td>
-	<td align="left">string</td>
-	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
+	<td align="left">Authorization</td>
+	<td align="left">Bearer %token%</td>
+	<td align="left">&nbsp;</td>
 </tr>
 </tbody>
 </table>

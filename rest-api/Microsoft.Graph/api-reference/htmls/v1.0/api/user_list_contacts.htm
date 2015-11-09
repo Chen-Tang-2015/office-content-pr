@@ -17,13 +17,13 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="list-contacts">List contacts</h1>
-<p>Retrieve a list of contact objects.</p>
+<p>Get the user's personal contacts</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<p>One of the following <strong>scopes</strong> is required to execute this API: 
+Contacts.Read; Contacts.ReadWrite</p>
 <h3 id="http-request">HTTP request</h3>
 <pre><code class="http">GET /users/&lt;objectId&gt;/contacts
-GET /drive/root/createdByUser/contacts
-GET /drive/root/lastModifiedByUser/contacts
+
 </code></pre>
 
 <h3 id="optional-query-parameters">Optional query parameters</h3>
@@ -114,77 +114,20 @@ Content-length: 2290
 {
   &quot;value&quot;: [
     {
-      &quot;parentFolderId&quot;: &quot;parentFolderId-value&quot;,
-      &quot;birthday&quot;: &quot;datetime-value&quot;,
-      &quot;fileAs&quot;: &quot;fileAs-value&quot;,
-      &quot;displayName&quot;: &quot;displayName-value&quot;,
-      &quot;givenName&quot;: &quot;givenName-value&quot;,
-      &quot;initials&quot;: &quot;initials-value&quot;,
-      &quot;middleName&quot;: &quot;middleName-value&quot;,
-      &quot;nickName&quot;: &quot;nickName-value&quot;,
-      &quot;surname&quot;: &quot;surname-value&quot;,
-      &quot;title&quot;: &quot;title-value&quot;,
-      &quot;yomiGivenName&quot;: &quot;yomiGivenName-value&quot;,
-      &quot;yomiSurname&quot;: &quot;yomiSurname-value&quot;,
-      &quot;yomiCompanyName&quot;: &quot;yomiCompanyName-value&quot;,
-      &quot;generation&quot;: &quot;generation-value&quot;,
-      &quot;emailAddresses&quot;: [
-        {
-          &quot;name&quot;: &quot;name-value&quot;,
-          &quot;address&quot;: &quot;address-value&quot;
-        }
-      ],
-      &quot;imAddresses&quot;: [
-        &quot;imAddresses-value&quot;
-      ],
-      &quot;jobTitle&quot;: &quot;jobTitle-value&quot;,
-      &quot;companyName&quot;: &quot;companyName-value&quot;,
-      &quot;department&quot;: &quot;department-value&quot;,
-      &quot;officeLocation&quot;: &quot;officeLocation-value&quot;,
-      &quot;profession&quot;: &quot;profession-value&quot;,
-      &quot;businessHomePage&quot;: &quot;businessHomePage-value&quot;,
-      &quot;assistantName&quot;: &quot;assistantName-value&quot;,
-      &quot;manager&quot;: &quot;manager-value&quot;,
-      &quot;homePhones&quot;: [
-        &quot;homePhones-value&quot;
-      ],
-      &quot;mobilePhone1&quot;: &quot;mobilePhone1-value&quot;,
-      &quot;businessPhones&quot;: [
-        &quot;businessPhones-value&quot;
-      ],
-      &quot;homeAddress&quot;: {
-        &quot;street&quot;: &quot;street-value&quot;,
-        &quot;city&quot;: &quot;city-value&quot;,
-        &quot;state&quot;: &quot;state-value&quot;,
-        &quot;countryOrRegion&quot;: &quot;countryOrRegion-value&quot;,
-        &quot;postalCode&quot;: &quot;postalCode-value&quot;
-      },
-      &quot;businessAddress&quot;: {
-        &quot;street&quot;: &quot;street-value&quot;,
-        &quot;city&quot;: &quot;city-value&quot;,
-        &quot;state&quot;: &quot;state-value&quot;,
-        &quot;countryOrRegion&quot;: &quot;countryOrRegion-value&quot;,
-        &quot;postalCode&quot;: &quot;postalCode-value&quot;
-      },
-      &quot;otherAddress&quot;: {
-        &quot;street&quot;: &quot;street-value&quot;,
-        &quot;city&quot;: &quot;city-value&quot;,
-        &quot;state&quot;: &quot;state-value&quot;,
-        &quot;countryOrRegion&quot;: &quot;countryOrRegion-value&quot;,
-        &quot;postalCode&quot;: &quot;postalCode-value&quot;
-      },
-      &quot;spouseName&quot;: &quot;spouseName-value&quot;,
-      &quot;personalNotes&quot;: &quot;personalNotes-value&quot;,
-      &quot;children&quot;: [
-        &quot;children-value&quot;
-      ],
-      &quot;createdDateTime&quot;: &quot;datetime-value&quot;,
-      &quot;lastModifiedDateTime&quot;: &quot;datetime-value&quot;,
-      &quot;changeKey&quot;: &quot;changeKey-value&quot;,
-      &quot;categories&quot;: [
-        &quot;categories-value&quot;
-      ],
       &quot;id&quot;: &quot;id-value&quot;
+      &quot;createdDateTime&quot;: &quot;2013-06-01T17:20:53Z&quot;,
+      &quot;lastModifiedDateTime&quot;: &quot;2013-06-03T01:06:30Z&quot;,
+      ...
+      &quot;displayName&quot;: &quot;Aziz Hassouneh&quot;,
+      ...
+    },
+    {
+      &quot;id&quot;: &quot;id-value&quot;
+      &quot;createdDateTime&quot;: &quot;2013-06-01T17:20:52Z&quot;,
+      &quot;lastModifiedDateTime&quot;: &quot;2013-06-03T01:06:30Z&quot;,
+      ...
+      &quot;displayName&quot;: &quot;Denis Dehenne&quot;,
+      ...
     }
   ]
 }

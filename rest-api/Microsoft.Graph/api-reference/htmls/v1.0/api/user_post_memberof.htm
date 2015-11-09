@@ -19,11 +19,10 @@
             <h1 id="create-memberof">Create memberOf</h1>
 <p>Use this API to create a new memberOf.</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<p>One of the following <strong>scopes</strong> is required to execute this API: 
+User.ReadWrite; User.ReadWrite.All; Directory.ReadWrite.All</p>
 <h3 id="http-request">HTTP request</h3>
 <pre><code class="http">POST /users/&lt;objectId&gt;/memberOf
-POST /drive/root/createdByUser/memberOf
-POST /drive/root/lastModifiedByUser/memberOf
 
 </code></pre>
 
@@ -31,16 +30,18 @@ POST /drive/root/lastModifiedByUser/memberOf
 <table>
 <thead>
 <tr>
-	<th align="left">Name</th>
-	<th align="left">Type</th>
-	<th align="left">Description</th>
+	<th align="left">Header</th>
+	<th align="left">Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-	<td align="left">X-Sample-Header</td>
-	<td align="left">string</td>
-	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
+	<td align="left">Authorization</td>
+	<td align="left">Bearer %token%</td>
+</tr>
+<tr>
+	<td align="left">Content-Type</td>
+	<td align="left">application/json</td>
 </tr>
 </tbody>
 </table>

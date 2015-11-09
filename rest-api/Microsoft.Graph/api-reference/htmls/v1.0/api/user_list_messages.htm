@@ -19,11 +19,11 @@
             <h1 id="list-messages">List messages</h1>
 <p>Retrieve a list of message objects.</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<p>One of the following <strong>scopes</strong> is required to execute this API: 
+Mail.Read; Mail.ReadWrite</p>
 <h3 id="http-request">HTTP request</h3>
 <pre><code class="http">GET /users/&lt;objectId&gt;/messages
-GET /drive/root/createdByUser/messages
-GET /drive/root/lastModifiedByUser/messages
+
 </code></pre>
 
 <h3 id="optional-query-parameters">Optional query parameters</h3>
@@ -82,16 +82,18 @@ GET /drive/root/lastModifiedByUser/messages
 <table>
 <thead>
 <tr>
-	<th align="left">Name</th>
-	<th align="left">Type</th>
-	<th align="left">Description</th>
+	<th align="left">Header</th>
+	<th align="left">Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-	<td align="left">X-Sample-Header</td>
-	<td align="left">string</td>
-	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
+	<td align="left">Authorization</td>
+	<td align="left">Bearer %token%</td>
+</tr>
+<tr>
+	<td align="left">Accept</td>
+	<td align="left">application/json</td>
 </tr>
 </tbody>
 </table>
@@ -112,83 +114,53 @@ Content-type: application/json
 Content-length: 1863
 
 {
-  &quot;value&quot;: [
-    {
-      &quot;receivedDateTime&quot;: &quot;datetime-value&quot;,
-      &quot;sentDateTime&quot;: &quot;datetime-value&quot;,
-      &quot;hasAttachments&quot;: true,
-      &quot;subject&quot;: &quot;subject-value&quot;,
-      &quot;body&quot;: {
-        &quot;contentType&quot;: &quot;contentType-value&quot;,
-        &quot;content&quot;: &quot;content-value&quot;
-      },
-      &quot;bodyPreview&quot;: &quot;bodyPreview-value&quot;,
-      &quot;importance&quot;: &quot;importance-value&quot;,
-      &quot;parentFolderId&quot;: &quot;parentFolderId-value&quot;,
-      &quot;sender&quot;: {
+    &quot;id&quot;: &quot;id-value&quot;,
+    &quot;createdDateTime&quot;: &quot;2015-11-05T22:33:48Z&quot;,
+    &quot;lastModifiedDateTime&quot;: &quot;2015-11-05T22:33:48Z&quot;,
+    &quot;bhangeKey&quot;: &quot;CQAAABYAAABMR67yw0CmT4x0kVgQUH/3AAJHUywy&quot;,
+    &quot;categories&quot;: [],
+    &quot;receivedDateTime&quot;: &quot;2015-11-05T22:33:48Z&quot;,
+    &quot;sentDateTime&quot;: &quot;2015-11-05T22:33:48Z&quot;,
+    &quot;hasAttachments&quot;: false,
+    &quot;subject&quot;: &quot;What is Clutter?&quot;,
+    &quot;body&quot;: {
+        &quot;contentType&quot;: &quot;HTML&quot;,
+        &quot;content&quot;: &quot;content&quot;
+    },
+    &quot;bodyPreview&quot;: &quot;Stay on top of your email...&quot;,
+    &quot;importance&quot;: &quot;Normal&quot;,
+    &quot;parentFolderId&quot;: &quot;parentfoldeid-value&quot;,
+    &quot;sender&quot;: {
         &quot;emailAddress&quot;: {
-          &quot;name&quot;: &quot;name-value&quot;,
-          &quot;address&quot;: &quot;address-value&quot;
+            &quot;name&quot;: &quot;Microsoft Outlook&quot;
         }
-      },
-      &quot;from&quot;: {
+    },
+    &quot;from&quot;: {
         &quot;emailAddress&quot;: {
-          &quot;name&quot;: &quot;name-value&quot;,
-          &quot;address&quot;: &quot;address-value&quot;
+            &quot;name&quot;: &quot;Microsoft Outlook&quot;
         }
-      },
-      &quot;toRecipients&quot;: [
+    },
+    &quot;toRecipients&quot;: [
         {
-          &quot;emailAddress&quot;: {
-            &quot;name&quot;: &quot;name-value&quot;,
-            &quot;address&quot;: &quot;address-value&quot;
-          }
+            &quot;emailAddress&quot;: {
+                &quot;name&quot;: &quot;Sara Davis&quot;,
+                &quot;address&quot;: &quot;SaraD@contoso.onmicrosoft.com&quot;
+            }
         }
-      ],
-      &quot;ccRecipients&quot;: [
-        {
-          &quot;emailAddress&quot;: {
-            &quot;name&quot;: &quot;name-value&quot;,
-            &quot;address&quot;: &quot;address-value&quot;
-          }
-        }
-      ],
-      &quot;bccRecipients&quot;: [
-        {
-          &quot;emailAddress&quot;: {
-            &quot;name&quot;: &quot;name-value&quot;,
-            &quot;address&quot;: &quot;address-value&quot;
-          }
-        }
-      ],
-      &quot;replyTo&quot;: [
-        {
-          &quot;emailAddress&quot;: {
-            &quot;name&quot;: &quot;name-value&quot;,
-            &quot;address&quot;: &quot;address-value&quot;
-          }
-        }
-      ],
-      &quot;conversationId&quot;: &quot;conversationId-value&quot;,
-      &quot;uniqueBody&quot;: {
-        &quot;contentType&quot;: &quot;contentType-value&quot;,
-        &quot;content&quot;: &quot;content-value&quot;
-      },
-      &quot;isDeliveryReceiptRequested&quot;: true,
-      &quot;isReadReceiptRequested&quot;: true,
-      &quot;isRead&quot;: true,
-      &quot;isDraft&quot;: true,
-      &quot;webLink&quot;: &quot;webLink-value&quot;,
-      &quot;createdDateTime&quot;: &quot;datetime-value&quot;,
-      &quot;lastModifiedDateTime&quot;: &quot;datetime-value&quot;,
-      &quot;changeKey&quot;: &quot;changeKey-value&quot;,
-      &quot;categories&quot;: [
-        &quot;categories-value&quot;
-      ],
-      &quot;id&quot;: &quot;id-value&quot;
-    }
-  ]
+    ],
+    &quot;ccRecipients&quot;: [],
+    &quot;bccRecipients&quot;: [],
+    &quot;replyTo&quot;: [],
+    &quot;conversationId&quot;: &quot;converstion-id-value&quot;,
+    &quot;isDeliveryReceiptRequested&quot;: null,
+    &quot;isReadReceiptRequested&quot;: false,
+    &quot;isRead&quot;: false,
+    &quot;isDraft&quot;: false,
+    &quot;webLink&quot;: &quot;https://outlook.office365.com/owa/?ItemID=id-value&amp;viewmodel=ReadMessageItem&quot;,
+    &quot;inferenceClassification&quot;: &quot;Focused&quot;
 }
+
+
 </code></pre>
 
 

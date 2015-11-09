@@ -17,11 +17,13 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="create-user">Create User</h1>
-<p>Use this API to create a new User.</p>
+<p>Use this API to create a new User.
+The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties.</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<p>One of the following <strong>scopes</strong> is required to execute this API: 
+Directory.ReadWrite</p>
 <h3 id="http-request">HTTP request</h3>
-<pre><code class="http">POST /tenantDetails
+<pre><code class="http">POST /users
 
 </code></pre>
 
@@ -29,27 +31,86 @@
 <table>
 <thead>
 <tr>
-	<th align="left">Name</th>
+	<th align="left">Header</th>
+	<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">Authorization</td>
+	<td align="left">Bearer %token%</td>
+</tr>
+<tr>
+	<td align="left">Content-Type</td>
+	<td align="left">application/json</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-body">Request body</h3>
+<p>In the request body, supply a JSON representation of <a href="../resources/user.htm">User</a> object.</p>
+<p>The following table shows the properties that are required when you create a user.</p>
+<table>
+<thead>
+<tr>
+	<th align="left">Parameter</th>
 	<th align="left">Type</th>
 	<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-	<td align="left">X-Sample-Header</td>
+	<td align="left">accountEnabled</td>
+	<td align="left">boolean</td>
+	<td align="left">true if the account is enabled; otherwise, false.</td>
+</tr>
+<tr>
+	<td align="left">displayName</td>
 	<td align="left">string</td>
-	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
+	<td align="left">The name to display in the address book for the user.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left">onPremisesImmutableId</td>
+	<td align="left">string</td>
+	<td align="left">Only needs to be specified when creating a new user account if you are using a federated domain for the user's userPrincipalName (UPN) property.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left">mailNickname</td>
+	<td align="left">string</td>
+	<td align="left">he mail alias for the user.</td>
+</tr>
+<tr>
+	<td align="left">passwordProfile</td>
+	<td align="left"><a href="passwordprofile.htm">PasswordProfile</a></td>
+	<td align="left">The password profile for the user.</td>
+	<td></td>
+</tr>
+<tr>
+	<td align="left">userPrincipalName</td>
+	<td align="left">string</td>
+	<td align="left">The user principal name (someuser@contoso.com).</td>
 </tr>
 </tbody>
 </table>
-<h3 id="request-body">Request body</h3>
-<p>In the request body, supply a JSON representation of <a href="../resources/user.htm">User</a> object.</p>
 <h3 id="response">Response</h3>
 <p>If successful, this method returns <code>201, Created</code> response code and <a href="../resources/user.htm">User</a> object in the response body.</p>
 <h3 id="example">Example</h3>
 <h5 id="request">Request</h5>
 <p>Here is an example of the request.</p>
-<pre><code class="http">POST https://graph.microsoft.com/v1.0/tenantDetails
+<pre><code class="http">POST https://graph.microsoft.com/v1.0/users
+Content-type: application/json
+
+{
+  &quot;accountEnabled&quot;: true,
+  &quot;displayName&quot;: &quot;Alex Wu&quot;,
+  &quot;mailNickname&quot;: &quot;AlexW&quot;,
+  &quot;passwordProfile&quot;: {
+    &quot;password&quot;: &quot;Test1234&quot;,
+    &quot;forceChangePasswordNextLogin&quot;: false
+  },
+  &quot;userPrincipalName&quot;: &quot;AlexW@contoso.onmicrosoft.com&quot;
+}
 </code></pre>
 
 <p>In the request body, supply a JSON representation of <a href="../resources/user.htm">User</a> object.</p>
@@ -60,105 +121,15 @@ Content-type: application/json
 Content-length: 2708
 
 {
-  &quot;accountEnabled&quot;: true,
-  &quot;assignedLicenses&quot;: [
-    {
-      &quot;disabledPlans&quot;: [
-        &quot;disabledPlans-value&quot;
-      ],
-      &quot;skuId&quot;: &quot;skuId-value&quot;
-    }
-  ],
-  &quot;assignedPlans&quot;: [
-    {
-      &quot;assignedTimestamp&quot;: &quot;datetime-value&quot;,
-      &quot;capabilityStatus&quot;: &quot;capabilityStatus-value&quot;,
-      &quot;service&quot;: &quot;service-value&quot;,
-      &quot;servicePlanId&quot;: &quot;servicePlanId-value&quot;
-    }
-  ],
-  &quot;city&quot;: &quot;city-value&quot;,
-  &quot;country&quot;: &quot;country-value&quot;,
-  &quot;department&quot;: &quot;department-value&quot;,
-  &quot;dirSyncEnabled&quot;: true,
-  &quot;displayName&quot;: &quot;displayName-value&quot;,
-  &quot;facsimileTelephoneNumber&quot;: &quot;facsimileTelephoneNumber-value&quot;,
-  &quot;givenName&quot;: &quot;givenName-value&quot;,
-  &quot;immutableId&quot;: &quot;immutableId-value&quot;,
-  &quot;jobTitle&quot;: &quot;jobTitle-value&quot;,
-  &quot;lastDirSyncTime&quot;: &quot;datetime-value&quot;,
-  &quot;mail&quot;: &quot;mail-value&quot;,
-  &quot;mailNickname&quot;: &quot;mailNickname-value&quot;,
-  &quot;mobile&quot;: &quot;mobile-value&quot;,
-  &quot;onPremisesSecurityIdentifier&quot;: &quot;onPremisesSecurityIdentifier-value&quot;,
-  &quot;otherMails&quot;: [
-    &quot;otherMails-value&quot;
-  ],
-  &quot;passwordPolicies&quot;: &quot;passwordPolicies-value&quot;,
-  &quot;passwordProfile&quot;: {
-    &quot;password&quot;: &quot;password-value&quot;,
-    &quot;forceChangePasswordNextLogin&quot;: true
-  },
-  &quot;physicalDeliveryOfficeName&quot;: &quot;physicalDeliveryOfficeName-value&quot;,
-  &quot;postalCode&quot;: &quot;postalCode-value&quot;,
-  &quot;preferredLanguage&quot;: &quot;preferredLanguage-value&quot;,
-  &quot;provisionedPlans&quot;: [
-    {
-      &quot;capabilityStatus&quot;: &quot;capabilityStatus-value&quot;,
-      &quot;provisioningStatus&quot;: &quot;provisioningStatus-value&quot;,
-      &quot;service&quot;: &quot;service-value&quot;
-    }
-  ],
-  &quot;provisioningErrors&quot;: [
-    {
-      &quot;errorDetail&quot;: &quot;errorDetail-value&quot;,
-      &quot;resolved&quot;: true,
-      &quot;service&quot;: &quot;service-value&quot;,
-      &quot;timestamp&quot;: &quot;datetime-value&quot;
-    }
-  ],
-  &quot;proxyAddresses&quot;: [
-    &quot;proxyAddresses-value&quot;
-  ],
-  &quot;sipProxyAddress&quot;: &quot;sipProxyAddress-value&quot;,
-  &quot;state&quot;: &quot;state-value&quot;,
-  &quot;streetAddress&quot;: &quot;streetAddress-value&quot;,
-  &quot;surname&quot;: &quot;surname-value&quot;,
-  &quot;telephoneNumber&quot;: &quot;telephoneNumber-value&quot;,
-  &quot;thumbnailPhoto&quot;: &quot;thumbnailPhoto-value&quot;,
-  &quot;usageLocation&quot;: &quot;usageLocation-value&quot;,
-  &quot;userPrincipalName&quot;: &quot;userPrincipalName-value&quot;,
-  &quot;userType&quot;: &quot;userType-value&quot;,
-  &quot;emailAddress&quot;: &quot;emailAddress-value&quot;,
-  &quot;mailboxGuid&quot;: &quot;mailboxGuid-value&quot;,
-  &quot;aboutMe&quot;: &quot;aboutMe-value&quot;,
-  &quot;alias&quot;: &quot;alias-value&quot;,
-  &quot;birthday&quot;: &quot;datetime-value&quot;,
-  &quot;hireDate&quot;: &quot;datetime-value&quot;,
-  &quot;interests&quot;: [
-    &quot;interests-value&quot;
-  ],
-  &quot;mySite&quot;: &quot;mySite-value&quot;,
-  &quot;pastProjects&quot;: [
-    &quot;pastProjects-value&quot;
-  ],
-  &quot;preferredName&quot;: &quot;preferredName-value&quot;,
-  &quot;principalName&quot;: &quot;principalName-value&quot;,
-  &quot;responsibilities&quot;: [
-    &quot;responsibilities-value&quot;
-  ],
-  &quot;schools&quot;: [
-    &quot;schools-value&quot;
-  ],
-  &quot;skills&quot;: [
-    &quot;skills-value&quot;
-  ],
-  &quot;tags&quot;: [
-    &quot;tags-value&quot;
-  ],
-  &quot;objectType&quot;: &quot;objectType-value&quot;,
-  &quot;objectId&quot;: &quot;objectId-value&quot;,
-  &quot;deletionTimestamp&quot;: &quot;datetime-value&quot;
+  &quot;objectType&quot;: &quot;User&quot;,
+  &quot;id&quot;: &quot;3064b7b5-a8cb-4fe3-b7ea-696130f699a6&quot;,
+...
+  &quot;displayName&quot;: &quot;Alex Wu&quot;,
+...
+  &quot;mailNickname&quot;: &quot;AlexW&quot;,
+...
+  &quot;userPrincipalName&quot;: &quot;AlexW@imgeek.onmicrosoft.com&quot;,
+  &quot;userType&quot;: &quot;Member&quot;
 }
 </code></pre>
 

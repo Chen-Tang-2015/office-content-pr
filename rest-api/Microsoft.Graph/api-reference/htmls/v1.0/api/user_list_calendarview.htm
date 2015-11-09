@@ -17,13 +17,13 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="list-calendarview">List calendarView</h1>
-<p>Retrieve a list of event objects.</p>
+<p>Get the occurrences, exceptions, and single instances of events in a calendar view defined by a time range, from the user's primary calendar or from a different calendar.</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<p>One of the following <strong>scopes</strong> is required to execute this API: 
+Calendars.Read; Calendars.ReadWrite</p>
 <h3 id="http-request">HTTP request</h3>
 <pre><code class="http">GET /users/&lt;objectId&gt;/calendarView
-GET /drive/root/createdByUser/calendarView
-GET /drive/root/lastModifiedByUser/calendarView
+
 </code></pre>
 
 <h3 id="optional-query-parameters">Optional query parameters</h3>
@@ -102,7 +102,7 @@ GET /drive/root/lastModifiedByUser/calendarView
 <h3 id="example">Example</h3>
 <h5 id="request">Request</h5>
 <p>Here is an example of the request.</p>
-<pre><code class="http">GET https://graph.microsoft.com/v1.0/users/&lt;objectId&gt;/calendarView
+<pre><code class="http">GET https://graph.microsoft.com/v1.0/users/&lt;objectId&gt;/calendarView?startdatetime=2015-10-27t01:00:00z&amp;enddatetime=2015-10-31t23:00:00z
 </code></pre>
 
 <h5 id="response-1">Response</h5>
@@ -114,91 +114,95 @@ Content-length: 2405
 {
   &quot;value&quot;: [
     {
-      &quot;originalStartTimeZone&quot;: &quot;originalStartTimeZone-value&quot;,
-      &quot;originalEndTimeZone&quot;: &quot;originalEndTimeZone-value&quot;,
-      &quot;responseStatus&quot;: {
-        &quot;response&quot;: &quot;response-value&quot;,
-        &quot;time&quot;: &quot;datetime-value&quot;
+      &quot;Id&quot;: &quot;id-value&quot;,
+      &quot;CreatedDateTime&quot;: &quot;2013-06-01T17:35:07.4405388Z&quot;,
+      &quot;LastModifiedDateTime&quot;: &quot;2015-06-26T21:30:45.0120394Z&quot;,
+      &quot;ChangeKey&quot;: &quot;TEeu8sNApk+MdJFYEFB/9wAB8bgn5A==&quot;,
+      &quot;Categories&quot;: [
+        &quot;Blue Category&quot;
+      ],
+      &quot;OriginalStartTimeZone&quot;: &quot;Pacific Standard Time&quot;,
+      &quot;OriginalEndTimeZone&quot;: &quot;Pacific Standard Time&quot;,
+      &quot;ResponseStatus&quot;: {
+        &quot;Response&quot;: &quot;Organizer&quot;,
+        &quot;Time&quot;: &quot;0001-01-01T00:00:00Z&quot;
       },
-      &quot;iCalUId&quot;: &quot;iCalUId-value&quot;,
-      &quot;reminderMinutesBeforeStart&quot;: 99,
-      &quot;isReminderOn&quot;: true,
-      &quot;hasAttachments&quot;: true,
-      &quot;subject&quot;: &quot;subject-value&quot;,
-      &quot;body&quot;: {
-        &quot;contentType&quot;: &quot;contentType-value&quot;,
-        &quot;content&quot;: &quot;content-value&quot;
+      &quot;iCalUId&quot;: &quot;id-value&quot;,
+      &quot;ReminderMinutesBeforeStart&quot;: 0,
+      &quot;IsReminderOn&quot;: false,
+      &quot;HasAttachments&quot;: false,
+      &quot;Subject&quot;: &quot;Legal and Executives Bi-Weekly&quot;,
+      &quot;Body&quot;: {
+        &quot;ContentType&quot;: &quot;Text&quot;,
+        &quot;Content&quot;: &quot;&quot;
       },
-      &quot;bodyPreview&quot;: &quot;bodyPreview-value&quot;,
-      &quot;importance&quot;: &quot;importance-value&quot;,
-      &quot;sensitivity&quot;: &quot;sensitivity-value&quot;,
-      &quot;start&quot;: {
-        &quot;dateTime&quot;: &quot;dateTime-value&quot;,
-        &quot;timeZone&quot;: &quot;timeZone-value&quot;
+      &quot;BodyPreview&quot;: &quot;&quot;,
+      &quot;Importance&quot;: &quot;Normal&quot;,
+      &quot;Sensitivity&quot;: &quot;Normal&quot;,
+      &quot;Start&quot;: {
+        &quot;DateTime&quot;: &quot;2015-10-30T15:30:00.0000000&quot;,
+        &quot;TimeZone&quot;: &quot;UTC&quot;
       },
-      &quot;originalStart&quot;: &quot;datetime-value&quot;,
-      &quot;end&quot;: {
-        &quot;dateTime&quot;: &quot;dateTime-value&quot;,
-        &quot;timeZone&quot;: &quot;timeZone-value&quot;
+      &quot;End&quot;: {
+        &quot;DateTime&quot;: &quot;2015-10-30T16:30:00.0000000&quot;,
+        &quot;TimeZone&quot;: &quot;UTC&quot;
       },
-      &quot;location&quot;: {
-        &quot;altitude&quot;: 99,
-        &quot;latitude&quot;: 99,
-        &quot;longitude&quot;: 99
-      },
-      &quot;isAllDay&quot;: true,
-      &quot;isCancelled&quot;: true,
-      &quot;isOrganizer&quot;: true,
-      &quot;recurrence&quot;: {
-        &quot;pattern&quot;: {
-          &quot;type&quot;: &quot;type-value&quot;,
-          &quot;interval&quot;: 99,
-          &quot;month&quot;: 99,
-          &quot;dayOfMonth&quot;: 99,
-          &quot;daysOfWeek&quot;: [
-            &quot;daysOfWeek-value&quot;
-          ],
-          &quot;firstDayOfWeek&quot;: &quot;firstDayOfWeek-value&quot;,
-          &quot;index&quot;: &quot;index-value&quot;
+      &quot;Location&quot;: {
+        &quot;DisplayName&quot;: &quot;Conference Room - Crystal&quot;,
+        &quot;Address&quot;: {
+          &quot;Street&quot;: &quot;&quot;,
+          &quot;City&quot;: &quot;&quot;,
+          &quot;State&quot;: &quot;&quot;,
+          &quot;CountryOrRegion&quot;: &quot;&quot;,
+          &quot;PostalCode&quot;: &quot;&quot;
         },
-        &quot;range&quot;: {
-          &quot;type&quot;: &quot;type-value&quot;,
-          &quot;startDate&quot;: &quot;startDate-value&quot;,
-          &quot;endDate&quot;: &quot;endDate-value&quot;,
-          &quot;numberOfOccurrences&quot;: 99
+        &quot;Coordinates&quot;: {
+          &quot;Altitude&quot;: &quot;NaN&quot;,
+          &quot;Latitude&quot;: &quot;NaN&quot;,
+          &quot;Longitude&quot;: &quot;NaN&quot;,
+          &quot;Accuracy&quot;: &quot;NaN&quot;,
+          &quot;AltitudeAccuracy&quot;: &quot;NaN&quot;
         }
       },
-      &quot;responseRequested&quot;: true,
-      &quot;seriesMasterId&quot;: &quot;seriesMasterId-value&quot;,
-      &quot;showAs&quot;: &quot;showAs-value&quot;,
-      &quot;type&quot;: &quot;type-value&quot;,
-      &quot;attendees&quot;: [
+      &quot;IsAllDay&quot;: false,
+      &quot;IsCancelled&quot;: false,
+      &quot;IsOrganizer&quot;: true,
+      &quot;Recurrence&quot;: null,
+      &quot;ResponseRequested&quot;: true,
+      &quot;SeriesMasterId&quot;: &quot;id-value&quot;,
+      &quot;ShowAs&quot;: &quot;Busy&quot;,
+      &quot;Type&quot;: &quot;Occurrence&quot;,
+      &quot;Attendees&quot;: [
         {
-          &quot;status&quot;: {
-            &quot;response&quot;: &quot;response-value&quot;,
-            &quot;time&quot;: &quot;datetime-value&quot;
+          &quot;Status&quot;: {
+            &quot;Response&quot;: &quot;None&quot;,
+            &quot;Time&quot;: &quot;0001-01-01T00:00:00Z&quot;
           },
-          &quot;type&quot;: &quot;type-value&quot;,
-          &quot;emailAddress&quot;: {
-            &quot;name&quot;: &quot;name-value&quot;,
-            &quot;address&quot;: &quot;address-value&quot;
+          &quot;Type&quot;: &quot;Required&quot;,
+          &quot;EmailAddress&quot;: {
+            &quot;Name&quot;: &quot;Julian Isla&quot;,
+            &quot;Address&quot;: &quot;JulianI@contoso.onmicrosoft.com&quot;
+          }
+        },
+        {
+          &quot;Status&quot;: {
+            &quot;Response&quot;: &quot;None&quot;,
+            &quot;Time&quot;: &quot;0001-01-01T00:00:00Z&quot;
+          },
+          &quot;Type&quot;: &quot;Required&quot;,
+          &quot;EmailAddress&quot;: {
+            &quot;Name&quot;: &quot;Denis Dehenne&quot;,
+            &quot;Address&quot;: &quot;DenisD@contoso.onmicrosoft.com&quot;
           }
         }
       ],
-      &quot;organizer&quot;: {
-        &quot;emailAddress&quot;: {
-          &quot;name&quot;: &quot;name-value&quot;,
-          &quot;address&quot;: &quot;address-value&quot;
+      &quot;Organizer&quot;: {
+        &quot;EmailAddress&quot;: {
+          &quot;Name&quot;: &quot;Sara Davis&quot;,
+          &quot;Address&quot;: &quot;SaraD@contoso.onmicrosoft.com&quot;
         }
       },
-      &quot;webLink&quot;: &quot;webLink-value&quot;,
-      &quot;createdDateTime&quot;: &quot;datetime-value&quot;,
-      &quot;lastModifiedDateTime&quot;: &quot;datetime-value&quot;,
-      &quot;changeKey&quot;: &quot;changeKey-value&quot;,
-      &quot;categories&quot;: [
-        &quot;categories-value&quot;
-      ],
-      &quot;id&quot;: &quot;id-value&quot;
+      &quot;WebLink&quot;: &quot;https://outlook.office365.com/owa/?ItemID=id-value&amp;viewmodel=ICalendarItemDetailsViewModelFactory&quot;
     }
   ]
 }

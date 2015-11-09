@@ -17,13 +17,12 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="create-mailfolder">Create MailFolder</h1>
-<p>Use this API to create a new MailFolder.</p>
+<p>Use this API to create a new mail folder.</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<p>One of the following <strong>scopes</strong> is required to execute this API: 
+Mail.ReadWrite</p>
 <h3 id="http-request">HTTP request</h3>
 <pre><code class="http">POST /users/&lt;objectId&gt;/mailFolders
-POST /drive/root/createdByUser/mailFolders
-POST /drive/root/lastModifiedByUser/mailFolders
 
 </code></pre>
 
@@ -31,16 +30,18 @@ POST /drive/root/lastModifiedByUser/mailFolders
 <table>
 <thead>
 <tr>
-	<th align="left">Name</th>
-	<th align="left">Type</th>
-	<th align="left">Description</th>
+	<th align="left">Header</th>
+	<th align="left">Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-	<td align="left">X-Sample-Header</td>
-	<td align="left">string</td>
-	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
+	<td align="left">Authorization</td>
+	<td align="left">Bearer %token%</td>
+</tr>
+<tr>
+	<td align="left">Content-Type</td>
+	<td align="left">application/json</td>
 </tr>
 </tbody>
 </table>
@@ -51,7 +52,12 @@ POST /drive/root/lastModifiedByUser/mailFolders
 <h3 id="example">Example</h3>
 <h5 id="request">Request</h5>
 <p>Here is an example of the request.</p>
-<pre><code class="http">POST https://graph.microsoft.com/v1.0/users/&lt;objectId&gt;
+<pre><code class="http">POST https://graph.microsoft.com/v1.0/users/&lt;objectId&gt;/mailFolders
+Content-type: application/json
+
+{
+    &quot;displayName&quot;: &quot;Tailspin Pipeline&quot;
+}
 </code></pre>
 
 <p>In the request body, supply a JSON representation of <a href="../resources/mailfolder.htm">MailFolder</a> object.</p>
@@ -62,11 +68,11 @@ Content-type: application/json
 Content-length: 179
 
 {
-  &quot;displayName&quot;: &quot;displayName-value&quot;,
+  &quot;displayName&quot;: &quot;Tailspin Pipeline&quot;,
   &quot;parentFolderId&quot;: &quot;parentFolderId-value&quot;,
-  &quot;childFolderCount&quot;: 99,
-  &quot;unreadItemCount&quot;: 99,
-  &quot;totalItemCount&quot;: 99,
+  &quot;childFolderCount&quot;: 0,
+  &quot;unreadItemCount&quot;: 0,
+  &quot;totalItemCount&quot;: 0,
   &quot;id&quot;: &quot;id-value&quot;
 }
 </code></pre>

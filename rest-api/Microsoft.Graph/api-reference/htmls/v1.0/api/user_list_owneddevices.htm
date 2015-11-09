@@ -17,13 +17,13 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="list-owneddevices">List ownedDevices</h1>
-<p>Retrieve a list of directoryobject objects.</p>
+<p>Get the list of user's owned devices.</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<p>One of the following <strong>scopes</strong> is required to execute this API: 
+User.Read.All; User.ReadWrite.All; Directory.Read.All; Directory.ReadWrite.All; Directory.AccessAsUser.All; User.Read; User.ReadWrite;</p>
 <h3 id="http-request">HTTP request</h3>
 <pre><code class="http">GET /users/&lt;objectId&gt;/ownedDevices
-GET /drive/root/createdByUser/ownedDevices
-GET /drive/root/lastModifiedByUser/ownedDevices
+
 </code></pre>
 
 <h3 id="optional-query-parameters">Optional query parameters</h3>
@@ -52,16 +52,18 @@ GET /drive/root/lastModifiedByUser/ownedDevices
 <table>
 <thead>
 <tr>
-	<th align="left">Name</th>
-	<th align="left">Type</th>
-	<th align="left">Description</th>
+	<th align="left">Header</th>
+	<th align="left">Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-	<td align="left">X-Sample-Header</td>
-	<td align="left">string</td>
-	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
+	<td align="left">Authorization</td>
+	<td align="left">Bearer %token%</td>
+</tr>
+<tr>
+	<td align="left">Accept</td>
+	<td align="left">application/json</td>
 </tr>
 </tbody>
 </table>
@@ -84,8 +86,8 @@ Content-length: 152
 {
   &quot;value&quot;: [
     {
+      &quot;id&quot;: &quot;id-value&quot;,
       &quot;objectType&quot;: &quot;objectType-value&quot;,
-      &quot;objectId&quot;: &quot;objectId-value&quot;,
       &quot;deletionTimestamp&quot;: &quot;datetime-value&quot;
     }
   ]

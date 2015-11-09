@@ -17,12 +17,12 @@
     <div class="row">
         <div class="col-md-9">
             <h1 id="user-getmemberobjects">user: getMemberObjects</h1>
+<p>Call the getMemberObjects function to return all of the groups and directory roles that the user is a member of. The check is transitive, unlike reading the memberOf navigation property, which returns only the groups that the user is a direct member of.</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>The following <strong>scopes</strong> are required to execute this API: </p>
+<p>One of the following <strong>scopes</strong> is required to execute this API: 
+User.Read.All; User.ReadWrite.All; Directory.Read.All; Directory.ReadWrite.All; Directory.AccessAsUser.All</p>
 <h3 id="http-request">HTTP request</h3>
 <pre><code class="http">POST /users/&lt;objectId&gt;/getMemberObjects
-POST /drive/root/createdByUser/getMemberObjects
-POST /drive/root/lastModifiedByUser/getMemberObjects
 
 </code></pre>
 
@@ -30,16 +30,18 @@ POST /drive/root/lastModifiedByUser/getMemberObjects
 <table>
 <thead>
 <tr>
-	<th align="left">Name</th>
-	<th align="left">Type</th>
-	<th align="left">Description</th>
+	<th align="left">Header</th>
+	<th align="left">Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-	<td align="left">X-Sample-Header</td>
-	<td align="left">string</td>
-	<td align="left">Sample HTTP header. Update accordingly or remove if not needed</td>
+	<td align="left">Authorization</td>
+	<td align="left">Bearer %token%</td>
+</tr>
+<tr>
+	<td align="left">Content-Type</td>
+	<td align="left">application/json</td>
 </tr>
 </tbody>
 </table>
@@ -84,7 +86,9 @@ Content-length: 39
 
 {
   &quot;value&quot;: [
-    &quot;String-value&quot;
+    &quot;f46e3e1f-17f3-4801-8a39-b2ccc58eb6be&quot;,
+    &quot;63243e64-228a-433b-a98a-aa8c832af7fe&quot;,
+    &quot;f5480dfd-7d77-4d0b-ba2e-3391953cc74a&quot;
   ]
 }
 </code></pre>
