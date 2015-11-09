@@ -1,23 +1,23 @@
-# Call the unified API (preview) in a PHP app 
+# Call the Microsoft Graph API in a PHP app 
 
-In this article we look at the minimum tasks required to get an access token from Azure Active Directory (AD) and call the unified API. We use code from the [Office 365 PHP Connect sample using unified API](https://github.com/OfficeDev/O365-PHP-Unified-API-Connect) to explain the main concepts that you have to implement in your app.
+In this article we look at the minimum tasks required to get an access token from Azure Active Directory (AD) and call the Microsoft Graph API. We use code from the [Office 365 PHP Connect sample using Microsoft Graph API](https://github.com/OfficeDev/O365-PHP-Unified-API-Connect) to explain the main concepts that you have to implement in your app.
 
 ![Office 365 PHP Connect sample screenshot](./images/web-screenshot.png)
 
 ## Overview
 
-To call the unified API (preview), your PHP app must complete the following tasks.
+To call the Microsoft Graph API, your PHP app must complete the following tasks.
 
 1. [Register the application in Azure Active Directory](#register)
 2. [Redirect the browser to the sign-in page](#redirect)
 3. [Receive an authorization code in your reply URL page](#authcode)
 4. [Request an access token from the token endpoint](#accesstoken)
-5. [Use the access token in a request to the unified API](#request) 
+5. [Use the access token in a request to the Microsoft Graph API](#request) 
 
 <a name="register"/>
 ## Register the application in Azure Active Directory
 
-Before you can start working with Office 365, you need to register your application on Azure AD and set permissions to use unified API services.
+Before you can start working with Office 365, you need to register your application on Azure AD and set permissions to use Microsoft Graph API services.
 
 See [Register your web server app with the Azure Management Portal](https://msdn.microsoft.com/office/office365/HowTo/add-common-consent-manually#bk_RegisterServerApp) for instructions, keep in mind the following details.
 
@@ -72,7 +72,7 @@ if (isset($_GET['code'])) {
 Once you have the authorization code, you can use it along the client ID, key, and reply URL values that you got from Azure AD to request an access token. 
 
 > **Note:** <br />
-> The request must also specify a resource that we are trying to consume. In the case of unified API, the resource value is `https://graph.microsoft.com`.
+> The request must also specify a resource that we are trying to consume. In the case of Microsoft Graph API, the resource value is `https://graph.microsoft.com`.
 
 The Connect sample requests a token using the code in the [`AuthenticationManager.acquireToken`](https://github.com/OfficeDev/O365-PHP-Unified-API-Connect/blob/master/app/AuthenticationManager.php#L70) function. Here is the most relevant code.
 
@@ -114,14 +114,14 @@ foreach ($jsonResponse as $key=>$value) {
 > **Note:** <br />
 > The response provides more information than just the access token, for example, your app can get a refresh token to request new access tokens without having the user to explicitly sign-in.
 
-Your PHP app can now use the session variable `access_token` to issue authenticated requests to the unified API.
+Your PHP app can now use the session variable `access_token` to issue authenticated requests to the Microsoft Graph API.
 
 <a name="request"/>
-## Use the access token in a request to the unified API (preview)
+## Use the access token in a request to the Microsoft Graph API
 
-With an access token, your app can make authenticated requests to the unified API. Your app must provide the access token in the **Authorization** header of each request.
+With an access token, your app can make authenticated requests to the Microsoft Graph API. Your app must provide the access token in the **Authorization** header of each request.
 
-The Connect sample sends an email using the **sendMail** endpoint in the unified API. The code is in the [`MailManager.sendWelcomeMail`](https://github.com/OfficeDev/O365-PHP-Unified-API-Connect/blob/master/app/MailManager.php#L46) function. This is the code that shows how to send the access code in the Authorization header.
+The Connect sample sends an email using the **sendMail** endpoint in the Microsoft Graph API. The code is in the [`MailManager.sendWelcomeMail`](https://github.com/OfficeDev/O365-PHP-Unified-API-Connect/blob/master/app/MailManager.php#L46) function. This is the code that shows how to send the access code in the Authorization header.
 
 ```php
 // Send the email request to the sendmail endpoint, 
@@ -141,12 +141,12 @@ RequestManager::sendPostRequest(
 ```
 
 > **Note:** <br />
-> The request must also send a **Content-Type** header with a value accepted by the unified API, for example, `application/json;odata.metadata=minimal;odata.streaming=true`.
+> The request must also send a **Content-Type** header with a value accepted by the Microsoft Graph API, for example, `application/json;odata.metadata=minimal;odata.streaming=true`.
 
-The unified API (preview) is a very powerful, unifiying API that can be used to interact with all kinds of Microsoft data. Check out the [API reference](https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference) to explore what else you can accomplish with the unified API.
+The Microsoft Graph API is a very powerful, unifiying API that can be used to interact with all kinds of Microsoft data. Check out the [API reference](https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference) to explore what else you can accomplish with the Microsoft Graph API.
 
 ## Additional resources
 
--  [Office 365 PHP Connect sample using unified API](https://github.com/OfficeDev/O365-PHP-Unified-API-Connect)
+-  [Office 365 PHP Connect sample using Microsoft Graph API](https://github.com/OfficeDev/O365-PHP-Unified-API-Connect)
 -  [Office Dev Center](http://dev.office.com) 
--  [Unified API (preview) reference](https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference)
+-  [Microsoft Graph API reference](https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference)
