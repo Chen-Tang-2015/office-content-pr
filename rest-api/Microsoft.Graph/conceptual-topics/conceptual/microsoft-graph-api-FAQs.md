@@ -37,7 +37,7 @@ You can:
 
 - Use any development environment you're familiar with, like .NET, PHP, Java, Python, or Ruby
 - Use any  programming language, development platform, and hosting environment
-- Build an  app that accesses the unified API using any web language, including JavaScript, HTML5, Python, Ruby, PHP, and ASP.NET  
+- Build an  app that accesses the API using any web language, including JavaScript, HTML5, Python, Ruby, PHP, and ASP.NET  
 - Use the IDE of your choice, whether that's Visual Studio, Eclipse, Android Studio, Xcode or something else you choose
 - Host your apps in Microsoft Azure or any cloud platform
 - Develop apps for Windows Universal, iOS, Android, or on another device platform
