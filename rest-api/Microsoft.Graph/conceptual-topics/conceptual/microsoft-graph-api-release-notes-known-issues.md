@@ -37,9 +37,7 @@ The following Microsoft Graph API preview features are available:
 
 The following are known issues with the Microsoft Graph API.
 
-
-
-
 ## Additional resources
 
+- [Microsoft Graph API FAQs](\microsoft-graph-api-FAQs.md) 
 - [OneDrive API (preview) release notes](http://aka.ms/odb-api-release-notes)
