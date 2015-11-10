@@ -217,9 +217,9 @@
         <Item text="Dismiss reminder" url="api-reference/v1.0/api/event_dismissreminder" SEOKeyword="event: dismissReminder, Microsoft Graph API, event API" SEODescription=""></Item>
         <Item text="Snooze reminder" url="api-reference/v1.0/api/event_snoozereminder" SEOKeyword="event: snoozeReminder, Microsoft Graph API, event API" SEODescription=""></Item>
         <Item text="List event instances" url="api-reference/v1.0/api/event_list_instances" SEOKeyword="List event instances, Microsoft Graph API, Outlook Calendar API" SEODescription="Retrieve a list of event objects."></Item>
-        <Item text="Create event intance" url="api-reference/v1.0/api/event_post_instances" SEOKeyword="Create Event, Microsoft Graph API, Outlook Calendar API" SEODescription="Use this API to create a new Event."></Item>
+        <Item text="Create event instance" url="api-reference/v1.0/api/event_post_instances" SEOKeyword="Create Event, Microsoft Graph API, Outlook Calendar API" SEODescription="Use this API to create a new Event."></Item>
         <Item text="List attachments" url="api-reference/v1.0/api/event_list_attachments" SEOKeyword="List attachments, Microsoft Graph API, Outlook Calendar API" SEODescription="Retrieve a list of attachment objects."></Item>
-        <Item text="Create Attachment" url="api-reference/v1.0/api/event_post_attachments" SEOKeyword="Create Attachment, Microsoft Graph API, Outlook Calendar API" SEODescription="Use this API to create a new Attachment."></Item>
+        <Item text="Create attachment" url="api-reference/v1.0/api/event_post_attachments" SEOKeyword="Create Attachment, Microsoft Graph API, Outlook Calendar API" SEODescription="Use this API to create a new Attachment."></Item>
       </Item>
       <Item text="event message" url="api-reference/v1.0/resources/eventmessage" SEOKeyword="eventmessage API, Microsoft Graph API, eventmessage API" SEODescription="A message that represents a meeting request, meeting cancel message, meeting accept message, meeting tentatively accept message, or meeting declined message.">
         <Item text="Get event message" url="api-reference/v1.0/api/eventmessage_get" SEOKeyword="Get event message, Microsoft Graph API, Outlook Calendar API" SEODescription="Retrieve the properties and relationships of eventmessage object."></Item>
