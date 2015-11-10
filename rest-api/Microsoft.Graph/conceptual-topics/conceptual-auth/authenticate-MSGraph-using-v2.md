@@ -48,19 +48,19 @@ The table below lists the authentication scopes to use with the v2.0 app authent
 
 |**Scope** | **Permission** | **Description** | 
 |:-----|:-----|:-----|
-| `https://graph.microsoft.com/Mail.Read` |Read user mail|Allows this app to read messages in user mailboxes.| 
-| `https://graph.microsoft.com/Mail.ReadWrite` |Read and write access to user mail|Allows the app to read, update, create, and delete messages in user mailboxes.|
-| `https://graph.microsoft.com/Mail.Send`  |Send mail as a user|Allows the app to send messages as users in the organization.|
-| `https://graph.microsoft.com/Contacts.Read` |Read user contacts|Allows the app to read user contacts.|
-| `https://graph.microsoft.com/Contacts.ReadWrite` |Have full access to user contacts|Allows the app to read, update, create and delete user contacts.|
-| `https://graph.microsoft.com/Calendars.Read` |Read user calendars|Allows the app to read events in user calendars.|
-| `https://graph.microsoft.com/Calendars.ReadWrite` |Have full access to user calendars|Allows the app to read, update, create, and delete events in user calendars.|
-| `https://graph.microsoft.com/Files.Read` |Read users' files |Allows the application to read the current user's files. |
-| `https://graph.microsoft.com/Files.ReadWrite` |Edit or delete users' files |Allows the app to edit or delete the current user's files. |
-| `https://graph.microsoft.com/User.Read` |Enable sign-in and read user profile |Allows users to sign-in to the app, and allows the app to read the profile. It also allow the app to read basic company information of signed-in users. |
-| `https://graph.microsoft.com/User.ReadWrite` |Read and write access to user profile |Allows the app to read the profile of signed-in users, and to update profile information on behalf of signed-in users. |
-| `https://graph.microsoft.com/openid` |Sign users in |Allows users to sign in to the app and allows the app to see basic user profile information. |
-| `https://graph.microsoft.com/offline_access` |Read and write user's information |Allows the app to see and update user's data, even when the user is not actively using the app. |
+| `Mail.Read` |Read user mail|Allows this app to read messages in user mailboxes.| 
+| `Mail.ReadWrite` |Read and write access to user mail|Allows the app to read, update, create, and delete messages in user mailboxes.|
+| `Mail.Send`  |Send mail as a user|Allows the app to send messages as users in the organization.|
+| `Contacts.Read` |Read user contacts|Allows the app to read user contacts.|
+| `Contacts.ReadWrite` |Have full access to user contacts|Allows the app to read, update, create and delete user contacts.|
+| `Calendars.Read` |Read user calendars|Allows the app to read events in user calendars.|
+| `Calendars.ReadWrite` |Have full access to user calendars|Allows the app to read, update, create, and delete events in user calendars.|
+| `Files.Read` |Read users' files |Allows the application to read the current user's files. |
+| `Files.ReadWrite` |Edit or delete users' files |Allows the app to edit or delete the current user's files. |
+| `User.Read` |Enable sign-in and read user profile |Allows users to sign-in to the app, and allows the app to read the profile. It also allow the app to read basic company information of signed-in users. |
+| `User.ReadWrite` |Read and write access to user profile |Allows the app to read the profile of signed-in users, and to update profile information on behalf of signed-in users. |
+| `openid` |Sign users in |Allows users to sign in to the app and allows the app to see basic user profile information. |
+| `offline_access` |Read and write user's information |Allows the app to see and update user's data, even when the user is not actively using the app. |
 
 
 ##Next steps
