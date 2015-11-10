@@ -83,19 +83,21 @@ Using the Microsoft Graph API, you don't have to first discover service endpoint
 |   **Operation**                  |  **API**                          |  **Service endpoint** |
 |:-----------------------------|:-----------------------------------------|:-----------------|
 | Discover service endpoints for Office 365 API                |     `Microsoft Graph API`           | Not needed <!-- notes -->|
-| Get users           |     `Office 365 unified API` | _https://_**graph.microsoft.com**_/beta/contoso.onmicrosoft.com/users_ |
-| Get message collection from the Inbox       |     `Microsoft Graph API`           | _https://_**graph.microsoft.com**_/beta/me/messages_  |
-| Get Joe's files   |     `Microsoft Graph API `  | _https://_**graph.microsoft.com**_/beta/me/files_ |
+| Get users           |     `Office 365 unified API` | _https://_**graph.microsoft.com**_/v1.0/contoso.onmicrosoft.com/users_ |
+| Get message collection from the Inbox       |     `Microsoft Graph API`           | _https://_**graph.microsoft.com**_/v1.0/me/messages_  |
+| Get Joe's files   |     `Microsoft Graph API `  | _https://graph.microsoft.com/v1.0/me/drive/root/children_ |
 
 <!--| Get TrendingAround, for the current authenticated user           |     `Microsoft Graph API`                     | _https://_**graph.microsoft.com**_/beta/me/trendingaround_   |-->
 
+**Benefits**
 Some of the benefits of using Microsoft Graph API  are as follows:
 
 **Consistent and streamlined developer experience for consuming Microsoft cloud services**
 
 -	Single namespace for all service endpoints. There is no need for service endpoint discovery.
+-	One token to access all resources
 -	Integrated and direct navigation between currently siloed services (for example, get the department and management chain of the user who authored a particular document)
--	Only need to use a single API set, that is, need only to use Office 365 unified API to connect to multiple services
+-	Only need to use a single API set, that is, need only to use Microsoft Graph API to connect to multiple services
 -	Unified and expanded REST API and entities across the Office platform 
 -	Consistent property naming and schemes across entities, including navigation properties between entities
 
