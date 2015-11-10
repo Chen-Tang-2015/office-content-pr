@@ -9,6 +9,7 @@ Your feedback is important to us. Connect with us on [Stack Overflow](http://sta
   
 -	[What platforms are supported by Microsoft Graph API?](#msg_how_use__unified_api)
 -	[Why use Microsoft Graph API?](#msg_why_use_unified_api)
+-	[What're the benefits of using Microsoft Graph API?](#msg_benefits)
 -	[Does Microsoft Graph API support v2.0 app authentication model?](#msg_v2auth) 
 
 
@@ -100,7 +101,8 @@ Using the Microsoft Graph API, you don't have to first discover service endpoint
 <!--| Get TrendingAround, for the current authenticated user           |     `Microsoft Graph API`                     | _https://_**graph.microsoft.com**_/beta/me/trendingaround_   |-->
 
 
-##Benefits
+<a name="msg_benefits"> </a>
+## What're the benefits of using Microsoft Graph API?
 
 Some of the benefits of using Microsoft Graph API  are as follows:
 
