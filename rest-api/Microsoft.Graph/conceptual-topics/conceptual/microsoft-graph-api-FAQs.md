@@ -89,7 +89,9 @@ Using the Microsoft Graph API, you don't have to first discover service endpoint
 
 <!--| Get TrendingAround, for the current authenticated user           |     `Microsoft Graph API`                     | _https://_**graph.microsoft.com**_/beta/me/trendingaround_   |-->
 
-**Benefits**
+
+##Benefits
+
 Some of the benefits of using Microsoft Graph API  are as follows:
 
 **Consistent and streamlined developer experience for consuming Microsoft cloud services**
