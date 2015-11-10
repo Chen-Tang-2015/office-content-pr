@@ -8,8 +8,9 @@ Your feedback is important to us. Connect with us on [Stack Overflow](http://sta
 **In this article**
   
 -	[What platforms are supported by Microsoft Graph API?](#msg_how_use__unified_api)
--	[Does Microsoft Graph API support v2.0 app authentication model?](#msg_v2auth) 
 -	[Why use Microsoft Graph API?](#msg_why_use_unified_api)
+-	[What're the benefits of using Microsoft Graph API?](#msg_benefits)
+-	[Does Microsoft Graph API support v2.0 app authentication model?](#msg_v2auth) 
 
 
 <!---	[What's currently available in Microsoft Graph API](#msg_what_in_unified_api)
@@ -64,6 +65,16 @@ You also have the option to use cross-origin resource sharing (CORS) to send req
 <a name="msg_why_use_unified_api"> </a>
 ## Why use Microsoft Graph API?
 
+Let's say you want to programmatically retrieve a user's files, profile picture, and find the manager of the person who last edited that file in your organization. Because the information is stored in  multiple services-Azure Active Directory, SharePoint, and Exchange-the task involves multiple steps using Office 365 APIs: 
+
+1. Use the Discovery Service to find the various service endpoints 
+2. Determine the URL of the services your Office 365 apps want to connect to
+3. Then acquire and manage the access token for each service and make the request to the service directly
+
+Now, you can use the use Microsoft Graph API to perform the same complex operation via a single REST API endpoint. You don't have to discover and navigate a different endpoint for each service, acquire and manage separate access token for each service, deal with siloed services and varying data model.
+
+##Sample queries
+
 The following example shows the current model for interacting with Office 365 API using disparate service endpoints and how much simpler this becomes with Microsoft Graph API.
 
 **Disparate service endpoints**
@@ -85,12 +96,13 @@ Using the Microsoft Graph API, you don't have to first discover service endpoint
 | Discover service endpoints for Office 365 API                |     `Microsoft Graph API`           | Not needed <!-- notes -->|
 | Get users           |     `Office 365 unified API` | _https://_**graph.microsoft.com**_/v1.0/contoso.onmicrosoft.com/users_ |
 | Get message collection from the Inbox       |     `Microsoft Graph API`           | _https://_**graph.microsoft.com**_/v1.0/me/messages_  |
-| Get Joe's files   |     `Microsoft Graph API `  | _https://graph.microsoft.com/v1.0/me/drive/root/children_ |
+| Get Joe's files   |     `Microsoft Graph API `  | _https://_**graph.microsoft.com**_/v1.0/me/drive/root/children_ |
 
 <!--| Get TrendingAround, for the current authenticated user           |     `Microsoft Graph API`                     | _https://_**graph.microsoft.com**_/beta/me/trendingaround_   |-->
 
 
-##Benefits
+<a name="msg_benefits"> </a>
+## What're the benefits of using Microsoft Graph API?
 
 Some of the benefits of using Microsoft Graph API  are as follows:
 

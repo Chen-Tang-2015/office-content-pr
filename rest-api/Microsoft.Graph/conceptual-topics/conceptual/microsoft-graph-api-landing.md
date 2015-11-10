@@ -9,7 +9,8 @@ _**Applies to:** Office 365_
 **In this article**
   
 -	[Overview of Microsoft Graph API](#msg_what_is_unified_api) 
--	[All Office 365 data under one roof](#msg_eoof) 
+-	[Common Queries](#msg_queries) 
+-	[All Office 365 data under one roof](#msg_roof) 
 -	[Learn more about  Microsoft Graph API development](#msg_how_learn_unified_api) 
 
 <a name="msg_what_is_unified_api"> </a>
@@ -21,8 +22,31 @@ The API gives you:
 - A unified developer experience to access services across Office 365 and Microsoft data
 - Seamless navigation between entities and and the relationships among them 
 - Aggregated data from multiple services in a single response
+- One token to access all resources
 
 You can use the API to access fixed entities like users, groups, mail, messages, calendars, tasks, notes coming from services like Outlook, OneDrive, Azure Active Directory, Planner, OneNote and others. You can also obtain calculated relationships powered by the Office Graph (only for commercial users) like the list of users you are working with or the documents trending around you.
+
+<a name="msg_queries"> </a>
+##Common Queries
+
+The following are some exqmples of common queries using Microsoft Graph API.
+
+| **Operation**	| **Service endpoint** |
+|:--------------------------|:----------------------------------------|
+|   GET my profile |	`https://graph.microsoft.com/v1.0/me` |
+|   GET my files|	`https://graph.microsoft.com/v1.0/me/drive/root/children` |
+|   GET my photo	 | `https://graph.microsoft.com/v1.0/me/userPhoto/$value` |
+|   GET my mail |	`https://graph.microsoft.com/v1.0/me/messages` |
+|   GET my manager	| `https://graph.microsoft.com/v1.0/me/manager` |
+|   GET last user to modify file x |	`https://graph.microsoft.com/v1.0/me/drive/root/items/<fileX-id>/lastModifiedByUsere` |
+|   GET unified groups I’m member of|	`https://graph.microsoft.com/v1.0/me/joinedGroups` |
+|   GET users in my organization	 | `https://graph.microsoft.com/v1.0/users` |
+|   GET group Y conversations |	`https://graph.microsoft.com/v1.0/groups/<groupY-id>/conversations` |
+|   GET my tasks	| `https://graph.microsoft.com/beta/me/tasks` |
+|   GET my notes |	`https://graph.microsoft.com/beta/me/notes` |
+|   GET files trending around me|	`https://graph.microsoft.com/beta/me/trendingAround` |
+|   GET people I am working with	 | `https://graph.microsoft.com/beta/me/workingWith` |
+
 
 <a name="msg_roof"> </a>
 ## All Office 365 data under one roof
@@ -63,7 +87,7 @@ The following resources can help you get started:
 
 **Develop an app using Microsoft Graph API**
 
--  [Get started with the Microsoft Graph API] 
+-  [Get started with the Microsoft Graph API](\microsoft-graph-api-FAQs.md) 
 -  [Microsoft Graph API FAQs](\microsoft-graph-api-FAQs.md) 
 -  [Authorization Code Grant Flow](https://msdn.microsoft.com/en-us/library/azure/dn645542.aspx)
 
@@ -75,7 +99,7 @@ The following resources can help you get started:
 -  [Cross-origin resource sharing (CORS) support](..\howto\create-web-apps-using-CORS-to-access-files-in-Office-365.md) 
  -->
  
-**Try out and explore the Microsoft Graph API**
+**Tools to ty out and explore the Microsoft Graph API**
 
 -  [Microsoft Graph API Explorer](https://graphexplorer2.azurewebsites.net/) 
 -  [API Sandbox](http://apisandbox.msdn.com)
@@ -86,21 +110,18 @@ The following resources can help you get started:
 
 **Code samples**
 
--  [Single page app sample](https://github.com/OfficeDev/O365-Angular-Profile)
--  [.NET app sample](http://aka.ms/o365-win-profile)
--  [Android app sample](http://aka.ms/o365-android-profile)
--  [iOS app sample](http://aka.ms/o365-iOS-profile)
+-  [Code samples page app]
 
 
-**Release notes and known issues for Office 365 unified API**
+
+**Release notes and known issues for Microsoft Graph API**
 
 -  [Microsoft Graph API release notes for November 2015](\microsoft-graph-api-release-notes-known-issues.md)
 
 **Reference**
 
-- [Examples of Office 365 unified API calls (preview)](..\howto\examples-of-office-365-unified-api-calls.md)
-- [Office 365 Groups REST API reference (preview)](..\howto\groups-rest-operations.md) 
-- [Office 365 unified API reference (preview)](..\howto\office-365-unified-api-reference.md)
+- [Microsoft Graph API v1.0 reference]
+- [Microsoft Graph API beta reference]
 
 **Client libraries** 
 
@@ -108,7 +129,3 @@ The following resources can help you get started:
 -  [iOS](https://github.com/OfficeDev/Office-365-SDK-for-iOS)
 -  [.NET library](https://www.nuget.org/packages/Microsoft.Graph)
   
-
-
-
-
