@@ -110,7 +110,7 @@ The following resources can help you get started:
 
 **Code samples**
 
--  [Code samples page app]
+-  [Code samples page]
 
 
 
