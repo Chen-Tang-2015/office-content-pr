@@ -8,8 +8,8 @@ Your feedback is important to us. Connect with us on [Stack Overflow](http://sta
 **In this article**
   
 -	[What platforms are supported by Microsoft Graph API?](#msg_how_use__unified_api)
--	[Does Microsoft Graph API support v2.0 app authentication model?](#msg_v2auth) 
 -	[Why use Microsoft Graph API?](#msg_why_use_unified_api)
+-	[Does Microsoft Graph API support v2.0 app authentication model?](#msg_v2auth) 
 
 
 <!---	[What's currently available in Microsoft Graph API](#msg_what_in_unified_api)
@@ -63,6 +63,14 @@ You also have the option to use cross-origin resource sharing (CORS) to send req
 
 <a name="msg_why_use_unified_api"> </a>
 ## Why use Microsoft Graph API?
+
+Let's say you want to programmatically retrieve a user's files, profile picture, and find the manager of the person who last edited that file in your organization. Because the information is stored in  multiple services-Azure Active Directory, SharePoint, and Exchange-the task involves multiple steps using Office 365 APIs: 
+
+1. Use the Discovery Service to find the various service endpoints 
+2. Determine the URL of the services your Office 365 apps want to connect to
+3. Then acquire and manage the access token for each service and make the request to the service directly
+
+Now, you can use the use Microsoft Graph API to perform the same complex operation via a single REST API endpoint. You don't have to discover and navigate a different endpoint for each service, acquire and manage separate access token for each service, deal with siloed services and varying data model.
 
 The following example shows the current model for interacting with Office 365 API using disparate service endpoints and how much simpler this becomes with Microsoft Graph API.
 
