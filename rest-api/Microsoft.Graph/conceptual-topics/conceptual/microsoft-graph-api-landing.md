@@ -63,7 +63,7 @@ The following resources can help you get started:
 
 **Develop an app using Microsoft Graph API**
 
--  [Get started with the Microsoft Graph API](\microsoft-graph-api-FAQs.md) 
+-  [Get started with the Microsoft Graph API] 
 -  [Microsoft Graph API FAQs](\microsoft-graph-api-FAQs.md) 
 -  [Authorization Code Grant Flow](https://msdn.microsoft.com/en-us/library/azure/dn645542.aspx)
 
