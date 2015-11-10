@@ -475,7 +475,7 @@
       <Item text="Delete entity" url="api-reference/v1.0/api/entity_delete" SEOKeyword="Delete entity, Microsoft Graph API, entity API" SEODescritpion="Delete entity."></Item>
     </Item>
   </Item>
-  <Item text="/beta reference" url="api-reference/beta/service_root"> 
+  <Item text="/beta reference" url="api-reference/beta/service_root">
     <Item text="People" url="api-reference/beta/resources/people" SEOKeyword="device API, Microsoft Graph API, device API" SEODescritpion="Represents a device registered in the directory. Inherits from DirectoryObject.">
       <Item text="person" url="api-reference/beta/resources/person" SEOKeyword="person API, Microsoft Graph API, person API" SEODescritpion="">
         <Item text="List people" url="api-reference/beta/api/user_list_people" SEOKeyword="List people, Microsoft Graph API, user API" SEODescritpion="Retrieve a list of person objects."></Item>
@@ -673,7 +673,6 @@
         <Item text="Update resource" url="api-reference/beta/api/resource_update" SEOKeyword="Update resource, Microsoft Graph API, resource API" SEODescritpion="Update the properties of resource object."></Item>
         <Item text="Delete resource" url="api-reference/beta/api/resource_delete" SEOKeyword="Delete resource, Microsoft Graph API, resource API" SEODescritpion="Delete resource."></Item>
       </Item>
-
     </Item>
     <Item text="Outlook extensions" url="api-reference/beta/resources/extension" SEOKeyword="extension API, Microsoft Graph API, extension API" SEODescritpion="">
       <Item text="extension" url="api-reference/beta/resources/extension" SEOKeyword="extension API, Microsoft Graph API, extension API" SEODescritpion="">
