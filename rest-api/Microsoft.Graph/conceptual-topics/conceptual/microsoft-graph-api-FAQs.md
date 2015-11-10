@@ -72,6 +72,8 @@ Let's say you want to programmatically retrieve a user's files, profile picture,
 
 Now, you can use the use Microsoft Graph API to perform the same complex operation via a single REST API endpoint. You don't have to discover and navigate a different endpoint for each service, acquire and manage separate access token for each service, deal with siloed services and varying data model.
 
+##Sample queries
+
 The following example shows the current model for interacting with Office 365 API using disparate service endpoints and how much simpler this becomes with Microsoft Graph API.
 
 **Disparate service endpoints**
@@ -93,7 +95,7 @@ Using the Microsoft Graph API, you don't have to first discover service endpoint
 | Discover service endpoints for Office 365 API                |     `Microsoft Graph API`           | Not needed <!-- notes -->|
 | Get users           |     `Office 365 unified API` | _https://_**graph.microsoft.com**_/v1.0/contoso.onmicrosoft.com/users_ |
 | Get message collection from the Inbox       |     `Microsoft Graph API`           | _https://_**graph.microsoft.com**_/v1.0/me/messages_  |
-| Get Joe's files   |     `Microsoft Graph API `  | _https://graph.microsoft.com/v1.0/me/drive/root/children_ |
+| Get Joe's files   |     `Microsoft Graph API `  | _https://_**graph.microsoft.com**_/v1.0/me/drive/root/children_ |
 
 <!--| Get TrendingAround, for the current authenticated user           |     `Microsoft Graph API`                     | _https://_**graph.microsoft.com**_/beta/me/trendingaround_   |-->
 
