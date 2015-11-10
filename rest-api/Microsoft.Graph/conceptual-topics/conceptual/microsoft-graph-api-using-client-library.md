@@ -86,7 +86,7 @@ The following table summarizes the mappings between the Microsoft Graph API enti
 
 | **Entity of $metadata**	| **Type/members of Microsoft.Graph.Dll** |
 |:--------------------------|:----------------------------------------|
-|   `<EntityContainer Name="GraphService">` |	GraphService client; |
+|   `<EntityContainer Name="GraphService">` |	`GraphService client;` |
 |   `<EntitySet Name="users" EntityType="Microsoft.Graph.User">` |	`IUserCollection client.users;` |
 |   `<EntityType Name="User" BaseType="Microsoft.Graph.DirectoryObject">`	 | `Microsoft.Graph.User user;` |
 |    `<Property Name="userPrincipalName" Type="Edm.String" Unicode="false" />` |	`string user.userPrincipalName;` |
