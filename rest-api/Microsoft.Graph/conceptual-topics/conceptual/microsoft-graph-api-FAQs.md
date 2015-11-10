@@ -118,7 +118,7 @@ Some of the benefits of using Microsoft Graph API  are as follows:
 <a name="msg_v2auth"> </a>
 ## Does Microsoft Graph API support v2.0 app authentication model?
 
-Yes, in preview. For more information see [Authenticate Microsoft Graph endpoints using the v2.0 app model preview](authenticate-MSGraph-using-v2.md)
+Yes, in preview. For more information see [Authenticate Microsoft Graph endpoints using the v2.0 app model preview](authenticate-MSGraph-using-v2.md).
 
 <!--<a name="msg_what_in_unified_api"> </a>
 ## What's in Microsoft Graph API?
