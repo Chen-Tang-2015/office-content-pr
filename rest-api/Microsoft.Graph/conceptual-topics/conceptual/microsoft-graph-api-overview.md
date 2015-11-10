@@ -21,6 +21,7 @@ The API gives you:
 - A unified developer experience to access services across Office 365 and Microsoft data
 - Seamless navigation between entities and and the relationships among them 
 - Aggregated data from multiple services in a single response
+- One token to access all resources
 
 You can use the API to access fixed entities like users, groups, mail, messages, calendars, tasks, notes coming from services like Outlook, OneDrive, Azure Active Directory, Planner, OneNote and others. You can also obtain calculated relationships powered by the Office Graph (only for commercial users) like the list of users you are working with or the documents trending around you.
 
@@ -75,7 +76,7 @@ The following resources can help you get started:
 -  [Cross-origin resource sharing (CORS) support](..\howto\create-web-apps-using-CORS-to-access-files-in-Office-365.md) 
  -->
  
-**Try out and explore the Microsoft Graph API**
+**Tools to ty out and explore the Microsoft Graph API**
 
 -  [Microsoft Graph API Explorer](https://graphexplorer2.azurewebsites.net/) 
 -  [API Sandbox](http://apisandbox.msdn.com)
@@ -86,21 +87,18 @@ The following resources can help you get started:
 
 **Code samples**
 
--  [Single page app sample](https://github.com/OfficeDev/O365-Angular-Profile)
--  [.NET app sample](http://aka.ms/o365-win-profile)
--  [Android app sample](http://aka.ms/o365-android-profile)
--  [iOS app sample](http://aka.ms/o365-iOS-profile)
+-  [Code samples page app]
 
 
-**Release notes and known issues for Office 365 unified API**
+
+**Release notes and known issues for Microsoft Graph API**
 
 -  [Microsoft Graph API release notes for November 2015](\microsoft-graph-api-release-notes-known-issues.md)
 
 **Reference**
 
-- [Examples of Office 365 unified API calls (preview)](..\howto\examples-of-office-365-unified-api-calls.md)
-- [Office 365 Groups REST API reference (preview)](..\howto\groups-rest-operations.md) 
-- [Office 365 unified API reference (preview)](..\howto\office-365-unified-api-reference.md)
+- [Microsoft Graph API v1.0 reference]
+- [Microsoft Graph API beta reference]
 
 **Client libraries** 
 
