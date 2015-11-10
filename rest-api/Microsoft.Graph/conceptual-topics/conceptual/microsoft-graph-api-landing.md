@@ -9,7 +9,8 @@ _**Applies to:** Office 365_
 **In this article**
   
 -	[Overview of Microsoft Graph API](#msg_what_is_unified_api) 
--	[All Office 365 data under one roof](#msg_eoof) 
+-	[Common Queries](#msg_queries) 
+-	[All Office 365 data under one roof](#msg_roof) 
 -	[Learn more about  Microsoft Graph API development](#msg_how_learn_unified_api) 
 
 <a name="msg_what_is_unified_api"> </a>
@@ -23,6 +24,28 @@ The API gives you:
 - Aggregated data from multiple services in a single response
 
 You can use the API to access fixed entities like users, groups, mail, messages, calendars, tasks, notes coming from services like Outlook, OneDrive, Azure Active Directory, Planner, OneNote and others. You can also obtain calculated relationships powered by the Office Graph (only for commercial users) like the list of users you are working with or the documents trending around you.
+
+<a name="msg_queries"> </a>
+##Common Queries
+
+The following are some exqmples of common queries using Microsoft Graph API.
+
+| **Operation**	| **Service endpoint** |
+|:--------------------------|:----------------------------------------|
+|   GET my profile |	`https://graph.microsoft.com/v1.0/me` |
+|   GET my files|	`https://graph.microsoft.com/v1.0/me/drive/root/children` |
+|   GET my photo	 | `https://graph.microsoft.com/v1.0/me/userPhoto/$value` |
+|   GET my mail |	`https://graph.microsoft.com/v1.0/me/messages` |
+|   GET my manager	| `https://graph.microsoft.com/v1.0/me/manager` |
+|   GET last user to modify file x |	`https://graph.microsoft.com/v1.0/me/drive/root/items/<fileX-id>/lastModifiedByUsere` |
+|   GET unified groups I’m member of|	`https://graph.microsoft.com/v1.0/me/joinedGroups` |
+|   GET users in my organization	 | `https://graph.microsoft.com/v1.0/users` |
+|   GET group Y conversations |	`https://graph.microsoft.com/v1.0/groups/<groupY-id>/conversations` |
+|   GET my tasks	| `https://graph.microsoft.com/beta/me/tasks` |
+|   GET my notes |	`https://graph.microsoft.com/beta/me/notes` |
+|   GET files trending around me|	`https://graph.microsoft.com/beta/me/trendingAround` |
+|   GET people I am working with	 | `https://graph.microsoft.com/beta/me/workingWith` |
+
 
 <a name="msg_roof"> </a>
 ## All Office 365 data under one roof
