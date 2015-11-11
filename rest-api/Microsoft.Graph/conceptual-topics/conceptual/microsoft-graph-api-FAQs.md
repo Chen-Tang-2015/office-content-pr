@@ -94,7 +94,7 @@ Using the Microsoft Graph API, you don't have to first discover service endpoint
 |   **Operation**                  |  **API**                          |  **Service endpoint** |
 |:-----------------------------|:-----------------------------------------|:-----------------|
 | Discover service endpoints for Office 365 API                |     `Microsoft Graph API`           | Not needed <!-- notes -->|
-| Get users           |     `Office 365 unified API` | _https://_**graph.microsoft.com**_/v1.0/contoso.onmicrosoft.com/users_ |
+| Get users           |     `Microsoft Graph API` | _https://_**graph.microsoft.com**_/v1.0/contoso.onmicrosoft.com/users_ |
 | Get message collection from the Inbox       |     `Microsoft Graph API`           | _https://_**graph.microsoft.com**_/v1.0/me/messages_  |
 | Get Joe's files   |     `Microsoft Graph API `  | _https://_**graph.microsoft.com**_/v1.0/me/drive/root/children_ |
 
