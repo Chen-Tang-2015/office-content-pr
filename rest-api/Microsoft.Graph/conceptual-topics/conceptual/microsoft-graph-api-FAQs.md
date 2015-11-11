@@ -85,7 +85,7 @@ The following example shows the current model for interacting with Office 365 AP
 | Get users           |     `Azure AD Graph API` | _https://_**graph.windows.net**_/contoso.com/users?api-version=2013-04-05_|
 | Get message collection from the Inbox       |     `Office 365 API`           | _https://_**outlook.office365.com**_/api/v1.0/me/messages_  |
 | Get Joe's files   |     `Office 365 API`  | _https://_**contoso-my.sharepoint.com**_/personal/joe_contoso_com/_api/v1.0/files_ |
-<!--| Get TrendingAround, for the current authenticated user           |     `Office graph`                     | _https://_**outlook.office365.com**_/api/beta/me/TrendingAround_   |-->
+<!--| Get TrendingAround, for the current authenticated user           |     `Office Graph`                     | _https://_**outlook.office365.com**_/api/beta/me/TrendingAround_   |-->
 
 Using the Microsoft Graph API, you don't have to first discover service endpoints and then traverse different endpoints to get a user's files, mail and so on. You only need to interact with a single REST URL namespace, which is _**graph.microsoft.com**_.
 
