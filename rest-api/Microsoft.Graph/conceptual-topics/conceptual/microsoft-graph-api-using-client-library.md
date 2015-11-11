@@ -1,6 +1,6 @@
 # Using Microsoft Graph API client library
 
-_**Applies to:** Office 365_
+<!--_**Applies to:** Office 365_
  
 In this article:
   
@@ -11,7 +11,8 @@ In this article:
   - [Access and manipulate resources with the client library](#msg_access_and_manipulate_resources_with_client_library)
   - [Use query options with the client library](#msg_query_options_with_client_library)
 
-<a name="msg_using_client_lib"> </a>
+<a name="msg_using_client_lib"> </a>  -->
+
 ## Using the .NET client library
 A Microsoft Graph API native app uses the Microsoft Graph API client library to access and manipulate the API resources. 
 The client library exposes a .NET application object model that encapsulates the Microsoft Graph API data model ($metadata),
@@ -22,7 +23,8 @@ on the corresponding resource class.  The query options (e.g., $select, $filter,
 There is a strong similarity between calling the REST API and using the client library. The client library's object model is closely mapped to the OData entity type schema. 
 
 
-<a name="msg_set_up_visual_studio"> </a>
+<!--<a name="msg_set_up_visual_studio"> </a>  -->
+
 ###Set up a Visual Studio Project
 The Microsoft Graph API client library is available for download as a NuGet package. You can download it using Visual Studio after you have created a Visual Studio solution/project. 
 
@@ -70,7 +72,8 @@ When the user signs in to successfully, the API proceeds to acquire the access t
 The `redirectUri` must match the **REPLY URL** configured for the app in Azure  application registry. `Constants.ResourceUrl` is a named constant holding a string value of `"https://graph.microsoft.com"` and `Constants.ClientIdForUserAuthn` is the **CLIENT ID** value of the app, also configured in Azure. Unlike a web app, the client secret is not used for native app.
  
  
-<a name="msg_client_lib_object_model"> </a>
+<!--<a name="msg_client_lib_object_model"> </a>  -->
+
 ###Map client library Object model to entity schema
 The `Microsoft.Graph.GraphService` class serves as the root of the object hierarchy in the client library. This class encapsulates the ```<EntityContainer Name="GraphService">``` element in the $metadata declaration. 
 
@@ -79,7 +82,8 @@ The contained ```<EntitySet>``` elements become the like-named properties on the
 The same applies to entities and their properties, including navigation properties. Thus, the `<EntityType name="User">` element and its child elements, for example, `<Property name="userPrincipalName">` and `<NavigationProperty name="files">`, 
 in metadata become the `User` class, the `User.userPrincipalName` property and the `User.files` property, respectively, in Microsoft.Graph.dll.
 
-<a name="msg_mapping"> </a> 
+<!-- <a name="msg_mapping"> </a>  -->
+
 ###Table mapping entity schemas ($metadata) and .NET client library
 The following table summarizes the mappings between the Microsoft Graph API entity schemas ($metadata) and its .NET client library.
 
@@ -99,7 +103,8 @@ User me = client.Me;
 ```
 
 
-<a name="msg_access_and_manipulate_resources_with_client_library"> </a> 
+<!--<a name="msg_access_and_manipulate_resources_with_client_library"> </a>  -->
+
 ###Access and manipulate resources with the client library 
 With the client library, you can traverse the graph to access and manipulate the API resources by calling the  
 `ExecuteAsync`, `UpdateAsync` and `DeleteAsync` and other methods.  For example, fetching the `users` collection 
@@ -178,7 +183,8 @@ List<Item> userFileEditorfiles= client.users.
 ```
 
 
-<a name="msg_query_options_with_client_library"> </a>
+<!--<a name="msg_query_options_with_client_library"> </a> -->
+
 ###Use query options with the client library
 Common set operations are also supported for resource collections. For example, to fetch the first 5 users in a query, 
 use `Take(5)`. This corresponds to setting the query parameter `$top=5` in the underlying REST API call.
@@ -242,7 +248,7 @@ always catch exceptions and inspect error messages to learn what query options a
 
 You can see more calling the .NET client library in action in this [sample app](https://github.com/OfficeDev/O365-Win-Profile). 
 
-##Additional Resources##
+<!-- ##Additional Resources##
 
 - [Call Microsoft Graph API service via REST](call-microsoft-graph-api.md)
-- [Hands on lab: Deep dive into the Office 365 unified API](http://dev.office.com/hands-on-labs/4585)
+- [Hands on lab: Deep dive into the Office 365 unified API](http://dev.office.com/hands-on-labs/4585)  -->
