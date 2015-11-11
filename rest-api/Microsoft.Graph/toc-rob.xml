@@ -10,7 +10,7 @@
     <Item text="Associate Office 365 account" url="overview/associate-office365-with-azure-ad" SEOKeyword="Associate Office 365 account, Microsoft Graph API, Overview" SEODescription="Use the management portal in Microsoft Azure to manage users, roles, and apps for Office 365."/>
     <Item text="v2.0 app model (preview)" url="overview/authenticate-MSGraph-using-v2" SEOKeyword="v2.0 app model, Microsoft Graph API, Overview" SEODescription="The v2.0 app authentication model preview enables you to create apps that accept both work and school (Azure AD) as well as personal (Microsoft account) identities." />
   </Item>
-  <Item text="Walkthroughs" url="platform">
+  <Item text="Documentation" url="platform">
     <Item text="HTTP" url="platform/connect-step-by-step-http" SEOKeyword="HTTP, REST, Microsoft Graph API, Walkthroughs" SEODescription="">
       <Item text="Call the API" url="overview/call-microsoft-graph-api" SEOKeyword="Call the API, Microsoft Graph API, Overview" SEODescription="Answers to some frequently-asked questions about the Microsoft Graph." />
       <Item text="Query Parameters" />
