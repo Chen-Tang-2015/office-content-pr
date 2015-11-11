@@ -1,6 +1,5 @@
 # Microsoft Graph API release notes and known issues
 
-_**Applies to:** Office 365_
 
 This article provides information about the new features for developers that are available in the November 2015 release of the Microsoft Graph API, and any known issues that you might want to be aware of. 
 
@@ -37,7 +36,7 @@ The following Microsoft Graph API preview features are available:
 
 The following are known issues with the Microsoft Graph API.
 
-## Additional resources
+<!--## Additional resources 
 
 - [Microsoft Graph API FAQs](\microsoft-graph-api-FAQs.md) 
-- [OneDrive API (preview) release notes](http://aka.ms/odb-api-release-notes)
+- [OneDrive API (preview) release notes](http://aka.ms/odb-api-release-notes)  -->
