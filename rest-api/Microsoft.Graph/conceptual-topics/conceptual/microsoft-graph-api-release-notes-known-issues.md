@@ -3,6 +3,8 @@
 
 This article provides information about the new features for developers that are available in the November 2015 release of the Microsoft Graph API, and any known issues that you might want to be aware of. 
 
+  >  Your feedback is important to us. Connect with us on [Stack Overflow](http://stackoverflow.com/questions/tagged/office365). Tag your questions with [MicrosoftGraph] and [office365].
+
 ## GA features in Microsoft Graph API
 
 The following Microsoft Graph API features are generally available:
