@@ -4,6 +4,12 @@
 _**Applies to:** Office 365_
  
 This article discusses how to authenticate a user, get an access token and renew an access token using a refresh token.
+The authentication flow can be broken down to two basic steps:
+
+1. Request an authorization code
+2. Use authorization code to request an access token and refresh token. 
+
+>  Note: You can use the refresh token to acquire a new access token when the current access token expires.
 
 <!--To call the Microsoft Graph API, you have to complete the following tasks.
 
@@ -13,23 +19,13 @@ This article discusses how to authenticate a user, get an access token and renew
 4. Use the access token in a request to the Microsoft Graph API
 5. Disconnect the session
 
--->
-
-The authentication flow can be broken down to two basic steps:
-
-1. Request an authorization code
-2. Use authorization code to request an access token and refresh token. 
-
->  Note: You can use the refresh token to acquire a new access token when the current access token expires.
-
-
 In this article:
 
 - [Authenticate a user and get app authorized](#msg_get_app_authorized)
 - [Acquire access token](#msg_get_app_authenticated)
 - [Renew access token using refresh token](#msg_renew_access_token)
 
- <a name="msg_get_app_authorized"> </a>
+ <a name="msg_get_app_authorized"> </a> -->
  
 ###Authenticate a user and get app authorized
 To get your app authorized, you must get the user authenticated first. You do this by redirecting the user to the Azure Active Directory (Azure AD) authorization endpoint, along with your app information, to sign in to their Office 365 account. Once the user is signed in, and consents to 
@@ -255,7 +251,7 @@ When the refresh token expires, you cannot renew any expired access token using 
 Instead, you must restart the [app authorization and authentication](#msg_get_app_authorized) process.
 
 
-##Additional Resources##
+<!--##Additional Resources##
 
-- [Hands on lab: Deep dive into the Office 365 unified API](http://dev.office.com/hands-on-labs/4585)
+- [Hands on lab: Deep dive into the Office 365 unified API](http://dev.office.com/hands-on-labs/4585)  -->
 
