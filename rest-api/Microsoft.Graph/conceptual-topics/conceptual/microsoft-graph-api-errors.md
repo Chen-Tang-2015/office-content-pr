@@ -1,12 +1,13 @@
 # Microsoft Graph API error  response and resource type 
 
-In this article:
+<!--In this article:
   
 -	[Status code](#msg_status_code)
 -	[Error resource type](#msg_error_resource_type)
 -	[Code property](#msg_code_property)
 
-<a name="msg_error_response"> </a>
+<a name="msg_error_response"> </a> -->
+
 ##Status code
 Errors in the Microsoft Graph API service are returned using standard HTTP status codes, as well as a JSON error
 response object. The following HTTP status codes should be expected.
@@ -52,7 +53,8 @@ to the HTTP status code returned. Here is an example of a full JSON error body.
 ```
 
 
-<a name="msg_error_resource_type"> </a>
+<!--<a name="msg_error_resource_type"> </a> -->
+
 # Error resource type
 
 The error resource is returned whenever an error occurs in the processing
@@ -100,7 +102,8 @@ properties:
   "tocPath": "Misc/Error Responses"
 } -->
 
-<a name="msg_code_property"> </a>
+<!--<a name="msg_code_property"> </a> -->
+
 ##Code property
 
 The `code` property contains one of the following possible values. Your apps should be
@@ -209,7 +212,7 @@ time, so it is important that all apps be able to handle the basic error codes i
 | **virusSuspicious**                | This document is suspicious and may have a virus.
 | **zeroOrFewerResultsRequested**    | Zero or fewer results requested.
 
-##Additional Resources##
+<!-- ##Additional Resources##
 
 - [Microsoft Graph API release notes and known issues](microsoft-graph-api-release-notes-known-issues.md )
-- [Hands on lab: Deep dive into the Microsoft Graph API](http://dev.office.com/hands-on-labs/4585)
+- [Hands on lab: Deep dive into the Microsoft Graph API](http://dev.office.com/hands-on-labs/4585) -->
