@@ -477,95 +477,95 @@
   </Item>
   <Item text="/beta reference" url="api-reference/beta/service_root">
     <Item text="Users" url="api-reference/beta/resources/user" SEOKeyword="Users API, Microsoft Graph API, Users API" SEODescription="Represents an Azure AD user account. Inherits from DirectoryObject.">
-    <Item text="user" url="api-reference/beta/resources/user" SEOKeyword="user, Microsoft Graph API, user API" SEODescription="Represents an Azure AD user account. Inherits from DirectoryObject.">
-      <Item text="List users" url="api-reference/beta/api/user_list" SEOKeyword="List users, Microsoft Graph API, user API" SEODescription="Retrieve a list of user objects."></Item>
-      <Item text="Create user" url="api-reference/beta/api/user_post_users" SEOKeyword="Create User, Microsoft Graph API, user API" SEODescription="Use this API to create a new User."></Item>
-      <Item text="Get user" url="api-reference/beta/api/user_get" SEOKeyword="Get user, Microsoft Graph API, user API" SEODescription="Retrieve the properties and relationships of user object."></Item>
-      <Item text="Update user" url="api-reference/beta/api/user_update" SEOKeyword="Update user, Microsoft Graph API, user API" SEODescription="Update the properties of user object."></Item>
-      <Item text="Delete user" url="api-reference/beta/api/user_delete" SEOKeyword="Delete user, Microsoft Graph API, user API" SEODescription="Delete user."></Item>
+      <Item text="user" url="api-reference/beta/resources/user" SEOKeyword="user, Microsoft Graph API, user API" SEODescription="Represents an Azure AD user account. Inherits from DirectoryObject.">
+        <Item text="List users" url="api-reference/beta/api/user_list" SEOKeyword="List users, Microsoft Graph API, user API" SEODescription="Retrieve a list of user objects."></Item>
+        <Item text="Create user" url="api-reference/beta/api/user_post_users" SEOKeyword="Create User, Microsoft Graph API, user API" SEODescription="Use this API to create a new User."></Item>
+        <Item text="Get user" url="api-reference/beta/api/user_get" SEOKeyword="Get user, Microsoft Graph API, user API" SEODescription="Retrieve the properties and relationships of user object."></Item>
+        <Item text="Update user" url="api-reference/beta/api/user_update" SEOKeyword="Update user, Microsoft Graph API, user API" SEODescription="Update the properties of user object."></Item>
+        <Item text="Delete user" url="api-reference/beta/api/user_delete" SEOKeyword="Delete user, Microsoft Graph API, user API" SEODescription="Delete user."></Item>
+      </Item>
+      <Item text="photo" url="api-reference/beta/resources/profilephoto" SEOKeyword="user people, Microsoft Graph API, user API" SEODescription="">
+        <Item text="List photos" url="api-reference/beta/api/user_list_photos" SEOKeyword="List photos, Microsoft Graph API, user API" SEODescription="Retrieve a list of photo objects."></Item>
+        <Item text="Create photo" url="api-reference/beta/api/user_post_photos" SEOKeyword="Create photo, Microsoft Graph API, user API" SEODescription="Use this API to create a new photo."></Item>
+      </Item>
+      <Item text="mail" url="api-reference/beta/resources/message" SEOKeyword="user mail, Microsoft Graph API, user API" SEODescription="">
+        <Item text="List messages" url="api-reference/beta/api/user_list_messages" SEOKeyword="List messages, Microsoft Graph API, Users API" SEODescription="Retrieve a list of message objects."></Item>
+        <Item text="Create message" url="api-reference/beta/api/user_post_messages" SEOKeyword="Create Message, Microsoft Graph API, Users API" SEODescription="Use this API to create a new Message."></Item>
+        <Item text="List mail folders" url="api-reference/beta/api/user_list_mailfolders" SEOKeyword="List mailFolders, Microsoft Graph API, Users API" SEODescription="Retrieve a list of mailfolder objects."></Item>
+        <Item text="Create mail folder" url="api-reference/beta/api/user_post_mailfolders" SEOKeyword="Create MailFolder, Microsoft Graph API, Users API" SEODescription="Use this API to create a new MailFolder."></Item>
+        <Item text="Send mail" url="api-reference/beta/api/user_sendmail" SEOKeyword="user: sendMail, Microsoft Graph API, user API" SEODescription=""></Item>
+      </Item>
+      <Item text="calendar" url="api-reference/beta/resources/event" SEOKeyword="user calendar, Microsoft Graph API, user API" SEODescription="">
+        <Item text="List events" url="api-reference/beta/api/user_list_events" SEOKeyword="List events, Microsoft Graph API, Users API" SEODescription="Retrieve a list of event objects."></Item>
+        <Item text="Create event" url="api-reference/beta/api/user_post_events" SEOKeyword="Create Event, Microsoft Graph API, Users API" SEODescription="Use this API to create a new Event."></Item>
+        <Item text="List calendars" url="api-reference/beta/api/user_list_calendars" SEOKeyword="List calendars, Microsoft Graph API, Users API" SEODescription="Retrieve a list of calendar objects."></Item>
+        <Item text="Create calendar" url="api-reference/beta/api/user_post_calendars" SEOKeyword="Create Calendar, Microsoft Graph API, Users API" SEODescription="Use this API to create a new Calendar."></Item>
+        <Item text="List calendar groups" url="api-reference/beta/api/user_list_calendargroups" SEOKeyword="List calendarGroups, Microsoft Graph API, Users API" SEODescription="Retrieve a list of calendargroup objects."></Item>
+        <Item text="Create calendar group" url="api-reference/beta/api/user_post_calendargroups" SEOKeyword="Create CalendarGroup, Microsoft Graph API, Users API" SEODescription="Use this API to create a new CalendarGroup."></Item>
+        <Item text="List calendar view" url="api-reference/beta/api/user_list_calendarview" SEOKeyword="List calendarView, Microsoft Graph API, Users API" SEODescription="Retrieve a list of event objects."></Item>
+        <Item text="Create calendar view" url="api-reference/beta/api/user_post_calendarview" SEOKeyword="Create calendar view, Microsoft Graph API, Users API" SEODescription="Use this API to create a new Event."></Item>
+        <Item text="Reminder view" url="api-reference/beta/api/user_reminderview" SEOKeyword="user: reminderView, Microsoft Graph API, user API" SEODescription=""></Item>
+      </Item>
+      <Item text="contacts" url="api-reference/beta/resources/contact" SEOKeyword="user contact, Microsoft Graph API, user API" SEODescription="">
+        <Item text="List contacts" url="api-reference/beta/api/user_list_contacts" SEOKeyword="List contacts, Microsoft Graph API, Users API" SEODescription="Retrieve a list of contact objects."></Item>
+        <Item text="Create contact" url="api-reference/beta/api/user_post_contacts" SEOKeyword="Create Contact, Microsoft Graph API, Users API" SEODescription="Use this API to create a new Contact."></Item>
+        <Item text="List contact folders" url="api-reference/beta/api/user_list_contactfolders" SEOKeyword="List contactFolders, Microsoft Graph API, Users API" SEODescription="Retrieve a list of contactfolder objects."></Item>
+        <Item text="Create contact folder" url="api-reference/beta/api/user_post_contactfolders" SEOKeyword="Create ContactFolder, Microsoft Graph API, Users API" SEODescription="Use this API to create a new ContactFolder."></Item>
+      </Item>
+      <Item text="drive" url="api-reference/beta/resources/drive" SEOKeyword="user drive, Microsoft Graph API, user API" SEODescription="">
+        <Item text="List drives" url="api-reference/beta/api/drive_list" SEOKeyword="List drives, Microsoft Graph API, drive API" SEODescription="Retrieve a list of drive objects."></Item>
+        <Item text="List items" url="api-reference/beta/api/drive_list_items" SEOKeyword="List items, Microsoft Graph API, drive API" SEODescription="Retrieve a list of item objects."></Item>
+        <Item text="Create item" url="api-reference/beta/api/drive_post_items" SEOKeyword="Create item, Microsoft Graph API, drive API" SEODescription="Use this API to create a new item."></Item>
+      </Item>
+      <Item text="people" url="api-reference/beta/resources/person" SEOKeyword="user people, Microsoft Graph API, user API" SEODescription="">
+        <Item text="List people" url="api-reference/beta/api/user_list_people" SEOKeyword="List people, Microsoft Graph API, user API" SEODescription="Retrieve a list of person objects."></Item>
+        <Item text="Create Person" url="api-reference/beta/api/user_post_people" SEOKeyword="Create Person, Microsoft Graph API, user API" SEODescription="Use this API to create a new Person."></Item>
+      </Item>
+      <Item text="tasks" url="api-reference/beta/resources/task" SEOKeyword="user tasks, Microsoft Graph API, user API" SEODescription="">
+        <Item text="List tasks" url="api-reference/beta/api/user_list_tasks" SEOKeyword="List tasks, Microsoft Graph API, user API" SEODescription="Retrieve a list of task objects."></Item>
+        <Item text="Create task" url="api-reference/beta/api/user_post_tasks" SEOKeyword="Create task, Microsoft Graph API, user API" SEODescription="Use this API to create a new task."></Item>
+        <Item text="List plans" url="api-reference/beta/api/user_list_plans" SEOKeyword="List plans, Microsoft Graph API, user API" SEODescription="Retrieve a list of plan objects."></Item>
+        <Item text="Create plan" url="api-reference/beta/api/user_post_plans" SEOKeyword="Create plan, Microsoft Graph API, user API" SEODescription="Use this API to create a new plan."></Item>
+      </Item>
+      <Item text="notes" url="api-reference/beta/resources/notebook" SEOKeyword="user notes, Microsoft Graph API, user API" SEODescription="">
+        <Item text="List notebooks" url="api-reference/beta/api/notes_list_notebooks" SEOKeyword="List notebooks, Microsoft Graph API, notes API" SEODescription="Retrieve a list of notebook(../resources/notebook.md) objects."></Item>
+        <Item text="Create notebook" url="api-reference/beta/api/notes_post_notebooks" SEOKeyword="Create notebook, Microsoft Graph API, notes API" SEODescription="Create a new OneNote notebook(../resources/notebook.md)."></Item>
+      </Item>
+      <Item text="insights" url="api-reference/beta/resources/" SEOKeyword="insights, Microsoft Graph API, user API" SEODescription="">
+        <Item text="List trendingAround" url="api-reference/beta/api/user_list_trendingaround" SEOKeyword="List trendingAround, Microsoft Graph API, user API" SEODescription="Retrieve a list of item objects."></Item>
+        <Item text="List workingWith" url="api-reference/beta/api/user_list_workingwith" SEOKeyword="List workingWith, Microsoft Graph API, user API" SEODescription="Retrieve a list of user objects."></Item>
+      </Item>
+      <Item text="groups" url="api-reference/beta/resources/organization" SEOKeyword="groups, Microsoft Graph API, user API" SEODescription="">
+        <Item text="List joined groups" url="api-reference/beta/api/user_list_joinedgroups" SEOKeyword="List joinedGroups, Microsoft Graph API, Users API" SEODescription="Retrieve a list of group objects."></Item>
+        <Item text="Create join group" url="api-reference/beta/api/user_post_joinedgroups" SEOKeyword="Create Group, Microsoft Graph API, Users API" SEODescription="Use this API to create a new Group."></Item>
+        <Item text="List memberOf" url="api-reference/beta/api/user_list_memberof" SEOKeyword="List memberOf, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
+        <Item text="Create memberOf" url="api-reference/beta/api/user_post_memberof" SEOKeyword="Create memberOf, Microsoft Graph API, Users API" SEODescription="Use this API to create a new memberOf."></Item>
+      </Item>
+      <Item text="organization" url="api-reference/beta/resources/organization" SEOKeyword="user organizational structure, Microsoft Graph API, user API" SEODescription="">
+        <Item text="List direct reports" url="api-reference/beta/api/user_list_directreports" SEOKeyword="List directReports, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
+        <Item text="Create direct report" url="api-reference/beta/api/user_post_directreports" SEOKeyword="Create directReport, Microsoft Graph API, Users API" SEODescription="Use this API to create a new directReport."></Item>
+        <Item text="List manager" url="api-reference/beta/api/user_list_directreports" SEOKeyword="List directReports, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
+        <Item text="Create manager" url="api-reference/beta/api/user_post_directreports" SEOKeyword="Create directReport, Microsoft Graph API, Users API" SEODescription="Use this API to create a new directReport."></Item>
+      </Item>
+      <Item text="directory objects" url="api-reference/beta/resources/directoryobject" SEOKeyword="directory object, Microsoft Graph API, user API" SEODescription="">
+        <Item text="List owned devices" url="api-reference/beta/api/user_list_owneddevices" SEOKeyword="List ownedDevices, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
+        <Item text="Create owned device" url="api-reference/beta/api/user_post_owneddevices" SEOKeyword="Create ownedDevice, Microsoft Graph API, Users API" SEODescription="Use this API to create a new ownedDevice."></Item>
+        <Item text="List registered devices" url="api-reference/beta/api/user_list_registereddevices" SEOKeyword="List registeredDevices, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
+        <Item text="Create registered device" url="api-reference/beta/api/user_post_registereddevices" SEOKeyword="Create registeredDevice, Microsoft Graph API, Users API" SEODescription="Use this API to create a new registeredDevice."></Item>
+        <Item text="List owned objects" url="api-reference/beta/api/user_list_ownedobjects" SEOKeyword="List ownedObjects, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
+        <Item text="Create owned object" url="api-reference/beta/api/user_post_ownedobjects" SEOKeyword="Create ownedObject, Microsoft Graph API, Users API" SEODescription="Use this API to create a new ownedObject."></Item>
+        <Item text="List created objects" url="api-reference/beta/api/user_list_createdobjects" SEOKeyword="List createdObjects, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
+        <Item text="Create created object" url="api-reference/beta/api/user_post_createdobjects" SEOKeyword="Create createdObject, Microsoft Graph API, Users API" SEODescription="Use this API to create a new createdObject."></Item>
+        <Item text="List app role assignments" url="api-reference/beta/api/user_list_approleassignments" SEOKeyword="List appRoleAssignments, Microsoft Graph API, user API" SEODescription="Retrieve a list of approleassignment objects."></Item>
+        <Item text="Create app role assignment" url="api-reference/beta/api/user_post_approleassignments" SEOKeyword="Create AppRoleAssignment, Microsoft Graph API, user API" SEODescription="Use this API to create a new AppRoleAssignment."></Item>
+        <Item text="List OAuth2 permission grants" url="api-reference/beta/api/user_list_oauth2permissiongrants" SEOKeyword="List oauth2PermissionGrants, Microsoft Graph API, Users API" SEODescription="Retrieve a list of oauth2permissiongrant objects."></Item>
+        <Item text="Create OAuth2 permission grant" url="api-reference/beta/api/user_post_oauth2permissiongrants" SEOKeyword="Create OAuth2PermissionGrant, Microsoft Graph API, Users API" SEODescription="Use this API to create a new OAuth2PermissionGrant."></Item>
+        <Item text="Assign license" url="api-reference/beta/api/user_assignlicense" SEOKeyword="user: assignLicense, Microsoft Graph API, user API" SEODescription=""></Item>
+        <Item text="Get member objects" url="api-reference/beta/api/user_getmemberobjects" SEOKeyword="user: getMemberObjects, Microsoft Graph API, user API" SEODescription=""></Item>
+        <Item text="Get member groups" url="api-reference/beta/api/user_getmembergroups" SEOKeyword="user: getMemberGroups, Microsoft Graph API, user API" SEODescription=""></Item>
+        <Item text="Check member groups" url="api-reference/beta/api/user_checkmembergroups" SEOKeyword="user: checkMemberGroups, Microsoft Graph API, user API" SEODescription=""></Item>
+      </Item>
     </Item>
-    <Item text="photo" url="api-reference/beta/resources/profilephoto" SEOKeyword="user people, Microsoft Graph API, user API" SEODescription="">
-      <Item text="List photos" url="api-reference/beta/api/user_list_photos" SEOKeyword="List photos, Microsoft Graph API, user API" SEODescription="Retrieve a list of photo objects."></Item>
-      <Item text="Create photo" url="api-reference/beta/api/user_post_photos" SEOKeyword="Create photo, Microsoft Graph API, user API" SEODescription="Use this API to create a new photo."></Item>
-    </Item>
-    <Item text="mail" url="api-reference/beta/resources/message" SEOKeyword="user mail, Microsoft Graph API, user API" SEODescription="">
-      <Item text="List messages" url="api-reference/beta/api/user_list_messages" SEOKeyword="List messages, Microsoft Graph API, Users API" SEODescription="Retrieve a list of message objects."></Item>
-      <Item text="Create message" url="api-reference/beta/api/user_post_messages" SEOKeyword="Create Message, Microsoft Graph API, Users API" SEODescription="Use this API to create a new Message."></Item>
-      <Item text="List mail folders" url="api-reference/beta/api/user_list_mailfolders" SEOKeyword="List mailFolders, Microsoft Graph API, Users API" SEODescription="Retrieve a list of mailfolder objects."></Item>
-      <Item text="Create mail folder" url="api-reference/beta/api/user_post_mailfolders" SEOKeyword="Create MailFolder, Microsoft Graph API, Users API" SEODescription="Use this API to create a new MailFolder."></Item>
-      <Item text="Send mail" url="api-reference/beta/api/user_sendmail" SEOKeyword="user: sendMail, Microsoft Graph API, user API" SEODescription=""></Item>
-    </Item>
-    <Item text="calendar" url="api-reference/beta/resources/event" SEOKeyword="user calendar, Microsoft Graph API, user API" SEODescription="">
-      <Item text="List events" url="api-reference/beta/api/user_list_events" SEOKeyword="List events, Microsoft Graph API, Users API" SEODescription="Retrieve a list of event objects."></Item>
-      <Item text="Create event" url="api-reference/beta/api/user_post_events" SEOKeyword="Create Event, Microsoft Graph API, Users API" SEODescription="Use this API to create a new Event."></Item>
-      <Item text="List calendars" url="api-reference/beta/api/user_list_calendars" SEOKeyword="List calendars, Microsoft Graph API, Users API" SEODescription="Retrieve a list of calendar objects."></Item>
-      <Item text="Create calendar" url="api-reference/beta/api/user_post_calendars" SEOKeyword="Create Calendar, Microsoft Graph API, Users API" SEODescription="Use this API to create a new Calendar."></Item>
-      <Item text="List calendar groups" url="api-reference/beta/api/user_list_calendargroups" SEOKeyword="List calendarGroups, Microsoft Graph API, Users API" SEODescription="Retrieve a list of calendargroup objects."></Item>
-      <Item text="Create calendar group" url="api-reference/beta/api/user_post_calendargroups" SEOKeyword="Create CalendarGroup, Microsoft Graph API, Users API" SEODescription="Use this API to create a new CalendarGroup."></Item>
-      <Item text="List calendar view" url="api-reference/beta/api/user_list_calendarview" SEOKeyword="List calendarView, Microsoft Graph API, Users API" SEODescription="Retrieve a list of event objects."></Item>
-      <Item text="Create calendar view" url="api-reference/beta/api/user_post_calendarview" SEOKeyword="Create calendar view, Microsoft Graph API, Users API" SEODescription="Use this API to create a new Event."></Item>
-      <Item text="Reminder view" url="api-reference/beta/api/user_reminderview" SEOKeyword="user: reminderView, Microsoft Graph API, user API" SEODescription=""></Item>
-    </Item>
-    <Item text="contacts" url="api-reference/beta/resources/contact" SEOKeyword="user contact, Microsoft Graph API, user API" SEODescription="">
-      <Item text="List contacts" url="api-reference/beta/api/user_list_contacts" SEOKeyword="List contacts, Microsoft Graph API, Users API" SEODescription="Retrieve a list of contact objects."></Item>
-      <Item text="Create contact" url="api-reference/beta/api/user_post_contacts" SEOKeyword="Create Contact, Microsoft Graph API, Users API" SEODescription="Use this API to create a new Contact."></Item>
-      <Item text="List contact folders" url="api-reference/beta/api/user_list_contactfolders" SEOKeyword="List contactFolders, Microsoft Graph API, Users API" SEODescription="Retrieve a list of contactfolder objects."></Item>
-      <Item text="Create contact folder" url="api-reference/beta/api/user_post_contactfolders" SEOKeyword="Create ContactFolder, Microsoft Graph API, Users API" SEODescription="Use this API to create a new ContactFolder."></Item>
-    </Item>
-    <Item text="drive" url="api-reference/beta/resources/drive" SEOKeyword="user drive, Microsoft Graph API, user API" SEODescription="">
-      <Item text="List drives" url="api-reference/beta/api/drive_list" SEOKeyword="List drives, Microsoft Graph API, drive API" SEODescription="Retrieve a list of drive objects."></Item>
-      <Item text="List items" url="api-reference/beta/api/drive_list_items" SEOKeyword="List items, Microsoft Graph API, drive API" SEODescription="Retrieve a list of item objects."></Item>
-      <Item text="Create item" url="api-reference/beta/api/drive_post_items" SEOKeyword="Create item, Microsoft Graph API, drive API" SEODescription="Use this API to create a new item."></Item>
-    </Item>
-    <Item text="people" url="api-reference/beta/resources/person" SEOKeyword="user people, Microsoft Graph API, user API" SEODescription="">
-      <Item text="List people" url="api-reference/beta/api/user_list_people" SEOKeyword="List people, Microsoft Graph API, user API" SEODescription="Retrieve a list of person objects."></Item>
-      <Item text="Create Person" url="api-reference/beta/api/user_post_people" SEOKeyword="Create Person, Microsoft Graph API, user API" SEODescription="Use this API to create a new Person."></Item>
-    </Item>
-    <Item text="tasks" url="api-reference/beta/resources/task" SEOKeyword="user tasks, Microsoft Graph API, user API" SEODescription="">
-      <Item text="List tasks" url="api-reference/beta/api/user_list_tasks" SEOKeyword="List tasks, Microsoft Graph API, user API" SEODescription="Retrieve a list of task objects."></Item>
-      <Item text="Create task" url="api-reference/beta/api/user_post_tasks" SEOKeyword="Create task, Microsoft Graph API, user API" SEODescription="Use this API to create a new task."></Item>
-      <Item text="List plans" url="api-reference/beta/api/user_list_plans" SEOKeyword="List plans, Microsoft Graph API, user API" SEODescription="Retrieve a list of plan objects."></Item>
-      <Item text="Create plan" url="api-reference/beta/api/user_post_plans" SEOKeyword="Create plan, Microsoft Graph API, user API" SEODescription="Use this API to create a new plan."></Item>
-    </Item>
-    <Item text="notes" url="api-reference/beta/resources/notebook" SEOKeyword="user notes, Microsoft Graph API, user API" SEODescription="">
-      <Item text="List notebooks" url="api-reference/beta/api/notes_list_notebooks" SEOKeyword="List notebooks, Microsoft Graph API, notes API" SEODescription="Retrieve a list of notebook(../resources/notebook.md) objects."></Item>
-      <Item text="Create notebook" url="api-reference/beta/api/notes_post_notebooks" SEOKeyword="Create notebook, Microsoft Graph API, notes API" SEODescription="Create a new OneNote notebook(../resources/notebook.md)."></Item>
-    </Item>
-    <Item text="insights" url="api-reference/beta/resources/" SEOKeyword="insights, Microsoft Graph API, user API" SEODescription="">
-      <Item text="List trendingAround" url="api-reference/beta/api/user_list_trendingaround" SEOKeyword="List trendingAround, Microsoft Graph API, user API" SEODescription="Retrieve a list of item objects."></Item>
-      <Item text="List workingWith" url="api-reference/beta/api/user_list_workingwith" SEOKeyword="List workingWith, Microsoft Graph API, user API" SEODescription="Retrieve a list of user objects."></Item>
-    </Item>
-    <Item text="groups" url="api-reference/beta/resources/organization" SEOKeyword="groups, Microsoft Graph API, user API" SEODescription="">
-      <Item text="List joined groups" url="api-reference/beta/api/user_list_joinedgroups" SEOKeyword="List joinedGroups, Microsoft Graph API, Users API" SEODescription="Retrieve a list of group objects."></Item>
-      <Item text="Create join group" url="api-reference/beta/api/user_post_joinedgroups" SEOKeyword="Create Group, Microsoft Graph API, Users API" SEODescription="Use this API to create a new Group."></Item>
-      <Item text="List memberOf" url="api-reference/beta/api/user_list_memberof" SEOKeyword="List memberOf, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-      <Item text="Create memberOf" url="api-reference/beta/api/user_post_memberof" SEOKeyword="Create memberOf, Microsoft Graph API, Users API" SEODescription="Use this API to create a new memberOf."></Item>
-    </Item>
-    <Item text="organization" url="api-reference/beta/resources/organization" SEOKeyword="user organizational structure, Microsoft Graph API, user API" SEODescription="">
-      <Item text="List direct reports" url="api-reference/beta/api/user_list_directreports" SEOKeyword="List directReports, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-      <Item text="Create direct report" url="api-reference/beta/api/user_post_directreports" SEOKeyword="Create directReport, Microsoft Graph API, Users API" SEODescription="Use this API to create a new directReport."></Item>
-      <Item text="List manager" url="api-reference/beta/api/user_list_directreports" SEOKeyword="List directReports, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-      <Item text="Create manager" url="api-reference/beta/api/user_post_directreports" SEOKeyword="Create directReport, Microsoft Graph API, Users API" SEODescription="Use this API to create a new directReport."></Item>
-    </Item>
-    <Item text="directory objects" url="api-reference/beta/resources/directoryobject" SEOKeyword="directory object, Microsoft Graph API, user API" SEODescription="">
-      <Item text="List owned devices" url="api-reference/beta/api/user_list_owneddevices" SEOKeyword="List ownedDevices, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-      <Item text="Create owned device" url="api-reference/beta/api/user_post_owneddevices" SEOKeyword="Create ownedDevice, Microsoft Graph API, Users API" SEODescription="Use this API to create a new ownedDevice."></Item>
-      <Item text="List registered devices" url="api-reference/beta/api/user_list_registereddevices" SEOKeyword="List registeredDevices, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-      <Item text="Create registered device" url="api-reference/beta/api/user_post_registereddevices" SEOKeyword="Create registeredDevice, Microsoft Graph API, Users API" SEODescription="Use this API to create a new registeredDevice."></Item>
-      <Item text="List owned objects" url="api-reference/beta/api/user_list_ownedobjects" SEOKeyword="List ownedObjects, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-      <Item text="Create owned object" url="api-reference/beta/api/user_post_ownedobjects" SEOKeyword="Create ownedObject, Microsoft Graph API, Users API" SEODescription="Use this API to create a new ownedObject."></Item>
-      <Item text="List created objects" url="api-reference/beta/api/user_list_createdobjects" SEOKeyword="List createdObjects, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-      <Item text="Create created object" url="api-reference/beta/api/user_post_createdobjects" SEOKeyword="Create createdObject, Microsoft Graph API, Users API" SEODescription="Use this API to create a new createdObject."></Item>
-      <Item text="List app role assignments" url="api-reference/beta/api/user_list_approleassignments" SEOKeyword="List appRoleAssignments, Microsoft Graph API, user API" SEODescription="Retrieve a list of approleassignment objects."></Item>
-      <Item text="Create app role assignment" url="api-reference/beta/api/user_post_approleassignments" SEOKeyword="Create AppRoleAssignment, Microsoft Graph API, user API" SEODescription="Use this API to create a new AppRoleAssignment."></Item>
-      <Item text="List OAuth2 permission grants" url="api-reference/beta/api/user_list_oauth2permissiongrants" SEOKeyword="List oauth2PermissionGrants, Microsoft Graph API, Users API" SEODescription="Retrieve a list of oauth2permissiongrant objects."></Item>
-      <Item text="Create OAuth2 permission grant" url="api-reference/beta/api/user_post_oauth2permissiongrants" SEOKeyword="Create OAuth2PermissionGrant, Microsoft Graph API, Users API" SEODescription="Use this API to create a new OAuth2PermissionGrant."></Item>
-      <Item text="Assign license" url="api-reference/beta/api/user_assignlicense" SEOKeyword="user: assignLicense, Microsoft Graph API, user API" SEODescription=""></Item>
-      <Item text="Get member objects" url="api-reference/beta/api/user_getmemberobjects" SEOKeyword="user: getMemberObjects, Microsoft Graph API, user API" SEODescription=""></Item>
-      <Item text="Get member groups" url="api-reference/beta/api/user_getmembergroups" SEOKeyword="user: getMemberGroups, Microsoft Graph API, user API" SEODescription=""></Item>
-      <Item text="Check member groups" url="api-reference/beta/api/user_checkmembergroups" SEOKeyword="user: checkMemberGroups, Microsoft Graph API, user API" SEODescription=""></Item>
-    </Item>
-  </Item>
     <Item text="People" url="api-reference/beta/resources/people" SEOKeyword="device API, Microsoft Graph API, device API" SEODescription="Represents a device registered in the directory. Inherits from DirectoryObject.">
       <Item text="person" url="api-reference/beta/resources/person" SEOKeyword="person API, Microsoft Graph API, person API" SEODescription="">
         <Item text="List people" url="api-reference/beta/api/user_list_people" SEOKeyword="List people, Microsoft Graph API, user API" SEODescription="Retrieve a list of person objects."></Item>
@@ -685,94 +685,10 @@
         <Item text="Delete openTypeExtension" url="api-reference/beta/api/opentypeextension_delete" SEOKeyword="Delete openTypeExtension, Microsoft Graph API, opentypeextension API" SEODescription="Delete openTypeExtension."></Item>
       </Item>
     </Item>
-    <Item text="Users" url="api-reference/beta/resources/user" SEOKeyword="Users API, Microsoft Graph API, Users API" SEODescription="Represents an Azure AD user account. Inherits from DirectoryObject.">
-      <Item text="user" url="api-reference/beta/resources/user" SEOKeyword="user, Microsoft Graph API, user API" SEODescription="Represents an Azure AD user account. Inherits from DirectoryObject.">
-        <Item text="List users" url="api-reference/beta/api/user_list" SEOKeyword="List users, Microsoft Graph API, user API" SEODescription="Retrieve a list of user objects."></Item>
-        <Item text="Create user" url="api-reference/beta/api/user_post_users" SEOKeyword="Create User, Microsoft Graph API, user API" SEODescription="Use this API to create a new User."></Item>
-        <Item text="Get user" url="api-reference/beta/api/user_get" SEOKeyword="Get user, Microsoft Graph API, user API" SEODescription="Retrieve the properties and relationships of user object."></Item>
-        <Item text="Update user" url="api-reference/beta/api/user_update" SEOKeyword="Update user, Microsoft Graph API, user API" SEODescription="Update the properties of user object."></Item>
-        <Item text="Delete user" url="api-reference/beta/api/user_delete" SEOKeyword="Delete user, Microsoft Graph API, user API" SEODescription="Delete user."></Item>
-      </Item>
-      <Item text="photo" url="api-reference/beta/resources/profilephoto" SEOKeyword="user people, Microsoft Graph API, user API" SEODescription="">
-        <Item text="List photos" url="api-reference/beta/api/user_list_photos" SEOKeyword="List photos, Microsoft Graph API, user API" SEODescription="Retrieve a list of photo objects."></Item>
-        <Item text="Create photo" url="api-reference/beta/api/user_post_photos" SEOKeyword="Create photo, Microsoft Graph API, user API" SEODescription="Use this API to create a new photo."></Item>
-      </Item>
-      <Item text="mail" url="api-reference/beta/resources/message" SEOKeyword="user mail, Microsoft Graph API, user API" SEODescription="">
-        <Item text="List messages" url="api-reference/beta/api/user_list_messages" SEOKeyword="List messages, Microsoft Graph API, Users API" SEODescription="Retrieve a list of message objects."></Item>
-        <Item text="Create message" url="api-reference/beta/api/user_post_messages" SEOKeyword="Create Message, Microsoft Graph API, Users API" SEODescription="Use this API to create a new Message."></Item>
-        <Item text="List mail folders" url="api-reference/beta/api/user_list_mailfolders" SEOKeyword="List mailFolders, Microsoft Graph API, Users API" SEODescription="Retrieve a list of mailfolder objects."></Item>
-        <Item text="Create mail folder" url="api-reference/beta/api/user_post_mailfolders" SEOKeyword="Create MailFolder, Microsoft Graph API, Users API" SEODescription="Use this API to create a new MailFolder."></Item>
-        <Item text="Send mail" url="api-reference/beta/api/user_sendmail" SEOKeyword="user: sendMail, Microsoft Graph API, user API" SEODescription=""></Item>
-      </Item>
-      <Item text="calendar" url="api-reference/beta/resources/event" SEOKeyword="user calendar, Microsoft Graph API, user API" SEODescription="">
-        <Item text="List events" url="api-reference/beta/api/user_list_events" SEOKeyword="List events, Microsoft Graph API, Users API" SEODescription="Retrieve a list of event objects."></Item>
-        <Item text="Create event" url="api-reference/beta/api/user_post_events" SEOKeyword="Create Event, Microsoft Graph API, Users API" SEODescription="Use this API to create a new Event."></Item>
-        <Item text="List calendars" url="api-reference/beta/api/user_list_calendars" SEOKeyword="List calendars, Microsoft Graph API, Users API" SEODescription="Retrieve a list of calendar objects."></Item>
-        <Item text="Create calendar" url="api-reference/beta/api/user_post_calendars" SEOKeyword="Create Calendar, Microsoft Graph API, Users API" SEODescription="Use this API to create a new Calendar."></Item>
-        <Item text="List calendar groups" url="api-reference/beta/api/user_list_calendargroups" SEOKeyword="List calendarGroups, Microsoft Graph API, Users API" SEODescription="Retrieve a list of calendargroup objects."></Item>
-        <Item text="Create calendar group" url="api-reference/beta/api/user_post_calendargroups" SEOKeyword="Create CalendarGroup, Microsoft Graph API, Users API" SEODescription="Use this API to create a new CalendarGroup."></Item>
-        <Item text="List calendar view" url="api-reference/beta/api/user_list_calendarview" SEOKeyword="List calendarView, Microsoft Graph API, Users API" SEODescription="Retrieve a list of event objects."></Item>
-        <Item text="Create calendar view" url="api-reference/beta/api/user_post_calendarview" SEOKeyword="Create calendar view, Microsoft Graph API, Users API" SEODescription="Use this API to create a new Event."></Item>
-        <Item text="Reminder view" url="api-reference/beta/api/user_reminderview" SEOKeyword="user: reminderView, Microsoft Graph API, user API" SEODescription=""></Item>
-      </Item>
-      <Item text="contacts" url="api-reference/beta/resources/contact" SEOKeyword="user contact, Microsoft Graph API, user API" SEODescription="">
-        <Item text="List contacts" url="api-reference/beta/api/user_list_contacts" SEOKeyword="List contacts, Microsoft Graph API, Users API" SEODescription="Retrieve a list of contact objects."></Item>
-        <Item text="Create contact" url="api-reference/beta/api/user_post_contacts" SEOKeyword="Create Contact, Microsoft Graph API, Users API" SEODescription="Use this API to create a new Contact."></Item>
-        <Item text="List contact folders" url="api-reference/beta/api/user_list_contactfolders" SEOKeyword="List contactFolders, Microsoft Graph API, Users API" SEODescription="Retrieve a list of contactfolder objects."></Item>
-        <Item text="Create contact folder" url="api-reference/beta/api/user_post_contactfolders" SEOKeyword="Create ContactFolder, Microsoft Graph API, Users API" SEODescription="Use this API to create a new ContactFolder."></Item>
-      </Item>
-      <Item text="drive" url="api-reference/beta/resources/drive" SEOKeyword="user drive, Microsoft Graph API, user API" SEODescription="">
-        <Item text="List drives" url="api-reference/beta/api/drive_list" SEOKeyword="List drives, Microsoft Graph API, drive API" SEODescription="Retrieve a list of drive objects."></Item>
-        <Item text="List items" url="api-reference/beta/api/drive_list_items" SEOKeyword="List items, Microsoft Graph API, drive API" SEODescription="Retrieve a list of item objects."></Item>
-        <Item text="Create item" url="api-reference/beta/api/drive_post_items" SEOKeyword="Create item, Microsoft Graph API, drive API" SEODescription="Use this API to create a new item."></Item>
-      </Item>
-      <Item text="people" url="api-reference/beta/resources/person" SEOKeyword="user people, Microsoft Graph API, user API" SEODescription="">
-        <Item text="List people" url="api-reference/beta/api/user_list_people" SEOKeyword="List people, Microsoft Graph API, user API" SEODescription="Retrieve a list of person objects."></Item>
-        <Item text="Create Person" url="api-reference/beta/api/user_post_people" SEOKeyword="Create Person, Microsoft Graph API, user API" SEODescription="Use this API to create a new Person."></Item>
-      </Item>
-      <Item text="tasks" url="api-reference/beta/resources/task" SEOKeyword="user tasks, Microsoft Graph API, user API" SEODescription="">
-        <Item text="List tasks" url="api-reference/beta/api/user_list_tasks" SEOKeyword="List tasks, Microsoft Graph API, user API" SEODescription="Retrieve a list of task objects."></Item>
-        <Item text="Create task" url="api-reference/beta/api/user_post_tasks" SEOKeyword="Create task, Microsoft Graph API, user API" SEODescription="Use this API to create a new task."></Item>
-        <Item text="List plans" url="api-reference/beta/api/user_list_plans" SEOKeyword="List plans, Microsoft Graph API, user API" SEODescription="Retrieve a list of plan objects."></Item>
-        <Item text="Create plan" url="api-reference/beta/api/user_post_plans" SEOKeyword="Create plan, Microsoft Graph API, user API" SEODescription="Use this API to create a new plan."></Item>
-      </Item>
-      <Item text="notes" url="api-reference/beta/resources/notebook" SEOKeyword="user notes, Microsoft Graph API, user API" SEODescription="">
-        <Item text="List notebooks" url="api-reference/beta/api/notes_list_notebooks" SEOKeyword="List notebooks, Microsoft Graph API, notes API" SEODescription="Retrieve a list of notebook(../resources/notebook.md) objects."></Item>
-        <Item text="Create notebook" url="api-reference/beta/api/notes_post_notebooks" SEOKeyword="Create notebook, Microsoft Graph API, notes API" SEODescription="Create a new OneNote notebook(../resources/notebook.md)."></Item>
-      </Item>
-      <Item text="insights" url="api-reference/beta/resources/" SEOKeyword="insights, Microsoft Graph API, user API" SEODescription="">
-        <Item text="List trendingAround" url="api-reference/beta/api/user_list_trendingaround" SEOKeyword="List trendingAround, Microsoft Graph API, user API" SEODescription="Retrieve a list of item objects."></Item>
-        <Item text="List workingWith" url="api-reference/beta/api/user_list_workingwith" SEOKeyword="List workingWith, Microsoft Graph API, user API" SEODescription="Retrieve a list of user objects."></Item>
-      </Item>
-      <Item text="groups" url="api-reference/beta/resources/organization" SEOKeyword="groups, Microsoft Graph API, user API" SEODescription="">
-        <Item text="List joined groups" url="api-reference/beta/api/user_list_joinedgroups" SEOKeyword="List joinedGroups, Microsoft Graph API, Users API" SEODescription="Retrieve a list of group objects."></Item>
-        <Item text="Create join group" url="api-reference/beta/api/user_post_joinedgroups" SEOKeyword="Create Group, Microsoft Graph API, Users API" SEODescription="Use this API to create a new Group."></Item>
-        <Item text="List memberOf" url="api-reference/beta/api/user_list_memberof" SEOKeyword="List memberOf, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create memberOf" url="api-reference/beta/api/user_post_memberof" SEOKeyword="Create memberOf, Microsoft Graph API, Users API" SEODescription="Use this API to create a new memberOf."></Item>
-      </Item>
-      <Item text="organization" url="api-reference/beta/resources/organization" SEOKeyword="user organizational structure, Microsoft Graph API, user API" SEODescription="">
-        <Item text="List direct reports" url="api-reference/beta/api/user_list_directreports" SEOKeyword="List directReports, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create direct report" url="api-reference/beta/api/user_post_directreports" SEOKeyword="Create directReport, Microsoft Graph API, Users API" SEODescription="Use this API to create a new directReport."></Item>
-        <Item text="List manager" url="api-reference/beta/api/user_list_directreports" SEOKeyword="List directReports, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create manager" url="api-reference/beta/api/user_post_directreports" SEOKeyword="Create directReport, Microsoft Graph API, Users API" SEODescription="Use this API to create a new directReport."></Item>
-      </Item>
-      <Item text="directory objects" url="api-reference/beta/resources/directoryobject" SEOKeyword="directory object, Microsoft Graph API, user API" SEODescription="">
-        <Item text="List owned devices" url="api-reference/beta/api/user_list_owneddevices" SEOKeyword="List ownedDevices, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create owned device" url="api-reference/beta/api/user_post_owneddevices" SEOKeyword="Create ownedDevice, Microsoft Graph API, Users API" SEODescription="Use this API to create a new ownedDevice."></Item>
-        <Item text="List registered devices" url="api-reference/beta/api/user_list_registereddevices" SEOKeyword="List registeredDevices, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create registered device" url="api-reference/beta/api/user_post_registereddevices" SEOKeyword="Create registeredDevice, Microsoft Graph API, Users API" SEODescription="Use this API to create a new registeredDevice."></Item>
-        <Item text="List owned objects" url="api-reference/beta/api/user_list_ownedobjects" SEOKeyword="List ownedObjects, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create owned object" url="api-reference/beta/api/user_post_ownedobjects" SEOKeyword="Create ownedObject, Microsoft Graph API, Users API" SEODescription="Use this API to create a new ownedObject."></Item>
-        <Item text="List created objects" url="api-reference/beta/api/user_list_createdobjects" SEOKeyword="List createdObjects, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create created object" url="api-reference/beta/api/user_post_createdobjects" SEOKeyword="Create createdObject, Microsoft Graph API, Users API" SEODescription="Use this API to create a new createdObject."></Item>
-        <Item text="List app role assignments" url="api-reference/beta/api/user_list_approleassignments" SEOKeyword="List appRoleAssignments, Microsoft Graph API, user API" SEODescription="Retrieve a list of approleassignment objects."></Item>
-        <Item text="Create app role assignment" url="api-reference/beta/api/user_post_approleassignments" SEOKeyword="Create AppRoleAssignment, Microsoft Graph API, user API" SEODescription="Use this API to create a new AppRoleAssignment."></Item>
-        <Item text="List OAuth2 permission grants" url="api-reference/beta/api/user_list_oauth2permissiongrants" SEOKeyword="List oauth2PermissionGrants, Microsoft Graph API, Users API" SEODescription="Retrieve a list of oauth2permissiongrant objects."></Item>
-        <Item text="Create OAuth2 permission grant" url="api-reference/beta/api/user_post_oauth2permissiongrants" SEOKeyword="Create OAuth2PermissionGrant, Microsoft Graph API, Users API" SEODescription="Use this API to create a new OAuth2PermissionGrant."></Item>
-        <Item text="Assign license" url="api-reference/beta/api/user_assignlicense" SEOKeyword="user: assignLicense, Microsoft Graph API, user API" SEODescription=""></Item>
-        <Item text="Get member objects" url="api-reference/beta/api/user_getmemberobjects" SEOKeyword="user: getMemberObjects, Microsoft Graph API, user API" SEODescription=""></Item>
-        <Item text="Get member groups" url="api-reference/beta/api/user_getmembergroups" SEOKeyword="user: getMemberGroups, Microsoft Graph API, user API" SEODescription=""></Item>
-        <Item text="Check member groups" url="api-reference/beta/api/user_checkmembergroups" SEOKeyword="user: checkMemberGroups, Microsoft Graph API, user API" SEODescription=""></Item>
+    <Item text="Webhooks" url="api-reference/beta/resources/" SEOKeyword="webhoooks API, Microsoft Graph API, extension API" SEODescription="">
+      <Item text="Subscription" url="api-reference/beta/resources/" SEOKeyword="webhoooks API, Microsoft Graph API, extension API" SEODescription="">
+        <Item text="List subscriptions" url="api-reference/beta/api/" SEOKeyword="List subscriptions, Microsoft Graph API, user API" SEODescription="Retrieve a list of subscription."></Item>
+        <Item text="Create subscriptions" url="api-reference/beta/api/" SEOKeyword="Create subscriptions, Microsoft Graph API, user API" SEODescription="Use this API to create a new subscription."></Item>
       </Item>
     </Item>
     <Item text="OneDrive" url="api-reference/beta/resources/drive" SEOKeyword="OneDrive Drive API, Microsoft Graph API, OneDrive Drive API" SEODescription="The Drive resource represents a drive in OneDrive. It provides information about the owner of the drive, total and available storage space, and exposes a collection of all the Itemsitem-resource contained within the drive.">
