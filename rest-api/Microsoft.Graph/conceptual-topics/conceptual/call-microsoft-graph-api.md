@@ -1,19 +1,5 @@
 # Calling Microsoft Graph API
 
-_**Applies to:** Office 365_
- 
-In this article:
-  
-- [Call Microsoft Graph API service via REST](#msg_calling_rest_api)
-  - [Microsoft Graph API metadata](#msg_metadata)
-  - [Navigation from a tenant-level entity set to a member](#msg_nav_from_set_to_member) 
-  - [Projection from an entity to a subset of its properties](#msg_proj_from_entity_to_props) 
-  - [Projection from an entity set to properties set](#msg_proj_from_entities_to_props)
-  - [Traversal to another resource by the like-named relationship](#msg_traversal_via_relationship)
-  - [Filtering with a query option](#msg_filter_query_option)
-  - [Calling OData actions and functions](#msg_calling_actions) 
-
-<a name="msg_call_api_service"> </a>
 ###Call Microsoft Graph API service via REST
 To access and manipulate a Microsoft Graph API resource, you call and specify the resource URLs using one of the following operations permitted on the resource.   
 
@@ -41,7 +27,6 @@ In this URL:
 For example, if your tenant domain is `https://contoso.onmicrosoft.com`, and you are targeting the beta 
 version of the service, you can send requests to `https://graph.microsoft.com/v1.0/contoso.onmicrosoft.com`.
 
-<a name="msg_metadata"> </a>
 ###Microsoft Graph API metadata
 The service document ($metadata) is published at the service root. For example, you can view the service document for the v1.0 and beta versions via the following URLs.
 
@@ -64,7 +49,6 @@ other base64 encoded values are case sensitive.
 
 A few basic programming patterns calls to the API are shown in the following section.
 
-<a name="msg_nav_from_set_to_member"> </a>
 ###Navigation from a set to a member
 
 To view the information about a user, you get the `User` entity from the `users` collection on the tenant. To do so, you can
@@ -100,7 +84,6 @@ content-length: 982
 ```
 
 
-<a name="msg_proj_from_entity_to_props"> </a>
 ###Projection from an entity to properties
 To retrieve only the user's biographical data, such as the user's provided _About me_ description and their skill set, you can add the $select query option to the previous request. For example,
 
@@ -130,8 +113,6 @@ content-length: 169
 
 Here, instead of the entire property sets on the `User` entity, only the `AboutMe` and `Skills` properties, are returned.
 
-
-<a name="msg_traversal_via_relationship"> </a>
 ###Traversal to another resource via relationship
 A manager holds a `directReports` relatioinship with  the other users reporting to him or her. To query the list of the direct reports of a user, you can use the following HTTPS GET request to navigate to the intended target via relationship traversal. 
 
@@ -181,7 +162,6 @@ content-length: 147
 }
 ```
 
-<a name="msg_proj_from_entities_to_props" > </a> 
 ###Projection from entities to properties
 In addition to projection from a single entity to its properties, you can also apply the similar `$select` query option to an entity collection to project them to a collection of some of their properties. For example, to query the name and type of the signed-in user's files, you can submit the following HTTPS GET request:
 
@@ -270,7 +250,6 @@ content-length: 986
 It appears that the returned user has a unique job title in her organization. 
 
 
-<a name="msg_calling_actions"> </a>
 ###Calling OData actions or functions
 The Microsoft Graph API also supports OData actions and functions to manipulate the resources. 
 For example, the following HTTPS POST request lets the signed-in user (`me`) copy a file ("test3.txt") from a folder (`"<id_1>"`) to another folder (`"<id_2>"`). 
@@ -291,6 +270,4 @@ The request payload contains the input to the `Microsoft.Graph.Copy` action, whi
 
 With a single unified endpoint, the Microsoft Graph API simplifies the application programming interface for all the Office 365 services as well and the Azure AD service. As a result, the boundaries of the otherwise silo-ed services disappear. As an app developer, you are no longer required to keep track of the data sources and to implement custom interfaces between various data sources. 
 
-##Additional Resources##
 
-- [Hands on lab: Deep dive into the Office 365 unified API](http://dev.office.com/hands-on-labs/4585)

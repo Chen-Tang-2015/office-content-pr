@@ -2,18 +2,18 @@
 
 # Microsoft Graph API overview 
  
-_**Applies to:** Office 365_
- 
+
 >  Your feedback is important to us. Connect with us on [Stack Overflow](http://stackoverflow.com/questions/tagged/office365). Tag your questions with [MicrosoftGraph] and [office365].
 
-**In this article**
+<!--**In this article**
   
 -	[Overview of Microsoft Graph API](#msg_what_is_unified_api) 
 -	[Common Queries](#msg_queries) 
 -	[All Office 365 data under one roof](#msg_eoof) 
 -	[Learn more about  Microsoft Graph API development](#msg_how_learn_unified_api) 
 
-<a name="msg_what_is_unified_api"> </a>
+<a name="msg_what_is_unified_api"> </a>-->
+
 ## Overview of Microsoft Graph API
 
 Microsoft Graph (previously called Office 365 unified API) exposes multiple APIs from Microsoft cloud services through a single REST API endpoint (_https://_**graph.microsoft.com**). Using the Microsoft Graph API, you can turn your formerly difficult or complex queries into simple navigations. 
@@ -26,7 +26,8 @@ The API gives you:
 
 You can use the API to access fixed entities like users, groups, mail, messages, calendars, tasks, notes coming from services like Outlook, OneDrive, Azure Active Directory, Planner, OneNote and others. You can also obtain calculated relationships powered by the Office Graph (only for commercial users) like the list of users you are working with or the documents trending around you.
 
-<a name="msg_queries"> </a>
+<!--<a name="msg_queries"> </a>-->
+
 ##Common Queries
 
 The following are some exqmples of common queries using Microsoft Graph API.
@@ -48,7 +49,8 @@ The following are some exqmples of common queries using Microsoft Graph API.
 |   GET people I am working with	 | `https://graph.microsoft.com/beta/me/workingWith` |
 
 
-<a name="msg_roof"> </a>
+<!-- <a name="msg_roof"> </a> -->
+
 ## All Office 365 data under one roof
 
 <!-- 
@@ -80,7 +82,7 @@ The following diagram shows the Microsoft Graph API developer stack and how it w
 ![Microsoft Graph API developer stack.](./images/MicrosoftGraph_DevStack.png)
 
 
-<a name="msg_how_learn_unified_api"> </a>
+<!--<a name="msg_how_learn_unified_api"> </a> 
 ## Learn more about Microsoft Graph API development
 
 The following resources can help you get started:
@@ -97,7 +99,7 @@ The following resources can help you get started:
 -  [Examples of Office 365 unified API calls (preview)](..\howto\examples-of-office-365-unified-api-calls.md) 
 -  [Develop with the Office graph](https://msdn.microsoft.com/office/office365/howto/develop-office-graph)
 -  [Cross-origin resource sharing (CORS) support](..\howto\create-web-apps-using-CORS-to-access-files-in-Office-365.md) 
- -->
+
  
 **Tools to ty out and explore the Microsoft Graph API**
 
@@ -127,7 +129,7 @@ The following resources can help you get started:
 
 -  [Android](https://github.com/OfficeDev/Office-365-SDK-for-Android)
 -  [iOS](https://github.com/OfficeDev/Office-365-SDK-for-iOS)
--  [.NET library](https://www.nuget.org/packages/Microsoft.Graph)
+-  [.NET library](https://www.nuget.org/packages/Microsoft.Graph) -->
   
 
 

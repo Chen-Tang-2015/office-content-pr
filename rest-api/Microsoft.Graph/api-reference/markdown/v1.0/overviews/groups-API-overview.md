@@ -49,9 +49,9 @@ At a user level, you can:
 - Add or remove a group from the user's favorite list<sup>*</sup>
 - Reset the user's unseen count for a group<sup>*</sup>
 
-**Note**
-- <sup>*</sup> Applies to the signed-in user only.
-- Joining and being a member of a group does _not_ automatically let the user receive email notifications 
+<sup>*</sup> Applies to the signed-in user only.
+
+Joining and being a member of a group does _not_ automatically let the user receive email notifications 
 about new posts, events, and files in the Inbox. The user must _subscribe_ to the group
 to receive such email notifications. At any subsequent time, the user can choose to unsubscribe and 
 just view conversations and events in the group's pane instead.
