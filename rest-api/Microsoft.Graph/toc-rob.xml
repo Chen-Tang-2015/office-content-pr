@@ -15,13 +15,10 @@
       <Item text="Call the API" url="overview/call-microsoft-graph-api" SEOKeyword="Call the API, Microsoft Graph API, Overview" SEODescription="Answers to some frequently-asked questions about the Microsoft Graph." />
       <Item text="Query Parameters" />
       <Item text="Paging" />
-      <Item text="Errors" url="overview/microsoft-graph-api-errors" SEOKeyword="Errors, Microsoft Graph API, Overview" SEODescription="Errors in the Microsoft Graph API service are returned using standard HTTP status codes, as well as a JSON error response object."
-      
-      />
+      <Item text="Errors" url="overview/microsoft-graph-api-errors" SEOKeyword="Errors, Microsoft Graph API, Overview" SEODescription="Errors in the Microsoft Graph API service are returned using standard HTTP status codes, as well as a JSON error response object."/>
     </Item>
     <Item text=".NET" url="platform/connect-step-by-step-aspnetmvc" SEOKeyword=".NET, ASP.NET MVC, Microsoft Graph API, Walkthroughs" SEODescription="">
-      <Item text="Client Library" url="overview/microsoft-graph-api-using-client-library" SEOKeyword="Client Library, Microsoft Graph API, Overview" SEODescription="A Microsoft Graph API native app uses the Microsoft Graph API client library to access and manipulate the API resources. The client library exposes a .NET application object model that encapsulates the Microsoft Graph API data model ($metadata), mapping an OData resource type to a .NET class."
-      />
+      <Item text="Client Library" url="overview/microsoft-graph-api-using-client-library" SEOKeyword="Client Library, Microsoft Graph API, Overview" SEODescription="A Microsoft Graph API native app uses the Microsoft Graph API client library to access and manipulate the API resources. The client library exposes a .NET application object model that encapsulates the Microsoft Graph API data model ($metadata), mapping an OData resource type to a .NET class."/>
     </Item>
     <Item text="UWP" url="platform/connect-step-by-step-uwp" SEOKeyword="UWP, Microsoft Graph API, Walkthroughs" SEODescription="" />
     <Item text="IOS" url="platform/connect-step-by-step-ios" SEOKeyword="IOS, Microsoft Graph API, Walkthroughs" SEODescription="" />
