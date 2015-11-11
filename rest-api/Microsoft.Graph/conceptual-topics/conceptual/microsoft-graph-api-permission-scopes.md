@@ -1,16 +1,15 @@
 # Microsoft Graph API permission scopes
 
-_**Applies to:** Office 365_
- 
 The Microsoft Graph API exposes OAuth 2.0 permission scopes that are used to control access that an app has to data. As a developer, you configure your app with the permission scopes appropriate to the access that it requires. Typically you do this through the Azure portal. During sign-in, users or administrators are given an opportunity to consent to allow your app access to their data with the permission scopes you configured. For this reason, you should choose permission scopes that provide the least level of privilege needed by your app. For more details on how to configure permissions for your app and on the consent process, see [Integrating Applications with Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-integrating-applications/).
 
 
-In this section:
+<!---	In this section:
   
 -	[Permission scope concepts](#msg_perm_concepts) 
 -	[Permission scope details](#msg_perm_details)
 
-<a name="msg_perm_concepts"> </a>
+<a name="msg_perm_concepts"> </a>  -->
+
 ##Permission scope concepts
 
 ###App-only vs. delegated scopes
@@ -19,7 +18,8 @@ Permission scopes can be either app-only or delegated. App-only scopes (also kno
 ###Full and basic profiles for users and groups
 The full profile (or profile) of a User or a Group includes all of the entity's declared properties. Because the profile may contain sensitive directory information or personally identifiable information (PII), several scopes constrain app access to a limited set of properties known as a basic profile. For users, the basic profile includes only the following properties: display name, first and last name, photo, and email address. For groups, the basic profile contains only the display name. 
 
-<a name="msg_perm_details"> </a>
+<!---	<a name="msg_perm_details"> </a>  -->
+
 ##Permission scope details
 You must configure your app to have the necessary permissions to access the Microsoft Graph API resources. The permissions are scoped to individual resources for the rights to read, to write or to do both. 
 
@@ -31,7 +31,7 @@ The following tables list the Microsoft Graph API permission scopes and explains
 
 ###Permissions requiring administrator's consent
 
-|   **Scope**                  |  **Permission**                          |  **Description** |
+|   **Scope**                  |  **Permission on Azure Management Portal**                          |  **Description** |
 |:-----------------------------|:-----------------------------------------|:-----------------|
 | _User.Read.All_                |     `Read all user's full profiles`           | Allows the app to read a full set of profile properties of other users in your organization on behalf of the signed-in user.|
 | _User.ReadWrite.All_           |     `Read and write all user's full profiles` | Allows the app to read and write the full set of profile properties, group membership, reports and managers of other users in your organization, on behalf of the signed-in user.  |
@@ -44,7 +44,7 @@ The following tables list the Microsoft Graph API permission scopes and explains
 
 ###Permissions not requiring administrator's consent
 
-|   **Scope**    |  **Permission**   |  **Description** |
+|   **Scope**    |  **Permission on Azure Management Portal**   |  **Description** |
 |:---------------|:------------------|:-----------------|
 | _User.Read_       |    `Enable sign-in and read user profile` | Allows users to sign-in to the app, and allows the app to read the profile. It also allow the app to read basic company information of signed-in users. To read the user's manager, directr report, enable `User.ReadBasic.All`. To read a group membership, enable `Group.Read.All`.|
 | _User.ReadWrite_ |    `Read and write access to user profile` | Allows the app to read the profile, group membership, reports and manager of signed-in users. It also allow the app to update profile information on behalf of signed-in users. |
@@ -62,7 +62,7 @@ The following tables list the Microsoft Graph API permission scopes and explains
 
 ###Permissions not requiring administrator's consent (preview)
 
-|   **Scope**    |  **Permission**   |  **Description** |
+|   **Scope**    |  **Permission on Azure Management Portal**   |  **Description** |
 |:---------------|:------------------|:-----------------|
 | _Tasks.Read.All_ |    `Read the user's tasks and projects`(preview) | Allows the app to read the user's tasks and projects on behalf of the user. |
 | _Tasks.ReadWrite.All_ |    `Read and write the user's tasks and projects` (preview) | Allows the app to create, read, update and delete the user's tasks and projects on behalf of the user. |
@@ -86,7 +86,7 @@ The following are some app scenarios using the `User` and `Group` resources and 
 
 ###Access scenarios using the User resource and the required scopes
 
-| **App tasks involving User**	 |  **Required scopes** | **Permissions** |
+| **App tasks involving User**	 |  **Required scopes** | **Permissions on Azure Management Portal** |
 |:-------------------------------|:---------------------|:---------------|
 | App wants to read other users' basic information (only display name and picture), for example to show in a people picking experience	 | _User.ReadBasic.All_  |  `Read all user's basic profiles` |
 | App wants to read complete user profile for signed in user (see direct reports, and manager, etc)	 | _User.Read_ | `Enable sign-in and read user profile`|
@@ -100,7 +100,7 @@ The following are some app scenarios using the `User` and `Group` resources and 
 
 ###Access scenarios using the Group resource and the required scopes
     
-| **App tasks involving Group**	 |  **Required scopes** |  **Permissions** |
+| **App tasks involving Group**	 |  **Required scopes** |  **Permissions on Azure Management Portal** |
 |:-------------------------------|:---------------------|:---------------|
 | App wants to read basic group info (only display name and picture), for example to show in a group picking experience	 | _Group.Read.All_  | `Read all groups`|
 | App wants to read all content in all unified groups, including files, conversations.  It also needs to show group memberships, be able to update group memberships, (if owner).  |  _Group.Read.All_ | `Read items in all site collections`, `Read all groups`|
@@ -109,9 +109,9 @@ The following are some app scenarios using the `User` and `Group` resources and 
 | App wants to create a group through AAD Graph | 	_Group.ReadWrite.All_ | `Read and write all groups`|
  
 
-##Additional Resources##
+<!---	##Additional Resources##
 
 
 - [Authenticate Microsoft Graph endpoints using the v2.0 app model preview](authenticate-MSGraph-using-v2.md )
-- [Hands on lab: Deep dive into the Office 365 unified API](http://dev.office.com/hands-on-labs/4585)
+- [Hands on lab: Deep dive into the Office 365 unified API](http://dev.office.com/hands-on-labs/4585) -->
 
