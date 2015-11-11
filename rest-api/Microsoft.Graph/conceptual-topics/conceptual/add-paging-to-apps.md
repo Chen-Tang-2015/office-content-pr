@@ -166,19 +166,3 @@ This creates a set of buttons that the user can use to go from one page of data 
     
 4 - Build and run the project (F5) to see how paging works.
     
-
-## Next steps
-<a name="sectionSection4"> </a>
-
-Now, you can modify the look and feel or add more advanced functionality by using these techniques. 
-
-
-## Additional resources
-<a name="bk_addresources"> </a>
-
-
--  [Overview of developing on the Office 365 platform](..\howto\platform-development-overview.md)
-    
--  [Set up your Office 365 development environment](..\howto\setup-development-environment.md)
-    
-
