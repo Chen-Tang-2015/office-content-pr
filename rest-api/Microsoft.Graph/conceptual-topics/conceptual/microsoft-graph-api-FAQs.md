@@ -1,10 +1,11 @@
 
 # Microsoft Graph Frequently Asked Questions (FAQs)
 
-_**Applies to:** Office 365_
+<!---_**Applies to:** Office 365_ -->
  
 Your feedback is important to us. Connect with us on [Stack Overflow](http://stackoverflow.com/questions/tagged/office365). Tag your questions with [MicrosoftGraph] and [office365].
 
+<!---	
 **In this article**
   
 -	[What platforms are supported by Microsoft Graph API?](#msg_how_use__unified_api)
@@ -13,11 +14,12 @@ Your feedback is important to us. Connect with us on [Stack Overflow](http://sta
 -	[Does Microsoft Graph API support v2.0 app authentication model?](#msg_v2auth) 
 
 
-<!---	[What's currently available in Microsoft Graph API](#msg_what_in_unified_api)
+[What's currently available in Microsoft Graph API](#msg_what_in_unified_api)
 -	[What's coming next in Microsoft Graph API?](#msg_what_next_in_unified_api) 
--	[Where can I learn more about Microsoft Graph API development?](#msg_how_learn_unified_api) -->
+-	[Where can I learn more about Microsoft Graph API development?](#msg_how_learn_unified_api)
 
-<a name="msg_how_use_unified_api"> </a>
+<a name="msg_how_use_unified_api"> </a> -->
+
 ## What platforms are supported by Microsoft Graph API?
 <!--
 Apps can use the Microsoft Graph API to perform create, read, update, and delete (CRUD) operations on data sources and entities, giving them seamless access to work data. 
@@ -57,12 +59,10 @@ You also have the option to use cross-origin resource sharing (CORS) to send req
 -	**Mail** and **calendar**
 -	**Insights and relationships** 
 
-**Note**:  For more information about the entities, see [What's in Office 365 unified API](#msg_what_in_unified_api).-->
+**Note**:  For more information about the entities, see [What's in Office 365 unified API](#msg_what_in_unified_api).
 
+<a name="msg_why_use_unified_api"> </a> -->
 
-
-
-<a name="msg_why_use_unified_api"> </a>
 ## Why use Microsoft Graph API?
 
 Let's say you want to programmatically retrieve a user's files, profile picture, and find the manager of the person who last edited that file in your organization. Because the information is stored in  multiple services-Azure Active Directory, SharePoint, and Exchange-the task involves multiple steps using Office 365 APIs: 
@@ -98,10 +98,11 @@ Using the Microsoft Graph API, you don't have to first discover service endpoint
 | Get message collection from the Inbox       |     `Microsoft Graph API`           | _https://_**graph.microsoft.com**_/v1.0/me/messages_  |
 | Get Joe's files   |     `Microsoft Graph API `  | _https://_**graph.microsoft.com**_/v1.0/me/drive/root/children_ |
 
-<!--| Get TrendingAround, for the current authenticated user           |     `Microsoft Graph API`                     | _https://_**graph.microsoft.com**_/beta/me/trendingaround_   |-->
+<!--| Get TrendingAround, for the current authenticated user           |     `Microsoft Graph API`                     | _https://_**graph.microsoft.com**_/beta/me/trendingaround_   |
 
 
-<a name="msg_benefits"> </a>
+<a name="msg_benefits"> </a>-->
+
 ## What're the benefits of using Microsoft Graph API?
 
 Some of the benefits of using Microsoft Graph API  are as follows:
