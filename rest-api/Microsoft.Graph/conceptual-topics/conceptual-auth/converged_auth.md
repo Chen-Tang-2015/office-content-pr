@@ -24,7 +24,7 @@ Currently, your apps can access the following APIs using the v2.0 app authentica
 with more Microsoft services being added in the near future.
 
 
-<a name="bk_samples"> </a>
+<!---<a name="bk_samples"> </a>-->
 
 ##Code samples
 
@@ -39,7 +39,7 @@ Explore the following code sample to learn how to create apps that use the v2.0 
 -->
 
 
-<a name="bk_scopes"> </a>
+<!--<a name="bk_scopes"> </a>-->
 
 ##Microsoft Graph API authentication scopes
 
