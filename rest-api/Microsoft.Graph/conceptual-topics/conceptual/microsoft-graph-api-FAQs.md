@@ -128,7 +128,8 @@ Some of the benefits of using Microsoft Graph API  are as follows:
 -	No need for any specialized Exchange, SharePoint, or Azure AD knowledge to access Microsoft Graph API entities
 
 
-<a name="msg_v2auth"> </a>
+<!---<a name="msg_v2auth"> </a>-->
+
 ## Does Microsoft Graph API support v2.0 app authentication model?
 
 Yes, in preview. For more information see [Authenticate Microsoft Graph endpoints using the v2.0 app model preview](authenticate-MSGraph-using-v2.md).
