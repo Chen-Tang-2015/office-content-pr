@@ -202,9 +202,9 @@ The second task is to construct a valid JSON Message object and send it to the *
 Once you've made a successful REST request, you've performed the three steps required for interacting with Microsoft Graph: app registration, user authentication, and making a REST request.
 
 
-## Additional resources
+<!--## Additional resources
 
 * [Develop Windows Universal Apps with Azure AD and the Windows 10 Identity API](http://blogs.technet.com/b/ad/archive/2015/08/03/develop-windows-universal-apps-with-azure-ad-and-the-windows-10-identity-api.aspx)
 * [AzureAD-NativeClient-UWP-WAM](https://github.com/Azure-Samples/AzureAD-NativeClient-UWP-WAM)
-* [Office Dev Center](http://dev.office.com)
+* [Office Dev Center](http://dev.office.com)-->
 
