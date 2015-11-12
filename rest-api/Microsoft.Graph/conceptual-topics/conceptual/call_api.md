@@ -16,6 +16,7 @@ All Microsoft Graph API requests use the following root URL:
 ```
 
 In this URL:
+
 - `https://graph.microsoft.com` is the Microsoft Graph API endpoint
 - `{version}` is the target service version, for example, `v1.0` or `beta`.
 - `{tenant}` is the Office 365 tenant specified in one of the following ways:
