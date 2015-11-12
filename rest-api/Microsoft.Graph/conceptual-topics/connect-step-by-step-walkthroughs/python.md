@@ -15,13 +15,13 @@ This topic assumes the following:
 
 To call the Microsoft Graph API, your Python app must complete the following tasks.
 
-1. [Register the application in Azure Active Directory](#register)
-2. [Redirect the browser to the sign in page](#redirect)
-3. [Receive an authorization code in your reply URL page](#authCode)
-4. [Request an access token from the token issuing endpoint](#accessToken)
-5. [Use the access token in a request to the Microsoft Graph API](#request) 
+1. Register the application in Azure Active Directory
+2. Redirect the browser to the sign in page
+3. Receive an authorization code in your reply URL page
+4. Request an access token from the token issuing endpoint
+5. Use the access token in a request to the Microsoft Graph API 
 
-<a name="register"></a>
+<!--<a name="register"></a>-->
 ## Register the application in Azure Active Directory
 
 Before you can start working with Office 365, you need to register your application in Azure Active Directory and set permissions to use Microsoft Graph services.
@@ -37,7 +37,7 @@ Take note of the following values in the **Configure** page of your Azure applic
 * A reply URL (http://127.0.0.1:8000/connect/get_token/)
 * An application key (unique to your application)
 
-<a name="redirect"></a>
+<!--<a name="redirect"></a>-->
 ## Redirect the browser to the sign in page
 
 Your app needs to redirect the browser to the sign in page to begin the OAuth flow and get an authorization code. 
@@ -60,7 +60,7 @@ def get_signin_url(redirect_uri):
   return signin_url
 ```
 
-<a name="authCode"></a>
+<!--<a name="authCode"></a>-->
 ## Receive an authorization code in your reply URL page
 
 After the user signs in, the browser is redirected to your reply URL, the ```get_token``` function in [*connect/views.py*](https://github.com/OfficeDev/O365-Python-Unified-API-Connect/blob/master/connect/views.py), with an authorization code appended to the query string as the ```code``` variable. 
@@ -71,7 +71,7 @@ The Connect sample gets the code from the query string so it can then exchange i
 auth_code = request.GET['code']
 ```
 
-<a name="accessToken"></a>
+<!--<a name="accessToken"></a>-->
 ## Request an access token from the token issuing endpoint
 
 Once you have the authorization code, you can use it along the client ID, key, and reply URL values that you got from Azure Active Directory to request an access token. 
@@ -103,7 +103,7 @@ def get_token_from_code(auth_code, redirect_uri):
 
 > **Note** The response provides more information than just the access token. For example, your app can get a refresh token to request new access tokens without having the user explicitly sign in again.
 
-<a name="request"></a>
+<!--<a name="request"></a>-->
 ## Use the access token in a request to the Microsoft Graph API
 
 With an access token, your app can make authenticated requests to the Microsoft Graph API. Your app must append the access code to the **Authorization** header of each request.
@@ -122,10 +122,11 @@ headers = {
 
 > **Note** The request must also send a **Content-Type** header with a value accepted by the Graph API, for example, `application/json`.
 
-The Microsoft Graph is a very powerful, unifiying API that can be used to interact with all kinds of Microsoft data. Check out the [API reference]() to explore what else you can accomplish with the Microsoft Graph API.
+The Microsoft Graph is a very powerful, unifiying API that can be used to interact with all kinds of Microsoft data. Check out the [API reference](http://graph.microsoft.io/docs/) to explore what else you can accomplish with the Microsoft Graph API.
 
+<!--
 ## Additional resources
 
 -  [Office 365 Python Connect sample using Microsoft Graph](https://github.com/OfficeDev/O365-Python-Unified-API-Connect)
 -  [Office Dev Center](http://dev.office.com) 
--  [Microsoft Graph API reference]()
+-  [Microsoft Graph API reference]()-->
