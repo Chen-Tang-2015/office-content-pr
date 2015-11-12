@@ -34,7 +34,7 @@ the permissions requested by your app (if the user has not done so already), you
 
 Authorizing an app starts with submitting an HTTPS GET request using the following URL:
  
-```GET https://login.microsoftonline.com/common/oauth2/authorize?response_type=code&redirect_uri=<uri>&client_id=<id>&resource=https%3A%2F%2Fgraph.microsoft.com%2F```
+```GET https://login.microsoftonline.com/common/oauth2/authorize?response_type=code&redirect_uri=<uri>&client_id=<id>```
 
 **Required query string parameters**
 
