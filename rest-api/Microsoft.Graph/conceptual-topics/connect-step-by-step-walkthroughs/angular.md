@@ -14,12 +14,12 @@ This topic assumes the following.
 
 To call the Microsoft Graph API, you have to complete the following tasks.
 
-1. [Register the application in Azure Active Directory](#register)
-2. [Configure Azure Active Directory Library for JavaScript (ADAL JS)](#adal)
-3. [Use ADAL JS to get an access token](#accessToken)
-4. [Use the access token in a request to the Microsoft Graph API](#request) 
+1. Register the application in Azure Active Directory
+2. Configure Azure Active Directory Library for JavaScript (ADAL JS)
+3. Use ADAL JS to get an access token
+4. Use the access token in a request to the Microsoft Graph API
 
-<a name="register"></a>
+<!--<a name="register"></a>-->
 ## Register the application in Azure Active Directory
 
 Before you can start working with Office 365, you need to register your application in Azure Active Directory and set permissions to use Microsoft Graph services.
@@ -34,7 +34,7 @@ Take note of the following values in the **Configure** page of your Azure applic
 * Client ID (unique to your application)
 * A reply URL (http://127.0.0.1:8080/)
 
-<a name="adal"></a>
+<!--<a name="adal"></a>-->
 ## Configure Azure Active Directory Library for JavaScript (ADAL JS)
 
 [ADAL JS](https://github.com/AzureAD/azure-activedirectory-library-for-js) is a JavaScript library which provides you with complete support for signing on Azure AD users in single-page applications (SPAs) like the Connect sample and token management, as well as other features. In order to leverage this library, your Angular app has to include and configure it.
@@ -65,7 +65,7 @@ adalAuthenticationServiceProvider.init(
 );
 ```
 
-<a name="accessToken"></a>
+<!--<a name="accessToken"></a>-->
 ## Use ADAL JS to get an access token
 
 Your app needs to redirect the browser to a sign in page so the user can sign in and grant your application access to their data. The Connect sample utilizes ADAL JS to handle this task. 
@@ -83,7 +83,7 @@ function connect() {
 
 When this function is called, your application will redirect the user to a sign in page. After they sign in and authorize your app, they'll be returned to your app with the access token in the query string that ADAL JS will retrieve and store. 
 
-<a name="request"></a>
+<!--<a name="request"></a>-->
 ## Use the access token in a request to the Microsoft Graph API
 
 With an access token, your app can make authenticated requests to the Microsoft Graph API. ADAL JS automatically intercepts all HTTP requests and adds your access token to them so you don't have to manually set that header when using the library. 
@@ -96,4 +96,4 @@ The Microsoft Graph is a very powerful, unifiying API that can be used to intera
 
 -  [Office 365 Angular Connect sample using Microsoft Graph](https://github.com/OfficeDev/O365-Angular-Unified-API-Connect)
 -  [Office Dev Center](http://dev.office.com) 
--  [Microsoft Graph API reference]()
+-  [Microsoft Graph API reference](http://graph.microsoft.io/docs/)
