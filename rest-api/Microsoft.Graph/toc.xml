@@ -1,27 +1,27 @@
 <Menu>
-  <Item text="Overview" url="overview/microsoft-graph-api-overview" SEOKeyword="Overview, Microsoft Graph API, Overview" SEODescription="">
-    <Item text="Call the API" url="overview/call-microsoft-graph-api" SEOKeyword="Call the API, Microsoft Graph API, Overview" SEODescription="Answers to some frequently-asked questions about the Microsoft Graph." />
-    <Item text="Query Parameters" />
-    <Item text="Paging" />
-    <Item text="Errors" url="overview/microsoft-graph-api-errors" SEOKeyword="Errors, Microsoft Graph API, Overview" SEODescription="Errors in the Microsoft Graph API service are returned using standard HTTP status codes, as well as a JSON error response object."/>
-    <Item text="Release Notes" url="overview/microsoft-graph-api-release-notes-known-issues" SEOKeyword="Release Notes, Microsoft Graph API, Overview" SEODescription="New features for developers that are available in the November 2015 release of the Microsoft Graph API, as well as any known issues."/>
-    <Item text="FAQs" url="overview/microsoft-graph-api-faqs" SEOKeyword="FAQs, Microsoft Graph API, Overview" SEODescription="Answers to some frequently-asked questions about the Microsoft Graph." />
+  <Item text="Overview" url="overview/overview" SEOKeyword="Overview, Microsoft Graph API, Overview" SEODescription="">
+    <Item text="Call the API" url="overview/call_api" SEOKeyword="Call the API, Microsoft Graph API, Overview" SEODescription="Answers to some frequently-asked questions about the Microsoft Graph." />
+    <Item text="Query Parameters" url="overview/query_parameters" SEOKeyword="Query parameters, Microsoft Graph API, Overview" SEODescription="" />
+    <Item text="Paging" url="overview/paging" SEOKeyword="Paging, Microsoft Graph API, Overview" SEODescription="" />
+    <Item text="Errors" url="overview/errors" SEOKeyword="Errors, Microsoft Graph API, Overview" SEODescription="Errors in the Microsoft Graph API service are returned using standard HTTP status codes, as well as a JSON error response object."/>
+    <Item text="Release Notes" url="overview/release_notes" SEOKeyword="Release Notes, Microsoft Graph API, Overview" SEODescription="New features for developers that are available in the November 2015 release of the Microsoft Graph API, as well as any known issues."/>
+    <Item text="FAQs" url="overview/faqs" SEOKeyword="FAQs, Microsoft Graph API, Overview" SEODescription="Answers to some frequently-asked questions about the Microsoft Graph." />
   </Item>
-  <Item text="Authorization" url="overview/microsoft-graph-api-app-authorization">
-    <Item text="Permission Scopes" url="overview/microsoft-graph-api-permission-scopes" SEOKeyword="Permission Scopes, Microsoft Graph API, Overview" SEODescription="The Microsoft Graph API exposes OAuth 2.0 permission scopes that are used to control access that an app has to data. As a developer, you configure your app with the permission scopes appropriate to the access that it requires, typically by using the Azure portal."/>
-    <Item text="Associate Office 365 account" url="overview/associate-office365-with-azure-ad" SEOKeyword="Associate Office 365 account, Microsoft Graph API, Overview" SEODescription="Use the management portal in Microsoft Azure to manage users, roles, and apps for Office 365."/>
-    <Item text="v2.0 app model (preview)" url="overview/authenticate-MSGraph-using-v2" SEOKeyword="v2.0 app model, Microsoft Graph API, Overview" SEODescription="The v2.0 app authentication model preview enables you to create apps that accept both work and school (Azure AD) as well as personal (Microsoft account) identities." />
+  <Item text="Authorization" url="overview/app_authorization">
+    <Item text="Permission Scopes" url="overview/permission_scopes" SEOKeyword="Permission Scopes, Microsoft Graph API, Overview" SEODescription="The Microsoft Graph API exposes OAuth 2.0 permission scopes that are used to control access that an app has to data. As a developer, you configure your app with the permission scopes appropriate to the access that it requires, typically by using the Azure portal."/>
+    <Item text="Associate Office 365 account" url="overview/associate_account" SEOKeyword="Associate Office 365 account, Microsoft Graph API, Overview" SEODescription="Use the management portal in Microsoft Azure to manage users, roles, and apps for Office 365."/>
+    <Item text="Converged auth (preview)" url="overview/converged_auth" SEOKeyword="Converged app model, Microsoft Graph API, Overview" SEODescription="The v2.0 app authentication model preview enables you to create apps that accept both work and school (Azure AD) as well as personal (Microsoft account) identities." />
   </Item>
-  <Item text="Walkthroughs" url="platform/connect-step-by-step-rest">
-    <Item text=".NET" url="platform/connect-step-by-step-aspnetmvc" SEOKeyword=".NET, ASP.NET MVC, Microsoft Graph API, Walkthroughs" SEODescription="" />
-    <Item text="UWP" url="platform/connect-step-by-step-uwp" SEOKeyword="UWP, Microsoft Graph API, Walkthroughs" SEODescription="" />
-    <Item text="iOS" url="platform/connect-step-by-step-ios" SEOKeyword="iOS, Microsoft Graph API, Walkthroughs" SEODescription="" />
-    <Item text="Android" url="platform/connect-step-by-step-android" SEOKeyword="Android, Microsoft Graph API, Walkthroughs" SEODescription="" />
-    <Item text="Angular" url="platform/connect-step-by-step-angular" SEOKeyword="Angular, Microsoft Graph API, Walkthroughs" SEODescription="" />
-    <Item text="Node.js" url="platform/connect-step-by-step-nodejs" SEOKeyword="Node.js, Microsoft Graph API, Walkthroughs" SEODescription="" />
-    <Item text="PHP" url="platform/connect-step-by-step-php" SEOKeyword="PHP, Microsoft Graph API, Walkthroughs" SEODescription="" />
-    <Item text="Python" url="platform/connect-step-by-step-python" SEOKeyword="Python, Microsoft Graph API, Walkthroughs" SEODescription="" />
-    <Item text="Ruby" url="platform/connect-step-by-step-ruby" SEOKeyword="Ruby, Microsoft Graph API, Walkthroughs" SEODescription="" />
+  <Item text="Platforms" url="platform/rest">
+    <Item text=".NET" url="platform/aspnetmvc" SEOKeyword=".NET, ASP.NET MVC, Microsoft Graph API, Walkthroughs" SEODescription="" />
+    <Item text="UWP" url="platform/uwp" SEOKeyword="UWP, Microsoft Graph API, Walkthroughs" SEODescription="" />
+    <Item text="iOS" url="platform/ios" SEOKeyword="iOS, Microsoft Graph API, Walkthroughs" SEODescription="" />
+    <Item text="Android" url="platform/android" SEOKeyword="Android, Microsoft Graph API, Walkthroughs" SEODescription="" />
+    <Item text="Angular" url="platform/angular" SEOKeyword="Angular, Microsoft Graph API, Walkthroughs" SEODescription="" />
+    <Item text="Node.js" url="platform/nodejs" SEOKeyword="Node.js, Microsoft Graph API, Walkthroughs" SEODescription="" />
+    <Item text="PHP" url="platform/php" SEOKeyword="PHP, Microsoft Graph API, Walkthroughs" SEODescription="" />
+    <Item text="Python" url="platform/python" SEOKeyword="Python, Microsoft Graph API, Walkthroughs" SEODescription="" />
+    <Item text="Ruby" url="platform/ruby" SEOKeyword="Ruby, Microsoft Graph API, Walkthroughs" SEODescription="" />
   </Item>
   <Item text="/v1.0 reference" url="api-reference/v1.0/service_root">
     <Item text="Users" url="api-reference/v1.0/resources/user" SEOKeyword="Users API, Microsoft Graph API, Users API" SEODescription="Represents an Azure AD user account. Inherits from DirectoryObject.">
@@ -66,26 +66,18 @@
         <Item text="Create item" url="api-reference/v1.0/api/drive_post_items" SEOKeyword="Create item, Microsoft Graph API, drive API" SEODescription="Use this API to create a new item."></Item>
       </Item>
       <Item text="groups" url="api-reference/v1.0/resources/group" SEOKeyword="user groups, Microsoft Graph API, user API" SEODescription="">
-        <Item text="List joined groups" url="api-reference/v1.0/api/user_list_joinedgroups" SEOKeyword="List joinedGroups, Microsoft Graph API, Users API" SEODescription="Retrieve a list of group objects."></Item>
-        <Item text="Create join group" url="api-reference/v1.0/api/user_post_joinedgroups" SEOKeyword="Create Group, Microsoft Graph API, Users API" SEODescription="Use this API to create a new Group."></Item>
         <Item text="List memberOf" url="api-reference/v1.0/api/user_list_memberof" SEOKeyword="List memberOf, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create memberOf" url="api-reference/v1.0/api/user_post_memberof" SEOKeyword="Create memberOf, Microsoft Graph API, Users API" SEODescription="Use this API to create a new memberOf."></Item>
       </Item>
-      <Item text="organization" url="api-reference/v1.0/resources/organization" SEOKeyword="user organizational structure, Microsoft Graph API, user API" SEODescription="">
+      <Item text="org hierarchy" url="api-reference/v1.0/resources/organization" SEOKeyword="user organizational structure, Microsoft Graph API, user API" SEODescription="">
         <Item text="List direct reports" url="api-reference/v1.0/api/user_list_directreports" SEOKeyword="List directReports, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create direct report" url="api-reference/v1.0/api/user_post_directreports" SEOKeyword="Create directReport, Microsoft Graph API, Users API" SEODescription="Use this API to create a new directReport."></Item>
-        <Item text="List manager" url="api-reference/v1.0/api/user_list_directreports" SEOKeyword="List directReports, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create manager" url="api-reference/v1.0/api/user_post_directreports" SEOKeyword="Create directReport, Microsoft Graph API, Users API" SEODescription="Use this API to create a new directReport."></Item>
+        <Item text="List manager" url="api-reference/v1.0/api/user_list_manager" SEOKeyword="List directReports, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
+        <Item text="Assign manager" url="api-reference/v1.0/api/user_put_manager" SEOKeyword="Create directReport, Microsoft Graph API, Users API" SEODescription="Use this API to create a new directReport."></Item>
       </Item>
       <Item text="directory objects" url="api-reference/v1.0/resources/directoryobject" SEOKeyword="directory object, Microsoft Graph API, user API" SEODescription="">
         <Item text="List owned devices" url="api-reference/v1.0/api/user_list_owneddevices" SEOKeyword="List ownedDevices, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create owned device" url="api-reference/v1.0/api/user_post_owneddevices" SEOKeyword="Create ownedDevice, Microsoft Graph API, Users API" SEODescription="Use this API to create a new ownedDevice."></Item>
         <Item text="List registered devices" url="api-reference/v1.0/api/user_list_registereddevices" SEOKeyword="List registeredDevices, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create registered device" url="api-reference/v1.0/api/user_post_registereddevices" SEOKeyword="Create registeredDevice, Microsoft Graph API, Users API" SEODescription="Use this API to create a new registeredDevice."></Item>
         <Item text="List owned objects" url="api-reference/v1.0/api/user_list_ownedobjects" SEOKeyword="List ownedObjects, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create owned object" url="api-reference/v1.0/api/user_post_ownedobjects" SEOKeyword="Create ownedObject, Microsoft Graph API, Users API" SEODescription="Use this API to create a new ownedObject."></Item>
         <Item text="List created objects" url="api-reference/v1.0/api/user_list_createdobjects" SEOKeyword="List createdObjects, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create created object" url="api-reference/v1.0/api/user_post_createdobjects" SEOKeyword="Create createdObject, Microsoft Graph API, Users API" SEODescription="Use this API to create a new createdObject."></Item>
         <Item text="Assign license" url="api-reference/v1.0/api/user_assignlicense" SEOKeyword="user: assignLicense, Microsoft Graph API, user API" SEODescription=""></Item>
         <Item text="Get member objects" url="api-reference/v1.0/api/user_getmemberobjects" SEOKeyword="user: getMemberObjects, Microsoft Graph API, user API" SEODescription=""></Item>
         <Item text="Get member groups" url="api-reference/v1.0/api/user_getmembergroups" SEOKeyword="user: getMemberGroups, Microsoft Graph API, user API" SEODescription=""></Item>
@@ -367,7 +359,6 @@
     <Item text="Directory" url="api-reference/v1.0/resources/directoryobject" SEOKeyword="Directory API, Microsoft Graph API, Directory API" SEODescription="Represents an Azure Active Directory object. The DirectoryObject type is the base type for most of the other directory entity types.">
       <Item text="directory object" url="api-reference/v1.0/resources/directoryobject" SEOKeyword="directoryobject API, Microsoft Graph API, directoryobject API" SEODescription="Represents an Azure Active Directory object. The DirectoryObject type is the base type for most of the other directory entity types.">
         <Item text="List directoryObjects" url="api-reference/v1.0/api/directoryobject_list" SEOKeyword="List directoryObjects, Microsoft Graph API, Directory API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create DirectoryObject" url="api-reference/v1.0/api/directoryobject_post_directoryobjects" SEOKeyword="Create DirectoryObject, Microsoft Graph API, Directory API" SEODescription="Use this API to create a new DirectoryObject."></Item>
         <Item text="Get directoryObject" url="api-reference/v1.0/api/directoryobject_get" SEOKeyword="Get directoryObject, Microsoft Graph API, Directory API" SEODescription="Retrieve the properties and relationships of directoryobject object."></Item>
         <Item text="Update directoryobject" url="api-reference/v1.0/api/directoryobject_update" SEOKeyword="Update directoryobject, Microsoft Graph API, Directory API" SEODescription="Update the properties of directoryobject object."></Item>
         <Item text="Delete directoryObject" url="api-reference/v1.0/api/directoryobject_delete" SEOKeyword="Delete directoryObject, Microsoft Graph API, Directory API" SEODescription="Delete directoryObject."></Item>
@@ -377,39 +368,16 @@
       </Item>
       <Item text="directory role" url="api-reference/v1.0/resources/directoryrole" SEOKeyword="directoryrole API, Microsoft Graph API, directoryrole API" SEODescription="Represents an Azure AD directory role. Azure AD directory roles are also known as administrator roles. For more information about directory (administrator) roles, see Assigning administrator roles in Azure AD(http://azure.microsoft.com/documentation/articles/active-directory-assign-admin-roles/).">
         <Item text="List directoryRoles" url="api-reference/v1.0/api/directoryrole_list" SEOKeyword="List directoryRoles, Microsoft Graph API, Directory API" SEODescription="Retrieve a list of directoryrole objects."></Item>
-        <Item text="Create DirectoryRole" url="api-reference/v1.0/api/directoryrole_post_directoryroles" SEOKeyword="Create DirectoryRole, Microsoft Graph API, Directory API" SEODescription="Use this API to create a new DirectoryRole."></Item>
+        <Item text="Enable DirectoryRole" url="api-reference/v1.0/api/directoryrole_post_directoryroles" SEOKeyword="Create DirectoryRole, Microsoft Graph API, Directory API" SEODescription="Use this API to create a new DirectoryRole."></Item>
         <Item text="Get directoryRole" url="api-reference/v1.0/api/directoryrole_get" SEOKeyword="Get directoryRole, Microsoft Graph API, Directory API" SEODescription="Retrieve the properties and relationships of directoryrole object."></Item>
         <Item text="Update directoryrole" url="api-reference/v1.0/api/directoryrole_update" SEOKeyword="Update directoryrole, Microsoft Graph API, Directory API" SEODescription="Update the properties of directoryrole object."></Item>
         <Item text="Delete directoryRole" url="api-reference/v1.0/api/directoryrole_delete" SEOKeyword="Delete directoryRole, Microsoft Graph API, Directory API" SEODescription="Delete directoryRole."></Item>
-        <Item text="List memberOf" url="api-reference/v1.0/api/directoryrole_list_memberof" SEOKeyword="List memberOf, Microsoft Graph API, Directory API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create memberOf" url="api-reference/v1.0/api/directoryrole_post_memberof" SEOKeyword="Create memberOf, Microsoft Graph API, Directory API" SEODescription="Use this API to create a new memberOf."></Item>
         <Item text="List members" url="api-reference/v1.0/api/directoryrole_list_members" SEOKeyword="List members, Microsoft Graph API, Directory API" SEODescription="Retrieve a list of directoryobject objects."></Item>
         <Item text="Create member" url="api-reference/v1.0/api/directoryrole_post_members" SEOKeyword="Create member, Microsoft Graph API, Directory API" SEODescription="Use this API to create a new member."></Item>
-        <Item text="List owned objects" url="api-reference/v1.0/api/directoryrole_list_ownedobjects" SEOKeyword="List ownedObjects, Microsoft Graph API, Directory API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create owned object" url="api-reference/v1.0/api/directoryrole_post_ownedobjects" SEOKeyword="Create ownedObject, Microsoft Graph API, Directory API" SEODescription="Use this API to create a new ownedObject."></Item>
-        <Item text="List owners" url="api-reference/v1.0/api/directoryrole_list_owners" SEOKeyword="List owners, Microsoft Graph API, Directory API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create owner" url="api-reference/v1.0/api/directoryrole_post_owners" SEOKeyword="Create owner, Microsoft Graph API, Directory API" SEODescription="Use this API to create a new owner."></Item>
-        <Item text="Get member objects" url="api-reference/v1.0/api/directoryrole_getmemberobjects" SEOKeyword="directoryRole: getMemberObjects, Microsoft Graph API, Directory API" SEODescription=""></Item>
-        <Item text="Get member groups" url="api-reference/v1.0/api/directoryrole_getmembergroups" SEOKeyword="directoryRole: getMemberGroups, Microsoft Graph API, Directory API" SEODescription=""></Item>
-        <Item text="Check member groups" url="api-reference/v1.0/api/directoryrole_checkmembergroups" SEOKeyword="directoryRole: checkMemberGroups, Microsoft Graph API, Directory API" SEODescription=""></Item>
       </Item>
       <Item text="directory role template" url="api-reference/v1.0/resources/directoryroletemplate" SEOKeyword="directoryroletemplate API, Microsoft Graph API, directoryroletemplate API" SEODescription="Represents a directory role template. A directory role template specifies the property values of a directory role (DirectoryRole). There is an associated directory role template object for each of the directory roles that may be activated in a tenant.">
         <Item text="List directoryRoleTemplates" url="api-reference/v1.0/api/directoryroletemplate_list" SEOKeyword="List directoryRoleTemplates, Microsoft Graph API, Directory API" SEODescription="Retrieve a list of directoryroletemplate objects."></Item>
-        <Item text="Create directoryRoleTemplate" url="api-reference/v1.0/api/directoryroletemplate_post_directoryroletemplates" SEOKeyword="Create directoryRoleTemplate, Microsoft Graph API, Directory API" SEODescription="Use this API to create a new DirectoryRoleTemplate."></Item>
         <Item text="Get directoryRoleTemplate" url="api-reference/v1.0/api/directoryroletemplate_get" SEOKeyword="Get directoryRoleTemplate, Microsoft Graph API, Directory API" SEODescription="Retrieve the properties and relationships of directoryroletemplate object."></Item>
-        <Item text="Update directoryroletemplate" url="api-reference/v1.0/api/directoryroletemplate_update" SEOKeyword="Update directoryroletemplate, Microsoft Graph API, Directory API" SEODescription="Update the properties of directoryroletemplate object."></Item>
-        <Item text="Delete directoryRoleTemplate" url="api-reference/v1.0/api/directoryroletemplate_delete" SEOKeyword="Delete directoryRoleTemplate, Microsoft Graph API, Directory API" SEODescription="Delete directoryRoleTemplate."></Item>
-        <Item text="Get member objects" url="api-reference/v1.0/api/directoryroletemplate_getmemberobjects" SEOKeyword="directoryRoleTemplate: getMemberObjects, Microsoft Graph API, Directory API" SEODescription=""></Item>
-        <Item text="Get member groups" url="api-reference/v1.0/api/directoryroletemplate_getmembergroups" SEOKeyword="directoryRoleTemplate: getMemberGroups, Microsoft Graph API, Directory API" SEODescription=""></Item>
-        <Item text="Check member groups" url="api-reference/v1.0/api/directoryroletemplate_checkmembergroups" SEOKeyword="directoryRoleTemplate: checkMemberGroups, Microsoft Graph API, Directory API" SEODescription=""></Item>
-      </Item>
-      <Item text="directory link change" url="api-reference/v1.0/resources/directorylinkchange" SEOKeyword="directorylinkchange API, Microsoft Graph API, directorylinkchange API" SEODescription="A DirectoryLinkChange object is returned in the result set of a differential query to indicate that a property of a contact, a user, or a group that is represented by a link has changed since the last differential query. The DirectoryLinkChange object will represent a change to a user’s or contact’s manager property or a change to a group’s members property. For more information about differential queries, see Azure AD Graph API Differential Query(https://msdn.microsoft.com/en-us/library/azure/jj836245.aspx). Inherits from DirectoryObject.">
-        <Item text="Get directoryLinkChange" url="api-reference/v1.0/api/directorylinkchange_get" SEOKeyword="Get directoryLinkChange, Microsoft Graph API, Directory API" SEODescription="Retrieve the properties and relationships of directorylinkchange object."></Item>
-        <Item text="Update directorylinkchange" url="api-reference/v1.0/api/directorylinkchange_update" SEOKeyword="Update directorylinkchange, Microsoft Graph API, Directory API" SEODescription="Update the properties of directorylinkchange object."></Item>
-        <Item text="Delete directoryLinkChange" url="api-reference/v1.0/api/directorylinkchange_delete" SEOKeyword="Delete directoryLinkChange, Microsoft Graph API, Directory API" SEODescription="Delete directoryLinkChange."></Item>
-        <Item text="Get member objects" url="api-reference/v1.0/api/directorylinkchange_getmemberobjects" SEOKeyword="directoryLinkChange: getMemberObjects, Microsoft Graph API, Directory API" SEODescription=""></Item>
-        <Item text="Get member groups" url="api-reference/v1.0/api/directorylinkchange_getmembergroups" SEOKeyword="directoryLinkChange: getMemberGroups, Microsoft Graph API, Directory API" SEODescription=""></Item>
-        <Item text="Check member groups" url="api-reference/v1.0/api/directorylinkchange_checkmembergroups" SEOKeyword="directoryLinkChange: checkMemberGroups, Microsoft Graph API, Directory API" SEODescription=""></Item>
       </Item>
       <Item text="device" url="api-reference/v1.0/resources/device" SEOKeyword="device API, Microsoft Graph API, device API" SEODescription="Represents a device registered in the directory. Inherits from DirectoryObject.">
         <Item text="List devices" url="api-reference/v1.0/api/device_list" SEOKeyword="List devices, Microsoft Graph API, Device API" SEODescription="Retrieve a list of device objects."></Item>
@@ -418,50 +386,11 @@
         <Item text="Update device" url="api-reference/v1.0/api/device_update" SEOKeyword="Update device, Microsoft Graph API, Device API" SEODescription="Update the properties of device object."></Item>
         <Item text="Delete device" url="api-reference/v1.0/api/device_delete" SEOKeyword="Delete device, Microsoft Graph API, Device API" SEODescription="Delete device."></Item>
         <Item text="List registeredOwners" url="api-reference/v1.0/api/device_list_registeredowners" SEOKeyword="List registeredOwners, Microsoft Graph API, Device API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create registeredOwner" url="api-reference/v1.0/api/device_post_registeredowners" SEOKeyword="Create registeredOwner, Microsoft Graph API, Device API" SEODescription="Use this API to create a new registeredOwner."></Item>
         <Item text="List registeredUsers" url="api-reference/v1.0/api/device_list_registeredusers" SEOKeyword="List registeredUsers, Microsoft Graph API, Device API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create registeredUser" url="api-reference/v1.0/api/device_post_registeredusers" SEOKeyword="Create registeredUser, Microsoft Graph API, Device API" SEODescription="Use this API to create a new registeredUser."></Item>
-        <Item text="Get member groups" url="api-reference/v1.0/api/device_getmembergroups" SEOKeyword="device: getMemberGroups, Microsoft Graph API, Device API" SEODescription=""></Item>
-        <Item text="Get member objects" url="api-reference/v1.0/api/device_getmemberobjects" SEOKeyword="device: getMemberObjects, Microsoft Graph API, Device API" SEODescription=""></Item>
-        <Item text="Check member groups" url="api-reference/v1.0/api/device_checkmembergroups" SEOKeyword="device: checkMemberGroups, Microsoft Graph API, Device API" SEODescription=""></Item>
-      </Item>
-      <Item text="device configuration" url="api-reference/v1.0/resources/deviceconfiguration" SEOKeyword="deviceconfiguration API, Microsoft Graph API, deviceconfiguration API" SEODescription="">
-        <Item text="List deviceConfiguration" url="api-reference/v1.0/api/deviceconfiguration_list" SEOKeyword="List deviceConfiguration, Microsoft Graph API, Device API" SEODescription="Retrieve a list of deviceconfiguration objects."></Item>
-        <Item text="Create DeviceConfiguration" url="api-reference/v1.0/api/deviceconfiguration_post_deviceconfiguration" SEOKeyword="Create DeviceConfiguration, Microsoft Graph API, Device API" SEODescription="Use this API to create a new DeviceConfiguration."></Item>
-        <Item text="Get deviceConfiguration" url="api-reference/v1.0/api/deviceconfiguration_get" SEOKeyword="Get deviceConfiguration, Microsoft Graph API, Device API" SEODescription="Retrieve the properties and relationships of deviceconfiguration object."></Item>
-        <Item text="Update deviceconfiguration" url="api-reference/v1.0/api/deviceconfiguration_update" SEOKeyword="Update deviceconfiguration, Microsoft Graph API, Device API" SEODescription="Update the properties of deviceconfiguration object."></Item>
-        <Item text="Delete deviceConfiguration" url="api-reference/v1.0/api/deviceconfiguration_delete" SEOKeyword="Delete deviceConfiguration, Microsoft Graph API, Device API" SEODescription="Delete deviceConfiguration."></Item>
-        <Item text="Get member objects" url="api-reference/v1.0/api/deviceconfiguration_getmemberobjects" SEOKeyword="deviceConfiguration: getMemberObjects, Microsoft Graph API, Device API" SEODescription=""></Item>
-        <Item text="Get member groups" url="api-reference/v1.0/api/deviceconfiguration_getmembergroups" SEOKeyword="deviceConfiguration: getMemberGroups, Microsoft Graph API, Device API" SEODescription=""></Item>
-        <Item text="Check member groups" url="api-reference/v1.0/api/deviceconfiguration_checkmembergroups" SEOKeyword="deviceConfiguration: checkMemberGroups, Microsoft Graph API, Device API" SEODescription=""></Item>
-      </Item>
-      <Item text="service principal" url="api-reference/v1.0/resources/serviceprincipal" SEOKeyword="serviceprincipal API, Microsoft Graph API, serviceprincipal API" SEODescription="Represents an instance of an application in a directory. Inherits from DirectoryObject.">
-        <Item text="List servicePrincipals" url="api-reference/v1.0/api/serviceprincipal_list" SEOKeyword="List servicePrincipals, Microsoft Graph API, Directory API" SEODescription="Retrieve a list of serviceprincipal objects."></Item>
-        <Item text="Create ServicePrincipal" url="api-reference/v1.0/api/serviceprincipal_post_serviceprincipals" SEOKeyword="Create ServicePrincipal, Microsoft Graph API, Directory API" SEODescription="Use this API to create a new ServicePrincipal."></Item>
-        <Item text="Get servicePrincipal" url="api-reference/v1.0/api/serviceprincipal_get" SEOKeyword="Get servicePrincipal, Microsoft Graph API, Directory API" SEODescription="Retrieve the properties and relationships of serviceprincipal object."></Item>
-        <Item text="Update serviceprincipal" url="api-reference/v1.0/api/serviceprincipal_update" SEOKeyword="Update serviceprincipal, Microsoft Graph API, Directory API" SEODescription="Update the properties of serviceprincipal object."></Item>
-        <Item text="Delete servicePrincipal" url="api-reference/v1.0/api/serviceprincipal_delete" SEOKeyword="Delete servicePrincipal, Microsoft Graph API, Directory API" SEODescription="Delete servicePrincipal."></Item>
-        <Item text="List createdObjects" url="api-reference/v1.0/api/serviceprincipal_list_createdobjects" SEOKeyword="List createdObjects, Microsoft Graph API, Directory API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create createdObject" url="api-reference/v1.0/api/serviceprincipal_post_createdobjects" SEOKeyword="Create createdObject, Microsoft Graph API, Directory API" SEODescription="Use this API to create a new createdObject."></Item>
-        <Item text="List memberOf" url="api-reference/v1.0/api/serviceprincipal_list_memberof" SEOKeyword="List memberOf, Microsoft Graph API, Directory API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create memberOf" url="api-reference/v1.0/api/serviceprincipal_post_memberof" SEOKeyword="Create memberOf, Microsoft Graph API, Directory API" SEODescription="Use this API to create a new memberOf."></Item>
-        <Item text="List owned objects" url="api-reference/v1.0/api/serviceprincipal_list_ownedobjects" SEOKeyword="List ownedObjects, Microsoft Graph API, Directory API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create owned object" url="api-reference/v1.0/api/serviceprincipal_post_ownedobjects" SEOKeyword="Create ownedObject, Microsoft Graph API, Directory API" SEODescription="Use this API to create a new ownedObject."></Item>
-        <Item text="Create owner" url="api-reference/v1.0/api/serviceprincipal_post_owners" SEOKeyword="Create owner, Microsoft Graph API, Directory API" SEODescription="Use this API to create a new owner."></Item>
-        <Item text="List owners" url="api-reference/v1.0/api/serviceprincipal_list_owners" SEOKeyword="List owners, Microsoft Graph API, Directory API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Get member objects" url="api-reference/v1.0/api/serviceprincipal_getmemberobjects" SEOKeyword="servicePrincipal: getMemberObjects, Microsoft Graph API, Directory API" SEODescription=""></Item>
-        <Item text="Get member groups" url="api-reference/v1.0/api/serviceprincipal_getmembergroups" SEOKeyword="servicePrincipal: getMemberGroups, Microsoft Graph API, Directory API" SEODescription=""></Item>
-        <Item text="Check member groups" url="api-reference/v1.0/api/serviceprincipal_checkmembergroups" SEOKeyword="servicePrincipal: checkMemberGroups, Microsoft Graph API, serviceprincipal API" SEODescription=""></Item>
       </Item>
       <Item text="organization" url="api-reference/v1.0/resources/tenantdetail" SEOKeyword="tenantdetail API, Microsoft Graph API, tenantdetail API" SEODescription="Represents an Azure Active Directory tenant. Only the read and update operations are supported on tenants; create and delete are not supported. Inherits from DirectoryOjbect.">
-        <Item text="List tenant details" url="api-reference/v1.0/api/tenantdetail_list" SEOKeyword="List tenantDetails, Microsoft Graph API, Directory API" SEODescription="Retrieve a list of tenantdetail objects."></Item>
-        <Item text="Create tenant detail" url="api-reference/v1.0/api/tenantdetail_post_tenantdetails" SEOKeyword="Create TenantDetail, Microsoft Graph API, Directory API" SEODescription="Use this API to create a new TenantDetail."></Item>
-        <Item text="Get tenant detail" url="api-reference/v1.0/api/tenantdetail_get" SEOKeyword="Get tenantDetail, Microsoft Graph API, Directory API" SEODescription="Retrieve the properties and relationships of tenantdetail object."></Item>
-        <Item text="Update tenant detail" url="api-reference/v1.0/api/tenantdetail_update" SEOKeyword="Update tenantdetail, Microsoft Graph API, Directory API" SEODescription="Update the properties of tenantdetail object."></Item>
-        <Item text="Delete tenant detail" url="api-reference/v1.0/api/tenantdetail_delete" SEOKeyword="Delete tenantDetail, Microsoft Graph API, Directory API" SEODescription="Delete tenantDetail."></Item>
-        <Item text="Get member objects" url="api-reference/v1.0/api/tenantdetail_getmemberobjects" SEOKeyword="tenantDetail: getMemberObjects, Microsoft Graph API, Directory API" SEODescription=""></Item>
-        <Item text="Get member groups" url="api-reference/v1.0/api/tenantdetail_getmembergroups" SEOKeyword="tenantDetail: getMemberGroups, Microsoft Graph API, Directory API" SEODescription=""></Item>
-        <Item text="Check member groups" url="api-reference/v1.0/api/tenantdetail_checkmembergroups" SEOKeyword="tenantDetail: checkMemberGroups, Microsoft Graph API, Directory API" SEODescription=""></Item>
+        <Item text="Get org details" url="api-reference/v1.0/api/tenantdetail_get" SEOKeyword="Get tenantDetail, Microsoft Graph API, Directory API" SEODescription="Retrieve the properties and relationships of tenantdetail object."></Item>
+        <Item text="Update org details" url="api-reference/v1.0/api/tenantdetail_update" SEOKeyword="Update tenantdetail, Microsoft Graph API, Directory API" SEODescription="Update the properties of tenantdetail object."></Item>
       </Item>
       <Item text="subscribed sku" url="api-reference/v1.0/resources/subscribedsku" SEOKeyword="subscribedsku API, Microsoft Graph API, subscribedsku API" SEODescription="Only the read operation is supported on subscribed SKUs; create, update, and delete are not supported. Query filter expressions are not supported. Inherits from DirectoryObject.">
         <Item text="List subscribedSkus" url="api-reference/v1.0/api/subscribedsku_list" SEOKeyword="List subscribedSkus, Microsoft Graph API, subscribedsku API" SEODescription="Retrieve a list of subscribedsku objects."></Item>
@@ -470,10 +399,6 @@
         <Item text="Update subscribedsku" url="api-reference/v1.0/api/subscribedsku_update" SEOKeyword="Update subscribedsku, Microsoft Graph API, subscribedsku API" SEODescription="Update the properties of subscribedsku object."></Item>
         <Item text="Delete subscribedSku" url="api-reference/v1.0/api/subscribedsku_delete" SEOKeyword="Delete subscribedSku, Microsoft Graph API, subscribedsku API" SEODescription="Delete subscribedSku."></Item>
       </Item>
-    </Item>
-    <Item text="entity" url="api-reference/v1.0/resources/entity" SEOKeyword="entity API, Microsoft Graph API, entity API" SEODescription="">
-      <Item text="Get entity" url="api-reference/v1.0/api/entity_get" SEOKeyword="Get entity, Microsoft Graph API, entity API" SEODescription="Retrieve the properties and relationships of entity object."></Item>
-      <Item text="Delete entity" url="api-reference/v1.0/api/entity_delete" SEOKeyword="Delete entity, Microsoft Graph API, entity API" SEODescription="Delete entity."></Item>
     </Item>
   </Item>
   <Item text="/beta reference" url="api-reference/beta/service_root">
@@ -537,26 +462,18 @@
         <Item text="List workingWith" url="api-reference/beta/api/user_list_workingwith" SEOKeyword="List workingWith, Microsoft Graph API, user API" SEODescription="Retrieve a list of user objects."></Item>
       </Item>
       <Item text="groups" url="api-reference/beta/resources/organization" SEOKeyword="groups, Microsoft Graph API, user API" SEODescription="">
-        <Item text="List joined groups" url="api-reference/beta/api/user_list_joinedgroups" SEOKeyword="List joinedGroups, Microsoft Graph API, Users API" SEODescription="Retrieve a list of group objects."></Item>
-        <Item text="Create join group" url="api-reference/beta/api/user_post_joinedgroups" SEOKeyword="Create Group, Microsoft Graph API, Users API" SEODescription="Use this API to create a new Group."></Item>
         <Item text="List memberOf" url="api-reference/beta/api/user_list_memberof" SEOKeyword="List memberOf, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create memberOf" url="api-reference/beta/api/user_post_memberof" SEOKeyword="Create memberOf, Microsoft Graph API, Users API" SEODescription="Use this API to create a new memberOf."></Item>
       </Item>
-      <Item text="organization" url="api-reference/beta/resources/organization" SEOKeyword="user organizational structure, Microsoft Graph API, user API" SEODescription="">
+      <Item text="org hierarchy" url="api-reference/beta/resources/organization" SEOKeyword="user organizational structure, Microsoft Graph API, user API" SEODescription="">
         <Item text="List direct reports" url="api-reference/beta/api/user_list_directreports" SEOKeyword="List directReports, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create direct report" url="api-reference/beta/api/user_post_directreports" SEOKeyword="Create directReport, Microsoft Graph API, Users API" SEODescription="Use this API to create a new directReport."></Item>
-        <Item text="List manager" url="api-reference/beta/api/user_list_directreports" SEOKeyword="List directReports, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create manager" url="api-reference/beta/api/user_post_directreports" SEOKeyword="Create directReport, Microsoft Graph API, Users API" SEODescription="Use this API to create a new directReport."></Item>
+        <Item text="List manager" url="api-reference/beta/api/user_list_manager" SEOKeyword="List directReports, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
+        <Item text="Assign manager" url="api-reference/beta/api/user_put_manager" SEOKeyword="Create directReport, Microsoft Graph API, Users API" SEODescription="Use this API to create a new directReport."></Item>
       </Item>
       <Item text="directory objects" url="api-reference/beta/resources/directoryobject" SEOKeyword="directory object, Microsoft Graph API, user API" SEODescription="">
         <Item text="List owned devices" url="api-reference/beta/api/user_list_owneddevices" SEOKeyword="List ownedDevices, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create owned device" url="api-reference/beta/api/user_post_owneddevices" SEOKeyword="Create ownedDevice, Microsoft Graph API, Users API" SEODescription="Use this API to create a new ownedDevice."></Item>
         <Item text="List registered devices" url="api-reference/beta/api/user_list_registereddevices" SEOKeyword="List registeredDevices, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create registered device" url="api-reference/beta/api/user_post_registereddevices" SEOKeyword="Create registeredDevice, Microsoft Graph API, Users API" SEODescription="Use this API to create a new registeredDevice."></Item>
         <Item text="List owned objects" url="api-reference/beta/api/user_list_ownedobjects" SEOKeyword="List ownedObjects, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create owned object" url="api-reference/beta/api/user_post_ownedobjects" SEOKeyword="Create ownedObject, Microsoft Graph API, Users API" SEODescription="Use this API to create a new ownedObject."></Item>
         <Item text="List created objects" url="api-reference/beta/api/user_list_createdobjects" SEOKeyword="List createdObjects, Microsoft Graph API, Users API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create created object" url="api-reference/beta/api/user_post_createdobjects" SEOKeyword="Create createdObject, Microsoft Graph API, Users API" SEODescription="Use this API to create a new createdObject."></Item>
         <Item text="List app role assignments" url="api-reference/beta/api/user_list_approleassignments" SEOKeyword="List appRoleAssignments, Microsoft Graph API, user API" SEODescription="Retrieve a list of approleassignment objects."></Item>
         <Item text="Create app role assignment" url="api-reference/beta/api/user_post_approleassignments" SEOKeyword="Create AppRoleAssignment, Microsoft Graph API, user API" SEODescription="Use this API to create a new AppRoleAssignment."></Item>
         <Item text="List OAuth2 permission grants" url="api-reference/beta/api/user_list_oauth2permissiongrants" SEOKeyword="List oauth2PermissionGrants, Microsoft Graph API, Users API" SEODescription="Retrieve a list of oauth2permissiongrant objects."></Item>
@@ -934,7 +851,6 @@
       </Item>
       <Item text="directory objects" url="api-reference/beta/resources/directoryobjects" SEOKeyword="group directory objects, Microsoft Graph API, group API" SEODescription="">
         <Item text="List memberOf" url="api-reference/beta/api/group_list_memberof" SEOKeyword="List memberOf, Microsoft Graph API, Groups API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create memberOf" url="api-reference/beta/api/group_post_memberof" SEOKeyword="Create memberOf, Microsoft Graph API, Groups API" SEODescription="Use this API to create a new memberOf."></Item>
         <Item text="List app role assignments" url="api-reference/beta/api/group_list_approleassignments" SEOKeyword="List appRoleAssignments, Microsoft Graph API, group API" SEODescription="Retrieve a list of approleassignment objects."></Item>
         <Item text="Create app role assignment" url="api-reference/beta/api/group_post_approleassignments" SEOKeyword="Create AppRoleAssignment, Microsoft Graph API, group API" SEODescription="Use this API to create a new AppRoleAssignment."></Item>
         <Item text="Get member objects" url="api-reference/beta/api/group_getmemberobjects" SEOKeyword="group: getMemberObjects, Microsoft Graph API, group API" SEODescription=""></Item>
@@ -974,28 +890,28 @@
         <Item text="Create post attachment" url="api-reference/beta/api/post_post_attachments" SEOKeyword="Create post attachment, Microsoft Graph API, Outlook conversation API" SEODescription="Use this API to create a new Attachment."></Item>
       </Item>
     </Item>
-    <Item text="Organizational contact" url="api-reference/beta/resources/orgcontact" SEOKeyword="orgcontact API, Microsoft Graph API, orgcontact API" SEODescription="">
+    <Item text="Organizational contacts" url="api-reference/beta/resources/orgcontact" SEOKeyword="orgcontact API, Microsoft Graph API, orgcontact API" SEODescription="">
       <Item text="Contact" url="api-reference/beta/resources/orgcontact" SEOKeyword="orgcontact API, Microsoft Graph API, orgcontact API" SEODescription="">
-        <Item text="List contacts" url="api-reference/beta/api/orgcontact_list" SEOKeyword="List contacts, Microsoft Graph API, Organizational contact API" SEODescription="Retrieve a list of orgcontact objects."></Item>
-        <Item text="Create org contact" url="api-reference/beta/api/orgcontact_post_contacts" SEOKeyword="Create OrgContact, Microsoft Graph API, Organizational contact API" SEODescription="Use this API to create a new OrgContact."></Item>
+        <Item text="List org contacts" url="api-reference/beta/api/orgcontact_list" SEOKeyword="List contacts, Microsoft Graph API, Organizational contact API" SEODescription="Retrieve a list of orgcontact objects."></Item>
         <Item text="Get org contact" url="api-reference/beta/api/orgcontact_get" SEOKeyword="Get orgContact, Microsoft Graph API, Organizational contact API" SEODescription="Retrieve the properties and relationships of orgcontact object."></Item>
         <Item text="Update org contact" url="api-reference/beta/api/orgcontact_update" SEOKeyword="Update orgcontact, Microsoft Graph API, Organizational contact API" SEODescription="Update the properties of orgcontact object."></Item>
         <Item text="Delete org contact" url="api-reference/beta/api/orgcontact_delete" SEOKeyword="Delete orgContact, Microsoft Graph API, Organizational contact API" SEODescription="Delete orgContact."></Item>
       </Item>
-      <Item text="Directory Object" url="api-reference/beta/resources/directoryobject" SEOKeyword="orgcontact API, Microsoft Graph API, orgcontact API" SEODescription="">
+      <Item text="Groups" url="api-reference/beta/resources/group" SEOKeyword="orgcontact API, Microsoft Graph API, orgcontact API" SEODescription="">
         <Item text="List memberOf" url="api-reference/beta/api/orgcontact_list_memberof" SEOKeyword="List memberOf, Microsoft Graph API, Organizational contact API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create memberOf" url="api-reference/beta/api/orgcontact_post_memberof" SEOKeyword="Create memberOf, Microsoft Graph API, Organizational contact API" SEODescription="Use this API to create a new memberOf."></Item>
-        <Item text="List direct reports" url="api-reference/beta/api/orgcontact_list_directreports" SEOKeyword="List directReports, Microsoft Graph API, Organizational contact API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create direct report" url="api-reference/beta/api/orgcontact_post_directreports" SEOKeyword="Create directReport, Microsoft Graph API, Organizational contact API" SEODescription="Use this API to create a new directReport."></Item>
-        <Item text="Get member objects" url="api-reference/beta/api/orgcontact_getmemberobjects" SEOKeyword="orgContact: getMemberObjects, Microsoft Graph API, Organizational contact API" SEODescription=""></Item>
         <Item text="Get member groups" url="api-reference/beta/api/orgcontact_getmembergroups" SEOKeyword="orgContact: getMemberGroups, Microsoft Graph API, Organizational contact API" SEODescription=""></Item>
         <Item text="Check member groups" url="api-reference/beta/api/orgcontact_checkmembergroups" SEOKeyword="orgContact: checkMemberGroups, Microsoft Graph API, Organizational contact API" SEODescription=""></Item>
+      </Item>
+      <Item text="Directory Object" url="api-reference/beta/resources/directoryobject" SEOKeyword="orgcontact API, Microsoft Graph API, orgcontact API" SEODescription="">
+        <Item text="List direct reports" url="api-reference/beta/api/orgcontact_list_directreports" SEOKeyword="List directReports, Microsoft Graph API, Organizational contact API" SEODescription="Retrieve a list of directoryobject objects."></Item>
+      </Item>
+      <Item text="Directory Object" url="api-reference/beta/resources/directoryobject" SEOKeyword="orgcontact API, Microsoft Graph API, orgcontact API" SEODescription="">
+        <Item text="Get member objects" url="api-reference/beta/api/orgcontact_getmemberobjects" SEOKeyword="orgContact: getMemberObjects, Microsoft Graph API, Organizational contact API" SEODescription=""></Item>
       </Item>
     </Item>
     <Item text="Directory" url="api-reference/beta/resources/directoryobject" SEOKeyword="Directory API, Microsoft Graph API, Directory API" SEODescription="Represents an Azure Active Directory object. The DirectoryObject type is the base type for most of the other directory entity types.">
       <Item text="directory object" url="api-reference/beta/resources/directoryobject" SEOKeyword="directoryobject API, Microsoft Graph API, directoryobject API" SEODescription="Represents an Azure Active Directory object. The DirectoryObject type is the base type for most of the other directory entity types.">
         <Item text="List directoryObjects" url="api-reference/beta/api/directoryobject_list" SEOKeyword="List directoryObjects, Microsoft Graph API, Directory API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create DirectoryObject" url="api-reference/beta/api/directoryobject_post_directoryobjects" SEOKeyword="Create DirectoryObject, Microsoft Graph API, Directory API" SEODescription="Use this API to create a new DirectoryObject."></Item>
         <Item text="Get directoryObject" url="api-reference/beta/api/directoryobject_get" SEOKeyword="Get directoryObject, Microsoft Graph API, Directory API" SEODescription="Retrieve the properties and relationships of directoryobject object."></Item>
         <Item text="Update directoryobject" url="api-reference/beta/api/directoryobject_update" SEOKeyword="Update directoryobject, Microsoft Graph API, Directory API" SEODescription="Update the properties of directoryobject object."></Item>
         <Item text="Delete directoryObject" url="api-reference/beta/api/directoryobject_delete" SEOKeyword="Delete directoryObject, Microsoft Graph API, Directory API" SEODescription="Delete directoryObject."></Item>
@@ -1005,31 +921,16 @@
       </Item>
       <Item text="directory role" url="api-reference/beta/resources/directoryrole" SEOKeyword="directoryrole API, Microsoft Graph API, directoryrole API" SEODescription="Represents an Azure AD directory role. Azure AD directory roles are also known as administrator roles. For more information about directory (administrator) roles, see Assigning administrator roles in Azure AD(http://azure.microsoft.com/documentation/articles/active-directory-assign-admin-roles/).">
         <Item text="List directoryRoles" url="api-reference/beta/api/directoryrole_list" SEOKeyword="List directoryRoles, Microsoft Graph API, Directory API" SEODescription="Retrieve a list of directoryrole objects."></Item>
-        <Item text="Create DirectoryRole" url="api-reference/beta/api/directoryrole_post_directoryroles" SEOKeyword="Create DirectoryRole, Microsoft Graph API, Directory API" SEODescription="Use this API to create a new DirectoryRole."></Item>
+        <Item text="Enable DirectoryRole" url="api-reference/beta/api/directoryrole_post_directoryroles" SEOKeyword="Create DirectoryRole, Microsoft Graph API, Directory API" SEODescription="Use this API to create a new DirectoryRole."></Item>
         <Item text="Get directoryRole" url="api-reference/beta/api/directoryrole_get" SEOKeyword="Get directoryRole, Microsoft Graph API, Directory API" SEODescription="Retrieve the properties and relationships of directoryrole object."></Item>
         <Item text="Update directoryrole" url="api-reference/beta/api/directoryrole_update" SEOKeyword="Update directoryrole, Microsoft Graph API, Directory API" SEODescription="Update the properties of directoryrole object."></Item>
         <Item text="Delete directoryRole" url="api-reference/beta/api/directoryrole_delete" SEOKeyword="Delete directoryRole, Microsoft Graph API, Directory API" SEODescription="Delete directoryRole."></Item>
-        <Item text="List memberOf" url="api-reference/beta/api/directoryrole_list_memberof" SEOKeyword="List memberOf, Microsoft Graph API, Directory API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create memberOf" url="api-reference/beta/api/directoryrole_post_memberof" SEOKeyword="Create memberOf, Microsoft Graph API, Directory API" SEODescription="Use this API to create a new memberOf."></Item>
         <Item text="List members" url="api-reference/beta/api/directoryrole_list_members" SEOKeyword="List members, Microsoft Graph API, Directory API" SEODescription="Retrieve a list of directoryobject objects."></Item>
         <Item text="Create member" url="api-reference/beta/api/directoryrole_post_members" SEOKeyword="Create member, Microsoft Graph API, Directory API" SEODescription="Use this API to create a new member."></Item>
-        <Item text="List owned objects" url="api-reference/beta/api/directoryrole_list_ownedobjects" SEOKeyword="List ownedObjects, Microsoft Graph API, Directory API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create owned object" url="api-reference/beta/api/directoryrole_post_ownedobjects" SEOKeyword="Create ownedObject, Microsoft Graph API, Directory API" SEODescription="Use this API to create a new ownedObject."></Item>
-        <Item text="List owners" url="api-reference/beta/api/directoryrole_list_owners" SEOKeyword="List owners, Microsoft Graph API, Directory API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create owner" url="api-reference/beta/api/directoryrole_post_owners" SEOKeyword="Create owner, Microsoft Graph API, Directory API" SEODescription="Use this API to create a new owner."></Item>
-        <Item text="Get member objects" url="api-reference/beta/api/directoryrole_getmemberobjects" SEOKeyword="directoryRole: getMemberObjects, Microsoft Graph API, Directory API" SEODescription=""></Item>
-        <Item text="Get member groups" url="api-reference/beta/api/directoryrole_getmembergroups" SEOKeyword="directoryRole: getMemberGroups, Microsoft Graph API, Directory API" SEODescription=""></Item>
-        <Item text="Check member groups" url="api-reference/beta/api/directoryrole_checkmembergroups" SEOKeyword="directoryRole: checkMemberGroups, Microsoft Graph API, Directory API" SEODescription=""></Item>
       </Item>
       <Item text="directory role template" url="api-reference/beta/resources/directoryroletemplate" SEOKeyword="directoryroletemplate API, Microsoft Graph API, directoryroletemplate API" SEODescription="Represents a directory role template. A directory role template specifies the property values of a directory role (DirectoryRole). There is an associated directory role template object for each of the directory roles that may be activated in a tenant.">
         <Item text="List directoryRoleTemplates" url="api-reference/beta/api/directoryroletemplate_list" SEOKeyword="List directoryRoleTemplates, Microsoft Graph API, Directory API" SEODescription="Retrieve a list of directoryroletemplate objects."></Item>
-        <Item text="Create directoryRoleTemplate" url="api-reference/beta/api/directoryroletemplate_post_directoryroletemplates" SEOKeyword="Create directoryRoleTemplate, Microsoft Graph API, Directory API" SEODescription="Use this API to create a new DirectoryRoleTemplate."></Item>
         <Item text="Get directoryRoleTemplate" url="api-reference/beta/api/directoryroletemplate_get" SEOKeyword="Get directoryRoleTemplate, Microsoft Graph API, Directory API" SEODescription="Retrieve the properties and relationships of directoryroletemplate object."></Item>
-        <Item text="Update directoryroletemplate" url="api-reference/beta/api/directoryroletemplate_update" SEOKeyword="Update directoryroletemplate, Microsoft Graph API, Directory API" SEODescription="Update the properties of directoryroletemplate object."></Item>
-        <Item text="Delete directoryRoleTemplate" url="api-reference/beta/api/directoryroletemplate_delete" SEOKeyword="Delete directoryRoleTemplate, Microsoft Graph API, Directory API" SEODescription="Delete directoryRoleTemplate."></Item>
-        <Item text="Get member objects" url="api-reference/beta/api/directoryroletemplate_getmemberobjects" SEOKeyword="directoryRoleTemplate: getMemberObjects, Microsoft Graph API, Directory API" SEODescription=""></Item>
-        <Item text="Get member groups" url="api-reference/beta/api/directoryroletemplate_getmembergroups" SEOKeyword="directoryRoleTemplate: getMemberGroups, Microsoft Graph API, Directory API" SEODescription=""></Item>
-        <Item text="Check member groups" url="api-reference/beta/api/directoryroletemplate_checkmembergroups" SEOKeyword="directoryRoleTemplate: checkMemberGroups, Microsoft Graph API, Directory API" SEODescription=""></Item>
       </Item>
       <Item text="application" url="api-reference/beta/resources/application" SEOKeyword="application API, Microsoft Graph API, application API" SEODescription="">
         <Item text="List applications" url="api-reference/beta/api/application_list" SEOKeyword="List applications, Microsoft Graph API, application API" SEODescription="Retrieve a list of application objects."></Item>
@@ -1038,27 +939,23 @@
         <Item text="Update application" url="api-reference/beta/api/application_update" SEOKeyword="Update application, Microsoft Graph API, application API" SEODescription="Update the properties of application object."></Item>
         <Item text="Delete application" url="api-reference/beta/api/application_delete" SEOKeyword="Delete application, Microsoft Graph API, application API" SEODescription="Delete application."></Item>
         <Item text="List owners" url="api-reference/beta/api/application_list_owners" SEOKeyword="List owners, Microsoft Graph API, application API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create owner" url="api-reference/beta/api/application_post_owners" SEOKeyword="Create owner, Microsoft Graph API, application API" SEODescription="Use this API to create a new owner."></Item>
+        <Item text="Assign owner" url="api-reference/beta/api/application_post_owners" SEOKeyword="Create owner, Microsoft Graph API, application API" SEODescription="Use this API to create a new owner."></Item>
         <Item text="List extension properties" url="api-reference/beta/api/application_list_extensionproperties" SEOKeyword="List extensionProperties, Microsoft Graph API, application API" SEODescription="Retrieve a list of extensionproperty objects."></Item>
         <Item text="Create extension property" url="api-reference/beta/api/application_post_extensionproperties" SEOKeyword="Create ExtensionProperty, Microsoft Graph API, application API" SEODescription="Use this API to create a new ExtensionProperty."></Item>
         <Item text="Restore application" url="api-reference/beta/api/application_restore" SEOKeyword="application: restore, Microsoft Graph API, application API" SEODescription=""></Item>
-        <Item text="Get member objects" url="api-reference/beta/api/application_getmemberobjects" SEOKeyword="application: getMemberObjects, Microsoft Graph API, application API" SEODescription=""></Item>
-        <Item text="Get member groups" url="api-reference/beta/api/application_getmembergroups" SEOKeyword="application: getMemberGroups, Microsoft Graph API, application API" SEODescription=""></Item>
-        <Item text="Check member groups" url="api-reference/beta/api/application_checkmembergroups" SEOKeyword="application: checkMemberGroups, Microsoft Graph API, application API" SEODescription=""></Item>
       </Item>
       <Item text="app role assignment" url="api-reference/beta/resources/approleassignment" SEOKeyword="approleassignment API, Microsoft Graph API, approleassignment API" SEODescription="Used to record when a user or group is assigned to an application. In this case, the role assignment will result in an application tile showing up on the user app access panel. This entity may also be used to grant another application (modeled as a service principal) access to a resource application in a particular role. You can create, read, update, and delete role assignments. Inherits from DirectoryObject.">
+        <Item text="List appRoleAssignment" url="api-reference/beta/api/user_list_approleassignment" SEOKeyword="List applications, Microsoft Graph API, application API" SEODescription="Retrieve a list of application objects."></Item>
+        <Item text="Create appRoleAssignment" url="api-reference/beta/api/user_post_approleassignment" SEOKeyword="List applications, Microsoft Graph API, application API" SEODescription="Retrieve a list of application objects."></Item>
         <Item text="Get appRoleAssignment" url="api-reference/beta/api/approleassignment_get" SEOKeyword="Get appRoleAssignment, Microsoft Graph API, approleassignment API" SEODescription="Retrieve the properties and relationships of approleassignment object."></Item>
         <Item text="Update approleassignment" url="api-reference/beta/api/approleassignment_update" SEOKeyword="Update approleassignment, Microsoft Graph API, approleassignment API" SEODescription="Update the properties of approleassignment object."></Item>
         <Item text="Delete appRoleAssignment" url="api-reference/beta/api/approleassignment_delete" SEOKeyword="Delete appRoleAssignment, Microsoft Graph API, approleassignment API" SEODescription="Delete appRoleAssignment."></Item>
-        <Item text="Get member objects" url="api-reference/beta/api/approleassignment_getmemberobjects" SEOKeyword="appRoleAssignment: getMemberObjects, Microsoft Graph API, approleassignment API" SEODescription=""></Item>
-        <Item text="Get member groups" url="api-reference/beta/api/approleassignment_getmembergroups" SEOKeyword="appRoleAssignment: getMemberGroups, Microsoft Graph API, approleassignment API" SEODescription=""></Item>
-        <Item text="Check member groups" url="api-reference/beta/api/approleassignment_checkmembergroups" SEOKeyword="appRoleAssignment: checkMemberGroups, Microsoft Graph API, approleassignment API" SEODescription=""></Item>
       </Item>
       <Item text="oauth2 permission grant" url="api-reference/beta/resources/oauth2permissiongrant" SEOKeyword="oauth2permissiongrant API, Microsoft Graph API, oauth2permissiongrant API" SEODescription="Represents the OAuth 2.0 delegated permission scopes that have been granted to an application (represented by a service principal) as part of the user or admin consent process.">
         <Item text="List oauth2 permission grants" url="api-reference/beta/api/oauth2permissiongrant_list" SEOKeyword="List oauth2PermissionGrants, Microsoft Graph API, oauth2permissiongrant API" SEODescription="Retrieve a list of oauth2permissiongrant objects."></Item>
         <Item text="Create oauth2 permission grant" url="api-reference/beta/api/oauth2permissiongrant_post_oauth2permissiongrants" SEOKeyword="Create OAuth2PermissionGrant, Microsoft Graph API, oauth2permissiongrant API" SEODescription="Use this API to create a new OAuth2PermissionGrant."></Item>
-        <Item text="Update oauth2 permission grant" url="api-reference/beta/api/oauth2permissiongrant_update" SEOKeyword="Update oauth2permissiongrant, Microsoft Graph API, oauth2permissiongrant API" SEODescription="Update the properties of oauth2permissiongrant object."></Item>
         <Item text="Get oauth2 permission grant" url="api-reference/beta/api/oauth2permissiongrant_get" SEOKeyword="Get oAuth2PermissionGrant, Microsoft Graph API, oauth2permissiongrant API" SEODescription="Retrieve the properties and relationships of oauth2permissiongrant object."></Item>
+        <Item text="Update oauth2 permission grant" url="api-reference/beta/api/oauth2permissiongrant_update" SEOKeyword="Update oauth2permissiongrant, Microsoft Graph API, oauth2permissiongrant API" SEODescription="Update the properties of oauth2permissiongrant object."></Item>
         <Item text="Delete oauth2 permission grant" url="api-reference/beta/api/oauth2permissiongrant_delete" SEOKeyword="Delete oAuth2PermissionGrant, Microsoft Graph API, oauth2permissiongrant API" SEODescription="Delete oAuth2PermissionGrant."></Item>
       </Item>
       <Item text="device" url="api-reference/beta/resources/device" SEOKeyword="device API, Microsoft Graph API, device API" SEODescription="Represents a device registered in the directory. Inherits from DirectoryObject.">
@@ -1068,30 +965,17 @@
         <Item text="Update device" url="api-reference/beta/api/device_update" SEOKeyword="Update device, Microsoft Graph API, Device API" SEODescription="Update the properties of device object."></Item>
         <Item text="Delete device" url="api-reference/beta/api/device_delete" SEOKeyword="Delete device, Microsoft Graph API, Device API" SEODescription="Delete device."></Item>
         <Item text="List registeredOwners" url="api-reference/beta/api/device_list_registeredowners" SEOKeyword="List registeredOwners, Microsoft Graph API, Device API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create registeredOwner" url="api-reference/beta/api/device_post_registeredowners" SEOKeyword="Create registeredOwner, Microsoft Graph API, Device API" SEODescription="Use this API to create a new registeredOwner."></Item>
         <Item text="List registeredUsers" url="api-reference/beta/api/device_list_registeredusers" SEOKeyword="List registeredUsers, Microsoft Graph API, Device API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create registeredUser" url="api-reference/beta/api/device_post_registeredusers" SEOKeyword="Create registeredUser, Microsoft Graph API, Device API" SEODescription="Use this API to create a new registeredUser."></Item>
-        <Item text="Get member groups" url="api-reference/beta/api/device_getmembergroups" SEOKeyword="device: getMemberGroups, Microsoft Graph API, Device API" SEODescription=""></Item>
-        <Item text="Get member objects" url="api-reference/beta/api/device_getmemberobjects" SEOKeyword="device: getMemberObjects, Microsoft Graph API, Device API" SEODescription=""></Item>
-        <Item text="Check member groups" url="api-reference/beta/api/device_checkmembergroups" SEOKeyword="device: checkMemberGroups, Microsoft Graph API, Device API" SEODescription=""></Item>
       </Item>
       <Item text="extension property" url="api-reference/beta/resources/extensionproperty" SEOKeyword="extensionproperty API, Microsoft Graph API, extensionproperty API" SEODescription="Allows an application to define and use a set of additional properties that can be added to directory objects (users, groups, tenant details, devices, applications, and service principals) without the application requiring an external data store. For more information about extension properties, see Azure AD Graph API Directory Schema Extensions(https://msdn.microsoft.com/en-us/library/azure/dn720459.aspx). Inherits from DirectoryObject.">
         <Item text="Get extensionProperty" url="api-reference/beta/api/extensionproperty_get" SEOKeyword="Get extensionProperty, Microsoft Graph API, extensionproperty API" SEODescription="Retrieve the properties and relationships of extensionproperty object."></Item>
         <Item text="Update extensionproperty" url="api-reference/beta/api/extensionproperty_update" SEOKeyword="Update extensionproperty, Microsoft Graph API, extensionproperty API" SEODescription="Update the properties of extensionproperty object."></Item>
         <Item text="Delete extensionProperty" url="api-reference/beta/api/extensionproperty_delete" SEOKeyword="Delete extensionProperty, Microsoft Graph API, extensionproperty API" SEODescription="Delete extensionProperty."></Item>
-        <Item text="Get member objects" url="api-reference/beta/api/extensionproperty_getmemberobjects" SEOKeyword="extensionProperty: getMemberObjects, Microsoft Graph API, extensionproperty API" SEODescription=""></Item>
-        <Item text="Get member groups" url="api-reference/beta/api/extensionproperty_getmembergroups" SEOKeyword="extensionProperty: getMemberGroups, Microsoft Graph API, extensionproperty API" SEODescription=""></Item>
-        <Item text="Check member groups" url="api-reference/beta/api/extensionproperty_checkmembergroups" SEOKeyword="extensionProperty: checkMemberGroups, Microsoft Graph API, extensionproperty API" SEODescription=""></Item>
       </Item>
-      <Item text="tenant detail" url="api-reference/beta/resources/tenantdetail" SEOKeyword="tenantdetail API, Microsoft Graph API, tenantdetail API" SEODescription="Represents an Azure Active Directory tenant. Only the read and update operations are supported on tenants; create and delete are not supported. Inherits from DirectoryOjbect.">
-        <Item text="List tenant details" url="api-reference/beta/api/tenantdetail_list" SEOKeyword="List tenantDetails, Microsoft Graph API, Directory API" SEODescription="Retrieve a list of tenantdetail objects."></Item>
-        <Item text="Create tenant detail" url="api-reference/beta/api/tenantdetail_post_tenantdetails" SEOKeyword="Create TenantDetail, Microsoft Graph API, Directory API" SEODescription="Use this API to create a new TenantDetail."></Item>
-        <Item text="Get tenant detail" url="api-reference/beta/api/tenantdetail_get" SEOKeyword="Get tenantDetail, Microsoft Graph API, Directory API" SEODescription="Retrieve the properties and relationships of tenantdetail object."></Item>
-        <Item text="Update tenant detail" url="api-reference/beta/api/tenantdetail_update" SEOKeyword="Update tenantdetail, Microsoft Graph API, Directory API" SEODescription="Update the properties of tenantdetail object."></Item>
-        <Item text="Delete tenant detail" url="api-reference/beta/api/tenantdetail_delete" SEOKeyword="Delete tenantDetail, Microsoft Graph API, Directory API" SEODescription="Delete tenantDetail."></Item>
-        <Item text="Get member objects" url="api-reference/beta/api/tenantdetail_getmemberobjects" SEOKeyword="tenantDetail: getMemberObjects, Microsoft Graph API, Directory API" SEODescription=""></Item>
-        <Item text="Get member groups" url="api-reference/beta/api/tenantdetail_getmembergroups" SEOKeyword="tenantDetail: getMemberGroups, Microsoft Graph API, Directory API" SEODescription=""></Item>
-        <Item text="Check member groups" url="api-reference/beta/api/tenantdetail_checkmembergroups" SEOKeyword="tenantDetail: checkMemberGroups, Microsoft Graph API, Directory API" SEODescription=""></Item>
+      <Item text="organization" url="api-reference/beta/resources/tenantdetail" SEOKeyword="tenantdetail API, Microsoft Graph API, tenantdetail API" SEODescription="Represents an Azure Active Directory tenant. Only the read and update operations are supported on tenants; create and delete are not supported. Inherits from DirectoryOjbect.">
+        <Item text="List organization details" url="api-reference/beta/api/tenantdetail_list" SEOKeyword="List tenantDetails, Microsoft Graph API, Directory API" SEODescription="Retrieve a list of tenantdetail objects."></Item>
+        <Item text="Get organization detail" url="api-reference/beta/api/tenantdetail_get" SEOKeyword="Get tenantDetail, Microsoft Graph API, Directory API" SEODescription="Retrieve the properties and relationships of tenantdetail object."></Item>
+        <Item text="Update organization detail" url="api-reference/beta/api/tenantdetail_update" SEOKeyword="Update tenantdetail, Microsoft Graph API, Directory API" SEODescription="Update the properties of tenantdetail object."></Item>
       </Item>
       <Item text="subscribed sku" url="api-reference/beta/resources/subscribedsku" SEOKeyword="subscribedsku API, Microsoft Graph API, subscribedsku API" SEODescription="Only the read operation is supported on subscribed SKUs; create, update, and delete are not supported. Query filter expressions are not supported. Inherits from DirectoryObject.">
         <Item text="List subscribedSkus" url="api-reference/beta/api/subscribedsku_list" SEOKeyword="List subscribedSkus, Microsoft Graph API, subscribedsku API" SEODescription="Retrieve a list of subscribedsku objects."></Item>
@@ -1100,13 +984,6 @@
         <Item text="Update subscribedsku" url="api-reference/beta/api/subscribedsku_update" SEOKeyword="Update subscribedsku, Microsoft Graph API, subscribedsku API" SEODescription="Update the properties of subscribedsku object."></Item>
         <Item text="Delete subscribedSku" url="api-reference/beta/api/subscribedsku_delete" SEOKeyword="Delete subscribedSku, Microsoft Graph API, subscribedsku API" SEODescription="Delete subscribedSku."></Item>
       </Item>
-      <Item text="Alternative security Id" url="api-reference/beta/resources/alternativeSecurityId" SEOKeyword="alternativeSecurityId, Microsoft Graph API, Directory API" SEODescription=""></Item>
-      <Item text="Assigned License" url="api-reference/beta/resources/assignedLicense" SEOKeyword="assignedLicense, Microsoft Graph API, Directory API" SEODescription=""></Item>
-      <Item text="Assigned Plan" url="api-reference/beta/resources/assignedPlan" SEOKeyword="assignedPlan, Microsoft Graph API, Directory API" SEODescription=""></Item>
-    </Item>
-    <Item text="entity" url="api-reference/beta/resources/entity" SEOKeyword="entity API, Microsoft Graph API, entity API" SEODescription="">
-      <Item text="Get entity" url="api-reference/beta/api/entity_get" SEOKeyword="Get entity, Microsoft Graph API, entity API" SEODescription="Retrieve the properties and relationships of entity object."></Item>
-      <Item text="Delete entity" url="api-reference/beta/api/entity_delete" SEOKeyword="Delete entity, Microsoft Graph API, entity API" SEODescription="Delete entity."></Item>
     </Item>
   </Item>
 </Menu>
