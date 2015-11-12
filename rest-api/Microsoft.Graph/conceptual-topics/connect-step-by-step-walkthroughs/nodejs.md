@@ -158,7 +158,7 @@ router.get('/<application reply url>', function (req, res, next) {
 
 The Microsoft Graph is a very powerful, unifiying API that can be used to interact with all kinds of Microsoft data. Check out the [API reference](http://graph.microsoft.io/docs/) to explore what else you can accomplish with the Microsoft Graph API.
 
-## Additional resources
+<!--## Additional resources
 
-- [Office 365 Node.js Connect sample using Microsoft Graph](https://github.com/OfficeDev/O365-Nodejs-Unified-API-Connect)
+- [Office 365 Node.js Connect sample using Microsoft Graph](https://github.com/OfficeDev/O365-Nodejs-Unified-API-Connect)-->
 
