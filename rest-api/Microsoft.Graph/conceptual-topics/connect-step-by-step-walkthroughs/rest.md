@@ -29,7 +29,7 @@ There are currently two options:
    Now in preview, a single authentication service for both work or school and personal accounts. This model provides a single authentication service for both work and school (Azure AD) as well as personal (Microsoft) identities. Now, you need only implement one authentication flow in your app to enable users to use either work or school accounts, like Office 365 or OneDrive for Business, or personal accounts, like Outlook.com or OneDrive.
 Use the  [Application Registration Portal](https://apps.dev.microsoft.com/) to register your app to implement the v2.0 app model preview.
 
-Please note that because the v2.0 app model is currently in preview, it's not quite ready for use in production-level apps. For more information on features and functionality of the v2.0 app model that are not yet supported in the public preview period, see  [Limitations and restrictions of the V2.0 app model preview](https://azure.microsoft.com/en-us/documentation/articles/active-directory-v2-limitations/)
+Please note that because the v2.0 app model is currently in preview, it's not quite ready for use in production-level apps. For more information on features and functionality of the v2.0 app model that are not yet supported in the public preview period, see  [Limitations and restrictions of the V2.0 app model preview](https://azure.microsoft.com/en-us/documentation/articles/active-directory-v2-limitations/).
 
 Once you register the app, you will have a client ID and secret. These are used in the Authorization Grant Flow.
 
