@@ -81,7 +81,7 @@ The following example shows the current model for interacting with Office 365 AP
 
 |   **Operation**                  |  **API**                          |  **Service endpoint** |
 |:-----------------------------|:-----------------------------------------|:-----------------|
-| Discover service endpoints for Office 365 API               |     `Discovery Service`           | _https://_**api.office.com**_/discovery/v1.0/me/services_ <!-- notes -->|
+| Discover service endpoints for Office 365 API               |     `Discovery Service`           | _https://_**api.office.com**_/discovery/v1.0/me/services_ |
 | Get users           |     `Azure AD Graph API` | _https://_**graph.windows.net**_/contoso.com/users?api-version=2013-04-05_|
 | Get message collection from the Inbox       |     `Office 365 API`           | _https://_**outlook.office365.com**_/api/v1.0/me/messages_  |
 | Get Joe's files   |     `Office 365 API`  | _https://_**contoso-my.sharepoint.com**_/personal/joe_contoso_com/_api/v1.0/files_ |
@@ -93,7 +93,7 @@ Using the Microsoft Graph API, you don't have to first discover service endpoint
 
 |   **Operation**                  |  **API**                          |  **Service endpoint** |
 |:-----------------------------|:-----------------------------------------|:-----------------|
-| Discover service endpoints for Office 365 API                |     `Microsoft Graph API`           | Not needed <!-- notes -->|
+| Discover service endpoints for Office 365 API                |     `Microsoft Graph API`           | Not needed |
 | Get users           |     `Microsoft Graph API` | _https://_**graph.microsoft.com**_/v1.0/contoso.onmicrosoft.com/users_ |
 | Get message collection from the Inbox       |     `Microsoft Graph API`           | _https://_**graph.microsoft.com**_/v1.0/me/messages_  |
 | Get Joe's files   |     `Microsoft Graph API `  | _https://_**graph.microsoft.com**_/v1.0/me/drive/root/children_ |
