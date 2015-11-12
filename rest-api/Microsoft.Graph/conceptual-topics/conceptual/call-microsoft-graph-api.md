@@ -197,7 +197,8 @@ The successful response returns a 200 OK status code and a payload containing th
 From the root folder, the _Shared with Everyone_ folder is shared by default. 
 Users can add and share other files or folders. In this example, the user has not shared any other folders.
 
-<a name="msg_filter_query_option"> </a>
+<!--_ <a name="msg_filter_query_option"> </a> -->
+
 ###Query a subset of users with the filtering query option
 To find the employees of a specific job title within an organization, you can navigate from the organization's tenant to the users collection and then specify a $filter query option. An example is shown as follows:
 
