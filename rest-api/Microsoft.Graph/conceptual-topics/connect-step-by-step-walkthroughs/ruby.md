@@ -8,13 +8,13 @@ In this article we look at the minimum tasks required to get an access token fro
 
 To call the Microsoft Graph API, your Ruby app must complete the following tasks.
 
-1. [Register the application in Azure Active Directory](#register)
-2. [Redirect the browser to the sign-in page](#redirect)
-3. [Receive an authorization code in your reply URL page](#authcode)
-4. [Request an access token from the token endpoint](#accesstoken)
-5. [Use the access token in a request to the Microsoft Graph API](#request) 
+1. Register the application in Azure Active Directory
+2. Redirect the browser to the sign-in page
+3. Receive an authorization code in your reply URL page
+4. Request an access token from the token endpoint
+5. Use the access token in a request to the Microsoft Graph API 
 
-<a name="register"/>
+<!--<a name="register"/>-->
 ## Register the application in Azure Active Directory
 
 Before you can start working with Office 365, you need to register your application on Azure AD and set permissions to use Microsoft Graph services.
@@ -32,14 +32,14 @@ Take note of the following values in the **Configure** page of your Azure applic
 
 You need these values as parameters in the OAuth flow in your app.
 
-<a name="redirect"/>
+<!--<a name="redirect"/>-->
 ## Redirect the browser to the sign-in page
 
 Your app needs to redirect the browser to the sign-in page to get an authorization code and continue the OAuth flow.
 
 In the Connect sample, redirection is handled by the OmniAuth library. Our app just delegates execution to the [`/auth/azureactivedirectory`](https://github.com/OfficeDev/O365-Ruby-Unified-API-Connect/blob/master/app/controllers/pages_controller.rb#L30) route managed by OmniAuth.
 
-<a name="authcode"/>
+<!--<a name="authcode"/>-->
 ## Receive an authorization code in your reply URL page
 
 After the user signs-in, the flow returns the browser to the reply URL in your app. Azure appends an authorization code to the query string. The Connect sample uses the [`/auth/azureactivedirectory/callback`](https://github.com/OfficeDev/O365-Ruby-Unified-API-Connect/blob/master/app/controllers/pages_controller.rb#L38) route for this purpose.
@@ -50,7 +50,7 @@ The authorization code is provided in the `code` query string variable. The Conn
 code = params[:code]
 ```
 
-<a name="accesstoken"/>
+<!--<a name="accesstoken"/>-->
 ## Request an access token from the token endpoint
 
 Once you have the authorization code, you can use it along the client ID, key, and reply URL values that you got from Azure AD to request an access token. 
@@ -73,7 +73,7 @@ end
 > **Note:** <br />
 > The client ID and client secret are provided in the `CLIENT_CRED` parameter in the previous code snippet.
 
-<a name="request"/>
+<!--<a name="request"/>-->
 ## Use the access token in a request to the Microsoft Graph API
 
 With an access token, your app can make authenticated requests to the Microsoft Graph API. Your app must provide the access token in the **Authorization** header of each request.
@@ -138,10 +138,10 @@ end
 > **Note:** <br />
 > The request must also send a **Content-Type** header with a value accepted by the Microsoft Graph API, for example, `application/json;odata.metadata=minimal;odata.streaming=true`.
 
-The Microsoft Graph API is a very powerful, unifiying API that can be used to interact with all kinds of Microsoft data. Check out the [API reference](https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference) to explore what else you can accomplish with the Microsoft Graph API.
+The Microsoft Graph API is a very powerful, unifiying API that can be used to interact with all kinds of Microsoft data. Check out the [API reference](http://graph.microsoft.io/docs/) to explore what else you can accomplish with the Microsoft Graph API.
 
-## Additional resources
+<!--## Additional resources
 
 -  [Office 365 Ruby Connect sample using Microsoft Graph](https://github.com/OfficeDev/O365-Ruby-Unified-API-Connect)
 -  [Office Dev Center](http://dev.office.com) 
--  [Microsoft Graph API reference](https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference)
+-  [Microsoft Graph API reference](https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference)-->
