@@ -1,12 +1,10 @@
-
-
 # Authenticate Microsoft Graph endpoints using the v2.0 app model preview
 
 
 
-|**Preview documentation** | 
+|**Preview documentation**| 
 |:-----|   
-| There are features and functionality of the v2.0 app model that are not yet supported in the public preview period. You should be aware of them if you are building applications during the public preview. For more information, see [Limitations and restrictions of the V2.0 app model preview](https://azure.microsoft.com/en-us/documentation/articles/active-directory-v2-limitations/). |
+| There are features and functionality of the v2.0 app model that are not yet supported in the public preview period. You should be aware of them if you are building applications during the public preview. For more information, see [Limitations and restrictions of the V2.0 app model preview](https://azure.microsoft.com/en-us/documentation/articles/active-directory-v2-limitations/).|
 
 
 ##Signing in Microsoft account and Azure AD users with a single authentication model
@@ -24,7 +22,6 @@ Currently, your apps can access the following APIs using the v2.0 app authentica
 with more Microsoft services being added in the near future.
 
 
-<!---<a name="bk_samples"> </a>-->
 
 ##Code samples
 
@@ -38,8 +35,6 @@ Explore the following code sample to learn how to create apps that use the v2.0 
 - [JavaScript](https://github.com/OfficeDev)
 -->
 
-
-<!--<a name="bk_scopes"> </a>-->
 
 ##Microsoft Graph API authentication scopes
 
