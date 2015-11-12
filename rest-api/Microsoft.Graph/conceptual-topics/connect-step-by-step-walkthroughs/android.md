@@ -10,10 +10,10 @@ The following image shows the sample app send mail activity that appears after a
 
 To call the Microsoft Graph API, the [Office 365 Android Connect sample](https://github.com/OfficeDev/O365-Android-Unified-API-Connect-Preview) completes the following tasks.
 
-1. [Authenticate a user and get an access token by calling methods on the Azure Active Directory library.](#authenticate)
-2. [Creates a mail message request as a REST operation on the Microsoft Graph API endpoint.](#sendmail)
+1. Authenticate a user and get an access token by calling methods on the Azure Active Directory library.
+2. Creates a mail message request as a REST operation on the Microsoft Graph API endpoint.
 
-<a name="register"/>
+<!--<a name="register"/>-->
 ## Register the application in Azure Active Directory
 
 Before you can start working with Office 365, you need to register your application on Azure Active Directory and set permissions to use Microsoft Graph services.
@@ -47,7 +47,7 @@ dependencies {
 }
 
 ```
-<a name="authenticate"/>
+<!--<a name="authenticate"/>-->
 ## Authentication in the Connect sample
 The connect sample uses the Azure app registration values and a user's ID to authenticate. There are two authentication behaviors supported by the connect sample.
 
@@ -201,7 +201,7 @@ If authentication succeeds, the `onSuccess()` method is invoked. `onSuccess` sto
     }
 
 ```
-<a name="sendmail"/>
+<!--<a name="sendmail"/>-->
 ## Send an email message using Office 365
 
 After the user signs-in to Azure, the Connect sample shows the user an activity for sending a mail message. The Connect sample uses the [`UnifiedAPIController.java`](https://github.com/OfficeDev/O365-Android-Unified-API-Connect-Preview/blob/master/app/src/main/java/com/microsoft/office365/connectunified/UnifiedAPIController.java) class to send the message when the users clicks the Send mail button.
@@ -268,7 +268,7 @@ The [UnifiedAPIService.java](https://github.com/OfficeDev/O365-Android-Unified-A
 ```
 
 ## Next steps
-The Microsoft Graph API is a very powerful, unifiying API that can be used to interact with all kinds of Microsoft data. Check out the [API reference](https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference) to explore what else you can accomplish with the Microsoft Graph API.
+The Microsoft Graph API is a very powerful, unifiying API that can be used to interact with all kinds of Microsoft data. Check out the [API reference](http://graph.microsoft.io/docs/) to explore what else you can accomplish with the Microsoft Graph API.
 
 We've published many Android samples for Office 365. Each of these samples build on the concepts we introduce in the Connect sample. If you want to do more with your Android apps, see [more of our Android samples for Office 365](https://github.com/OfficeDev?utf8=%E2%9C%93&query=-Android) in the Office GitHub organization.
  
@@ -276,7 +276,10 @@ We've published many Android samples for Office 365. Each of these samples build
 ## Additional resources
 
 -  [Office 365 Android Connect sample using Microsoft Graph](https://github.com/OfficeDev/O365-Android-Connect)
--  [Office Dev Center](http://dev.office.com)
--  [Microsoft Graph API reference](https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference)
 -  [Microsoft Office 365 Developer account registration](https://portal.office.com/Signup/Signup.aspx?OfferId=6881A1CB-F4EB-4db3-9F18-388898DAF510&DL=DEVELOPERPACK&ali=1#0)
--  [Microsoft Azure subscription trial registration](https://account.windowsazure.com/SignUp)
+-  [Microsoft Azure subscription trial registration](https://account.windowsazure.com/SignUp) 
+
+
+<!---  [Office Dev Center](http://dev.office.com)
+-  [Microsoft Graph API reference](https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference)-->
+
