@@ -1,6 +1,6 @@
 # Platform specific walkthroughs
 
-Try out a sample REST call in our [API Explorer](https://graphexplorer2.azurewebsites.net/)
+Try out a sample REST call in our [API Explorer](https://graphexplorer2.azurewebsites.net/).
 
 Once you're done exploring the API, come back here and select your favorite platform on the left. We'll guide you through the steps to write a simple application to send an email using the API.
 
@@ -22,11 +22,11 @@ There are currently two options:
 
 1. Register using the generally available model for an app that will interact with Office 365 commercial users, work or school accounts:
  
-In order for your app to access a user's work or school account through the Microsoft Graph API, you first need to register it with Azure AD. Once you've registered your app, you can manage it through the  [Azure Management Portal](https://manage.windowsazure.com)
+   In order for your app to access a user's work or school account through the Microsoft Graph API, you first need to    register it with Azure AD. Once you've registered your app, you can manage it through the  [Azure Management Portal](https://manage.windowsazure.com)
 
 2. Experiment with the latest functionality and register app that works for both consumer and commercial services:
  
-Now in preview, a single authentication service for both work or school and personal accounts. This model provides a single authentication service for both work and school (Azure AD) as well as personal (Microsoft) identities. Now, you need only implement one authentication flow in your app to enable users to use either work or school accounts, like Office 365 or OneDrive for Business, or personal accounts, like Outlook.com or OneDrive.
+   Now in preview, a single authentication service for both work or school and personal accounts. This model provides a single authentication service for both work and school (Azure AD) as well as personal (Microsoft) identities. Now, you need only implement one authentication flow in your app to enable users to use either work or school accounts, like Office 365 or OneDrive for Business, or personal accounts, like Outlook.com or OneDrive.
 Use the  [Application Registration Portal](https://apps.dev.microsoft.com/) to register your app to implement the v2.0 app model preview.
 
 Please note that because the v2.0 app model is currently in preview, it's not quite ready for use in production-level apps. For more information on features and functionality of the v2.0 app model that are not yet supported in the public preview period, see  [Limitations and restrictions of the V2.0 app model preview](https://azure.microsoft.com/en-us/documentation/articles/active-directory-v2-limitations/)
