@@ -1,7 +1,6 @@
 
 
 # Microsoft Graph API overview 
- 
 
 >  Your feedback is important to us. Connect with us on [Stack Overflow](http://stackoverflow.com/questions/tagged/office365). Tag your questions with [MicrosoftGraph] and [office365].
 
