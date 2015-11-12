@@ -52,13 +52,11 @@ to the HTTP status code returned. Here is an example of a full JSON error body.
 }
 ```
 
-
 <!--<a name="msg_error_resource_type"> </a> -->
 
 # Error resource type
 
-The error resource is returned whenever an error occurs in the processing
-of a request.
+The error resource is returned whenever an error occurs in the processing of a request.
 
 Error responses follow the definition in the
 [OData v4](http://docs.oasis-open.org/odata/odata-json-format/v4.0/os/odata-json-format-v4.0-os.html#_Toc372793091)
