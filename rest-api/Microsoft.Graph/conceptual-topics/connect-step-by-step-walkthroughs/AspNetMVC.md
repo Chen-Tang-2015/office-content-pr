@@ -10,13 +10,13 @@ The following is a screenshot of the send mail page.
 
 To call the Microsoft Graph API, you have to complete the following tasks.
 
-1. [Register the application in Azure Active Directory](#register)
-2. [Authenticate a user and get an access token by calling methods on the Azure AD Authentication Library for .NET. (ADAL)](#auth)
-3. [Use ADAL to get an access token](#accessToken)
-4. [Use the access token in a request to the Microsoft Graph API](#request) 
-5. [Disconnect session](#logout) 
+1. Register the application in Azure Active Directory 
+2. Authenticate a user and get an access token by calling methods on the Azure AD Authentication Library for .NET. (ADAL)
+3. Use ADAL to get an access token
+4. Use the access token in a request to the Microsoft Graph API 
+5. Disconnect session
 
-<a name="register"></a>
+<!--<a name="register"></a>-->
 ## Register the application in Azure Active Directory
 
 Before you can start working with Office 365, you need to register your application in Azure Active Directory and set permissions to use Microsoft Graph services.
@@ -34,7 +34,7 @@ Take note of the following values in the **Configure** page of your Azure applic
   
   > Note:  The reply URL value is auto-populated with the sign-on URL value that you specify when you register the application.
 
-<a name="#auth"></a>
+<!--<a name="#auth"></a>-->
 ## Authentication in the Connect sample
 
 The Azure AD Authentication Library (ADAL) for .NET enables client application developers to authenticate users, and then obtain access tokens to make API calls.  You can include this library in your ASP.NET MVC project via **Manage NuGet packages** in Visual Studio.  
@@ -48,7 +48,7 @@ The authentication flow can be broken down to two basic steps:
 1. Request an authorization code
 2. Use authorization code to request an access token. 
 
->  Note: You will also get a refresh token along with the access token. You can use the refresh token to acquire a new access token when the current access token expires.
+>  **Note**: You will also get a refresh token along with the access token. You can use the refresh token to acquire a new access token when the current access token expires.
 
 The connect sample uses the Azure app registration values and a user's ID to authenticate. The ADAL authentication flow needs the client ID, key and reply URL (also known as redirect URL) you get in the Azure registration process. 
 
@@ -115,9 +115,9 @@ The Authorize action mentioned in the redirect URL action looks like this.
         }
     
 ```
->  Note:  For more information about authorization flow, see [Authorization Code Grant Flow] (https://msdn.microsoft.com/en-US/library/azure/dn645542.aspx)
+>  **Note**:  For more information about authorization flow, see [Authorization Code Grant Flow] (https://msdn.microsoft.com/en-US/library/azure/dn645542.aspx)
 
-<a name="request"></a>
+<!--<a name="request"></a>-->
 ## Use the access token in a request to the Microsoft Graph API
 
 After the user signs-in, the Connect sample shows the user an activity for sending a mail message.  With an access token, your app can make authenticated requests to the Microsoft Graph API. 
@@ -303,7 +303,7 @@ Another task is to construct a valid JSON message string and send it to the ``me
 }
 
 ```
-<a name="logout"></a>
+<!--<a name="logout"></a>-->
 ## Disconnect the session
 
 When the user clicks **Disconnect** in the send mail page, the user will be logout of the session. The code does this by 
@@ -326,8 +326,4 @@ The **Logout** method (see HomeController.cs file) shows how this is done.
 The Microsoft Graph is a very powerful, unifying API that can be used to interact with all kinds of Microsoft data. Check out the [Graph API reference](https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference) to explore what else you can accomplish with the Microsoft Graph API. 
 We invite you to explore our other ASP.NET samples on [GitHub](https://github.com/OfficeDev?utf8=%E2%9C%93&query=-asp).
 
-## Additional resources
 
--  [Office 365 ASP.NET MVC Connect sample using Microsoft Graph API](https://github.com/OfficeDev/O365-AspNetMVC-Unified-API-Connect)
--  [Office Dev Center](http://dev.office.com) 
--  [Microsoft Graph API reference](https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference)
