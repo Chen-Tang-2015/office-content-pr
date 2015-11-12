@@ -8,14 +8,14 @@ In this article we look at the minimum tasks required to connect your applicatio
 
 To call the Microsoft Graph API, your web app must complete the following tasks.
 
-1. [Register the application in Azure Active Directory](#register)
-2. [Install the Azure Active Directory Client Library for Node](#adal)
-3. [Redirect the browser to the sign-in page](#redirect)
-4. [Receive an authorization code in your reply URL page](#authcode)
-5. [Use `adal-node` to request an access token](#accesstoken)
-6. [Make a request to the Microsoft Graph API](#request)
+1. Register the application in Azure Active Directory 
+2. Install the Azure Active Directory Client Library for Node
+3. Redirect the browser to the sign-in page
+4. Receive an authorization code in your reply URL page
+5. Use `adal-node` to request an access token
+6. Make a request to the Microsoft Graph API
 
-<a name="register"/>
+<!--<a name="register"/>-->
 ## Register your application in Azure Active Directory
 
 Before you can start working with Office 365, you need to register your application on Azure Active Directory and set permissions to use Microsoft Graph services.
@@ -33,7 +33,7 @@ Take note of the following values in the **Configure** page of your Azure applic
 
 You need these values as parameters in the OAuth flow in your app.
 
-<a name="adal">
+<!--<a name="adal">-->
 ## Install the Azure Active Directory Client Library for Node
 
 The ADAL for Node.js library makes it easy for Node.js applications to authenticate to AAD in order to access AAD protected web resources.
@@ -44,7 +44,7 @@ To add adal-node to your existing `package.json` enter the following into your p
 For more information about the adal-node client library, see its package info on [npm](https://www.npmjs.com/package/adal-node).
 For issues, source code, and the latest in upcoming features and fixes, see adal-node's project on [Github](https://github.com/AzureAD/azure-activedirectory-library-for-nodejs).
 
-<a name="redirect"/>
+<!--<a name="redirect"/>-->
 ## Redirect the browser to the sign-in page
 
 Your app needs to redirect the browser to the sign-in page to get an authorization code and continue the OAuth 2.0 flow.
@@ -72,7 +72,7 @@ function login() {
 }
 ```
 
-<a name="authcode"/>
+<!--<a name="authcode"/>-->
 ## Receive an authorization code in your reply URL page
 
 After the user signs in, the flow returns the browser to the reply URL in your app. The authorization code is provided in the `code` query string variable.
@@ -86,7 +86,7 @@ router.get('/<application reply url>', function (req, res, next) {
 
 See the [relevant code](https://github.com/OfficeDev/O365-Nodejs-Unified-API-Connect/blob/master/routes/index.js#L34) in the Connect sample
 
-<a name="accesstoken"/>
+<!--<a name="accesstoken"/>-->
 ## Use `adal-node` to request an access token
 
 Now that we've authenticated with Azure Active Directory, our next step is to acquire an access token via adal-node. After we've done that, we'll be ready to make REST requests to the Microsoft Graph API.
@@ -128,7 +128,7 @@ function getTokenFromCode(res, code, callback) {
 };
 ```
 
-<a name="request"/>
+<!--<a name="request"/>-->
 ## Make a request to the Microsoft Graph API
 
 To identify our requests to the Graph API, our requests must be signed with an `Authorization` header containing the access token for any web service resource we request. A properly formed authorization header will include the access token from adal-node and will take the following form.
@@ -156,10 +156,9 @@ router.get('/<application reply url>', function (req, res, next) {
 });
 ```
 
-The Microsoft Graph is a very powerful, unifiying API that can be used to interact with all kinds of Microsoft data. Check out the [API reference](https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference) to explore what else you can accomplish with the Microsoft Graph API.
+The Microsoft Graph is a very powerful, unifiying API that can be used to interact with all kinds of Microsoft data. Check out the [API reference](http://graph.microsoft.io/docs/) to explore what else you can accomplish with the Microsoft Graph API.
 
 ## Additional resources
 
 - [Office 365 Node.js Connect sample using Microsoft Graph](https://github.com/OfficeDev/O365-Nodejs-Unified-API-Connect)
-- [Office Dev Center](http://dev.office.com)
-- [Microsoft Graph API reference](https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference)
+
