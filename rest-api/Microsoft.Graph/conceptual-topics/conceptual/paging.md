@@ -5,7 +5,8 @@ When Office 365 returns too much information to show on one page, use paging to 
     
 
 ## Control and go to items on a page
-<a name="sectionSection0"> </a>
+
+<!--<a name="sectionSection0"> </a>-->
 
 This example shows you how to use the Office 365 APIs  **Take()** and **Skip()** functions to limit the number of items returned. When a user selects one of the paging buttons, the **GetMessage()** method will skip over the specified number of messages to present the next page.
 
@@ -15,7 +16,7 @@ You should provide a way to modify the page index and request the next page of d
 
 
 ## Before you begin
-<a name="sectionSection1"> </a>
+<!--<a name="sectionSection1"> </a>-->
 
 Before you begin the steps in this article, make sure that you have the following:
 
@@ -32,7 +33,7 @@ Then, you are ready to  [set up your Office 365 development environment](..\howt
 
 
 ## Set up a Connected Service for the sample
-<a name="sectionSection2"> </a>
+<!--<a name="sectionSection2"> </a>-->
 
 Download the sample. In Visual Studio, connect the sample to the Mail service, and sign in to Azure AD to grant permissions to read mail items from Exchange Online in your Office 365 Tenancy.
 
@@ -52,7 +53,7 @@ Download the sample. In Visual Studio, connect the sample to the Mail service, a
     
 
 ## Add paging to the sample
-<a name="sectionSection3"> </a>
+<!--<a name="sectionSection3"> </a>-->
 
 After you get everything connected, modify the sample to add paging. 
 
