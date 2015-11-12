@@ -273,13 +273,11 @@ The Microsoft Graph API is a very powerful, unifiying API that can be used to in
 We've published many Android samples for Office 365. Each of these samples build on the concepts we introduce in the Connect sample. If you want to do more with your Android apps, see [more of our Android samples for Office 365](https://github.com/OfficeDev?utf8=%E2%9C%93&query=-Android) in the Office GitHub organization.
  
 
-## Additional resources
+<!--## Additional resources
 
 -  [Office 365 Android Connect sample using Microsoft Graph](https://github.com/OfficeDev/O365-Android-Connect)
 -  [Microsoft Office 365 Developer account registration](https://portal.office.com/Signup/Signup.aspx?OfferId=6881A1CB-F4EB-4db3-9F18-388898DAF510&DL=DEVELOPERPACK&ali=1#0)
 -  [Microsoft Azure subscription trial registration](https://account.windowsazure.com/SignUp) 
-
-
-<!---  [Office Dev Center](http://dev.office.com)
+-  [Office Dev Center](http://dev.office.com)
 -  [Microsoft Graph API reference](https://msdn.microsoft.com/office/office365/howto/office-365-unified-api-reference)-->
 
