@@ -7,12 +7,12 @@
     <Item text="Release Notes" url="overview/release_notes" SEOKeyword="Release Notes, Microsoft Graph API, Overview" SEODescription="New features for developers that are available in the November 2015 release of the Microsoft Graph API, as well as any known issues."/>
     <Item text="FAQs" url="overview/faqs" SEOKeyword="FAQs, Microsoft Graph API, Overview" SEODescription="Answers to some frequently-asked questions about the Microsoft Graph." />
   </Item>
-  <Item text="Authorization" url="overview/app_authorization">
-    <Item text="Permission Scopes" url="overview/permission_scopes" SEOKeyword="Permission Scopes, Microsoft Graph API, Overview" SEODescription="The Microsoft Graph API exposes OAuth 2.0 permission scopes that are used to control access that an app has to data. As a developer, you configure your app with the permission scopes appropriate to the access that it requires, typically by using the Azure portal."/>
-    <Item text="Associate Office 365 account" url="overview/associate_account" SEOKeyword="Associate Office 365 account, Microsoft Graph API, Overview" SEODescription="Use the management portal in Microsoft Azure to manage users, roles, and apps for Office 365."/>
-    <Item text="Converged auth (preview)" url="overview/converged_auth" SEOKeyword="Converged app model, Microsoft Graph API, Overview" SEODescription="The converged authentication model preview enables you to create apps that accept both work and school (Azure AD) as well as personal (Microsoft account) identities." />
+  <Item text="Authorization" url="authorization/app_authorization">
+    <Item text="Permission Scopes" url="authorization/permission_scopes" SEOKeyword="Permission Scopes, Microsoft Graph API, Overview" SEODescription="The Microsoft Graph API exposes OAuth 2.0 permission scopes that are used to control access that an app has to data. As a developer, you configure your app with the permission scopes appropriate to the access that it requires, typically by using the Azure portal."/>
+    <Item text="Associate Office 365 account" url="authorization/associate_account" SEOKeyword="Associate Office 365 account, Microsoft Graph API, Overview" SEODescription="Use the management portal in Microsoft Azure to manage users, roles, and apps for Office 365."/>
+    <Item text="Converged auth (preview)" url="authorization/converged_auth" SEOKeyword="Converged app model, Microsoft Graph API, Overview" SEODescription="The converged authentication model preview enables you to create apps that accept both work and school (Azure AD) as well as personal (Microsoft account) identities." />
   </Item>
-  <Item text="Platforms" url="platform/rest">
+  <Item text="Walkthroughs" url="platform/rest">
     <Item text=".NET" url="platform/aspnetmvc" SEOKeyword=".NET, ASP.NET MVC, Microsoft Graph API, Walkthroughs" SEODescription="Use Microsoft Graph to access Microsoft cloud data in an ASP.NET MVC app" />
     <Item text="UWP" url="platform/uwp" SEOKeyword="UWP, Microsoft Graph API, Walkthroughs" SEODescription="Use Microsoft Graph to access Microsoft cloud data in a Windows Universal Platfrom app" />
     <Item text="iOS" url="platform/ios" SEOKeyword="iOS, Microsoft Graph API, Walkthroughs" SEODescription="Use Microsoft Graph to access Microsoft cloud data in an iOS app" />
@@ -886,10 +886,10 @@
         <Item text="Get member groups" url="api-reference/beta/api/orgcontact_getmembergroups" SEOKeyword="orgContact: getMemberGroups, Microsoft Graph API, Organizational contact API" SEODescription=""></Item>
         <Item text="Check member groups" url="api-reference/beta/api/orgcontact_checkmembergroups" SEOKeyword="orgContact: checkMemberGroups, Microsoft Graph API, Organizational contact API" SEODescription=""></Item>
       </Item>
-      <Item text="Directory Object" url="api-reference/beta/resources/directoryobject" SEOKeyword="orgcontact API, Microsoft Graph API, orgcontact API" SEODescription="">
+      <Item text="org hierarchy" url="api-reference/beta/resources/directoryobject" SEOKeyword="orgcontact API, Microsoft Graph API, orgcontact API" SEODescription="">
         <Item text="List direct reports" url="api-reference/beta/api/orgcontact_list_directreports" SEOKeyword="List directReports, Microsoft Graph API, Organizational contact API" SEODescription="Retrieve a list of directoryobject objects."></Item>
       </Item>
-      <Item text="Directory Object" url="api-reference/beta/resources/directoryobject" SEOKeyword="orgcontact API, Microsoft Graph API, orgcontact API" SEODescription="">
+      <Item text="directory object" url="api-reference/beta/resources/directoryobject" SEOKeyword="orgcontact API, Microsoft Graph API, orgcontact API" SEODescription="">
         <Item text="Get member objects" url="api-reference/beta/api/orgcontact_getmemberobjects" SEOKeyword="orgContact: getMemberObjects, Microsoft Graph API, Organizational contact API" SEODescription=""></Item>
       </Item>
     </Item>
