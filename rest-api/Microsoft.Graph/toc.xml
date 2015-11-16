@@ -101,7 +101,7 @@
         <Item text="Delete item" url="api-reference/v1.0/api/item_delete" SEOKeyword="Delete item, Microsoft Graph API, OneDrive Drive API" SEODescription="Delete item."></Item>
         <Item text="Copy item" url="api-reference/v1.0/api/item_copy" SEOKeyword="Copy item, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
         <Item text="Move item" url="api-reference/v1.0/api/item_move" SEOKeyword="Move item, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
-        <Item text="Download item" url="api-reference/v1.0/api/" SEOKeyword="Download item, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
+        <Item text="Download item" url="api-reference/v1.0/api/item_downloadcontent" SEOKeyword="Download item, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
         <Item text="Upload item" url="api-reference/v1.0/api/item_uploadcontent" SEOKeyword="Upload item, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
         <Item text="Search items" url="api-reference/v1.0/api/item_search" SEOKeyword="Search items, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
         <Item text="Create link item" url="api-reference/v1.0/api/item_createlink" SEOKeyword="Create link item, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
@@ -571,8 +571,8 @@
     </Item>
     <Item text="Webhooks" url="api-reference/beta/resources/" SEOKeyword="webhoooks API, Microsoft Graph API, extension API" SEODescription="">
       <Item text="Subscription" url="api-reference/beta/resources/" SEOKeyword="webhoooks API, Microsoft Graph API, extension API" SEODescription="">
-        <Item text="List subscriptions" url="api-reference/beta/api/" SEOKeyword="List subscriptions, Microsoft Graph API, user API" SEODescription="Retrieve a list of subscription."></Item>
-        <Item text="Create subscriptions" url="api-reference/beta/api/" SEOKeyword="Create subscriptions, Microsoft Graph API, user API" SEODescription="Use this API to create a new subscription."></Item>
+        <Item text="List subscriptions" url="api-reference/beta/api/subscription_list" SEOKeyword="List subscriptions, Microsoft Graph API, user API" SEODescription="Retrieve a list of subscription."></Item>
+        <Item text="Create subscriptions" url="api-reference/beta/api/subscription_post_subscription" SEOKeyword="Create subscriptions, Microsoft Graph API, user API" SEODescription="Use this API to create a new subscription."></Item>
       </Item>
     </Item>
     <Item text="OneDrive" url="api-reference/beta/resources/drive" SEOKeyword="OneDrive Drive API, Microsoft Graph API, OneDrive Drive API" SEODescription="The Drive resource represents a drive in OneDrive. It provides information about the owner of the drive, total and available storage space, and exposes a collection of all the Itemsitem-resource contained within the drive.">
@@ -592,7 +592,7 @@
         <Item text="Delete item" url="api-reference/beta/api/item_delete" SEOKeyword="Delete item, Microsoft Graph API, OneDrive Drive API" SEODescription="Delete item."></Item>
         <Item text="Copy item" url="api-reference/beta/api/item_copy" SEOKeyword="Copy item, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
         <Item text="Move item" url="api-reference/beta/api/item_move" SEOKeyword="Move item, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
-        <Item text="Download item" url="api-reference/beta/api/" SEOKeyword="Download item, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
+        <Item text="Download item" url="api-reference/beta/api/item_downloadcontent" SEOKeyword="Download item, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
         <Item text="Upload item" url="api-reference/beta/api/item_uploadcontent" SEOKeyword="Upload item, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
         <Item text="Search items" url="api-reference/beta/api/item_search" SEOKeyword="Search items, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
         <Item text="Create link item" url="api-reference/beta/api/item_createlink" SEOKeyword="Create link item, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
