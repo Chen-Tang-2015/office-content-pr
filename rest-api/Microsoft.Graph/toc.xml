@@ -246,7 +246,6 @@
         <Item text="List calendars in calendar group" url="api-reference/v1.0/api/calendargroup_list_calendars" SEOKeyword="List calendars, Microsoft Graph API, Outlook Calendar API" SEODescription="Retrieve a list of calendar objects."></Item>
         <Item text="Create calendar in calendar group" url="api-reference/v1.0/api/calendargroup_post_calendars" SEOKeyword="Create calendar group, Microsoft Graph API, Outlook Calendar API" SEODescription="Use this API to create a new Calendar."></Item>
       </Item>
-      <Item text="Attendee" url="api-reference/v1.0/resources/attendee" SEOKeyword="Attendee, Microsoft Graph API, Outlook Calendar API" SEODescription=""></Item>
     </Item>
     <Item text="Personal contact" url="api-reference/v1.0/resources/contact" SEOKeyword="Personal contact API, Microsoft Graph API, Personal contact API" SEODescription="Represents a personal contact">
       <Item text="contact" url="api-reference/v1.0/resources/contact" SEOKeyword="contact API, Microsoft Graph API, contact API" SEODescription="Represents an organizational contact. Inherits from DirectoryObject.">
@@ -749,7 +748,6 @@
         <Item text="List calendars in calendar group" url="api-reference/beta/api/calendargroup_list_calendars" SEOKeyword="List calendars, Microsoft Graph API, Outlook Calendar API" SEODescription="Retrieve a list of calendar objects."></Item>
         <Item text="Create calendar in calendar group" url="api-reference/beta/api/calendargroup_post_calendars" SEOKeyword="Create calendar group, Microsoft Graph API, Outlook Calendar API" SEODescription="Use this API to create a new Calendar."></Item>
       </Item>
-      <Item text="Attendee" url="api-reference/beta/resources/attendee" SEOKeyword="Attendee, Microsoft Graph API, Outlook Calendar API" SEODescription=""></Item>
     </Item>
     <Item text="Personal contact" url="api-reference/beta/resources/contact" SEOKeyword="Personal contact API, Microsoft Graph API, Personal contact API" SEODescription="Represents a personal contact">
       <Item text="contact" url="api-reference/beta/resources/contact" SEOKeyword="contact API, Microsoft Graph API, contact API" SEODescription="Represents an organizational contact. Inherits from DirectoryObject.">
