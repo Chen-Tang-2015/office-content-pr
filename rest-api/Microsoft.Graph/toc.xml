@@ -87,18 +87,13 @@
     <Item text="OneDrive" url="api-reference/v1.0/resources/drive" SEOKeyword="OneDrive Drive API, Microsoft Graph API, OneDrive Drive API" SEODescription="The Drive resource represents a drive in OneDrive. It provides information about the owner of the drive, total and available storage space, and exposes a collection of all the Itemsitem-resource contained within the drive.">
       <Item text="drive" url="api-reference/v1.0/resources/drive" SEOKeyword="drive API, Microsoft Graph API, drive API" SEODescription="The drive resource represents a OneDrive">
         <Item text="List drives" url="api-reference/v1.0/api/drive_list" SEOKeyword="List drives, Microsoft Graph API, drive API" SEODescription="Retrieve a list of drive objects."></Item>
-        <Item text="Create drive" url="api-reference/v1.0/api/drive_post_drives" SEOKeyword="Create drive, Microsoft Graph API, drive API" SEODescription="Use this API to create a new drive."></Item>
         <Item text="Get drive" url="api-reference/v1.0/api/drive_get" SEOKeyword="Get drive, Microsoft Graph API, drive API" SEODescription="Retrieve the properties and relationships of drive object."></Item>
         <Item text="Update drive" url="api-reference/v1.0/api/drive_update" SEOKeyword="Update drive, Microsoft Graph API, drive API" SEODescription="Update the properties of drive object."></Item>
         <Item text="Delete drive" url="api-reference/v1.0/api/drive_delete" SEOKeyword="Delete drive, Microsoft Graph API, drive API" SEODescription="Delete drive."></Item>
         <Item text="List items" url="api-reference/v1.0/api/drive_list_items" SEOKeyword="List items, Microsoft Graph API, drive API" SEODescription="Retrieve a list of item objects."></Item>
         <Item text="Create item" url="api-reference/v1.0/api/drive_post_items" SEOKeyword="Create item, Microsoft Graph API, drive API" SEODescription="Use this API to create a new item."></Item>
-        <Item text="List shared" url="api-reference/v1.0/api/drive_list_shared" SEOKeyword="List shared, Microsoft Graph API, drive API" SEODescription="Retrieve a list of item objects."></Item>
-        <Item text="Create shared" url="api-reference/v1.0/api/drive_post_shared" SEOKeyword="Create shared, Microsoft Graph API, drive API" SEODescription="Use this API to create a new shared."></Item>
-        <Item text="List special" url="api-reference/v1.0/api/drive_list_special" SEOKeyword="List special, Microsoft Graph API, drive API" SEODescription="Retrieve a list of item objects."></Item>
         <Item text="Create special" url="api-reference/v1.0/api/drive_post_special" SEOKeyword="Create special, Microsoft Graph API, drive API" SEODescription="Use this API to create a new special."></Item>
-        <Item text="allPhotos" url="api-reference/v1.0/api/drive_allphotos" SEOKeyword="drive: allPhotos, Microsoft Graph API, drive API" SEODescription=""></Item>
-      </Item>
+       </Item>
       <Item text="item" url="api-reference/v1.0/resources/item" SEOKeyword="item API, Microsoft Graph API, item API" SEODescription="The item resource represents an item contained in a drive, like a file or folder.">
         <Item text="List items" url="api-reference/v1.0/api/drive_list_items" SEOKeyword="List items, Microsoft Graph API, OneDrive Drive API" SEODescription="Retrieve a list of item objects."></Item>
         <Item text="Get item" url="api-reference/v1.0/api/item_get" SEOKeyword="Get item, Microsoft Graph API, OneDrive Drive API" SEODescription="Retrieve the properties and relationships of item object."></Item>
@@ -108,17 +103,11 @@
         <Item text="Move item" url="api-reference/v1.0/api/item_move" SEOKeyword="Move item, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
         <Item text="Download item" url="api-reference/v1.0/api/" SEOKeyword="Download item, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
         <Item text="Upload item" url="api-reference/v1.0/api/item_uploadcontent" SEOKeyword="Upload item, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
-        <Item text="Filter item" url="api-reference/v1.0/api/" SEOKeyword="Filter item, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
         <Item text="Search items" url="api-reference/v1.0/api/item_search" SEOKeyword="Search items, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
         <Item text="Create link item" url="api-reference/v1.0/api/item_createlink" SEOKeyword="Create link item, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
-        <Item text="Create session" url="api-reference/v1.0/api/item_createsession" SEOKeyword="Create session, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
-        <Item text="View changes for an Item" url="api-reference/v1.0/api/item_delta" SEOKeyword="Delta, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
         <Item text="Invite" url="api-reference/v1.0/api/item_invite" SEOKeyword="Invite, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
         <Item text="List children" url="api-reference/v1.0/api/item_list_children" SEOKeyword="List children, Microsoft Graph API, OneDrive Drive API" SEODescription="Retrieve a list of item objects."></Item>
         <Item text="Create children" url="api-reference/v1.0/api/item_post_children" SEOKeyword="Create children, Microsoft Graph API, OneDrive Drive API" SEODescription="Use this API to create a new children."></Item>
-        <Item text="List versions" url="api-reference/v1.0/api/item_list_versions" SEOKeyword="List versions, Microsoft Graph API, OneDrive Drive API" SEODescription="Retrieve a list of item objects."></Item>
-        <Item text="Create version" url="api-reference/v1.0/api/item_post_versions" SEOKeyword="Create version, Microsoft Graph API, OneDrive Drive API" SEODescription="Use this API to create a new version."></Item>
-        <Item text="Item photos" url="api-reference/v1.0/api/item_allphotos" SEOKeyword="Item photos, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
       </Item>
       <Item text="permission" url="api-reference/v1.0/resources/permission" SEOKeyword="permission API, Microsoft Graph API, permission API" SEODescription="Provides information about permissions granted for an item.">
         <Item text="Get permission" url="api-reference/v1.0/api/permission_get" SEOKeyword="Get permission, Microsoft Graph API, permission API" SEODescription="Retrieve the properties and relationships of permission object."></Item>
@@ -589,17 +578,12 @@
     <Item text="OneDrive" url="api-reference/beta/resources/drive" SEOKeyword="OneDrive Drive API, Microsoft Graph API, OneDrive Drive API" SEODescription="The Drive resource represents a drive in OneDrive. It provides information about the owner of the drive, total and available storage space, and exposes a collection of all the Itemsitem-resource contained within the drive.">
       <Item text="drive" url="api-reference/beta/resources/drive" SEOKeyword="drive API, Microsoft Graph API, drive API" SEODescription="The drive resource represents a OneDrive">
         <Item text="List drives" url="api-reference/beta/api/drive_list" SEOKeyword="List drives, Microsoft Graph API, drive API" SEODescription="Retrieve a list of drive objects."></Item>
-        <Item text="Create drive" url="api-reference/beta/api/drive_post_drives" SEOKeyword="Create drive, Microsoft Graph API, drive API" SEODescription="Use this API to create a new drive."></Item>
         <Item text="Get drive" url="api-reference/beta/api/drive_get" SEOKeyword="Get drive, Microsoft Graph API, drive API" SEODescription="Retrieve the properties and relationships of drive object."></Item>
         <Item text="Update drive" url="api-reference/beta/api/drive_update" SEOKeyword="Update drive, Microsoft Graph API, drive API" SEODescription="Update the properties of drive object."></Item>
         <Item text="Delete drive" url="api-reference/beta/api/drive_delete" SEOKeyword="Delete drive, Microsoft Graph API, drive API" SEODescription="Delete drive."></Item>
         <Item text="List items" url="api-reference/beta/api/drive_list_items" SEOKeyword="List items, Microsoft Graph API, drive API" SEODescription="Retrieve a list of item objects."></Item>
         <Item text="Create item" url="api-reference/beta/api/drive_post_items" SEOKeyword="Create item, Microsoft Graph API, drive API" SEODescription="Use this API to create a new item."></Item>
-        <Item text="List shared" url="api-reference/beta/api/drive_list_shared" SEOKeyword="List shared, Microsoft Graph API, drive API" SEODescription="Retrieve a list of item objects."></Item>
-        <Item text="Create shared" url="api-reference/beta/api/drive_post_shared" SEOKeyword="Create shared, Microsoft Graph API, drive API" SEODescription="Use this API to create a new shared."></Item>
-        <Item text="List special" url="api-reference/beta/api/drive_list_special" SEOKeyword="List special, Microsoft Graph API, drive API" SEODescription="Retrieve a list of item objects."></Item>
         <Item text="Create special" url="api-reference/beta/api/drive_post_special" SEOKeyword="Create special, Microsoft Graph API, drive API" SEODescription="Use this API to create a new special."></Item>
-        <Item text="allPhotos" url="api-reference/beta/api/drive_allphotos" SEOKeyword="drive: allPhotos, Microsoft Graph API, drive API" SEODescription=""></Item>
       </Item>
       <Item text="item" url="api-reference/beta/resources/item" SEOKeyword="item API, Microsoft Graph API, item API" SEODescription="The item resource represents an item contained in a drive, like a file or folder.">
         <Item text="List items" url="api-reference/beta/api/drive_list_items" SEOKeyword="List items, Microsoft Graph API, OneDrive Drive API" SEODescription="Retrieve a list of item objects."></Item>
@@ -610,17 +594,11 @@
         <Item text="Move item" url="api-reference/beta/api/item_move" SEOKeyword="Move item, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
         <Item text="Download item" url="api-reference/beta/api/" SEOKeyword="Download item, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
         <Item text="Upload item" url="api-reference/beta/api/item_uploadcontent" SEOKeyword="Upload item, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
-        <Item text="Filter item" url="api-reference/beta/api/" SEOKeyword="Filter item, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
         <Item text="Search items" url="api-reference/beta/api/item_search" SEOKeyword="Search items, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
         <Item text="Create link item" url="api-reference/beta/api/item_createlink" SEOKeyword="Create link item, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
-        <Item text="Create session" url="api-reference/beta/api/item_createsession" SEOKeyword="Create session, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
-        <Item text="View changes for an Item" url="api-reference/beta/api/item_delta" SEOKeyword="Delta, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
         <Item text="Invite" url="api-reference/beta/api/item_invite" SEOKeyword="Invite, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
         <Item text="List children" url="api-reference/beta/api/item_list_children" SEOKeyword="List children, Microsoft Graph API, OneDrive Drive API" SEODescription="Retrieve a list of item objects."></Item>
         <Item text="Create children" url="api-reference/beta/api/item_post_children" SEOKeyword="Create children, Microsoft Graph API, OneDrive Drive API" SEODescription="Use this API to create a new children."></Item>
-        <Item text="List versions" url="api-reference/beta/api/item_list_versions" SEOKeyword="List versions, Microsoft Graph API, OneDrive Drive API" SEODescription="Retrieve a list of item objects."></Item>
-        <Item text="Create version" url="api-reference/beta/api/item_post_versions" SEOKeyword="Create version, Microsoft Graph API, OneDrive Drive API" SEODescription="Use this API to create a new version."></Item>
-        <Item text="Item photos" url="api-reference/beta/api/item_allphotos" SEOKeyword="Item photos, Microsoft Graph API, OneDrive Drive API" SEODescription=""></Item>
       </Item>
       <Item text="permission" url="api-reference/beta/resources/permission" SEOKeyword="permission API, Microsoft Graph API, permission API" SEODescription="Provides information about permissions granted for an item.">
         <Item text="Get permission" url="api-reference/beta/api/permission_get" SEOKeyword="Get permission, Microsoft Graph API, permission API" SEODescription="Retrieve the properties and relationships of permission object."></Item>
