@@ -33,8 +33,9 @@
         <Item text="Delete user" url="api-reference/v1.0/api/user_delete" SEOKeyword="Delete user, Microsoft Graph API, user API" SEODescription="Delete user."></Item>
       </Item>
       <Item text="photo" url="api-reference/v1.0/resources/profilephoto" SEOKeyword="user people, Microsoft Graph API, user API" SEODescription="">
-        <Item text="List photos" url="api-reference/v1.0/api/user_list_photos" SEOKeyword="List photos, Microsoft Graph API, user API" SEODescription="Retrieve a list of photo objects."></Item>
-        <Item text="Create photo" url="api-reference/v1.0/api/user_post_photos" SEOKeyword="Create photo, Microsoft Graph API, user API" SEODescription="Use this API to create a new photo."></Item>
+        <Item text="Get photo" url="api-reference/v1.0/api/photo_get" SEOKeyword="Get photo, Microsoft Graph API, photo API" SEODescription="Retrieve the properties and relationships of photo object."></Item>
+        <Item text="Update photo" url="api-reference/v1.0/api/photo_update" SEOKeyword="Update photo, Microsoft Graph API, photo API" SEODescription="Update the properties of photo object."></Item>
+        <Item text="Delete photo" url="api-reference/v1.0/api/photo_delete" SEOKeyword="Delete photo, Microsoft Graph API, photo API" SEODescription="Delete photo."></Item>
       </Item>
       <Item text="mail" url="api-reference/v1.0/resources/message" SEOKeyword="user mail, Microsoft Graph API, user API" SEODescription="">
         <Item text="List messages" url="api-reference/v1.0/api/user_list_messages" SEOKeyword="List messages, Microsoft Graph API, Users API" SEODescription="Retrieve a list of message objects."></Item>
@@ -280,8 +281,9 @@
         <Item text="Reset unseen count" url="api-reference/v1.0/api/group_resetunseencount" SEOKeyword="group: resetUnseenCount, Microsoft Graph API, group API" SEODescription=""></Item>
       </Item>
       <Item text="photo" url="api-reference/v1.0/resources/profilepicture" SEOKeyword="group photo, Microsoft Graph API, group API" SEODescription="">
-        <Item text="List photos" url="api-reference/v1.0/api/group_list_photos" SEOKeyword="List photos, Microsoft Graph API, group API" SEODescription="Retrieve a list of photo objects."></Item>
-        <Item text="Create photo" url="api-reference/v1.0/api/group_post_photos" SEOKeyword="Create photo, Microsoft Graph API, group API" SEODescription="Use this API to create a new photo."></Item>
+        <Item text="Get photo" url="api-reference/v1.0/api/photo_get" SEOKeyword="Get photo, Microsoft Graph API, photo API" SEODescription="Retrieve the properties and relationships of photo object."></Item>
+        <Item text="Update photo" url="api-reference/v1.0/api/photo_update" SEOKeyword="Update photo, Microsoft Graph API, photo API" SEODescription="Update the properties of photo object."></Item>
+        <Item text="Delete photo" url="api-reference/v1.0/api/photo_delete" SEOKeyword="Delete photo, Microsoft Graph API, photo API" SEODescription="Delete photo."></Item>
       </Item>
       <Item text="conversations" url="api-reference/v1.0/resources/conversation" SEOKeyword="group conversations, Microsoft Graph API, group API" SEODescription="">
         <Item text="List conversations" url="api-reference/v1.0/api/group_list_conversations" SEOKeyword="List conversations, Microsoft Graph API, Groups API" SEODescription="Retrieve a list of conversation objects."></Item>
@@ -388,8 +390,9 @@
         <Item text="Delete user" url="api-reference/beta/api/user_delete" SEOKeyword="Delete user, Microsoft Graph API, user API" SEODescription="Delete user."></Item>
       </Item>
       <Item text="photo" url="api-reference/beta/resources/profilephoto" SEOKeyword="user people, Microsoft Graph API, user API" SEODescription="">
-        <Item text="List photos" url="api-reference/beta/api/user_list_photos" SEOKeyword="List photos, Microsoft Graph API, user API" SEODescription="Retrieve a list of photo objects."></Item>
-        <Item text="Create photo" url="api-reference/beta/api/user_post_photos" SEOKeyword="Create photo, Microsoft Graph API, user API" SEODescription="Use this API to create a new photo."></Item>
+        <Item text="Get photo" url="api-reference/v1.0/api/photo_get" SEOKeyword="Get photo, Microsoft Graph API, photo API" SEODescription="Retrieve the properties and relationships of photo object."></Item>
+        <Item text="Update photo" url="api-reference/v1.0/api/photo_update" SEOKeyword="Update photo, Microsoft Graph API, photo API" SEODescription="Update the properties of photo object."></Item>
+        <Item text="Delete photo" url="api-reference/v1.0/api/photo_delete" SEOKeyword="Delete photo, Microsoft Graph API, photo API" SEODescription="Delete photo."></Item>
       </Item>
       <Item text="mail" url="api-reference/beta/resources/message" SEOKeyword="user mail, Microsoft Graph API, user API" SEODescription="">
         <Item text="List messages" url="api-reference/beta/api/user_list_messages" SEOKeyword="List messages, Microsoft Graph API, Users API" SEODescription="Retrieve a list of message objects."></Item>
@@ -744,8 +747,9 @@
         <Item text="Reset unseen count" url="api-reference/beta/api/group_resetunseencount" SEOKeyword="group: resetUnseenCount, Microsoft Graph API, group API" SEODescription=""></Item>
       </Item>
       <Item text="photo" url="api-reference/beta/resources/profilepicture" SEOKeyword="group photo, Microsoft Graph API, group API" SEODescription="">
-        <Item text="List photos" url="api-reference/beta/api/group_list_photos" SEOKeyword="List photos, Microsoft Graph API, group API" SEODescription="Retrieve a list of photo objects."></Item>
-        <Item text="Create photo" url="api-reference/beta/api/group_post_photos" SEOKeyword="Create photo, Microsoft Graph API, group API" SEODescription="Use this API to create a new photo."></Item>
+        <Item text="Get photo" url="api-reference/v1.0/api/photo_get" SEOKeyword="Get photo, Microsoft Graph API, photo API" SEODescription="Retrieve the properties and relationships of photo object."></Item>
+        <Item text="Update photo" url="api-reference/v1.0/api/photo_update" SEOKeyword="Update photo, Microsoft Graph API, photo API" SEODescription="Update the properties of photo object."></Item>
+        <Item text="Delete photo" url="api-reference/v1.0/api/photo_delete" SEOKeyword="Delete photo, Microsoft Graph API, photo API" SEODescription="Delete photo."></Item>
       </Item>
       <Item text="conversations" url="api-reference/beta/resources/conversation" SEOKeyword="group conversations, Microsoft Graph API, group API" SEODescription="">
         <Item text="List conversations" url="api-reference/beta/api/group_list_conversations" SEOKeyword="List conversations, Microsoft Graph API, Groups API" SEODescription="Retrieve a list of conversation objects."></Item>
