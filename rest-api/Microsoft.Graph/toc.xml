@@ -13,7 +13,7 @@
     <Item text="Converged auth (preview)" url="authorization/converged_auth" SEOKeyword="Converged app model, Microsoft Graph API, Overview" SEODescription="The converged authentication model preview enables you to create apps that accept both work and school (Azure AD) as well as personal (Microsoft account) identities." />
   </Item>
   <Item text="Walkthroughs" url="platform/rest">
-    <Item text=".NET" url="platform/aspnetmvc" SEOKeyword=".NET, ASP.NET MVC, Microsoft Graph API, Walkthroughs" SEODescription="Use Microsoft Graph to access Microsoft cloud data in an ASP.NET MVC app" />
+    <Item text="ASP.NET MVC" url="platform/aspnetmvc" SEOKeyword=".NET, ASP.NET MVC, Microsoft Graph API, Walkthroughs" SEODescription="Use Microsoft Graph to access Microsoft cloud data in an ASP.NET MVC app" />
     <Item text="UWP" url="platform/uwp" SEOKeyword="UWP, Microsoft Graph API, Walkthroughs" SEODescription="Use Microsoft Graph to access Microsoft cloud data in a Windows Universal Platfrom app" />
     <Item text="iOS" url="platform/ios" SEOKeyword="iOS, Microsoft Graph API, Walkthroughs" SEODescription="Use Microsoft Graph to access Microsoft cloud data in an iOS app" />
     <Item text="Android" url="platform/android" SEOKeyword="Android, Microsoft Graph API, Walkthroughs" SEODescription="Use Microsoft Graph to access Microsoft cloud data in an Android app" />
@@ -54,7 +54,7 @@
         <Item text="List calendar view" url="api-reference/v1.0/api/user_list_calendarview" SEOKeyword="List calendarView, Microsoft Graph API, Users API" SEODescription="Retrieve a list of event objects."></Item>
         <Item text="Create calendar view" url="api-reference/v1.0/api/user_post_calendarview" SEOKeyword="Create calendar view, Microsoft Graph API, Users API" SEODescription="Use this API to create a new Event."></Item>
         <Item text="Reminder view" url="api-reference/v1.0/api/user_reminderview" SEOKeyword="user: reminderView, Microsoft Graph API, user API" SEODescription=""></Item>
-      </Item>re
+      </Item>
       <Item text="contacts" url="api-reference/v1.0/resources/contact" SEOKeyword="user contact, Microsoft Graph API, user API" SEODescription="">
         <Item text="List contacts" url="api-reference/v1.0/api/user_list_contacts" SEOKeyword="List contacts, Microsoft Graph API, Users API" SEODescription="Retrieve a list of contact objects."></Item>
         <Item text="Create contact" url="api-reference/v1.0/api/user_post_contacts" SEOKeyword="Create Contact, Microsoft Graph API, Users API" SEODescription="Use this API to create a new Contact."></Item>
