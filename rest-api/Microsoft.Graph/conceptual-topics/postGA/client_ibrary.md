@@ -13,8 +13,7 @@ In this article:
 
 <a name="msg_using_client_lib"> </a>  -->
 
-|```  ![](./images/GitHub-Mark-64px.png) ```| ``` **Contribute to this content** <br /> Use GitHub to [suggest changes](https://github.com/OfficeDev/microsoft-graph-docs).  
-```|
+|```  ![](./images/GitHub-Mark-64px.png) | **Contribute to this content** <br /> Use GitHub to [suggest changes](https://github.com/OfficeDev/microsoft-graph-docs).```|
 |---|:---|
 
 
