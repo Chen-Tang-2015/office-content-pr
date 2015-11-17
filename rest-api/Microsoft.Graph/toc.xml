@@ -245,7 +245,6 @@
         <Item text="Delete item attachment" url="api-reference/v1.0/api/itemattachment_delete" SEOKeyword="Delete itemAttachment, Microsoft Graph API, itemattachment API" SEODescription="Delete itemAttachment."></Item>
       </Item>
     </Item>
-    </Item>
     <Item text="Personal contact" url="api-reference/v1.0/resources/contact" SEOKeyword="Personal contact API, Microsoft Graph API, Personal contact API" SEODescription="Represents a personal contact">
       <Item text="contact" url="api-reference/v1.0/resources/contact" SEOKeyword="contact API, Microsoft Graph API, contact API" SEODescription="Represents an organizational contact. Inherits from DirectoryObject.">
         <Item text="List contacts" url="api-reference/v1.0/api/user_list_contacts" SEOKeyword="List contacts, Microsoft Graph API, Users API" SEODescription="Retrieve a list of contact objects."></Item>
