@@ -565,11 +565,14 @@
         <Item text="Delete openTypeExtension" url="api-reference/beta/api/opentypeextension_delete" SEOKeyword="Delete openTypeExtension, Microsoft Graph API, opentypeextension API" SEODescription="Delete openTypeExtension."></Item>
       </Item>
     </Item>
-    <Item text="Webhooks" url="api-reference/beta/resources/" SEOKeyword="webhoooks API, Microsoft Graph API, extension API" SEODescription="">
-      <Item text="Subscription" url="api-reference/beta/resources/" SEOKeyword="webhoooks API, Microsoft Graph API, extension API" SEODescription="">
-        <Item text="Get subscription" url="api-reference/beta/api/subscription_get" SEOKeyword="List subscriptions, Microsoft Graph API, user API" SEODescription="Retrieve a list of subscription."></Item>
-        <Item text="Create subscription" url="api-reference/beta/api/subscription_post_subscription" SEOKeyword="Create subscriptions, Microsoft Graph API, user API" SEODescription="Use this API to create a new subscription."></Item>
+    <Item text="Webhooks" url="api-reference/beta/resources/" SEOKeyword="webhoooks API, Microsoft Graph API, webhoooks API" SEODescription="">
+      <Item text="Subscription" url="api-reference/beta/resources/" SEOKeyword="webhoooks API, Microsoft Graph API, webhoooks API" SEODescription="">
+        <Item text="Get subscription" url="api-reference/beta/api/subscription_get" SEOKeyword="List subscriptions, Microsoft Graph API, webhoooks API" SEODescription="Retrieve a list of subscription."></Item>
+        <Item text="Create subscription" url="api-reference/beta/api/subscription_post_subscription" SEOKeyword="Create subscriptions, Microsoft Graph API, webhoooks API" SEODescription="Use this API to create a new subscription."></Item>
       </Item>
+    </Item>
+    <Item text="Excel" url="api-reference/beta/resources/excel" SEOKeyword="webhoooks API, Microsoft Graph API, webhoooks API" SEODescription="">
+      <Item text="Excel" url="api-reference/beta/resources/excel" SEOKeyword="webhoooks API, Microsoft Graph API, webhoooks API" SEODescription=""></Item>
     </Item>
     <Item text="OneDrive" url="api-reference/beta/resources/drive" SEOKeyword="OneDrive Drive API, Microsoft Graph API, OneDrive Drive API" SEODescription="The Drive resource represents a drive in OneDrive. It provides information about the owner of the drive, total and available storage space, and exposes a collection of all the Itemsitem-resource contained within the drive.">
       <Item text="drive" url="api-reference/beta/resources/drive" SEOKeyword="drive API, Microsoft Graph API, drive API" SEODescription="The drive resource represents a OneDrive">
@@ -747,7 +750,7 @@
         <Item text="Update photo" url="api-reference/v1.0/api/photo_update" SEOKeyword="Update photo, Microsoft Graph API, photo API" SEODescription="Update the properties of photo object."></Item>
         <Item text="Delete photo" url="api-reference/v1.0/api/photo_delete" SEOKeyword="Delete photo, Microsoft Graph API, photo API" SEODescription="Delete photo."></Item>
       </Item>
-     <Item text="conversations" url="api-reference/beta/resources/conversation" SEOKeyword="conversation API, Microsoft Graph API, conversation API" SEODescription="">
+      <Item text="conversations" url="api-reference/beta/resources/conversation" SEOKeyword="conversation API, Microsoft Graph API, conversation API" SEODescription="">
         <Item text="List conversations" url="api-reference/beta/api/group_list_conversations" SEOKeyword="List conversations, Microsoft Graph API, Groups API" SEODescription="Retrieve a list of conversation objects."></Item>
         <Item text="Create conversation" url="api-reference/beta/api/group_post_conversations" SEOKeyword="Create Conversation, Microsoft Graph API, Groups API" SEODescription="Use this API to create a new Conversation."></Item>
         <Item text="Get group conversation" url="api-reference/beta/api/conversation_get" SEOKeyword="Get group conversation, Microsoft Graph API, Outlook conversation API" SEODescription="Retrieve the properties and relationships of conversation object."></Item>
