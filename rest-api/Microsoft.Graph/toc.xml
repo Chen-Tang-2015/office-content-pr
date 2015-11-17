@@ -208,6 +208,10 @@
         <Item text="List calendar view" url="api-reference/v1.0/api/user_list_calendarview" SEOKeyword="List calendarView, Microsoft Graph API, Users API" SEODescription="Retrieve a list of event objects."></Item>
         <Item text="Create calendar view" url="api-reference/v1.0/api/user_post_calendarview" SEOKeyword="Create calendar view, Microsoft Graph API, Users API" SEODescription="Use this API to create a new Event."></Item>
       </Item>
+      <Item text="calendar view" url="api-reference/v1.0/api/user_list_calendarview" SEOKeyword="List calendarView, Microsoft Graph API, Users API" SEODescription="Retrieve a list of event objects.">
+        <Item text="List calendar view" url="api-reference/v1.0/api/user_list_calendarview" SEOKeyword="List calendarView, Microsoft Graph API, Users API" SEODescription="Retrieve a list of event objects."></Item>
+        <Item text="Reminder view" url="api-reference/v1.0/api/user_reminderview" SEOKeyword="user: reminderView, Microsoft Graph API, user API" SEODescription=""></Item>      
+      </Item>
       <Item text="calendar group" url="api-reference/v1.0/resources/calendargroup" SEOKeyword="calendargroup API, Microsoft Graph API, calendargroup API" SEODescription="A group of calendars.">
         <Item text="List calendar groups" url="api-reference/v1.0/api/user_list_calendargroups" SEOKeyword="List calendarGroups, Microsoft Graph API, Users API" SEODescription="Retrieve a list of calendargroup objects."></Item>
         <Item text="Create calendar group" url="api-reference/v1.0/api/user_post_calendargroups" SEOKeyword="Create CalendarGroup, Microsoft Graph API, Users API" SEODescription="Use this API to create a new CalendarGroup."></Item>
@@ -217,6 +221,29 @@
         <Item text="List calendars in calendar group" url="api-reference/v1.0/api/calendargroup_list_calendars" SEOKeyword="List calendars, Microsoft Graph API, Outlook Calendar API" SEODescription="Retrieve a list of calendar objects."></Item>
         <Item text="Create calendar in calendar group" url="api-reference/v1.0/api/calendargroup_post_calendars" SEOKeyword="Create calendar group, Microsoft Graph API, Outlook Calendar API" SEODescription="Use this API to create a new Calendar."></Item>
       </Item>
+      <Item text="attachment" url="api-reference/v1.0/resources/attachment" SEOKeyword="attachment API, Microsoft Graph API, attachment API" SEODescription="">
+        <Item text="List attachments" url="api-reference/v1.0/api/message_list_attachments" SEOKeyword="List attachments, Microsoft Graph API, Outlook Mail API" SEODescription="Retrieve a list of attachment objects."></Item>
+        <Item text="Create attachment" url="api-reference/v1.0/api/message_post_attachments" SEOKeyword="Create Attachment, Microsoft Graph API, message API" SEODescription="Use this API to create a new Attachment."></Item>
+        <Item text="Get attachment" url="api-reference/v1.0/api/attachment_get" SEOKeyword="Get attachment, Microsoft Graph API, attachment API" SEODescription="Retrieve the properties and relationships of attachment object."></Item>
+        <Item text="Update attachment" url="api-reference/v1.0/api/attachment_update" SEOKeyword="Update attachment, Microsoft Graph API, attachment API" SEODescription="Update the properties of attachment object."></Item>
+        <Item text="Delete attachment" url="api-reference/v1.0/api/attachment_delete" SEOKeyword="Delete attachment, Microsoft Graph API, attachment API" SEODescription="Delete attachment."></Item>
+      </Item>
+      <Item text="file attachment" url="api-reference/v1.0/resources/fileattachment" SEOKeyword="fileattachment API, Microsoft Graph API, fileattachment API" SEODescription="A file (such as a text file or Word document) attached to a message or event. The  ContentBytes property contains the base64-encoded contents of the file.">
+        <Item text="Get file attachment" url="api-reference/v1.0/api/fileattachment_get" SEOKeyword="Get fileAttachment, Microsoft Graph API, fileattachment API" SEODescription="Retrieve the properties and relationships of fileattachment object."></Item>
+        <Item text="Update file attachment" url="api-reference/v1.0/api/fileattachment_update" SEOKeyword="Update fileattachment, Microsoft Graph API, fileattachment API" SEODescription="Update the properties of fileattachment object."></Item>
+        <Item text="Delete file attachment" url="api-reference/v1.0/api/fileattachment_delete" SEOKeyword="Delete fileAttachment, Microsoft Graph API, fileattachment API" SEODescription="Delete fileAttachment."></Item>
+      </Item>
+      <Item text="reference attachment" url="api-reference/v1.0/resources/referenceattachment" SEOKeyword="referenceattachment API, Microsoft Graph API, referenceattachment API" SEODescription="">
+        <Item text="Get reference attachment" url="api-reference/v1.0/api/referenceattachment_get" SEOKeyword="Get referenceAttachment, Microsoft Graph API, referenceattachment API" SEODescription="Retrieve the properties and relationships of referenceattachment object."></Item>
+        <Item text="Update reference attachment" url="api-reference/v1.0/api/referenceattachment_update" SEOKeyword="Update referenceattachment, Microsoft Graph API, referenceattachment API" SEODescription="Update the properties of referenceattachment object."></Item>
+        <Item text="Delete reference attachment" url="api-reference/v1.0/api/referenceattachment_delete" SEOKeyword="Delete referenceAttachment, Microsoft Graph API, referenceattachment API" SEODescription="Delete referenceAttachment."></Item>
+      </Item>
+      <Item text="item attachment" url="api-reference/v1.0/resources/itemattachment" SEOKeyword="itemattachment API, Microsoft Graph API, itemattachment API" SEODescription="A message or event that attached to another message or event.">
+        <Item text="Get item attachment" url="api-reference/v1.0/api/itemattachment_get" SEOKeyword="Get itemAttachment, Microsoft Graph API, itemattachment API" SEODescription="Retrieve the properties and relationships of itemattachment object."></Item>
+        <Item text="Update item attachment" url="api-reference/v1.0/api/itemattachment_update" SEOKeyword="Update itemattachment, Microsoft Graph API, itemattachment API" SEODescription="Update the properties of itemattachment object."></Item>
+        <Item text="Delete item attachment" url="api-reference/v1.0/api/itemattachment_delete" SEOKeyword="Delete itemAttachment, Microsoft Graph API, itemattachment API" SEODescription="Delete itemAttachment."></Item>
+      </Item>
+    </Item>
     </Item>
     <Item text="Personal contact" url="api-reference/v1.0/resources/contact" SEOKeyword="Personal contact API, Microsoft Graph API, Personal contact API" SEODescription="Represents a personal contact">
       <Item text="contact" url="api-reference/v1.0/resources/contact" SEOKeyword="contact API, Microsoft Graph API, contact API" SEODescription="Represents an organizational contact. Inherits from DirectoryObject.">
@@ -259,38 +286,11 @@
       <Item text="conversations" url="api-reference/v1.0/resources/conversation" SEOKeyword="group conversations, Microsoft Graph API, group API" SEODescription="">
         <Item text="List conversations" url="api-reference/v1.0/api/group_list_conversations" SEOKeyword="List conversations, Microsoft Graph API, Groups API" SEODescription="Retrieve a list of conversation objects."></Item>
         <Item text="Create conversation" url="api-reference/v1.0/api/group_post_conversations" SEOKeyword="Create Conversation, Microsoft Graph API, Groups API" SEODescription="Use this API to create a new Conversation."></Item>
-        <Item text="List threads" url="api-reference/v1.0/api/group_list_threads" SEOKeyword="List threads, Microsoft Graph API, Groups API" SEODescription="Retrieve a list of conversationthread objects."></Item>
-        <Item text="Create thread" url="api-reference/v1.0/api/group_post_threads" SEOKeyword="Create thread, Microsoft Graph API, Groups API" SEODescription="Use this API to create a new thread."></Item>
-        <Item text="List accepted senders" url="api-reference/v1.0/api/group_list_acceptedsenders" SEOKeyword="List acceptedSenders, Microsoft Graph API, Groups API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create accepted sender" url="api-reference/v1.0/api/group_post_acceptedsenders" SEOKeyword="Create acceptedSender, Microsoft Graph API, Groups API" SEODescription="Use this API to create a new acceptedSender."></Item>
-        <Item text="List rejected senders" url="api-reference/v1.0/api/group_list_rejectedsenders" SEOKeyword="List rejectedSenders, Microsoft Graph API, Groups API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create rejected sender" url="api-reference/v1.0/api/group_post_rejectedsenders" SEOKeyword="Create rejectedSender, Microsoft Graph API, Groups API" SEODescription="Use this API to create a new rejectedSender."></Item>
-      </Item>
-      <Item text="calendar" url="api-reference/v1.0/resources/event" SEOKeyword="group calendar, Microsoft Graph API, group API" SEODescription="">
-        <Item text="List events" url="api-reference/v1.0/api/group_list_events" SEOKeyword="List events, Microsoft Graph API, Groups API" SEODescription="Retrieve a list of event objects."></Item>
-        <Item text="Create event" url="api-reference/v1.0/api/group_post_events" SEOKeyword="Create event, Microsoft Graph API, Groups API" SEODescription="Use this API to create a new Event."></Item>
-        <Item text="List calendar view" url="api-reference/v1.0/api/group_list_calendarview" SEOKeyword="List calendarView, Microsoft Graph API, Groups API" SEODescription="Retrieve a list of event objects."></Item>
-        <Item text="Create calendar view" url="api-reference/v1.0/api/group_post_calendarview" SEOKeyword="Create calendarView, Microsoft Graph API, Groups API" SEODescription="Use this API to create a new Event."></Item>
-      </Item>
-      <Item text="drive" url="api-reference/v1.0/resources/drive" SEOKeyword="user drive, Microsoft Graph API, user API" SEODescription="">
-        <Item text="Get drive" url="api-reference/v1.0/api/drive_get" SEOKeyword="Get drive, Microsoft Graph API, drive API" SEODescription="Retrieve the properties and relationships of drive object."></Item>
-        <Item text="List children" url="api-reference/v1.0/api/item_list_children" SEOKeyword="List items, Microsoft Graph API, drive API" SEODescription="Retrieve a list of item objects."></Item>
-      </Item>
-      <Item text="directory objects" url="api-reference/v1.0/resources/directoryobjects" SEOKeyword="group directory objects, Microsoft Graph API, group API" SEODescription="">
-        <Item text="List memberOf" url="api-reference/v1.0/api/group_list_memberof" SEOKeyword="List memberOf, Microsoft Graph API, Groups API" SEODescription="Retrieve a list of directoryobject objects."></Item>
-        <Item text="Create memberOf" url="api-reference/v1.0/api/group_post_memberof" SEOKeyword="Create memberOf, Microsoft Graph API, Groups API" SEODescription="Use this API to create a new memberOf."></Item>
-        <Item text="Get member objects" url="api-reference/v1.0/api/group_getmemberobjects" SEOKeyword="group: getMemberObjects, Microsoft Graph API, group API" SEODescription=""></Item>
-        <Item text="Get member groups" url="api-reference/v1.0/api/group_getmembergroups" SEOKeyword="group: getMemberGroups, Microsoft Graph API, group API" SEODescription=""></Item>
-        <Item text="Check member groups" url="api-reference/v1.0/api/group_checkmembergroups" SEOKeyword="group: checkMemberGroups, Microsoft Graph API, group API" SEODescription=""></Item>
-      </Item>
-    </Item>
-    <Item text="Outlook conversation" url="api-reference/v1.0/resources/conversation" SEOKeyword="Outlook conversation API, Microsoft Graph API, Outlook conversation API" SEODescription="">
-      <Item text="conversation" url="api-reference/v1.0/resources/conversation" SEOKeyword="conversation API, Microsoft Graph API, conversation API" SEODescription="">
-        <Item text="List conversations" url="api-reference/v1.0/api/group_list_conversations" SEOKeyword="List conversations, Microsoft Graph API, Groups API" SEODescription="Retrieve a list of conversation objects."></Item>
-        <Item text="Create conversation" url="api-reference/v1.0/api/group_post_conversations" SEOKeyword="Create Conversation, Microsoft Graph API, Groups API" SEODescription="Use this API to create a new Conversation."></Item>
         <Item text="Get group conversation" url="api-reference/v1.0/api/conversation_get" SEOKeyword="Get group conversation, Microsoft Graph API, Outlook conversation API" SEODescription="Retrieve the properties and relationships of conversation object."></Item>
         <Item text="Update group conversation" url="api-reference/v1.0/api/conversation_update" SEOKeyword="Update group conversation, Microsoft Graph API, Outlook conversation API" SEODescription="Update the properties of conversation object."></Item>
         <Item text="Delete group conversation" url="api-reference/v1.0/api/conversation_delete" SEOKeyword="Delete group conversation, Microsoft Graph API, Outlook conversation API" SEODescription="Delete conversation."></Item>
+        <Item text="List threads" url="api-reference/v1.0/api/group_list_threads" SEOKeyword="List threads, Microsoft Graph API, Groups API" SEODescription="Retrieve a list of conversationthread objects."></Item>
+        <Item text="Create thread" url="api-reference/v1.0/api/group_post_threads" SEOKeyword="Create thread, Microsoft Graph API, Groups API" SEODescription="Use this API to create a new thread."></Item>
         <Item text="List accepted senders" url="api-reference/v1.0/api/group_list_acceptedsenders" SEOKeyword="List acceptedSenders, Microsoft Graph API, Groups API" SEODescription="Retrieve a list of directoryobject objects."></Item>
         <Item text="Create accepted sender" url="api-reference/v1.0/api/group_post_acceptedsenders" SEOKeyword="Create acceptedSender, Microsoft Graph API, Groups API" SEODescription="Use this API to create a new acceptedSender."></Item>
         <Item text="List rejected senders" url="api-reference/v1.0/api/group_list_rejectedsenders" SEOKeyword="List rejectedSenders, Microsoft Graph API, Groups API" SEODescription="Retrieve a list of directoryobject objects."></Item>
@@ -314,6 +314,23 @@
         <Item text="Forward post" url="api-reference/v1.0/api/post_forward" SEOKeyword="post: forward, Microsoft Graph API, post API" SEODescription=""></Item>
         <Item text="List post attachments" url="api-reference/v1.0/api/post_list_attachments" SEOKeyword="List post attachments, Microsoft Graph API, Outlook conversation API" SEODescription="Retrieve a list of attachment objects."></Item>
         <Item text="Create post attachment" url="api-reference/v1.0/api/post_post_attachments" SEOKeyword="Create post attachment, Microsoft Graph API, Outlook conversation API" SEODescription="Use this API to create a new Attachment."></Item>
+      </Item>
+      <Item text="calendar" url="api-reference/v1.0/resources/event" SEOKeyword="group calendar, Microsoft Graph API, group API" SEODescription="">
+        <Item text="List events" url="api-reference/v1.0/api/group_list_events" SEOKeyword="List events, Microsoft Graph API, Groups API" SEODescription="Retrieve a list of event objects."></Item>
+        <Item text="Create event" url="api-reference/v1.0/api/group_post_events" SEOKeyword="Create event, Microsoft Graph API, Groups API" SEODescription="Use this API to create a new Event."></Item>
+        <Item text="List calendar view" url="api-reference/v1.0/api/group_list_calendarview" SEOKeyword="List calendarView, Microsoft Graph API, Groups API" SEODescription="Retrieve a list of event objects."></Item>
+        <Item text="Create calendar view" url="api-reference/v1.0/api/group_post_calendarview" SEOKeyword="Create calendarView, Microsoft Graph API, Groups API" SEODescription="Use this API to create a new Event."></Item>
+      </Item>
+      <Item text="drive" url="api-reference/v1.0/resources/drive" SEOKeyword="user drive, Microsoft Graph API, user API" SEODescription="">
+        <Item text="Get drive" url="api-reference/v1.0/api/drive_get" SEOKeyword="Get drive, Microsoft Graph API, drive API" SEODescription="Retrieve the properties and relationships of drive object."></Item>
+        <Item text="List children" url="api-reference/v1.0/api/item_list_children" SEOKeyword="List items, Microsoft Graph API, drive API" SEODescription="Retrieve a list of item objects."></Item>
+      </Item>
+      <Item text="directory objects" url="api-reference/v1.0/resources/directoryobjects" SEOKeyword="group directory objects, Microsoft Graph API, group API" SEODescription="">
+        <Item text="List memberOf" url="api-reference/v1.0/api/group_list_memberof" SEOKeyword="List memberOf, Microsoft Graph API, Groups API" SEODescription="Retrieve a list of directoryobject objects."></Item>
+        <Item text="Create memberOf" url="api-reference/v1.0/api/group_post_memberof" SEOKeyword="Create memberOf, Microsoft Graph API, Groups API" SEODescription="Use this API to create a new memberOf."></Item>
+        <Item text="Get member objects" url="api-reference/v1.0/api/group_getmemberobjects" SEOKeyword="group: getMemberObjects, Microsoft Graph API, group API" SEODescription=""></Item>
+        <Item text="Get member groups" url="api-reference/v1.0/api/group_getmembergroups" SEOKeyword="group: getMemberGroups, Microsoft Graph API, group API" SEODescription=""></Item>
+        <Item text="Check member groups" url="api-reference/v1.0/api/group_checkmembergroups" SEOKeyword="group: checkMemberGroups, Microsoft Graph API, group API" SEODescription=""></Item>
       </Item>
     </Item>
     <Item text="Directory" url="api-reference/v1.0/resources/directoryobject" SEOKeyword="Directory API, Microsoft Graph API, Directory API" SEODescription="Represents an Azure Active Directory object. The DirectoryObject type is the base type for most of the other directory entity types.">
