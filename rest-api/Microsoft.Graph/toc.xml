@@ -747,7 +747,7 @@
         <Item text="Update photo" url="api-reference/v1.0/api/photo_update" SEOKeyword="Update photo, Microsoft Graph API, photo API" SEODescription="Update the properties of photo object."></Item>
         <Item text="Delete photo" url="api-reference/v1.0/api/photo_delete" SEOKeyword="Delete photo, Microsoft Graph API, photo API" SEODescription="Delete photo."></Item>
       </Item>
-     <Item text="conversation" url="api-reference/beta/resources/conversation" SEOKeyword="conversation API, Microsoft Graph API, conversation API" SEODescription="">
+     <Item text="conversations" url="api-reference/beta/resources/conversation" SEOKeyword="conversation API, Microsoft Graph API, conversation API" SEODescription="">
         <Item text="List conversations" url="api-reference/beta/api/group_list_conversations" SEOKeyword="List conversations, Microsoft Graph API, Groups API" SEODescription="Retrieve a list of conversation objects."></Item>
         <Item text="Create conversation" url="api-reference/beta/api/group_post_conversations" SEOKeyword="Create Conversation, Microsoft Graph API, Groups API" SEODescription="Use this API to create a new Conversation."></Item>
         <Item text="Get group conversation" url="api-reference/beta/api/conversation_get" SEOKeyword="Get group conversation, Microsoft Graph API, Outlook conversation API" SEODescription="Retrieve the properties and relationships of conversation object."></Item>
