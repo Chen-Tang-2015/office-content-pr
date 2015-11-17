@@ -571,8 +571,8 @@
         <Item text="Create subscription" url="api-reference/beta/api/subscription_post_subscription" SEOKeyword="Create subscriptions, Microsoft Graph API, webhoooks API" SEODescription="Use this API to create a new subscription."></Item>
       </Item>
     </Item>
-    <Item text="Excel" url="api-reference/beta/resources/excel" SEOKeyword="webhoooks API, Microsoft Graph API, webhoooks API" SEODescription="">
-      <Item text="Excel" url="api-reference/beta/resources/excel" SEOKeyword="webhoooks API, Microsoft Graph API, webhoooks API" SEODescription=""></Item>
+    <Item text="Excel" url="api-reference/beta/resources/excel" SEOKeyword="Excel API, Microsoft Graph API, Excel API" SEODescription="">
+      <Item text="Excel" url="api-reference/beta/resources/excel" SEOKeyword="Excel API, Microsoft Graph API, Excel API" SEODescription=""></Item>
     </Item>
     <Item text="OneDrive" url="api-reference/beta/resources/drive" SEOKeyword="OneDrive Drive API, Microsoft Graph API, OneDrive Drive API" SEODescription="The Drive resource represents a drive in OneDrive. It provides information about the owner of the drive, total and available storage space, and exposes a collection of all the Itemsitem-resource contained within the drive.">
       <Item text="drive" url="api-reference/beta/resources/drive" SEOKeyword="drive API, Microsoft Graph API, drive API" SEODescription="The drive resource represents a OneDrive">
