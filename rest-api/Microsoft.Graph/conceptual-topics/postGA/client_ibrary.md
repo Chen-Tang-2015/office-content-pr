@@ -13,10 +13,10 @@ In this article:
 
 <a name="msg_using_client_lib"> </a>  -->
 
-```no-highlight
-|  ![](./images/GitHub-Mark-64px.png) | **Contribute to this content** <br /> Use GitHub to [suggest changes](https://github.com/OfficeDev/microsoft-graph-docs).  |
+|```  ![](./images/GitHub-Mark-64px.png) ```| ``` **Contribute to this content** <br /> Use GitHub to [suggest changes](https://github.com/OfficeDev/microsoft-graph-docs).  
+```|
 |---|:---|
-```
+
 
 ## Using the .NET client library
 A Microsoft Graph API native app uses the Microsoft Graph API client library to access and manipulate the API resources. 
