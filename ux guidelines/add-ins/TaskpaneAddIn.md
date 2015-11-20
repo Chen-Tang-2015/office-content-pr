@@ -12,7 +12,7 @@ Create a consistent look and feel for task pane add-ins by using the recommended
 - Navigation element (optional) - Include a navigation bar or pivot in a bar under the brand element, if you're using one, with a maximum height of 80 pixels.
 - Add-in content
 
-![Layout of a task pane add-in, showing branding, navigation, and content elements](images/layouts_taskpane_v0.01.png)
+![Layout of a task pane add-in, showing branding, navigation, and content elements](images/layouts_taskpane_v0.02.png)
 
 You can also add [custom HTML-based UI](UIElements.md#custom-HTML-based-UI) to your task pane add-in.
 
