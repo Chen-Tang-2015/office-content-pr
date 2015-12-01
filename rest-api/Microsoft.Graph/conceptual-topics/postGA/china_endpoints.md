@@ -14,7 +14,7 @@ The Microsoft Graph API resources and related services for Office 365 operated b
 |:-----|:-----|
 |`https://account.windowsazure.cn` | `https://account.windowsazure.com` |
 
-Go to `https://account.windowszaure.cn` to set up the development environment for Office 365 for China.   For more information, see [Set up your Office 365 development environment](..\howto\setup-development-environment.md).
+Go to `https://account.windowszaure.cn` to set up the development environment for Office 365 for China.   For more information, see [Associate your Office 365 account with Azure AD](http://graph.microsoft.io/docs/authorization/associate_account).
 
 ## Azure OpenId Connect and OAuth
 
