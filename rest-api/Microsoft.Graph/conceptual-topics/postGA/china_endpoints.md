@@ -1,4 +1,4 @@
-# Microsoft Graph API endpoints for China
+# Microsoft Graph endpoint for China
 
  _**Applies to:**  Office 365 for China operated by 21Vianet_
 
