@@ -11,15 +11,12 @@ You can use two types of UI elements in your Office Add-ins:
 - Add-in commands 
 - Custom HTML-based interfaces
 
-![An image showing add-in commands and custom HTML UI elements in an add-in](images/UI-Elements.png)
- 
-
 ##Add-in commands
-Commands are defined in the [add-in XML manifest](https://msdn.microsoft.com/EN-US/library/office/mt267547.aspx) and are rendered as native UX extensions to the Office UI. For example, you can use commands to add buttons to the Office Ribbon. 
+Commands are defined in the [add-in XML manifest](https://msdn.microsoft.com/EN-US/library/office/mt267547.aspx) and are rendered as native UX extensions to the Office UI. For example, you can use add-in commands to add buttons to the Office ribbon. 
 
-Currently, add-in commands are only supported for mail add-ins. To learn more, see [Add-in commmands for mail](https://msdn.microsoft.com/EN-US/library/office/mt267546.aspx?f=255&MSPPError=-2147217396). The image below shows an [emoji sample](https://github.com/LezaMax/emoji) add-in.
- 
-![An image that shows add-in commands added to the Outlook ribbon](images/add-in-commands.png)
+![An image showing add-in commands and custom HTML UI elements in an add-in](images/layouts_addInCommands_v0.01.png)
+
+Currently, add-in commands are only supported for mail add-ins. To learn more, see [Add-in commmands for mail](https://msdn.microsoft.com/EN-US/library/office/mt267546.aspx?f=255&MSPPError=-2147217396). 
 
 Excel, PowerPoint, and Word have predefined entry points for task pane and content add-ins on the Insert tab in the Office ribbon. Custom command functionality for content and task pane add-ins will be available soon. 
 

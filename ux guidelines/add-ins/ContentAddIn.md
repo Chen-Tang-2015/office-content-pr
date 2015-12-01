@@ -10,8 +10,9 @@ Create a consistent look and feel for your content add-ins by using the recommen
 
 - Add-in content
 - Command bar (optional) - Includes icons or navigation for users, and can overlay the add-in content. The maximum height is 80 pixels.
+- Branding element (optional)
 
-![Layout of a content add-in, content and a command bar](images/content-add-in.png)
+![Layout of a content add-in, content and a command bar](images/layouts_content_v0.02.png)
 
 You can also add [custom HTML-based UI](UIElements.md#custom-HTML-based-UI) to your content add-in.
 
