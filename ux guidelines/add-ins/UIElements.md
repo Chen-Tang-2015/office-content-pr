@@ -14,7 +14,7 @@ You can use two types of UI elements in your Office Add-ins:
 ##Add-in commands
 Commands are defined in the [add-in XML manifest](https://msdn.microsoft.com/EN-US/library/office/mt267547.aspx) and are rendered as native UX extensions to the Office UI. For example, you can use add-in commands to add buttons to the Office ribbon. 
 
-![An image showing add-in commands and custom HTML UI elements in an add-in](images/layouts_addInCommands_v0.01.png)
+![An image showing add-in commands and custom HTML UI elements in an add-in](images/layouts_addInCommands_v0.03.png)
 
 Currently, add-in commands are only supported for mail add-ins. To learn more, see [Add-in commmands for mail](https://msdn.microsoft.com/EN-US/library/office/mt267546.aspx?f=255&MSPPError=-2147217396). 
 
