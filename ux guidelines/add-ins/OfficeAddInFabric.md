@@ -43,6 +43,4 @@ For example, to use the SearchBox component:
 
 
 ##Next steps
-If you're looking for end-to-end samples that show you how to use Fabric, we've got you covered. See the following:
-
-- [Office Add-in Fabric UI sample](https://github.com/OfficeDev/Office-Add-in-Fabric-UI-Sample)
+If you're looking for end-to-end samples that show you how to use Fabric, we've got you covered. See the [Office Add-in Fabric UI sample](https://github.com/OfficeDev/Office-Add-in-Fabric-UI-Sample). You can also explore the interactive [Office UI Fabric](http://dev.office.com/fabric) website.
