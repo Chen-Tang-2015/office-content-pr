@@ -25,19 +25,21 @@ Excel, PowerPoint, and Word have predefined entry points for task pane and conte
 ##Custom HTML-based UI
 Add-ins can embed custom HTML-based UI within Office clients. The containers that are available to display the UI vary based on the type of add-in. For example, task pane add-ins display custom HTML-based UI in the right pane of the document; content add-ins display the custom UI directly within Office documents.
 
-Regardless of the type of add-in you create, you can use common building blocks to create custom HTML-based UI. We recommend that you use Office UI Fabric for these UI elements so that your add-in integrates with the Office look and feel. You are also welcome to use your own UI elements to express your own brand.
+Regardless of the type of add-in you create, you can use common building blocks to create custom HTML-based UI. We recommend that you use [Office UI Fabric](http://dev.office.com/fabric) for these UI elements so that your add-in integrates with the Office look and feel. You are also welcome to use your own UI elements to express your own brand.
 
 Office UI Fabric provides the following UI elements:
 
-- [Typography](https://github.com/OfficeDev/Office-UI-Fabric/blob/master/ghdocs/FEATURES.md#typography)
-- [Color](https://github.com/OfficeDev/Office-UI-Fabric/blob/master/ghdocs/FEATURES.md#color)
-- [Icons](https://github.com/OfficeDev/Office-UI-Fabric/blob/master/ghdocs/FEATURES.md#icons)
-- [Animations](https://github.com/OfficeDev/Office-UI-Fabric/blob/master/ghdocs/FEATURES.md#animations)
-- [Input components](https://github.com/OfficeDev/Office-UI-Fabric/blob/master/ghdocs/COMPONENTS.md#inputs)
-- [Layouts](https://github.com/OfficeDev/Office-UI-Fabric/blob/master/ghdocs/COMPONENTS.md#layout) 
-- [Navigation elements](https://github.com/OfficeDev/Office-UI-Fabric/blob/master/ghdocs/COMPONENTS.md#navigation)
+- Typography
+- Color
+- Icons
+- Animations
+- Input components
+- Layouts
+- Navigation elements
 
-For a sample that shows how to use Office UI Fabric in Office Add-ins, see [Office Add-in Fabric UI Sample](https://github.com/OfficeDev/Office-Add-in-Fabric-UI-Sample).
+You can download [Office UI Fabric from Github](https://github.com/OfficeDev/Office-UI-Fabric).
+
+For a sample that shows how to use Office UI Fabric in add-ins, see [Office Add-in Fabric UI Sample](https://github.com/OfficeDev/Office-Add-in-Fabric-UI-Sample).
 
 **Note:** If you decide to use your own set of fonts and icons, make sure they don't conflict with those of Office. For example, don't use icons that are the same as or similar to those in Office, but represent something different in your add-in. 
 
