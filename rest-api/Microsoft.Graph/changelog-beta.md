@@ -19,7 +19,7 @@
 ## Graph Services
 ### Added
 * Return authorization_uri in www-authenticate header on a 401 response.  This can be used to start the token acquisition flow. 
-* Improved error messages across users and groups
+* Improved error messages across users and groups.
 
 ### Fixed
 * Fixed the following group actions: `Microsoft.Graph.addFavorite`, `Microsoft.Graph.removeFavorite` and `microsoft.graph.resetUnseenCount`.
