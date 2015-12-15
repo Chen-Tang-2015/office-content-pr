@@ -23,6 +23,10 @@
 
 ### Fixed
 * Fixed the following group actions: `Microsoft.Graph.addFavorite`, `Microsoft.Graph.removeFavorite` and `microsoft.graph.resetUnseenCount`.
+
+
+
+
 --------------------------------------------------------------------------------
 # Date (Current Date)
 ## Area (Mail, User etc and this will be used as tag)
