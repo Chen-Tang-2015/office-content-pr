@@ -24,8 +24,15 @@
 ### Fixed
 * Fixed the following group actions: `Microsoft.Graph.addFavorite`, `Microsoft.Graph.removeFavorite` and `microsoft.graph.resetUnseenCount`.
 
-
-
+# Dec 16th, 2015
+## Graph Services
+### Fixed
+- TFS 206306: Property renaming not working for action call parameters being collections of objects (e.g. message.forward)
+- Fixed Error for Notifications delete case
+- TFS 204870: Unable to resolve User Id error when selecting another users's SPO UPA properties, using UPN
+https://graph.microsoft.com/v1.0/users/not_you@microsoft.com?$select=aboutMe
+- TFS 207068: User bound functions are called with $select=default_user_properties. 
+- TFS 207163: $filter expressions using the same renamed property more than once cause a 500/"An item with the same key has already been added"
 
 --------------------------------------------------------------------------------
 # Date (Current Date)
