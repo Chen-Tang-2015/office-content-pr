@@ -24,7 +24,7 @@
 ### Fixed
 * Fixed the following group actions: `Microsoft.Graph.addFavorite`, `Microsoft.Graph.removeFavorite` and `microsoft.graph.resetUnseenCount`.
 
-# Dec 16th, 2015
+# Dec 17th, 2015
 ## Graph Services
 ### Fixed
 - TFS 206306: Property renaming not working for action call parameters being collections of objects (e.g. message.forward)
