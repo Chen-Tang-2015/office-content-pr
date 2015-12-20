@@ -1,14 +1,14 @@
 <Menu>
   <Item text="Overview" url="overview/overview" SEOKeyword="Overview, Microsoft Graph API, Overview" SEODescription="Microsoft Graph allows applications to access digital work and digital life data across the intelligent Microsoft cloud. Big advantages for developers: A Unified Microsoft API endpoint for accessing data, intelligence and insights coming from the Microsoft cloud.">
     <Item text="Call the API" url="overview/call_api" SEOKeyword="Call the API, Microsoft Graph API, Overview" SEODescription="Answers to some frequently-asked questions about the Microsoft Graph." />
-    <Item text="Query Parameters" url="overview/query_parameters" SEOKeyword="Query parameters, Microsoft Graph API, Overview" SEODescription="Microsoft Graph is OData v4 compliant, provides information about supported OData query parameters" />
+    <Item text="Query parameters" url="overview/query_parameters" SEOKeyword="Query parameters, Microsoft Graph API, Overview" SEODescription="Microsoft Graph is OData v4 compliant, provides information about supported OData query parameters" />
     <Item text="Paging" url="overview/paging" SEOKeyword="Paging, Microsoft Graph API, Overview" SEODescription="implementing paging in the Microsoft Graph" />
     <Item text="Errors" url="overview/errors" SEOKeyword="Errors, Microsoft Graph API, Overview" SEODescription="Errors in the Microsoft Graph API service are returned using standard HTTP status codes, as well as a JSON error response object."/>
-    <Item text="Release Notes" url="overview/release_notes" SEOKeyword="Release Notes, Microsoft Graph API, Overview" SEODescription="New features for developers that are available in the November 2015 release of the Microsoft Graph API, as well as any known issues."/>
+    <Item text="Release notes" url="overview/release_notes" SEOKeyword="Release Notes, Microsoft Graph API, Overview" SEODescription="New features for developers that are available in the November 2015 release of the Microsoft Graph API, as well as any known issues."/>
     <Item text="FAQs" url="overview/faqs" SEOKeyword="FAQs, Microsoft Graph API, Overview" SEODescription="Answers to some frequently-asked questions about the Microsoft Graph." />
   </Item>
   <Item text="Authorization" url="authorization/app_authorization">
-    <Item text="Permission Scopes" url="authorization/permission_scopes" SEOKeyword="Permission Scopes, Microsoft Graph API, Overview" SEODescription="The Microsoft Graph API exposes OAuth 2.0 permission scopes that are used to control access that an app has to data. As a developer, you configure your app with the permission scopes appropriate to the access that it requires, typically by using the Azure portal."/>
+    <Item text="Permission scopes" url="authorization/permission_scopes" SEOKeyword="Permission Scopes, Microsoft Graph API, Overview" SEODescription="The Microsoft Graph API exposes OAuth 2.0 permission scopes that are used to control access that an app has to data. As a developer, you configure your app with the permission scopes appropriate to the access that it requires, typically by using the Azure portal."/>
     <Item text="Associate Office 365 account" url="authorization/associate_account" SEOKeyword="Associate Office 365 account, Microsoft Graph API, Overview" SEODescription="Use the management portal in Microsoft Azure to manage users, roles, and apps for Office 365."/>
     <Item text="Converged auth (preview)" url="authorization/converged_auth" SEOKeyword="Converged app model, Microsoft Graph API, Overview" SEODescription="The converged authentication model preview enables you to create apps that accept both work and school (Azure AD) as well as personal (Microsoft account) identities." />
   </Item>
@@ -33,9 +33,8 @@
         <Item text="Delete user" url="api-reference/v1.0/api/user_delete" SEOKeyword="Delete user, Microsoft Graph API, user API" SEODescription="Delete user."></Item>
       </Item>
       <Item text="photo" url="api-reference/v1.0/resources/profilephoto" SEOKeyword="user people, Microsoft Graph API, user API" SEODescription="">
-        <Item text="Get photo" url="api-reference/v1.0/api/photo_get" SEOKeyword="Get photo, Microsoft Graph API, photo API" SEODescription="Retrieve the properties and relationships of photo object."></Item>
-        <Item text="Update photo" url="api-reference/v1.0/api/photo_update" SEOKeyword="Update photo, Microsoft Graph API, photo API" SEODescription="Update the properties of photo object."></Item>
-        <Item text="Delete photo" url="api-reference/v1.0/api/photo_delete" SEOKeyword="Delete photo, Microsoft Graph API, photo API" SEODescription="Delete photo."></Item>
+        <Item text="Get photo" url="api-reference/v1.0/api/profilephoto_getphoto_get" SEOKeyword="Get photo, Microsoft Graph API, photo API" SEODescription="Retrieve the properties and relationships of photo object."></Item>
+        <Item text="Update photo" url="api-reference/v1.0/api/profilephoto_getphoto_update" SEOKeyword="Update photo, Microsoft Graph API, photo API" SEODescription="Update the properties of photo object."></Item>
       </Item>
       <Item text="mail" url="api-reference/v1.0/resources/message" SEOKeyword="user mail, Microsoft Graph API, user API" SEODescription="">
         <Item text="List messages" url="api-reference/v1.0/api/user_list_messages" SEOKeyword="List messages, Microsoft Graph API, Users API" SEODescription="Retrieve a list of message objects."></Item>
@@ -279,10 +278,9 @@
         <Item text="Unsubscribe by mail" url="api-reference/v1.0/api/group_unsubscribebymail" SEOKeyword="group: unsubscribeByMail, Microsoft Graph API, group API" SEODescription=""></Item>
         <Item text="Reset unseen count" url="api-reference/v1.0/api/group_resetunseencount" SEOKeyword="group: resetUnseenCount, Microsoft Graph API, group API" SEODescription=""></Item>
       </Item>
-      <Item text="photo" url="api-reference/v1.0/resources/profilepicture" SEOKeyword="group photo, Microsoft Graph API, group API" SEODescription="">
-        <Item text="Get photo" url="api-reference/v1.0/api/photo_get" SEOKeyword="Get photo, Microsoft Graph API, photo API" SEODescription="Retrieve the properties and relationships of photo object."></Item>
-        <Item text="Update photo" url="api-reference/v1.0/api/photo_update" SEOKeyword="Update photo, Microsoft Graph API, photo API" SEODescription="Update the properties of photo object."></Item>
-        <Item text="Delete photo" url="api-reference/v1.0/api/photo_delete" SEOKeyword="Delete photo, Microsoft Graph API, photo API" SEODescription="Delete photo."></Item>
+      <Item text="photo" url="api-reference/v1.0/resources/profilephoto" SEOKeyword="group photo, Microsoft Graph API, group API" SEODescription="">
+        <Item text="Get photo" url="api-reference/v1.0/api/profilephoto_getphoto_get" SEOKeyword="Get photo, Microsoft Graph API, photo API" SEODescription="Retrieve the properties and relationships of photo object."></Item>
+        <Item text="Update photo" url="api-reference/v1.0/api/profilephoto_getphoto_update" SEOKeyword="Update photo, Microsoft Graph API, photo API" SEODescription="Update the properties of photo object."></Item>
       </Item>
       <Item text="conversations" url="api-reference/v1.0/resources/conversation" SEOKeyword="group conversations, Microsoft Graph API, group API" SEODescription="">
         <Item text="List conversations" url="api-reference/v1.0/api/group_list_conversations" SEOKeyword="List conversations, Microsoft Graph API, Groups API" SEODescription="Retrieve a list of conversation objects."></Item>
@@ -372,10 +370,8 @@
       </Item>
       <Item text="subscribed sku" url="api-reference/v1.0/resources/subscribedsku" SEOKeyword="subscribedsku API, Microsoft Graph API, subscribedsku API" SEODescription="Only the read operation is supported on subscribed SKUs; create, update, and delete are not supported. Query filter expressions are not supported. Inherits from DirectoryObject.">
         <Item text="List subscribedSkus" url="api-reference/v1.0/api/subscribedsku_list" SEOKeyword="List subscribedSkus, Microsoft Graph API, subscribedsku API" SEODescription="Retrieve a list of subscribedsku objects."></Item>
-        <Item text="Create SubscribedSku" url="api-reference/v1.0/api/subscribedsku_post_subscribedskus" SEOKeyword="Create SubscribedSku, Microsoft Graph API, subscribedsku API" SEODescription="Use this API to create a new SubscribedSku."></Item>
+        <Item text="Create subscribedSku" url="api-reference/v1.0/api/subscribedsku_post_subscribedskus" SEOKeyword="Create SubscribedSku, Microsoft Graph API, subscribedsku API" SEODescription="Use this API to create a new SubscribedSku."></Item>
         <Item text="Get subscribedSku" url="api-reference/v1.0/api/subscribedsku_get" SEOKeyword="Get subscribedSku, Microsoft Graph API, subscribedsku API" SEODescription="Retrieve the properties and relationships of subscribedsku object."></Item>
-        <Item text="Update subscribedsku" url="api-reference/v1.0/api/subscribedsku_update" SEOKeyword="Update subscribedsku, Microsoft Graph API, subscribedsku API" SEODescription="Update the properties of subscribedsku object."></Item>
-        <Item text="Delete subscribedSku" url="api-reference/v1.0/api/subscribedsku_delete" SEOKeyword="Delete subscribedSku, Microsoft Graph API, subscribedsku API" SEODescription="Delete subscribedSku."></Item>
       </Item>
     </Item>
   </Item>
@@ -389,9 +385,8 @@
         <Item text="Delete user" url="api-reference/beta/api/user_delete" SEOKeyword="Delete user, Microsoft Graph API, user API" SEODescription="Delete user."></Item>
       </Item>
       <Item text="photo" url="api-reference/beta/resources/profilephoto" SEOKeyword="user people, Microsoft Graph API, user API" SEODescription="">
-        <Item text="Get photo" url="api-reference/v1.0/api/photo_get" SEOKeyword="Get photo, Microsoft Graph API, photo API" SEODescription="Retrieve the properties and relationships of photo object."></Item>
-        <Item text="Update photo" url="api-reference/v1.0/api/photo_update" SEOKeyword="Update photo, Microsoft Graph API, photo API" SEODescription="Update the properties of photo object."></Item>
-        <Item text="Delete photo" url="api-reference/v1.0/api/photo_delete" SEOKeyword="Delete photo, Microsoft Graph API, photo API" SEODescription="Delete photo."></Item>
+        <Item text="Get photo" url="api-reference/v1.0/api/profilephoto_getphoto_get" SEOKeyword="Get photo, Microsoft Graph API, photo API" SEODescription="Retrieve the properties and relationships of photo object."></Item>
+        <Item text="Update photo" url="api-reference/v1.0/api/profilephoto_getphoto_update" SEOKeyword="Update photo, Microsoft Graph API, photo API" SEODescription="Update the properties of photo object."></Item>
       </Item>
       <Item text="mail" url="api-reference/beta/resources/message" SEOKeyword="user mail, Microsoft Graph API, user API" SEODescription="">
         <Item text="List messages" url="api-reference/beta/api/user_list_messages" SEOKeyword="List messages, Microsoft Graph API, Users API" SEODescription="Retrieve a list of message objects."></Item>
@@ -745,10 +740,9 @@
         <Item text="Unsubscribe by mail" url="api-reference/beta/api/group_unsubscribebymail" SEOKeyword="group: unsubscribeByMail, Microsoft Graph API, group API" SEODescription=""></Item>
         <Item text="Reset unseen count" url="api-reference/beta/api/group_resetunseencount" SEOKeyword="group: resetUnseenCount, Microsoft Graph API, group API" SEODescription=""></Item>
       </Item>
-      <Item text="photo" url="api-reference/beta/resources/profilepicture" SEOKeyword="group photo, Microsoft Graph API, group API" SEODescription="">
-        <Item text="Get photo" url="api-reference/v1.0/api/photo_get" SEOKeyword="Get photo, Microsoft Graph API, photo API" SEODescription="Retrieve the properties and relationships of photo object."></Item>
-        <Item text="Update photo" url="api-reference/v1.0/api/photo_update" SEOKeyword="Update photo, Microsoft Graph API, photo API" SEODescription="Update the properties of photo object."></Item>
-        <Item text="Delete photo" url="api-reference/v1.0/api/photo_delete" SEOKeyword="Delete photo, Microsoft Graph API, photo API" SEODescription="Delete photo."></Item>
+      <Item text="photo" url="api-reference/beta/resources/profilephoto" SEOKeyword="group photo, Microsoft Graph API, group API" SEODescription="">
+        <Item text="Get photo" url="api-reference/v1.0/api/profilephoto_getphoto_get" SEOKeyword="Get photo, Microsoft Graph API, photo API" SEODescription="Retrieve the properties and relationships of photo object."></Item>
+        <Item text="Update photo" url="api-reference/v1.0/api/profilephoto_getphoto_update" SEOKeyword="Update photo, Microsoft Graph API, photo API" SEODescription="Update the properties of photo object."></Item>
       </Item>
       <Item text="conversations" url="api-reference/beta/resources/conversation" SEOKeyword="conversation API, Microsoft Graph API, conversation API" SEODescription="">
         <Item text="List conversations" url="api-reference/beta/api/group_list_conversations" SEOKeyword="List conversations, Microsoft Graph API, Groups API" SEODescription="Retrieve a list of conversation objects."></Item>
@@ -894,10 +888,8 @@
       </Item>
       <Item text="subscribed sku" url="api-reference/beta/resources/subscribedsku" SEOKeyword="subscribedsku API, Microsoft Graph API, subscribedsku API" SEODescription="Only the read operation is supported on subscribed SKUs; create, update, and delete are not supported. Query filter expressions are not supported. Inherits from DirectoryObject.">
         <Item text="List subscribedSkus" url="api-reference/beta/api/subscribedsku_list" SEOKeyword="List subscribedSkus, Microsoft Graph API, subscribedsku API" SEODescription="Retrieve a list of subscribedsku objects."></Item>
-        <Item text="Create SubscribedSku" url="api-reference/beta/api/subscribedsku_post_subscribedskus" SEOKeyword="Create SubscribedSku, Microsoft Graph API, subscribedsku API" SEODescription="Use this API to create a new SubscribedSku."></Item>
+        <Item text="Create subscribedSku" url="api-reference/beta/api/subscribedsku_post_subscribedskus" SEOKeyword="Create SubscribedSku, Microsoft Graph API, subscribedsku API" SEODescription="Use this API to create a new SubscribedSku."></Item>
         <Item text="Get subscribedSku" url="api-reference/beta/api/subscribedsku_get" SEOKeyword="Get subscribedSku, Microsoft Graph API, subscribedsku API" SEODescription="Retrieve the properties and relationships of subscribedsku object."></Item>
-        <Item text="Update subscribedsku" url="api-reference/beta/api/subscribedsku_update" SEOKeyword="Update subscribedsku, Microsoft Graph API, subscribedsku API" SEODescription="Update the properties of subscribedsku object."></Item>
-        <Item text="Delete subscribedSku" url="api-reference/beta/api/subscribedsku_delete" SEOKeyword="Delete subscribedSku, Microsoft Graph API, subscribedsku API" SEODescription="Delete subscribedSku."></Item>
       </Item>
     </Item>
   </Item>
