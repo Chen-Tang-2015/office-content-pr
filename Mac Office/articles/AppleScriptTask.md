@@ -19,8 +19,11 @@ The corresponding AppleScript for Excel would be in a file named "MyAppleScriptF
 Note: The [bundle id]s for Mac Word, Excel and PowerPoint are:
 
 com.microsoft.Word
+
 com.microsoft.Excel
+
 com.microsoft.Powerpoint
+
 An example of a handler is as follows:
 
 ```
