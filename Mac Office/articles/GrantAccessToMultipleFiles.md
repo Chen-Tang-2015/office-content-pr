@@ -9,14 +9,18 @@ This command lets you input an array of file paths and prompt the user for permi
 ```
 Boolean  GrantAccessToMultipleFiles(fileArray) 
 ```
-Parameters 
-fileArray  An array of POSIX file paths.
+|**Parameter**|**Description**|
+|:-----|:-----|
+|**fileArray**|**An array of POSIX file paths**||
 
-Return values
-True   The user grants permission to the files. 
-False  The user denies permission to the files. 
+The command returns whether the user granted permission or not. <br>
 
-Note Once permissions are granted, they’re stored with the app and the user doesn’t need to grant permission to the particular file anymore. 
+|**Return value**|**Description**|
+|:-----|:-----|
+|**True**|**The user grants permission to the files**|
+|**False**|**The user denies permission to the files**|
+
+Note: Once permissions are granted, they’re stored with the app and the user doesn’t need to grant permission to the particular file anymore. 
 
 Example:
 ```
