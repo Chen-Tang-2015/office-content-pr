@@ -12,7 +12,7 @@ In addition to sandbox, there are a some other small and big differences between
 We plan to use this space to document any such differences with the aim to help you enable your solutions for Office 2016 for Mac and make them cross-platform. Please note that most VBA paradigms and commands remain the same betweeen all version of Office including Office 2016 for Mac and hence please continue to reference the respective pages for Word, Excel and PowerPoint for general documentation.
 
 
-- Ramit Arora<br>
+Ramit Arora<br>
 Program Manager<br>
 Office Core PM<br>
 Microsoft Corporation
