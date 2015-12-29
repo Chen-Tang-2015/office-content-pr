@@ -13,10 +13,3 @@ Please note that most VBA paradigms and commands remain the same betweeen all ve
 * [GrantAccessToMultipleFiles](GrantAccessToMultipleFiles.md) - Let's you requesting user's permission to access multiple files at once
 * [AppleScriptTask](AppleScriptTask.md) - Let's you call externally located AppleScript scripts from VB
 * [MAC_OFFICE_VERSION](MacOfficeVersion.md) - Let's you IFDEF between different Mac Office versions at compile time
-
-
-Thanks for reading this far! <br>
-Ramit Arora<br>
-Program Manager<br>
-Office Core PM<br>
-Microsoft Corporation
