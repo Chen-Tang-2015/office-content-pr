@@ -1,5 +1,5 @@
 #Introduction
-All you need to know about Office 2016 for Mac. <br>
+This section talks about what you need to know about Office 2016 for Mac Apps when developing VB Macros and/or Add-ins. 
 Please note that when we talk about VBA and refer to Office 2016 for Mac, we are really only talking about Mac Word, Mac Excel and Mac PowerPoint as Mac Outlook and Mac OneNote do not support VBA. 
 
 ## Office 2016 for Mac is sandboxed
