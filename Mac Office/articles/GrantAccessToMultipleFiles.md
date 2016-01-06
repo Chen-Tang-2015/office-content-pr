@@ -1,28 +1,37 @@
-#Requesting user's permission to access multiple files at once
+#Request access to multiple files
 
-Unlike VB macros in Office for Mac 2011, VB macros in Office 2016 for Mac don’t have access to external files by default. The Office 2016 for Mac apps are sandboxed and so they lack the required permissions to access external files. 
+Use the **GrantAccessToMultipleFiles** command to request access to multiple files at once in your Office 2016 for Mac app.
 
-Existing macro file commands are changed to prompt the user for file access if the app doesn’t already have access to it. This means that macros that access external files cannot run unattended; they’ll need user interaction to approve file access the first time each file is referenced. You can use the GrantAccessToMultipleFiles command to minimize the number of prompts and make the experience better (see below). 
+**Last modified:** January 11, 2016 <!-- Update to reflect date published -->
 
-#GrantAccessToMultipleFiles
-This command lets you input an array of file paths and prompt the user for permission to access them.
+***Applies to:*** *Excel for Mac | PowerPoint for Mac | Word for Mac | Office 2016 for Mac*
+
+Unlike VBA macros in Office for Mac 2011, VBA macros in Office 2016 for Mac don’t have access to external files by default. Because the Office 2016 for Mac apps are sandboxed, they do not have the permissions required to access external files. 
+
+Existing macro file commands prompt the user for permission to access a file if the app doesn’t have access to it. This means that macros that access external files cannot run unattended. They need user interaction to approve file access the first time each file is referenced. You can use the **GrantAccessToMultipleFiles** command to minimize the number of prompts to improve the user experience. 
+
+#GrantAccessToMultipleFiles command
+Use the **GrantAccessToMultipleFiles** command to input an array of file paths and prompt the user for permission to access them.
+
 ```
 Boolean  GrantAccessToMultipleFiles(fileArray) 
 ```
+
 |**Parameter**|**Description**|
 |:-----|:-----|
 |**fileArray**|**An array of POSIX file paths**||
 
-The command returns whether the user granted permission or not. <br>
+The command returns whether the user granted permission or not.
 
 |**Return value**|**Description**|
 |:-----|:-----|
-|**True**|**The user grants permission to the files**|
-|**False**|**The user denies permission to the files**|
+|**True**|**The user grants permission to the files.**|
+|**False**|**The user denies permission to the files.**|
 
-Note: Once permissions are granted, they’re stored with the app and the user doesn’t need to grant permission to the particular file anymore. 
+**Note:** After the user grants permissions, the permissions are stored with the app. The user doesn’t need to grant permission to the file again. 
 
-Example:
+**Example**
+
 ```
 Sub requestFileAccess()  
 
@@ -30,11 +39,11 @@ Sub requestFileAccess() 
     Dim fileAccessGranted As Boolean  
     Dim filePermissionCandidates 
   
- 'Create an array with file paths for which permissions are needed  
+ 'Create an array with file paths for the permissions that are needed.  
     filePermissionCandidates = Array("/Users//Desktop/test1.txt", "/Users//Desktop/test2.txt") 
   
-'Request access from user  
+'Request access from user.  
     fileAccessGranted = GrantAccessToMultipleFiles(filePermissionCandidates) 
-'returns true if access granted, otherwise, false 
+'Returns true if access is granted; otherwise, false. 
 End Sub
 ```
