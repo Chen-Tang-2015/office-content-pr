@@ -3,7 +3,7 @@
 
 Develop apps for Office for Mac by using VBA.
 
-**Last modified:** January 11, 2016 <!-- Update to reflect date published -->
+**Last modified:** January 11, 2016 
 
 ***Applies to:*** *Excel for Mac | PowerPoint for Mac | Word for Mac | Office 2016 for Mac*
 
@@ -15,7 +15,7 @@ If you're developing apps for Office for Mac, you can use most of the same objec
 
 **Note:** Outlook for Mac and OneNote for Mac do not support VBA. 
 
-Office for Mac apps do not support some of the idMSOs that Office for Windows supports. <!-- Link to content here when available. -->
+Office for Mac apps do not support some of the idMSOs that Office for Windows supports. 
 
 ##New VBA commands for Office 2016 for Mac
 

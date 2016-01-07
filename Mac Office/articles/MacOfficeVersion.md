@@ -1,13 +1,13 @@
-#Differentiate between Office versions at compile time
+#Differentiate between Office for Mac versions at compile time
 Use a version conditional to differentiate between Office for Mac 2011 and Office 2016 for Mac.
 
-**Last modified:** January 11, 2016 <!-- Update to reflect date published -->
+**Last modified:** January 11, 2016 
 
 ***Applies to:*** *Excel for Mac | PowerPoint for Mac | Word for Mac | Office 2016 for Mac*
 
 Office 2016 for Mac supports commands such as [GrantAccessToMultipleFiles](grantaccesstomultiplefiles.md) and [AppleScriptTask](AppleScriptTask.md) that are not supported in other versions of Office. If your solution targets multiple versions of Office, we recommend that you use conditional compilation.  
 
-**MAC_OFFICE_VERSION** determines which VB version the user is running. The following example shows how to use it in your code. 
+You can use **MAC_OFFICE_VERSION** to determine which version of VBA the user is running. The following example shows how to use it in your code. 
 
 ```
 Sub VersionConditionals()
