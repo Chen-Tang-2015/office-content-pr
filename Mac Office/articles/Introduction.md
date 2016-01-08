@@ -1,7 +1,7 @@
 
 #Migrating VB Add-ins and Macros to Office 2016 for Mac
 
-How to make Add-ins and Macros written for Windows Office run on Office 2016 for Mac
+How to make VB Add-ins and Macros written for Windows Office run on Office 2016 for Mac
 
 **Last modified:** January 11, 2016 
 
