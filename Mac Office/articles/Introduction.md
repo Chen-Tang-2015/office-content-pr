@@ -1,5 +1,5 @@
 
-#Developing cross-platform Add-ins and Macros
+#Migrating VB Add-ins and Macros to Office 2016 for Mac
 
 How to make Add-ins and Macros written for Windows Office run on Office 2016 for Mac
 
