@@ -1,4 +1,4 @@
-Home for Office 2016 for Mac specific VB content.
+Help content for developing Add-ins and Macros for Office 2016 for Mac
 <!--This is the start of the TOC-->
 # Table of contents
 - [Getting Started](articles/Introduction.md) - Talks about what you need to know about Office 2016 for Mac
