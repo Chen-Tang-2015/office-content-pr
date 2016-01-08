@@ -47,5 +47,7 @@ Office 2016 for Mac  supports Ribbon Customization using RibbonXML. However, the
 (ii) Office 2016 for Mac doesn't support third-party COM-Add-ins. No current plans to support these in the future. 
 
 ##idMSOs compatible with Office 2016 for Mac
-
-
+Follow links below to access idMSO tables
+- [Word for Mac](idMSOWordMac.md)
+- [Excel for Mac] (idMSOExcelMac.md)
+- [PowerPoint for Mac](idMSOPowerPointMac.md)
