@@ -1,4 +1,4 @@
-Content to help you migrate VBA Add-ins and Macros to Office 2016 for Mac
+Content to help you make your existing VBA Add-ins and Macros compatible with Office 2016 for Mac
 <!--This is the start of the TOC-->
 # Table of contents
 - [Getting Started](articles/Introduction.md) - Talks about what you need to know about Office 2016 for Mac
