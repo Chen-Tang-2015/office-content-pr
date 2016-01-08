@@ -1,5 +1,5 @@
 
-#Migrating VBA Add-ins and Macros to Office 2016 for Mac
+#Getting Started
 
 How to make VBA Add-ins and Macros written for Windows Office run on Office 2016 for Mac
 
