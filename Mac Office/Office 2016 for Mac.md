@@ -5,6 +5,6 @@ Content to help you make your existing VBA Add-ins and Macros compatible with Of
 - [GrantAccessToMultipleFiles](articles/GrantAccessToMultipleFiles.md) - Let's you requesting user's permission to access multiple files at once
 - [AppleScriptTask](articles/AppleScriptTask.md) - Let's you call externally located AppleScript scripts from VB
 - [MAC_OFFICE_VERSION](articles/MacOfficeVersion.md) - Let's you IFDEF between different Mac Office versions at compile time
-- [Word for Mac idMSOs](articles/idMSOWordMac.md) - idMSOs compatible with Word for Mac
-- [Excel for Mac idMSOs] (articles/idMSOExcelMac.md) - idMSOs compatible with Excel for Mac
-- [PowerPoint for Mac idMSOs](articles/idMSOPowerPointMac.md) - idMSOs compatible with PowerPoint for Mac
+- [Word for Mac idMSOs](articles/idMSOWordMac.md) - List of idMSOs compatible with Word for Mac
+- [Excel for Mac idMSOs] (articles/idMSOExcelMac.md) - List of idMSOs compatible with Excel for Mac
+- [PowerPoint for Mac idMSOs](articles/idMSOPowerPointMac.md) - List of idMSOs compatible with PowerPoint for Mac
