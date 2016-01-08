@@ -1,5 +1,5 @@
 
-#Developing cross platform VB Add-ins and Macros
+#Developing cross-platform VB Add-ins and Macros
 
 What you need to know about Office for Mac in order to make your Add-ins and Macros written for Windows Office run on Office 2016 for Mac
 
@@ -7,7 +7,7 @@ What you need to know about Office for Mac in order to make your Add-ins and Mac
 
 ***Applies to:*** *Excel for Mac | PowerPoint for Mac | Word for Mac | Office 2016 for Mac*
 
-If you're developing apps for Office for Mac, you can use most of the same objects that are available in VBA for Office. For information about VBA for Excel, PowerPoint, and Word, see the following:
+If you're authoring Macros for Office for Mac, you can use most of the same objects that are available in VBA for Office. For information about VBA for Excel, PowerPoint, and Word, see the following:
 
 - [Excel VBA reference](https://msdn.microsoft.com/EN-US/library/ee861528.aspx)
 - [PowerPoint VBA reference](https://msdn.microsoft.com/EN-US/library/ee861525.aspx)
@@ -20,7 +20,7 @@ Office for Mac apps do not support some of the idMSOs that Office for Windows su
 ## Office 2016 for Mac is sandboxed
 Unlike other versions of Office apps that support VBA, Office 2016 for Mac apps are sandboxed.
 
-Sandboxing restricts the apps from accessing resources outside the app container. This affects any add-ins or macros that involve file access or communication across processes. You can minimize the effects of sandboxing by using the new commands described in this section.
+Sandboxing restricts the apps from accessing resources outside the app container. This affects any add-ins or macros that involve file access or communication across processes. You can minimize the effects of sandboxing by using the new commands described in the following section.
 
 ##New VBA commands for Office 2016 for Mac
 
