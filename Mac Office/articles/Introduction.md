@@ -1,7 +1,7 @@
 
-#Getting Started
+#Office for Mac
 
-How to make VBA Add-ins and Macros written for Windows Office run on Office 2016 for Mac
+Use VBA add-ins and macros that you developed for Office on Windows with Office for Mac.
 
 **Last modified:** January 11, 2016 
 
@@ -30,24 +30,22 @@ The following VBA commands are new and unique to Office 2016 for Mac.
 |[AppleScriptTask](AppleScriptTask.md)|Call external AppleScript scripts from VB.|
 |[MAC_OFFICE_VERSION](MacOfficeVersion.md)|IFDEF between different Mac Office versions at compile time.|
 
-##Ribbon Customization in Office for Mac
+##Ribbon customization in Office for Mac
 
-Office 2016 for Mac  supports Ribbon Customization using RibbonXML. However, there are certain differences in ribbon support between Office 2016 for Windows and Mac. The table below gives a good overview of the same.
+Office 2016 for Mac supports ribbon customization using Ribbon XML. Note that there are some differences in ribbon support in Office 2016 for Mac and Office for Windows.
 
-|**Ribbon Customization Feature**|**Office for Windows**|**Office for Mac**|
+|**Ribbon customization feature**|**Office for Windows**|**Office for Mac**|
 |:-----|:-----|:-----|
-|Ability to Customize Ribbon using Ribbon XML|Available|Available|
+|Ability to customize the ribbon using Ribbon XML|Available|Available|
 |Support for document based add-ins|Available|Available|
 |Ability to invoke Macros using custom ribbon controls|Available|Available|
-|Customization of Custom Menus|Available|Available|
-|Ability to include and invoke Office Fluent Controls within Custom Ribbon Tab|Available|Available<sup>(i)</sup>|
-|Support for COM add-ins that use custom Ribbon Controls|Available|Available<sup>(ii)</sup>| 
-
-(i) Most familiar Office Fluent Control Identifiers are compatible with Office for Mac. Some may not be available. A white list of commands that are compatible with Office 2016 for Mac is given below <br>
-(ii) Office 2016 for Mac doesn't support third-party COM-Add-ins. No current plans to support these in the future. 
+|Customization of custom menus|Available|Available|
+|Ability to include and invoke Office Fluent Controls within a custom ribbon Tab|Available|Most familiar Office Fluent Control Identifiers are compatible with Office for Mac. Some might not be available. For commands that are compatible with Office 2016 for Mac, see [Word for Mac](idMSOWordMac.md), [Excel for Mac](idMSOExcelMac.md), and [PowerPoint for Mac](idMSOPowerPointMac.md).|
+|Support for COM add-ins that use custom Ribbon Controls|Available|Available. Office 2016 for Mac doesn't support third-party COM add-ins.| 
 
 ##idMSOs compatible with Office 2016 for Mac
-Follow links below to access idMSO tables
-- [Word for Mac](idMSOWordMac.md)
-- [Excel for Mac] (idMSOExcelMac.md)
-- [PowerPoint for Mac](idMSOPowerPointMac.md)
+For informaion about the idMSOs that are compatible with Office 2016 for Mac, see the following:
+
+- [Excel for Mac supported idMSOs](idMSOExcelMac.md)
+- [PowerPoint for Mac supported idMSOs](idMSOPowerPointMac.md)
+- [Word for Mac supported idMSOs](idMSOWordMac.md)

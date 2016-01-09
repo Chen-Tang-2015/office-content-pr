@@ -1,5 +1,13 @@
-#idMSOs supported with Mac Word
+#Word for Mac supported idMSOs
+
+Find the idMSOs that are supported in PowerPoint in Office 2016 for Mac.
+
+**Last modified:** January 11, 2016
+
 ***Applies to:*** *Word for Mac | Office 2016 for Mac*
+
+Office 2016 for Mac apps do not support some of the idMSOs that Office for Windows supports. The following idMSOs are supported by Word for Mac.
+
 
 |**idMSO**|**Type**|
 |:-----|:-----|
