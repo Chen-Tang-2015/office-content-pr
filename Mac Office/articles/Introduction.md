@@ -40,7 +40,7 @@ Office 2016 for Mac supports ribbon customization using Ribbon XML. Note that th
 |Support for document based add-ins|Available|Available|
 |Ability to invoke Macros using custom ribbon controls|Available|Available|
 |Customization of custom menus|Available|Available|
-|Ability to include and invoke Office Fluent Controls within a custom ribbon tab|Available|Most familiar Office Fluent Control Identifiers are compatible with Office for Mac. Some might not be available. For commands that are compatible with Office 2016 for Mac, see [idMSOs compatible with Office 2016 for Mac](##idMSOs compatible with Office 2016 for Mac).|
+|Ability to include and invoke Office Fluent Controls within a custom ribbon tab|Available|Most familiar Office Fluent Control Identifiers are compatible with Office for Mac. Some might not be available. For commands that are compatible with Office 2016 for Mac, see [idMSOs compatible with Office 2016 for Mac](#idMSOs-compatible-with-Office-2016-for-Mac).|
 |Support for COM add-ins that use custom ribbon controls|Available|Office 2016 for Mac doesn't support third-party COM add-ins.| 
 
 ##idMSOs compatible with Office 2016 for Mac
