@@ -46,6 +46,6 @@ Office 2016 for Mac supports ribbon customization using Ribbon XML. Note that th
 ##idMSOs compatible with Office 2016 for Mac
 For information about the idMSOs that are compatible with Office 2016 for Mac, see the following:
 
-- [Excel for Mac supported idMSOs](idMSOExcelMac.md)
-- [PowerPoint for Mac supported idMSOs](idMSOPowerPointMac.md)
-- [Word for Mac supported idMSOs](idMSOWordMac.md)
+- [idSMOs supported in Excel for Mac](idMSOExcelMac.md)
+- [idSMOs supported in PowerPoint for Mac](idMSOPowerPointMac.md)
+- [idSMOs supported in Word for Mac](idMSOWordMac.md)

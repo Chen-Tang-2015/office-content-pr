@@ -1,4 +1,4 @@
-#Word for Mac supported idMSOs
+#idSMOs supported in Word for Mac
 
 Find the idMSOs that are supported in PowerPoint in Office 2016 for Mac.
 
