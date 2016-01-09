@@ -1,10 +1,10 @@
-Content to help you make your existing VBA Add-ins and Macros compatible with Office 2016 for Mac
+Find content to help you make your existing VBA add-ins and macros compatible with Office 2016 for Mac.
 <!--This is the start of the TOC-->
-# Table of contents
-- [Getting Started](articles/Introduction.md) - Talks about what you need to know about Office 2016 for Mac
-- [GrantAccessToMultipleFiles](articles/GrantAccessToMultipleFiles.md) - Let's you requesting user's permission to access multiple files at once
-- [AppleScriptTask](articles/AppleScriptTask.md) - Let's you call externally located AppleScript scripts from VB
-- [MAC_OFFICE_VERSION](articles/MacOfficeVersion.md) - Let's you IFDEF between different Mac Office versions at compile time
-- [Word for Mac idMSOs](articles/idMSOWordMac.md) - List of idMSOs compatible with Word for Mac
-- [Excel for Mac idMSOs] (articles/idMSOExcelMac.md) - List of idMSOs compatible with Excel for Mac
-- [PowerPoint for Mac idMSOs](articles/idMSOPowerPointMac.md) - List of idMSOs compatible with PowerPoint for Mac
+# Office for Mac articles
+- [Office for Mac overview](articles/Introduction.md)
+- [Request access to multiple files](articles/GrantAccessToMultipleFiles.md)
+- [Run an AppleScript with VB](articles/AppleScriptTask.md)
+- [Differentiate between Office for Mac versions at compile time](articles/MacOfficeVersion.md)
+- [idSMOs supported in Excel for Mac](articles/idMSOExcelMac.md) 
+- [idSMOs supported in PowerPoint for Mac](articles/idMSOPowerPointMac.md) 
+- [idSMOs supported in Word for Mac](articles/idMSOWordMac.md) 
