@@ -3,7 +3,7 @@ Use a version conditional to differentiate between Office for Mac 2011 and Offic
 
 **Last modified:** January 11, 2016 
 
-***Applies to:*** *Excel for Mac | PowerPoint for Mac | Word for Mac | Office 2016 for Mac*
+***Applies to:*** *Excel for Mac | PowerPoint for Mac | Word for Mac | Office 2016 for Mac | Office for Mac 2011*
 
 Office 2016 for Mac supports commands such as [GrantAccessToMultipleFiles](grantaccesstomultiplefiles.md) and [AppleScriptTask](AppleScriptTask.md) that are not supported in other versions of Office. If your solution targets multiple versions of Office, we recommend that you use conditional compilation.  
 
